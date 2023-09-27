@@ -2,9 +2,9 @@
 title: Amazon FireOS-toepassingsregistratie
 description: Amazon FireOS-toepassingsregistratie
 exl-id: 650fd4a2-dfc3-4c74-9b5b-6bea832a28ca
-source-git-commit: 19ed211c65deaa1fe97ae462065feac9f77afa64
+source-git-commit: 1b8371a314488335c68c82882c930b7c19aa64ad
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '513'
 ht-degree: 0%
 
 ---
@@ -33,25 +33,37 @@ Een verklaring van de Software is een teken JWT dat informatie over uw toepassin
 
 ### Als u toegang hebt tot het TVE-dashboard van de Adobe:
 
-- Uw browser openen en naar <https://console.auth.adobe.com>
-- Navigeren naar `Channels` en selecteert u het kanaal.
-- Navigeren naar `Registered Applications` Tab.
-- Klikken op `Add new application`.
-- Geef een naam en een versie op voor uw toepassing en selecteer de platforms waarop deze beschikbaar is (bijvoorbeeld Android in ons geval).
-- Verstrek een Naam van het Domein door van een lijst van domeinen te kiezen die reeds voor uw Programmer worden gevormd.
-- Duw uw veranderingen aan de server en navigeer dan terug naar uw Gedeponeerde Toepassingen van het Kanaal tabel.
-- Er moet een lijst met alle geregistreerde toepassingen worden weergegeven. Klik op de knop `Download` op de toepassing die u net hebt gemaakt. Opmerking: mogelijk moet u een paar minuten wachten voordat de Software Statement klaar is voor downloaden.
-- Er wordt een tekstbestand gedownload. Gebruik de inhoud ervan als de Software Statement.
+1. Uw browser openen en naar `https://console.auth.adobe.com`.
+
+1. Ga naar de **[!UICONTROL Channels]** selecteert u vervolgens het kanaal.
+
+1. Ga naar de **[!UICONTROL Registered Applications]** tab.
+
+1. Klikken **[!UICONTROL Add new application]**.
+
+1. Geef een naam en een versie op voor uw toepassing en selecteer de platforms waarop deze beschikbaar is (zoals Android).
+
+1. Geef een **[!UICONTROL Domain Name]** door van een lijst van domeinen te kiezen die reeds voor uw Programmer worden gevormd.
+
+1. Breng de wijzigingen door naar de server en navigeer vervolgens terug naar de kanalen van uw **[!UICONTROL Registered Applications]** tab.
+
+   Er moet een lijst met alle geregistreerde toepassingen worden weergegeven.
+
+1. Klikken **[!UICONTROL Download]** op de toepassing die u net hebt gemaakt.
+
+   Mogelijk moet u een paar minuten wachten voordat de Software Statement klaar is voor downloaden.
+
+   Een tekstbestand wordt gedownload. Gebruik de inhoud ervan als de Software Statement.
 
 Meer informatie, zie [Dynamisch clientregistratiebeheer](/help/authentication/dynamic-client-registration-management.md)
 
 ### Als u geen toegang hebt tot het TVE-dashboard van de Adobe:
 
-Een ticket verzenden naar <tve-support@adobe.com>. Neem alle benodigde informatie op, zoals het kanaal, de naam van de toepassing, de versie en de platforms. Iemand van ons ondersteuningsteam zal een softwareinstructie voor u maken.
+Een ticket verzenden naar [tve-support@adobe.com](mailto:tve-support@adobe.com). Neem alle benodigde informatie op, zoals het kanaal, de naam van de toepassing, de versie en de platforms. Iemand van ons ondersteuningsteam zal een softwareinstructie voor u maken.
 
-## Hoe de Software Statement te gebruiken? {#use}
+## Hoe te om de Verklaring van de Software te gebruiken {#use}
 
-Nadat u uw Verklaring van de Software krijgt moet u het als parameter in de aannemer van Enabler van de Toegang overgaan. Wij adviseren het ontvangen van de Verklaring van de Software op een verre plaats. Op deze manier kunt u de Software Statement eenvoudig intrekken en wijzigen zonder een nieuwe versie van uw toepassing vrij te geven.
+Nadat u uw Verklaring van de Software verkrijgt, moet u het als parameter in de aannemer van Enabler van de Toegang overgaan. Adobe raadt u aan de Software Statement op een externe locatie te hosten. Op deze manier kunt u de Software Statement eenvoudig intrekken en wijzigen zonder een nieuwe versie van uw toepassing vrij te geven.
 
 ## Hoe te om de Verklaring van de Software te gebruiken {#use-both}
 

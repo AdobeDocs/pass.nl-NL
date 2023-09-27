@@ -2,7 +2,7 @@
 title: Apple SSO Cookbook (REST API)
 description: Apple SSO Cookbook (REST API)
 exl-id: cb27c4b7-bdb4-44a3-8f84-c522a953426f
-source-git-commit: 59672b44074c472094ed27a23d6bfbcd7654c901
+source-git-commit: 1b8371a314488335c68c82882c930b7c19aa64ad
 workflow-type: tm+mt
 source-wordcount: '1435'
 ht-degree: 0%
@@ -21,13 +21,9 @@ De Adobe Pass Authentication REST API kan platform Single Sign-On (SSO)-verifica
 
 Dit document fungeert als een uitbreiding op de bestaande REST API-documentatie, die u kunt vinden [hier](/help/authentication/rest-api-reference.md).
 
-</br>
-
 ## Cookbooks {#Cookbooks}
 
 Om van de Apple SSO-gebruikerservaring te kunnen profiteren, moet één toepassing de [Video-abonneeaccount](https://developer.apple.com/documentation/videosubscriberaccount) door Apple ontwikkeld raamwerk, maar wat de communicatie van de Adobe Pass Authentication REST API betreft, moet het de reeks tips volgen die hieronder wordt weergegeven.
-
-</br>
 
 ### Verificatie {#Authentication}
 
@@ -44,10 +40,8 @@ Om van de Apple SSO-gebruikerservaring te kunnen profiteren, moet één toepassi
 - [Doorgaan met autorisatiestromen](#Proceed_with_authorization_flows)
 
 
-
 ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/qu/platform-sso.jpeg)
 
-</br>
 
 #### Stap: &quot;Is er een geldig token voor Adobe-verificatie?&quot; {#Is_there_a_valid_Adobe_authentication_token}
 
@@ -55,7 +49,6 @@ Om van de Apple SSO-gebruikerservaring te kunnen profiteren, moet één toepassi
 >
 > **<u>Tip:</u>** Deze implementeren via het medium [Adobe Pass-verificatie](/help/authentication/check-authentication-token.md) service.
 
-</br>
 
 #### Stap: &quot;Is de gebruiker aangemeld via Platform SSO?&quot; {#Is_the_user_logged_in_via_Platform_SSO}
 
@@ -127,8 +120,6 @@ videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.pr
 ...  
 ```
 
-</br>
-
 #### Stap: &quot;Configuratie Adobe ophalen&quot; {#Fetch_Adobe_configuration}
 
 >[!TIP]
@@ -139,8 +130,6 @@ videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.pr
 >[!TIP]
 >
 > **<u>Pro Tip:</u>** Houd rekening met de MVPD-eigenschappen: *`enablePlatformServices`*, *`boardingStatus`*, *`displayInPlatformPicker`*, *`platformMappingId`*, *`requiredMetadataFields`* en extra aandacht besteden aan de opmerkingen in codefragmenten uit andere stappen.
-
-</br>
 
 #### Stap &quot;De werkschema van SSO van het Platform met Adobe config&quot;initialiseren {#Initiate_Platform_SSO_workflow_with_Adobe_config}
 
@@ -263,8 +252,6 @@ videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.pr
 >
 > **<u>Pro Tip:</u>** Houd rekening met het codefragment van het dialoogvenster [&quot;Platform SSO-workflow starten met Adobe config&quot;](#Initiate_Platform_SSO_workflow_with_Adobe_config) stap. De gebruikersaanmelding is geslaagd voor het geval dat de *`vsaMetadata!.accountProviderIdentifier`* bevat een geldige waarde en de huidige datum is nog niet verstreken *`vsaMetadata!.authenticationExpirationDate`* waarde.
 
-</br>
-
 #### Stap &quot;verkrijg een profielverzoek van Adobe voor geselecteerde MVPD&quot; {#Obtain_a_profile_request_from_Adobe_for_the_selected_MVPD}
 
 >[!TIP]
@@ -274,8 +261,6 @@ videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.pr
 >[!TIP]
 >
 > **<u>Pro Tip:</u>** Houd er rekening mee dat de provider-id die wordt verkregen via het framework Video Subscriber Account de *`platformMappingId`* in termen van Adobe Pass-verificatieconfiguratie. Daarom moet de toepassing de MVPD identiteitskaart bezitswaarde bepalen, gebruikend *`platformMappingId`* waarde, via het medium Adobe Pass Authentication [MVPD-lijst opgeven](/help/authentication/provide-mvpd-list.md) service.
-
-</br>
 
 #### Stap: &quot;Verstuur het verzoek van de Adobe naar Platform SSO om het profiel te verkrijgen&quot; {#Forward_the_Adobe_request_to_Platform_SSO_to_obtain_the_profile}
 

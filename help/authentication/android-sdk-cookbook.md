@@ -2,7 +2,7 @@
 title: Android SDK Cookbook
 description: Android SDK Cookbook
 exl-id: 7f66ab92-f52c-4dae-8016-c93464dd5254
-source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
+source-git-commit: 1b8371a314488335c68c82882c930b7c19aa64ad
 workflow-type: tm+mt
 source-wordcount: '1685'
 ht-degree: 0%
@@ -32,10 +32,13 @@ De Adobe Pass-verificatieoplossing voor Android wordt uiteindelijk verdeeld in t
 
 Het doel van het domein AccessEnabler is alle ingewikkeldheid van de machtigingswerkschema&#39;s te verbergen, en aan de hogere laagtoepassing (door de bibliotheek AccessEnabler) een reeks eenvoudige machtigingsprimitieven te verstrekken waarmee u de machtigingswerkschema&#39;s uitvoert:
 
-1. De identiteit van de aanvrager instellen
-1. Verificatie aanvragen bij een bepaalde identiteitsprovider
-1. Autorisatie voor een bepaalde bron controleren en ophalen
-1. Afmelden
+1. Stel de identiteit van de aanvrager in.
+
+1. Controleer en krijg authentificatie tegen een bepaalde identiteitsleverancier.
+
+1. Controleer en krijg vergunning voor een bepaalde bron.
+
+1. Afmelden.
 
 De het netwerkactiviteit van AccessEnabler vindt in een verschillende draad plaats zodat wordt de draad UI nooit geblokkeerd. Het communicatiekanaal in twee richtingen tussen de twee toepassingsdomeinen moet daarom een volledig asynchroon patroon volgen:
 
@@ -50,8 +53,6 @@ De het netwerkactiviteit van AccessEnabler vindt in een verschillende draad plaa
 1. [Autorisatiestroom](#authz_flow)
 1. [Media-stroom weergeven](#media_flow)
 1. [Afmelden](#logout_flow)
-
-
 
 ### A. Vereisten {#prereqs}
 
@@ -137,8 +138,6 @@ De het netwerkactiviteit van AccessEnabler vindt in een verschillende draad plaa
 
    - **Triggers:** setAuthenticationStatus() callback
 
-
-
 ### C. Verificatiestroom {#authn_flow}
 
 1. Bellen [`getAuthentication()`](#$getAuthN) om de verificatiestroom te starten of om te bevestigen dat de gebruiker al is geverifieerd.\
@@ -151,7 +150,6 @@ De het netwerkactiviteit van AccessEnabler vindt in een verschillende draad plaa
 1. Nadat de gebruiker een leverancier selecteert, verkrijg URL van MVPD van de gebruiker van `navigateToUrl()` callback.  Open een WebView en richt die controle WebView aan URL.
 
 1. Via WebView die in de vorige stap wordt geconcretiseerd, landt de gebruiker op de MVPD login pagina en input login geloofsbrieven. Verscheidene omleidingsverrichtingen vinden binnen WebView plaats.
-
 
    **Opmerking:** Op dit punt, heeft de gebruiker de kans om de authentificatiestroom te annuleren. Als dit voorkomt, is uw laag UI verantwoordelijk voor het informeren van AccessEnabler over deze gebeurtenis door te roepen `setSelectedProvider()` with `null` als parameter. Dit staat AccessEnabler toe om het interne staat op te schonen en de Stroom van de Authentificatie terug te stellen.
 

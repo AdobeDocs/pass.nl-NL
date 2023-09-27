@@ -2,9 +2,9 @@
 title: Amazon FireOS Integration Cookbook
 description: Amazon FireOS Integration Cookbook
 exl-id: 1982c485-f0ed-4df3-9a20-9c6a928500c2
-source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
+source-git-commit: 1b8371a314488335c68c82882c930b7c19aa64ad
 workflow-type: tm+mt
-source-wordcount: '1432'
+source-wordcount: '1416'
 ht-degree: 0%
 
 ---
@@ -20,27 +20,27 @@ ht-degree: 0%
 
 ## Inleiding {#intro}
 
-In dit document worden de workflows voor machtigingen beschreven die de toepassing op hoofdniveau van een programmeur kan implementeren via de API&#39;s die worden weergegeven in de Amazon FireOS AccessEnabler-bibliotheek.
+In dit document worden de workflows beschreven die een toepassing op hoofdniveau van een programmeur kan implementeren via de API&#39;s die worden weergegeven door Amazon FireOS `AccessEnabler` bibliotheek.
 
 De Adobe Pass-verificatieoplossing voor Amazon FireOS bestaat uiteindelijk uit twee domeinen:
 
-- Het domein UI - dit is de bovenste toepassingslaag die UI uitvoert en de diensten gebruikt die door de bibliotheek AccessEnabler worden verleend om toegang tot beperkte inhoud te verlenen.
-- Het domein AccessEnabler - dit is waar de machtigingswerkschema&#39;s in de vorm van worden uitgevoerd:
+- Het domein UI - dit is de bovenste toepassingslaag die UI uitvoert en de diensten gebruikt die door worden verleend `AccessEnabler` bibliotheek voor toegang tot beperkte inhoud.
+- De `AccessEnabler` domein - dit is waar de machtigingswerkstromen worden uitgevoerd in de vorm van:
    - De vraag van het netwerk die aan de backendservers van de Adobe wordt gemaakt
    - Zakelijke en logische regels met betrekking tot de workflows voor verificatie en autorisatie
    - Beheer van diverse bronnen en verwerking van workflowstatus (zoals de tokencache)
 
-Het doel van het domein AccessEnabler is alle ingewikkeldheid van de machtigingswerkschema&#39;s te verbergen, en aan de hogere laagtoepassing (door de bibliotheek AccessEnabler) een reeks eenvoudige machtigingsprimitieven te verstrekken waarmee u de machtigingswerkschema&#39;s uitvoert:
+Het doel van het `AccessEnabler` het domein moet alle ingewikkeldheid van de machtigingswerkschema&#39;s verbergen, en aan de upper-layer toepassing verstrekken (door `AccessEnabler` bibliotheek) een set eenvoudige machtigingsprimitieven. Met dit proces kunt u de workflows voor machtigingen implementeren:
 
-1. De identiteit van de aanvrager instellen
-1. Verificatie aanvragen bij een bepaalde identiteitsprovider
-1. Autorisatie voor een bepaalde bron controleren en ophalen
-1. Afmelden
+1. Stel de identiteit van de aanvrager in.
+1. Controleer en krijg authentificatie tegen een bepaalde identiteitsleverancier.
+1. Controleer en krijg vergunning voor een bepaalde bron.
+1. Afmelden.
 
-De het netwerkactiviteit van AccessEnabler vindt in een verschillende draad plaats zodat wordt de draad UI nooit geblokkeerd. Het communicatiekanaal in twee richtingen tussen de twee toepassingsdomeinen moet daarom een volledig asynchroon patroon volgen:
+De `AccessEnabler`De netwerkactiviteit van het netwerk vindt plaats in een verschillende draad zodat wordt de draad UI nooit geblokkeerd. Het communicatiekanaal in twee richtingen tussen de twee toepassingsdomeinen moet daarom een volledig asynchroon patroon volgen:
 
-- De toepassingslaag UI verzendt berichten naar het domein AccessEnabler via de API vraag die door de bibliotheek AccessEnabler wordt blootgesteld.
-- AccessEnabler antwoordt aan de laag UI door de callback methodes inbegrepen in het protocol AccessEnabler dat de laag UI met de bibliotheek AccessEnabler registreert.
+- De toepassingslaag UI verzendt berichten naar `AccessEnabler` domein via de API-aanroepen die door de `AccessEnabler` bibliotheek.
+- De `AccessEnabler` antwoordt aan de laag UI door de callback methodes inbegrepen in `AccessEnabler` protocol dat de laag UI met het `AccessEnabler` bibliotheek.
 
 ## Machtigingsstromen {#entitlement}
 
@@ -50,8 +50,6 @@ De het netwerkactiviteit van AccessEnabler vindt in een verschillende draad plaa
 1. [Autorisatiestroom](#authz_flow)
 1. [Media-stroom weergeven](#media_flow)
 1. [Afmelden](#logout_flow)
-
-
 
 ### A. Vereisten {#prereqs}
 
@@ -113,9 +111,9 @@ De `event` parameter geeft aan welke machtigingsgebeurtenis heeft plaatsgevonden
 1. Start de toepassing op het hoogste niveau.
 1. Adobe Pass-verificatie starten.
 
-   1. Bellen [`getInstance`](#$getInstance) om één enkel geval van de Authentificatie AccessEnabler van Adobe Pass te creëren.
+   1. Bellen [`getInstance`](#$getInstance) één instantie van de Adobe Pass-verificatie maken `AccessEnabler`.
 
-      - **Afhankelijkheid:** Adobe Pass Authentication Native Amazon FireOS-bibliotheek (AccessEnabler)
+      - **Afhankelijkheid:** Adobe Pass Authentication Native Amazon FireOS-bibliotheek (`AccessEnabler`)
 
    1. Bellen` setRequestor()` vaststellen van de identiteit van de programmeur; doorgeven van de `requestorID` en (optioneel) een array met eindpunten voor Adobe Pass-verificatie.
 
@@ -127,8 +125,8 @@ De `event` parameter geeft aan welke machtigingsgebeurtenis heeft plaatsgevonden
 
    U hebt twee implementatieopties: wanneer de informatie van de aanvrager-identificatie naar de back-endserver is verzonden, kan de UI-toepassingslaag een van de volgende twee methoden kiezen:</p>
 
-   1. Wacht op het in werking stellen van `setRequestorComplete()` callback (deel van de afgevaardigde AccessEnabler).  Deze optie biedt de meeste zekerheid dat `setRequestor()` voltooid, dus wordt het aanbevolen voor de meeste implementaties.
-   1. Doorgaan zonder te wachten op de activering van de `setRequestorComplete()` callback en begin met het afgeven van aanvragen voor machtigingen. Deze vraag (checkAuthentication, checkAuthorization, getAuthentication, getAuthorization, checkPreauthorisedResource, getMetadata, logout) wordt een rij gevormd door de bibliotheek AccessEnabler, die de daadwerkelijke netwerkvraag na het `setRequestor()`. Deze optie kan af en toe worden onderbroken als bijvoorbeeld de netwerkverbinding instabiel is.
+   1. Wacht op het in werking stellen van `setRequestorComplete()` callback (onderdeel van de `AccessEnabler` afgevaardigde).  Deze optie biedt de meeste zekerheid dat `setRequestor()` voltooid, dus wordt het aanbevolen voor de meeste implementaties.
+   1. Doorgaan zonder te wachten op de activering van de `setRequestorComplete()` callback en begin met het afgeven van aanvragen voor machtigingen. Deze vraag (checkAuthentication, checkAuthorization, getAuthentication, getAuthorization, checkPreauthorisedResource, getMetadata, logout) wordt een rij gevormd door `AccessEnabler` bibliotheek, die de daadwerkelijke netwerkvraag na `setRequestor()`. Deze optie kan af en toe worden onderbroken als bijvoorbeeld de netwerkverbinding instabiel is.
 
 1. Bellen [checkAuthentication()](#$checkAuthN) om op een bestaande authentificatie te controleren zonder de volledige stroom van de Authentificatie in werking te stellen.  Als deze vraag slaagt, kunt u aan de stroom van de Vergunning direct te werk gaan.  Zo niet, ga dan door naar de verificatiestroom.
 
@@ -150,10 +148,10 @@ De `event` parameter geeft aan welke machtigingsgebeurtenis heeft plaatsgevonden
 
    >[!NOTE]
    >
-   >Op dit punt, heeft de gebruiker de kans om de authentificatiestroom te annuleren. Als dit voorkomt, zal AccessEnabler het interne staat schoonmaken en zal de Stroom van de Authentificatie terugstellen.
+   >Op dit punt, heeft de gebruiker de kans om de authentificatiestroom te annuleren. Als dit het geval is, `AccessEnabler` zal het interne staat schoonmaken en de Stroom van de Authentificatie terugstellen.
 
-1. Op een succesvolle login door de gebruiker, WebView zal sluiten.
-1. call `getAuthenticationToken(),` dat AccessEnabler opdraagt om het authentificatietoken van de backendserver terug te winnen.
+1. Na succesvolle login door de gebruiker, zal WebView sluiten.
+1. call `getAuthenticationToken(),` die de `AccessEnabler` om het authentificatietoken van de backendserver terug te winnen.
 1. [Optioneel] Bellen [`checkPreauthorizedResources(resources)`](#$checkPreauth) om te controleren welke middelen de gebruiker wordt gemachtigd om te bekijken. De `resources` parameter is een array met beveiligde bronnen die is gekoppeld aan het verificatietoken van de gebruiker.
 
    **Triggers:** `preAuthorizedResources()` callback\
@@ -196,6 +194,6 @@ De `event` parameter geeft aan welke machtigingsgebeurtenis heeft plaatsgevonden
 
 ### F. Afmeldingsstroom {#logout_flow}
 
-1. Bellen [`logout()`](#$logout) om de gebruiker af te melden. AccessEnabler ontruimt alle caching waarden en tekenen die door de gebruiker voor huidige MVPD op alle aanvragers worden verkregen die login delen door Enig Teken. Na het ontruimen van het geheime voorgeheugen, richt AccessEnabler een servervraag om de server-zijzittingen schoon te maken.  Merk op dat aangezien de servervraag in SAML kon resulteren die aan IdP (dit staat voor de zittingsschoonmaak op de kant IdP toe) wordt omgeleid, deze vraag moet alle omleidingen volgen. Om deze reden, zal deze vraag binnen een controle WebView worden behandeld, onzichtbaar voor de gebruiker.
+1. Bellen [`logout()`](#$logout) om de gebruiker af te melden. De `AccessEnabler` Hiermee worden alle in de cache opgeslagen waarden en tokens die de gebruiker voor de huidige MVPD heeft verkregen, gewist voor alle aanvragers die de aanmelding delen via Single Sign On. Na het wissen van het cachegeheugen wordt de `AccessEnabler` doet een servervraag om de server-zijzittingen schoon te maken.  Merk op dat aangezien de servervraag in SAML kon resulteren die aan IdP (dit staat voor de zittingsschoonmaak op de kant IdP toe) wordt omgeleid, deze vraag moet alle omleidingen volgen. Om deze reden, zal deze vraag binnen een controle WebView worden behandeld, onzichtbaar voor de gebruiker.
 
    **Opmerking:** De logout stroom verschilt van de authentificatiestroom in die zin dat de gebruiker niet wordt vereist om met WebView op om het even welke manier in wisselwerking te staan. Aldus is het mogelijk (en geadviseerd) om de controle WebView onzichtbaar (d.w.z.: verborgen) tijdens het logout proces te maken.

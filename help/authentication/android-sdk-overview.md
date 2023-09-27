@@ -2,7 +2,7 @@
 title: Overzicht van Android SDK
 description: Overzicht van Android SDK
 exl-id: a1d98325-32a1-4881-8635-9a3c38169422
-source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
+source-git-commit: 1b8371a314488335c68c82882c930b7c19aa64ad
 workflow-type: tm+mt
 source-wordcount: '2720'
 ht-degree: 0%
@@ -14,9 +14,6 @@ ht-degree: 0%
 >[!NOTE]
 >
 >De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
-
-</br>
-
 
 ## Inleiding {#intro}
 
@@ -34,8 +31,6 @@ Native clientworkflows zijn doorgaans hetzelfde als of lijken sterk op die van o
 - [Generic Initial Authentication Workflow](#generic)
 - [Logout-workflow](#logout)
 
-
-
 ### Workflow na initialisatie {#post-init}
 
 Alle die machtigingswerkschema&#39;s door AccessEnabler worden gesteund veronderstellen dat u eerder hebt geroepen [`setRequestor()`](#setRequestor) om uw identiteit vast te stellen. U doet deze vraag om uw identiteitskaart van de Aanvrager slechts eenmaal te verstrekken, gewoonlijk tijdens de initialisatie/opstellingsfase van uw toepassing.
@@ -50,8 +45,6 @@ Met de native clients (bijvoorbeeld Android), na uw eerste oproep aan [`setReque
 - Of doe beide.
 
 Het is aan u om te wachten op de kennisgeving van het succes van [`setRequestor()`](#setRequestor) of om op het mechanisme van de vraagrij van AccessEnabler te vertrouwen. Aangezien alle volgende autorisatie- en verificatieverzoeken de aanvrager-id en de bijbehorende configuratiegegevens nodig hebben, [`setRequestor()`](#setRequestor) de methode blokkeert effectief alle authentificatie en vergunning API vraag tot de initialisering volledig is.
-
-
 
 ### Generic Initial Authentication Workflow {#generic}
 

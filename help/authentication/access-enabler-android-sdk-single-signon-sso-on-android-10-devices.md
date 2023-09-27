@@ -2,9 +2,9 @@
 title: Toegang tot de Android SDK Single Sign-On (SSO) voor Android 10-apps
 description: Toegang tot de Android SDK Single Sign-On (SSO) voor Android 10-apps
 exl-id: dedade15-c451-4757-b684-d3728e11dd87
-source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
+source-git-commit: 1b8371a314488335c68c82882c930b7c19aa64ad
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '374'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Zie [Overzicht van Roku SSO](/help/authentication/roku-sso-overview.md).
 
 ## Gedrag
 
-Afhankelijk van de **doel-SDK** of het gebruik van **android:requestLegacyExternalStorage** Manier attribuut Single Sign-On (SSO) die door Access Enabler Android versie 3.2.1 SDK (recentste) wordt aangeboden en de vorige versies zullen zich momenteel als volgt gedragen:
+Afhankelijk van de **[!UICONTROL target SDK level]** of het gebruik van **android:requestLegacyExternalStorage** Manier attribuut Single Sign-On (SSO) die door Access Enabler Android versie 3.2.1 SDK (recentste) wordt aangeboden en de vorige versies zullen zich momenteel als volgt gedragen:
 
 - Uw app-doelen **Android 9 (API-niveau 28)** of lager **-\>** Eenmalige aanmelding (SSO) **zal werken**
 - Uw app-doelen **Android 10** **(API-niveau 29)** en doet **set** de waarde van **requestLegacyExternalStorage instellen op true** in het manifestbestand van uw app **-\>** Eenmalige aanmelding (SSO) **zal werken**
