@@ -2,9 +2,9 @@
 title: Referentie voor API van Android
 description: Referentie voor API van Android
 exl-id: f932e9a1-2dbe-4e35-bd60-a4737407942d
-source-git-commit: 2ccfa8e018b854a359881eab193c1414103eb903
+source-git-commit: 854698397d9d14c1bfddcc10eecc61c7e3c32b71
 workflow-type: tm+mt
-source-wordcount: '4518'
+source-wordcount: '4526'
 ht-degree: 0%
 
 ---
@@ -165,7 +165,7 @@ De waarden worden doorgegeven aan de server, onafhankelijk van de huidige flow (
 
 ### checkAuthentication {#checkAuthN}
 
-**Omschrijving:** Controleert de verificatiestatus. Het doet dit door naar een geldig authentificatietoken in de lokale symbolische opslagruimte te zoeken. Het roepen van deze methode voert geen netwerkvraag uit. Deze wordt door de toepassing gebruikt om de verificatiestatus van de gebruiker te controleren en de gebruikersinterface dienovereenkomstig bij te werken (de gebruikersinterface voor aanmelding/aanmelding wordt dus bijgewerkt). De verificatiestatus wordt via de [*setAuthenticationStatus()*](#setAuthNStatus) callback.
+**Omschrijving:** Controleert de verificatiestatus. Het doet dit door naar een geldig authentificatietoken in de lokale symbolische opslagruimte te zoeken. Deze methode voert geen netwerkvraag uit en wij adviseren roepend het op de belangrijkste draad. Deze wordt door de toepassing gebruikt om de verificatiestatus van de gebruiker te controleren en de gebruikersinterface dienovereenkomstig bij te werken (de gebruikersinterface voor aanmelding/aanmelding wordt dus bijgewerkt). De verificatiestatus wordt via de [*setAuthenticationStatus()*](#setAuthNStatus) callback.
 
 Als een MVPD de eigenschap &quot;Authentificatie per Aanvrager&quot;steunt, dan kunnen de veelvoudige authentificatietokens op een apparaat worden opgeslagen.  Voor meer informatie over deze functie raadpleegt u de [Richtlijnen voor caching](#$caching) in het technische overzicht van Android.
 

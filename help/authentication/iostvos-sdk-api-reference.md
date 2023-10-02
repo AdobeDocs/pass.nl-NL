@@ -2,9 +2,9 @@
 title: iOS/tvOS API-naslaggids
 description: iOS/tvOS API-naslaggids
 exl-id: 017a55a8-0855-4c52-aad0-d3d597996fcb
-source-git-commit: 2ccfa8e018b854a359881eab193c1414103eb903
+source-git-commit: 854698397d9d14c1bfddcc10eecc61c7e3c32b71
 workflow-type: tm+mt
-source-wordcount: '7010'
+source-wordcount: '7018'
 ht-degree: 0%
 
 ---
@@ -365,7 +365,8 @@ Indien opgeroepen zonder de `serviceProviders` parameter, zal de bibliotheek de 
 **Bestand:** AccessEnabler/headers/AccessEnabler.h
 
 **Omschrijving:** Controleert de authentificatiestatus van de huidige gebruiker.
-Het doet dit door naar een geldig authentificatietoken in de lokale symbolische opslagruimte te zoeken. Het roepen van deze methode voert geen netwerkvraag uit. Deze wordt door de toepassing gebruikt om de verificatiestatus van de gebruiker op te vragen en de gebruikersinterface dienovereenkomstig bij te werken (de gebruikersinterface voor aanmelding/aanmelding wordt dus bijgewerkt). De verificatiestatus wordt via de [`setAuthenticationStatus:errorCode:`](#setAuthNStatus) callback.
+Het doet dit door naar een geldig authentificatietoken in de lokale symbolische opslagruimte te zoeken. Deze methode voert geen netwerkvraag uit en wij adviseren roepend het op de belangrijkste draad.
+Deze wordt door de toepassing gebruikt om de verificatiestatus van de gebruiker op te vragen en de gebruikersinterface dienovereenkomstig bij te werken (de gebruikersinterface voor aanmelding/aanmelding wordt dus bijgewerkt). De verificatiestatus wordt via de [`setAuthenticationStatus:errorCode:`](#setAuthNStatus) callback.
 
 
 <table class="pass_api_table">
