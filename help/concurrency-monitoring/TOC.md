@@ -2,17 +2,17 @@
 product: adobe primetime
 feature: Concurrency Monitoring
 audience: end-user
-user-guide-title: Adobe Pass Gelijkvallige Controle
-user-guide-description: Leer grenzen voor gelijktijdig gebruik in meerdere toepassingen te definiëren en af te dwingen.
+user-guide-title: Gelijktijdige bewaking van Adobe Pass
+user-guide-description: Leer hoe u limieten kunt definiëren en afdwingen voor gelijktijdig gebruik in meerdere applicaties.
 source-git-commit: 59672b44074c472094ed27a23d6bfbcd7654c901
 workflow-type: tm+mt
 source-wordcount: '141'
-ht-degree: 0%
+ht-degree: 17%
 
 ---
 
 
-# Hulp bij Adobe Pass-controle op gelijktijdige valuta {#cm}
+# Gelijktijdige bewaking van Adobe Pass help {#cm}
 
 + [Gelijktijdige bewaking](cm-home.md)
 + [Verklarende woordenlijst Gelijktijdige bewaking](cm-glossary.md)
@@ -32,7 +32,7 @@ ht-degree: 0%
       + [Gelijktijdig gebruik beperken met meerdere toepassingen die eigendom zijn van verschillende eigenaars](restrict-concurr-usage-mult-apps.md)
       + [Één enkele huurder/beleid en veelvoudige toepassingen](single-tenant-policy-mult-app.md)
    + [Uitvoeringsmodellen](implementation-models.md)
-+ Opmerkingen bij de release {#cm-release-notes}
++ Aanvullende informatie {#cm-release-notes}
    + [Gelijktijdige bewakingsdiensten 3.1 Opmerkingen bij de release](rn-cm-services-31.md)
    + [Gelijktijdige controlediensten Opmerkingen bij de release 3.0](rn-cm-services-30.md)
    + [Opmerkingen bij de release van Gelijktijdige bewaking 2.9.6](rn-cm-296.md)

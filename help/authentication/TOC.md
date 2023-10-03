@@ -3,16 +3,16 @@ product: adobe primetime
 audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass-verificatie
-user-guide-description: De Authentificatie van Adobe Pass is een gerechtigheidsoplossing voor TV overal, die een modulair kader verstrekt om te bepalen of iemand die om toegang tot een middel verzoekt het tot het recht heeft.
+user-guide-description: Adobe Pass-verificatie is een machtigingsoplossing voor TV Everywhere, die een modulair kader verstrekt om te bepalen of iemand die toegang tot een bron vraagt, daar rechten voor heeft.
 source-git-commit: fd65582522d6b40e5797dff192e2340c5575ef3b
 workflow-type: tm+mt
 source-wordcount: '776'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
 
-# Help bij Adobe Pass-verificatie {#authentication}
+# Adobe Pass-verificatie Help {#authentication}
 
 + [Overzicht van Adobe Pass-verificatie](home.md)
 + Adobe Pass-verificatieconcepten {#authentication-concepts}
