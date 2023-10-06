@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass-verificatie
 user-guide-description: Adobe Pass-verificatie is een machtigingsoplossing voor TV Everywhere, die een modulair kader verstrekt om te bepalen of iemand die toegang tot een bron vraagt, daar rechten voor heeft.
-source-git-commit: fd65582522d6b40e5797dff192e2340c5575ef3b
+source-git-commit: 05184defb3d912050240be7763ced4ccce6a35ad
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '785'
 ht-degree: 4%
 
 ---
@@ -161,10 +161,12 @@ ht-degree: 4%
    + [Opmerkingen bij de release Adobe Pass Authentication 2.64](auth-rn-264.md)
    + [Opmerkingen bij de release Adobe Pass Authentication 2.63](auth-rn-263.md)
    + [Opmerkingen bij de release Adobe Pass Authentication 2.62.1](auth-rn-2621.md)
-   + [Opmerkingen bij de release Adobe Pass Authentication iOS / tvOS 3.7.0](authn-rn-ios-tvos-370.md)
-   + [Opmerkingen bij de release Adobe Pass Authentication iOS / tvOS 3.8.1](authn-rn-ios-tvos-381.md)
-   + [Opmerkingen bij de release Adobe Pass Authentication iOS / tvOS 3.8.2](authn-rn-ios-tvos-382.md)
-   + [Opmerkingen bij de release Adobe Pass Authentication Android 3.7.3](authn-rn-android-373.md)
+   + Opmerkingen bij de release iOS/tvOS SDK  {#release-notes-ios}
+      + [Opmerkingen bij de release Adobe Pass Authentication iOS / tvOS 3.8.2](authn-rn-ios-tvos-382.md)
+      + [Opmerkingen bij de release Adobe Pass Authentication iOS / tvOS 3.8.1](authn-rn-ios-tvos-381.md)
+      + [Opmerkingen bij de release Adobe Pass Authentication iOS / tvOS 3.7.0](authn-rn-ios-tvos-370.md)
+   + Opmerkingen bij de release van Android SDK {#release-notes-android}
+      + [Opmerkingen bij de release Adobe Pass Authentication Android 3.7.3](authn-rn-android-373.md)
 + Technische notities {#tech-notes}
    + Adobe Pass Authentication SDKs {#primetime-authentication-sdks}
       + [Certificaten Vragen en antwoorden](certificates-qa.md)
