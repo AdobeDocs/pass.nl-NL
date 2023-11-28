@@ -1,7 +1,8 @@
 ---
 title: Opmerkingen bij de release Adobe Pass Authentication 2.68
 description: Opmerkingen bij de release Adobe Pass Authentication 2.68
-source-git-commit: dc9572912371fb23586eafa93d06c3f3a5c546bc
+exl-id: 88628696-448e-4afa-91f0-d3767d68d2f4
+source-git-commit: 87d7380aa7045e64e8caff6d5d7610bd0917181e
 workflow-type: tm+mt
 source-wordcount: '142'
 ht-degree: 0%
@@ -25,11 +26,11 @@ Op deze pagina worden nieuwe functies, wijzigingen en bekende problemen met deze
 ### Buildnummer {#build-number-268}
 
 Adobe Pass-verificatie: adobe-pass-**2 68 0,5**
-Releasedatum: **21-11-2023 - 23-11**
+Releasedatum: **05-12-2023 - 12-07-2023**
 
 ### Nieuwe functies {#new-features-268}
 
-* Doorlopende ontwikkeling van nieuwe REST API&#39;s. De nieuwe eindpunten en stromen gepland om in een aanstaande specifieke versie beschikbaar te worden. De documentatie voor het gebruik van deze nieuwe APIS wordt bijgewerkt.
+* Voortdurende ontwikkeling naar nieuwe REST APIS. De nieuwe eindpunten en stromen gepland om in een aanstaande specifieke versie beschikbaar te worden. De documentatie voor het gebruik van deze nieuwe APIS wordt bijgewerkt.
 * Verdere interne architectuurverbeteringen.
 * Bijgewerkte bibliotheek van de Atlas van het Apparaat aan de recentste versie om apparatenidentificatie te verbeteren.
 
