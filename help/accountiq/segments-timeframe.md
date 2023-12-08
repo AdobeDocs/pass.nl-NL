@@ -1,72 +1,83 @@
 ---
-title: De segmenten van de abonnee en tijdinterval
+title: De segmenten van de abonnee en tijdkader
 description: Definieer cohorts of selecteer abonneesegmenten om de mogelijkheden en patronen van uw kanaalviewers voor het delen van accounts te meten en grafische gereedschappen en rapporten te gebruiken in Account IQ.
 exl-id: c38cde37-70d9-486d-b8d0-7c1cbd2baf2e
-source-git-commit: 6b790728f3d6a8eed5dfc0f8b3d0dad283af6418
+source-git-commit: 567f674e14cd0fea672c99b51baf641d0092560e
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '295'
 ht-degree: 0%
 
 ---
 
 
-# De segmenten van de abonnee en tijdinterval {#cohorts-segments}
+# De segmenten van de abonnee en tijdkader {#cohorts-segments}
 
+Als u zich aanmeldt bij Account IQ, bevindt zich bovenaan een venster waarin u de abonnee kunt definiëren [segment](/help/accountiq/product-concepts.md#segment-segmet-def) om uw resultaten voor het bekijken van rapporten voor abonnee te filtreren delend gedrag en patronen.
 
-Wanneer u zich aanmeldt bij Account IQ, kunt u in het venster voor het starten van segmenten bovenaan de abonnee opgeven [segment](/help/accountiq/product-concepts.md#segment-segmet-def). Dit helpt in het filtreren resultaten wanneer het bekijken van rapporten over abonnee die gedrag en patronen deelt. Een standaardsegment genoemd-Alle rekeningen in uw eigenschappen wordt reeds geselecteerd, en u ziet de volgende opties in de segmentlancering:
+<!--![](assets/segment-timeframe-panel.png)-->
 
-![](assets/new-segment-selector-collapsed.png){width="800" align="left"}
++++Deelvenster Segment selecteren voor programmeur
 
-*Afbeelding: Segmentlanceerinrichting met samengevouwen segmentoverzicht*
+![](assets/segment-panel-programmer.png)
 
-**A** Momenteel geselecteerde segmentnaam<br/>
-**B** Tijdinterval en selectiekiezer voor granulariteit<br/>
-**C** Segmentoverzicht samengevouwen<br/>
-**D** Optie voor het uitvouwen van een gesegmenteerde samenvatting<br/>
-**E** Segmentgegevens (in termen van aantal abonneerekeningen in het segment voor een tijdsduur)<br/>
-**F** Optie voor segmentlijst openen<br/>
-**G** Segment bewerken, optie<br/>
-**H** Nieuwe segmentoptie maken<br/>
+<!--![](assets/filter-panel.png)-->
 
-## Segmentselectie {#segment-selection}
+De volgende vervolgkeuzemogelijkheden worden gebruikt om segmenten te definiëren:
 
-Voor programmeur of gebruikers MVPD, navigeer aan **Segment openen** -optie. Kies een segment in de lijst en selecteer **Segment openen** om de rapporten over het delen van accounts weer te geven.
+**[!UICONTROL MVPDs in segment]**
 
-Gebruik de **Ogen** pictogram om de gedetailleerde segmentsamenvatting te bekijken, die de informatie over het aantal abonneerekeningen en playbackverzoeken door hen binnen het gekozen tijdinterval presenteert.
+De **[!UICONTROL MVPDs in segment]** kunt u de [MVPD&#39;s](/help/accountiq/product-concepts.md#mvpd-def) (personen of groepen) voor wie u de rapporten voor het delen van accounts wilt bekijken.
 
-+++Deelvenster Segment selecteren voor programmeurs/MVPD&#39;s
+In deze kiezer kunt u, naast het selecteren van de afzonderlijke MVPD&#39;s, ook de volgende groepen selecteren:
 
-![](assets/segment-panel-programmers-mvpds.png) {width="800" align="left"}
+* [De hoogste 10 MVPDs door score te delen](/help/accountiq/product-concepts.md#top-mvpds-def)
 
-*Afbeelding: Deelvenster Segment voor programmeurs/MVPD&#39;s*
+* [De hoogste 10 MVPDs door gebruik](/help/accountiq/product-concepts.md#top-mvpds-def)
 
-+++
+* [Top 10 MVPD&#39;s per account](/help/accountiq/product-concepts.md#top-mvpds-def)
 
-De samenvatting van het segment wordt gebruikt om de volgende parameters te bepalen:
-
-**[!UICONTROL Programmers in segment]**
+* [Isolatiemodus](/help/accountiq/isolation-mode.md)
 
 **[!UICONTROL Channels in segment]**
 
-**[!UICONTROL MVPD in segment]**
+Wanneer u bent aangemeld als programmeergebruiker, kunt u uw kanalen selecteren om de analyse voor het delen van accounts weer te geven. Gebruik de **[!UICONTROL Channels in segment]** met vervolgkeuzelijst om afzonderlijke of meerdere kanalen in uw organisatie te selecteren.
 
-**[!UICONTROL Metrics in segment]**
++++
 
-<!-- The definitions of these parameters will be defined in the glossary article-->
++++Deelvenster Segment selecteren voor MVPD&#39;s
 
-## [!UICONTROL Granularity and time interval] {#granularity-timeinterval}
+![](assets/segment-panel-mvpd.png)
 
-De **[!UICONTROL Granularity and time interval]** kunt u de data en de duur opgeven die wekelijks/maandelijks worden samengevoegd voor het observeren van het gedrag voor het delen van abonneeaccounts. De standaardselectie van het tijdinterval is de huidige week, maar u kunt de duur wijzigen met de opties in de afbeelding.
+De volgende vervolgkeuzemogelijkheden worden gebruikt om segmenten te definiëren:
 
-![[!UICONTROL Granularity and timeinterval]](assets/granularity-timeinterval-weekwise.png){width="350" align="left"}
+**[!UICONTROL Channels in segment]**
 
-*Afbeelding: dialoogvenster Korreligheid en tijdsinterval*
+De **[!UICONTROL Channels in segment]** kunt u het filter verder verkleinen om kanalen te selecteren die overeenkomen met de geselecteerde MVPD&#39;s.
 
-**A** Kies een datum in de datumkiezer<br/>
-**B** Pijl-links selecteren om naar achteren te gaan<br/>
-**C** Selecteer de pijl-rechts om naar voren te gaan<br/>
-**D** De granulariteit per week/maand selecteren<br/>
-**E** Geselecteerd tijdinterval<br/>
+* [De 10 belangrijkste programmeurs door score te delen](/help/accountiq/product-concepts.md#top-mvpds-def)
 
-Wanneer u deze besturingselementen toepast, kunt u uw probleeminstructie definiëren als &quot;abonnees van de MVPD A die de kanalen X, Y en Z in de maand oktober hebben bekeken&quot;.
+* [De tien meest gebruikte programmeurs](/help/accountiq/product-concepts.md#top-mvpds-def)
+
+* [Top 10 van programmeurs via accounts](/help/accountiq/product-concepts.md#top-mvpds-def)
+
+**MVPD(s) in segment**
+
+Wanneer u als gebruiker MVPD het programma wordt geopend, dan wordt uw naam getoond op het gebied voor **[!UICONTROL MVPDs in segment]**.
+
++++
+
+
+
+
+<!--For example, you can define your segment as the "subscribers of the MVPD A that watched the channels X, Y, and Z".-->
+
+
+
+## [!UICONTROL Granularity and time frame] {#granularity-timeframe}
+
+De **[!UICONTROL Granularity and time frame]** kunt u de datums en de duur of de tijdgrootte opgeven waarvoor u het deelgedrag van de abonnee wilt weergeven.
+
+![[!UICONTROL Granularity and timeframe]](assets/granularity-timeframe-weekwise.png)
+
+Zo, met deze controles kunt u uw probleemverklaring als &quot;abonnees van MVPD A bepalen die de kanalen X, Y, en Z in de maand van Mei keek&quot;.
 
