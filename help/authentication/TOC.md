@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass-verificatie
 user-guide-description: Adobe Pass-verificatie is een machtigingsoplossing voor TV Everywhere, die een modulair kader verstrekt om te bepalen of iemand die toegang tot een bron vraagt, daar rechten voor heeft.
-source-git-commit: 31620db6a05d4c7043e49c03099e9f84cdbad4fb
+source-git-commit: 2dbb45aebb1a00863a9344114963f6df95763dfc
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '915'
 ht-degree: 3%
 
 ---
@@ -155,6 +155,7 @@ ht-degree: 3%
    + [Adobe Pass Adobe PayPal-controle](monitoring-adobe-pay-tv-pass.md)
    + [Minimale systeemvereisten](minimum-system-requirements.md)
 + Opmerkingen bij de release {#release-notes}
+   + [Opmerkingen bij de release Adobe Pass Authentication 2.69](auth-rn-269.md)
    + [Opmerkingen bij de release Adobe Pass Authentication 2.68](auth-rn-268.md)
    + [Opmerkingen bij de release Adobe Pass Authentication 2.67](auth-rn-267.md)
    + [Opmerkingen bij de release Adobe Pass Authentication 2.66](auth-rn-266.md)
@@ -165,13 +166,14 @@ ht-degree: 3%
    + [Opmerkingen bij de release Adobe Pass Authentication 2.63](auth-rn-263.md)
    + [Opmerkingen bij de release Adobe Pass Authentication 2.62.1](auth-rn-2621.md)
    + Opmerkingen bij de release van JavaScript SDK  {#release-notes-javascript}
-      + [Opmerkingen bij de release Adobe Pass Authentication JavaScript 3.5.0](authn-rn-javascript-350.md)
-      + [Opmerkingen bij de release Adobe Pass Authentication JavaScript 4.0.0](authn-rn-javascript-400.md)
-      + [Opmerkingen bij de release Adobe Pass Authentication JavaScript 4.1.0](authn-rn-javascript-410.md)
-      + [Opmerkingen bij de release Adobe Pass Authentication JavaScript 4.1.1](authn-rn-javascript-411.md)
-      + [Opmerkingen bij de release Adobe Pass Authentication JavaScript 4.2.0](authn-rn-javascript-420.md)
-      + [Opmerkingen bij de release Adobe Pass Authentication JavaScript 4.4.0](authn-rn-javascript-440.md)
+      + [Opmerkingen bij de release Adobe Pass Authentication JavaScript 4.7.0](authn-rn-javascript-470.md)
       + [Opmerkingen bij de release Adobe Pass Authentication JavaScript 4.6.0](authn-rn-javascript-460.md)
+      + [Opmerkingen bij de release Adobe Pass Authentication JavaScript 4.4.0](authn-rn-javascript-440.md)
+      + [Opmerkingen bij de release Adobe Pass Authentication JavaScript 4.2.0](authn-rn-javascript-420.md)
+      + [Opmerkingen bij de release Adobe Pass Authentication JavaScript 4.1.1](authn-rn-javascript-411.md)
+      + [Opmerkingen bij de release Adobe Pass Authentication JavaScript 4.1.0](authn-rn-javascript-410.md)
+      + [Opmerkingen bij de release Adobe Pass Authentication JavaScript 4.0.0](authn-rn-javascript-400.md)
+      + [Opmerkingen bij de release Adobe Pass Authentication JavaScript 3.5.0](authn-rn-javascript-350.md)
    + Opmerkingen bij de release iOS/tvOS SDK  {#release-notes-ios}
       + [Opmerkingen bij de release Adobe Pass Authentication iOS / tvOS 3.8.4](authn-rn-ios-tvos-384.md)
       + [Opmerkingen bij de release Adobe Pass Authentication iOS / tvOS 3.8.3](authn-rn-ios-tvos-383.md)
@@ -185,7 +187,7 @@ ht-degree: 3%
       + [Certificaten Vragen en antwoorden](certificates-qa.md)
       + JavaScript SDK {#javascript}
          + [Beperkingen van JS SDK voor Safari-browser](js-sdk-limitations-for-safari-browser.md)
-         + [Cookies-updates - vlaggen SameSite en Secure](cookies-updates--samesite-and-secure-flags.md)
+         + [Cookies-updates - vlaggen SameSite en Secure](cookies-updates-samesite-and-secure-flags.md)
       + Android-SDK {#android}
          + [Toegang tot de Android SDK Single Sign-On (SSO) voor Android 10-apps](access-enabler-android-sdk-single-signon-sso-on-android-10-devices.md)
          + [Adobe Pass-verificatie en het nieuwe machtigingenmodel voor Android 6 &quot;Marshmallow&quot;](adobe-primetime-authentication-and-the-android-6-marshmallow-new-permissions-model.md)
@@ -202,7 +204,7 @@ ht-degree: 3%
       + [Uw omgeving instellen en testen in een proefversie](setting-up-your-environment-and-testing-in-prequal.md)
       + [Verificatie- en autorisatiestromen testen met de testsite voor Adobe API](test-authn-authz-flows-using-adobes-api-test-site.md)
    + Clientloze API {#clientless-api}
-      + [Implementatie van de API zonder client - foutcodes / berichten met mogelijke reden / oorzaak](clientless-api-implementation-error-codes--messages-with-probable-reason--cause.md)
+      + [Implementatie van de API zonder client - foutcodes / berichten met mogelijke reden / oorzaak](clientless-api-implementation-error-codes-messages-with-probable-reason-cause.md)
       + [Clientless API Flow bij afwezigheid van apparaat-id](clientless-api-flow-in-the-absence-of-device-id.md)
       + [Zonder clip: gebruik geen &#39;&amp;&#39;reg_code in /authenticate Request](clientless-avoid-using-reg-code-in-authenticate-request.md)
       + [Adobe Pass Entitlement Services inschakelen voor een programmeur op Xbox 360 en XboxOne-client](enabling-primetime-entitlement-services-for-a-programmer-on-xbox-360-and-xboxone-clientless-solution.md)
