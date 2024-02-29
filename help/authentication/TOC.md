@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass-verificatie
 user-guide-description: Adobe Pass-verificatie is een machtigingsoplossing voor TV Everywhere, die een modulair kader verstrekt om te bepalen of iemand die toegang tot een bron vraagt, daar rechten voor heeft.
-source-git-commit: 2dbb45aebb1a00863a9344114963f6df95763dfc
+source-git-commit: 579ce868b6ee94e1854bbc51145fc7840268db26
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '919'
 ht-degree: 3%
 
 ---
@@ -186,7 +186,8 @@ ht-degree: 3%
    + Adobe Pass Authentication SDKs {#primetime-authentication-sdks}
       + [Certificaten Vragen en antwoorden](certificates-qa.md)
       + JavaScript SDK {#javascript}
-         + [Beperkingen van JS SDK voor Safari-browser](js-sdk-limitations-for-safari-browser.md)
+         + [Trackingpreventiebeoordeling - Apple Safari](tracking-prevention-assessment-apple-safari.md)
+         + [Trackingpreventie-evaluatie - Google Chrome](tracking-prevention-assessment-google-chrome.md)
          + [Cookies-updates - vlaggen SameSite en Secure](cookies-updates-samesite-and-secure-flags.md)
       + Android-SDK {#android}
          + [Toegang tot de Android SDK Single Sign-On (SSO) voor Android 10-apps](access-enabler-android-sdk-single-signon-sso-on-android-10-devices.md)
