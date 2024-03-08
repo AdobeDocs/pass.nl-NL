@@ -2,9 +2,9 @@
 title: iOS/tvOS API-naslaggids
 description: iOS/tvOS API-naslaggids
 exl-id: 017a55a8-0855-4c52-aad0-d3d597996fcb
-source-git-commit: 854698397d9d14c1bfddcc10eecc61c7e3c32b71
+source-git-commit: 929d1cc2e0466155b29d1f905f2979c942c9ab8c
 workflow-type: tm+mt
-source-wordcount: '7018'
+source-wordcount: '6933'
 ht-degree: 0%
 
 ---
@@ -41,67 +41,67 @@ Bijbehorende documentatie:
 
 * **[VEROUDERD]** [init](#init) - Instantieert het AccessEnabler-object.
 
-* [setOptions:options:](#setOptions) - Hiermee configureert u algemene SDK-opties, zoals profiel of bezoeker-id.
+* [`setOptions:options:`](#setOptions) - Hiermee configureert u algemene SDK-opties, zoals profiel of bezoeker-id.
 
-* [setRequest:](#setReqV3)[aanvragerID](#setReqV3),[setRequestor:requestorID:serviceProviders:](#setReqV3) - De identiteit van de programmeur wordt vastgesteld.
+* [`setRequestor:`](#setReqV3)[`requestorID`](#setReqV3),[`setRequestor:requestorID:serviceProviders:`](#setReqV3) - De identiteit van de programmeur wordt vastgesteld.
 
-* **[VEROUDERD]** [setRequestor:signedRequestorId:](#setReq),[setRequestor:signedRequestorId:serviceProviders:](#setReq) - De identiteit van de programmeur wordt vastgesteld.
+* **[VEROUDERD]** [`setRequestor:signedRequestorId:`](#setReq),[`setRequestor:signedRequestorId:serviceProviders:`](#setReq) - De identiteit van de programmeur wordt vastgesteld.
 
-* **[VEROUDERD]** [setRequestor:signedRequestorId:geheim:publicKey](#setReq_tvos), [setRequestor:signedRequestorId:serviceProviders:secret:publicKey](#setReq_tvos)-Hiermee wordt de identiteit van de programmeur vastgesteld.
+* **[VEROUDERD]** [`setRequestor:signedRequestorId:secret:publicKey`](#setReq_tvos), [`setRequestor:signedRequestorId:serviceProviders:secret:publicKey`](#setReq_tvos)-Hiermee wordt de identiteit van de programmeur vastgesteld.
 
-* [setRequestorComplete:](#setReqComplete) - Meldt aan uw toepassing dat de configuratiefase volledig is.
+* [`setRequestorComplete:`](#setReqComplete) - Meldt aan uw toepassing dat de configuratiefase volledig is.
 
-* [checkAuthentication](#checkAuthN) - Controleert de verificatiestatus van de huidige gebruiker.
+* [`checkAuthentication`](#checkAuthN) - Controleert de verificatiestatus van de huidige gebruiker.
 
-* [getAuthentication](#getAuthN), [getAuthentication:withData:](#getAuthN) - Start de volledige verificatieworkflow.
+* [`getAuthentication`](#getAuthN), [`getAuthentication:withData:`](#getAuthN) - Start de volledige verificatieworkflow.
 
-* [getAuthentication:filter](#getAuthN_filter),[getAuthentication:withData:](#getAuthN)[andFilter](#getAuthN_filter) - Start de volledige verificatieworkflow.
+* [`getAuthentication:filter`](#getAuthN_filter),[`getAuthentication:withData:`](#getAuthN)[andFilter](#getAuthN_filter) - Start de volledige verificatieworkflow.
 
-* [displayProviderDialog:](#dispProvDialog) - Informeert uw toepassing om de aangewezen elementen UI voor de gebruiker te concretiseren om een MVPD te selecteren.
+* [`displayProviderDialog:`](#dispProvDialog) - Informeert uw toepassing om de aangewezen elementen UI voor de gebruiker te concretiseren om een MVPD te selecteren.
 
-* [setSelectedProvider:](#setSelProv) - Informeert AccessEnabler over de MVPD-selectie van de gebruiker.
+* [`setSelectedProvider:`](#setSelProv) - Informeert AccessEnabler over de MVPD-selectie van de gebruiker.
 
-* [navigateToUrl:](#nav2url) - Meldt dat de gebruiker de MVPD-aanmeldingspagina moet zien.
+* [`navigateToUrl:`](#nav2url) - Meldt dat de gebruiker de MVPD-aanmeldingspagina moet zien.
 
-* [navigateToUrl:useSVC:](#nav2urlSVC) - Meldt uw toepassing dat de gebruiker van de MVPD login pagina, gebruikend SFSafariViewController moet worden voorgesteld
+* [`navigateToUrl:useSVC:`](#nav2urlSVC) - Meldt uw toepassing dat de gebruiker van de MVPD login pagina, gebruikend SFSafariViewController moet worden voorgesteld
 
-* [handleExternalURL:url](#handleExternalURL) - Voltooit de authentificatie/logout stroom.
+* [`handleExternalURL:url`](#handleExternalURL) - Voltooit de authentificatie/logout stroom.
 
-* **[VEROUDERD]** [getAuthenticationToken](#getAuthNToken) - Verzoekt het authentificatietoken van de achterste deelserver.
+* **[VEROUDERD]** [`getAuthenticationToken`](#getAuthNToken) - Verzoekt het authentificatietoken van de achterste deelserver.
 
-* [setAuthenticationStatus:errorCode:](#setAuthNStatus) - Informeert uw toepassing over de status van de verificatiestroom.
+* [`setAuthenticationStatus:errorCode:`](#setAuthNStatus) - Informeert uw toepassing over de status van de verificatiestroom.
 
-* [checkPreauthorisedResources:](#checkPreauth) - Hiermee wordt bepaald of de gebruiker al gemachtigd is om specifieke beveiligde bronnen weer te geven.
+* [`checkPreauthorizedResources:`](#checkPreauth) - Hiermee wordt bepaald of de gebruiker al gemachtigd is om specifieke beveiligde bronnen weer te geven.
 
-* [checkPreauthorisedResources:cache:](#checkPreauthCache) - Hiermee wordt bepaald of de gebruiker al gemachtigd is om specifieke beveiligde bronnen weer te geven.
+* [`checkPreauthorizedResources:cache:`](#checkPreauthCache) - Hiermee wordt bepaald of de gebruiker al gemachtigd is om specifieke beveiligde bronnen weer te geven.
 
-* [preauthorisedResources:](#preauthResources) - Biedt een lijst met bronnen die de gebruiker al mag bekijken.
+* [`preauthorizedResources:`](#preauthResources) - Biedt een lijst met bronnen die de gebruiker al mag bekijken.
 
-* [checkAuthorization:](#checkAuthZ), [checkAuthorization:withData:](#checkAuthZ) - Controleert de status van de huidige gebruiker.
+* [`checkAuthorization:`](#checkAuthZ), [`checkAuthorization:withData:`](#checkAuthZ) - Controleert de status van de huidige gebruiker.
 
-* [getAuthorization:](#getAuthZ), [getAuthorization:withData:](#getAuthZ) - Hiermee wordt de autorisatiestroom gestart.
+* [`getAuthorization:`](#getAuthZ), [`getAuthorization:withData:`](#getAuthZ) - Hiermee wordt de autorisatiestroom gestart.
 
-* [setToken:forResource:](#setToken) - Meldt dat de autorisatiestroom is voltooid.
+* [`setToken:forResource:`](#setToken) - Meldt dat de autorisatiestroom is voltooid.
 
-* [tokenRequestFailed:errorCode:errorDescription:](#tokenReqFailed) - Meldt dat de autorisatiestroom is mislukt.
+* [`tokenRequestFailed:errorCode:errorDescription:`](#tokenReqFailed) - Meldt dat de autorisatiestroom is mislukt.
 
-* [afmelden](#logout) - Hiermee wordt de afmeldingsstroom gestart.
+* [`logout`](#logout) - Hiermee wordt de afmeldingsstroom gestart.
 
-* [getSelectedProvider](#getSelProv) - Hiermee bepaalt u de momenteel geselecteerde provider.
+* [`getSelectedProvider`](#getSelProv) - Hiermee bepaalt u de momenteel geselecteerde provider.
 
-* [selectedProvider:](#selProv) - Hiermee wordt informatie over de momenteel geselecteerde MVPD aan uw toepassing geleverd.
+* [`selectedProvider:`](#selProv) - Hiermee wordt informatie over de momenteel geselecteerde MVPD aan uw toepassing geleverd.
 
-* [getMetadata:](#getMeta) - Hiermee wordt informatie opgehaald die door de AccessEnabler-bibliotheek als metagegevens wordt weergegeven.
+* [`getMetadata:`](#getMeta) - Hiermee wordt informatie opgehaald die door de AccessEnabler-bibliotheek als metagegevens wordt weergegeven.
 
-* [presentTvProviderDialog:](#presentTvDialog) - Meldt dat uw toepassing het Apple SSO-dialoogvenster weergeeft.
+* [`presentTvProviderDialog:`](#presentTvDialog) - Meldt dat uw toepassing het Apple SSO-dialoogvenster weergeeft.
 
-* [dismissTvProviderDialog:](#dismissTvDialog) - Meldt dat uw toepassing het Apple SSO-dialoogvenster verbergt.
+* [`dismissTvProviderDialog:`](#dismissTvDialog) - Meldt dat uw toepassing het Apple SSO-dialoogvenster verbergt.
 
-* [setMetadataStatus:encrypted:forKey:andArguments:](#setMetaStatus) - levert de door een [getMetadata:](#getMeta) vraag.
+* [`setMetadataStatus:encrypted:forKey:andArguments:`](#setMetaStatus) - levert de door een [`getMetadata:`](#getMeta) vraag.
 
-* [sendTrackingData:forEventType:](#sendTracking) - Informatie over het bijhouden van gegevens.
+* [`sendTrackingData:forEventType:`](#sendTracking) - Informatie over het bijhouden van gegevens.
 
-* [MVPD](#mvpd) - De klasse MVPD. [Bevat informatie over MVPD]
+* [`MVPD`](#mvpd) - De klasse MVPD. [Bevat informatie over MVPD]
 
 ### init:softwareStatement {#initWithSoftwareStatement}
 
@@ -170,7 +170,7 @@ Bijbehorende documentatie:
 [Terug naar boven...](#apis)
 
 
-### setRequestor:requestorID, setRequestor:requestorID:serviceProviders: {#setReqV3}
+### `setRequestor:requestorID`, `setRequestor:requestorID:serviceProviders:` {#setReqV3}
 
 **Bestand:** AccessEnabler/headers/AccessEnabler.h
 
@@ -212,7 +212,7 @@ Als een waarde is opgegeven voor de `urls` parameter, richt de resulterende netw
 
 </br>
 
-### setRequestor:setSignedRequestorId:, setRequestor:setSignedRequestorId:serviceProviders: - [VEROUDERD] {#setReq}
+### `setRequestor:setSignedRequestorId:`, `setRequestor:setSignedRequestorId:serviceProviders:` - [VEROUDERD] {#setReq}
 
 **Bestand:** AccessEnabler/headers/AccessEnabler.h
 
@@ -249,7 +249,7 @@ Als een waarde is opgegeven voor de `urls` parameter, richt de resulterende netw
 
 [Terug naar boven...](#apis)
 
-### setRequestor:setSignedRequestorId:geheim:publicKey, setRequestor:setSignedRequestorId:serviceProviders:secret:publicKey - [VEROUDERD] {#setReq_tvos}
+### `setRequestor:setSignedRequestorId:secret:publicKey`, `setRequestor:setSignedRequestorId:serviceProviders:secret:publicKey` - [VEROUDERD] {#setReq_tvos}
 
 **Bestand:** AccessEnabler/headers/AccessEnabler.h
 
@@ -354,6 +354,7 @@ Indien opgeroepen zonder de `serviceProviders` parameter, zal de bibliotheek de 
    * `ACCESS_ENABLER_STATUS_ERROR` - configuratiefase mislukt
 
 **geactiveerd door:**
+
 `setRequestor:setSignedRequestorId:, `[`setRequestor:setSignedRequestorId:serviceProviders:`](#setReq)
 
 [Terug naar boven...](#apis)
@@ -396,7 +397,7 @@ Deze wordt door de toepassing gebruikt om de verificatiestatus van de gebruiker 
 
 </br>
 
-### getAuthentication, getAuthentication:withData: {#getAuthN}
+### `getAuthentication`, `getAuthentication:withData:` {#getAuthN}
 
 **Bestand:** AccessEnabler/headers/AccessEnabler.h
 
@@ -407,7 +408,7 @@ Deze wordt door de toepassing gebruikt om de verificatiestatus van de gebruiker 
 
 Aangezien de geloofsbrieven van de gebruiker op de MVPD login pagina worden geverifieerd, wordt uw toepassing vereist om de veelvoudige omleidingsverrichtingen te controleren die plaatsvinden terwijl de gebruiker bij de MVPD login pagina voor authentiek verklaart. Wanneer de correcte geloofsbrieven zijn ingegaan, wordt de controle WebView opnieuw gericht aan een douane URL die door wordt bepaald `ADOBEPASS_REDIRECT_URL` constante. Deze URL is niet bedoeld om door WebView te worden geladen. De toepassing moet deze URL onderscheppen en deze gebeurtenis interpreteren als een signaal dat de aanmeldingsfase is voltooid. Het zou controle aan AccessEnabler dan moeten overdragen om de authentificatiestroom te voltooien (door [handleExternalURL](#handleExternalURL) methode).
 
-Ten slotte wordt de authenticatiestatus via de [setAuthenticationStatus:errorCode:](#setAuthNStatus) callback.
+Ten slotte wordt de authenticatiestatus via de [`setAuthenticationStatus:errorCode:`](#setAuthNStatus) callback.
 
 <table class="pass_api_table">
 <colgroup>
@@ -456,23 +457,23 @@ Ten slotte wordt de authenticatiestatus via de [setAuthenticationStatus:errorCod
 * *forceAuthn*: Een markering die aangeeft of de verificatiestroom moet worden gestart, ongeacht of de gebruiker al dan niet is geverifieerd.
 * *data*: Een woordenboek dat bestaat uit sleutelwaardeparen die naar de betaaltelevisiebetaalservice moeten worden verzonden. Adobe kan deze gegevens gebruiken om toekomstige functionaliteit toe te laten zonder SDK te veranderen.
 
-**Callbacks geactiveerd:** ` setAuthenticationStatus:errorCode:, `[`displayProviderDialog:`](#dispProvDialog)`,`` sendTrackingData:forEventType:`
+**Callbacks geactiveerd:** `setAuthenticationStatus:errorCode:`, [`displayProviderDialog:`](#dispProvDialog), `sendTrackingData:forEventType:`
 
 
 [Terug naar boven...](#apis)
 
 </br>
 
-### getAuthentication:filter, getAuthentication:withData:andFilter {#getAuthN_filter}
+### `getAuthentication:filter`, `getAuthentication:withData:andFilter` {#getAuthN_filter}
 
 **Bestand:** AccessEnabler/headers/AccessEnabler.h
 
 **Omschrijving:** Start de volledige verificatieworkflow. Het begint door de authentificatiestatus te controleren. Indien nog niet geverifieerd, wordt de verificatiestroom state-machine gestart:
 
 * [presentTVProviderDialog()](#presentTvDialog) zal worden geroepen als de huidige aanvrager minstens één MVPD heeft die SSO steunt. Als geen MVPD SSO steunt, zal de klassieke authentificatiestroom beginnen en de filterparameter wordt genegeerd.
-* Nadat de gebruiker de Apple SSO-stroom heeft voltooid [dismissTvProviderDialog()](#dismissTvDialog) wordt geactiveerd en het verificatieproces wordt voltooid.
+* Nadat de gebruiker de Apple SSO-stroom heeft voltooid [`dismissTvProviderDialog()`](#dismissTvDialog) wordt geactiveerd en het verificatieproces wordt voltooid.
 
-Ten slotte wordt de authenticatiestatus via de [setAuthenticationStatus:errorCode:](#setAuthNStatus) callback.
+Ten slotte wordt de authenticatiestatus via de [`setAuthenticationStatus:errorCode:`](#setAuthNStatus) callback.
 
 **Beschikbaarheid:** v2.4+
 
@@ -509,8 +510,7 @@ Ten slotte wordt de authenticatiestatus via de [setAuthenticationStatus:errorCod
                   withData:(NSDictionary* )data
                  andFilter:(NSDictionary *)filter;</code></pre>
 <div>
-
-</div></td>
+ </div></td>
 </tr>
 </tbody>
 </table>
@@ -615,7 +615,7 @@ Zodra de gebruiker gewenste MVPD heeft geselecteerd, wordt de upper-layer toepas
 
 * *mvpds*: lijst met MVPD-objecten met MVPD-gerelateerde informatie die de toepassing kan gebruiken om de UI-elementen voor de selectie van MVPD te maken.
 
-**geactiveerd door:** ` getAuthentication, `[getAuthentication:withData:](#getAuthN),` getAuthorization:, `[getAuthorization:withData:](#getAuthZ)
+**geactiveerd door:** `getAuthentication`, [`getAuthentication:withData:`](#getAuthN),`getAuthorization:`, [`getAuthorization:withData:`](#getAuthZ)
 
 
 [Terug naar boven...](#apis)
@@ -632,7 +632,7 @@ Als het geselecteerde MVPD een TempPass MVPD is zal het automatisch met die MVPD
 
 Houd er rekening mee dat dit niet mogelijk is voor de Tijdelijke controle voor speciale acties waarbij extra parameters worden gegeven aan de methode getAuthentication().
 
-Bij het passeren *null* als parameter, veronderstelt de Toegang Enabler dat de gebruiker de authentificatiestroom (d.w.z. op de &quot;Achterknoop&quot;gedrukt) heeft geannuleerd, en antwoordt door de authentificatiestatus-machine opnieuw in te stellen en door de [setAuthenticationStatus:errorCode:](#setAuthNStatus) callback met de `AccessEnabler.PROVIDER_NOT_SELECTED_ERROR` foutcode.
+Bij het passeren *null* als parameter, veronderstelt de Toegang Enabler dat de gebruiker de authentificatiestroom (d.w.z. op de &quot;Achterknoop&quot;gedrukt) heeft geannuleerd, en antwoordt door de authentificatiestatus-machine opnieuw in te stellen en door de [`setAuthenticationStatus:errorCode:`](#setAuthNStatus) callback met de `AccessEnabler.PROVIDER_NOT_SELECTED_ERROR` foutcode.
 
 <table class="pass_api_table">
 <colgroup>
@@ -654,7 +654,7 @@ Bij het passeren *null* als parameter, veronderstelt de Toegang Enabler dat de g
 
 **Parameters:** Geen
 
-**Callbacks geactiveerd:** ` setAuthenticationStatus:errorCode:,sendTrackingData:forEventType:,  `[`navigateToUrl:`](#nav2url)
+**Callbacks geactiveerd:** `setAuthenticationStatus:errorCode:`,`sendTrackingData:forEventType:`,  [`navigateToUrl:`](#nav2url)
 
 [Terug naar boven...](#apis)
 
@@ -700,7 +700,7 @@ Als UIWebView/WKWebView` `de controller doorloopt verschillende omleidingen, moe
 
 </br>
 
-#### navigateToUrl:useSVC: {#nav2urlSVC}
+#### `navigateToUrl:useSVC:` {#nav2urlSVC}
 
 **Bestand:** AccessEnabler/headers/EntitlementDelegate.h
 
@@ -812,7 +812,7 @@ In het geval van de authentificatiestroom voltooit AccessEnabler de stroom door 
 
 &lt;/br
 
-#### setAuthenticationStatus:errorCode: {#setAuthNStatus}
+#### `setAuthenticationStatus:errorCode:` {#setAuthNStatus}
 
 **Bestand:** AccessEnabler/headers/EntitlementDelegate.h
 
@@ -848,7 +848,7 @@ In het geval van de authentificatiestroom voltooit AccessEnabler de stroom door 
    * `PROVIDER_NOT_SELECTED_ERROR` - AccessEnabler heeft de authentificatiestatus-machine opnieuw ingesteld nadat de hogere laagtoepassing overgegaan *null* tot [`setSelectedProvider:`](#setSelProv) om de verificatiestroom af te breken.  Waarschijnlijk heeft de gebruiker de verificatiestroom geannuleerd (druk op de knop &quot;Terug&quot;).
    * `GENERIC_AUTHENTICATION_ERROR` - De verificatiestroom is mislukt als gevolg van redenen zoals niet-beschikbaarheid van het netwerk of de gebruiker heeft de verificatiestroom expliciet geannuleerd.
 
-**geactiveerd door:** ` checkAuthentication, getAuthentication, `[getAuthentication:withData:](#getAuthN),` checkAuthorization:, `[checkAuthorization:withData:](#checkAuthZ)
+**geactiveerd door:** `checkAuthentication`, `getAuthentication`, [`getAuthentication:withData:`](#getAuthN), `checkAuthorization:`, [`checkAuthorization:withData:`](#checkAuthZ)
 
 [Terug naar boven...](#apis)
 
@@ -889,7 +889,7 @@ In het geval van de authentificatiestroom voltooit AccessEnabler de stroom door 
 
 </br>
 
-### checkPreauthorisedResources:cache: {#checkPreauthCache}
+### `checkPreauthorizedResources:cache:` {#checkPreauthCache}
 
 **Bestand:** AccessEnabler/headers/AccessEnabler.h
 
@@ -964,11 +964,11 @@ In het geval van de authentificatiestroom voltooit AccessEnabler de stroom door 
 
 </br>
 
-### checkAuthorization:, checkAuthorization:withData: {#checkAuthZ}
+### `checkAuthorization:`, `checkAuthorization:withData:` {#checkAuthZ}
 
 **Bestand:** AccessEnabler/headers/AccessEnabler.h
 
-**Omschrijving:** Deze methode wordt gebruikt door de aanvraag om de status van de vergunning te controleren. Het begint door de authentificatiestatus eerst te controleren. Indien niet geverifieerd, wordt de [tokenRequestFailed:errorCode:errorDescription:](#tokenReqFailed) callback wordt geactiveerd en de methode wordt afgesloten. Als de gebruiker voor authentiek wordt verklaard, teweegbrengt het ook de vergunningsstroom. Zie de details over de [`getAuthorization:`](#getAuthZ) methode.
+**Omschrijving:** Deze methode wordt gebruikt door de aanvraag om de status van de vergunning te controleren. Het begint door de authentificatiestatus eerst te controleren. Indien niet geverifieerd, wordt de [`tokenRequestFailed:errorCode:errorDescription:`](#tokenReqFailed) callback wordt geactiveerd en de methode wordt afgesloten. Als de gebruiker voor authentiek wordt verklaard, teweegbrengt het ook de vergunningsstroom. Zie de details over de [`getAuthorization:`](#getAuthZ) methode.
 
 
 <table class="pass_api_table">
@@ -1014,17 +1014,18 @@ In het geval van de authentificatiestroom voltooit AccessEnabler de stroom door 
 * *data*: Een woordenboek dat bestaat uit sleutelwaardeparen die naar de betaaltelevisiebetaalservice moeten worden verzonden. Adobe kan deze gegevens gebruiken om toekomstige functionaliteit toe te laten zonder SDK te veranderen.
 
 **Callbacks geactiveerd:**
-[tokenRequestFailed:errorCode:errorDescription:](#tokenReqFailed)`,setToken:forResource:, sendTrackingData:forEventType:, setAuthenticationStatus:errorCode:`
+
+[`tokenRequestFailed:errorCode:errorDescription:`](#tokenReqFailed),`setToken:forResource:`, `sendTrackingData:forEventType:`, `setAuthenticationStatus:errorCode:`
 
 [Terug naar boven...](#apis)
 
 </br>
 
-### getAuthorization:, getAuthorization:withData: {#getAuthZ}
+### `getAuthorization:`, `getAuthorization:withData:` {#getAuthZ}
 
 **Bestand:** AccessEnabler/headers/AccessEnabler.h
 
-**Omschrijving:** Deze methode wordt gebruikt door de aanvraag om de vergunningsstroom in gang te zetten. Als de gebruiker niet reeds voor authentiek wordt verklaard, stelt het ook de authentificatiestroom in werking. Als de gebruiker voor authentiek wordt verklaard, gaat AccessEnabler te werk om verzoeken om het toestemmingstoken (als geen geldig toestemmingstoken in het lokale symbolische geheime voorgeheugen) en voor het kortstondige media token uit te geven. Zodra het korte media token is verkregen, wordt de autorisatiestroom als volledig beschouwd. De [setToken:forResource:](#setToken) callback wordt geactiveerd en het korte media-token wordt als een parameter aan de toepassing geleverd. Indien de vergunning om welke reden dan ook mislukt, [tokenRequestFailed:forEventType:](#tokenReqFailed) callback wordt geactiveerd en de foutcode/details worden opgegeven.
+**Omschrijving:** Deze methode wordt gebruikt door de aanvraag om de vergunningsstroom in gang te zetten. Als de gebruiker niet reeds voor authentiek wordt verklaard, stelt het ook de authentificatiestroom in werking. Als de gebruiker voor authentiek wordt verklaard, gaat AccessEnabler te werk om verzoeken om het toestemmingstoken (als geen geldig toestemmingstoken in het lokale symbolische geheime voorgeheugen) en voor het kortstondige media token uit te geven. Zodra het korte media token is verkregen, wordt de autorisatiestroom als volledig beschouwd. De [`setToken:forResource:`](#setToken) callback wordt geactiveerd en het korte media-token wordt als een parameter aan de toepassing geleverd. Indien de vergunning om welke reden dan ook mislukt, [`tokenRequestFailed:forEventType:`](#tokenReqFailed) callback wordt geactiveerd en de foutcode/details worden opgegeven.
 
 <table class="pass_api_table">
 <colgroup>
@@ -1075,13 +1076,15 @@ In het geval van de authentificatiestroom voltooit AccessEnabler de stroom door 
 **Extra callbacks geactiveerd:**\
 Deze methode kan de volgende callbacks (als de authentificatiestroom ook in werking wordt gesteld) ook teweegbrengen: `setAuthenticationStatus:errorCode:`, `displayProviderDialog:`
 
-**NOTA: Gelieve te gebruiken checkAuthorization: / checkAuthorization:withData: in plaats van getAuthorization: / getAuthorization:withData: waar mogelijk. getAuthorization: / getAuthorization:withData: de methode zal een volledige authentificatiestroom (als de gebruiker niet voor authentiek wordt verklaard) beginnen en dit tot een ingewikkelde implementatie aan de kant van de Programmer kan leiden.**
+>[!NOTE]
+>
+>Gebruik `checkAuthorization:` / `checkAuthorization:withData:` in plaats van `getAuthorization:` / `getAuthorization:withData:` waar mogelijk. De `getAuthorization:` / `getAuthorization:withData:` de methode zal een volledige authentificatiestroom (als de gebruiker niet voor authentiek wordt verklaard) beginnen en dit tot een ingewikkelde implementatie aan de kant van de Programmer kan leiden.
 
 [Terug naar boven...](#apis)
 
 </br>
 
-### setToken:forResource: {#setToken}
+### `setToken:forResource:` {#setToken}
 
 **Bestand:** AccessEnabler/headers/EntitlementDelegate.h
 
@@ -1112,13 +1115,13 @@ Deze methode kan de volgende callbacks (als de authentificatiestroom ook in werk
 * *token*: de korte-duur media-token
 * *resource*: de bron waarvoor de vergunning is verleend
 
-**geactiveerd door:** [checkAuthorization:](#checkAuthZ)` , `[checkAuthorization:withData:](#checkAuthZ),` `[getAuthorization:](#getAuthZ), [getAuthorization:withData:](#getAuthZ)
+**geactiveerd door:** [`checkAuthorization:`](#checkAuthZ) , [`checkAuthorization:withData:`](#checkAuthZ), [`getAuthorization:`](#getAuthZ), [`getAuthorization:withData:`](#getAuthZ)
 
 [Terug naar boven...](#apis)
 
 </br>
 
-### tokenRequestFailed:errorCode:errorDescription: {#tokenReqFailed}
+### `tokenRequestFailed:errorCode:errorDescription:` {#tokenReqFailed}
 
 **Bestand:** AccessEnabler/headers/EntitlementDelegate.h
 
@@ -1152,7 +1155,7 @@ Deze methode kan de volgende callbacks (als de authentificatiestroom ook in werk
 * *beschrijving*: Aanvullende details over het mislukkingsscenario. Als deze beschrijvende tekenreeks om welke reden dan ook niet beschikbaar is, verzendt Adobe Pass Authentication een lege tekenreeks **(&quot;&quot;)**.\
   Deze tekenreeks kan door een MVPD worden gebruikt om aangepaste foutberichten of verkoopgerelateerde berichten door te geven. Bijvoorbeeld, als een abonnee vergunning voor een middel wordt ontkend, kon MVPD een bericht zoals verzenden: &quot;U hebt momenteel geen toegang tot dit kanaal in uw pakket. Als u het pakket wilt bijwerken, klikt u op **hier**.&quot; Het bericht wordt overgegaan door de Authentificatie van Adobe Pass door deze callback aan Programmer, die de optie heeft om het te tonen of te negeren. Adobe Pass Authentication kan deze parameter ook gebruiken om meldingen te verzenden over de voorwaarde die tot een fout kan hebben geleid. Bijvoorbeeld, &quot;kwam een netwerkfout voor toen het communiceren met de de vergunningsdienst van de leverancier&quot;.
 
-**geactiveerd door:** ` checkAuthorization:, `[checkAuthorization:withData:](#checkAuthZ), `getAuthorization:, `[getAuthorization:withData:](#getAuthZ)
+**geactiveerd door:** `checkAuthorization:`, [`checkAuthorization:withData:`](#checkAuthZ), `getAuthorization:`, [`getAuthorization:withData:`](#getAuthZ)
 
 [Terug naar boven...](#apis)
 
@@ -1195,7 +1198,7 @@ Uiteindelijk zal AccessEnabler het [`setAuthenticationStatus()`](#setAuthNStatus
 
 **Parameters:** Geen
 
-**Callbacks geactiveerd:** `navigateToUrl:, `[`setAuthenticationStatus:errorCode:`](#setAuthNStatus)
+**Callbacks geactiveerd:** `navigateToUrl:`, [`setAuthenticationStatus:errorCode:`](#setAuthNStatus)
 
 
 
@@ -1396,7 +1399,7 @@ Er zijn twee soorten meta-gegevens beschikbaar aan Programmeurs:
 
 </br>
 
-### setMetadataStatus:encrypted:forKey:andArguments: {#setMetaStatus}
+### `setMetadataStatus:encrypted:forKey:andArguments:` {#setMetaStatus}
 
 **Bestand:** AccessEnabler/headers/EntitlementDelegate.h
 
@@ -1525,7 +1528,7 @@ AccessEnabler teweegbrengt een extra callback teweeg die niet noodzakelijk met d
    * **mvpdSelection:** wanneer de gebruiker een MVPD in de MVPD selectievorm selecteert (gebeurtenis is `TRACKING_GET_SELECTED_PROVIDER`)
 * *data*: aanvullende gegevens die aan de gerapporteerde gebeurtenis zijn gekoppeld. Deze gegevens worden gepresenteerd in de vorm van een lijst met waarden.
 
-**geactiveerd door:** `checkAuthentication, getAuthentication, `[getAuthentication:withData:](#getAuthN), `checkAuthorization:, `[checkAuthorization:withData:](#checkAuthZ), `getAuthorization:, `[getAuthorization:withData:](#getAuthZ), `setSelectedProvider:`
+**geactiveerd door:** `checkAuthentication`, `getAuthentication`, [`getAuthentication:withData:`](#getAuthN), `checkAuthorization:`, [`checkAuthorization:withData:`](#checkAuthZ), `getAuthorization:`, [`getAuthorization:withData:`](#getAuthZ), `setSelectedProvider:`
 
 Instructies voor het interpreteren van de waarden in de *data* array:
 

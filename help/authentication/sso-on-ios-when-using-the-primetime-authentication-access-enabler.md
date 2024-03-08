@@ -2,9 +2,9 @@
 title: SSO op iOS bij gebruik van Adobe Pass Authentication Access Enabler
 description: SSO op iOS bij gebruik van Adobe Pass Authentication Access Enabler
 exl-id: 882f0abb-2e6e-461d-a375-3ab410991935
-source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
+source-git-commit: 929d1cc2e0466155b29d1f905f2979c942c9ab8c
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1121'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Het gedrag van SSO is als volgt:
    - **Belangrijk:** Houd er rekening mee dat de iOS SDK 1.9.4-versie [de minimale iOS-implementatiedoelstelling verhoogd tot iOS 7.](https://tve.zendesk.com/hc/en-us/articles/204963209-iOS-Native-AccessEnabler-Library)
 - **iOS 7 en hoger**: SSO werkt onder de volgende omstandigheden:
 
-1. Toepassingen worden gepubliceerd met hetzelfde Apple-distributieprofiel of profielen die tot hetzelfde team behoren. Dit is de enige manier waarop apps aangepaste plakborden kunnen delen op iOS 7 en hoger. In alle andere scenario&#39;s wordt het plakbord in sandbox per toepassing geplaatst. Van [*https://developer.apple.com/library/IOs/releasenotes/General/RN-iOSSDK-7.0/index.html*](https://developer.apple.com/library/ios/releasenotes/General/RN-iOSSDK-7.0/index.html): \+\[UIPasteboardWithName:create:\] en +\[UIPasteboard pasteboardWithUniqueName\] hebben nu een unieke naam, zodat alleen die toepassingen in dezelfde toepassingsgroep toegang hebben tot het plakbord. Als de ontwikkelaar een plakbord probeert te maken met een naam die al bestaat en geen deel uitmaakt van dezelfde app-suite, krijgt hij of zij een eigen unieke en persoonlijke plakbord. Merk op dat dit niet het systeem verstrekt plakborden, algemeen, en vinden beïnvloedt.
+1. Toepassingen worden gepubliceerd met hetzelfde Apple-distributieprofiel of profielen die tot hetzelfde team behoren. Dit is de enige manier waarop apps aangepaste plakborden kunnen delen op iOS 7 en hoger. In alle andere scenario&#39;s wordt het plakbord in sandbox per toepassing geplaatst. Van [*https://developer.apple.com/library/IOs/releasenotes/General/RN-iOSSDK-7.0/index.html*](https://developer.apple.com/library/ios/releasenotes/General/RN-iOSSDK-7.0/index.html): \+\[`UIPasteboard pasteboardWithName:create:\`] en +\[`UIPasteboard pasteboardWithUniqueName`\] heeft nu een unieke naam, zodat alleen die toepassingen in dezelfde toepassingsgroep toegang hebben tot het plakbord. Als de ontwikkelaar een plakbord probeert te maken met een naam die al bestaat en geen deel uitmaakt van dezelfde app-suite, krijgt hij of zij een eigen unieke en persoonlijke plakbord. Merk op dat dit niet het systeem verstrekt plakborden, algemeen, en vinden beïnvloedt.
 
 1. Toepassingen hebben hetzelfde voorvoegsel voor de bundel-id (alle componenten behalve de laatste). Alleen toepassingen die hetzelfde voorvoegsel voor de bundel-id hebben, berekenen dezelfde IDFV. Van [*https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIDevice\_Class/index.html\#//apple\_ref/occ/instp/UIDevice/identifierForVendor*](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIDevice_Class/index.html#//apple_ref/occ/instp/UIDevice/identifierForVendor): In IOS 7 worden alle componenten van de bundel, behalve de laatste component, gebruikt om de leverancier-id te genereren. Als de bundel-id slechts één component bevat, wordt de volledige bundel-id gebruikt.
 
