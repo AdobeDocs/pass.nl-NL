@@ -2,9 +2,9 @@
 title: Platform SSO profiel-request ophalen
 description: Platform SSO profiel-request ophalen
 exl-id: 44fd4e26-4d9a-4607-ac2c-b85d848f5fc6
-source-git-commit: 19ed211c65deaa1fe97ae462065feac9f77afa64
+source-git-commit: ea064031c3a1fee3298d85cf442c40bd4bb56281
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '189'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 >[!NOTE]
 >
 >De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
+
+>[!NOTE]
+>
+> REST API-implementatie is beperkt door [Draaimechanisme](/help/authentication/throttling-mechanism.md)
 
 ## REST API-eindpunten {#clientless-endpoints}
 

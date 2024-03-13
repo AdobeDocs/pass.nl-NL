@@ -2,10 +2,10 @@
 title: Gratis voorvertoning voor tijdelijke controle en tijdelijke controle voor speciale acties
 description: Gratis voorvertoning voor tijdelijke controle en tijdelijke controle voor speciale acties
 exl-id: c584bf0c-15c4-4a4d-b6a2-8d15ee786fe3
-source-git-commit: 19ed211c65deaa1fe97ae462065feac9f77afa64
+source-git-commit: ea064031c3a1fee3298d85cf442c40bd4bb56281
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 1%
+source-wordcount: '399'
+ht-degree: 0%
 
 ---
 
@@ -14,6 +14,10 @@ ht-degree: 1%
 >[!NOTE]
 >
 >De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
+
+>[!NOTE]
+>
+> REST API-implementatie is beperkt door [Draaimechanisme](/help/authentication/throttling-mechanism.md)
 
 ## REST API-eindpunten {#clientless-endpoints}
 

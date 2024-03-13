@@ -2,10 +2,10 @@
 title: REST API Reference
 description: Referentie van rustapi
 exl-id: 67e4639e-db0b-4400-bb81-e214263e8395
-source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
+source-git-commit: ea064031c3a1fee3298d85cf442c40bd4bb56281
 workflow-type: tm+mt
-source-wordcount: '649'
-ht-degree: 4%
+source-wordcount: '641'
+ht-degree: 2%
 
 ---
 
@@ -14,6 +14,10 @@ ht-degree: 4%
 >[!NOTE]
 >
 >De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
+
+## Draaimechanisme
+
+De Adobe Pass Authentication REST API wordt beheerd door een [Draaimechanisme](/help/authentication/throttling-mechanism.md).
 
 ## Antwoordindelingen {#response-formats}
 

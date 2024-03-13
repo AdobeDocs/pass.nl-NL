@@ -2,9 +2,9 @@
 title: REST API Cookbook (client-naar-server)
 description: Testen van API-cookboekclient naar server.
 exl-id: f54a1eda-47d5-4f02-b343-8cdbc99a73c0
-source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
+source-git-commit: ea064031c3a1fee3298d85cf442c40bd4bb56281
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '870'
 ht-degree: 0%
 
 ---
@@ -22,6 +22,10 @@ Dit document bevat stapsgewijze instructies voor het engineeringteam van een pro
 
 
 Deze aanpak vereist twee componenten (streaming app en AuthN app) om de vereiste stromen te voltooien: opstarten, registreren, autoriseren en weergavemedia in de streaming app en de verificatiestroom in uw AuthN-app.
+
+### Draaimechanisme
+
+De Adobe Pass Authentication REST API wordt beheerd door een [Draaimechanisme](/help/authentication/throttling-mechanism.md).
 
 ## Componenten {#components}
 
