@@ -1,7 +1,7 @@
 ---
 title: Draaimechanisme
 description: Ken het Throttling mechanisme dat in de Authentificatie van Adobe Pass wordt gebruikt. Bekijk een overzicht van dit mechanisme op deze pagina.
-source-git-commit: 036fe2be0981e21e5b82022348cba03dca0b33d3
+source-git-commit: 4f81f39427d87e4274c27d8f1b4bd1eb366d9abb
 workflow-type: tm+mt
 source-wordcount: '987'
 ht-degree: 0%
@@ -34,8 +34,7 @@ De Authentificatie van de pas is gebaseerd op gebruikersidentificatie en een sym
 
 ### Apparaatidentificatiemechanisme
 
-Het voorgestelde vertragingsmechanisme gebruikt de geïdentificeerde apparaten individueel, met behulp van &quot;x-Door:sturen-voor&quot;kopbal.
-Limieten worden op dezelfde manier toegepast voor elk apparaat.
+Het voorgestelde vertragingsmechanisme gebruikt de geïdentificeerde apparaten individueel, met behulp van &quot;x-Door:sturen-voor&quot;kopbal. Limieten worden op dezelfde manier toegepast voor elk apparaat.
 
 ### Vereiste updates
 
@@ -45,8 +44,7 @@ U kunt meer details vinden over hoe te om x-Door:sturen-voor kopbal over te gaan
 
 ### Werkelijke grenswaarden en eindpunten
 
-Momenteel, staat de standaardgrens een maximum van 1 verzoek per seconde toe., met een aanvankelijke uitbarsting van 3 verzoeken (eenmalig toelage op de eerste interactie van de geïdentificeerde cliënt, die initialisering zou moeten toestaan om met succes te beëindigen).
-Dit zou geen regelmatige bedrijfsgeval over al onze klanten moeten beïnvloeden.
+Momenteel, staat de standaardgrens een maximum van 1 verzoek per seconde toe., met een aanvankelijke uitbarsting van 3 verzoeken (eenmalig toelage op de eerste interactie van de geïdentificeerde cliënt, die initialisering zou moeten toestaan om met succes te beëindigen). Dit zou geen regelmatige bedrijfsgeval over al onze klanten moeten beïnvloeden.
 
 Het vertragingsmechanisme zal op de volgende eindpunten worden toegelaten:
 
