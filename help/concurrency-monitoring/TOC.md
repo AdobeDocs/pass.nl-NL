@@ -4,9 +4,9 @@ feature: Concurrency Monitoring
 audience: end-user
 user-guide-title: Gelijktijdige bewaking van Adobe Pass
 user-guide-description: Leer hoe u limieten kunt definiëren en afdwingen voor gelijktijdig gebruik in meerdere applicaties.
-source-git-commit: d39836cfb81a81271f526e6aa52fcc2d6558678f
+source-git-commit: 37ad9151d404d58b7d4df2c959f3f8fcaa5c011f
 workflow-type: tm+mt
-source-wordcount: '161'
+source-wordcount: '166'
 ht-degree: 9%
 
 ---
@@ -26,6 +26,7 @@ ht-degree: 9%
 + Gelijktijdige bewaking {#cmu}
    + [Gebruiksrapporten voor gelijktijdige bewaking](cm-usage-reports.md)
    + [API voor gelijktijdige bewaking](cmu-api.md)
+   + [API-toegang voor gelijktijdige bewaking](cmu-api-access.md)
 + Versie 1-API{#v1-api}
    + [Beleidsinformatie](policy-info-pt-versionone.md)
    + [Aangepaste metagegevens](custom-metadata.md)
