@@ -1,7 +1,7 @@
 ---
 title: CMU API-toegang
 description: CMU API-toegang
-source-git-commit: 30631ac006b7944cb2eb8996c2c165343b6be5fe
+source-git-commit: 598eb878168f6e352a8eae369cbc8cb833033328
 workflow-type: tm+mt
 source-wordcount: '407'
 ht-degree: 0%
@@ -16,8 +16,7 @@ ht-degree: 0%
 
 ## Overzicht van de toegangsprocedure {#api-access-procedure-overview}
 
-Wij hebben CMU- rapporten toegang bijgewerkt om met het Dynamische Protocol van de Registratie van de Cliënt van OAuth 2.0 compatibel te zijn.
-Een douane OAuth 2.0 vergunningsserver wordt opgesteld om de behoeften van de toepassing van de Controle van de Valuta te richten. \
+Wij hebben CMU- rapporten toegang bijgewerkt om met het Dynamische Protocol van de Registratie van de Cliënt van OAuth 2.0 compatibel te zijn. Een douane OAuth 2.0 vergunningsserver wordt opgesteld om de behoeften van de toepassing van de Controle van de Valuta te richten. \
 Opdat de toepassingen van de Cliënt de vergunning OAuth 2.0 gebruiken, moet de server dynamisch registreren om specifieke informatie (cliëntgeloofsbrieven) te verkrijgen om met het te kunnen communiceren. Als deel van het registratieproces, moet de cliënt een reeks ingebouwde meta-gegevens aan het eindpunt van de cliëntregistratie voorleggen.
 Deze metagegevens worden doorgegeven als een softwareinstructie, die een &quot;software_id&quot; bevat waarmee onze verificatieserver verschillende exemplaren van een toepassing kan correleren met dezelfde softwareinstructie.
 Een softwareverklaring is een Token van het Web JSON (JWT) die meta-gegevenswaarden over de cliëntsoftware als bundel bevestigt. Wanneer voorgesteld aan de vergunningsserver als deel van een verzoek van de cliëntregistratie, moet de softwareverklaring digitaal worden ondertekend of MACed gebruikend de Handtekening van het Web JSON (JWS). \
@@ -28,7 +27,7 @@ Voer de stappen in de onderstaande secties uit om toegang te krijgen.
 
 1. Een geregistreerde toepassing hebben op de Adobe Pass DCR-server. Neem voor deze stap contact op met onze [Ondersteuningsteam](mailto:tve-support@adobe.com).
 2. De software-instructie ophalen
-   1. Ga naar TVE-dashboard <a href="https://console-preprod.auth.adobe.com/#!/" target="_blank"> Pre-Prod </a> of <a href="https://console.auth.adobe.com/" target="_blank">PROD</a>
+   1. Ga naar TVE-dashboard <a href="https://console-preprod.auth.adobe.com/#!/" target="_blank"> Pre-Prod </a>  of <a href="https://console.auth.adobe.com/" target="_blank">PROD</a>
    2. Programmeur selecteren
    3. Ga naar tabblad Toepassingen
    4. Toepassing selecteren
