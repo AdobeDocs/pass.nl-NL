@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass-verificatie
 user-guide-description: Adobe Pass-verificatie is een machtigingsoplossing voor TV Everywhere, die een modulair kader verstrekt om te bepalen of iemand die toegang tot een bron vraagt, daar rechten voor heeft.
-source-git-commit: ea064031c3a1fee3298d85cf442c40bd4bb56281
+source-git-commit: 73d87de7db950f23973ad31b61409a1b711fc916
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '930'
 ht-degree: 3%
 
 ---
@@ -176,6 +176,7 @@ ht-degree: 3%
       + [Opmerkingen bij de release Adobe Pass Authentication JavaScript 4.0.0](authn-rn-javascript-400.md)
       + [Opmerkingen bij de release Adobe Pass Authentication JavaScript 3.5.0](authn-rn-javascript-350.md)
    + Opmerkingen bij de release iOS/tvOS SDK  {#release-notes-ios}
+      + [Opmerkingen bij de release Adobe Pass Authentication iOS / tvOS 3.9.2](authn-rn-ios-tvos-392.md)
       + [Opmerkingen bij de release Adobe Pass Authentication iOS / tvOS 3.8.4](authn-rn-ios-tvos-384.md)
       + [Opmerkingen bij de release Adobe Pass Authentication iOS / tvOS 3.8.3](authn-rn-ios-tvos-383.md)
       + [Opmerkingen bij de release Adobe Pass Authentication iOS / tvOS 3.8.2](authn-rn-ios-tvos-382.md)
