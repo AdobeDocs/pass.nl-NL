@@ -1,42 +1,35 @@
 ---
-title: Beperkingen en bekende problemen
-description: Bekende problemen in het product.
+title: Beperkingen
+description: Wis over beperkingen en isolatiemodus MVPD voor programmeurs in Account IQ.
 exl-id: 08d65716-8b6a-4300-acda-fec63e1e6815
-source-git-commit: 2ced89dc1f77d2c090b599c40e778f3054f1a8dd
+source-git-commit: 791d661e1495bdb6fe4eb25efbefeecd813f0f3a
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '273'
 ht-degree: 0%
 
 ---
 
-# Bekende problemen en beperkingen {#known-issues}
+# Beperkingen {#limitations}
 
-Adobe streeft ernaar robuuste functionaliteit en naadloze gebruikerservaring te bieden via haar aanbod. De huidige versie (versie 1.0) van Account IQ biedt analyses voor het delen van gebruik en abonnementen voor streamingproviders met een hoge mate van vertrouwen. De volgende beperkingen worden echter in toekomstige releaseversies opgelost.
+De D2C- en TV-versies overal van de account-IQ bieden analyses voor het delen van gebruik en abonnementen voor streamingproviders. De huidige versie 1.3 kent echter bepaalde beperkingen, die in toekomstige versies zullen worden aangepakt.
 
-* Bij het definiëren van cohorten in het dashboard of de rapportpagina&#39;s is er momenteel geen optie om metriek toe te voegen, zoals **aantal apparaten** het segment verfijnen. Deze mogelijkheid is beschikbaar in een toekomstige versie.
+* De [Algehele score voor delen](/help/accountiq/data-panels.md#overall-sharing-score) momenteel include [Niveau voor delen](/help/accountiq/data-panels.md#sharing-level) en [Gebruik van gedeelde accounts](/help/accountiq/data-panels.md#usage-from-shared-accounts). Toekomstige versies zullen meer metriek omvatten.
 
-* Bij het schatten van de delingsscores voor individuele rekeningen, neemt Account IQ een conservatieve benadering die bedrijven in staat stelt om met grote mate van vertrouwen op het delen te handelen. Deze benadering onderschat echter meestal het totale bedrag aan delen wanneer dit over veel rekeningen wordt geaggregeerd.
+* Wanneer u segmenten op het dashboard definieert of gebruikspatronen, kunt u [Videocategorieën in segment](/help/accountiq/data-panels.md#video-categories-segment), [Muziek delen via kanalen en MVPD&#39;s](/help/accountiq/data-panels.md#sharin-score-by-channels-and-mvpds), en [Gebruik van patroondistributie voor videocategorieën](/help/accountiq/usage-patterns.md#usage-pattern-dis-video-categories) rapporten kunnen alleen gegevens weergeven voor maximaal 20 [videocategorieën](product-concepts.md#video-category-def). Segmenten met meer dan 20 videocategorieën bevatten geen gegevens in deze rapporten.
 
-* De [Algemene score voor delen](/help/accountiq/dashboard.md#overall-sharing-score) momenteel alleen factoren [Niveau delen](/help/accountiq/dashboard.md#sharing-level) en [Gebruik van gedeelde accounts](/help/accountiq/dashboard.md#usage-from-shared-accounts). Toekomstige versies zullen extra metriek beïnvloeden.
+* Momenteel is de mogelijkheid om accountstatistieken te exporteren beperkt tot het exporteren van 1000 accounts.
 
-* Bij het definiëren van cohorten in het dashboard of de rapportpagina&#39;s ontbreekt het zoekmechanisme momenteel bij de kiezers voor MVPD&#39;s en kanalen.
+* Bij het definiëren van bewerkingen kunt u de optie selecteren [segmenttype](/help/accountiq/operations.md#segment) is beperkt tot **Vast aantal accounts**. De **Variabel aantal rekeningen** deze optie zal in een toekomstige versie beschikbaar zijn .
 
-* Wanneer het bepalen van cohorts in het dashboard of de rapportpagina&#39;s, is er een beperking om slechts tot 10 MVPDs en Programmeurs (of individuele kanalen) te selecteren.
+* De **Benchmarking**, **Detectiemodellen**, **Handelingen**, en **Instellingen** secties in de linkernavigatie zijn momenteel uitgeschakeld en zijn in een toekomstige release beschikbaar.
 
-* De mogelijkheid om accountstatistieken uit te voeren is beperkt tot het exporteren van 1000 accounts.
+* Bij het maken van bewerkingen kunt u slechts twee soorten bewerkingen toepassen [handelingen](/help/accountiq/operations.md#action) — Gelijktijdige toezichtregels en externe acties.
 
-* De optie om te selecteren [Segmenttype](#segment-type) wanneer het definiëren van bewerkingen beperkt is tot **Vast aantal accounts**. De **Variabel aantal rekeningen** deze optie zal in een komende versie beschikbaar zijn .
+* Momenteel kunt u alleen [maken](/help/accountiq/operations.md#create-new-operation) en [schema](/help/accountiq/operations.md#schedule) Bewerkingen. De toekomstige versies zullen u toestaan om hen te pauzeren, te hervatten en volledig te leiden.
 
-* De secties Benchmarking, Detection Models, Segments, Snapshots, en Rules in de linkernavigatie zijn momenteel uitgeschakeld en zullen beschikbaar zijn in een komende versie.
+* U kunt gegevens slechts één week of maand tegelijk analyseren wanneer u Granularity en het Interval van de Tijd selecteert.
 
-* Bij het maken [Bewerkingen](/help/accountiq/operation-affecting-user-segment.md)kunt u slechts twee soorten [Handelingen](/help/accountiq/operation-affecting-user-segment.md) vanaf nu — Gelijktijdige toezichtregels en externe acties.
+* U kunt geen Modus MVPDs van de Isolatie aan de segmentdefinitie met andere MVPDs toevoegen. Sommige MVPDs identificeert uniek geen abonnees over veelvoudige programmeerkanalen. Daarom worden deze MVPD&#39;s afzonderlijk behandeld voor tv-programmeurs overal.
 
-* Bewerkingen kunnen momenteel alleen worden gemaakt en [gepland](/help/accountiq/operation-affecting-user-segment.md#action). In toekomstige versies kunt u deze bestanden pauzeren, hervatten en volledig beheren.
 
-* Vanwege de beperktere set gegevens die wordt gebruikt, geeft de isolatiemodus niet echt de mate van delen aan. Daarom kan MVPD in de isolatiemodus niet worden vergeleken met een andere MVPD. <!--do we need to separate out this limitation, which is from a different persona i.e. only for Programmer persona?-->
 
-* Wanneer u een nieuwe [segment](/help/accountiq/segments-timeframe.md) voor een bewerking kunt u metriek toevoegen. Maar als u een opgeslagen segment selecteert, kunt u niet meer metriek toevoegen om het segment te verfijnen.
-
-* De selector voor granulariteit en tijdframes is beperkt tot één week of één maand, wat betekent dat gegevens slechts op één week of één maand kunnen worden geëvalueerd.
-
-* Vooraf gedefinieerde intervallen zijn momenteel uitgeschakeld in de kiezer voor granulariteit en tijdframes en zijn beschikbaar in een toekomstige versie.

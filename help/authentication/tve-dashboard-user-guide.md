@@ -2,9 +2,9 @@
 title: Gebruikershandleiding voor Primetime TVE-dashboard
 description: Gebruikershandleiding voor Primetime TVE-dashboard
 exl-id: 6f7f7901-db3a-4c68-ac6a-27082db9240a
-source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
+source-git-commit: c6afb9b080ffe36344d7a3d658450e9be767be61
 workflow-type: tm+mt
-source-wordcount: '4386'
+source-wordcount: '4377'
 ht-degree: 0%
 
 ---
@@ -60,6 +60,7 @@ Om tussen milieu&#39;s te schakelen, kan de gebruiker op het gewenste milieu kli
 *Afbeelding 2: vervolgkeuzelijst voor Adobe Pass TVE-dashboardomgevingen*
 
 >[!IMPORTANT]
+>
 >Het is zeer belangrijk om op te merken dat wanneer het aanbrengen van administratieve veranderingen in uw configuratie van de Authentificatie van Adobe Pass door het Dashboard van TVE, wij u sterk adviseren om de hieronder opeenvolging te volgen om correcte functionaliteit te verzekeren.
 
 Beheerwijzigingen aanbrengen in uw Adobe Pass-verificatieconfiguratie via het TVE-dashboard:
@@ -69,6 +70,7 @@ Beheerwijzigingen aanbrengen in uw Adobe Pass-verificatieconfiguratie via het TV
 * Wijzigingen uitvoeren in [Productie vrijgeven en valideren](http://sp.auth-staging.adobe.com/apitest/api.html).
 
 >[!IMPORTANT]
+>
 >Voor de administratieve veranderingen om levend te gaan, moeten de gebruikers aan de &quot;Overzicht en de Duw sectie van Veranderingen&quot;door de knoop te selecteren, die in het bodem-linkergedeelte van sidebar zal verschijnen, om veranderingen te herzien, een beschrijving voor de pas gecreëerde veranderingen toe te voegen en de configuratieupdate te bevestigen door &quot;de Duw Configuratie&quot;te selecteren.
 
 ![Het dashboard van de duw- overzicht](assets/tve-review-push-notifications.png)

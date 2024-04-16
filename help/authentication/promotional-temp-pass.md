@@ -2,9 +2,9 @@
 title: Tijdelijke controle voor speciale acties
 description: Tijdelijke controle voor speciale acties
 exl-id: 705c1ba9-0430-4e3b-add1-d9e4da3f82d1
-source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
+source-git-commit: c88fba76b1805dd88fccb68b13bde11b1b8ea181
 workflow-type: tm+mt
-source-wordcount: '1529'
+source-wordcount: '1510'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ Op basis van apparaat-id en de informatie die de gebruiker heeft verstrekt en de
 
 * Door de gebruiker opgegeven informatietoets (bijvoorbeeld e-mail)
 * Aantal bronnen dat de gebruiker mag gebruiken
-* TTL - het tijdkader waarin de gebruiker het gevormde aantal middelen mag verbruiken
+* TTL - het tijdinterval waarin de gebruiker het gevormde aantal middelen mag verbruiken
 
 ### Metagegevens gebruiker {#user-metadata}
 
@@ -74,7 +74,7 @@ Om de uitvoering van de toepassing van de programmeur te vergemakkelijken: **met
 
 ### Hoe wordt de weergavetijd berekend? {#compute-viewing-time}
 
-De tijd dat een tijdelijke controle geldig blijft, heeft geen betrekking op de hoeveelheid tijd die een gebruiker besteedt aan het weergeven van inhoud in de toepassing van de programmeur. Op het aanvankelijke gebruikersverzoek om vergunning via de Volgorde van de Temperatuur van de Bevordering, wordt een vervaltijd berekend door de aanvankelijke huidige verzoektijd aan TTL (duurtijdkader) toe te voegen die door de Programmer wordt gespecificeerd.
+De tijd dat een tijdelijke controle geldig blijft, heeft geen betrekking op de hoeveelheid tijd die een gebruiker besteedt aan het weergeven van inhoud in de toepassing van de programmeur. Op het aanvankelijke gebruikersverzoek om vergunning via de Volgorde van de Temperatuur van de Bevordering, wordt een vervaltijd berekend door de aanvankelijke huidige verzoektijd aan TTL (duurtijdinterval) toe te voegen die door de Programmer wordt gespecificeerd.
 
 ### Verificatie en autorisatie {#authn-authz}
 

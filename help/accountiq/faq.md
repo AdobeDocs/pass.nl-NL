@@ -1,10 +1,10 @@
 ---
-title: Veelgestelde vragen over account-IQ
+title: Veelgestelde vragen over IQ van account
 description: Antwoorden op veelgestelde vragen van klanten.
 exl-id: d6e11fc9-0d14-46d8-9a85-f1006ac81fb1
-source-git-commit: ffc7caa9a857a60380d15f69abf346718de6fa4c
+source-git-commit: cfcaa00ab05c99a64bcb0edfe5af60845a6769a9
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '587'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 1. Wie is [!UICONTROL Account IQ] ontworpen voor?
 
-   **Antwoord.** [!UICONTROL Account IQ] is ontworpen voor programmeurs, MVPD&#39;s en D2C-services, maar er zijn kleine verschillen tussen deze versies. Er gelden beperkingen en beperkingen ten aanzien van de gegevens die aan elke groep kunnen worden getoond.
+   **Antwoord.** [!UICONTROL Account IQ] is ontworpen voor D2C-services en tv-programma&#39;s overal en MVPD&#39;s. Er zijn echter kleine verschillen tussen deze versies. Er gelden beperkingen en beperkingen ten aanzien van de gegevens die aan elke groep kunnen worden getoond.
 
 1. Hoe ver gaan de gegevens terug?
 
@@ -25,23 +25,23 @@ ht-degree: 0%
 
 1. Is het mogelijk om de testrekeningen te filteren?
 
-   **Antwoord.** De functionaliteit om de testaccounts uit te filteren is niet beschikbaar in deze versie, maar de functie is beschikbaar in een toekomstige versie.
+   **Antwoord.** De functionaliteit om de testaccounts eruit te filteren is momenteel niet beschikbaar, maar de functie is in een toekomstige versie beschikbaar.
 
-1. Kan ik de account zien delen voor elk van mijn kanalen? <!--shall we separate out this question for the persona of programmer?-->
+1. Kan ik de account delen voor verschillende videocategorieën zien?
 
-   **Antwoord.** Ja, kunt u rekening zien delend voor individuele kanalen, een groep kanalen, of volledige netwerken (bijvoorbeeld, programmeurs).
+   **Antwoord.** Ja, u kunt account delen zien voor een bepaalde categorie of een groep categorieën. Bijvoorbeeld een D2C-serviceset van regio&#39;s of een TV-collectie van kanalen overal.
 
 1. Wat wordt de gegevensbron gebruikt om referentie het delen te identificeren?
 
-   **Antwoord.** De dienst onderzoekt alle abonnee die activiteit stromen en verbetert het met merkgebonden gegevensbronnen. Voor TV overal omvat dit alle transacties tussen programmeurs en MVPDs. Hierna worden analysegegevens op een hoger niveau van de score voor het delen van accounts gesynthetiseerd.
+   **Antwoord.** De dienst onderzoekt alle abonnee die activiteit stromen en verbetert het met merkgebonden gegevensbronnen. Voor D2C-services is de abonneeactiviteit doorgaans afkomstig van gegevensopslagruimten, zoals Adobe Analytics of andere gegevensopslagruimten. Voor TV overal, omvat dit alle transacties tussen programmeurs en MVPDs die door Adobe Pass worden verwerkt.
 
-1. Wat is het gemiddelde van de industrie?
+1. Wat is het gemiddelde van de dienst of industrie?
 
-   **Antwoord.** Het gemiddelde van de industrie wordt weerspiegeld in de drie primaire het delen indicatoren-delend niveau, Gebruik van gedeelde rekeningen, en het Globale delen score. Deze waarden vertegenwoordigen de gemiddelden van alle abonnees voor alle diensten.
+   **Antwoord.** Voor D2C-services weerspiegelt de service de basislijnactiviteit in alle accounts. Voor TV overal, weerspiegelt het industriegemiddelde het totaal voor alle Programmers en MVPDs. In beide gevallen worden deze waarden weergegeven in de primaire indicatoren voor delen: niveau voor delen, Gebruik van gedeelde accounts en Algehele score voor delen.
 
 1. Is AccountIQ een handhavingsinstrument? Zo niet, hoe gebruiken we het om te stoppen met delen?
 
-   **Antwoord.** AIQ gebruikt krachtige analyses om inzichten te verschaffen. Deze inzichten kunnen echter tot onbeperkte acties leiden door integratie met producten van de Adobe, zoals Gelijktijdige Controle, of uw ondernemingshulpmiddelen.
+   **Antwoord.** Account IQ gebruikt krachtige analysemogelijkheden om inzichten te verschaffen. Deze inzichten kunnen echter tot onbeperkte acties leiden door integratie met producten van de Adobe, zoals Gelijktijdige Controle, of uw ondernemingshulpmiddelen.
 
 1. Hoe effectief is Gelijktijdige bewaking bij het verzachten van het delen in de industrie?
 
@@ -57,11 +57,11 @@ ht-degree: 0%
 
 1. Hoe kan ik de inzichten van [!UICONTROL Account IQ]?
 
-   **Antwoord.** Om de schaal en aard van het delen te begrijpen is de eerste stap in onze geadviseerde beste praktijken. Het nemen van gerichte actie met specifieke rekeningen zoals het verhogen van de verkoop of het beperken van stromen is de stap. De volledige aanbeveling is om klein te beginnen, de resultaten van de actie te meten en het proces te verfijnen en te schalen.
+   **Antwoord.** Om de schaal en aard van het delen te begrijpen is de eerste stap in onze geadviseerde beste praktijken. De tweede stap is gerichte actie ondernemen met specifieke rekeningen, zoals het verhogen of beperken van streams. De volledige aanbeveling is om klein te beginnen, de resultaten van de actie te meten en het proces te verfijnen en te schalen.
 
 1. Moeten we samenwerken met interne technologiegroepen en distributiepartners om maatregelen zoals smart CM (Gelijktijdige controle) uit te voeren?
 
-   **Antwoord.** Niet noodzakelijk. [!DNL Adobe Pass] De steun kan werken om uw eigen Cm- regels tot stand te brengen die op uw gegevens AIQ worden gebaseerd.
+   **Antwoord.** Niet noodzakelijk. [!DNL Adobe Pass] Ondersteuning kan werken om uw eigen CM-regels te maken op basis van uw IQ-gegevens van uw account.
 
 1. Kan ik zien hoe de segmenten zich in de loop der tijd ontwikkelen?
 

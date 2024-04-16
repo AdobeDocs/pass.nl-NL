@@ -2,9 +2,9 @@
 title: Aan de slag met [!UICONTROL Account IQ]
 description: Meer informatie over instapvoorwaarden, voorwaarden en het gebruik van [!UICONTROL Account IQ].
 exl-id: 840ab081-0073-492f-86b2-ba174ae93256
-source-git-commit: 3e5bcee38151c88d3538cdbdbf2d07010be929cd
+source-git-commit: a7a37ffea0169a302890ee50b2e2202ddf58d021
 workflow-type: tm+mt
-source-wordcount: '214'
+source-wordcount: '209'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 1. Organisatiegebruikers toewijzen aan **[!UICONTROL TVE Dashboard Read-Write]** of **[!UICONTROL TVE Dashboard Read Only]** profielen in [Adobe Admin Console](https://adminconsole.adobe.com/).
 
-   De Admin gebruikers in uw organisatie kunnen gebruikers tot stand brengen en hen toegang verlenen tot [!UICONTROL Account IQ Dashboard and Reports]. Organisatiegebruikers toegang verlenen tot [!UICONTROL Account I]Q, organisatie Admins moet:
+   De Admin gebruikers in uw organisatie kunnen gebruikers tot stand brengen en hen toegang verlenen tot [!UICONTROL Account IQ Dashboard and Reports]. Organisatiegebruikers toegang verlenen tot [!UICONTROL Account IQ], organisatie Beheerders moeten:
 
    1. Aanmelden bij [Adobe Admin Console](https://adminconsole.adobe.com/).
 

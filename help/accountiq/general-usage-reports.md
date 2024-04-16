@@ -1,97 +1,71 @@
 ---
 title: Algemene gebruiksrapporten
-description: Algemene gebruiksrapporten
+description: Meer informatie over algemene gebruiksrapporten
 exl-id: 1272073a-61fe-47ec-aced-2e8055b6b11e
-source-git-commit: d543bbe972944ad83f4cb28c8a17ea6e10f66975
+source-git-commit: 4a8a73d6c67508e88ba3ffbb9033b7e339f4fe8f
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1055'
 ht-degree: 0%
 
 ---
 
-# [!UICONTROL General Usage] rapporten {#general-usage-reports}
+# [!UICONTROL General usage] rapporten {#general-usage-reports}
 
-[!UICONTROL Account IQ] rapporten zijn standaard analytische gereedschappen en rapporten waarmee u gegevens kunt innemen om ze te isoleren [cohorten](/help/accountiq/product-concepts.md#segmet-def), anomalieën te identificeren en inzicht in uw accountkenmerken te krijgen.
+[!UICONTROL Account IQ] rapporten zijn fundamentele analytische hulpmiddelen die u in uw gegevens laten boren om te isoleren [cohorten](/help/accountiq/product-concepts.md#segmet-def), anomalieën te identificeren en inzicht in uw accountkenmerken te krijgen.
 
-[!UICONTROL General Usage] de rapportpagina verstrekt hulpmiddelen om subgroepmetriek uit te splitsen die op het aantal gebruikte rekeningsapparaten, ontdekt IPs, en respectieve postcodes worden gebaseerd.
+[!UICONTROL General usage] De rapportpagina verstrekt hulpmiddelen om subgroepmetriek uit te splitsen die op het aantal gebruikte rekeningsapparaten, ontdekt IPs, en hun respectieve postcodes worden gebaseerd.
 
-<!--Divide the content in cohorts.
+De rapporten zijn allemaal gebaseerd op het huidige segment dat is geselecteerd in het [Segmenten en tijdsinterval](/help/accountiq/segments-timeinterval.md) deelvenster. U kunt uw selectie verfijnen en deze verder verkleinen door drempelwaarden (aantal apparaten, aantal IP&#39;s en aantal postcodes) op te geven in het dialoogvenster [Overzicht-accounts van momentopnamen boven drempelwaarden](#snapshot-overview) deelvenster.
 
-Content filters
-device filters
+## Aanvragen en unieke abonnees afspelen {#playreq-uniquesubs}
 
-segment and definition replicate to cohorts. Number of people and number of account that ......
-content consumption.....-->
+De lijngrafieken hier geeft u een mening van de veranderingen in tijd van waarden, zoals de Verzoeken van het Spel en de Unieke Abonnees in een geselecteerd tijdinterval voor het bepaalde segment.
 
-De rapporten zijn allen gebaseerd op het huidige geselecteerde segment gebruikend [Segmenten en tijdkader](/help/accountiq/howto-select-segment-timeframe.md) deelvenster. U kunt uw selectie verfijnen en deze verder verkleinen door drempelwaarden (aantal apparaten, aantal IP&#39;s en aantal postcodes) op te geven in [Overzicht van momentopnamen - Rekeningen boven drempels](#snapshot-overview) deelvenster.
++++ D2C-services: Aanvragen afspelen/Unieke abonnees
 
-<!--To view General Usage Reports:
+![](assets/d2c-line-graph-gu.png)
 
-1. Select the desired MVPDs from the **MVPDs in Segment** option.
 
-2. Select the desired programmer channels from the **Channels in Segment** Option.
+*Aanvragen/unieke abonnees voor D2C-services afspelen*
 
-3. Select an appropriate time frame from the **Granularity and time frame** option.
++++
 
-   Using the above options you have defined segments for your analysis. Based on your segment selection, following graphs and reports are displayed.
-
-4. You can fine tune your selection and further narrow it down by specifying (number of devices, number of IPs, and number of zip codes) thresholds in [Snapshot Overview - Accounts above thresholds](#snapshot-overview) widget/panel.-->
-
-## AuthN OK / AuthZ OK / Play Requests / Unique Subscribers {#authn-authz-playreq-uniquesubs}
-
-De lijngrafieken hier geeft u een mening van de veranderingen in tijd in waarden van O.K. AuthN, O.K. AuthZ, de Verzoeken van het Spel, en de Unieke Abonnees in een geselecteerd tijdkader voor het bepaalde segment.
-
-+++Programmer- **AuthN OK / AuthZ OK / Play Requests / Unique Subscribers**
++++Programmers: Verzoeken afspelen/unieke abonnees
 
 ![](assets/progr-line-graph-gu.png)
 
 
-*Afbeelding: AuthN OK / AuthZ OK / Play Requests / Unieke abonnees voor programmeergebruiker*
-
+*Aanvragen/unieke abonnees afspelen voor programmeurs*
 
 +++
 
-
-+++MVPD- **AuthN OK / AuthZ OK / Unieke abonnees**
++++MVPDs: Unieke Abonnees
 
 ![](assets/mvpd-line-graph-gu.png)
 
-
-*Afbeelding: AuthN OK / AuthZ OK / Unique Subscribers for MVPD user*
-
+*Unieke abonnees voor MVPD&#39;s*
 
 +++
 
-De x-as stelt de eenheden binnen het huidige tijdkader voor en de y-as vertegenwoordigt de basisgegevens van de abonneeactiviteit tijdens die periode. Met de lijngrafieken kunt u de volgende waarden vergelijken voor de abonnees van MVPD&#39;s en kanalen die u in het deelvenster voor segmentselectie hebt geselecteerd:
+<br/>
 
-* **AuthN OK**
+De x-as vertegenwoordigt de tijd die op het huidige interval wordt gebaseerd en de y-as vertegenwoordigt basisgegevens van de abonneeactiviteit tijdens die periode. De lijngrafieken helpen u activiteit van de abonnees in het huidige segment visualiseren en vergelijken. Afhankelijk van de versie van Account IQ bevatten de meetgegevens:
 
-  AuthN OK is het aantal geslaagde authenticaties. Zie voor meer informatie en definitie [Productconcepten: AuthN OK](/help/accountiq/product-concepts.md#authn-ok-def).
+* **AuthN OK**: Aantal geslaagde verificaties. Meer informatie over [AuthN OK](/help/accountiq/product-concepts.md#authn-ok-def).
 
-* **AuthZ OK**
+* **AuthZ OK**: Aantal geslaagde toelatingen. Meer informatie over [AuthZ OK](/help/accountiq/product-concepts.md#authz-ok-def).
 
-  AuthZ OK is het aantal geslaagde machtigingen. Zie voor meer informatie en definitie [Productconcepten: AuthZ OK](/help/accountiq/product-concepts.md#authz-ok-def).
+* **Verzoeken afspelen**: Aantal afspeelverzoeken. Meer informatie over [Aanvragen afspelen](/help/accountiq/product-concepts.md#play-requests-def).
 
-* **Verzoeken afspelen**
+* **Unieke abonnees**: Aantal geslaagde unieke abonnees. Meer informatie over [Unieke abonnees](/help/accountiq/product-concepts.md#unique-subscriber-def).
 
-  De verzoeken van het spel zijn het aantal Verzoeken van het Spel. Zie voor meer informatie en definitie [Productconcepten: afspeelverzoeken](/help/accountiq/product-concepts.md#play-requests-def)
+>[!NOTE]
+>
+>De beschikbaarheid van maateenheden is afhankelijk van de versie van Account IQ.
 
-  >[!NOTE]
-  >
-  >De grafiek van de spelverzoeken lijngrafiek is niet beschikbaar voor gebruikers MVPD.
+## Overzicht van momentopnamen rekeningen boven drempelwaarden {#snapshot-overview}
 
-
-* **Unieke abonnees**
-
-  De unieke abonnees zijn het aantal succesvolle unieke abonnees. Zie voor meer informatie en definitie [Productconcepten: unieke abonnees](/help/accountiq/product-concepts.md#unique-subscriber-def)
-
-  >[!NOTE]
-  >
-  >Het totale aantal unieke abonnees omvat ook het aantal unieke apparaten als het gebruik van Adobe TempPass (dat vrije voorproef) van een programmeur deel van het segment uitmaakt.
-
-## Overzicht van momentopnamen - Rekeningen boven drempels {#snapshot-overview}
-
-Stel uw analyses en rapporten nauwkeurig af met dit extra filter om verschillende gebruiksdrempels in te stellen. Nadat u het segment (of de cohort) voor analyse hebt gedefinieerd door de gewenste MVPD(s) en kanalen te selecteren, kunt u ook de volgende filters gebruiken om het gedrag van abonnees te analyseren:
+Stel uw analyses en rapporten nauwkeurig af met dit extra filter om verschillende gebruiksdrempels in te stellen. Nadat u een segment hebt geselecteerd, kunt u ook de volgende filters gebruiken om het gedrag van de abonnee verder te analyseren:
 
 * Drempel aantal apparaten
 
@@ -99,7 +73,7 @@ Stel uw analyses en rapporten nauwkeurig af met dit extra filter om verschillend
 
 * Drempel voor aantal postcodes
 
-Als u drempelwaarden bijwerkt in [Accounts-segment - gebaseerd op geselecteerde drempels](#account-segments-basedon-segments) kunt u het effect bekijken in:
+Als u drempelwaarden bijwerkt in [Accounts Segment based on selected threshold](#account-segments-basedon-segments) geeft u het effect weer in:
 
 * [Apparaten per week (of maand) per account](#devices-week-account)
 
@@ -111,31 +85,29 @@ Als u drempelwaarden bijwerkt in [Accounts-segment - gebaseerd op geselecteerde 
 
 >[!NOTE]
 >
->De standaardwaarde voor elk van de drempels is 4. Wat betekent, toont de Algemene pagina van het Gebruik analyse voor MVPDs met abonnees die vier (en meer dan vier) apparaten gebruiken, verbruikend inhoud van vier (en meer) verschillende geografische plaatsen en vier (en meer) verschillende postcodes.
+>Elke drempel wordt ingesteld op een standaardwaarde van 4. Wat betekent, toont de Algemene pagina van het Gebruik analyse voor abonnees die meer dan vier apparaten gebruiken, die inhoud van meer dan vier verschillende IP adressen verbruiken, *en* meer dan vier verschillende postcodes.
 
-### Accounts-segment - gebaseerd op geselecteerde drempels {#account-segments-basedon-segments}
+### Accounts op basis van geselecteerde drempels {#account-segments-basedon-segments}
 
-De **Accounts-segment - gebaseerd op geselecteerde drempels** biedt u opties om drempelwaarden (tussen 1 en 10) in te stellen voor het aantal apparaten, het aantal IP&#39;s en het aantal ZIP-codes.
+De **Accounts Segment based on selected threshold** biedt u opties om drempelwaarden (tussen 1 en 10) in te stellen voor het aantal apparaten, het aantal IP&#39;s en het aantal ZIP-codes.
 
 In de grafiek ziet u het volgende:
 
-* het absolute aantal abonneerekeningen, en
+* Absoluut aantal abonneeaccounts.
 
-* percentage van de totale abonnementrekeningen in dat segment;
-
-  die het aantal van X apparaten, het aantal van Y van IPs, en het aantal van Z codes van het ZIP gebruiken om inhoud van uw kanaal voor (bepaald segment van) MVPDs, voor een tijdkader te verbruiken.
+* Percentage van de totale abonneerekeningen in het segment die het aantal apparaten, van het aantal IPs, in het aantal codes van het PIT gebruiken zoals die door de drempels worden gespecificeerd.
 
 ![](assets/select-thresholds.png)
 
 ## Apparaten per week (of maand) per account {#devices-week-account}
 
-De **staafgrafiek** biedt inzichten in het gebruiksgedrag in termen van hoe de abonnees hun apparaten gebruiken om toegang te krijgen tot inhoud.
+Deze staafgrafiek biedt inzicht in het gebruiksgedrag in termen van hoe de abonnees hun apparaten gebruiken om toegang te krijgen tot inhoud.
 
-Het aantal accounts van de x-asplots en het aantal apparaten van de y-as. Gebaseerd op de drempel u voor aantal apparaten per rekening plaatst, merkt het het absolute aantal abonneerekeningen die inhoud van specifiek aantal apparaten in de duur van een week verbruiken.
+Het aantal accounts van de x-asplots en het aantal apparaten van de y-as. Gebaseerd op de drempel u voor aantal apparaten per rekening plaatst, merkt het het absolute aantal abonneerekeningen die inhoud van een specifiek aantal apparaten in de duur van een week verbruiken.
 
 ![](assets/bar-gr-devices-w-acc.png)
 
-Wanneer het bedekken over een bar (specifiek voor aantal apparaten), verschijnt een etiket dat informatie over het aantal abonneerekeningen (en het percentage van totale abonneerekeningen in segment) geeft die kanaalinhoud stromen gebruikend die vele apparaten in een week.
+Wanneer het bedekken over een bar (specifiek voor aantal apparaten), verschijnt een etiket dat informatie over het aantal abonneerekeningen (en het percentage van totale abonneerekeningen in het segment) geeft die kanaalinhoud stromen gebruikend die vele apparaten in een week.
 
 De grafiek geeft ook het volgende aan:
 
@@ -143,64 +115,54 @@ De grafiek geeft ook het volgende aan:
 
 * Een groene lijn om het gemiddelde van het aantal verschillende apparaten te merken die door een abonneerekening per week (of maand) worden gebruikt.
 
-U kunt het drempelniveau vergelijken met het wekelijkse gemiddelde van het aantal verschillende apparaten dat door een account wordt gebruikt, om het niveau van delen te bepalen.
-
-De grafiek geeft ook een glimp van het percentage abonneerekeningen die meer apparaten dan de vastgestelde drempel gebruiken.
-
-Met het donutdiagram kunt u in één oogopslag de grootte beoordelen van abonneeaccounts die kanaalinhoud verbruiken met apparaten die de ingestelde drempelwaarde (in een tijdframe) overschrijden.
+De donut verstrekt een afwisselende mening van de apparaten die door rekeningen in het huidige segment boven de vastgestelde drempel worden gebruikt.
 
 ![](assets/donut-devices-w-acc.png)
 
 ## Locaties per week (of maand) per account {#locations-week-account}
 
-leuk [Apparaten per week (of maand) per account](#devices-week-account)Met de maatstaf voor locaties per week (of maand) per account kunt u het gebruik van de abonneeaccount op verschillende locaties analyseren om het delen van wachtwoorden beter te identificeren. Het x-as palet Aantal Rekeningen, en de y-asPunten Aantal Plaatsen.
-
-Resultaten van deze metrisch gecombineerd met aantal [Apparaten per week (of maand) per account](#devices-week-account) en aantal [IPs per week (of maand) per Rekening](#ip-week-account) helpen u nauwkeuriger de instanties van het delen van het wachtwoord te beoordelen; zodat de authentieke gebruikers niet in worden geteld.
+Vergelijkbaar met de metrische waarde voor [Apparaten per week (of maand) per account](#devices-week-account)Met Locaties per week (of maand) per Account kunt u het gebruik van de abonneeaccount op verschillende locaties analyseren. Het x-as palet Aantal Rekeningen, en de y-asPunten Aantal Plaatsen.
 
 ![](assets/graph-loc-week-acc.png)
 
-Als u een segment hebt gedefinieerd en de drempel voor het aantal locaties hebt ingesteld, kunt u dit in de grafiek identificeren:
+Als u de drempel voor het aantal locaties hebt ingesteld, kunt u de grafiek gebruiken om het volgende te identificeren:
 
 * Aantal (en percentage) abonnees die inhoud van (a specifiek) x aantal plaatsen in een week verbruiken.
 
 * Percentage van totale abonneerekeningen die inhoud van meer plaatsen dan de drempel bekijken.
 
-* Vergelijk het wekelijkse gemiddelde (aantal verschillende locaties voor een account) met Drempel.
+* Vergelijk het wekelijkse gemiddelde (aantal verschillende locaties voor een account) met de drempel.
 
-## IPs per week (of maand) per Rekening {#ip-week-account}
+## Ips per week (of maand) per account {#ip-week-account}
 
-Vergelijkbaar met [Apparaten per week (of maand) per account](#devices-week-account) en [Locaties per week (of maand) per account](#locations-week-account)de **Aantal IP&#39;s per week per account** Met metrisch kunt u het delen van wachtwoorden nauwkeuriger en korter analyseren.
+Vergelijkbaar met de metrische waarde voor **Aantal locaties per week per account** de **Aantal IP&#39;s per week per account** Metrisch laat u de hoeveelheid verandering bij de bron van het stromen voor de huidige plaatsing evalueren.
 
 Het x-as plots Aantal Rekeningen, en het y-asPunten Aantal IPs.
 
 ![](assets/graph-ip-week-acc.png)
 
-Zodra u een segment hebt bepaald (door MVPDs en kanalen te selecteren) en de drempel voor aantal IPs te plaatsen, kunt u van de grafiek identificeren:
+Zodra u een segment hebt bepaald en de drempel voor het aantal IPs plaatst, kunt u de grafiek gebruiken om het volgende te identificeren:
 
-* Aantal (en percentage) abonnees die inhoud van (a specifiek) x aantal IP in een week verbruiken.
+* Aantal (en percentage) abonnees die inhoud van een specifiek aantal IP in een week verbruiken.
 
 * Percentage van totale abonneerekeningen die inhoud van meer IP adressen dan de drempel bekijken.
 
-* Vergelijk het wekelijkse gemiddelde (aantal verschillende IPs voor een rekening) met Drempel.
+* Vergelijk het wekelijkse gemiddelde (aantal verschillende IPs voor een rekening) met de drempel.
 
-## Accounts-segment - Historische weergave {#account-segment-historical-view}
+## Accounts-segment-historische weergave {#account-segment-historical-view}
 
-De grafiek van de bar van de Historische Mening helpt u de gebruiksmetriek over verschillende tijdkaders vergelijken. Bovendien worden de verschillende gebruiksmetriek, zoals [Apparaten per week (of maand) per account](#devices-week-account), [Locaties per week (of maand) per account](#locations-week-account), en [IPs per week (of maand) per Rekening](#ip-week-account).
+De grafiek van de bar van de Historische Mening helpt u de gebruiksmetriek over verschillende tijdintervallen vergelijken. Bovendien worden de verschillende gebruiksmetriek, zoals [Apparaten per week (of maand) per account](#devices-week-account), [Locaties per week (of maand) per account](#locations-week-account), en [IPs per week (of maand) per rekening](#ip-week-account).
 
-* De x-as zet het tijdkader in kaart, en de y-as geeft het aantal abonneerekeningen, apparaten, plaatsen en IP&#39;s toe.
+* De x-as zet het tijdinterval in kaart, en de y-as geeft het aantal van abonneerekeningen, apparaten, plaatsen en IPs.
 
-* De oranje gekleurde balken geven segmenten in verschillende tijdframes aan.
+* De oranje gekleurde balken geven segmenten aan in verschillende tijdsintervallen.
 
-* De lijngrafiek geeft een overzicht van de wijzigingen in [Apparaten per week (of maand) per account](#devices-week-account), [Locaties per week (of maand) per account](#locations-week-account), en [IPs per week (of maand) per Rekening](#ip-week-account) waarden over het tijdkader die op de drempel worden gebaseerd.
+* De lijngrafiek geeft een overzicht van de wijzigingen in [Apparaten per week (of maand) per account](#devices-week-account), [Locaties per week (of maand) per account](#locations-week-account), en [IPs per week (of maand) per rekening](#ip-week-account) waarden over het tijdinterval die op de drempel worden gebaseerd.
 
 ![](assets/historical-view.png)
 
-* De blauwe balken geven het totale aantal actieve abonnees in de hele branche aan voor een tijdsperiode.
+* De blauwe balken geven het totale aantal actieve abonnees in de hele branche aan voor een tijdsinterval.
 
 * U kunt specifieke legenda selecteren en deze helpen u de grafiek te schalen.
 
 ![](assets/historical-view-total.png)
-
->[!MORELIKETHIS]
->
->* Weet hoe u rapporten voor de bovenste 1000 abonnees in het geselecteerde segment kunt exporteren met filters in Rapport Algemeen gebruik met [Bovenste 1000-accounts exporteren](/help/accountiq/export-acc-information.md) -optie.
