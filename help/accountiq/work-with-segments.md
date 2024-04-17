@@ -1,7 +1,8 @@
 ---
 title: Werken met segmenten
 description: Begrijpen en segmenten gebruiken. Leer hoe u een segment maakt en beheert.
-source-git-commit: cfcaa00ab05c99a64bcb0edfe5af60845a6769a9
+exl-id: 01431437-55f5-464d-8ee4-7a79ec553e4f
+source-git-commit: 38402b411dd4fad3490115cff1854faa7f3cb293
 workflow-type: tm+mt
 source-wordcount: '1970'
 ht-degree: 0%
@@ -40,7 +41,7 @@ Het proces om een nieuw segment te creëren is gelijkaardig voor D2C diensten en
 
 Om een segment te bouwen en het delen van de abonnee gedrag te analyseren, selecteert **[!UICONTROL Create new segment]** rechtsboven.
 
-![Nieuw segment maken](assets/d2c-create-new-segment.png)
+![Nieuw segment maken](assets/create-new-segment-d2c.png)
 
 *Nieuw segment maken*
 
@@ -220,7 +221,7 @@ U kunt een segment selecteren in de segmentlijst en vervolgens de volgende hande
 
 *Selecteer een segment dat u wilt bewerken, dupliceren of verwijderen*
 
-**A.** [Videocategorieën](product-concepts.md#video-category-def) **B.** [Standaardsegment](#work-with-segments)
+**A.** [Standaardsegment](#work-with-segments) **B.** [Videocategorieën](product-concepts.md#video-category-def)
 
 >[!NOTE]
 >
@@ -278,5 +279,3 @@ Er wordt een kopie van het geselecteerde segment gegenereerd en aan het einde va
    >[!NOTE]
    >
    >Het segment wordt permanent verwijderd uit het systeem en u kunt deze handeling niet ongedaan maken.
-
-
