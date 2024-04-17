@@ -2,9 +2,9 @@
 title: Gradatie-API - overzicht
 description: Gradatie-API - overzicht
 exl-id: c7d6685b-a235-42eb-9c9c-0ffa1747f614
-source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
+source-git-commit: f918d7f9f7b2af5b4364421f6703211e413eafb4
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '431'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,17 @@ ht-degree: 0%
 >[!NOTE]
 >
 >De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
+>Als u de Degradation API wilt gebruiken, moet u:
+>- Vraag het ondersteuningsteam om een softwareverklaring voor uw geregistreerde toepassing
+>- verkrijg een toegangstoken dat op wordt gebaseerd [Dynamische clientregistratie](dynamic-client-registration.md)
+> 
+
+>[!NOTE]
+>
+>Als u de Degradation API wilt gebruiken, moet u:
+>- Vraag het ondersteuningsteam om een softwareverklaring voor uw geregistreerde toepassing
+>- verkrijg een toegangstoken dat op wordt gebaseerd [Dynamische clientregistratie](dynamic-client-registration.md)
+> 
 
 ## Algemene informatie {#general_info}
 
@@ -29,9 +40,9 @@ Een degradatieregel wordt slechts voor een bepaalde periode toegepast. Hoewel de
 
 Afbraaknotities:
 
-* Deze eigenschap wordt ontworpen om samen met het gebruik controle API worden gebruikt, die informatie in real time over het aantal voor authentificaties en vergunningen per MVPD, gemiddelde vergunningsvertraging, en andere metriek nodig voor een volledig de dienstoverzicht verstrekt.
-* Met deze functie kunt u de Primetim-verificatieservice van Adobe niet omzeilen. Als de Authentificatie van Adobe Pass neer is is er geen mechanisme binnen de dienst die kan worden gebruikt om gebruikers toe te staan om inhoud te zien. De sites of apps kunnen echter zelf de Adobe Pass-verificatie omzeilen.
-* Adobe zal momenteel niet rechtstreeks tot aantasting leiden. Het besluit moet altijd in het bezit zijn van een specifieke programmeur die met dergelijke voorwaarden heeft ingestemd. In de toekomst, zou de Authentificatie van Adobe Pass pro-actief in het teweegbrengen van degradatieregels kunnen zijn als de overeenkomsten (SLA bescherming) met MVPDs kunnen worden bereikt.
+- Deze functie is ontworpen voor gebruik in combinatie met de API voor gebruiksbewaking, die realtime informatie biedt over het aantal verificaties en autorisaties per MVPD, de gemiddelde vertraging bij autorisatie en andere metriek die nodig is voor een volledig serviceoverzicht.
+- Met deze functie kan de Primetim-verificatieservice van Adobe niet worden omzeild. Als de Authentificatie van Adobe Pass neer is is er geen mechanisme binnen de dienst die kan worden gebruikt om gebruikers toe te staan om inhoud te zien. De sites of apps kunnen echter zelf de Adobe Pass-verificatie omzeilen.
+- Adobe leidt momenteel niet tot een directe verslechtering; het besluit moet altijd in handen zijn van een specifieke programmeur die met de MVPD&#39;s heeft ingestemd. In de toekomst, zou de Authentificatie van Adobe Pass pro-actief in het teweegbrengen van degradatieregels kunnen zijn als de overeenkomsten (SLA bescherming) met MVPDs kunnen worden bereikt.
 
 <!--
 ## Related Information {#related}

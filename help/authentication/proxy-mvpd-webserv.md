@@ -2,9 +2,9 @@
 title: Proxy MVPD Web Service
 description: Proxy MVPD Web Service
 exl-id: f75cbc4d-4132-4ce8-a81c-1561a69d1d3a
-source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
+source-git-commit: f918d7f9f7b2af5b4364421f6703211e413eafb4
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '999'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,17 @@ ht-degree: 0%
 >[!NOTE]
 >
 >De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
+>Om de het Webdienst van MVPD van de Volmacht te gebruiken, zult u moeten:
+>- Vraag het ondersteuningsteam om een softwareverklaring voor uw geregistreerde toepassing
+>- verkrijg een toegangstoken dat op wordt gebaseerd [Dynamische clientregistratie](dynamic-client-registration.md)
+> 
+
+>[!NOTE]
+>
+>Om de het Webdienst van MVPD van de Volmacht te gebruiken, zult u moeten:
+>- Vraag het ondersteuningsteam om een softwareverklaring voor uw geregistreerde toepassing
+>- verkrijg een toegangstoken dat op wordt gebaseerd [Dynamische clientregistratie](dynamic-client-registration.md)
+> 
 
 ## Overzicht {#overview-proxy-mvpd-webserv}
 
@@ -21,13 +32,13 @@ Een &quot;Volmacht MVPD&quot;is een MVPD die, naast het beheren van zijn eigen i
 
 Om de eigenschap ProxyMVPD uit te voeren, verstrekt de Authentificatie van Adobe Pass de Webdiensten RESTful, waarmee ProxyMVPDs lijsten van ProxiedMVPDs kan voorleggen en terugwinnen. Het protocol dat voor deze openbare API wordt gebruikt is REST HTTP, met de volgende veronderstellingen:
 
-* De Volmacht MVPD gebruikt de methode van de GET van HTTP om de lijst van huidige geïntegreerde MVPDs terug te winnen.
-* De Volmacht MVPD gebruikt de methode van de POST van HTTP om de lijst van gesteunde MVPDs bij te werken.
+- Proxy MVPD gebruikt de methode van de GET van HTTP om de lijst van huidige geïntegreerde MVPDs terug te winnen.
+- Proxy MVPD gebruikt de methode van de POST van HTTP om de lijst van gesteunde MVPDs bij te werken.
 
 ## Proxy MVPD-services {#proxy-mvpd-services}
 
-* [Geavanceerde MVPD&#39;s ophalen](#retriev-proxied-mvpds)
-* [Geavanceerde MVPD&#39;s verzenden](#submit-proxied-mvpds)
+- [Geavanceerde MVPD&#39;s ophalen](#retriev-proxied-mvpds)
+- [Geavanceerde MVPD&#39;s verzenden](#submit-proxied-mvpds)
 
 ### Geavanceerde MVPD&#39;s ophalen {#retriev-proxied-mvpds}
 
@@ -35,11 +46,11 @@ Haalt de huidige lijst van Proxied MVPDs voor ProxyMVPD terug die door de apikey
 
 | Endpoint | Geroepen door | Aanvraagkoppen | HTTP-methode | HTTP-respons |
 |---|---|---|---|---|
-| &lt;fqdn>/control/v1/proxiedMvpds | ProxyMVPD | apikey (verplicht) | GET | <ul><li> 200 (ok) - De aanvraag is verwerkt en de reactie bevat een lijst met ProxiedMVPD&#39;s in XML-indeling</li><li>401 (niet-geautoriseerd) - Gebruikersverificatie vereist of autorisatie niet verleend voor opgegeven referenties.  Geeft een van de volgende opties aan:<ul><li>De apikey-token is niet aanwezig in de aanvraagkoptekst</li><li>Het verzoek is afkomstig van een IP-adres dat niet aanwezig is in de lijst van gewenste personen</li><li>Het token is niet geldig</li></ul></li><li>403 (niet toegestaan) - Geeft aan dat de bewerking niet wordt ondersteund voor de opgegeven parameters of dat de proxy-MVPD niet is ingesteld als een proxy of ontbreekt</li><li>405 (methode niet toegestaan) - Er is een andere HTTP-methode dan GET of POST gebruikt. De HTTP-methode wordt over het algemeen niet ondersteund of wordt niet ondersteund voor dit specifieke eindpunt.</li><li>500 (interne serverfout) - Er is een fout opgetreden aan de serverzijde tijdens het aanvraagproces.</li></ul> |
+| &lt;fqdn>/control/v3/proxiedMvpds | ProxyMVPD | apikey (verplicht) | GET | <ul><li> 200 (ok) - De aanvraag is verwerkt en de reactie bevat een lijst met ProxiedMVPD&#39;s in XML-indeling</li><li>401 (niet-geautoriseerd) - Geeft een van de volgende gegevens aan:<ul><li>De cliënt MOET om een nieuw access_token verzoeken</li><li>Het verzoek is afkomstig van een IP-adres dat niet aanwezig is in de lijst van gewenste personen</li><li>Het token is niet geldig</li></ul></li><li>403 (niet toegestaan) - Geeft aan dat de bewerking niet wordt ondersteund voor de opgegeven parameters of dat de proxy-MVPD niet is ingesteld als een proxy of ontbreekt</li><li>405 (methode niet toegestaan) - Er is een andere HTTP-methode dan GET of POST gebruikt. De HTTP-methode wordt over het algemeen niet ondersteund of wordt niet ondersteund voor dit specifieke eindpunt.</li><li>500 (interne serverfout) - Er is een fout opgetreden aan de serverzijde tijdens het aanvraagproces.</li></ul> |
 
 Voorbeeld van krullen:
 
-`curl -X GET -H "apikey: ???provided-by-adobe???" "https://mgmt-prequal.auth-staging.adobe.com/control/v1/proxiedMvpds"`
+`curl -X GET -H "Authorization: Bearer <access_token_here>" "https://mgmt-prequal.auth-staging.adobe.com/control/v3/proxiedMvpds"`
 
 
 Voorbeeld van XML-reactie:
@@ -82,11 +93,11 @@ Past een serie van MVPDs die met de Volmacht MVPD wordt geïntegreerd door de pa
 
 | Endpoint | Geroepen door | Aanvraagkoppen | HTTP-methode | HTTP-respons |
 |:------------------------------:|:---------:|:--------------------------------------------:|:-----------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| &lt;fqdn>/control/v1/proxiedMvpds | ProxyMVPD | apikey (Mandatory) proxied-mvpds (Mandatory) | POST | <ul><li>201 (gemaakt) - De push is verwerkt</li><li>400 (ongeldig verzoek) - De server weet niet hoe te om het verzoek te verwerken:<ul><li>Binnenkomende XML voldoet niet aan schema dat in deze specificatie wordt gepubliceerd</li><li>De proxy-mvpds hebben geen unieke id&#39;s</li><li>De geduwde aanvragerIds bestaat niet Andere de containerreden van Servlet voor 400 reactiecode</li></ul><li>401 (onbevoegd) - de apikey is ongeldig of bezoeker IP is niet op de lijst van gewenste personen</li><li>403 (niet toegestaan) - Geeft aan dat de bewerking niet wordt ondersteund voor de opgegeven parameters of dat de proxy-MVPD niet is ingesteld als een proxy of ontbreekt</li><li>405 (methode niet toegestaan) - Er is een andere HTTP-methode dan GET of POST gebruikt. De HTTP-methode wordt over het algemeen niet ondersteund of wordt niet ondersteund voor dit specifieke eindpunt.</li><li>500 (interne serverfout) - Er is een fout opgetreden aan de serverzijde tijdens het aanvraagproces.</li></ul> |
+| &lt;fqdn>/control/v3/proxiedMvpds | ProxyMVPD | apikey (Mandatory) proxied-mvpds (Mandatory) | POST | <ul><li>201 (gemaakt) - De push is verwerkt</li><li>400 (ongeldig verzoek) - De server weet niet hoe te om het verzoek te verwerken:<ul><li>Binnenkomende XML voldoet niet aan schema dat in deze specificatie wordt gepubliceerd</li><li>De proxy-mvpds hebben geen unieke id&#39;s</li><li>De geduwde aanvragerIds bestaat niet Andere de containerreden van Servlet voor 400 reactiecode</li></ul><li>401 (niet-geautoriseerd) - Geeft een van de volgende gegevens aan:<ul><li>De cliënt MOET om een nieuw access_token verzoeken</li><li>Het verzoek is afkomstig van een IP-adres dat niet aanwezig is in de lijst van gewenste personen</li><li>Het token is niet geldig</li></ul></li><li>403 (niet toegestaan) - Geeft aan dat de bewerking niet wordt ondersteund voor de opgegeven parameters of dat de proxy-MVPD niet is ingesteld als een proxy of ontbreekt</li><li>405 (methode niet toegestaan) - Er is een andere HTTP-methode dan GET of POST gebruikt. De HTTP-methode wordt over het algemeen niet ondersteund of wordt niet ondersteund voor dit specifieke eindpunt.</li><li>500 (interne serverfout) - Er is een fout opgetreden aan de serverzijde tijdens het aanvraagproces.</li></ul> |
 
 Voorbeeld van krullen:
 
-`curl -X POST -H "apikey: <API_KEY>" "https://mgmt-prequal.auth.adobe.com/control/v1/proxiedMvpds" -d "proxied-mvpds=%3CproxiedMvpds%3E%3CproxiedMvpd%3E%3CdisplayName%3EFirst%20MVPD%20Name%3C%2FdisplayName%3E%3Cid%3EfirstMVPDId%3C%2Fid%3E%3ClogoURL%3E%3C%2FlogoURL%3E%3C%2FproxiedMvpd%3E%3CproxiedMvpd%3E%3Cid%20ProviderID%3D%22ProviderID_Value_Sent_On_IdPEntry%22%3EmvpdPickerId%3C%2Fid%3E%3CdisplayName%3EMVPD%20Name%20Two%3C%2FdisplayName%3E%3ClogoURL%3E%3C%2FlogoURL%3E%3CrequestorIds%3E%3CrequestorId%3ETHE_REQUESTOR_ID%3C%2FrequestorId%3E%3C%2FrequestorIds%3E%3C%2FproxiedMvpd%3E%3C%2FproxiedMvpds%3E"`
+`curl -X POST -H "Authorization: Bearer <access_token_here>" "https://mgmt-prequal.auth.adobe.com/control/v3/proxiedMvpds" -d "proxied-mvpds=%3CproxiedMvpds%3E%3CproxiedMvpd%3E%3CdisplayName%3EFirst%20MVPD%20Name%3C%2FdisplayName%3E%3Cid%3EfirstMVPDId%3C%2Fid%3E%3ClogoURL%3E%3C%2FlogoURL%3E%3C%2FproxiedMvpd%3E%3CproxiedMvpd%3E%3Cid%20ProviderID%3D%22ProviderID_Value_Sent_On_IdPEntry%22%3EmvpdPickerId%3C%2Fid%3E%3CdisplayName%3EMVPD%20Name%20Two%3C%2FdisplayName%3E%3ClogoURL%3E%3C%2FlogoURL%3E%3CrequestorIds%3E%3CrequestorId%3ETHE_REQUESTOR_ID%3C%2FrequestorId%3E%3C%2FrequestorIds%3E%3C%2FproxiedMvpd%3E%3C%2FproxiedMvpds%3E"`
 
 
 
@@ -206,37 +217,33 @@ De Adobe heeft het volgende toegelaten formaat voor het posten/het terugwinnen v
 
 **Opmerkingen over elementen:**
 
-* `id` (verplicht) - De Proxied MVPD ID moet een koord relevant voor de naam van MVPD zijn, gebruikend om het even welke volgende karakters (aangezien het aan Programmers voor het volgen van doeleinden zal worden blootgesteld):
-   * Alfanumerieke tekens, onderstrepingsteken (&quot;_&quot;) en koppelteken (&quot;-&quot;).
-   * De idID moet voldoen aan de volgende reguliere expressie:
-     `(a-zA-Z0-9((-)|_)*)`
+-   `id` (verplicht) - Proxied MVPD ID moet een koord relevant voor de naam van MVPD zijn, gebruikend om het even welke volgende karakters (aangezien het aan Programmers voor het volgen) zal worden blootgesteld: - Om het even welke alfanumerieke karakters, onderstrepingsteken (&quot;_&quot;), en koppelteken (&quot;-&quot;).
+- De idID moet voldoen aan de volgende reguliere expressie:
+`(a-zA-Z0-9((-)|_)*)`
 
-     Het moet dus ten minste één teken hebben, beginnen met een letter en doorgaan met een letter, cijfer, streepje of onderstrepingsteken.
+    Het moet dus ten minste één teken hebben, beginnen met een letter en doorgaan met een letter, cijfer, streepje of onderstrepingsteken.
 
-* `iframeSize` (optioneel) - Het iframeSize-element is optioneel en definieert de grootte van het iFrame als de MVPD-verificatiepagina zich in een iFrame moet bevinden. Anders, als het iframeSize element niet aanwezig is, zal de authentificatie in volledige browser opnieuw richten pagina gebeuren.
-* `requestorIds` (optioneel) - De waarden voor requestIds worden opgegeven door Adobe. Een vereiste is dat een proxy MVPD met minstens één aanvragerId moet worden geïntegreerd. Als de tag &quot;requestIds&quot; niet aanwezig is op het proxy-element MVPD, wordt die proxy MVPD geïntegreerd met alle beschikbare aanvragers die zijn geïntegreerd onder de proxy MVPD.
-* `ProviderID` (facultatief) - wanneer het attribuut ProviderID op het id element aanwezig is, zal de waarde van ProviderID op het SAML authentificatieverzoek naar Volmacht MVPD als Proxied MVPD/SubMVPD ID (in plaats van de id waarde) worden verzonden. In dit geval, zal de waarde van identiteitskaart slechts in de plukker worden gebruikt MVPD die op de pagina van de Programmer wordt voorgesteld, en intern door de Authentificatie van Adobe Pass. De lengte van het attribuut ProviderID moet tussen 1 en 128 karakters zijn.
+-   `iframeSize` (optioneel) - Het iframeSize-element is optioneel en definieert de grootte van het iFrame als de MVPD-verificatiepagina zich in een iFrame moet bevinden. Anders, als het iframeSize element niet aanwezig is, zal de authentificatie in volledige browser opnieuw richten pagina gebeuren.
+-   `requestorIds` (optioneel) - De waarden voor requestIds worden opgegeven door Adobe. Een vereiste is dat een proxy MVPD met minstens één aanvragerId moet worden geïntegreerd. Als de tag &quot;requestIds&quot; niet aanwezig is op het proxy-element MVPD, wordt die proxy MVPD geïntegreerd met alle beschikbare aanvragers die zijn geïntegreerd onder de proxy MVPD.
+-   `ProviderID` (facultatief) - wanneer het attribuut ProviderID op het id element aanwezig is, zal de waarde van ProviderID op het SAML authentificatieverzoek naar Volmacht MVPD als Proxied MVPD/SubMVPD ID (in plaats van de id waarde) worden verzonden. In dit geval, zal de waarde van identiteitskaart slechts in de plukker worden gebruikt MVPD die op de pagina van de Programmer wordt voorgesteld, en intern door de Authentificatie van Adobe Pass. De lengte van het attribuut ProviderID moet tussen 1 en 128 karakters zijn.
 
 ## Beveiliging {#security}
 
 Een verzoek kan alleen als geldig worden beschouwd als het aan de volgende regels voldoet:
 
-* De aanvraagheader moet de beveiligingstoepassingsparameter bevatten. (Dit is een toepassingssleutel die de vraag van de Volmacht MVPD uniek zal identificeren.)
-* Het verzoek moet van een specifiek IP adres komen dat is toegestaan.
-* De aanvraag moet via het SSL-protocol worden verzonden.
+- De verzoekkopbal moet het toegangstoken van de veiligheid Oauth2 van bevatten [Dynamische clientregistratie](dynamic-client-registration.md).
+- Het verzoek moet van een specifiek IP adres komen dat is toegestaan.
+- De aanvraag moet via het SSL-protocol worden verzonden.
 
-Adobe geeft de (statische) waarde van het token op. Deze waarde wordt gebruikt in het verificatie- en autorisatieproces.  Alle parameters in de aanvraagkoptekst die hierboven niet worden vermeld, worden genegeerd.
+Alle parameters in de aanvraagkoptekst die hierboven niet worden vermeld, worden genegeerd.
 
 Voorbeeld van krullen:
 
-`curl -X GET -H "apikey: ???provided-by-adobe???" "https://mgmt-prequal.auth-staging.adobe.com/control/v1/proxiedMvpds"`
+`curl -X GET -H "Authorization: Bearer <access_token_here>" "https://mgmt-prequal.auth-staging.adobe.com/control/v3/proxiedMvpds"`
 
 ## De Eindpunten van de Dienst van het Web van de Volmacht MVPD voor de Milieu&#39;s van de Authentificatie van Adobe Pass {#proxy-mvpd-wevserv-endpoints}
 
-* **URL productie:** https://mgmt.auth.adobe.com/control/v1/proxiedMvpds
-* **Staging-URL:** https://mgmt.auth-staging.adobe.com/control/v1/proxiedMvpds
-* **URL voor preQual-Production:** https://mgmt-prequal.auth.adobe.com/control/v1/proxiedMvpds
-* **PreQual-Staging URL:** https://mgmt-prequal.auth-staging.adobe.com/control/v1/proxiedMvpds
+- **URL productie:** https://mgmt.auth.adobe.com/control/v3/proxiedMvpds - **Staging-URL:** https://mgmt.auth-staging.adobe.com/control/v3/proxiedMvpds - **URL voor preQual-Production:** https://mgmt-prequal.auth.adobe.com/control/v3/proxiedMvpds - **PreQual-Staging URL:** https://mgmt-prequal.auth-staging.adobe.com/control/v3/proxiedMvpds
 
 <!--
 >[!RELATEDINFORMATION]
