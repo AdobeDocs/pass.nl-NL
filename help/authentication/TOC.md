@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass-verificatie
 user-guide-description: Adobe Pass-verificatie is een machtigingsoplossing voor TV Everywhere, die een modulair kader verstrekt om te bepalen of iemand die toegang tot een bron vraagt, daar rechten voor heeft.
-source-git-commit: 30e2507c0622b882744cf8291525c388575df32f
+source-git-commit: 26236fbd4b2d5703bcf99fc0cc5e0460e75ed185
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '957'
 ht-degree: 3%
 
 ---
@@ -221,4 +221,16 @@ ht-degree: 3%
    + Concepten {#concepts}
       + [Gebruikersnaam](understanding-user-ids.md)
 + [Gebruikershandleiding voor TVE Dashboard](tve-dashboard-user-guide.md)
++ Nieuwe TVE-dashboardgebruikershandleiding {#user-guide}
+   + [Overzicht van TVE-dashboard](/help/authentication/tve-dashboard-overview.md)
+   + [Omgevingen](/help/authentication/tve-dashboard-environments.md)
+   + [Wijzigingen controleren en duwen](/help/authentication/tve-dashboard-review-push-changes.md)
+   + [Dashboard](/help/authentication/tve-dashboard-home.md)
+   + [Kanalen](/help/authentication/tve-dashboard-channels.md)
+   + [Programmeurs](/help/authentication/tve-dashboard-programmers.md)
+   + [MVPD&#39;s](/help/authentication/tve-dashboard-mvpds.md)
+   + [Integraties](/help/authentication/tve-dashboard-integrations.md)
+   + [Rapporten](/help/authentication/tve-dashboard-reports.md)
+   + [Wijzigingenlogboek](/help/authentication/tve-dashboard-changes-log.md)
 + [Verklarende woordenlijst](glossary.md)
+
