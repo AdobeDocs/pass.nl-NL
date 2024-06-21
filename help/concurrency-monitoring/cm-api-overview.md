@@ -1,13 +1,13 @@
 ---
 title: API-overzicht
 description: API-overzicht van Gelijktijdige bewaking
-source-git-commit: 59672b44074c472094ed27a23d6bfbcd7654c901
+exl-id: eb232926-9c68-4874-b76d-4c458d059f0d
+source-git-commit: dd370b231acc08ea0544c0dedaa1bdb0683e378f
 workflow-type: tm+mt
-source-wordcount: '1425'
+source-wordcount: '1556'
 ht-degree: 0%
 
 ---
-
 
 # API-overzicht {#api-overview}
 
@@ -101,6 +101,24 @@ Gebruik de zelfde parameters voor de vraag zoals voor de zittingshartslag. De HT
 * 202 AANVAARD voor een succesvol antwoord
 * 410 GONE als de sessie al was gestopt.
 
+#### Alle actieve streams ophalen {#get-all-running-streams}
+
+Dit eindpunt biedt alle momenteel lopende zittingen voor een specifieke huurder op al zijn toepassingen aan. Gebruiken **onderwerp** en **idp** parameters voor de oproep:
+
+![](assets/get-all-running-streams-parameters.png)
+
+Wanneer u de vraag maakt zult u de volgende reactie krijgen:
+
+![](assets/get-all-running-streams-success.png)
+
+Let op: **Verloopt** header. Dat is het tijdstip waarop de eerste sessie moet verlopen, tenzij er een hartslag wordt verzonden. OtherStreams heeft waarde 0 omdat er geen andere stromen zijn die voor deze gebruiker op de toepassingen van andere huurders lopen.
+In het metagegevensveld worden alle metagegevens ingevuld die bij het starten van de sessie worden verzonden. We filteren het niet, je ontvangt alles wat je hebt verzonden.
+Als er geen lopende zittingen voor een specifieke gebruiker zijn wanneer u de vraag doet zult u deze reactie krijgen:
+
+![](assets/get-all-running-streams-empty.png)
+
+In dit geval moet ook worden opgemerkt dat de **Verloopt** header is not present.
+
 #### Het beleid doorbreken {#breaking-policy-app-first}
 
 
@@ -157,4 +175,3 @@ Om de regel te breken die wij in het beleid hebben dat aan deze toepassing wordt
 Als wij verschillende waarden voor de kanaalmeta-gegevens gebruiken telkens als wij een nieuwe zitting creëren zullen alle vraag slagen omdat de drempel van 2 aan elke waarde individueel wordt behandeld.
 
 Zoals in het eerste voorbeeld, kunnen wij de beëindigingscode gebruiken om het tegenstrijdige stromen ver tegen te houden of kunnen wij op één van de stromen wachten te verlopen, veronderstellend dat geen hartslag op hen zal worden in werking gesteld.
-
