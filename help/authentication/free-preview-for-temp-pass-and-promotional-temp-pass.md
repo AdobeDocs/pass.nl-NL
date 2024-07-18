@@ -2,9 +2,9 @@
 title: Gratis voorvertoning voor tijdelijke controle en tijdelijke controle voor speciale acties
 description: Gratis voorvertoning voor tijdelijke controle en tijdelijke controle voor speciale acties
 exl-id: c584bf0c-15c4-4a4d-b6a2-8d15ee786fe3
-source-git-commit: ea064031c3a1fee3298d85cf442c40bd4bb56281
+source-git-commit: 1ad2a4e75cd64755ccbde8f3b208148b7d990d82
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '409'
 ht-degree: 0%
 
 ---
@@ -17,19 +17,19 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> REST API-implementatie is beperkt door [Draaimechanisme](/help/authentication/throttling-mechanism.md)
+> De implementatie van REST API wordt begrensd door [ Throttling mechanisme ](/help/authentication/throttling-mechanism.md)
 
 ## REST API-eindpunten {#clientless-endpoints}
 
-&lt;reggie_fqdn>:
+&lt;REGGIE_FQDN>:
 
-* Productie - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Productie - [ api.auth.adobe.com ](http://api.auth.adobe.com/)
+* Het opvoeren - [ api.auth-staging.adobe.com ](http://api.auth-staging.adobe.com/)
 
-&lt;sp_fqdn>:
+&lt;SP_FQDN>:
 
-* Productie - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Productie - [ api.auth.adobe.com ](http://api.auth.adobe.com/)
+* Het opvoeren - [ api.auth-staging.adobe.com ](http://api.auth-staging.adobe.com/)
 
 </br>
 
@@ -38,9 +38,9 @@ ht-degree: 0%
 Hiermee kunt u een verificatietoken maken voor Temperatuur-controle en Tijdelijke controle voor bevordering zonder dat u een tweede scherm nodig hebt.
 
 
-| Endpoint | Geroepen  </br>Door | Invoer   </br>Params | HTTP  </br>Methode | Antwoord | HTTP  </br>Antwoord |
+| Endpoint | Geroepen </br> door | Invoer   </br> Params | HTTP </br> Methode | Antwoord | HTTP-respons </br> |
 | --- | --- | --- | --- | --- | --- |
-| &lt;sp_fqdn>/api/v1/authenticate/freepreview | Streaming-app</br></br>of</br></br>Programmeringsservice | 1. aanvrager_id (verplicht)</br>    </br>2.  deviceId (verplicht)</br>    </br>3.  mso_id (verplicht)</br>    </br>4.  domain_name (verplicht)</br>    </br>5.  device_info/X-Device-Info (verplicht)</br>6.  deviceType</br>    </br>7.  deviceUser (Afgekeurd)</br>    </br>8.  appId (afgekeurd)</br>    </br>9.  generic_data (optioneel) | POST | De succesvolle reactie zal 204 Geen Inhoud zijn, erop wijzend dat het teken met succes werd gecreeerd en klaar voor gebruik voor de auteurstromen is. | 204 - Geen inhoud   </br>400 - Onjuist verzoek |
+| &lt;SP_FQDN>/api/v1/authenticate/freepreview | Streaming App </br></br> of </br></br> de Dienst van de Programmer | 1. request_or_id (Verplicht) </br>    </br> 2.  deviceId (Verplicht) </br>    </br> 3.  mso_id (Verplicht) </br>    </br> 4.  domain_name (Verplicht) </br>    </br> 5.  device_info/x-apparaat-Info (Verplicht) </br> 6.  deviceType</br>    </br> 7.  deviceUser (Afgekeurd) </br>    </br> 8.  appId (Afgekeurd) </br>    </br> 9.  generic_data (optioneel) | POST | De succesvolle reactie zal 204 Geen Inhoud zijn, erop wijzend dat het teken met succes werd gecreeerd en klaar voor gebruik voor de auteurstromen is. | 204 - Geen inhoud   </br> {400 - Onjuist verzoek |
 
 <div>
 
@@ -51,11 +51,11 @@ Hiermee kunt u een verificatietoken maken voor Temperatuur-controle en Tijdelijk
 | deviceId | Het apparaat-id bytes. |
 | mso_id | De MVPD-id waarvoor deze bewerking geldig is. |
 | domain_name | De domeinnaam waarvoor een token wordt toegekend. Dit wordt vergeleken met de domeinen van de dienstverlener wanneer een toestemmingstoken wordt verleend. |
-| device_info/</br></br>X-Apparaat-Info | Informatie over streaming apparaat.</br></br>**Opmerking**: This MAY BE passed device_info as a URL parameter, but due to the potential size of this parameter and constraints on the length of a GET URL, it should be passed as X-Device-Info in the http header. </br></br><!--See the full details in [Passing Device and Connection Information](http://tve.helpdocsonline.com/passing-device-information)-->. |
-| _deviceType_ | Het apparaattype (bijvoorbeeld Roku, PC).</br></br>Als deze parameter correct is ingesteld, biedt ESM metriek die [uitgesplitst per apparaattype](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) bij gebruik van Clientless, zodat verschillende soorten analyses kunnen worden uitgevoerd voor bijvoorbeeld Roku, AppleTV, Xbox enz.</br></br>Zie [Voordelen van het gebruiken van clientless apparatentype parameters ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**Opmerking**: device_info zal deze parameter vervangen. |
-| _deviceUser_ | De gebruikers-id van het apparaat.</br></br>**Opmerking**: Indien gebruikt, moet deviceUser dezelfde waarden hebben als in het dialoogvenster [Registratiecode maken](/help/authentication/registration-code-request.md) verzoek. |
-| _appId_ | De toepassings-id/-naam. </br></br>**Opmerking**: device_info vervangt deze parameter. Indien gebruikt, `appId` moeten dezelfde waarden hebben als in de [Registratiecode maken](/help/authentication/registration-code-request.md) verzoek. |
+| device_info/</br></br> x-apparaat-Info | Informatie over streaming apparaat.</br></br>**Nota**: Dit KAN device_info als parameter worden overgegaan URL, maar wegens de potentiële grootte van deze parameter en beperkingen op de lengte van een GET URL, ZOU het als x-Apparaat-Info in de kopbal van http moeten worden overgegaan. </br></br> zie de volledige details in [ het overgaan van Apparaat en de Informatie van de Verbinding ](/help/authentication/passing-client-information-device-connection-and-application.md). |
+| _deviceType_ | Het apparaattype (bijvoorbeeld Roku, PC).</br></br> als deze parameter correct wordt geplaatst, biedt ESM metriek aan die [ uitgesplitst per apparatentype ](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) zijn wanneer het gebruiken van Clientless, zodat de verschillende soorten analyse voor bijvoorbeeld Roku, AppleTV, Xbox enz. kunnen worden uitgevoerd.</br></br> zie [ Voordelen om clientless parameters van het apparatentype ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**Nota** te gebruiken: device_info zal deze parameter vervangen. |
+| _deviceUser_ | De gebruikers-id van het apparaat.</br></br>**Nota**: Als gebruikt, zou deviceUser de zelfde waarden moeten hebben zoals in [ creeer de verzoek van de Code van de Registratie ](/help/authentication/registration-code-request.md). |
+| _appId_ | De toepassings-id/-naam. </br></br>**Nota**: device_info vervangt deze parameter. Indien gebruikt, `appId` zou de zelfde waarden moeten hebben zoals in [ creeer de verzoek van de Code van de Registratie ](/help/authentication/registration-code-request.md). |
 | generic_data | Gebruikt om het werkingsgebied van het teken voor de Pass van de Bevorderingstemperatuur te beperken. |
 
 
-### [Terug naar REST API Reference](/help/authentication/rest-api-reference.md)
+### [ Terug naar REST API Verwijzing ](/help/authentication/rest-api-reference.md)

@@ -2,9 +2,9 @@
 title: Overzicht van Entitlement Service-controle
 description: Overzicht van Entitlement Service-controle
 exl-id: ebd5d650-0a32-4583-9045-5156356494e2
-source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
+source-git-commit: 1ad2a4e75cd64755ccbde8f3b208148b7d990d82
 workflow-type: tm+mt
-source-wordcount: '1182'
+source-wordcount: '1303'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ De ESM API is niet algemeen beschikbaar.  Neem contact op met uw Adobe voor vrag
 ### Programmeurs kunnen de volgende meetgegevens controleren: {#programmers-monitor-metrics}
 
 
-| *Metrische naam* | *Beschrijving* |
+| *Naam van Metriek* | *Beschrijving* |
 |-------------------------|--------------------------|
 | authnPogingen | Aantal geïnitieerde verificatiestromen |
 | gelukt | Aantal verificatietokens dat is verkregen door clients |
@@ -44,8 +44,8 @@ De ESM API is niet algemeen beschikbaar.  Neem contact op met uw Adobe voor vrag
 | afgekeurd | Aantal pogingen van vergunningen die als kwaadwillig door de Leverancier van de Dienst van Adobe worden beschouwd en als resultaat van een de aanvalspreventie van Dos worden verworpen |
 | authz-latentie | Totaal aantal milliseconden besteed aan het eindpunt van MVPD |
 | media-tokens | Aantal gegenereerde korte mediatokens (die overeenkomen met het aantal afspeelverzoeken) |
-| unieke accounts | Aantal unieke gebruikers die machtigingsacties (AuthN / AuthZ) in het geselecteerde tijdinterval hebben uitgevoerd. (Deze metrische waarde geeft alleen aan of er om dagelijkse waarden wordt gevraagd.) </br> Dit wordt berekend voor elk individueel Centrum van Gegevens. Wanneer de afmeting &quot;dc&quot;niet wordt gevraagd, zal metrisch niet worden getoond. |
-| unieke sessies | Aantal unieke sessies dat aanroepen van de verificatiestroom naar de Adobe Pass-verificatieservice binnen het geselecteerde tijdsinterval heeft uitgevoerd. (Deze metrische waarde geeft alleen aan of er om dagelijkse waarden wordt gevraagd.) </br> Dit wordt berekend voor elk individueel Centrum van Gegevens. Wanneer de afmeting &quot;dc&quot;niet wordt gevraagd, zal metrisch niet worden getoond. |
+| unieke accounts | Aantal unieke gebruikers die machtigingsacties (AuthN / AuthZ) in het geselecteerde tijdinterval hebben uitgevoerd. (Deze metrische waarde geeft alleen aan of er om dagelijkse waarden wordt gevraagd.) </br> Dit wordt berekend voor elk afzonderlijk datacenter. Wanneer de afmeting &quot;dc&quot;niet wordt gevraagd, zal metrisch niet worden getoond. |
+| unieke sessies | Aantal unieke sessies dat aanroepen van de verificatiestroom naar de Adobe Pass-verificatieservice binnen het geselecteerde tijdsinterval heeft uitgevoerd. (Deze metrische waarde geeft alleen aan of er om dagelijkse waarden wordt gevraagd.) </br> Dit wordt berekend voor elk afzonderlijk datacenter. Wanneer de afmeting &quot;dc&quot;niet wordt gevraagd, zal metrisch niet worden getoond. |
 | aantal | Een eenvoudige teller die in de gebeurtenis-georiënteerde rapporten wordt gebruikt |
 
 </br>
@@ -53,8 +53,8 @@ De ESM API is niet algemeen beschikbaar.  Neem contact op met uw Adobe voor vrag
 ### Programmeurs kunnen de hierboven vermelde metriek door de volgende afmetingen filtreren: {#progr-filter-metrics}
 
 
-| *Naam Dimension* | *Beschrijving* |
-|---|---|
+| *Naam van het Dimension* | *Beschrijving* |
+|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | jaar | Jaar met 4 cijfers |
 | maand | De maand van het jaar (1-12) |
 | dag | Dag van de maand (1-31) |
@@ -68,24 +68,29 @@ De ESM API is niet algemeen beschikbaar.  Neem contact op met uw Adobe voor vrag
 | kanaal | De kanaalwebsite, die uit het middelgebied wordt gehaald (die uit de nuttige lading MRSS als kanaal/titel indien verstrekt wordt gehaald, of aan de middelwaarde in kaart gebracht als het niet in formaat RSS is). |
 | resource-id | De feitelijke titel van de bron die bij het vergunningsverzoek is betrokken (geëxtraheerd uit de MRSS-lading als item/titel indien verstrekt) |
 | apparaat | Het apparaatplatform (pc, mobiel, console, enz.) |
-| afhaken | De externe verificatieprovider wanneer de verificatiestroom wordt uitgevoerd via een extern systeem. </br> De waarden kunnen zijn: </br> - N.v.t. - de authenticatie is verstrekt door Adobe Pass Authentication </br> - Apple - het externe systeem dat de verificatie heeft verstrekt, is Apple |
+| afhaken | De externe verificatieprovider wanneer de verificatiestroom wordt uitgevoerd via een extern systeem. </br> De waarden kunnen zijn: </br> - N.v.t. - de verificatie is geleverd door Adobe Pass Authentication </br> - Apple - het externe systeem dat de verificatie heeft geleverd, is Apple |
 | os-family | Besturingssysteem dat op het apparaat wordt uitgevoerd |
 | browser-familie | Gebruikersagent voor toegang tot Adobe Pass-verificatie |
-| cdt | Het apparaatplatform (alternatief), dat momenteel wordt gebruikt voor Clientless. </br>  De waarden kunnen zijn: </br> - N.v.t. - de gebeurtenis kwam niet voort uit een Clientless SDK </br> - Onbekend - Aangezien de parameter deviceType van een Clientless API optioneel is, zijn er aanroepen die geen waarde bevatten. </br> - elke andere waarde die via de Clientless API is verzonden, bijvoorbeeld xbox, appletv, roku enz. </br> |
+| cdt | Het apparaatplatform (alternatief), dat momenteel wordt gebruikt voor Clientless. </br> De waarden kunnen zijn: </br> - N.v.t. - de gebeurtenis is niet afkomstig van een client-less SDK </br> - Onbekend - Omdat de deviceType-parameter van een client-less API optioneel is, zijn er aanroepen die geen waarde bevatten. </br> - elke andere waarde die via de client-API is verzonden, bijvoorbeeld xbox, appletv, roku enzovoort. </br> |
 | platformversie | De versie van de Clientless SDK |
 | van het type os | Besturingssysteem dat op het apparaat wordt uitgevoerd, alternatief (momenteel niet gebruikt) |
 | browserversie | Versie van gebruikersagent |
-| sdk-type | De SDK van de client die wordt gebruikt (Flash, HTML5, Android native, iOS, Clientless enz.) |
-| sdk-versie | De versie van de Adobe Pass Authentication-client SDK |
+| nsdk | De client-SDK wordt gebruikt (android, fireTV, js, iOS, tvOS, non-sdk) |
+| nsdk-versie | De versie van de Adobe Pass Authentication-client SDK |
 | event | De naam van de Adobe Pass-verificatiegebeurtenis |
 | reden | De reden voor fouten, zoals gemeld door Adobe Pass-verificatie |
 | van het type | Het onderliggende SSO-mechanisme: platform/passief/adobe. Geeft aan dat het verificatietoken is uitgegeven door AuthN opnieuw te gebruiken in een andere toepassing |
+| platform | Het apparaat identificeerde platform. Mogelijke waarden: </br> - Android </br> - FireTV </br> - Roku </br> - iOS </br> - tvOS </br> - enzovoort |
+| application-name | De toepassingsnaam die in het TVE-dashboard is geconfigureerd voor de DCR-geregistreerde toepassing die is geconfigureerd om te worden gebruikt. |
+| toepassingsversie | De toepassingsversie die in het TVE-dashboard is geconfigureerd voor de DCR-geregistreerde toepassing die is geconfigureerd voor gebruik. |
+| klant-app | De identiteitskaart van de douanetoepassing ging via [ Informatie van het Apparaat ](/help/authentication/passing-client-information-device-connection-and-application.md) over. |
+| inhoudscategorie | De categorie van de inhoud die door uw toepassing wordt aangevraagd. |
 
 ## ESM voor MVPD&#39;s {#esm-for-mvpds}
 
 ### MVPDs kan de volgende metriek controleren:
 
-| *Metrische naam* | *Beschrijving* |
+| *Metrische Naam* | *Beschrijving* |
 |---|---|
 | authnPogingen | Aantal geïnitieerde verificatiestromen |
 | gelukt | Aantal verificatietokens dat is verkregen door clients |
@@ -99,28 +104,31 @@ De ESM API is niet algemeen beschikbaar.  Neem contact op met uw Adobe voor vrag
 
 ### MVPD&#39;s kunnen de hierboven vermelde metingen filteren op de volgende afmetingen:
 
-| *Naam Dimension* | *Beschrijving* |
-|---|---|
+| *Naam van het Dimension* | *Beschrijving* |
+|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | jaar | Jaar met 4 cijfers |
 | maand | De maand van het jaar (1-12) |
 | dag | Dag van de maand (1-31) |
 | uur | Het uur van de dag |
 | minuut | De minuut van het uur |
+| mvpd | De mvpd-id die wordt gebruikt voor het uitvoeren van de machtigingsaanvraag |
 | aanvrager-id | De aanvrager-id die wordt gebruikt voor het uitvoeren van de machtigingsaanvraag |
-| afhaken | De externe verificatieprovider wanneer de verificatiestroom wordt uitgevoerd via een extern systeem. </br> De waarden kunnen zijn: </br> - N.v.t. - de authenticatie is verstrekt door Adobe Pass Authentication </br> - Apple - het externe systeem dat de verificatie heeft verstrekt, is Apple |
-| cdt | Het apparaatplatform (alternatief), dat momenteel wordt gebruikt voor Clientless. </br>  De waarden kunnen zijn: </br> - N.v.t. - de gebeurtenis kwam niet voort uit een Clientless SDK </br> - Onbekend - Aangezien de parameter deviceType van een Clientless API optioneel is, zijn er aanroepen die geen waarde bevatten. </br> - elke andere waarde die via de Clientless API is verzonden, bijvoorbeeld xbox, appletv, roku enz. </br> |
+| afhaken | De externe verificatieprovider wanneer de verificatiestroom wordt uitgevoerd via een extern systeem. </br> De waarden kunnen zijn: </br> - N.v.t. - de verificatie is geleverd door Adobe Pass Authentication </br> - Apple - het externe systeem dat de verificatie heeft geleverd, is Apple |
+| cdt | Het apparaatplatform (alternatief), dat momenteel wordt gebruikt voor Clientless. </br> De waarden kunnen zijn: </br> - N.v.t. - de gebeurtenis is niet afkomstig van een client-less SDK </br> - Onbekend - Omdat de deviceType-parameter van een client-less API optioneel is, zijn er aanroepen die geen waarde bevatten. </br> - elke andere waarde die via de client-API is verzonden, bijvoorbeeld xbox, appletv, roku enzovoort. </br> |
 | sdk-type | De SDK van de client die wordt gebruikt (Flash, HTML5, Android native, iOS, Clientless enz.) |
-
+| platform | Het apparaat identificeerde platform. Mogelijke waarden: </br> - Android </br> - FireTV </br> - Roku </br> - iOS </br> - tvOS </br> - enzovoort |
+| nsdk | De client-SDK wordt gebruikt (android, fireTV, js, iOS, tvOS, non-sdk) |
+| nsdk-versie | De versie van de Adobe Pass Authentication-client SDK |
 
 ## Gevallen gebruiken {#use-cases}
 
 U kunt de ESM-gegevens gebruiken voor de volgende gebruiksgevallen:
 
-- **Toezicht** - Ops of controleteams kunnen een dashboard of grafiek maken die elke minuut de API aanroept. Aan de hand van de weergegeven informatie kunnen ze een probleem detecteren (met Adobe Pass-verificatie of met een MVPD) zodra het wordt weergegeven.
+- **Controle** - Ops of controleteams kunnen een dashboard of grafiek tot stand brengen die API elke minuut roept. Aan de hand van de weergegeven informatie kunnen ze een probleem detecteren (met Adobe Pass-verificatie of met een MVPD) zodra het wordt weergegeven.
 
-- **Foutopsporing/Kwaliteitstests** - Omdat gegevens ook worden uitgesplitst naar platform, apparaat, browser en besturingssysteem, kan het analyseren van gebruikspatronen problemen op specifieke combinaties (bijvoorbeeld Safari op OSX) opsporen.
+- **het Zuiveren/het Testen van de Kwaliteit** - omdat het gegeven ook door platform, apparaat, browser, en OS wordt gebroken, kan het analyseren van gebruikspatronen problemen op specifieke combinaties (b.v., Safari op OSX) identificeren.
 
-- **Analyse** - De verstrekte gegevens kunnen worden gebruikt ter aanvulling/controle van de gegevens aan de clientzijde die worden verzameld via Adobe Analytics of een ander analysehulpmiddel.
+- **Analytics** - de verstrekte gegevens kunnen worden gebruikt om de gegevens van de cliëntkant aan te vullen/te controleren die door Adobe Analytics of een ander analysehulpmiddel worden verzameld.
 
 <!--
 ## Related Information {#related-information}

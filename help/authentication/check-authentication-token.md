@@ -2,7 +2,7 @@
 title: Verificatietoken controleren
 description: Verificatietoken controleren
 exl-id: 9020f261-44d8-4bd5-b85b-a8667679f563
-source-git-commit: ea064031c3a1fee3298d85cf442c40bd4bb56281
+source-git-commit: 1ad2a4e75cd64755ccbde8f3b208148b7d990d82
 workflow-type: tm+mt
 source-wordcount: '269'
 ht-degree: 0%
@@ -17,19 +17,19 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> REST API-implementatie is beperkt door [Draaimechanisme](/help/authentication/throttling-mechanism.md)
+> De implementatie van REST API wordt begrensd door [ Throttling mechanisme ](/help/authentication/throttling-mechanism.md)
 
 ## REST API-eindpunten {#clientless-endpoints}
 
-&lt;reggie_fqdn>:
+&lt;REGGIE_FQDN>:
 
-* Productie - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Productie - [ api.auth.adobe.com ](http://api.auth.adobe.com/)
+* Het opvoeren - [ api.auth-staging.adobe.com ](http://api.auth-staging.adobe.com/)
 
-&lt;sp_fqdn>:
+&lt;SP_FQDN>:
 
-* Productie - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Productie - [ api.auth.adobe.com ](http://api.auth.adobe.com/)
+* Het opvoeren - [ api.auth-staging.adobe.com ](http://api.auth-staging.adobe.com/)
 
 </br>
 
@@ -37,9 +37,9 @@ ht-degree: 0%
 
 Geeft aan of het apparaat een niet-verlopen verificatietoken heeft.
 
-| Endpoint | Geroepen  </br>Door | Invoer   </br>Params | HTTP  </br>Methode | Antwoord | HTTP  </br>Antwoord |
+| Endpoint | Geroepen </br> door | Invoer   </br> Params | HTTP </br> Methode | Antwoord | HTTP-respons </br> |
 | --- | --- | --- | --- | --- | --- |
-| &lt;sp_fqdn>/api/v1/checkauthing | Streaming-app</br></br>of</br></br>Programmeringsservice | 1. Aanvrager (verplicht)</br>2.  deviceId (verplicht)</br>3.  device_info/X-Device-Info (verplicht)</br>4.  _deviceType_ </br>5.  _deviceUser_ (Verouderd)</br>6.  _appId_ (Verouderd) | GET | XML of JSON met foutdetails als dit mislukt. | 200 - Succes   </br>403 - Geen succes |
+| &lt;SP_FQDN>/api/v1/checkauthoring | Streaming App </br></br> of </br></br> de Dienst van de Programmer | 1. (Verplicht) aanvrager </br> .  deviceId (Verplicht) </br> .  device_info/x-apparaat-Info (Verplicht) </br> 4.  _deviceType_ </br> 5.  _deviceUser_ (Afgekeurd) </br> 6.  _appId_ (Vervangen) | GET | XML of JSON met foutdetails als dit mislukt. | 200 - Succes   </br> {403 - Geen succes |
 
 {style="table-layout:auto"}
 
@@ -48,10 +48,10 @@ Geeft aan of het apparaat een niet-verlopen verificatietoken heeft.
 | --- | --- |
 | aanvrager | De programmeeraanvragerId waarvoor deze verrichting geldig is. |
 | deviceId | Het apparaat-id bytes. |
-| device_info/</br></br>X-Apparaat-Info | Informatie over streaming apparaat.</br></br>**Opmerking**: This MAY BE passed device_info as a URL parameter, but due to the potential size of this parameter and constraints on the length of a GET URL, it should be passed as X-Device-Info in the http header. </br></br><!--See the full details in [Passing Device and Connection Information](http://tve.helpdocsonline.com/passing-device-information)(/help/authentication/passing-client-information-device-connection-and-application.md)-->. |
-| _deviceType_ | Het apparaattype (bijvoorbeeld Roku, PC).</br></br>Als deze parameter correct is ingesteld, biedt ESM metriek die [uitgesplitst per apparaattype](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) bij gebruik van Clientless, zodat verschillende soorten analyses kunnen worden uitgevoerd voor bijvoorbeeld Roku, AppleTV, Xbox enz.</br></br>Zie voor meer informatie [Voordelen van het gebruik van de parameter Clientless deviceType in Adobe Pass Authentication-meetgegevens ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br>**Opmerking**: device_info zal deze parameter vervangen. |
+| device_info/</br></br> x-apparaat-Info | Informatie over streaming apparaat.</br></br>**Nota**: Dit KAN device_info als parameter worden overgegaan URL, maar wegens de potentiële grootte van deze parameter en beperkingen op de lengte van een GET URL, ZOU het als x-Apparaat-Info in de kopbal van http MOETEN worden overgegaan. </br></br><!--See the full details in [Passing Device and Connection Information](/help/authentication/passing-client-information-device-connection-and-application.md)(/help/authentication/passing-client-information-device-connection-and-application.md)--> . |
+| _deviceType_ | Het apparaattype (bijvoorbeeld Roku, PC).</br></br> als deze parameter correct wordt geplaatst, biedt ESM metriek aan die [ uitgesplitst per apparatentype ](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) zijn wanneer het gebruiken van Clientless, zodat de verschillende soorten analyse voor bijvoorbeeld Roku, AppleTV, Xbox enz. kunnen worden uitgevoerd.</br></br> voor details, zie [ Voordelen om de parameter Clientless deviceType in de metriek van de Authentificatie van Adobe Pass te gebruiken ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br>**Nota**: device_info zal deze parameter vervangen. |
 | _deviceUser_ | De gebruikers-id van het apparaat. |
-| _appId_ | De toepassings-id/-naam.</br>**Opmerking**: device_info vervangt deze parameter. |
+| _appId_ | De toepassings-id/-naam.</br>**Nota**: device_info vervangt deze parameter. |
 
 {style="table-layout:auto"}
 
@@ -65,4 +65,4 @@ Geeft aan of het apparaat een niet-verlopen verificatietoken heeft.
     </error>
 ```
 
-### [Terug naar REST API Reference](/help/authentication/rest-api-reference.md)
+### [ Terug naar REST API Verwijzing ](/help/authentication/rest-api-reference.md)

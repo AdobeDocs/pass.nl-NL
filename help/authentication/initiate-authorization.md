@@ -2,9 +2,9 @@
 title: Autorisatie starten
 description: Autorisatie starten
 exl-id: 2f8a5499-e94f-40dd-9fb0-aac8e080de66
-source-git-commit: ea064031c3a1fee3298d85cf442c40bd4bb56281
+source-git-commit: 1ad2a4e75cd64755ccbde8f3b208148b7d990d82
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '423'
 ht-degree: 0%
 
 ---
@@ -17,19 +17,19 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> REST API-implementatie is beperkt door [Draaimechanisme](/help/authentication/throttling-mechanism.md)
+> De implementatie van REST API wordt begrensd door [ Throttling mechanisme ](/help/authentication/throttling-mechanism.md)
 
 ## REST API-eindpunten {#clientless-endpoints}
 
-&lt;reggie_fqdn>:
+&lt;REGGIE_FQDN>:
 
-* Productie - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Productie - [ api.auth.adobe.com ](http://api.auth.adobe.com/)
+* Het opvoeren - [ api.auth-staging.adobe.com ](http://api.auth-staging.adobe.com/)
 
-&lt;sp_fqdn>:
+&lt;SP_FQDN>:
 
-* Productie - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Productie - [ api.auth.adobe.com ](http://api.auth.adobe.com/)
+* Het opvoeren - [ api.auth-staging.adobe.com ](http://api.auth-staging.adobe.com/)
 
 </br>
 
@@ -37,9 +37,9 @@ ht-degree: 0%
 
 Verkrijgt de reactie van de vergunning.
 
-| Endpoint | Geroepen  </br>Door | Invoer   </br>Params | HTTP  </br>Methode | Antwoord | HTTP  </br>Antwoord |
+| Endpoint | Geroepen </br> door | Invoer   </br> Params | HTTP </br> Methode | Antwoord | HTTP-respons </br> |
 | --- | --- | --- | --- | --- | --- |
-| &lt;sp_fqdn>/api/v1/authorize | Streaming-app</br></br>of</br></br>Programmeringsservice | 1. Aanvrager (verplicht)</br>2.  deviceId (verplicht)</br>3.  bron (verplicht)</br>4.  device_info/X-Device-Info (verplicht)</br>5.  _deviceType_</br> 6.  _deviceUser_ (Verouderd)</br>7.  _appId_ (Verouderd)</br>8.  extra parameters (optioneel) | GET | XML of JSON met machtigingsdetails of foutdetails als dit mislukt. Zie onderstaande voorbeelden. | 200 - Succes  </br>403 - Geen succes |
+| &lt;SP_FQDN>/api/v1/authorize | Streaming App </br></br> of </br></br> de Dienst van de Programmer | 1. (Verplicht) aanvrager </br> .  deviceId (Verplicht) </br> .  middel (Verplicht) </br> 4.  device_info/x-apparaat-Info (Verplicht) </br> 5.  _deviceType_</br> 6.  _deviceUser_ (Afgekeurd) </br> 7.  _appId_ (Vervangen) </br> 8.  extra parameters (optioneel) | GET | XML of JSON met machtigingsdetails of foutdetails als dit mislukt. Zie onderstaande voorbeelden. | 200 - Succes </br> 403 - Geen succes |
 
 {style="table-layout:auto"}
 
@@ -51,25 +51,25 @@ Verkrijgt de reactie van de vergunning.
 | aanvrager | De programmeeraanvragerId waarvoor deze verrichting geldig is. |
 | deviceId | Het apparaat-id bytes. |
 | resource | Een koord dat een resourceId (of fragment MRSS) bevat, identificeert de inhoud die door een gebruiker wordt gevraagd en door MVPD vergunningseindpunten wordt erkend. |
-| device_info/</br></br>X-Apparaat-Info | Informatie over streaming apparaat.</br></br>**Opmerking**: This MAY BE passed device_info as a URL parameter, but due to the potential size of this parameter and constraints on the length of a GET URL, it should be passed as X-Device-Info in the http header. </br></br><!--See the full details in [Passing Device and Connection Information](http://tve.helpdocsonline.com/passing-device-information)-->. |
-| _deviceType_ | Het apparaattype (bijvoorbeeld Roku, PC).</br></br>Als deze parameter correct is ingesteld, biedt ESM metriek die [uitgesplitst per apparaattype](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) bij gebruik van Clientless, zodat verschillende soorten analyses kunnen worden uitgevoerd voor bijvoorbeeld Roku, AppleTV, Xbox enz.</br></br>Zie [Voordelen van clientless apparatentype parameter in pasmetriek ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**Opmerking**: device_info zal deze parameter vervangen. |
+| device_info/</br></br> x-apparaat-Info | Informatie over streaming apparaat.</br></br>**Nota**: Dit KAN device_info als parameter worden overgegaan URL, maar wegens de potentiële grootte van deze parameter en beperkingen op de lengte van een GET URL, ZOU het als x-Apparaat-Info in de kopbal van http moeten worden overgegaan. </br></br> zie de volledige details in [ het overgaan van Apparaat en de Informatie van de Verbinding ](/help/authentication/passing-client-information-device-connection-and-application.md). |
+| _deviceType_ | Het apparaattype (bijvoorbeeld Roku, PC).</br></br> als deze parameter correct wordt geplaatst, biedt ESM metriek aan die [ uitgesplitst per apparatentype ](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) zijn wanneer het gebruiken van Clientless, zodat de verschillende soorten analyse voor bijvoorbeeld Roku, AppleTV, Xbox enz. kunnen worden uitgevoerd.</br></br> zie [ Voordelen van clientless apparatentype parameter in pas metriek ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**Nota**: device_info zal deze parameter vervangen. |
 | _deviceUser_ | De gebruikers-id van het apparaat. |
-| _appId_ | De toepassings-id/-naam. </br></br>**Opmerking**: device_info vervangt deze parameter. |
-| extra parameters | De oproep kan ook optionele parameters bevatten die andere functies mogelijk maken, zoals:</br></br>* generic_data - maakt het gebruik van [Promotie TempPass](/help/authentication/promotional-temp-pass.md)</br></br>Voorbeeld: `generic_data=("email":"email@domain.com")` |
+| _appId_ | De toepassings-id/-naam. </br></br>**Nota**: device_info vervangt deze parameter. |
+| extra parameters | De vraag kan facultatieve parameters ook bevatten die andere functionaliteiten zoals toelaten:</br></br>* generic_data - laat het gebruik van [ Promotional TempPass ](/help/authentication/promotional-temp-pass.md)</br></br> Voorbeeld toe: `generic_data=("email":"email@domain.com")` |
 
 {style="table-layout:auto"}
 
 >[!CAUTION]
 >
->**IP-adres van streaming apparaat**</br>
->Voor client-aan-server implementaties, wordt het Streaming Apparaat IP Adres impliciet verzonden met deze vraag.  Voor server-aan-server implementaties, waar **herschrijven** De vraag wordt gemaakt door de Dienst van de Programmer en niet het Streaming Apparaat, wordt de volgende kopbal vereist om het Streaming Apparaat IP Adres over te gaan:</br></br>
+>**het Streamen IP van het Apparaat Adres**</br>
+>Voor client-aan-server implementaties, wordt het Streaming Apparaat IP Adres impliciet verzonden met deze vraag.  Voor Server-aan-Server implementaties, waar de **regcode** vraag door de Dienst van de Programmer en niet het Streaming Apparaat wordt gemaakt, wordt de volgende kopbal vereist om het Streaming IP van het Apparaat Adres over te gaan:</br></br>
 >
 >```
 >X-Forwarded-For : <streaming\_device\_ip>
 >```
 >
->waar `<streaming\_device\_ip>` is het openbare IP-adres van het streaming apparaat.</br></br>
->Voorbeeld:</br>
+>waarbij `<streaming\_device\_ip>` het openbare IP-adres van het streaming apparaat is.</br></br>
+>Voorbeeld: </br>
 >
 >```
 >POST /reggie/v1/{req_id}/regcode HTTP/1.1
@@ -80,19 +80,19 @@ Verkrijgt de reactie van de vergunning.
 
 ### Samplereactie {#sample-response}
 
-* **Zaak 1: Succes**
+* **Geval 1: Succes**
 </br>
   * **XML:**
   </br>
 
-    &quot;XML
-    &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
-    &lt;authorization>
-    &lt;expires>1348148289000&lt;/expires>
-    &lt;mvpd>sampleMvpdId&lt;/mvpd>
-    &lt;requestor>sampleRequestId&lt;/requestor>
-    &lt;resource>sampleResourceId&lt;/resource>
-    &lt;/authorization>
+     &quot;XML 
+    &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone= &quot;yes&quot;?>
+     &lt;authentication>
+    &lt;expired>1348148289000&lt;/expired>
+    &lt;mvpd>sampleMvpdId&lt;/mvpd> 
+     &lt;requestor>sampleRequestorId&lt;/requestor> 
+     &lt;resource>sampleResourceId&lt;/resource> 
+    &lt;/authentication> 
     &quot;
 
 
@@ -110,11 +110,11 @@ Verkrijgt de reactie van de vergunning.
 
 >[!IMPORTANT]
 >
->Wanneer de reactie uit een Volmacht MVPD komt, kan het een extra genoemd element omvatten `proxyMvpd`.
+>Wanneer de reactie uit een Volmacht MVPD komt, kan het een extra element omvatten genoemd `proxyMvpd`.
 
 
 
-* **Zaak 2: Vergunning geweigerd**
+* **Geval 2: Ontkende Vergunning**
 
 
   ```JSON
