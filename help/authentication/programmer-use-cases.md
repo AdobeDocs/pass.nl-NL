@@ -2,9 +2,9 @@
 title: Gebruiksgevallen voor programmeerprogramma's
 description: Gebruiksgevallen voor programmeerprogramma's
 exl-id: 51ca7e4f-b0d8-4e35-8398-2efb4879de2a
-source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
+source-git-commit: 189d0e5c83d1bc171c6ff3057f22dbf4055ea6b1
 workflow-type: tm+mt
-source-wordcount: '1643'
+source-wordcount: '1654'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ In dit document wordt een overzicht gegeven van de Gebruiksgevallen voor Integra
 
 **Prioriteit** - Hoog
 
-**Uitsplitsing** - TVE-app van het merk Single Programmer met 1-kanaals netwerk gehost binnen de ervaring
+**Breakdown** - Enige Programmer-Germerkte TVE app met 1 Netwerk van het Kanaal binnen de ervaring wordt ontvangen die
 
 Hierdoor kunnen programmeurs premiuminhoud in hun eigen TVE-app* aanbieden met een gefederaliseerde machtigingscontrole op de MVPD. De requestID moet worden uitgelijnd op het merk van de toepassing die de inhoud aan de viewer aanbiedt. In dit scenario, is er een 1 tot 1 verhouding tussen de identiteitskaart van de Aanvrager van de Authentificatie van Adobe Pass en identiteitskaart van het Middel die voor recht wordt geverifieerd.
 
@@ -38,15 +38,15 @@ Hierdoor kunnen programmeurs premiuminhoud in hun eigen TVE-app* aanbieden met e
 
 | Prioriteit | Hoofdletters gebruiken | Beschrijving | Platforms | MVPD-notities |
 |:--------:|:-----------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------:|:-----------------------------------------:|
-| Hoog | MVPD Discovery from Programmer TVE App | De gebruiker start op de TVE-app met branding van de programmeur en wordt gevraagd zijn MVPD-provider te selecteren. | Web (SWF/JS) Mobile (iOS/Android) API zonder client (voor tweede scherm) |                                           |
-| Hoog | Federatieve verificatie van de TVE-app van de programmeur | De gebruiker begint op de merknaam van de programmeur TVE-app en nadat hij zijn MVPD-provider heeft geselecteerd, gaat de gebruiker naar de aanmeldingspagina van de MVPD zelf om zijn of haar gegevens in te voeren. | Web (SWF/JS) mobiel (iOS/Android) |                                           |
+| Hoog | MVPD Discovery from Programmer TVE App | De gebruiker start op de TVE-app met branding van de programmeur en wordt gevraagd zijn MVPD-provider te selecteren. | Web (SWF/JS)                    Mobiel (iOS/Android)                   Clientloze API (voor tweede scherm) |                                           |
+| Hoog | Federatieve verificatie van de TVE-app van de programmeur | De gebruiker begint op de merknaam van de programmeur TVE-app en nadat hij zijn MVPD-provider heeft geselecteerd, gaat de gebruiker naar de aanmeldingspagina van de MVPD zelf om zijn of haar gegevens in te voeren. | Web (SWF/JS)                    Mobiel (iOS/Android) |                                           |
 | Hoog | Autorisatie vanuit de TVE-app van programmeur | Nadat de gebruiker voor authentiek wordt verklaard, kan de TVE app van de Programmer backchannel vergunningsverzoeken aan MVPD indienen om de rechten van de gebruiker te controleren. Meestal wordt hiermee alleen gecontroleerd of het Channel Network deel uitmaakt van het MVPD-abonnementspakket van gebruikers.                                  In dit geval komen de id van de aanvrager en de bron-id overeen met 1:1. | Alle platforms |                                           |
-| Normaal | Afmelden bij TVE-app van programmeur | Hiermee kan de gebruiker zich afmelden en de Adobe Pass Authentication AuthN/AuthZ-tokens wissen. In veel gevallen, registreert dit ook de gebruiker uit MVPD. Maar MVPDs varieert in of dit wordt gesteund. De Adobe Pass-verificatiesessie en tokens worden altijd gewist. | Alle platforms behalve standaard XBox | Verscheidene MVPDs steunt dit niet. |
+| Medium | Afmelden bij TVE-app van programmeur | Hiermee kan de gebruiker zich afmelden en de Adobe Pass Authentication AuthN/AuthZ-tokens wissen. In veel gevallen, registreert dit ook de gebruiker uit MVPD. Maar MVPDs varieert in of dit wordt gesteund. De Adobe Pass-verificatiesessie en tokens worden altijd gewist. | Alle platforms behalve standaard XBox | Verscheidene MVPDs steunt dit niet. |
 | Hoog | Single Sign-On voor sites en toepassingen | Hiermee kan de gebruiker de aanmeldingssessie delen tussen sites en apps zonder dat hij of zij zich opnieuw hoeft aan te melden. | Alle platforms behalve de API zonder client | Vereist minstens SDK 1.7 voor sommige MVPDs. |
 
 ### Eén TVE-app die meerdere kanaalnetwerken host {#single-app-multi-channel}
 
-**Prioriteit**- Hoog
+**Prioriteit** - Hoog
 
 Laat de Programmer toe om verscheidene kanaalnetwerken van inhoud op de zelfde branded bestemming voor hun kijkers samen te voegen.
 
@@ -61,7 +61,7 @@ Laat de Programmer toe om verscheidene kanaalnetwerken van inhoud op de zelfde b
 
 **Prioriteit** - Laag
 
-**Uitsplitsing** - Een identificator van een activum doorgeven op aanvraag voor autorisatie
+**Uitsplitsing** - geef een herkenningsteken van Activa op het verzoek van de Vergunning over
 
 **Platforms** - Alle platforms
 
@@ -84,26 +84,26 @@ Hiermee schakelt u beperkingen voor MVPD-gebruikersaccounts in voor de TVE-app v
 
 | Prioriteit | Hoofdletters gebruiken | Beschrijving | Platforms | MVPD-notities |
 |--------|-----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|-----------------------------------|
-| Laag | Inhoud filteren op basis van gebruikerskenmerken | Hiermee kan de programmeur de maximaal toegestane score voor een gebruiker controleren voordat de lijst met beschikbare inhoud voor de gebruiker wordt weergegeven. | Web (Flash/JS) mobiel (iOS/Android) | Slechts werkt met één MVPD momenteel. |
-| Laag | Inhoud-beoordelingen in de AuthZ-aanvraag doorgeven | Laat de programmeur toe om de specifieke classificatie van de inhoud door te geven de gebruiker als deel van het verzoek AuthZ aan MVPD Verwant aan #3 wil letten, aangezien de classificaties typisch op het activaniveau zijn. | Alle platforms | Slechts werkt met één MVPD momenteel. |
+| Laag | Inhoud filteren op basis van gebruikerskenmerken | Hiermee kan de programmeur de maximaal toegestane score voor een gebruiker controleren voordat de lijst met beschikbare inhoud voor de gebruiker wordt weergegeven. | Web (Flash/JS)                    Mobiel (iOS/Android) | Slechts werkt met één MVPD momenteel. |
+| Laag | Inhoud-beoordelingen in de AuthZ-aanvraag doorgeven | Laat de programmeur toe om de specifieke classificatie van de inhoud over te gaan de gebruiker als deel van het verzoek AuthZ aan MVPD wil letten                             Verwant aan #3, aangezien de ratings typisch op het activaniveau zijn. | Alle platforms | Slechts werkt met één MVPD momenteel. |
 
 #### Aanpassing van de MVPD-integratie per merk programmeur {#mvpd-int-cust-prog-brand}
 
-**Prioriteit** - Normaal
+**Prioriteit** - Medium
 
 Hiermee wordt aangepaste ervaring ingeschakeld tijdens AuthN- of AuthZ-foutberichten.
 
 | Prioriteit | Hoofdletters gebruiken | Beschrijving | Platforms | MVPD-notities |
 |--------|------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-----------------------------------------|
-| Normaal | Geef de Identificatiecode van de Serviceleverancier in het AuthN-verzoek door. | Laat specifieke branding op de MVPD login pagina specifiek voor de dienstverlener toe. Schakel ook automatisch de standaardinstelling in zodat deze overeenkomt met het publiek, zoals Spaans voor Univisie. | Alle platforms | Varieert door MVPD. Sommigen steunen dit niet. |
-| Normaal | Aangepaste foutberichten op AuthZ-respons | Laat Programmer of merkspecifieke foutenmeldingen van MVPD toe die specifieke bericht voor upsell met een verbinding kunnen omvatten die het pakket bevordert. | Web, Android, iOS | Varieert door MVPD. Sommigen steunen dit niet. |
+| Medium | Geef de Identificatiecode van de Serviceleverancier in het AuthN-verzoek door. | Laat specifieke branding op de MVPD login pagina specifiek voor de dienstverlener toe. Schakel ook automatisch de standaardinstelling in zodat deze overeenkomt met het publiek, zoals Spaans voor Univisie. | Alle platforms | Varieert door MVPD. Sommigen steunen dit niet. |
+| Medium | Aangepaste foutberichten op AuthZ-respons | Laat Programmer of merkspecifieke foutenmeldingen van MVPD toe die specifieke bericht voor upsell met een verbinding kunnen omvatten die het pakket bevordert. | Web, Android, iOS | Varieert door MVPD. Sommigen steunen dit niet. |
 
 
 ### Gebruiksscenario&#39;s van aangesloten apparaten {#connected-devices}
 
 | Prioriteit | Hoofdletters gebruiken | Beschrijving | Platforms | MVPD-notities |
 |--------|-------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Normaal | XBox LiveID SSO voor apps en consoles | Hiermee kan de gebruiker een AuthN-sessie delen tussen apps en tussen verschillende spelconsoles - gekoppeld aan hun LiveID-account. | Native XBox-SDK | De meeste MVPDs houdt niet van dit omdat het typische model het teken aan het apparaat moet binden - niet aan de gebruiker.                             We raden deze aanpak niet meer aan als dat mogelijk is. |
+| Medium | XBox LiveID SSO voor apps en consoles | Hiermee kan de gebruiker een AuthN-sessie delen tussen apps en tussen verschillende spelconsoles - gekoppeld aan hun LiveID-account. | Native XBox-SDK | De meeste MVPDs houdt niet van dit omdat het typische model het teken aan het apparaat moet binden - niet aan de gebruiker.                             We raden deze aanpak niet meer aan als dat mogelijk is. |
 | Hoog | Verbonden apparaat met tokens gebonden aan de toepassings-id op het apparaat | Hiermee kan de programmeur de MVPD-machtiging in de token binden aan de appID op het apparaat waarvoor deze is uitgegeven. | Clientloze API | Hierdoor wordt het aangesloten apparaat nauwkeuriger uitgelijnd op de standaardimplementatie voor tokens.                             De verbetering moet nog een apparaat-brede identiteitskaart zijn. |
 
 ### Apparaatspecifieke lengte van AuthN TTL {#authn-ttl-length}
@@ -112,7 +112,7 @@ Schakel TVE-machtiging in voor speciale gebeurtenissen die mogelijk geen bronnen
 
 | Prioriteit | Hoofdletters gebruiken | Beschrijving | Platforms | MVPD-notities |
 |--------|------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|--------------------------------------------------------------------------------------------------------------------------|
-| Hoog | Verschillende TTL-waarden per platform instellen | Laat de Programmeur toe om een verschillende lengte van TTL voor Web, mobiele en aangesloten apparaten te vestigen. Adobe Pass-verificatie ondersteunt momenteel de mogelijkheid om drie aparte TTL-waarden te hebben: Web (Flash) Mobile/HTML5 Clientless - Connected Devices |           | Sommige MVPDs plaatsen dynamisch TTL. De Adobe kan deze dynamische montages indien nodig met voeten treden, gebruikend de configuratiemontages. |
+| Hoog | Verschillende TTL-waarden per platform instellen | Laat de Programmeur toe om een verschillende lengte van TTL voor Web, mobiele en aangesloten apparaten te vestigen. Adobe Pass-verificatie ondersteunt momenteel de mogelijkheid om 3 verschillende TTL-waarden te hebben:                                Web (Flash)                    Mobiel/HTML5                    Clientless - Verbonden apparaten |           | Sommige MVPDs plaatsen dynamisch TTL. De Adobe kan deze dynamische montages indien nodig met voeten treden, gebruikend de configuratiemontages. |
 
 ### Speciale toepassingen op basis van gebeurtenissen {#special-event}
 
@@ -128,10 +128,15 @@ Schakel TVE-machtiging in voor speciale gebeurtenissen die mogelijk geen bronnen
 
 ### Integratie van inhoudsservers {#content-server-integration}
 
-**Prioriteit**- Normaal
+**Prioriteit** - Medium
 
 Validatie van mediatoken inschakelen voordat de videostream naar de clientspeler wordt uitgebracht.
-| Prioriteit | Hoofdletters gebruiken | Beschrijving | Platforms | MVPD-notities | |—|—|—|—|—| | Hoog | Programmer Federated Player - met machtiging op paginaniveau | Adobe Pass-verificatie-API&#39;s worden uitgevoerd in JavaScript op de pagina en het token wordt doorgegeven aan de speler. Token kan op een aantal manieren worden doorgegeven aan de validatieservice: param ophalen over de URL-parameter van de validatieservice die wordt doorgegeven in de queryreeks van de externe interface-API van de stream URL FlashVars | | | | Normaal | Programmer Federated Player - met interne Player Authorization | Adobe Pass-verificatie-API&#39;s worden uitgevoerd in het ActionScript in de speler SWF, zodat het token beschikbaar is voor de speler vanaf de callback.                                                                                                                                                                                         | | | | Hoog | Syndicated Player - Gehost op MVPD Portal met machtiging op paginaniveau met een iFrame om de speler te verpakken | Vergelijkbaar met de speler met machtiging op paginaniveau, maar met de spelerpagina die in het MVPD-portaal is geplaatst. Verificatie moet afzonderlijk plaatsvinden in het MVPD-portaal.                                                                                                                                                    |           |                        |
+
+| Prioriteit | Hoofdletters gebruiken | Beschrijving | Platforms | MVPD-notities |
+|---------|-----------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|----------|
+| Hoog | Programmer Federated Player - met machtiging op paginaniveau | Adobe Pass-verificatie-API&#39;s worden uitgevoerd in JavaScript op de pagina en het token wordt doorgegeven aan de speler. Token kan op een aantal manieren worden doorgegeven aan de validatieservice:                                 Param ophalen op de URL van de validatieservice                    URL-parameter die wordt doorgegeven in queryreeks van de URL van de stream                    Externe interface-API                    FlashVars |           |            |
+| Medium | Programmer Federated Player - met interne Player Authorization | Adobe Pass-verificatie-API&#39;s worden uitgevoerd in het ActionScript in de SWF van de speler, zodat het token beschikbaar is voor de speler vanaf de callback. |           |            |
+| Hoog | Gesynchroniseerde speler - Gehost op MVPD-portal met machtiging op paginaniveau met een iFrame om de speler te buigen | Vergelijkbaar met de speler met machtiging op paginaniveau, maar met de spelerpagina die in het MVPD-portaal wordt geplaatst. Verificatie moet afzonderlijk plaatsvinden in het MVPD-portaal. |           |                        |
 
 
 <!--
