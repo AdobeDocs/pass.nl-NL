@@ -1,8 +1,8 @@
 ---
-title: Android vooraf verifiëren
-description: Android vooraf verifiëren
+title: Android vooraf autoriseren
+description: Android vooraf autoriseren
 exl-id: b5337595-135f-4981-a578-2da432f125d6
-source-git-commit: 59672b44074c472094ed27a23d6bfbcd7654c901
+source-git-commit: 89d21e2456b4fa08eb4ee10372479bd2d451b146
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
@@ -28,15 +28,16 @@ In het geval van een onverwachte fout (bv. netwerkkwestie, MVPD niet beschikbaar
 ## `public void preauthorize(PreauthorizeRequest request, AccessEnablerCallback<PreauthorizeResponse> callback);`
 
 
-**Omschrijving:**
+**Beschrijving:**
 
 **Beschikbaarheid:** v3.6.0+
 
 **Parameters:**
 
-- *PreauthorizeRequest*: Object Builder dat wordt gebruikt om de aanvraag te definiëren
+- *preAuthzeRequest*: Het Voorwerp van de Bouwer wordt gebruikt om het verzoek te bepalen
 - AccessEnablerCallback : callback die wordt gebruikt om de API-reactie te retourneren
-- PreauthorizeResponse : Object gebruikt om de inhoud van de API-reactie te retourneren
+- PreauthorizeResponse : Object gebruikt om de API te retourneren
+reactie-inhoud
 
 
 ### public class PreauthorizeRequest {#androidpreauthorizerequest}
@@ -62,7 +63,7 @@ In het geval van een onverwachte fout (bv. netwerkkwestie, MVPD niet beschikbaar
     ///
 ```
 
-**public Builder setResources(List\&lt;string> bronnen)**
+**openbare Bouwer setResources (Lijst \ &lt;String \> middelen)**
 
 ```
     ///
@@ -84,7 +85,7 @@ In het geval van een onverwachte fout (bv. netwerkkwestie, MVPD niet beschikbaar
 ```
 
 
-**public Builder disableFeatures(Set\&lt;preauthorizerequest.feature>
+**public Builder disableFeatures(Set\&lt;PreauthorizeRequest.Feature\>
 functies)**
 
 ```
@@ -105,7 +106,7 @@ functies)**
     ///
 ```
 
-**public PreauthorizeRequest build()**
+**public preauthorizeRequest bouwt ()**
 
 **enum PreauthorizeRequest.Feature**
 
@@ -125,7 +126,7 @@ functies)**
 ```
 
 
-### `abstract class AccessEnablerCallback<PreauthorizeResponse> {#accessenablercallback}`
+### `abstract class AccessEnablerCallback<PreauthorizeResponse>` {#accessenablercallback}
 
 ```java
     /// Response callback called by the SDK when the preauthorize API request was fulfilled. The result is either a successful or an error result containing a status.
@@ -162,7 +163,7 @@ functies)**
 ```
 
 
-**klassestatus** {#status}
+**klassenstatus** {#status}
 
 ```java
 ///
@@ -226,7 +227,7 @@ functies)**
 
 </br>
 
->**klasse-besluit** {#decision}
+>**klasse Beslissing** {#decision}
 
 ```
     ///
