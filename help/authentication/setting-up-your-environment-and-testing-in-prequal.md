@@ -2,9 +2,9 @@
 title: Uw omgeving instellen en testen in een proefversie
 description: Uw omgeving instellen en testen in een proefversie
 exl-id: f822c0a1-045a-401f-a44f-742ed25bfcdc
-source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
+source-git-commit: 3a6a5633c728398a3847ee3e341e82aba915f0d9
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '477'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Stap 1 en 2 stellen de testomgeving in op een van de testcomputers, stap 3 is ee
 
 * Voer de volgende opdracht uit om een IP van het taakverdelingsmechanisme te zoeken die voor spoofing kan worden gebruikt:
 
-* **Op Windows**
+* **op Vensters**
 
   ```cmd
   C:\>nslookup sp-prequal.auth.adobe.com
@@ -68,11 +68,11 @@ Stap 1 en 2 stellen de testomgeving in op een van de testcomputers, stap 3 is ee
 * Bewerk het *c:\\windows\\System32\\drivers\\etc\hosts-bestand* (Windows) of */etc/hosts-bestand* (op Macintosh/Linux/Android) en voeg het volgende toe:
 
 * Spoof-productieprofiel
-   * 52.13.71.11 http://entitlement.auth.adobe.com, http://sp.auth.adobe.com http://api.auth.adobe.com
+   * 52.13.71.11 entitlement.auth.adobe.com sp.auth.adobe.com api.auth.adobe.com
 
-**Gesproken tekst op Android:** Als u wilt dat Android wordt gebruikt, moet u een Android-emulator gebruiken.
+**het Vlekken op Android:** om op Android te spoof, moet u een mededinger van Android gebruiken.
 
-* Als de spoofing eenmaal is geïnstalleerd, kunt u gewoon de normale URL&#39;s gebruiken voor de productie- en staging-profielen: (dat wil zeggen `http://sp.auth-staging.adobe.com` en `http://entitlement.auth-staging.adobe.com` en je raakt de *voorkwalificatieomgeving/productie* van de* nieuwe build.
+* Zodra spoofing op zijn plaats is, kunt u gewone URLs voor de productie en het opvoeren profielen eenvoudig gebruiken: (namelijk `http://sp.auth-staging.adobe.com` en `http://entitlement.auth-staging.adobe.com` en u zult eigenlijk het *pre-kwalificatiemilieu/ productie* van de* nieuwe bouwstijl raken.
 
 
 ## STAP 3.  Controleren of u naar de juiste omgeving wijst {#Verify-you-are-pointing-to-the-right-environment}
@@ -93,6 +93,6 @@ Stap 1 en 2 stellen de testomgeving in op een van de testcomputers, stap 3 is ee
 
 ## STAP 6.  Testen met de API-testsite {#perform-testing-using-api-testing-site}
 
-* Als je meer wilt weten over het testen van Adobe Pass Authentication, raden we je aan de [API-testsite](http://entitlement-prequal.auth.adobe.com/apitest/api.html).
+* Als u dieper in het testen van de Authentificatie van Adobe Pass wilt gaan, adviseren wij u de [ API testplaats ](http://entitlement-prequal.auth.adobe.com/apitest/api.html) gebruiken.
 
-Meer informatie vindt u op de API-testsite op [Verificatie- en autorisatiestromen testen met de API-testsite van de Adobe](/help/authentication/test-authn-authz-flows-using-adobes-api-test-site.md).
+U kunt meer details op API testplaats bij [ vinden hoe te om de stromen van de Authentificatie en van de Toestemming te testen gebruikend de de testplaats van API van de Adobe ](/help/authentication/test-authn-authz-flows-using-adobes-api-test-site.md).
