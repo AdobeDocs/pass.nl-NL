@@ -1,7 +1,7 @@
 ---
 title: Verificatiesessie hervatten
 description: REST API V2 - Verificatiesessie hervatten
-source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
+source-git-commit: 4afd8492c77fdceae3c2504ba392fbcfc0979b22
 workflow-type: tm+mt
 source-wordcount: '755'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Verificatiesessie hervatten {#resume-authentication-session}
 
->[!NOTE]
+>[!IMPORTANT]
 >
 > De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
