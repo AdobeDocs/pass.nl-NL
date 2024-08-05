@@ -1,7 +1,7 @@
 ---
 title: Verificatiesessie ophalen met gebruik van code
 description: REST API V2 - Verificatiesessie ophalen met code
-source-git-commit: 4598aaa0827b943de83a9e7d847227edf6b0b387
+source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 1%
@@ -11,7 +11,7 @@ ht-degree: 1%
 
 # Verificatiesessie ophalen met gebruik van code {#retrieve-authentication-session-using-code}
 
->[!NOTE]
+>[!IMPORTANT]
 >
 > De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 

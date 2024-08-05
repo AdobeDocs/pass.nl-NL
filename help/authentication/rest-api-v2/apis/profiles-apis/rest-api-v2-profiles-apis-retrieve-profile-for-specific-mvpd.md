@@ -1,15 +1,15 @@
 ---
-title: Profielen ophalen
-description: REST API V2 - Profielen ophalen
+title: Profiel ophalen voor specifieke mvpd
+description: REST API V2 - Profiel ophalen voor specifieke mvpd
 source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
 workflow-type: tm+mt
-source-wordcount: '823'
+source-wordcount: '965'
 ht-degree: 0%
 
 ---
 
 
-# Profielen ophalen {#retrieve-profiles}
+# Profiel ophalen voor specifieke mvpd {#retrieve-profile-for-specific-mvpd}
 
 >[!IMPORTANT]
 >
@@ -29,7 +29,7 @@ ht-degree: 0%
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">pad</td>
-      <td>/api/v2/{serviceProvider}/profiles</td>
+      <td>/api/v2/{serviceProvider}/profiles/{mvpd}</td>
       <td></td>
    </tr>
    <tr>
@@ -45,6 +45,11 @@ ht-degree: 0%
    <tr>
       <td style="background-color: #DEEBFF;">serviceProvider</td>
       <td>De interne unieke id die tijdens het instapproces aan de Serviceleverancier is gekoppeld.</td>
+      <td><i>vereist</i></td>
+   </tr>
+   <tr>
+      <td style="background-color: #DEEBFF;">mvpd</td>
+      <td>De interne unieke id die tijdens het instapproces aan de identiteitsprovider is gekoppeld.</td>
       <td><i>vereist</i></td>
    </tr>
    <tr>
@@ -110,6 +115,11 @@ ht-degree: 0%
         De generatie van enige sign-on lading voor de methode van de Partner wordt beschreven in <a href="../../appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md"> AP-partner-kader-Status </a> documentatie.
         <br/><br/>
         Voor meer details over enige sign-on toegelaten stromen die een partner gebruiken, verwijs naar <a href="../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-partner-flows.md"> Enige sign-on gebruikend de documentatie van de partnerstromen </a>.</td>
+      <td>optioneel</td>
+    </tr>
+   <tr>
+      <td style="background-color: #DEEBFF;">AP-TempPass-Identity</td>
+      <td>De generatie van de gebruiker unieke herkenningstekenlading wordt beschreven in <a href="../../appendix/headers/rest-api-v2-appendix-headers-ap-temppass-identity.md"> AP-TempPass-Identity </a> documentatie.</td>
       <td>optioneel</td>
    </tr>
    <tr>
@@ -254,6 +264,16 @@ ht-degree: 0%
                         </td>
                      </tr>
                      <tr>
+                        <td style="background-color: #DEEBFF;">Adobe</td>
+                        <td>
+                            Het profiel is gemaakt als resultaat van:
+                            <ul>
+                                <li>Verminderde toegang</li>
+                                <li>Tijdelijke toegang</li>
+                            </ul>
+                        </td>
+                     </tr>
+                     <tr>
                         <td style="background-color: #DEEBFF;">Apple</td>
                         <td>
                             Het profiel is gemaakt als resultaat van:
@@ -282,6 +302,24 @@ ht-degree: 0%
                             Het profiel is gemaakt als resultaat van:
                             <ul>
                                 <li>Basisverificatie</li>
+                            </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="background-color: #DEEBFF;">aangetast</td>
+                        <td>
+                            Het profiel is gemaakt als resultaat van:
+                            <ul>
+                                <li>Verminderde toegang</li>
+                            </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="background-color: #DEEBFF;">tijdelijk</td>
+                        <td>
+                            Het profiel is gemaakt als resultaat van:
+                            <ul>
+                                <li>Tijdelijke toegang</li>
                             </ul>
                         </td>
                      </tr>
@@ -371,15 +409,15 @@ ht-degree: 0%
 
 ## Voorbeelden {#samples}
 
-### 1. Hiermee worden alle bestaande en geldige geverifieerde profielen opgehaald die zijn verkregen via basisverificatie
+### 1. Hiermee worden alle bestaande en geldige geverifieerde profielen opgehaald die zijn verkregen via basisverificatie voor specifieke mvpd
 
 >[!BEGINTABS]
 
 >[!TAB  Verzoek ]
 
 ```JSON
-GET /api/v2/REF30/profiles
- 
+GET /api/v2/REF30/profiles/Spectrum  
+
 Authorization: Bearer ....
 AP-Device-Identifier: fingerprint YmEyM2QxNDEtZDcxNS01NjFjLTk0ZjQtZTllNGM5NjZiMWVi
 X-Device-Info ....
@@ -395,10 +433,10 @@ Content-Type: application/json; charset=utf-8
  
 {
     "profiles" : {
-        "Cablevision" : {
+        "Spectrum" : {
             "notBefore" : 1623943955,
             "notAfter" : 1623951155,
-            "issuer" : "Cablevision",
+            "issuer" : "Spectrum",
             "type" : "regular",
             "attributes" : {
                 "userId" : {
@@ -416,18 +454,6 @@ Content-Type: application/json; charset=utf-8
                 "parental-controls" : {
                     "value" : BASE64_value_parental-controls,
                     "state" : "plain"
-                }          
-            }
-        },
-        "Spectrum" : {
-            "notBefore" : 1623943955,
-            "notAfter" : 1623951155,
-            "issuer" : "Spectrum",
-            "type" : "regular",
-            "attributes" : {
-                "userId" : {
-                    "value" : "BASE64_value_userId",
-                    "state" : "plain"
                 }
             }
         }
@@ -437,15 +463,15 @@ Content-Type: application/json; charset=utf-8
 
 >[!ENDTABS]
 
-### 2. Haal alle bestaande en geldige geverifieerde profielen op, inclusief de profielen die zijn verkregen via Single Sign-On-verificatie met de methode Servicetokken
+### 2. Haal alle bestaande en geldige geverifieerde profielen op, inclusief de profielen die zijn verkregen via Single Sign-On-verificatie met de methode Servicetokken voor specifieke mvpd
 
 >[!BEGINTABS]
 
 >[!TAB  Verzoek ]
 
 ```JSON
-GET /api/v2/REF30/profiles
- 
+GET /api/v2/REF30/profiles/AdobeShibboleth  
+
 Authorization: Bearer ....
 AP-Device-Identifier: fingerprint YmEyM2QxNDEtZDcxNS01NjFjLTk0ZjQtZTllNGM5NjZiMWVi
 X-Device-Info ....
@@ -481,18 +507,6 @@ Content-Type: application/json; charset=utf-8
                "state": "plain"
             }
          }
-      },
-      "Spectrum": {
-         "notBefore": 1623943955,
-         "notAfter": 1623951155,
-         "issuer": "Spectrum",
-         "type": "regular",
-         "attributes": {
-            "userId": {
-               "value": "BASE64_value_userId",
-               "state": "plain"
-            }
-         }
       }
    }
 }
@@ -500,14 +514,14 @@ Content-Type: application/json; charset=utf-8
 
 >[!ENDTABS]
 
-### 3. Hiermee worden alle bestaande en geldige geverifieerde profielen opgehaald, inclusief profielen die zijn verkregen via Single Sign-On-verificatie met de methode Platform Identity
+### 3. Hiermee worden alle bestaande en geldige geverifieerde profielen opgehaald, inclusief profielen die zijn verkregen via Single Sign-On-verificatie met de methode Platform Identity voor specifieke mvpd
 
 >[!BEGINTABS]
 
 >[!TAB  Verzoek ]
 
 ```JSON
-GET /api/v2/REF30/profiles
+GET /api/v2/REF30/profiles/AdobePass_SMI  
  
 Authorization: Bearer ....
 AP-Device-Identifier: fingerprint YmEyM2QxNDEtZDcxNS01NjFjLTk0ZjQtZTllNGM5NjZiMWVi
@@ -544,21 +558,320 @@ Content-Type: application/json; charset=utf-8
                "state": "plain"
             }
          }
-      },
-      "Cablevision": {
-         "notBefore": 1623943955,
-         "notAfter": 1623951155,
-         "issuer": "Spectrum",
-         "type": "regular",
-         "attributes": {
-            "userId": {
-               "value": "BASE64_value_userId",
-               "state": "plain"
-            }
-         }
       }
    }
 }
 ```
+
+>[!ENDTABS]
+
+### 4. Profielgegevens ophalen voor tijdelijke doorgifte
+
+>[!BEGINTABS]
+
+>[!TAB  Verzoek ]
+
+```JSON
+GET /api/v2/REF30/profiles/TempPass_TEST40
+ 
+Authorization: Bearer ....
+AP-Device-Identifier: fingerprint YmEyM2QxNDEtZDcxNS01NjFjLTk0ZjQtZTllNGM5NjZiMWVi
+X-Device-Info ....
+Accept: application/json
+User-Agent: Mozilla/5.0 (Apple TV; U; CPU AppleTV5,3 OS 14.5 like Mac OS X; en_US)
+```
+
+>[!TAB  Reactie - Beschikbaar ]
+
+```JSON
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+ 
+{
+    "profiles": {
+        "TempPass_TEST40": {
+            "notBefore": 1697718650206,
+            "notAfter": 1697718710206,
+            "issuer": "Adobe",
+            "type": "temporary",
+            "attributes": {
+                "expiration_date": {
+                    "value": 1697718710206,
+                    "state": "plain"
+                },
+                "userID": {
+                    "value": "temppass_0bdf451aa9c8fa60e80f6b99ab48310c73b480f1",
+                    "state": "plain"
+                }
+            }
+        }
+    }
+}
+```
+
+>[!TAB  Reactie - Begonnen ]
+
+```JSON
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8  
+ 
+{
+    "profiles": {
+        "TempPass_TEST40": {
+            "notBefore": 1697719584085,
+            "notAfter": 1697719704085,
+            "issuer": "Adobe",
+            "type": "temporary",
+            "attributes": {
+                "expiration_date": {
+                    "value": 1697719704085,
+                    "state": "plain"
+                },
+                "userID": {
+                    "value": "temppass_0bdf451aa9c8fa60e80f6b99ab48310c73b480f1",
+                    "state": "plain"
+                }
+            }
+        }
+    }
+}
+```
+
+>[!TAB  Reactie - Verlopen ]
+
+```JSON
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8    
+ 
+{
+    "status": 200,
+    "code": "temppass_expired",
+    "message": "TempPass has expired.",
+    "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
+    "action": "none"
+}
+```
+
+>[!TAB  Reactie - Ongeldige Configuratie ]
+
+```JSON
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8      
+ 
+{
+    "status": 500,
+    "code": "temppass_invalid_configuration",
+    "message": "TempPass configuration is invalid.",
+    "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
+    "action": "none"
+}
+```
+
+>[!ENDTABS]
+
+### 5. Profielgegevens ophalen voor tijdelijke promotiedoorgifte
+
+>[!BEGINTABS]
+
+>[!TAB  Verzoek ]
+
+```JSON
+GET /api/v2/REF30/profiles/flexibleTempPass
+ 
+Authorization: Bearer ....
+AP-Device-Identifier: fingerprint YmEyM2QxNDEtZDcxNS01NjFjLTk0ZjQtZTllNGM5NjZiMWVi
+X-Device-Info ....
+AP-TempPass-Identity: eyJlbWFpbCI6ImZvb0BiYXIuY29tIn0=
+Accept: application/json
+User-Agent: Mozilla/5.0 (Apple TV; U; CPU AppleTV5,3 OS 14.5 like Mac OS X; en_US)
+```
+
+>[!TAB  Reactie - Beschikbaar ]
+
+```JSON
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+ 
+{
+    "profiles": {
+        "flexibleTempPass": {
+            "notBefore": 1697719042666,
+            "notAfter": 1697719102666,
+            "issuer": "Adobe",
+            "type": "temporary",
+            "attributes": {
+                "remaining_resources": {
+                    "value": 5,
+                    "state": "plain"
+                },
+                "used_assets": {
+                    "value": 0,
+                    "state": "plain"
+                },
+                "expiration_date": {
+                    "value": 1697719102666,
+                    "state": "plain"
+                },
+                "userID": {
+                    "value": "temppass_0bdf451aa9c8fa60e80f6b99ab48310c73b480f1",
+                    "state": "plain"
+                }
+            }
+        }
+    }
+}
+```
+
+>[!TAB  Reactie - Begonnen ]
+
+```JSON
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+ 
+{
+    "profiles": {
+        "flexibleTempPass": {
+            "notBefore": 1697720528524,
+            "notAfter": 1697720588524,
+            "issuer": "Adobe",
+            "type": "temporary",
+            "attributes": {
+                "remaining_resources": {
+                    "value": 1,
+                    "state": "plain"
+                },
+                "used_assets": {
+                    "value": [
+                        "res04",
+                        "res02",
+                        "res03",
+                        "res01"
+                    ],
+                    "state": "plain"
+                },
+                "expiration_date": {
+                    "value": 1697720528524,
+                    "state": "plain"
+                },
+                "userID": {
+                    "value": "temppass_0bdf451aa9c8fa60e80f6b99ab48310c73b480f1",
+                    "state": "plain"
+                }
+            }
+        }
+    }
+}
+```
+
+>[!TAB  Reactie - Verlopen ]
+
+```JSON
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+ 
+{
+    "status": 200,
+    "code": "temppass_expired",
+    "message": "TempPass has expired.",
+    "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
+    "action": "none"
+}
+```
+
+>[!TAB  Reactie - Verbruikte ]
+
+```JSON
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+ 
+{
+    "decisions": [
+        {
+            "authorized": false,
+            "error": {
+                "status": 200,
+                "code": "temppass_max_resources_exceeded",
+                "message": "Flexible TempPass maximum resources exceeded.",
+                "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
+                "action": "none"
+            }
+        }
+    ]
+}
+```
+
+>[!TAB  Reactie - Ongeldige Configuratie ]
+
+```JSON
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8      
+ 
+{
+    "status": 500,
+    "code": "temppass_invalid_configuration",
+    "message": "TempPass configuration is invalid.",
+    "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
+    "action": "none"
+}
+```
+
+>[!TAB  Reactie - Ongeldige Identiteit ]
+
+```JSON
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+ 
+{
+    "status": 400,
+    "code": "temppass_invalid_identity",
+    "message": "TempPass is not available for the specified identity.",
+    "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
+    "action": "none"
+}
+```
+
+>[!ENDTABS]
+
+### 6. Profielgegevens ophalen voor gedegradeerde mvpd
+
+>[!BEGINTABS]
+
+>[!TAB  Verzoek ]
+
+```JSON
+GET /api/v2/REF30/profiles/degradedMvpd
+ 
+Authorization: Bearer ....
+AP-Device-Identifier: fingerprint YmEyM2QxNDEtZDcxNS01NjFjLTk0ZjQtZTllNGM5NjZiMWVi
+X-Device-Info ....
+Accept: application/json
+User-Agent: Mozilla/5.0 (Apple TV; U; CPU AppleTV5,3 OS 14.5 like Mac OS X; en_US)
+```
+
+>[!TAB  Reactie - Verslechtering AuthNAll ]
+
+```JSON
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+ 
+{
+    "profiles": {
+        "degradedMvpd": {
+            "notBefore": 1697719042666,
+            "notAfter": 1697719102666,
+            "issuer": "Adobe",
+            "type": "degraded",
+            "attributes":
+                "userID": {
+                    "value": "95cf93bcd183214a0bdf451aa9c8fa60e80f6b99ab48310c73b480f1",
+                    "state": "plain"
+                }
+            }
+        }
+    }
+}
+```
+
+**Nota:** 95cf93bcd183214a is een degradatie specifiek voorvoegsel.
 
 >[!ENDTABS]

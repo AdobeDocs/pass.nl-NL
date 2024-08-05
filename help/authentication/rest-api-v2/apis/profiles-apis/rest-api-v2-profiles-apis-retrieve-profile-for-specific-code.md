@@ -1,15 +1,15 @@
 ---
-title: Profiel ophalen met verificatierespons van partner
-description: REST API V2 - profiel ophalen met partnerverificatierespons
+title: Profiel ophalen voor specifieke code
+description: REST API V2 - Profiel ophalen voor specifieke code
 source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
 workflow-type: tm+mt
-source-wordcount: '729'
-ht-degree: 0%
+source-wordcount: '570'
+ht-degree: 1%
 
 ---
 
 
-# Profiel ophalen met verificatierespons van partner {#retrieve-profile-using-partner-authentication-response}
+# Profiel ophalen voor specifieke code {#retrieve-profile-for-specific-code}
 
 >[!IMPORTANT]
 >
@@ -29,12 +29,12 @@ ht-degree: 0%
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">pad</td>
-      <td>/api/v2/{serviceProvider}/profiles/sso/{partner}</td>
+      <td>/api/v2/{serviceProvider}/profiles/{code}</td>
       <td></td>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">methode</td>
-      <td>POST</td>
+      <td>GET</td>
       <td></td>
    </tr>
    <tr>
@@ -47,23 +47,9 @@ ht-degree: 0%
       <td>De interne unieke id die tijdens het instapproces aan de Serviceleverancier is gekoppeld.</td>
       <td><i>vereist</i></td>
    </tr>
-    <tr>
-      <td style="background-color: #DEEBFF;">partner</td>
-      <td>De naam van de partner (bijvoorbeeld Apple) die het Single Sign-On-framework biedt dat is geïntegreerd met Adobe Pass-verificatiestromen.</td>
-      <td><i>vereist</i></td>
-   </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Bodyparameters</th>
-      <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
-   </tr>
-   <tr>
-      <td style="background-color: #DEEBFF;">SAMLResponse</td>
-      <td>
-        De reactie van de partnerauthentificatie die de vereiste gebruikersmeta-gegevens bevat om een partnerprofiel tot stand te brengen en op te slaan.
-        <br/><br/>
-        De waarde moet Base64-gecodeerd en achteraf URL-gecodeerd zijn.
-      </td>
+      <td style="background-color: #DEEBFF;">code</td>
+      <td>De verificatiecode die wordt verkregen na het maken van de verificatiesessie op het streamingapparaat.</td>
       <td><i>vereist</i></td>
    </tr>
    <tr>
@@ -75,41 +61,6 @@ ht-degree: 0%
       <td style="background-color: #DEEBFF;">Toestemming</td>
       <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="../../../dynamic-client-registration-api.md"> Dynamische documentatie van de Registratie van de Cliënt </a>.</td>
       <td><i>vereist</i></td>
-   </tr>
-   <tr>
-      <td style="background-color: #DEEBFF;">Inhoudstype</td>
-      <td>
-         Het geaccepteerde mediatype voor de bronnen die worden verzonden.
-         <br/><br/>
-         Het moet application/x-www-form-urlencoded zijn.
-      </td>
-      <td><i>vereist</i></td>
-   </tr>
-   <tr>
-      <td style="background-color: #DEEBFF;">AP-apparaat-id</td>
-      <td>De generatie van de apparatenherkenningstekenlading wordt beschreven in <a href="../../appendix/headers/rest-api-v2-appendix-headers-ap-device-identifier.md"> AP-apparaat-Herkenningsteken </a> documentatie.</td>
-      <td><i>vereist</i></td>
-   </tr>
-   <tr>
-      <td style="background-color: #DEEBFF;">X-Apparaat-Info</td>
-      <td>
-         De generatie van de lading van de apparateninformatie wordt beschreven in <a href="../../appendix/headers/rest-api-v2-appendix-headers-x-device-info.md"> x-apparaat-Info </a> documentatie.
-         <br/><br/>
-         Het wordt ten zeerste aanbevolen deze altijd te gebruiken wanneer het apparaatplatform van de toepassing expliciet geldige waarden biedt.
-         <br/><br/>
-         Als deze optie is opgegeven, worden waarden met geëxtraheerde waarden expliciet samengevoegd met de Adobe Pass-verificatieachterkant (standaard).
-         <br/><br/>
-         Als deze optie niet is opgegeven, gebruikt de Adobe Pass Authentication-backend impliciet geëxtraheerde waarden (standaard).
-      </td>
-      <td><i>vereist</i></td>
-   </tr>
-   <tr>
-      <td style="background-color: #DEEBFF;">AP-Partner-Kader-Status</td>
-      <td>
-        De generatie van enige sign-on lading voor de methode van de Partner wordt beschreven in <a href="../../appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md"> AP-partner-kader-Status </a> documentatie.
-        <br/><br/>
-        Voor meer details over enige sign-on toegelaten stromen die een partner gebruiken, verwijs naar <a href="../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-partner-flows.md"> Enige sign-on gebruikend de documentatie van de partnerstromen </a>.</td>
-      <td>optioneel</td>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">X-Forwarded-For</td>
@@ -147,8 +98,8 @@ ht-degree: 0%
       <th style="background-color: #EFF2F7;">Beschrijving</th>
    </tr>
    <tr>
-      <td>201</td>
-      <td>Gemaakt</td>
+      <td>200</td>
+      <td>OK</td>
       <td>
         De hoofdtekst van de reactie bevat een kaart met geldige profielen, die leeg kan zijn.
       </td>
@@ -193,7 +144,7 @@ ht-degree: 0%
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Status</td>
-      <td>201</td>
+      <td>200</td>
       <td><i>vereist</i></td>
    </tr>
    <tr>
@@ -209,10 +160,10 @@ ht-degree: 0%
    <tr>
       <td style="background-color: #DEEBFF;">profielen</td>
       <td>
-         JSON met een overzicht van sleutel-, waardeparen.
-         <br/><br/>
-         Het hoofdelement wordt gedefinieerd door de volgende waarde:
-         <table>
+        JSON met een overzicht van sleutel-, waardeparen.
+        <br/><br/>
+        Het hoofdelement wordt gedefinieerd door de volgende waarde:
+        <table>
             <tr>
                <th style="background-color: #EFF2F7; width: 20%;">Waarde</th>
                <th style="background-color: #EFF2F7"></th>
@@ -253,16 +204,25 @@ ht-degree: 0%
                         <th style="background-color: #EFF2F7;"></th>
                      </tr>
                      <tr>
-                        <td style="background-color: #DEEBFF;">Apple</td>
+                        <td style="background-color: #DEEBFF;">mvpd <br/><br/> b.v., Spectrum, Cablevision, enz.</td>
                         <td>
                             Het profiel is gemaakt als resultaat van:
                             <ul>
-                                <li>Single Sign-On met partner Apple</li>
+                                <li>Basisverificatie</li>
+                            </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="background-color: #DEEBFF;">Adobe</td>
+                        <td>
+                            Het profiel is gemaakt als resultaat van:
+                            <ul>
+                                <li>Verminderde toegang</li>
+                                <li>Tijdelijke toegang</li>
                             </ul>
                         </td>
                      </tr>
                   </table>
-               </td>
                <td><i>vereist</i></td>
             </tr>
             <tr>
@@ -277,16 +237,33 @@ ht-degree: 0%
                         <th style="background-color: #EFF2F7;"></th>
                      </tr>
                      <tr>
-                        <td style="background-color: #DEEBFF;">appleSSO</td>
+                        <td style="background-color: #DEEBFF;">regelmatig</td>
                         <td>
                             Het profiel is gemaakt als resultaat van:
                             <ul>
-                                <li>Single Sign-On met partner Apple</li>
+                                <li>Basisverificatie</li>
+                            </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="background-color: #DEEBFF;">aangetast</td>
+                        <td>
+                            Het profiel is gemaakt als resultaat van:
+                            <ul>
+                                <li>Verminderde toegang</li>
+                            </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="background-color: #DEEBFF;">tijdelijk</td>
+                        <td>
+                            Het profiel is gemaakt als resultaat van:
+                            <ul>
+                                <li>Tijdelijke toegang</li>
                             </ul>
                         </td>
                      </tr>
                   </table>
-               </td>
                <td><i>vereist</i></td>
             </tr>
             <tr>
@@ -345,40 +322,34 @@ ht-degree: 0%
 
 ## Voorbeelden {#samples}
 
-### 1. Apple SSO ingeschakeld en geldig SAML-antwoord
+### 1. Bestaande en geldige geverifieerde profielen ophalen op een secundair apparaat na het uitvoeren van een basisverificatie
 
 >[!BEGINTABS]
 
 >[!TAB  Verzoek ]
 
 ```JSON
-POST /api/v2/REF30/profiles/sso/Apple
+GET /api/v2/REF30/profiles/Cablevision/XTC98W
  
 Authorization: Bearer ....
 AP-Device-Identifier: fingerprint YmEyM2QxNDEtZDcxNS01NjFjLTk0ZjQtZTllNGM5NjZiMWVi
-X-Device-Info: ....
-AP-Partner-Framework-Status: ewogICAidXNlcl9wZXJtaXNzaW9ucyIgOiB7fSwKICAgIm12cGRfc3RhdHVzIiA6IHt9Cn0=
-Content-Type: application/x-www-form-urlencoded
+X-Device-Info ....
 Accept: application/json
-User-Agent: Mozilla/5.0 (Apple TV; U; CPU AppleTV5,3 OS 14.5 like Mac OS X; en_US)
-
-Body:
-
-SAMLResponse=PHNhbWxwOlJlc3BvbnNlIHhtbG5zOnNhbWxwPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6cHJvdG9jb2wiIH...
 ```
 
 >[!TAB  Reactie ]
 
 ```JSON
 HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
  
 {
     "profiles" : {
         "Cablevision" : {
             "notBefore" : 1623943955,
             "notAfter" : 1623951155,
-            "issuer" : "Apple",
-            "type" : "appleSSO",
+            "issuer" : "Cablevision",
+            "type" : "regular",
             "attributes" : {
                 "userId" : {
                     "value" : "BASE64_value_userId",
@@ -391,100 +362,15 @@ HTTP/1.1 200 OK
                 "zip" : {
                     "value" : "BASE64_value_zip",
                     "state" : "enc"
-                }       
+                },
+                "parental-controls" : {
+                    "value" : BASE64_value_parental-controls,
+                    "state" : "plain"
+                }
             }
         }
      }
-}  
-```
-
->[!ENDTABS]
-
-### 2. AppleSSO-profiel voor gedegradeerde integratie
-
->[!BEGINTABS]
-
->[!TAB  Verzoek ]
-
-```JSON
-POST /api/v2/REF30/profiles/sso/Apple HTTP/1.1
- 
-Authorization: Bearer ....
-AP-Device-Identifier: fingerprint YmEyM2QxNDEtZDcxNS01NjFjLTk0ZjQtZTllNGM5NjZiMWVi
-X-Device-Info: ....
-AP-Partner-Framework-Status: ewogICAidXNlcl9wZXJtaXNzaW9ucyIgOiB7fSwKICAgIm12cGRfc3RhdHVzIiA6IHt9Cn0=
-Content-Type: application/x-www-form-urlencoded
-Accept: application/json
-User-Agent: Mozilla/5.0 (Apple TV; U; CPU AppleTV5,3 OS 14.5 like Mac OS X; en_US)
-
-Body:
-
-SAMLResponse=PHNhbWxwOlJlc3BvbnNlIHhtbG5zOnNhbWxwPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6cHJvdG9jb2wiIH...
-```
-
->[!TAB  Reactie ]
-
-```JSON
-HTTP/1.1 200 OK
- 
-{
-   "profiles":{
-      "WOW":{
-         "notBefore":1706636062704,
-         "notAfter":1706696062704,
-         "issuer":"Adobe",
-         "type":"degraded",
-         "attributes":{
-            "userID":{
-               "value":"95cf93bcd183214ac9e4433153cb8a9d180a463128c0a5d26f202e8c",
-               "state":"plain"
-            }
-         }
-      }
-   }
 }
-```
-
->[!ENDTABS]
-
-### 3. Apple SSO-stroom wanneer de SAML-respons niet geldig is
-
->[!BEGINTABS]
-
->[!TAB  Verzoek ]
-
-```JSON
-POST /api/v2/REF30/profiles/sso/Apple HTTP/1.1 
- 
-Authorization: Bearer ....
-AP-Device-Identifier: fingerprint YmEyM2QxNDEtZDcxNS01NjFjLTk0ZjQtZTllNGM5NjZiMWVi
-X-Device-Info: ....
-AP-Partner-Framework-Status: ewogICAidXNlcl9wZXJtaXNzaW9ucyIgOiB7fSwKICAgIm12cGRfc3RhdHVzIiA6IHt9Cn0=
-Content-Type: application/x-www-form-urlencoded
-Accept: application/json
-User-Agent: Mozilla/5.0 (Apple TV; U; CPU AppleTV5,3 OS 14.5 like Mac OS X; en_US)
-
-Body:
-        
-SAMLResponse=PHNhbWxwOlJlc3BvbnNlIHhtbG5zOnNhbWxwPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6cHJvdG9jb2wiIH...
-```
-
->[!TAB  Reactie ]
-
-```JSON
-HTTP/1.1 403 OK
-Content-Type: application/json; charset=utf-8
-    
-{
-    "errors" : [
-        {
-            "code": "invalid_mvpd_response",
-            "message": "The saml mvpd response is not valid",
-            "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
-            "action": "none"        
-        } 
-    ]
-}   
 ```
 
 >[!ENDTABS]

@@ -1,7 +1,7 @@
 ---
 title: Koptekst - AD-Service-token
 description: REST API V2 - Koptekst - AD-service-token
-source-git-commit: 4d1ce1301d6baf7309e8ee52c43b02403aa2fab9
+source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
 workflow-type: tm+mt
 source-wordcount: '252'
 ht-degree: 0%
@@ -21,7 +21,7 @@ De <b> AD-dienst-Symbolische </b> verzoekkopbal bevat het unieke gebruikersherke
 
 Deze kopbal wordt ontworpen voor gebruik in enig sign-on (SSO) toegelaten stromen leveraging de Symbolische methode van de Dienst.
 
-Voor meer details over enige sign-on (SSO) toegelaten stromen leveraging de Symbolische methode van de Dienst, verwijs naar [ Enige sign-on gebruikend de stromen van het de dienstteken ](../../flows/single-sign-on-flows/rest-api-v2-single-sign-on-service-token-flows.md) documentatie.
+Voor meer details over enige sign-on (SSO) toegelaten stromen leveraging de Symbolische methode van de Dienst, verwijs naar [ Enige sign-on gebruikend de stromen van het de dienstteken ](../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-service-token-flows.md) documentatie.
 
 ## Syntaxis {#syntax}
 

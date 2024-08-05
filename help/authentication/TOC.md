@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass-verificatie
 user-guide-description: Adobe Pass-verificatie is een machtigingsoplossing voor TV Everywhere, die een modulair kader verstrekt om te bepalen of iemand die toegang tot een bron vraagt, daar rechten voor heeft.
-source-git-commit: c3aa2a24b242669ce0818b95ec34de2adec8001b
+source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
 workflow-type: tm+mt
-source-wordcount: '1125'
+source-wordcount: '1137'
 ht-degree: 2%
 
 ---
@@ -54,6 +54,7 @@ ht-degree: 2%
          + [Gratis voorvertoning voor tijdelijke controle en tijdelijke controle voor speciale acties](free-preview-for-temp-pass-and-promotional-temp-pass.md)
    + REST API V2 {#rest-api-v2}
       + API&#39;s {#rest-api-v2-apis}
+         + [ REST API V2 - APIs - Overzicht ](./rest-api-v2/apis/rest-api-v2-apis-overview.md)
          + Configuratie {#rest-api-v2-configuration-apis}
             + [Win configuratie voor specifieke dienstverlener terug](./rest-api-v2/apis/configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider.md)
          + Sessies {#rest-api-v2-sessions-apis}
@@ -62,8 +63,8 @@ ht-degree: 2%
             + [Verificatiesessie ophalen](./rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-retrieve-authentication-session-information-using-code.md)
          + Profielen {#rest-api-v2-profiles-apis}
             + [Profielen ophalen](./rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md)
-            + [Profiel ophalen voor specifieke mvpd](./rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles-for-specific-mvpd.md)
-            + [Profiel ophalen voor specifieke code](./rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles-for-specific-code.md)
+            + [Profiel ophalen voor specifieke mvpd](./rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md)
+            + [Profiel ophalen voor specifieke code](./rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md)
          + Besluiten {#rest-api-v2-decisions-apis}
             + [Autorisatiebesluiten ophalen met specifieke mvpd](./rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md)
             + [ wint pre-vergunningsbesluiten terug gebruikend specifieke mvpd ](./rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md)
@@ -73,23 +74,24 @@ ht-degree: 2%
             + [Vraag van partnerverificatie ophalen](rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-partner-authentication-request.md)
             + [Profiel ophalen met verificatierespons van partner](rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md)
       + Stromen {#rest-api-v2-flows}
-         + Basisstromen {#rest-api-v2-basic-flows}
-            + [Stroom van basisprofielen uitgevoerd in primaire toepassing](./rest-api-v2/flows/basic-flows/rest-api-v2-basic-profiles-primary-application-flow.md)
-            + [De stroom van basisprofielen die binnen secundaire toepassing wordt uitgevoerd](./rest-api-v2/flows/basic-flows/rest-api-v2-basic-profiles-secondary-application-flow.md)
-            + [Standaardverificatiestroom uitgevoerd binnen primaire toepassing](./rest-api-v2/flows/basic-flows/rest-api-v2-basic-authentication-primary-application-flow.md)
-            + [Basisverificatiestroom uitgevoerd binnen secundaire toepassing](./rest-api-v2/flows/basic-flows/rest-api-v2-basic-authentication-secondary-application-flow.md)
-            + [Basisvergunningsstroom uitgevoerd binnen primaire toepassing](./rest-api-v2/flows/basic-flows/rest-api-v2-basic-authorization-primary-application-flow.md)
-            + [Basis preautorisatiestroom uitgevoerd binnen primaire toepassing](./rest-api-v2/flows/basic-flows/rest-api-v2-basic-preauthorization-primary-application-flow.md)
-            + [Basisuitlogingsstroom uitgevoerd in primaire toepassing](./rest-api-v2/flows/basic-flows/rest-api-v2-basic-logout-primary-application-flow.md)
+         + [REST API V2 - Stromen - Overzicht](./rest-api-v2/flows/rest-api-v2-flows-overview.md)
+         + Basistoegangsstromen {#rest-api-v2-basic-access-flows}
+            + [Stroom van basisprofielen uitgevoerd in primaire toepassing](rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-primary-application-flow.md)
+            + [De stroom van basisprofielen die binnen secundaire toepassing wordt uitgevoerd](rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-secondary-application-flow.md)
+            + [Standaardverificatiestroom uitgevoerd binnen primaire toepassing](rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authentication-primary-application-flow.md)
+            + [Basisverificatiestroom uitgevoerd binnen secundaire toepassing](rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authentication-secondary-application-flow.md)
+            + [Basisvergunningsstroom uitgevoerd binnen primaire toepassing](rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authorization-primary-application-flow.md)
+            + [Basis preautorisatiestroom uitgevoerd binnen primaire toepassing](rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-preauthorization-primary-application-flow.md)
+            + [Basisuitlogingsstroom uitgevoerd in primaire toepassing](rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-logout-primary-application-flow.md)
          + Verminderde toegangsstromen {#rest-api-v2-degraded-access-flows}
-            + [Verminderde toegangsstromen](rest-api-v2/flows/access-degraded-flows/rest-api-v2-access-degraded-flows.md)
+            + [Verminderde toegangsstromen](rest-api-v2/flows/degraded-access-flows/rest-api-v2-access-degraded-flows.md)
          + Tijdelijke toegangsstromen {#rest-api-v2-temporary-access-flows}
-            + [ Tijdelijke toegangsstromen ](rest-api-v2/flows/access-temporary-flows/rest-api-v2-access-temporary-flows.md)
-         + Single Sign-On-stromen {#rest-api-v2-single-sign-on-flows}
-            + [Enig teken-op het gebruiken van partnerstromen](./rest-api-v2/flows/single-sign-on-flows/rest-api-v2-single-sign-on-partner-flows.md)
-            + [Single Sign-On met gebruik van platformidentiteitsstromen](./rest-api-v2/flows/single-sign-on-flows/rest-api-v2-single-sign-on-platform-identity-flows.md)
-            + [Single Sign-On die de stromen van het de dienstteken gebruikt](./rest-api-v2/flows/single-sign-on-flows/rest-api-v2-single-sign-on-service-token-flows.md)
-            + [Single Logout-flow](./rest-api-v2/flows/single-sign-on-flows/rest-api-v2-single-sign-on-logout-flow.md)
+            + [ Tijdelijke toegangsstromen ](rest-api-v2/flows/temporary-access-flows/rest-api-v2-access-temporary-flows.md)
+         + Single Sign-On toegangsstromen {#rest-api-v2-single-sign-on-access-flows}
+            + [Enig teken-op het gebruiken van partnerstromen](rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-partner-flows.md)
+            + [Single Sign-On met gebruik van platformidentiteitsstromen](rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-platform-identity-flows.md)
+            + [Single Sign-On die de stromen van het de dienstteken gebruikt](rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-service-token-flows.md)
+            + [Single Logout-flow](rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-logout-flow.md)
       + Bijlage {#rest-api-v2-appendix}
          + Kopteksten {#rest-api-v2-appendix-headers}
             + [Koptekst - AD-Service-token](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md)
