@@ -4,10 +4,10 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass-verificatie
 user-guide-description: Adobe Pass-verificatie is een machtigingsoplossing voor TV Everywhere, die een modulair kader verstrekt om te bepalen of iemand die toegang tot een bron vraagt, daar rechten voor heeft.
-source-git-commit: 26236fbd4b2d5703bcf99fc0cc5e0460e75ed185
+source-git-commit: c3aa2a24b242669ce0818b95ec34de2adec8001b
 workflow-type: tm+mt
-source-wordcount: '957'
-ht-degree: 3%
+source-wordcount: '1125'
+ht-degree: 2%
 
 ---
 
@@ -15,24 +15,24 @@ ht-degree: 3%
 # Help bij Adobe Pass-verificatie {#authentication}
 
 + [Overzicht van Adobe Pass-verificatie](home.md)
-+ Adobe Pass-verificatieconcepten {#authentication-concepts}
++ Concepten van Adobe Pass-verificatie {#authentication-concepts}
    + [Technisch document](technical-paper.md)
    + [Overzicht voor programmeurs](programmer-overview.md)
    + [MVPD-overzicht](mvpd-overview.md)
-+ Hulplijnen voor Kickstart {#kickstart-guides}
++ Hulplijnen bij Kickstart {#kickstart-guides}
    + [Kickstart-handleiding voor programmeurs](programmer-kickstart-guide.md)
    + [MVPD kickstart-handleiding](mvpd-kickstart-guide.md)
-+ Programmeringsintegratiegids {#programmer-integration-guide}
++ Programmeringsintegratiehandleiding {#programmer-integration-guide}
    + [Overzicht van de integratiegids voor programmeerprogramma&#39;s](programmer-integration-guide-overview.md)
    + [De machtigingsstroom van de programmeur](entitlement-flow.md)
    + [Gebruiksgevallen voor programmeerprogramma&#39;s](programmer-use-cases.md)
    + [Clientgegevens doorgeven (apparaat, verbinding en toepassing)](passing-client-information-device-connection-and-application.md)
    + [Draaimechanisme](throttling-mechanism.md)
-   + REST API {#restapi}
+   + REST API V1 {#rest-api-v1}
       + [REST API-overzicht](rest-api-overview.md)
       + [REST API Cookbook (Server-to-Server)](rest-api-cookbook-servertoserver.md)
       + [REST API Cookbook (client-naar-server)](rest-api-cookbook-clienttoserver.md)
-      + Referentie voor rest-API {#rest-api-reference}
+      + Referentie voor API opnieuw instellen {#rest-api-reference}
          + [REST API Reference](rest-api-reference.md)
          + [Registratiecode-aanvraag](registration-code-request.md)
          + [Registratierecord retourneren](return-registration-record.md)
@@ -52,34 +52,80 @@ ht-degree: 3%
          + [Profiel-verzoek ophalen](retrieve-profilerequest.md)
          + [Tokenuitwisseling](token-exchange.md)
          + [Gratis voorvertoning voor tijdelijke controle en tijdelijke controle voor speciale acties](free-preview-for-temp-pass-and-promotional-temp-pass.md)
+   + REST API V2 {#rest-api-v2}
+      + API&#39;s {#rest-api-v2-apis}
+         + Configuratie {#rest-api-v2-configuration-apis}
+            + [Win configuratie voor specifieke dienstverlener terug](./rest-api-v2/apis/configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider.md)
+         + Sessies {#rest-api-v2-sessions-apis}
+            + [Verificatiesessie maken](./rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md)
+            + [Verificatiesessie hervatten](./rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-resume-authentication-session.md)
+            + [Verificatiesessie ophalen](./rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-retrieve-authentication-session-information-using-code.md)
+         + Profielen {#rest-api-v2-profiles-apis}
+            + [Profielen ophalen](./rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md)
+            + [Profiel ophalen voor specifieke mvpd](./rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles-for-specific-mvpd.md)
+            + [Profiel ophalen voor specifieke code](./rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles-for-specific-code.md)
+         + Besluiten {#rest-api-v2-decisions-apis}
+            + [Autorisatiebesluiten ophalen met specifieke mvpd](./rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md)
+            + [ wint pre-vergunningsbesluiten terug gebruikend specifieke mvpd ](./rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md)
+         + Afmelden {#rest-api-v2-logout-apis}
+            + [Afmelden starten voor specifieke mvpd](./rest-api-v2/apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md)
+         + Single Sign-On voor partners {#rest-api-v2-partner-single-sign-on-apis}
+            + [Vraag van partnerverificatie ophalen](rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-partner-authentication-request.md)
+            + [Profiel ophalen met verificatierespons van partner](rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md)
+      + Stromen {#rest-api-v2-flows}
+         + Basisstromen {#rest-api-v2-basic-flows}
+            + [Stroom van basisprofielen uitgevoerd in primaire toepassing](./rest-api-v2/flows/basic-flows/rest-api-v2-basic-profiles-primary-application-flow.md)
+            + [De stroom van basisprofielen die binnen secundaire toepassing wordt uitgevoerd](./rest-api-v2/flows/basic-flows/rest-api-v2-basic-profiles-secondary-application-flow.md)
+            + [Standaardverificatiestroom uitgevoerd binnen primaire toepassing](./rest-api-v2/flows/basic-flows/rest-api-v2-basic-authentication-primary-application-flow.md)
+            + [Basisverificatiestroom uitgevoerd binnen secundaire toepassing](./rest-api-v2/flows/basic-flows/rest-api-v2-basic-authentication-secondary-application-flow.md)
+            + [Basisvergunningsstroom uitgevoerd binnen primaire toepassing](./rest-api-v2/flows/basic-flows/rest-api-v2-basic-authorization-primary-application-flow.md)
+            + [Basis preautorisatiestroom uitgevoerd binnen primaire toepassing](./rest-api-v2/flows/basic-flows/rest-api-v2-basic-preauthorization-primary-application-flow.md)
+            + [Basisuitlogingsstroom uitgevoerd in primaire toepassing](./rest-api-v2/flows/basic-flows/rest-api-v2-basic-logout-primary-application-flow.md)
+         + Verminderde toegangsstromen {#rest-api-v2-degraded-access-flows}
+            + [Verminderde toegangsstromen](rest-api-v2/flows/access-degraded-flows/rest-api-v2-access-degraded-flows.md)
+         + Tijdelijke toegangsstromen {#rest-api-v2-temporary-access-flows}
+            + [ Tijdelijke toegangsstromen ](rest-api-v2/flows/access-temporary-flows/rest-api-v2-access-temporary-flows.md)
+         + Single Sign-On-stromen {#rest-api-v2-single-sign-on-flows}
+            + [Enig teken-op het gebruiken van partnerstromen](./rest-api-v2/flows/single-sign-on-flows/rest-api-v2-single-sign-on-partner-flows.md)
+            + [Single Sign-On met gebruik van platformidentiteitsstromen](./rest-api-v2/flows/single-sign-on-flows/rest-api-v2-single-sign-on-platform-identity-flows.md)
+            + [Single Sign-On die de stromen van het de dienstteken gebruikt](./rest-api-v2/flows/single-sign-on-flows/rest-api-v2-single-sign-on-service-token-flows.md)
+            + [Single Logout-flow](./rest-api-v2/flows/single-sign-on-flows/rest-api-v2-single-sign-on-logout-flow.md)
+      + Bijlage {#rest-api-v2-appendix}
+         + Kopteksten {#rest-api-v2-appendix-headers}
+            + [Koptekst - AD-Service-token](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md)
+            + [Koptekst - Onderwerptoken voor Adobe](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md)
+            + [Koptekst - AP-apparaat-id](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-device-identifier.md)
+            + [Koptekst - AP-Partner-Framework-Status](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md)
+            + [Koptekst - AP-TempPass-Identity](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-temppass-identity.md)
+            + [Koptekst - X-Apparaat-Info](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-device-info.md)
    + AccessEnabler SDK {#accessenabler-sdk}
       + JavaScript SDK {#javascriptsdk}
-         + [JavaScript SDK - Overzicht](javascript-sdk-overview.md)
+         + [Overzicht van JavaScript SDK](javascript-sdk-overview.md)
          + [JavaScript SDK Cookbook](javascript-sdk-cookbook.md)
          + [JavaScript SDK API-naslag](javascript-sdk-api-reference.md)
-         + Richtsnoeren {#js-sdk-guidelines}
+         + Richtlijnen {#js-sdk-guidelines}
             + [Aanmelding en afmelding zonder vernieuwen](refreshless-login-and-logout.md)
-         + JavaScript-API {#js-api}
+         + JavaScript API {#js-api}
             + [Voorvoegsel](js-preauthorize.md)
       + iOS/tvOS SDK {#ios-sdk}
          + [Overzicht iOS/tvOS SDK](iostvos-sdk-overview.md)
          + [iOS/tvOS SDK Cookbook](iostvos-sdk-cookbook.md)
-         + [iOS/tvOS SDK API-naslaggids](iostvos-sdk-api-reference.md)
-         + Richtsnoeren {#ios-tvos-sdk-guidelines}
+         + [ iOS/tvOS SDK API Verwijzing ](iostvos-sdk-api-reference.md)
+         + Richtlijnen {#ios-tvos-sdk-guidelines}
             + [iOS/tvOS-toepassingsregistratie](iostvos-application-registration.md)
             + Richtlijnen voor migratie {#migration-guidelines}
                + [Migratiehandleiding voor iOS/tvOS v3.x](iostvos-v3x-migration-guide.md)
             + [Integriteitscontroles iOS/tvOS-opslag](iostvos-sdk-storage-integrity-checks.md)
          + iOS/tvOS API {#ios-tvos-api}
-            + [Voorvoegsel](preauthorize.md)
-      + Android-SDK {#androidsdk}
+            + [ preAuthze ](preauthorize.md)
+      + Android SDK {#androidsdk}
          + [Overzicht van Android SDK](android-sdk-overview.md)
          + [Android SDK Cookbook](android-sdk-cookbook.md)
-         + [Referentie voor API van Android](android-sdk-api-reference.md)
-         + Richtsnoeren {#androidguidelines}
-            + [Registratie van Android-toepassingen](android-application-registration.md)
-            + [Android-SDK met dynamische clientregistratie](android-sdk-with-dynamic-client-registration.md)
-         + Android-API{#androidapi}
+         + [Android SDK API-naslag](android-sdk-api-reference.md)
+         + Richtlijnen {#androidguidelines}
+            + [Android-toepassingsregistratie](android-application-registration.md)
+            + [Android SDK met Dynamic Client-registratie](android-sdk-with-dynamic-client-registration.md)
+         + Android API {#androidapi}
             + [Voorvoegsel](preauthorize-android.md)
       + Amazon FireOS SDK {#fireossdk}
          + [Amazon FireOS SSO - Handleiding voor het starten van de programma&#39;s](amazon-firetv-sso-programmer-kickoff-guide.md)
@@ -90,12 +136,12 @@ ht-degree: 3%
          + [Amazon FireOS-toepassingsregistratie](amazon-fireos-application-registration.md)
          + [FireOS SDK met Dynamic Client-registratie](fireos-sdk-with-dynamic-client-registration.md)
    + Platform SSO {#platform-sso}
-      + APPLE SSO {#apple-sso}
+      + Apple SSO {#apple-sso}
          + [Apple SSO - Overzicht](apple-sso-overview.md)
          + [Apple SSO Cookbook (REST API)](apple-sso-cookbook-rest-api.md)
          + [Apple SSO Cookbook (iOS/tvOS SDK)](apple-sso-cookbook-iostvos-sdk.md)
       + Roku SSO {#roku-sso}
-         + [Roku SSO](roku-sso-overview.md)
+         + [ Roku SSO ](roku-sso-overview.md)
    + Metagegevens inhoud {#content-metadata}
       + [Beveiligde bron identificeren](identify-protected-resources.md)
    + Integratie van inhoudsservers {#content-serv-int}
@@ -119,14 +165,14 @@ ht-degree: 3%
    + Adobe Analytics-integratie {#analytics-int}
       + [Gegevens van de Adobe Pass-verificatieserver integreren in Adobe Analytics](integrate-authn-servr-data-analytics.md)
       + [Experience Cloud-id gebruiken in Adobe Pass-verificatie](exp-cloud-id-authn.md)
-   + Controle van de machtigingsservice {#entitlement-service-monitoring}
+   + Bewaking van machtigingsservice {#entitlement-service-monitoring}
       + [Overzicht van Entitlement service-controle](entitlement-service-monitoring-overview.md)
       + [Entitlement service monitoring API](entitlement-service-monitoring-api.md)
       + [Metriek aan de serverzijde](understanding-serverside-metrics.md)
    + Temperatuurcontrole {#temp-pass}
       + [Temperatuurcontrole](temp-pass.md)
       + [Tijdelijke doorloop voor speciale acties](promotional-temp-pass.md)
-      + [Tijdelijke controle opnieuw instellen](reset-temp-pass.md)
+      + [ Pass van het Terugstellen Temperatuur ](reset-temp-pass.md)
    + Single Sign-On {#sso}
       + [Ondersteuning voor Single Sign-On](sso-support.md)
       + [SSO via passieve verificatie](sso-passive-authn.md)
@@ -136,19 +182,19 @@ ht-degree: 3%
    + Metagegevens gebruiker {#user-metadat}
       + [Metagegevens gebruiker](user-metadata-feature.md)
    + [Preflight-autorisatie](preflight-authz.md)
-   + Foutmelding {#error-reportn}
+   + Foutrapportage {#error-reportn}
       + [Foutmelding](error-reporting.md)
       + [Verbeterde foutcodes](enhanced-error-codes.md)
    + Clientregistratie {#client-regn}
       + [Dynamische clientregistratie](dynamic-client-registration.md)
       + [Dynamic Client-registratie-API](dynamic-client-registration-api.md)
       + [Dynamisch clientregistratiebeheer](dynamic-client-registration-management.md)
-   + Degradatiedienst {#degrn-service}
+   + Degradatieservice {#degrn-service}
       + [Gradatie-API - overzicht](degradation-api-overview.md)
-   + Privacygereedheid {#privacy-readiness}
+   + Gereedheid voor privacy {#privacy-readiness}
       + [Overzicht van privé-ondersteuning](privacy-supp-overview.md)
       + [Een privacyverzoek indienen](make-privacy-req.md)
-+ Tips en oplossingen {#tips-troubleshoot}
++ Tips en problemen oplossen {#tips-troubleshoot}
    + [MVPD&#39;s toestaan in het dialoogvenster Selectie](allow-mvpd-selectn-dialog.md)
    + [Voorkomen dat MVPD&#39;s het selectiedialoogvenster weergeven](prevent-mvpd-selectn-dialog.md)
 + Ondersteuning {#support}
@@ -167,7 +213,7 @@ ht-degree: 3%
    + [Opmerkingen bij de release Adobe Pass Authentication 2.64](auth-rn-264.md)
    + [Opmerkingen bij de release Adobe Pass Authentication 2.63](auth-rn-263.md)
    + [Opmerkingen bij de release Adobe Pass Authentication 2.62.1](auth-rn-2621.md)
-   + Opmerkingen bij de release van JavaScript SDK  {#release-notes-javascript}
+   + Opmerkingen bij de release van JavaScript SDK {#release-notes-javascript}
       + [Opmerkingen bij de release Adobe Pass Authentication JavaScript 4.7.0](authn-rn-javascript-470.md)
       + [Opmerkingen bij de release Adobe Pass Authentication JavaScript 4.6.0](authn-rn-javascript-460.md)
       + [Opmerkingen bij de release Adobe Pass Authentication JavaScript 4.4.0](authn-rn-javascript-440.md)
@@ -176,7 +222,7 @@ ht-degree: 3%
       + [Opmerkingen bij de release Adobe Pass Authentication JavaScript 4.1.0](authn-rn-javascript-410.md)
       + [Opmerkingen bij de release Adobe Pass Authentication JavaScript 4.0.0](authn-rn-javascript-400.md)
       + [Opmerkingen bij de release Adobe Pass Authentication JavaScript 3.5.0](authn-rn-javascript-350.md)
-   + Opmerkingen bij de release iOS/tvOS SDK  {#release-notes-ios}
+   + Opmerkingen bij de release iOS/tvOS SDK {#release-notes-ios}
       + [Opmerkingen bij de release Adobe Pass Authentication iOS / tvOS 3.9.2](authn-rn-ios-tvos-392.md)
       + [Opmerkingen bij de release Adobe Pass Authentication iOS / tvOS 3.8.4](authn-rn-ios-tvos-384.md)
       + [Opmerkingen bij de release Adobe Pass Authentication iOS / tvOS 3.8.3](authn-rn-ios-tvos-383.md)
@@ -185,16 +231,16 @@ ht-degree: 3%
       + [Opmerkingen bij de release Adobe Pass Authentication iOS / tvOS 3.7.0](authn-rn-ios-tvos-370.md)
    + Opmerkingen bij de release van Android SDK {#release-notes-android}
       + [Opmerkingen bij de release Adobe Pass Authentication Android 3.7.3](authn-rn-android-373.md)
-+ Technische notities {#tech-notes}
++ Technische opmerkingen {#tech-notes}
    + Adobe Pass Authentication SDKs {#primetime-authentication-sdks}
       + [Certificaten Vragen en antwoorden](certificates-qa.md)
       + JavaScript SDK {#javascript}
          + [Trackingpreventiebeoordeling - Apple Safari](tracking-prevention-assessment-apple-safari.md)
-         + [Trackingpreventie-evaluatie - Google Chrome](tracking-prevention-assessment-google-chrome.md)
+         + [Trackingpreventiebeoordeling - Google Chrome](tracking-prevention-assessment-google-chrome.md)
          + [Cookies-updates - vlaggen SameSite en Secure](cookies-updates-samesite-and-secure-flags.md)
-      + Android-SDK {#android}
-         + [Toegang tot de Android SDK Single Sign-On (SSO) voor Android 10-apps](access-enabler-android-sdk-single-signon-sso-on-android-10-devices.md)
-         + [Adobe Pass-verificatie en het nieuwe machtigingenmodel voor Android 6 &quot;Marshmallow&quot;](adobe-primetime-authentication-and-the-android-6-marshmallow-new-permissions-model.md)
+      + Android SDK {#android}
+         + [Access Enabler Android SDK Single Sign-On (SSO) voor Android 10-apps](access-enabler-android-sdk-single-signon-sso-on-android-10-devices.md)
+         + [Adobe Pass Authentication and the Android 6 &quot;Marshmallow&quot; New Permissions Model](adobe-primetime-authentication-and-the-android-6-marshmallow-new-permissions-model.md)
       + iOS/tvOS SDK {#iostvos}
          + [WKWebView-ondersteuning op iOS SDK 3.1+](wkwebview-support-on-ios-sdk-31.md)
          + [Ondersteuning voor SFSafariViewController op iOS SDK 3.2+](sfsafariviewcontroller-support-on-ios-sdk-32.md)
@@ -202,12 +248,12 @@ ht-degree: 3%
          + [iOS-verificatiefout - adobepass.ios.app is niet gevonden](ios-authentication-error-adobepassiosapp-cannot-be-found.md)
          + [Tijdelijke controle opnieuw instellen op iOS](reset-temp-pass-on-ios.md)
          + [Fouten opsporen in de AccessEnabler iOS/tvOS SDK met behulp van console-app-logboeken](debugging-the-accessenabler-iostvos-sdk-using-console-app-logs.md)
-         + [Upgradepad voor iOS/tvOS 3.7.0 inschakelen](accessenabler-iostvos-370-upgrade-path.md)
+         + [ AccessEnabler iOS/tvOS 3.7.0 de Weg van de Verbetering ](accessenabler-iostvos-370-upgrade-path.md)
    + Verificatieomgevingen doorgeven {#primetime-authentication-environments}
       + [De Adobe omgevingen begrijpen](understanding-the-adobe-environments.md)
       + [Uw omgeving instellen en testen in een proefversie](setting-up-your-environment-and-testing-in-prequal.md)
       + [Verificatie- en autorisatiestromen testen met de testsite voor Adobe API](test-authn-authz-flows-using-adobes-api-test-site.md)
-   + Clientloze API {#clientless-api}
+   + Clientless-API {#clientless-api}
       + [Implementatie van de API zonder client - foutcodes / berichten met mogelijke reden / oorzaak](clientless-api-implementation-error-codes-messages-with-probable-reason-cause.md)
       + [Clientless API Flow bij afwezigheid van apparaat-id](clientless-api-flow-in-the-absence-of-device-id.md)
       + [Zonder clip: gebruik geen &#39;&amp;&#39;reg_code in /authenticate Request](clientless-avoid-using-reg-code-in-authenticate-request.md)
@@ -219,7 +265,7 @@ ht-degree: 3%
    + Gereedschappen en hulpprogramma&#39;s {#tools-and-utilities}
       + [Charles Proxy gebruiken](using-charles-proxy.md)
    + Concepten {#concepts}
-      + [Gebruikersnaam](understanding-user-ids.md)
+      + [ Begrijpend Gebruiker - IDs ](understanding-user-ids.md)
 + [Gebruikershandleiding voor TVE Dashboard](tve-dashboard-user-guide.md)
 + Nieuwe TVE-dashboardgebruikershandleiding {#user-guide}
    + [Overzicht van TVE-dashboard](/help/authentication/tve-dashboard-overview.md)
