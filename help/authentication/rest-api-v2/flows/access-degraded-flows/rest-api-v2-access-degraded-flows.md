@@ -1,15 +1,19 @@
 ---
 title: Verminderde toegangsstromen
 description: REST API V2 - Verminderde toegangsstromen
-source-git-commit: c3aa2a24b242669ce0818b95ec34de2adec8001b
+source-git-commit: 4d1ce1301d6baf7309e8ee52c43b02403aa2fab9
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1594'
 ht-degree: 0%
 
 ---
 
 
 # Verminderde toegangsstromen {#degraded-access-flows}
+
+>[!NOTE]
+>
+> De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
 Degradatie zorgt ervoor dat bepaalde eindpunten voor MVPD-verificatie en -autorisatie tijdelijk worden overgeslagen. Meestal initieert de programmeur deze actie, maar ongeacht wie een degradatiegebeurtenis teweegbrengt, hangt de actie van vroegere regelingen af die met betrokken MVPDs worden gemaakt.
 

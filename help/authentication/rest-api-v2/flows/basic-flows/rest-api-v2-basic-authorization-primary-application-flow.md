@@ -1,15 +1,19 @@
 ---
 title: Basisautorisatie - Primaire toepassing - Stroom
 description: REST API V2 - Basisautorisatie - Primaire toepassing - Stroom
-source-git-commit: c3aa2a24b242669ce0818b95ec34de2adec8001b
+source-git-commit: 4d1ce1301d6baf7309e8ee52c43b02403aa2fab9
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '592'
 ht-degree: 0%
 
 ---
 
 
 # Basisvergunningsstroom uitgevoerd binnen primaire toepassing {#basic-authorization-flow-performed-within-primary-application}
+
+>[!NOTE]
+>
+> De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
 De **stroom van de Vergunning** binnen de bevoegdheid van de Authentificatie van Adobe Pass staat de het stromen toepassing toe om te bepalen of MVPD het verzoek van de gebruiker om inhoud toelaat of ontkent te stromen. Als de beslissing `Permit` is, bevat de reactie een media-token. Adobe Pass-server ondertekent het mediatoken en stelt de streamingtoepassing in staat de verificatiebibliotheek voor mediatoken te gebruiken om de authenticiteit van de token te controleren voordat de stream wordt vrijgegeven.
 

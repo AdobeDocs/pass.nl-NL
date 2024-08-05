@@ -1,15 +1,19 @@
 ---
 title: Basisverificatie - Secundaire toepassing - Stroom
 description: Basic Authentication - REST API V2 - Secundaire toepassing - Flow
-source-git-commit: c3aa2a24b242669ce0818b95ec34de2adec8001b
+source-git-commit: 4d1ce1301d6baf7309e8ee52c43b02403aa2fab9
 workflow-type: tm+mt
-source-wordcount: '1719'
+source-wordcount: '1745'
 ht-degree: 0%
 
 ---
 
 
 # Basisverificatiestroom uitgevoerd binnen secundaire toepassing {#basic-authentication-flow-performed-within-secondary-application}
+
+>[!NOTE]
+>
+> De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
 De **stroom van de Authentificatie** binnen de rechten van de Authentificatie van Adobe Pass staat de het stromen toepassing toe om te verifiëren dat een gebruiker een geldige rekening MVPD heeft. Dit proces vereist de gebruiker om een actieve rekening te hebben MVPD en geldige login geloofsbrieven op de MVPD login pagina in te gaan.
 

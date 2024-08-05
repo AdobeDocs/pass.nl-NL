@@ -1,15 +1,19 @@
 ---
 title: Koptekst - AP-Partner-Framework-Status
 description: REST API V2 - Koptekst - AP-Partner-Kader-Status
-source-git-commit: c3aa2a24b242669ce0818b95ec34de2adec8001b
+source-git-commit: 4d1ce1301d6baf7309e8ee52c43b02403aa2fab9
 workflow-type: tm+mt
-source-wordcount: '362'
+source-wordcount: '388'
 ht-degree: 0%
 
 ---
 
 
 # Koptekst - AP-Partner-Framework-Status {#header-ap-partner-framework-status}
+
+>[!NOTE]
+>
+> De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
 ## Overzicht {#overview}
 
