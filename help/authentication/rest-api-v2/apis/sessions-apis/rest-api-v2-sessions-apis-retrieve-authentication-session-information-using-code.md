@@ -1,9 +1,9 @@
 ---
 title: Verificatiesessie ophalen met gebruik van code
 description: REST API V2 - Verificatiesessie ophalen met code
-source-git-commit: c3aa2a24b242669ce0818b95ec34de2adec8001b
+source-git-commit: 4598aaa0827b943de83a9e7d847227edf6b0b387
 workflow-type: tm+mt
-source-wordcount: '398'
+source-wordcount: '409'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,11 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
+> De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
+
+>[!IMPORTANT]
+>
+> De implementatie van REST API V2 wordt begrensd door de [ Throttling mechanisme ](/help/authentication/throttling-mechanism.md) documentatie.
 
 ## Verzoek {#request}
 
