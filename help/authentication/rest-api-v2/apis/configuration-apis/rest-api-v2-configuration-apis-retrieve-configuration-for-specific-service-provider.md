@@ -1,7 +1,7 @@
 ---
 title: Win configuratie voor specifieke dienstverlener terug
 description: REST API V2 - Configuratie ophalen voor specifieke serviceprovider
-source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
+source-git-commit: dc9fab27c7eced2be5dd9f364ab8f2d64f8e4177
 workflow-type: tm+mt
 source-wordcount: '521'
 ht-degree: 1%
@@ -21,11 +21,11 @@ ht-degree: 1%
 
 ## Verzoek {#request}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">HTTP</th>
+      <th style="background-color: #EFF2F7;">HTTP</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">pad</td>
@@ -38,9 +38,9 @@ ht-degree: 1%
       <td></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Padparameters</th>
+      <th style="background-color: #EFF2F7;">Padparameters</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">serviceProvider</td>
@@ -48,9 +48,9 @@ ht-degree: 1%
       <td><i>vereist</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Zoekparameters</th>
+      <th style="background-color: #EFF2F7;">Zoekparameters</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">profiel</td>
@@ -58,9 +58,9 @@ ht-degree: 1%
       <td>optioneel</td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Kopteksten</th>
+      <th style="background-color: #EFF2F7;">Kopteksten</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Toestemming</td>
@@ -114,10 +114,10 @@ ht-degree: 1%
 
 ## Antwoord {#response}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 10%;">Code</th>
-      <th style="background-color: #EFF2F7; width: 20%;">Tekst</th>
+      <th style="background-color: #EFF2F7;">Code</th>
+      <th style="background-color: #EFF2F7;">Tekst</th>
       <th style="background-color: #EFF2F7;">Beschrijving</th>
    </tr>
    <tr>
@@ -159,11 +159,11 @@ ht-degree: 1%
 
 ### Succes {#success}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Kopteksten</th>
+      <th style="background-color: #EFF2F7;">Kopteksten</th>
       <th style="background-color: #EFF2F7"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Status</td>
@@ -176,19 +176,19 @@ ht-degree: 1%
       <td><i>vereist</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Lichaam</th>
+      <th style="background-color: #EFF2F7;">Lichaam</th>
       <th style="background-color: #EFF2F7"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;"></td>
       <td>
          JSON bevat een lijst met elementen, elk element met de volgende kenmerken:
-         <table>
+         <table style="table-layout:auto">
             <tr>
-               <th style="background-color: #EFF2F7; width: 20%;">Kenmerk</th>
+               <th style="background-color: #EFF2F7;">Kenmerk</th>
                <th style="background-color: #EFF2F7"></th>
-               <th style="background-color: #EFF2F7; width: 15%;"></th>
+               <th style="background-color: #EFF2F7;"></th>
             </tr>
             <tr>
                 <td style="background-color: #DEEBFF;">apparaat</td>
@@ -207,62 +207,32 @@ ht-degree: 1%
             </tr>
             <tr>
                 <td style="background-color: #DEEBFF;">aanvrager</td>
-                <td>JSON met de volgende kenmerken:
-                <table>
-                    <tr>
-                        <th style="background-color: #EFF2F7; width: 30%;">Kenmerk</th>
-                    </tr>
-                    <tr>
-                        <td>id</td>
-                    </tr>
-                    <tr>
-                        <td>name</td>
-                    </tr>
-                    <tr>
-                        <td>domeinen</td>
-                    </tr>
-                </table>
+                <td>
+                    JSON-object met de volgende kenmerken:
+                    <ul>
+                        <li><b>id</b></li>
+                        <li><b>name</b></li>
+                        <li><b>domeinen</b></li>
+                    </ul>
                 </td>
                 <td><i>vereist</i></td>
             </tr>
             <tr>
                 <td style="background-color: #DEEBFF;">mvpds</td>
-                <td>JSON met de volgende kenmerken:
-                <table>
-                    <tr>
-                        <th style="background-color: #EFF2F7; width: 30%;">Kenmerk</th>
-                    </tr>
-                    <tr>
-                        <td>id</td>
-                    </tr>
-                    <tr>
-                        <td>displayName</td>
-                    </tr>
-                    <tr>
-                        <td>logoUrl</td>
-                    </tr>
-                    <tr>
-                        <td>isTempPass</td>
-                    </tr>
-                    <tr>
-                        <td>isProxy</td>
-                    </tr>
-                    <tr>
-                        <td>boardingStatus</td>
-                    </tr>
-                    <tr>
-                        <td>platformMappingId</td>
-                    </tr>
-                    <tr>
-                        <td>enablePlatformServices</td>
-                    </tr>
-                    <tr>
-                        <td>displayInPlatformPicker</td>
-                    </tr>
-                    <tr>
-                        <td>enfordPlatformPermissions</td>
-                    </tr>
-                </table>
+                <td>
+                    JSON-object met de volgende kenmerken:
+                    <ul>
+                        <li><b>id</b></li>
+                        <li><b>displayName</b></li>
+                        <li><b>logoUr</b></li>
+                        <li><b>isTempPass</b></li>
+                        <li><b>isProxy</b></li>
+                        <li><b>boardingStatus</b></li>
+                        <li><b>platformMappingId</b></li>
+                        <li><b>enablePlatformServices</b></li>
+                        <li><b>displayInPlatformPicker</b></li>
+                        <li><b>enfordPlatformPermissions</b></li>
+                    </ul>
                 </td>
                 <td><i>vereist</i></td>
             </tr>
@@ -278,11 +248,11 @@ ht-degree: 1%
 
 ### Fout {#error}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Kopteksten</th>
+      <th style="background-color: #EFF2F7;">Kopteksten</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Status</td>
@@ -295,9 +265,9 @@ ht-degree: 1%
       <td><i>vereist</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Lichaam</th>
+      <th style="background-color: #EFF2F7;">Lichaam</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">fout</td>

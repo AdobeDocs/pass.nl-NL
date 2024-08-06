@@ -1,9 +1,9 @@
 ---
 title: Besluiten vóór toelating met specifieke mvpd ophalen
 description: REST API V2 - beslissingen vóór toelating ophalen met specifieke mvpd
-source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
+source-git-commit: dc9fab27c7eced2be5dd9f364ab8f2d64f8e4177
 workflow-type: tm+mt
-source-wordcount: '813'
+source-wordcount: '816'
 ht-degree: 0%
 
 ---
@@ -21,11 +21,11 @@ ht-degree: 0%
 
 ## Verzoek {#request}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">HTTP</th>
+      <th style="background-color: #EFF2F7;">HTTP</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">pad</td>
@@ -38,9 +38,9 @@ ht-degree: 0%
       <td></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Padparameters</th>
+      <th style="background-color: #EFF2F7;">Padparameters</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">serviceProvider</td>
@@ -53,9 +53,9 @@ ht-degree: 0%
       <td><i>vereist</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Bodyparameters</th>
+      <th style="background-color: #EFF2F7;">Bodyparameters</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">bronnen</td>
@@ -63,9 +63,9 @@ ht-degree: 0%
       <td><i>vereist</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Kopteksten</th>
+      <th style="background-color: #EFF2F7;">Kopteksten</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Toestemming</td>
@@ -154,10 +154,10 @@ ht-degree: 0%
 
 ## Antwoord {#response}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 10%;">Code</th>
-      <th style="background-color: #EFF2F7; width: 20%;">Tekst</th>
+      <th style="background-color: #EFF2F7;">Code</th>
+      <th style="background-color: #EFF2F7;">Tekst</th>
       <th style="background-color: #EFF2F7;">Beschrijving</th>
    </tr>
    <tr>
@@ -199,11 +199,11 @@ ht-degree: 0%
 
 ### Succes {#success}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Kopteksten</th>
+      <th style="background-color: #EFF2F7;">Kopteksten</th>
       <th style="background-color: #EFF2F7"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Status</td>
@@ -216,19 +216,19 @@ ht-degree: 0%
       <td><i>vereist</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Lichaam</th>
+      <th style="background-color: #EFF2F7;">Lichaam</th>
       <th style="background-color: #EFF2F7"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">besluiten</td>
       <td>
          JSON bevat een lijst met elementen, elk element met de volgende kenmerken:
-         <table>
+         <table style="table-layout:auto">
             <tr>
-               <th style="background-color: #EFF2F7; width: 20%;">Kenmerk</th>
+               <th style="background-color: #EFF2F7;">Kenmerk</th>
                <th style="background-color: #EFF2F7"></th>
-               <th style="background-color: #EFF2F7; width: 15%;"></th>
+               <th style="background-color: #EFF2F7;"></th>
             </tr>
             <tr>
                 <td style="background-color: #DEEBFF;">resource</td>
@@ -254,28 +254,14 @@ ht-degree: 0%
                <td style="background-color: #DEEBFF;">bron</td>
                <td>
                   Informatie over de beslissingsbron:
-                  <table>
-                     <tr>
-                        <th style="background-color: #EFF2F7; width: 30%;">Waarde</th>
-                        <th style="background-color: #EFF2F7;"></th>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">mvpd</td>
-                        <td>De beschikking wordt gegeven door het eindpunt van de voorlopige MVPD.</td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">aantasting</td>
-                        <td>Beslissingen worden gegeven als gevolg van verminderde toegang.</td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">verleiding</td>
-                        <td>Het besluit wordt genomen als gevolg van tijdelijke toegang.</td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">dummy</td>
-                        <td>De beschikking wordt gegeven als gevolg van een dummy-voortoelatingskenmerk.</td>
-                     </tr>
-                  </table>
+                  <br/><br/>
+                  De mogelijke waarden zijn:
+                  <ul>
+                    <li><b> mvpd </b><br/> wordt het Besluit uitgegeven door het MVPD voortoelatingseindpunt.</li>
+                    <li><b> degradatie </b><br/> Besluit wordt uitgegeven als resultaat van gedegradeerde toegang.</li>
+                    <li><b> temppass </b><br/> Besluit wordt uitgegeven als resultaat van tijdelijke toegang.</li>
+                    <li><b> dummy </b><br/> Besluit wordt uitgegeven als resultaat van dummy preAuthorisation eigenschap.</li>
+                  </ul>
                <td><i>vereist</i></td>
             </tr>
             <tr>
@@ -290,11 +276,11 @@ ht-degree: 0%
 
 ### Fout {#error}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Kopteksten</th>
+      <th style="background-color: #EFF2F7;">Kopteksten</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Status</td>
@@ -307,9 +293,9 @@ ht-degree: 0%
       <td><i>vereist</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Lichaam</th>
+      <th style="background-color: #EFF2F7;">Lichaam</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">fout</td>

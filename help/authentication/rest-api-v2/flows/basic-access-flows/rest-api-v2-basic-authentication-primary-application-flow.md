@@ -1,7 +1,7 @@
 ---
 title: Basisverificatie - Primaire toepassing - Stroom
 description: REST API V2 - Basisverificatie - Primaire toepassing - Stroom
-source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
+source-git-commit: dc9fab27c7eced2be5dd9f364ab8f2d64f8e4177
 workflow-type: tm+mt
 source-wordcount: '894'
 ht-degree: 0%
@@ -91,6 +91,8 @@ Volg de gegeven stappen om de basisauthentificatiestroom uit te voeren die binne
    >
    > * De _vereiste_ parameters en de kopballen moeten geldig zijn.
    > * De integratie tussen de opgegeven `serviceProvider` en `mvpd` moet actief zijn.
+   > 
+   > <br/>
    > 
    > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../enhanced-error-codes.md) volgt.
 

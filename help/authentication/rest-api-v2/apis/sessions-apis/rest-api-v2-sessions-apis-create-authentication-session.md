@@ -1,23 +1,23 @@
 ---
 title: Verificatiesessie maken
 description: REST API V2 - Verificatiesessie maken
-source-git-commit: cf479236cbd43d5e4585bf0eac18a12dbe4bc6c4
+source-git-commit: dc9fab27c7eced2be5dd9f364ab8f2d64f8e4177
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '964'
 ht-degree: 0%
 
 ---
 
 
-# Verificatiesessie maken - test {#create-authentication-session}
+# Verificatiesessie maken {#create-authentication-session}
 
 >[!IMPORTANT]
 >
->De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
+> De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
 >[!IMPORTANT]
 >
->De implementatie van REST API V2 wordt begrensd door de [ Throttling mechanisme ](/help/authentication/throttling-mechanism.md) documentatie.
+> De implementatie van REST API V2 wordt begrensd door de [ Throttling mechanisme ](/help/authentication/throttling-mechanism.md) documentatie.
 
 ## Verzoek {#request}
 
@@ -247,18 +247,9 @@ ht-degree: 0%
                   <br/><br/>
                   De mogelijke waarden zijn:
                   <ul>
-                    <li><b>authenticate</b></li>
-                    <ul>
-                        <li>Het streamingapparaat of een ander apparaat moet de opgegeven URL openen in een gebruikersagent.</li>
-                    </ul>
-                    <li><b>resume</b></li>
-                    <ul>
-                        <li>Het streamingapparaat of een ander apparaat moet de ontbrekende parameters opgeven en de verificatiesessie hervatten met de code.</li>
-                    </ul>
-                    <li><b>autoriseren</b></li>
-                    <ul>
-                        <li>Het streamingapparaat kan direct doorgaan met beslissingsstromen.</li>
-                    </ul>
+                    <li><b> verklaart </b><br/> voor authentiek het stromen apparaat of een ander apparaat moet verstrekte URL in een gebruikersagent openen.</li>
+                    <li><b> hervat </b><br/> het stromen apparaat of een ander apparaat moet de ontbrekende parameters verstrekken en de authentificatiesessie hervatten gebruikend de code.</li>
+                    <li><b> machtigt </b><br/> het stromen apparaat kan met besluitvormingsstromen direct te werk gaan.</li>
                   </ul>
                <td><i>vereist</i></td>
             </tr>
@@ -269,14 +260,8 @@ ht-degree: 0%
                   <br/><br/>
                   De mogelijke waarden zijn:
                   <ul>
-                    <li><b>interactief</b></li>
-                    <ul>
-                        <li>De stroom gaat verder met een navigatie aan verstrekte URL gebruikend een gebruikersagent.</li>
-                    </ul>
-                    <li><b>direct</b></li>
-                    <ul>
-                        <li>De stroom gaat verder met een directe vraag aan verstrekte URL gebruikend een cliënt van HTTP beschikbaar voor de cliëntimplementatie.</li>
-                    </ul>
+                    <li><b> interactief </b><br/> De stroom gaat met een navigatie aan verstrekte URL voort gebruikend een gebruikersagent.</li>
+                    <li><b> direct </b><br/> de stroom gaat met een directe vraag aan verstrekte URL voort gebruikend een cliënt van HTTP beschikbaar voor de cliëntimplementatie.</li>
                   </ul>
                <td><i>vereist</i></td>
             </tr>

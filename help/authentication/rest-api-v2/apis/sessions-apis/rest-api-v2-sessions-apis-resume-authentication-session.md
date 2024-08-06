@@ -1,9 +1,9 @@
 ---
 title: Verificatiesessie hervatten
 description: REST API V2 - Verificatiesessie hervatten
-source-git-commit: 4afd8492c77fdceae3c2504ba392fbcfc0979b22
+source-git-commit: dc9fab27c7eced2be5dd9f364ab8f2d64f8e4177
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '753'
 ht-degree: 0%
 
 ---
@@ -21,11 +21,11 @@ ht-degree: 0%
 
 ## Verzoek {#request}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">HTTP</th>
+      <th style="background-color: #EFF2F7;">HTTP</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">pad</td>
@@ -38,9 +38,9 @@ ht-degree: 0%
       <td></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Padparameters</th>
+      <th style="background-color: #EFF2F7;">Padparameters</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">serviceProvider</td>
@@ -53,9 +53,9 @@ ht-degree: 0%
       <td><i>vereist</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Bodyparameters</th>
+      <th style="background-color: #EFF2F7;">Bodyparameters</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">mvpd</td>
@@ -87,9 +87,9 @@ ht-degree: 0%
       <td><i>vereist</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Kopteksten</th>
+      <th style="background-color: #EFF2F7;">Kopteksten</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Toestemming</td>
@@ -134,10 +134,10 @@ ht-degree: 0%
 
 ## Antwoord {#response}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 10%;">Code</th>
-      <th style="background-color: #EFF2F7; width: 20%;">Tekst</th>
+      <th style="background-color: #EFF2F7;">Code</th>
+      <th style="background-color: #EFF2F7;">Tekst</th>
       <th style="background-color: #EFF2F7;">Beschrijving</th>
    </tr>
    <tr>
@@ -179,11 +179,11 @@ ht-degree: 0%
 
 ### Succes {#success}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Kopteksten</th>
+      <th style="background-color: #EFF2F7;">Kopteksten</th>
       <th style="background-color: #EFF2F7"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Status</td>
@@ -191,19 +191,19 @@ ht-degree: 0%
       <td><i>vereist</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Lichaam</th>
+      <th style="background-color: #EFF2F7;">Lichaam</th>
       <th style="background-color: #EFF2F7"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;"></td>
       <td>
          JSON-object met de volgende kenmerken:
-         <table>
+         <table style="table-layout:auto">
             <tr>
-               <th style="background-color: #EFF2F7; width: 20%;">Kenmerk</th>
+               <th style="background-color: #EFF2F7;">Kenmerk</th>
                <th style="background-color: #EFF2F7"></th>
-               <th style="background-color: #EFF2F7; width: 15%;"></th>
+               <th style="background-color: #EFF2F7;"></th>
             </tr>
             <tr>
                <td style="background-color: #DEEBFF;">actionName</td>
@@ -211,24 +211,11 @@ ht-degree: 0%
                   De handeling die het streamingapparaat moet uitvoeren om de verificatiestroom te voltooien.
                   <br/><br/>
                   De mogelijke waarden zijn:
-                  <table>
-                     <tr>
-                        <th style="background-color: #EFF2F7; width: 30%;">Waarde</th>
-                        <th style="background-color: #EFF2F7;"></th>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">authenticate</td>
-                        <td>Het streamingapparaat of een ander apparaat moet de opgegeven URL openen in een gebruikersagent.</td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">opnieuw proberen</td>
-                        <td>Het streamingapparaat of een ander apparaat moet de ontbrekende parameters leveren en de verificatiesessie opnieuw hervatten met de code.</td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">autoriseren</td>
-                        <td>Het streamingapparaat kan direct doorgaan met beslissingsstromen.</td>
-                     </tr>
-                  </table>
+                  <ul>
+                    <li><b> verklaart </b><br/> voor authentiek het stromen apparaat of een ander apparaat moet verstrekte URL in een gebruikersagent openen.</li>
+                    <li><b> herprobeer </b><br/> het stromen apparaat of een ander apparaat moet de ontbrekende parameters verstrekken en opnieuw proberen herstellend de authentificatiesessie gebruikend de code.</li>
+                    <li><b> machtigt </b><br/> het stromen apparaat kan met besluitvormingsstromen direct te werk gaan.</li>
+                  </ul> 
                <td><i>vereist</i></td>
             </tr>
             <tr>
@@ -237,20 +224,10 @@ ht-degree: 0%
                   Het type interactie dat het streamingapparaat moet uitvoeren om door te gaan met de handeling die is opgegeven door het kenmerk 'actionName'.
                   <br/><br/>
                   De mogelijke waarden zijn:
-                  <table>
-                     <tr>
-                        <th style="background-color: #EFF2F7; width: 30%;">Waarde</th>
-                        <th style="background-color: #EFF2F7;"></th>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">direct</td>
-                        <td>De stroom gaat verder met een directe vraag aan verstrekte URL gebruikend een cliënt van HTTP beschikbaar voor de cliëntimplementatie.</td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">interactief</td>
-                        <td>De stroom gaat verder met een navigatie aan verstrekte URL gebruikend een gebruikersagent.</td>
-                     </tr>
-                  </table>
+                  <ul>
+                    <li><b> interactief </b><br/> De stroom gaat met een navigatie aan verstrekte URL voort gebruikend een gebruikersagent.</li>
+                    <li><b> direct </b><br/> de stroom gaat met een directe vraag aan verstrekte URL voort gebruikend een cliënt van HTTP beschikbaar voor de cliëntimplementatie.</li>
+                  </ul>
                <td><i>vereist</i></td>
             </tr>
             <tr>
@@ -290,11 +267,11 @@ ht-degree: 0%
 
 ### Fout {#error}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Kopteksten</th>
+      <th style="background-color: #EFF2F7;">Kopteksten</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Status</td>
@@ -307,9 +284,9 @@ ht-degree: 0%
       <td><i>vereist</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Lichaam</th>
+      <th style="background-color: #EFF2F7;">Lichaam</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">fout</td>

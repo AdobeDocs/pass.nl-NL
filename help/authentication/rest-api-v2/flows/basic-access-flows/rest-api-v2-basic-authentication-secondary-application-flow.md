@@ -1,7 +1,7 @@
 ---
 title: Basisverificatie - Secundaire toepassing - Stroom
-description: Basic Authentication - REST API V2 - Secundaire toepassing - Flow
-source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
+description: REST API V2 - Basisverificatie - Secundaire toepassing - Stroom
+source-git-commit: dc9fab27c7eced2be5dd9f364ab8f2d64f8e4177
 workflow-type: tm+mt
 source-wordcount: '1756'
 ht-degree: 0%

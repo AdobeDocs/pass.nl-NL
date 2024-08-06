@@ -1,7 +1,7 @@
 ---
 title: Profiel ophalen voor specifieke code
 description: REST API V2 - Profiel ophalen voor specifieke code
-source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
+source-git-commit: dc9fab27c7eced2be5dd9f364ab8f2d64f8e4177
 workflow-type: tm+mt
 source-wordcount: '570'
 ht-degree: 1%
@@ -21,11 +21,11 @@ ht-degree: 1%
 
 ## Verzoek {#request}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">HTTP</th>
+      <th style="background-color: #EFF2F7;">HTTP</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">pad</td>
@@ -38,9 +38,9 @@ ht-degree: 1%
       <td></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Padparameters</th>
+      <th style="background-color: #EFF2F7;">Padparameters</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">serviceProvider</td>
@@ -53,9 +53,9 @@ ht-degree: 1%
       <td><i>vereist</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Kopteksten</th>
+      <th style="background-color: #EFF2F7;">Kopteksten</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Toestemming</td>
@@ -91,10 +91,10 @@ ht-degree: 1%
 
 ## Antwoord {#response}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 10%;">Code</th>
-      <th style="background-color: #EFF2F7; width: 20%;">Tekst</th>
+      <th style="background-color: #EFF2F7;">Code</th>
+      <th style="background-color: #EFF2F7;">Tekst</th>
       <th style="background-color: #EFF2F7;">Beschrijving</th>
    </tr>
    <tr>
@@ -136,11 +136,11 @@ ht-degree: 1%
 
 ### Succes {#success}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Kopteksten</th>
+      <th style="background-color: #EFF2F7;">Kopteksten</th>
       <th style="background-color: #EFF2F7"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Status</td>
@@ -153,9 +153,9 @@ ht-degree: 1%
       <td><i>vereist</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Lichaam</th>
+      <th style="background-color: #EFF2F7;">Lichaam</th>
       <th style="background-color: #EFF2F7"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">profielen</td>
@@ -163,11 +163,11 @@ ht-degree: 1%
         JSON met een overzicht van sleutel-, waardeparen.
         <br/><br/>
         Het hoofdelement wordt gedefinieerd door de volgende waarde:
-        <table>
+        <table style="table-layout:auto">
             <tr>
-               <th style="background-color: #EFF2F7; width: 20%;">Waarde</th>
+               <th style="background-color: #EFF2F7;">Waarde</th>
                <th style="background-color: #EFF2F7"></th>
-               <th style="background-color: #EFF2F7; width: 15%;"></th>
+               <th style="background-color: #EFF2F7;"></th>
             </tr>
             <tr>
                <td style="background-color: #DEEBFF;">mvpd</td>
@@ -176,11 +176,11 @@ ht-degree: 1%
             </tr>
          </table>
          Het element value wordt gedefinieerd door de volgende kenmerken:
-         <table>
+         <table style="table-layout:auto">
             <tr>
-               <th style="background-color: #EFF2F7; width: 20%;">Kenmerk</th>
+               <th style="background-color: #EFF2F7;">Kenmerk</th>
                <th style="background-color: #EFF2F7"></th>
-               <th style="background-color: #EFF2F7; width: 15%;"></th>
+               <th style="background-color: #EFF2F7;"></th>
             </tr>
             <tr>
                <td style="background-color: #DEEBFF;">notBefore</td>
@@ -197,32 +197,11 @@ ht-degree: 1%
                <td>
                   De entiteit die eigenaar is van het profiel.
                   <br/><br/>
-                  Mogelijke waarden zijn:
-                  <table>
-                     <tr>
-                        <th style="background-color: #EFF2F7; width: 30%;">Waarde</th>
-                        <th style="background-color: #EFF2F7;"></th>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">mvpd <br/><br/> b.v., Spectrum, Cablevision, enz.</td>
-                        <td>
-                            Het profiel is gemaakt als resultaat van:
-                            <ul>
-                                <li>Basisverificatie</li>
-                            </ul>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">Adobe</td>
-                        <td>
-                            Het profiel is gemaakt als resultaat van:
-                            <ul>
-                                <li>Verminderde toegang</li>
-                                <li>Tijdelijke toegang</li>
-                            </ul>
-                        </td>
-                     </tr>
-                  </table>
+                  De mogelijke waarden zijn:
+                  <ul>
+                    <li><b> mvpd (bijvoorbeeld Spectrum, Cablevision, enz.)</b><br/> het profiel werd gecreeerd als resultaat van: basisauthentificatie.</li>
+                    <li><b> Adobe </b><br/> het profiel werd gecreeerd als resultaat van: degraded toegang, tijdelijke toegang.</li>
+                  </ul>
                <td><i>vereist</i></td>
             </tr>
             <tr>
@@ -230,40 +209,12 @@ ht-degree: 1%
                <td>
                   Het type profiel.
                   <br/><br/>
-                  Mogelijke waarden zijn:
-                  <table>
-                     <tr>
-                        <th style="background-color: #EFF2F7; width: 30%;">Waarde</th>
-                        <th style="background-color: #EFF2F7;"></th>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">regelmatig</td>
-                        <td>
-                            Het profiel is gemaakt als resultaat van:
-                            <ul>
-                                <li>Basisverificatie</li>
-                            </ul>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">aangetast</td>
-                        <td>
-                            Het profiel is gemaakt als resultaat van:
-                            <ul>
-                                <li>Verminderde toegang</li>
-                            </ul>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">tijdelijk</td>
-                        <td>
-                            Het profiel is gemaakt als resultaat van:
-                            <ul>
-                                <li>Tijdelijke toegang</li>
-                            </ul>
-                        </td>
-                     </tr>
-                  </table>
+                  De mogelijke waarden zijn:
+                  <ul>
+                    <li><b> regelmatig </b><br/> het profiel werd gecreeerd als resultaat van: basisauthentificatie.</li>
+                    <li><b> degraded </b><br/> het profiel werd gecreeerd als resultaat van: degraded toegang.</li>
+                    <li><b> tijdelijk </b><br/> het profiel werd gecreeerd als resultaat van: tijdelijke toegang.</li>
+                  </ul>
                <td><i>vereist</i></td>
             </tr>
             <tr>
@@ -292,11 +243,11 @@ ht-degree: 1%
 
 ### Fout {#error}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Kopteksten</th>
+      <th style="background-color: #EFF2F7;">Kopteksten</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Status</td>
@@ -309,9 +260,9 @@ ht-degree: 1%
       <td><i>vereist</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Lichaam</th>
+      <th style="background-color: #EFF2F7;">Lichaam</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">fout</td>

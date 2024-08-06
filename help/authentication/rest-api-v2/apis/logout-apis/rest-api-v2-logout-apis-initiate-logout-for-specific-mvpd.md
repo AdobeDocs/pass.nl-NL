@@ -1,9 +1,9 @@
 ---
 title: Afmelden starten voor specifieke mvpd
 description: REST API V2 - Afmelden starten voor specifieke mvpd
-source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
+source-git-commit: dc9fab27c7eced2be5dd9f364ab8f2d64f8e4177
 workflow-type: tm+mt
-source-wordcount: '911'
+source-wordcount: '909'
 ht-degree: 0%
 
 ---
@@ -21,11 +21,11 @@ ht-degree: 0%
 
 ## Verzoek {#request}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">HTTP</th>
+      <th style="background-color: #EFF2F7;">HTTP</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">pad</td>
@@ -38,9 +38,9 @@ ht-degree: 0%
       <td></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Padparameters</th>
+      <th style="background-color: #EFF2F7;">Padparameters</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">serviceProvider</td>
@@ -53,9 +53,9 @@ ht-degree: 0%
       <td><i>vereist</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Zoekparameters</th>
+      <th style="background-color: #EFF2F7;">Zoekparameters</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">redirectUrl</td>
@@ -67,9 +67,9 @@ ht-degree: 0%
       <td><i>vereist</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Kopteksten</th>
+      <th style="background-color: #EFF2F7;">Kopteksten</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Toestemming</td>
@@ -141,10 +141,10 @@ ht-degree: 0%
 
 ## Antwoord {#response}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 10%;">Code</th>
-      <th style="background-color: #EFF2F7; width: 20%;">Tekst</th>
+      <th style="background-color: #EFF2F7;">Code</th>
+      <th style="background-color: #EFF2F7;">Tekst</th>
       <th style="background-color: #EFF2F7;">Beschrijving</th>
    </tr>
    <tr>
@@ -186,11 +186,11 @@ ht-degree: 0%
 
 ### Succes {#success}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Kopteksten</th>
+      <th style="background-color: #EFF2F7;">Kopteksten</th>
       <th style="background-color: #EFF2F7"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Status</td>
@@ -203,9 +203,9 @@ ht-degree: 0%
       <td><i>vereist</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Lichaam</th>
+      <th style="background-color: #EFF2F7;">Lichaam</th>
       <th style="background-color: #EFF2F7"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">logouts</td>
@@ -213,11 +213,11 @@ ht-degree: 0%
          JSON met een overzicht van sleutel-, waardeparen.
          <br/><br/>
          Het hoofdelement wordt gedefinieerd door de volgende waarde:
-         <table>
+         <table style="table-layout:auto">
             <tr>
-               <th style="background-color: #EFF2F7; width: 20%;">Waarde</th>
+               <th style="background-color: #EFF2F7;">Waarde</th>
                <th style="background-color: #EFF2F7"></th>
-               <th style="background-color: #EFF2F7; width: 15%;"></th>
+               <th style="background-color: #EFF2F7;"></th>
             </tr>
             <tr>
                <td style="background-color: #DEEBFF;">mvpd</td>
@@ -225,11 +225,11 @@ ht-degree: 0%
                <td><i>vereist</i></td>
          </table>
          Het element value wordt gedefinieerd door de volgende kenmerken:
-         <table>
+         <table style="table-layout:auto">
             <tr>
-               <th style="background-color: #EFF2F7; width: 20%;">Kenmerk</th>
+               <th style="background-color: #EFF2F7;">Kenmerk</th>
                <th style="background-color: #EFF2F7"></th>
-               <th style="background-color: #EFF2F7; width: 15%;"></th>
+               <th style="background-color: #EFF2F7;"></th>
             </tr>
             <tr>
                <td style="background-color: #DEEBFF;">actionName</td>
@@ -237,47 +237,11 @@ ht-degree: 0%
                   De handeling die het streamingapparaat moet uitvoeren om de uitlogingsstroom te voltooien.
                   <br/><br/>
                   De mogelijke waarden zijn:
-                  <table>
-                     <tr>
-                        <th style="background-color: #EFF2F7; width: 30%;">Waarde</th>
-                        <th style="background-color: #EFF2F7;"></th>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">afmelden</td>
-                        <td>
-                            Het streamingapparaat moet de opgegeven URL openen in een gebruikersagent.
-                            <br/><br/>
-                            Deze actie is van toepassing op de volgende scenario's:
-                            <ul>
-                                <li>Log uit MVPD met een logout eindpunt</li>
-                            </ul>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">complete</td>
-                        <td>
-                            Het streamingapparaat hoeft geen volgende handelingen uit te voeren.
-                            <br/><br/>
-                            Deze actie is van toepassing op de volgende scenario's:
-                            <ul>\
-                                <li>Log uit MVPD zonder een logout eindpunt (dummy logout eigenschap)</li>
-                                <li>Afmelden tijdens verminderde toegang</li>
-                                <li>Afmelden tijdens tijdelijke toegang</li>
-                            </ul>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">ongeldig</td>
-                        <td>
-                            Het streamingapparaat hoeft geen volgende handelingen uit te voeren.
-                            <br/><br/>
-                            Deze actie is van toepassing op de volgende scenario's:
-                            <ul>
-                                <li>Afmelden bij MVPD wanneer geen geldig profiel wordt gevonden</li>
-                            </ul>
-                        </td>
-                     </tr>
-                  </table>
+                  <ul>
+                    <li><b> logout </b><br/> het stromen apparaat moet verstrekte URL in een gebruikersagent openen.<br/> Deze actie is voor de volgende scenario's van toepassing: logout van MVPD met een logout eindpunt.</li>
+                    <li><b> volledig </b><br/> het stromen apparaat te hoeven niet om het even welke verdere acties uit te voeren.<br/> Deze actie is voor de volgende scenario's van toepassing: logout van MVPD zonder een logout eindpunt (dummy logout eigenschap), logout tijdens degraded toegang, logout tijdens tijdelijke toegang.</li>
+                    <li><b> ongeldig </b><br/> het stromen apparaat te hoeven niet om het even welke verdere acties uit te voeren.<br/> Deze actie is voor de volgende scenario's van toepassing: logout van MVPD wanneer geen geldig profiel wordt gevonden.</li>
+                  </ul>  
                <td><i>vereist</i></td>
             </tr>
             <tr>
@@ -286,31 +250,10 @@ ht-degree: 0%
                   Het type interactie dat het streamingapparaat moet uitvoeren om door te gaan met de handeling die is opgegeven door het kenmerk 'actionName'.
                   <br/><br/>
                   De mogelijke waarden zijn:
-                  <table>
-                     <tr>
-                        <th style="background-color: #EFF2F7; width: 30%;">Waarde</th>
-                        <th style="background-color: #EFF2F7;"></th>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">interactief</td>
-                        <td>
-                            Dit type is van toepassing op de volgende waarden van het attribuut "actionName":
-                            <ul>
-                                <li>afmelden</li>
-                            </ul>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">none</td>
-                        <td>
-                            Dit type is van toepassing op de volgende waarden van het attribuut "actionName":
-                            <ul>
-                                <li>complete</li>
-                                <li>ongeldig</li>
-                            </ul>
-                        </td>
-                     </tr>
-                  </table>
+                  <ul>
+                    <li><b> interactief </b><br/> Dit type is op de volgende waarden van het ` actionName attribuut van toepassing: <b> logout </b>.</li>
+                    <li><b> niets </b><br/> Dit type is op de volgende waarden van het ` actionName attribuut van toepassing: <b> volledig </b>, <b> ongeldig </b>.</li>
+                  </ul>
                <td><i>vereist</i></td>
             </tr>
             <tr>
@@ -325,8 +268,8 @@ ht-degree: 0%
                   <br/><br/>
                   Dit is niet aanwezig voor de volgende waarden van het attribuut "actionName":
                   <ul>
-                    <li>complete</li>
-                    <li>ongeldig</li>
+                    <li><b>complete</b></li>
+                    <li><b>ongeldig</b></li>
                   </ul>
                </td>
                <td>optioneel</td>
@@ -338,11 +281,11 @@ ht-degree: 0%
 
 ### Fout {#error}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Kopteksten</th>
+      <th style="background-color: #EFF2F7;">Kopteksten</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Status</td>
@@ -355,9 +298,9 @@ ht-degree: 0%
       <td><i>vereist</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">Lichaam</th>
+      <th style="background-color: #EFF2F7;">Lichaam</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">fout</td>
