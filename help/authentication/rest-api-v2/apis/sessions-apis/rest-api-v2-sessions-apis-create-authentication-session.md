@@ -1,9 +1,9 @@
 ---
 title: Verificatiesessie maken
 description: REST API V2 - Verificatiesessie maken
-source-git-commit: 9c04ec17c848d6734dc2ca2d6357ed5fb49341ec
+source-git-commit: cf479236cbd43d5e4585bf0eac18a12dbe4bc6c4
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '965'
 ht-degree: 0%
 
 ---
@@ -246,24 +246,20 @@ ht-degree: 0%
                   De handeling die het streamingapparaat moet uitvoeren om de verificatiestroom te voltooien.
                   <br/><br/>
                   De mogelijke waarden zijn:
-                  <table style="table-layout:auto">
-                     <tr>
-                        <th style="background-color: #EFF2F7;">Waarde</th>
-                        <th style="background-color: #EFF2F7;"></th>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">authenticate</td>
-                        <td>Het streamingapparaat of een ander apparaat moet de opgegeven URL openen in een gebruikersagent.</td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">resume</td>
-                        <td>Het streamingapparaat of een ander apparaat moet de ontbrekende parameters opgeven en de verificatiesessie hervatten met de code.</td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">autoriseren</td>
-                        <td>Het streamingapparaat kan direct doorgaan met beslissingsstromen.</td>
-                     </tr>
-                  </table>
+                  <ul>
+                    <li><b>authenticate</b></li>
+                    <ul>
+                        <li>Het streamingapparaat of een ander apparaat moet de opgegeven URL openen in een gebruikersagent.</li>
+                    </ul>
+                    <li><b>resume</b></li>
+                    <ul>
+                        <li>Het streamingapparaat of een ander apparaat moet de ontbrekende parameters opgeven en de verificatiesessie hervatten met de code.</li>
+                    </ul>
+                    <li><b>autoriseren</b></li>
+                    <ul>
+                        <li>Het streamingapparaat kan direct doorgaan met beslissingsstromen.</li>
+                    </ul>
+                  </ul>
                <td><i>vereist</i></td>
             </tr>
             <tr>
@@ -272,20 +268,16 @@ ht-degree: 0%
                   Het type interactie dat het streamingapparaat moet uitvoeren om door te gaan met de handeling die is opgegeven door het kenmerk 'actionName'.
                   <br/><br/>
                   De mogelijke waarden zijn:
-                  <table style="table-layout:auto">
-                     <tr>
-                        <th style="background-color: #EFF2F7;">Waarde</th>
-                        <th style="background-color: #EFF2F7;"></th>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">direct</td>
-                        <td>De stroom gaat verder met een directe vraag aan verstrekte URL gebruikend een cliënt van HTTP beschikbaar voor de cliëntimplementatie.</td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">interactief</td>
-                        <td>De stroom gaat verder met een navigatie aan verstrekte URL gebruikend een gebruikersagent.</td>
-                     </tr>
-                  </table>
+                  <ul>
+                    <li><b>interactief</b></li>
+                    <ul>
+                        <li>De stroom gaat verder met een navigatie aan verstrekte URL gebruikend een gebruikersagent.</li>
+                    </ul>
+                    <li><b>direct</b></li>
+                    <ul>
+                        <li>De stroom gaat verder met een directe vraag aan verstrekte URL gebruikend een cliënt van HTTP beschikbaar voor de cliëntimplementatie.</li>
+                    </ul>
+                  </ul>
                <td><i>vereist</i></td>
             </tr>
             <tr>
