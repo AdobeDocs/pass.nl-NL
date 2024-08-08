@@ -1,7 +1,7 @@
 ---
 title: Basisverificatie - Secundaire toepassing - Stroom
 description: REST API V2 - Basisverificatie - Secundaire toepassing - Stroom
-source-git-commit: c849882286c88d16a5652717d381700287c53277
+source-git-commit: d59afc0384a1c3617143efcef4ab5fb1a323e511
 workflow-type: tm+mt
 source-wordcount: '2000'
 ht-degree: 0%
@@ -139,7 +139,7 @@ Volg de gegeven stappen om de basisauthentificatiestroom uit te voeren die binne
 
    >[!NOTE]
    >
-   > Suggestie: de secundaire toepassing kan gebruikers informeren dat de gebruikte `code` ongeldig is in het geval van een foutreactie die een ontbrekende verificatiesessie aangeeft, en hen adviseren opnieuw te proberen.
+   > Suggestie: de secundaire toepassing kan gebruikers informeren dat de gebruikte `code` ongeldig is in het geval van een foutreactie die een ontbrekende verificatiesessie aangeeft, en hen adviseren opnieuw te proberen met een nieuwe.
 
 1. **Open URL in gebruikersagent:** De secundaire toepassing opent een gebruikersagent om het zelf gegevens verwerkte `url` te laden, die een verzoek aan het Authenticate eindpunt doet. Deze stroom kan verscheidene omleidingen omvatten, die uiteindelijk de gebruiker aan de MVPD login pagina leiden en geldige geloofsbrieven verstrekken.
 
