@@ -1,9 +1,9 @@
 ---
 title: Basisverificatie - Secundaire toepassing - Stroom
 description: REST API V2 - Basisverificatie - Secundaire toepassing - Stroom
-source-git-commit: dc9fab27c7eced2be5dd9f364ab8f2d64f8e4177
+source-git-commit: c849882286c88d16a5652717d381700287c53277
 workflow-type: tm+mt
-source-wordcount: '1756'
+source-wordcount: '2000'
 ht-degree: 0%
 
 ---
@@ -109,7 +109,46 @@ Volg de gegeven stappen om de basisauthentificatiestroom uit te voeren die binne
 
    Als de Adobe Pass-backend geen geldig profiel herkent, wordt in de streamingtoepassing de `code` weergegeven die kan worden gebruikt om de verificatiesessie in een secundaire toepassing te hervatten.
 
+1. **bevestigt authentificatiecode:** de secundaire toepassing bevestigt de verstrekte gebruiker `code` om ervoor te zorgen het met authentificatie MVPD in gebruikersagent kan te werk gaan.
+
+   >[!IMPORTANT]
+   >
+   > Verwijs naar [ de informatie van de authentificatiesessie terug ](../../apis/sessions-apis/rest-api-v2-sessions-apis-retrieve-authentication-session-information-using-code.md) API documentatie voor details op:
+   >
+   > * Alle _vereiste_ parameters, als `serviceProvider` en `code`
+   > * Alle _vereiste_ kopballen, als `Authorization`
+   > * Alle _facultatieve_ parameters en kopballen
+
+1. **de informatie van de Terugkeer over authentificatiesessie:** De reactie van het eindpunt van zittingen bevat de volgende gegevens:
+   * Het kenmerk `existing` bevat de bestaande parameters die al zijn opgegeven.
+   * Het attribuut `missing` bevat de ontbrekende parameters die moeten worden verstrekt om de authentificatiestroom te voltooien.
+
+   >[!IMPORTANT]
+   >
+   > Verwijs naar [ verkrijg de informatie van de authentificatiesessie ](../../apis/sessions-apis/rest-api-v2-sessions-apis-retrieve-authentication-session-information-using-code.md) API documentatie voor details over de informatie die in een reactie van de zittingsbevestiging wordt verstrekt.
+   >
+   > <br/>
+   >
+   > Het eindpunt van Sessies valideert de aanvraaggegevens om ervoor te zorgen dat aan de basisvoorwaarden wordt voldaan:
+   >
+   > * De _vereiste_ parameters en de kopballen moeten geldig zijn.
+   >
+   > <br/>
+   >
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../enhanced-error-codes.md) volgt.
+
+   >[!NOTE]
+   >
+   > Suggestie: de secundaire toepassing kan gebruikers informeren dat de gebruikte `code` ongeldig is in het geval van een foutreactie die een ontbrekende verificatiesessie aangeeft, en hen adviseren opnieuw te proberen.
+
 1. **Open URL in gebruikersagent:** De secundaire toepassing opent een gebruikersagent om het zelf gegevens verwerkte `url` te laden, die een verzoek aan het Authenticate eindpunt doet. Deze stroom kan verscheidene omleidingen omvatten, die uiteindelijk de gebruiker aan de MVPD login pagina leiden en geldige geloofsbrieven verstrekken.
+
+   >[!IMPORTANT]
+   >
+   > Verwijs naar de [ authentificatie van de Voer in gebruikersagent ](../../apis/sessions-apis/rest-api-v2-sessions-apis-perform-authentication-in-user-agent.md) API documentatie voor details op uit:
+   >
+   > * Alle _vereiste_ parameters, als `serviceProvider` en `code`
+   > * Alle _facultatieve_ parameters en kopballen
 
 1. **Volledige authentificatie MVPD:** als de authentificatiestroom succesvol is, slaat de gebruikersagent interactie een regelmatig profiel in Adobe Pass achterkant op en bereikt verstrekte `redirectUrl`.
 
@@ -231,6 +270,10 @@ Volg de gegeven stappen om de basisauthentificatiestroom uit te voeren die binne
    > <br/>
    > 
    > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../enhanced-error-codes.md) volgt.
+
+   >[!NOTE]
+   >
+   > Suggestie: de secundaire toepassing kan gebruikers informeren dat de gebruikte `code` ongeldig is in het geval van een foutreactie die een ontbrekende verificatiesessie aangeeft, en hen adviseren opnieuw te proberen met een nieuwe.
 
 1. **wijs bestaand profiel op:** De reactie van het eindpunt van Zegelingen bevat de volgende gegevens:
    * Het attribuut `actionName` wordt ingesteld op &quot;authorize&quot;.

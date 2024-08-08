@@ -1,7 +1,7 @@
 ---
 title: Verificatiesessie hervatten
 description: REST API V2 - Verificatiesessie hervatten
-source-git-commit: dc9fab27c7eced2be5dd9f364ab8f2d64f8e4177
+source-git-commit: c849882286c88d16a5652717d381700287c53277
 workflow-type: tm+mt
 source-wordcount: '753'
 ht-degree: 0%
@@ -47,7 +47,7 @@ ht-degree: 0%
       <td>De interne unieke id die tijdens het instapproces aan de Serviceleverancier is gekoppeld.</td>
       <td><i>vereist</i></td>
    </tr>
-    <tr>
+   <tr>
       <td style="background-color: #DEEBFF;">code</td>
       <td>De verificatiecode die wordt verkregen na het maken van de verificatiesessie op het streamingapparaat.</td>
       <td><i>vereist</i></td>
