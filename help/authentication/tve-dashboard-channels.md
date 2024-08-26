@@ -1,13 +1,13 @@
 ---
 title: Kanalen
 description: Leer meer over kanalen en hun verschillende configuraties in het TVE-dashboard.
-source-git-commit: b81cc7498a8035f4c274ba25952dcd1dcd8d71f5
+exl-id: bbddeccb-6b6f-4a8f-87ab-d4af538eee1d
+source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1124'
 ht-degree: 0%
 
 ---
-
 
 # Kanalen {#channels}
 
@@ -15,25 +15,25 @@ ht-degree: 0%
 >
 >De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
-De **Kanalen** kunt u de instellingen voor de kanalen die aan een specifieke programmeur zijn gekoppeld, weergeven en beheren. U kunt [een nieuw kanaal toevoegen](#add-new-channel) volgens uw vereiste.
+De **sectie van Kanalen** van het Dashboard van TVE staat u toe om montages voor de kanalen te bekijken en te beheren verbonden aan een specifieke programmeur. U kunt ook [ een nieuw kanaal ](#add-new-channel) volgens uw vereiste toevoegen.
 
-De **Kanalen** in het linkerdeelvenster wordt een lijst met gekoppelde kanalen weergegeven met de volgende details:
+Het **lusje van Kanalen** in het linkerpaneel toont een lijst van verbonden kanalen met de volgende details:
 
-* **Weergavenaam**: De merknaam van het kanaal dat voor commerciële doeleinden wordt gebruikt.
-* **Kanaal-id**: Een unieke id, ook wel de id van de aanvrager genoemd.
-* **Integraties**: Het aantal verbindingen dat is gemaakt met [MVPD&#39;s](/help/authentication/glossary.md#mvpd).
+* **naam van de Vertoning**: De merknaam van het kanaal dat voor commerciële doeleinden wordt gebruikt.
+* **identiteitskaart van het Kanaal**: Een uniek herkenningsteken, die ook als identiteitskaart van de Aanvrager wordt bedoeld.
+* **Integraties**: Het aantal verbindingen die met [ worden gevestigd MVPDs ](/help/authentication/glossary.md#mvpd).
 
-![Lijst van bestaande kanalen](assets/channels-list.png)
+![ Lijst van bestaande kanalen ](assets/channels-list.png)
 
 *Lijst van bestaande kanalen*
 
-Typ de naam van het kanaal in het dialoogvenster **Zoeken** balk boven de lijst voor meer informatie over het kanaal.
+Typ de naam van het kanaal in de **bar van het Onderzoek** boven de lijst om meer over het kanaal te weten.
 
 ## Kanaalconfiguraties beheren {#manage-channel-conf}
 
 Voer de stappen uit om verschillende instellingen van een specifiek kanaal te beheren.
 
-1. Selecteer de **Kanalen** in het linkerdeelvenster.
+1. Selecteer het **lusje van Kanalen** in het linkerpaneel.
 1. Selecteer het kanaal in de beschikbare lijst.
 1. Selecteer een van de volgende tabbladen om de bijbehorende instellingen van het geselecteerde kanaal weer te geven en te bewerken:
 
@@ -44,65 +44,65 @@ Voer de stappen uit om verschillende instellingen van een specifiek kanaal te be
    * [Geregistreerde toepassingen](#registered-applications)
    * [Aangepaste schema&#39;s](#custom-schemes)
 
-   ![Kanaalinstellingen](assets/channel-settings.png)
+   ![ montages van het Kanaal ](assets/channel-settings.png)
 
-   *Kanaalinstellingen*
+   *montages van het Kanaal*
 
 >[!IMPORTANT]
 >
-> Weergave [Wijzigingen controleren en duwen](/help/authentication/tve-dashboard-review-push-changes.md) voor meer informatie over het activeren van de configuratieveranderingen.
+> De Controle van de mening [ en duw verandert ](/help/authentication/tve-dashboard-review-push-changes.md) voor meer informatie bij het activeren van de configuratieveranderingen.
 
 ### Algemene instellingen {#general-settings}
 
-Dit tabblad bevat **Kanaalgegevens** en **Analyseconfiguratie**.
+Dit lusje stelt **en** Configuratie van Analytics **voor de Informatie van het Kanaal van 0}.**
 
 #### Kanaalgegevens {#channel-information}
 
 In deze sectie kunt u de volgende details bewerken:
 
-* **Weergavenaam**: De merknaam van het kanaal dat voor commerciële doeleinden wordt gebruikt.
+* **naam van de Vertoning**: De merknaam van het kanaal dat voor commerciële doeleinden wordt gebruikt.
 
-* **Standaard omleidings-URL**: De back-up leidt URL om verificatie en afmelden.
+* **Standaard opnieuw richt URL**: De steun richt URL voor authentificatie en logout opnieuw.
 
-* **Foutmelding**: Bij selecteren **Ja**, sturen de SDK&#39;s van Adobe Pass foutrapporten naar Adobe Pass backend voor analyses.
+* **Fout die** meldt: Bij het selecteren **ja**, verzendt Adobe Pass SDKs foutenrapporten naar Adobe Pass achterste voor analyses.
 
-![Kanaalgegevens bewerken](assets/channel-information.png)
+![ geef de informatie van het Kanaal uit ](assets/channel-information.png)
 
-*Kanaalgegevens bewerken*
+*geef de informatie van het Kanaal uit*
 
 #### Analyseconfiguratie {#analytics-configuration}
 
 Deze sectie staat u toe om het door:sturen van de gebeurtenissen van de Authentificatie van Adobe Pass aan Adobe Analytics te vormen.
 
-Inschakelen **Analyseconfiguratie**, contacteer uw Technische Manager van de Rekening (TAM) voor meer details over vestiging identiteitskaart van de Reeks van het Rapport (RSID).
+Om **Configuratie van Analytics** toe te laten, contacteer uw Technische Manager van de Rekening (TAM) voor meer details bij vestiging identiteitskaart van de Reeks van het Rapport (RSID).
 
-![Analytische configuraties inschakelen](assets/channel-analytical-conf.png)
+![ laat de Configuraties van Analytics ](assets/channel-analytical-conf.png) toe
 
-*Analytische configuraties inschakelen*
+*laat de Configuraties van Analytics* toe
 
-Selecteren **Nieuwe analyseconfiguratie toevoegen** meerdere configuraties toevoegen.
+Selecteer **toevoegen nieuwe analytische configuratie** om veelvoudige configuraties toe te voegen.
 
-Er is een nieuwe configuratiewijziging gemaakt en deze is gereed voor serverupdate. Om de nieuwe analytische configuratie van te gebruiken **Analyseconfiguratie** sectie, gaat u verder met de [revisie- en pushwijzigingen](/help/authentication/tve-dashboard-review-push-changes.md) stroom.
+Er is een nieuwe configuratiewijziging gemaakt en deze is gereed voor serverupdate. Om de nieuwe analytische configuratie van de **sectie van de Configuratie van de Analytics** te gebruiken, ga met de [ overzicht te werk en druk veranderingen ](/help/authentication/tve-dashboard-review-push-changes.md) stroom.
 
 ### Integraties {#integrations}
 
-Dit lusje toont een lijst van beschikbare integratie tussen het momenteel geselecteerde kanaal en MVPDs. De lijst geeft elke integratie samen met de status weer, en geeft aan of deze is ingeschakeld of niet. Selecteer een specifieke integratie in deze lijst voor toegang tot gedetailleerde informatie in het dialoogvenster [Integraties](tve-dashboard-integrations.md) sectie.
+Dit lusje toont een lijst van beschikbare integratie tussen het momenteel geselecteerde kanaal en MVPDs. De lijst geeft elke integratie samen met de status weer, en geeft aan of deze is ingeschakeld of niet. Selecteer een specifieke integratie van deze lijst om tot gedetailleerde informatie in de [ sectie van de Integraties ](tve-dashboard-integrations.md) toegang te hebben.
 
-![Lijst met beschikbare integratie](assets/channel-integrations.png)
+![ Lijst van Beschikbare Integraties ](assets/channel-integrations.png)
 
-*Lijst met beschikbare integratie*
+*Lijst van Beschikbare Integraties*
 
 ### Certificaten {#certificates}
 
-Op dit tabblad wordt een lijst met [beschikbare certificaten](#available-certificates) en [overerfde beschikbare certificaten](#inherited-avail-certificates) gebruikt in de coderingsstromen van gebruikersmetagegevens. Er worden details weergegeven over elk certificaat dat het volgende bevat:
+Dit lusje toont een lijst van [ beschikbare certificaten ](#available-certificates) en [ geërfte beschikbare certificaten ](#inherited-avail-certificates) die in de de encryptiestromen van gebruikersmeta-gegevens worden gebruikt. Er worden details weergegeven over elk certificaat dat het volgende bevat:
 
-* De status (of ingeschakeld voor **gebruikersmetagegevenscodering** gebruik of niet)
+* De status (of toegelaten voor **encryptie van gebruikersmeta-gegevens** gebruik of niet)
 * Serienummer
 * Naam van de emittentenorganisatie
 * Naam van de organisatie die het onderwerp vormt
 * Datum van afgifte
 * Vervaldatum
-* Een vervolgkeuzemenu voor het versleutelen van gebruikersmetagegevens (als u **Ja**, versleutelt het certificaat gevoelige gebruikersgegevens, zoals zip-codewaarden.
+* Een dropdown menu om gebruikersmeta-gegevens (als u **ja** selecteert, codeert het certificaat gevoelige gebruikersinformatie, zoals zip codewaarden).
 
 #### Beschikbare certificaten {#available-certificates}
 
@@ -116,45 +116,45 @@ U kunt de volgende wijzigingen aanbrengen in de sectie met beschikbare certifica
 
 Ga als volgt te werk om een nieuw certificaat toe te voegen:
 
-1. Selecteren **Nieuw certificaat toevoegen** boven aan het dialoogvenster **Beschikbare certificaten** sectie.
+1. Selecteer **nieuw certificaat** bij de bovenkant van de **Beschikbare sectie van Certificaten** toevoegen.
 
-   ![Een nieuw certificaat toevoegen](assets/add-new-certificate.png)
+   ![ voeg een nieuw certificaat toe ](assets/add-new-certificate.png)
 
-   *Een nieuw certificaat toevoegen*
+   *voeg een nieuw certificaat toe*
 
-1. Plak de openbare sleutel van uw certificaat in **Nieuw certificaat** in.
-1. Selecteren **Certificaat toevoegen**.
+1. Plak de openbare sleutel van uw certificaat in het **Nieuwe certificaat** dialoogvakje.
+1. Selecteer **toevoegen certificaat**.
 
-   Er is een nieuwe configuratiewijziging gemaakt en deze is gereed voor serverupdate. Als u het nieuwe certificaat wilt gebruiken dat in het dialoogvenster **Beschikbare certificaten** sectie, gaat u verder met de [revisie- en pushwijzigingen](/help/authentication/tve-dashboard-review-push-changes.md) stroom.
+   Er is een nieuwe configuratiewijziging gemaakt en deze is gereed voor serverupdate. Om het nieuwe certificaat te gebruiken dat in de **Beschikbare sectie van Certificaten** wordt vermeld, ga met de [ overzicht en duw veranderingen ](/help/authentication/tve-dashboard-review-push-changes.md) stroom te werk.
 
-1. Zoek het nieuwe certificaat in de lijst met **Beschikbare certificaten**.
+1. Bepaal de plaats van het nieuwe certificaat in de lijst van **Beschikbare Certificaten**.
 
    >[!IMPORTANT]
    >
    > Zorg ervoor dat uw systemen up-to-date zijn en klaar zijn om het nieuwe certificaat te gebruiken.
 
-1. Selecteren **Ja** van **Wordt gebruikt voor gecodeerde gebruikersmetagegevens** een nieuw certificaat activeren.
+1. Selecteer **ja** van **Gebruikt aan gecodeerde gebruikersmeta-gegevens** dropdown menu om een nieuw certificaat te activeren.
 
 ##### Certificaat verwijderen {#delete-certificate}
 
 Ga als volgt te werk om een certificaat te verwijderen.
 
-1. Houd de muisaanwijzer boven het certificaat dat u uit de lijst met **Beschikbare certificaten**.
-1. Selecteren **Verwijderen**.
+1. Beweeg op het certificaat dat u van de lijst van **Beschikbare certificaten** wilt schrappen.
+1. Selecteer **verwijderen**.
 
-   ![Het geselecteerde certificaat verwijderen](assets/channel-delete-certificate.png)
+   ![ verwijder het geselecteerde certificaat ](assets/channel-delete-certificate.png)
 
-   *Het geselecteerde certificaat verwijderen*
+   *verwijder het geselecteerde certificaat*
 
-1. Selecteren **Verwijderen** van de **Actief certificaat verwijderen** in.
+1. Selecteer **Schrapping** van **de actieve doos van de certificaatdialoog van de Schrapping**.
 
-Er is een nieuwe configuratiewijziging gemaakt en deze is gereed voor serverupdate. Het certificaat wordt verwijderd uit het **Beschikbare certificaten** alleen secties na [revisie- en pushwijzigingen](/help/authentication/tve-dashboard-review-push-changes.md).
+Er is een nieuwe configuratiewijziging gemaakt en deze is gereed voor serverupdate. Het certificaat zal van de **Beschikbare certificaten** sectie slechts na [ overzicht en duw veranderingen ](/help/authentication/tve-dashboard-review-push-changes.md) worden geschrapt.
 
 #### Overgenomen beschikbare certificaten {#inherited-avail-certificates}
 
 Mediabedrijven definiëren deze certificaten op hun eigen niveau. Alle kanalen die aan hetzelfde mediabedrijf zijn gekoppeld, kunnen deze certificaten gebruiken.
 
-![Overgenomen beschikbare certificaten](assets/inherited-available-certificates.png)
+![ Overgenomen beschikbare certificaten ](assets/inherited-available-certificates.png)
 
 *Overgenomen beschikbare certificaten*
 
@@ -175,59 +175,58 @@ U kunt de volgende wijzigingen aanbrengen in domeinen:
 
 Ga als volgt te werk om een domein toe te voegen.
 
-1. Selecteren **Nieuw domein toevoegen** in de rechterbovenhoek van het **Beschikbare domeinen** sectie.
+1. Selecteer **nieuw domein** bij de hoger-juiste hoek van de **Beschikbare Domeinen** sectie toevoegen.
 
-   ![Een nieuw domein toevoegen](assets/add-new-domain.png)
+   ![ voeg een nieuw domein ](assets/add-new-domain.png) toe
 
-   *Een nieuw domein toevoegen*
+   *voeg een nieuw domein* toe
 
-1. Typ de naam van het domein in het dialoogvenster **Nieuw domein** in.
+1. Typ de naam van uw domein in het **Nieuwe domein** dialoogvakje.
 
-1. Selecteren **Domein toevoegen** om een nieuw domein voor het geselecteerde kanaal toe te voegen.
+1. Selecteer **domein** toevoegen om een nieuw domein voor het geselecteerde kanaal toe te voegen.
 
-Er is een nieuwe configuratiewijziging gemaakt en deze is gereed voor serverupdate. Om het nieuwe domein te gebruiken dat in **Beschikbare domeinen** sectie, gaat u verder met de [revisie- en pushwijzigingen](/help/authentication/tve-dashboard-review-push-changes.md) stroom.
+Er is een nieuwe configuratiewijziging gemaakt en deze is gereed voor serverupdate. Om het nieuwe domein te gebruiken dat in de **Beschikbare sectie van Domeinen** wordt vermeld, ga met de [ overzicht en duw veranderingen ](/help/authentication/tve-dashboard-review-push-changes.md) stroom te werk.
 
 #### Domein verwijderen {#delete-domain}
 
 Ga als volgt te werk om een domein te verwijderen.
 
-1. Houd de muisaanwijzer boven het domein dat u uit de lijst met **Beschikbare domeinen**.
-1. Selecteren **Verwijderen**.
+1. Beweeg over het domein dat u van de lijst van **Beschikbare Domeinen** wilt schrappen.
+1. Selecteer **verwijderen**.
 
-   ![Het geselecteerde domein verwijderen](assets/remove-domain.png)
+   ![ verwijder het geselecteerde domein ](assets/remove-domain.png)
 
-   *Het geselecteerde domein verwijderen*
+   *verwijder het geselecteerde domein*
 
-1. Selecteren **Verwijderen** op de **Domein verwijderen** in.
+1. Selecteer **Schrapping** op het **domein** dialoogvakje van de Schrapping.
 
-Er is een nieuwe configuratiewijziging gemaakt en deze is gereed voor serverupdate. Het domein wordt verwijderd uit het **Beschikbare domeinen** alleen secties na [revisie- en pushwijzigingen](/help/authentication/tve-dashboard-review-push-changes.md).
+Er is een nieuwe configuratiewijziging gemaakt en deze is gereed voor serverupdate. Het domein zal van de **Beschikbare sectie van Domeinen** slechts na [ overzicht en duw veranderingen ](/help/authentication/tve-dashboard-review-push-changes.md) worden geschrapt.
 
 Het geselecteerde domein is niet meer beschikbaar voor gebruik. Als gevolg hiervan verliest de toepassing die aan dit domein is gekoppeld toegang tot de Adobe Pass-verificatieservices.
 
 ### Geregistreerde toepassingen {#registered-applications}
 
-Dit tabblad bevat een lijst met toepassingsregistraties. Weergave [Dynamisch clientregistratiebeheer](/help/authentication/dynamic-client-registration-management.md) voor meer informatie .
+Dit tabblad bevat een lijst met toepassingsregistraties.
 
 ### Aangepaste schema&#39;s {#custom-schemes}
 
-Op dit tabblad wordt een lijst met aangepaste schema&#39;s weergegeven. Weergave [iOS/tvOS-toepassingsregistratie](/help/authentication/iostvos-application-registration.md) en [Dynamisch clientregistratiebeheer](/help/authentication/dynamic-client-registration-management.md) voor meer informatie .
+Op dit tabblad wordt een lijst met aangepaste schema&#39;s weergegeven. De toepassingsregistratie van de mening [ iOS/tvOS ](/help/authentication/iostvos-application-registration.md).
 
 ## Nieuw kanaal toevoegen {#add-new-channel}
 
 Ga als volgt te werk om een nieuw kanaal toe te voegen.
 
-1. Selecteer de **Kanalen** in het linkerdeelvenster.
-1. Selecteren **Nieuw kanaal toevoegen** in de rechterbovenhoek van het **Kanalen** sectie.
+1. Selecteer het **lusje van Kanalen** in het linkerpaneel.
+1. Selecteer **nieuw kanaal** bij de hoger-juiste hoek van de **Kanalen** sectie toevoegen.
 
-   ![Een nieuw kanaal toevoegen](assets/add-new-channel.png)
+   ![ voeg een nieuw kanaal ](assets/add-new-channel.png) toe
 
-   *Een nieuw kanaal toevoegen*
+   *voeg een nieuw kanaal* toe
 
-1. Selecteren **Programma-id** in het vervolgkeuzemenu in het dialoogvenster **Nieuw kanaal** in.
+1. Selecteer **identiteitskaart van de Programmer** van het dropdown menu in het **Nieuwe kanaal** dialoogvakje.
 
-1. Typ een unieke id in **Kanaal-id**.
-1. Typ de merknaam van het kanaal dat voor commerciële doeleinden in het **Weergavenaam**.
-1. Selecteren **Kanaal toevoegen**.
+1. Typ een uniek herkenningsteken in **identiteitskaart van het Kanaal**.
+1. Typ de merknaam van het kanaal dat voor commerciële doeleinden in de **naam van de Vertoning** wordt gebruikt.
+1. Selecteer **kanaal** toevoegen.
 
-Er is een nieuwe configuratiewijziging gemaakt en deze is gereed voor serverupdate. Als u het nieuwe kanaal wilt gebruiken dat in het dialoogvenster **Kanalen** sectie, gaat u verder met de [revisie- en pushwijzigingen](/help/authentication/tve-dashboard-review-push-changes.md) stroom.
-
+Er is een nieuwe configuratiewijziging gemaakt en deze is gereed voor serverupdate. Om het nieuwe die kanaal te gebruiken in de **wordt vermeld Kanalen** sectie, met de [ overzicht en duw veranderingen ](/help/authentication/tve-dashboard-review-push-changes.md) stroom te werk gaat.

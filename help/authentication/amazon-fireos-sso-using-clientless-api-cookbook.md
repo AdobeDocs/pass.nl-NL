@@ -2,9 +2,9 @@
 title: Amazon FireOS SSO met Cookbook zonder client
 description: Amazon FireOS SSO met Cookbook zonder client
 exl-id: 4c65eae7-81c1-4926-9202-a36fd13af6ec
-source-git-commit: 59672b44074c472094ed27a23d6bfbcd7654c901
+source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '761'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Dit document bevat instructies voor het implementeren van de Amazon SSO-versie v
 
 Het tweede deel van het document gaat over de belangrijkste stappen voor het implementeren van de Adobe Pass Authentication clientless API.
 
-Voor een breed technisch overzicht van hoe de oplossing zonder clips werkt, raadpleegt u de [REST API-overzicht](/help/authentication/rest-api-overview.md). Adobe is het aangewezen contact voor steun over de algemene architectuur en eerste implementaties.
+Voor een breed technisch overzicht van hoe de Klantloze oplossing werkt, zie het [ REST API Overzicht ](/help/authentication/rest-api-overview.md). Adobe is het aangewezen contact voor steun over de algemene architectuur en eerste implementaties.
 
 ## Amazon Clientless SSO {#AMZ-Clientless-SSO}
 
@@ -37,16 +37,16 @@ Als de lading wordt erkend en aan een voor authentiek verklaarde zitting beantwo
 
 ### De toepassing maken voor gebruik van Amazon SDK {#Build-entries}
 
-* Download en kopieer de nieuwste [Amazon Stub SDK](https://tve.zendesk.com/hc/en-us/article_attachments/360064368131/ottSSOTokenLib_v1.jar) in een /SSOEnabler-map parallel aan de toepassingsmap
+* Download en kopieer de recentste [ Stub SDK van Amazon ](https://tve.zendesk.com/hc/en-us/article_attachments/360064368131/ottSSOTokenLib_v1.jar) in een /SSOEnabler omslag parallel aan de toepassingsfolder
 * Manifest-/grijswaardenbestanden bijwerken voor gebruik van de bibliotheek:
 
-  **Voeg de volgende regel toe aan het Manifest-bestand:**
+  **voeg de volgende lijn aan uw Manifest dossier toe:**
 
   ```Java
   <uses-library android:name="com.amazon.ottssotokenlib" android:required="false"/\>
   ```
 
-  **Invoer van het verloopbestand:**
+  **ingangen van het Dossier van de Gradle:**
 
   Onder opslagplaatsen:
 
@@ -65,7 +65,7 @@ Als de lading wordt erkend en aan een voor authentiek verklaarde zitting beantwo
 
 * De afwezigheid van de bij Amazon behorende app afhandelen:
 
-  Mocht de aanvulling waarschijnlijk niet aanwezig zijn op het Amazon-apparaat waarop uw toepassing wordt uitgevoerd, dan komt u bij uitvoering een ClassNotFoundException tegen voor de volgende klasse: `com.amazon.ottssotokenlib.SSOEnabler`.
+  Mocht de aanvulling waarschijnlijk niet aanwezig zijn op het Amazon-apparaat waarop uw toepassing wordt uitgevoerd, dan komt u bij uitvoering een ClassNotFoundException tegen voor de volgende klasse: `com.amazon.ottssotokenlib.SSOEnabler` .
 
   Mocht dit gebeuren, dan hoeft u alleen maar de payload-stap over te slaan en terug te vallen op de normale PrimeTime-flow. SSO zal niet worden toegelaten maar de regelmatige autestroom zal normaal gebeuren.
 
@@ -113,14 +113,14 @@ Als om het even welke reden, de API vraag geen lading terugkeert, gelieve de reg
 
 * Deze API zal de reactie via callback plaatsen tijdens de init verstrekken.
 
-  **Ex**. oproep met singleton-instantie die tijdens init is gemaakt:
+  **ex**. oproep met singleton-instantie die tijdens init is gemaakt:
 
   ```JAVA
   ssoEnabler.getSSOTokenAsync().
   ```
 
 
-**Synchrone API&#39;s**
+**Synchrone APIs**
 
 * De instantie SSO Enabler ophalen en de callback instellen
 
@@ -145,13 +145,13 @@ Als om het even welke reden, de API vraag geen lading terugkeert, gelieve de reg
 
 ### Adobe Pass Clientless API-update voor gebruik van Dynamic Client Registration {#clientlessdcr}
 
-Als dit uw eerste implementatie is, raadpleegt u **Klantloos technisch overzicht** en neem contact op met de Adobe voor het geval u ondersteuning nodig hebt.
+Als dit uw eerste implementatie is gelieve te zien **Klantloos Technisch Overzicht** en contacteren Adobe in het geval u steun nodig hebt.
 
 De Adobe Clientless API vereist toepassingen om Dynamische Registratie van de Cliënt te gebruiken om vraag aan de servers van de Adobe te maken.
 
-* Volg de instructies in [Dynamic Client Registration Management om de toepassing te registreren](/help/authentication/dynamic-client-registration-management.md).
+* Om de Dynamische Registratie van de Cliënt in uw toepassing te gebruiken, volg de instructies in [ Dynamisch Beheer van de Registratie van de Cliënt ](./dcr-api/dynamic-client-registration-overview.md#dynamic-client-registration-management) om een geregistreerde toepassing tot stand te brengen en een softwareverklaring te downloaden.
 
-* Volg de instructies in [Dynamische API voor clientregistratie](/help/authentication/dynamic-client-registration-api.md) .
+* Om Dynamische de Registratie API van de Cliënt uit te voeren om authentificatie en vergunningsverzoeken aan de servers van Adobe Pass uit te voeren, volg instructies in [ Dynamische Stroom van de Registratie van de Cliënt ](./dcr-api/flows/dynamic-client-registration-flow.md).
 
 ### Adobe Pass Clientless API-update voor gebruik van Amazon SSO {#clientlesssso}
 
@@ -181,7 +181,7 @@ Alle eindpunten van de Verificatie van Adobe Pass steunen de volgende methodes o
 
 **Voorbeelden:**
 
-**Verzenden als aangepaste koptekst**
+**die als douanekop** verzendt
 
 ```HTTPS
 GET /adobe-services/config/requestor HTTP/1.1 Host: sp-preprod.auth.adobe.com
@@ -189,7 +189,7 @@ GET /adobe-services/config/requestor HTTP/1.1 Host: sp-preprod.auth.adobe.com
 Adobe-Subject-Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJyb2t1IiwiaWF0IjoxNTExMzY4ODAyLCJleHAiOjE1NDI5MDQ4MDIsImF1ZCI6ImFkb2JlIiwic3ViIjoiNWZjYzMwODctYWJmZi00OGU4LWJhZTgtODQzODViZTFkMzQwIiwiZGlkIjoiY2FmZjQ1ZDAtM2NhMy00MDg3LWI2MjMtNjFkZjNhMmNlOWM4In0.JlBFhNhNCJCDXLwBjy5tt3PtPcqbMKEIGZ6sr2NA
 ```
 
-**Verzenden als queryparameter**
+**die als vraagparameter** verzendt
 
 ```HTTPS
 GET /adobe-services/config/requestor?ast=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJyb2t1IiwiaWF0IjoxNTExMzY4ODAyLCJleHAiOjE1NDI5MDQ4MDIsImF1ZCI6ImFkb2JlIiwic3ViIjoiNWZjYzMwODctYWJmZi00OGU4LWJhZTgtODQzODViZTFkMzQwIiwiZGlkIjoiY2FmZjQ1ZDAtM2NhMy00MDg3LWI2MjMtNjFkZjNhMmNlOWM4In0.JlBFhNhNCJCDXLwBjy5tt3PtPcqbMKEIGZ6sr2NA
@@ -199,7 +199,7 @@ Host: sp.auth.adobe.com
 ```
 
 
-**Verzenden als parameter post**
+**die als postparameter** verzendt
 
 
 ```HTTPS

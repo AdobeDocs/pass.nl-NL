@@ -2,18 +2,27 @@
 title: Entitlement Service Monitoring API
 description: Entitlement Service Monitoring API
 exl-id: a9572372-14a6-4caa-9ab6-4a6baababaa1
-source-git-commit: 1ad2a4e75cd64755ccbde8f3b208148b7d990d82
+source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
 workflow-type: tm+mt
-source-wordcount: '2010'
+source-wordcount: '2070'
 ht-degree: 0%
 
 ---
 
 # Entitlement Service Monitoring API {#entitlement-service-monitoring-api}
 
->[!NOTE]
+>[!IMPORTANT]
 >
 >De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
+
+>[!IMPORTANT]
+>
+> Controleer voordat u de afbraakAPI gebruikt of aan de volgende voorwaarden is voldaan:
+>
+> * Haal de cliëntgeloofsbrieven zoals die in [ worden beschreven terug cliëntgeloofsbrieven ](./dcr-api/apis/dynamic-client-registration-apis-retrieve-client-credentials.md) API documentatie.
+> * Haal het toegangstoken zoals die in [ wordt beschreven terug toegangstoken ](./dcr-api/apis/dynamic-client-registration-apis-retrieve-access-token.md) API documentatie.
+>
+> Verwijs naar de [ Dynamische documentatie van het Overzicht van de Registratie van de Cliënt ](./dcr-api/dynamic-client-registration-overview.md) voor meer informatie over hoe te om een geregistreerde toepassing tot stand te brengen en de softwareverklaring te downloaden.
 
 ## API-overzicht {#api-overview}
 

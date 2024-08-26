@@ -1,9 +1,9 @@
 ---
 title: Profiel ophalen met verificatierespons van partner
 description: REST API V2 - profiel ophalen met partnerverificatierespons
-source-git-commit: dc9fab27c7eced2be5dd9f364ab8f2d64f8e4177
+source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '732'
 ht-degree: 0%
 
 ---
@@ -73,7 +73,7 @@ ht-degree: 0%
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Toestemming</td>
-      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="../../../dynamic-client-registration-api.md"> Dynamische documentatie van de Registratie van de Cliënt </a>.</td>
+      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="../../appendix/headers/rest-api-v2-appendix-headers-authorization.md"> 1} kopbaldocumentatie van de Toestemming {.</a></td>
       <td><i>vereist</i></td>
    </tr>
    <tr>
@@ -87,13 +87,13 @@ ht-degree: 0%
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">AP-apparaat-id</td>
-      <td>De generatie van de apparatenherkenningstekenlading wordt beschreven in <a href="../../appendix/headers/rest-api-v2-appendix-headers-ap-device-identifier.md"> AP-apparaat-Herkenningsteken </a> documentatie.</td>
+      <td>De generatie van de apparatenherkenningstekenlading wordt beschreven in <a href="../../appendix/headers/rest-api-v2-appendix-headers-ap-device-identifier.md"> AP-apparaat-Identifier </a> kopbaldocumentatie.</td>
       <td><i>vereist</i></td>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">X-Apparaat-Info</td>
       <td>
-         De generatie van de lading van de apparateninformatie wordt beschreven in <a href="../../appendix/headers/rest-api-v2-appendix-headers-x-device-info.md"> x-apparaat-Info </a> documentatie.
+         De generatie van de lading van de apparateninformatie wordt beschreven in <a href="../../appendix/headers/rest-api-v2-appendix-headers-x-device-info.md"> x-apparaat-Info </a> kopbaldocumentatie.
          <br/><br/>
          Het wordt ten zeerste aanbevolen deze altijd te gebruiken wanneer het apparaatplatform van de toepassing expliciet geldige waarden biedt.
          <br/><br/>
@@ -106,7 +106,7 @@ ht-degree: 0%
    <tr>
       <td style="background-color: #DEEBFF;">AP-Partner-Kader-Status</td>
       <td>
-        De generatie van enige sign-on lading voor de methode van de Partner wordt beschreven in <a href="../../appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md"> AP-partner-kader-Status </a> documentatie.
+        De generatie van enige sign-on lading voor de methode van de Partner wordt beschreven in <a href="../../appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md"> AP-partner-kader-status </a> kopbaldocumentatie.
         <br/><br/>
         Voor meer details over enige sign-on toegelaten stromen die een partner gebruiken, verwijs naar <a href="../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-partner-flows.md"> Enige sign-on gebruikend de documentatie van de partnerstromen </a>.</td>
       <td>optioneel</td>
@@ -164,7 +164,7 @@ ht-degree: 0%
       <td>401</td>
       <td>Ongeautoriseerd</td>
       <td>
-        Het toegangstoken is ongeldig, moet de cliënt een nieuw toegangstoken verkrijgen en opnieuw proberen. Voor meer details verwijs naar de <a href="../../../dynamic-client-registration-api.md"> Dynamische documentatie van de Registratie van de Cliënt </a>.
+        Het toegangstoken is ongeldig, moet de cliënt een nieuw toegangstoken verkrijgen en opnieuw proberen. Voor meer details verwijs naar de <a href="../../../dcr-api/dynamic-client-registration-overview.md"> Dynamische documentatie van de Registratie van de Cliënt van het Overzicht </a>.
       </td>
    </tr>
    <tr>

@@ -2,29 +2,28 @@
 title: Gradatie-API - overzicht
 description: Gradatie-API - overzicht
 exl-id: c7d6685b-a235-42eb-9c9c-0ffa1747f614
-source-git-commit: f918d7f9f7b2af5b4364421f6703211e413eafb4
+source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '427'
 ht-degree: 0%
 
 ---
 
+
 # Gradatie-API - overzicht {#degradation-api-overview}
 
->[!NOTE]
+>[!IMPORTANT]
 >
->De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
->Als u de Degradation API wilt gebruiken, moet u:
->- Vraag het ondersteuningsteam om een softwareverklaring voor uw geregistreerde toepassing
->- verkrijg een toegangstoken dat op wordt gebaseerd [Dynamische clientregistratie](dynamic-client-registration.md)
-> 
+> De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Als u de Degradation API wilt gebruiken, moet u:
->- Vraag het ondersteuningsteam om een softwareverklaring voor uw geregistreerde toepassing
->- verkrijg een toegangstoken dat op wordt gebaseerd [Dynamische clientregistratie](dynamic-client-registration.md)
-> 
+> Controleer voordat u de afbraakAPI gebruikt of aan de volgende voorwaarden is voldaan:
+>
+> * Haal de cliëntgeloofsbrieven zoals die in [ worden beschreven terug cliëntgeloofsbrieven ](./dcr-api/apis/dynamic-client-registration-apis-retrieve-client-credentials.md) API documentatie.
+> * Haal het toegangstoken zoals die in [ wordt beschreven terug toegangstoken ](./dcr-api/apis/dynamic-client-registration-apis-retrieve-access-token.md) API documentatie.
+>
+> Verwijs naar de [ Dynamische documentatie van het Overzicht van de Registratie van de Cliënt ](./dcr-api/dynamic-client-registration-overview.md) voor meer informatie over hoe te om een geregistreerde toepassing tot stand te brengen en de softwareverklaring te downloaden.
 
 ## Algemene informatie {#general_info}
 
@@ -42,7 +41,7 @@ Afbraaknotities:
 
 - Deze functie is ontworpen voor gebruik in combinatie met de API voor gebruiksbewaking, die realtime informatie biedt over het aantal verificaties en autorisaties per MVPD, de gemiddelde vertraging bij autorisatie en andere metriek die nodig is voor een volledig serviceoverzicht.
 - Met deze functie kan de Primetim-verificatieservice van Adobe niet worden omzeild. Als de Authentificatie van Adobe Pass neer is is er geen mechanisme binnen de dienst die kan worden gebruikt om gebruikers toe te staan om inhoud te zien. De sites of apps kunnen echter zelf de Adobe Pass-verificatie omzeilen.
-- Adobe leidt momenteel niet tot een directe verslechtering; het besluit moet altijd in handen zijn van een specifieke programmeur die met de MVPD&#39;s heeft ingestemd. In de toekomst, zou de Authentificatie van Adobe Pass pro-actief in het teweegbrengen van degradatieregels kunnen zijn als de overeenkomsten (SLA bescherming) met MVPDs kunnen worden bereikt.
+- Adobe leidt momenteel niet tot een directe verslechtering; het besluit moet altijd in handen zijn van een specifieke programmeur die met de MVPD&#39;s heeft ingestemd. In de toekomst kan Adobe Pass Authentication proactief zijn in het activeren van degradatieregels als overeenkomsten (bescherming van SLA) kunnen worden gesloten met MVPD&#39;s.
 
 <!--
 ## Related Information {#related}

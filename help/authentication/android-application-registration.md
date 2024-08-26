@@ -1,15 +1,15 @@
 ---
-title: Registratie van Android-toepassingen
-description: Registratie van Android-toepassingen
+title: Android-toepassingsregistratie
+description: Android-toepassingsregistratie
 exl-id: 6238bd87-ac97-4a5c-9d92-3631f7b2d46a
-source-git-commit: 1b8371a314488335c68c82882c930b7c19aa64ad
+source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '586'
 ht-degree: 0%
 
 ---
 
-# Registratie van Android-toepassingen {#android-application-registration}
+# Android-toepassingsregistratie {#android-application-registration}
 
 >[!NOTE]
 >
@@ -19,13 +19,13 @@ ht-degree: 0%
 
 Vanaf versie 3.0 van de Android AccessEnabler SDK veranderen we het verificatiemechanisme met de servers van de Adobe. In plaats van het gebruiken van een openbare sleutel en een geheim systeem om requestorID te ondertekenen, introduceren wij het concept een koord van de Verklaring van de Software dat kan worden gebruikt om een toegangstoken te verkrijgen dat later voor alle vraag wordt gebruikt die SDK aan onze servers maakt. Naast een verklaring van de Software zult u ook een diepe verbinding voor uw toepassing moeten creëren.
 
-Zie voor meer informatie [Dynamische clientregistratie](/help/authentication/dynamic-client-registration.md)
+Voor meer informatie, zie [ Dynamisch Overzicht van de Registratie van de Cliënt 1}.](./dcr-api/dynamic-client-registration-overview.md)
 
 ## Wat is een Software Statement? {#what}
 
 Een verklaring van de Software is een teken JWT dat informatie over uw toepassing bevat. Elke toepassing moet een unieke software-instructie hebben die door onze servers wordt gebruikt om de toepassing in het systeem van de Adobe te identificeren.
 
-De verklaring van de Software moet worden overgegaan wanneer u initialiseert `AccessEnabler` SDK. Deze wordt gebruikt om de toepassing met Adobe te registreren. Bij registratie ontvangt de SDK een client-id en een clientgeheim, die worden gebruikt om een toegangstoken te verkrijgen. Om het even welke vraag die SDK aan Adobe servers maakt vereist een geldig toegangstoken. De SDK is verantwoordelijk voor het registreren van de toepassing, het verkrijgen en het vernieuwen van het toegangstoken.
+De Software-instructie moet worden doorgegeven wanneer u de `AccessEnabler` SDK initialiseert. Deze wordt gebruikt om de toepassing met Adobe te registreren. Bij registratie ontvangt de SDK een client-id en een clientgeheim, die worden gebruikt om een toegangstoken te verkrijgen. Om het even welke vraag die SDK aan Adobe servers maakt vereist een geldig toegangstoken. De SDK is verantwoordelijk voor het registreren van de toepassing, het verkrijgen en het vernieuwen van het toegangstoken.
 
 >[!NOTE]
 >
@@ -37,31 +37,31 @@ Hier zijn manieren u een Verklaring van de Software kunt verkrijgen.
 
 ### Als u toegang hebt tot het TVE-dashboard van de Adobe
 
-1. Uw browser openen en naar [Adobe Pass TVE-dashboard](https://console.auth.adobe.com).
+1. Open uw browser en navigeer aan [ Adobe Pass TVE Dashboard ](https://console.auth.adobe.com).
 
-1. Navigeren naar **[!UICONTROL Channels]** selecteert u vervolgens het kanaal.
+1. Navigeer naar de sectie **[!UICONTROL Channels]** en selecteer vervolgens het kanaal.
 
-1. Ga naar de **[!UICONTROL Registered Applications]** tab.
+1. Ga naar het tabblad **[!UICONTROL Registered Applications]**.
 
-1. Klikken **[!UICONTROL Add new application]**.
+1. Klik op **[!UICONTROL Add new application]**.
 
 1. Geef de toepassing een naam en geef een versie op.
 
-1. Selecteer de platforms waarop de toepassing beschikbaar zal zijn (in dit geval Android).
+1. Selecteer de platforms waarop de toepassing beschikbaar zal zijn (Android in dit geval).
 
-1. Geef een **[!UICONTROL Domain Name]** door van een lijst van domeinen te kiezen die reeds voor uw Programmer worden gevormd.
+1. Verstrek **[!UICONTROL Domain Name]** door van een lijst van domeinen te kiezen die reeds voor uw Programmer worden gevormd.
 
-1. Verduw uw veranderingen in de server, dan navigeer terug naar uw Kanaal **[!UICONTROL Registered Applications]** tab.
+1. Verplaats uw wijzigingen naar de server en navigeer vervolgens terug naar de tab **[!UICONTROL Registered Applications]** van uw kanaal.
 
-   Er moet een lijst met alle geregistreerde toepassingen worden weergegeven. Selecteren **[!UICONTROL Download]** in de toepassing die u hebt gemaakt. Mogelijk moet u een paar minuten wachten voordat de Software Statement wordt weergegeven. U kunt deze instructie dan downloaden.
+   Er moet een lijst met alle geregistreerde toepassingen worden weergegeven. Selecteer **[!UICONTROL Download]** in de toepassing die u hebt gemaakt. Mogelijk moet u een paar minuten wachten voordat de Software Statement wordt weergegeven. U kunt deze instructie dan downloaden.
 
    Een tekstbestand wordt gedownload. Gebruik de inhoud ervan als de Software Statement.
 
-Zie voor meer informatie [Dynamisch clientregistratiebeheer](/help/authentication/dynamic-client-registration-management.md)
+Voor meer informatie, zie [ Dynamisch Beheer van de Registratie van de Cliënt ](./dcr-api/dynamic-client-registration-overview.md#dynamic-client-registration-management).
 
 ### Als u geen toegang hebt tot het TVE-dashboard van de Adobe
 
-Een ticket verzenden naar `tve-support@adobe.com`. Neem de benodigde informatie op, zoals kanaal, toepassingsnaam, versie en platforms. Iemand van ons ondersteuningsteam zal een softwareverklaring voor u creëren.
+Een ticket verzenden naar `tve-support@adobe.com` . Neem de benodigde informatie op, zoals kanaal, toepassingsnaam, versie en platforms. Iemand van ons ondersteuningsteam zal een softwareverklaring voor u creëren.
 
 ## Hoe te om de Verklaring van de Software te gebruiken {#how-to-use-ss}
 
@@ -69,13 +69,13 @@ Nadat u uw Verklaring van de Software verkrijgt, moet u het als parameter in de 
 
 ## Een diepe koppeling voor uw toepassing maken en gebruiken {#create}
 
-Bij Android gebruikt u als diepe koppelingswaarde de omgekeerde domeinnaam die is geselecteerd toen u de Software-instructie maakte.
+Gebruik in Android de omgekeerde waarde van de domeinnaam bij het maken van de Software-instructie als diepe koppelingswaarde
 
 Gemaakte diepe koppeling moet een unieke waarde hebben op het Android-apparaat. Wanneer de veelvoudige toepassingen de zelfde diepe verbindingswaarde gebruiken, zullen de authentificatie en logout stromen zich mengen.
 
 ## Hoe de verklaring van de Software en de diepe verbinding gebruiken {#use-both}
 
-In het bronbestand van uw toepassing `strings.xml` Voeg de volgende code toe:
+Voeg de volgende code toe in het bronbestand van uw toepassing `strings.xml` :
 
 ```JAVA
     <string name="software_statement">softwarestatement value</string>

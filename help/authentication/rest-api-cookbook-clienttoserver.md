@@ -2,9 +2,9 @@
 title: REST API Cookbook (client-naar-server)
 description: Testen van API-cookboekclient naar server.
 exl-id: f54a1eda-47d5-4f02-b343-8cdbc99a73c0
-source-git-commit: ea064031c3a1fee3298d85cf442c40bd4bb56281
+source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '868'
 ht-degree: 0%
 
 ---
@@ -18,14 +18,14 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Dit document bevat stapsgewijze instructies voor het engineeringteam van een programmeur om een &quot;slim apparaat&quot; te integreren (spelconsole, smart TV-app, set top box, enz.) met Adobe Pass Authentication using REST API services. Deze client-naar-server-benadering, die REST APIs eerder dan een cliënt SDK gebruikt, staat voor bredere steun van verschillende platforms toe waarvoor het ontwikkelen van een significant aantal unieke SDKs niet uitvoerbaar zou zijn. Voor een breed technisch overzicht van hoe de oplossing zonder clips werkt, raadpleegt u de [Klantloos technisch overzicht](/help/authentication/rest-api-overview.md).
+Dit document bevat stapsgewijze instructies voor het engineeringteam van een programmeur om een &quot;slim apparaat&quot; te integreren (spelconsole, smart TV-app, set top box, enz.) met Adobe Pass Authentication using REST API services. Deze client-naar-server-benadering, die REST APIs eerder dan een cliënt SDK gebruikt, staat voor bredere steun van verschillende platforms toe waarvoor het ontwikkelen van een significant aantal unieke SDKs niet uitvoerbaar zou zijn. Voor een breed technisch overzicht van hoe de Klantloze oplossing werkt, zie het [ Klantloze Technische Overzicht ](/help/authentication/rest-api-overview.md).
 
 
 Deze aanpak vereist twee componenten (streaming app en AuthN app) om de vereiste stromen te voltooien: opstarten, registreren, autoriseren en weergavemedia in de streaming app en de verificatiestroom in uw AuthN-app.
 
 ### Draaimechanisme
 
-De Adobe Pass Authentication REST API wordt beheerd door een [Draaimechanisme](/help/authentication/throttling-mechanism.md).
+De Adobe Pass Authentificatie REST API wordt geregeerd door a [ het Throttling mechanisme ](/help/authentication/throttling-mechanism.md).
 
 ## Componenten {#components}
 
@@ -44,13 +44,13 @@ In een werkende cliënt-aan-server oplossing zijn de volgende componenten betrok
 
 
 
-Aanvullende termen die in de flow worden gebruikt, worden gedefinieerd in de [Verklarende woordenlijst](/help/authentication/glossary.md).
+De extra termijnen die in de stroom worden gebruikt worden bepaald in de [ Verklarende woordenlijst ](/help/authentication/glossary.md).
 
 ## Stromen{#flows}
 
 ### Dynamische clientregistratie (DCR)
 
-Adobe Pass gebruikt DCR om clientcommunicatie tussen een programmeertoepassing of server en de Adobe Pass-services te beveiligen. De DCR-stroom is afzonderlijk, afhankelijk en in de voorwaarde gesteld en is te vinden in [Dynamische clientregistratie](/help/authentication/dynamic-client-registration.md)
+Adobe Pass gebruikt DCR om clientcommunicatie tussen een programmeertoepassing of server en de Adobe Pass-services te beveiligen. De stroom DCR is afzonderlijk en wordt beschreven in het [ Dynamische Overzicht van de Registratie van de Cliënt ](./dcr-api/dynamic-client-registration-overview.md) documentatie.
 
 
 ### Streaming (slim apparaat) App Flows
@@ -65,7 +65,7 @@ Adobe Pass gebruikt DCR om clientcommunicatie tussen een programmeertoepassing o
 
 3. Geef een vraag van de Controle-authentificatie uit om te zien of is het apparaat reeds voor authentiek verklaard.  Bijvoorbeeld: [`<SP_FQDN>/api/v1/checkauthn [device ID]`](/help/authentication/check-authentication-token.md)
 
-4. Als de `checkauthn` De vraag slaagt, gaat aan de Stroom van de Vergunning vanaf Stap 2 te werk.  Start de Registratiestroom als dit mislukt.
+4. Als de `checkauthn` vraag slaagt, ga aan de Stroom van de Vergunning vanaf Stap 2 te werk.  Start de Registratiestroom als dit mislukt.
 
 
 
@@ -83,7 +83,7 @@ Adobe Pass gebruikt DCR om clientcommunicatie tussen een programmeertoepassing o
 
 #### Autorisatiestroom
 
-1. De gebruiker keert van het tweede scherm terug app en drukt op de &quot;Doorgaan&quot; knoop op uw apparaat. U kunt ook een opiniepeilingsmechanisme implementeren om de verificatiestatus te controleren, maar de Adobe Pass-verificatie raadt de methode voor de knop Doorgaan aan tijdens de opiniepeiling. <!--(For information on employing a "Continue" button versus polling the Adobe Pass Authentication backend server, see the Clientless Technical Overview: Managing 2nd-Screen Workflow Transition.)--> Bijvoorbeeld: [\&lt;sp _fqdn=&quot;&quot;>/api/v1/tokens/authoring](/help/authentication/retrieve-authentication-token.md)
+1. De gebruiker keert van het tweede scherm terug app en drukt op de &quot;Doorgaan&quot; knoop op uw apparaat. U kunt ook een opiniepeilingsmechanisme implementeren om de verificatiestatus te controleren, maar de Adobe Pass-verificatie raadt de methode voor de knop Doorgaan aan tijdens de opiniepeiling. <!--(For information on employing a "Continue" button versus polling the Adobe Pass Authentication backend server, see the Clientless Technical Overview: Managing 2nd-Screen Workflow Transition.)--> Bijvoorbeeld: [\&lt;SP\_FQDN\>/api/v1/tokens/authn](/help/authentication/retrieve-authentication-token.md)
 
 2. Verzend een verzoek van de GET naar de de vergunningsdienst van de Authentificatie van Adobe Pass om vergunning in werking te stellen. Bijvoorbeeld: `<SP_FQDN>/api/v1/authorize [device ID, Requestor ID, Resource ID]`
 
@@ -109,9 +109,11 @@ Adobe Pass gebruikt DCR om clientcommunicatie tussen een programmeertoepassing o
 
    a. Uw app controleert of de media is beveiligd.
 
-   b. Als het medium is beveiligd, start uw app de bovenstaande workflow voor autorisatie (AuthZ).
+   b. Als het medium is beveiligd, wordt de autorisatie door uw app gestart
+(AuthZ) Stroom hierboven.
 
-   c. Als de media niet zijn beveiligd, kunt u de media voor de gebruiker afspelen.
+   c. Als het medium niet is beveiligd, kunt u het medium voor de
+gebruiker.
 
 3. De media afspelen.
 
@@ -139,7 +141,7 @@ Sommige platforms bieden specifieke ondersteuning voor Single Sign-On (SSO). De 
 
 Voor TempPass- en Promotional TempPass-implementaties waarbij de gebruiker geen referenties hoeft in te voeren, kan verificatie rechtstreeks worden geïmplementeerd in de streamingtoepassing.
 
-**Voor het gebruik van deze API moet de Streaming App de unieke id van het apparaat controleren zoals deze wordt gebruikt voor het identificeren van het token, samen met de optionele extra gegevens.**
+**om deze API te gebruiken moet de Streaming App van de uniciteit van apparatenidentiteitskaart verzekeren aangezien dit voor het identificeren van het teken, samen met de facultatieve extra gegevens wordt gebruikt.**
 
 
 ![](assets/temp-pass-promo-temppass.png)
