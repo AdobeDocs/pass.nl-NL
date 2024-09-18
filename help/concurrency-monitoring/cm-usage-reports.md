@@ -1,13 +1,13 @@
 ---
 title: Gebruiksrapporten voor gelijktijdige bewaking
 description: Gebruiksrapporten voor gelijktijdige bewaking
-source-git-commit: 19ed211c65deaa1fe97ae462065feac9f77afa64
+exl-id: 20220436-e748-4b22-8e7c-e074e0bfe242
+source-git-commit: 36da78fd66cfbc86e7bea7575c757fef536c0755
 workflow-type: tm+mt
-source-wordcount: '723'
+source-wordcount: '799'
 ht-degree: 0%
 
 ---
-
 
 # Gebruiksrapporten voor gelijktijdige bewaking {#cm-usage-reports}
 
@@ -19,11 +19,11 @@ ht-degree: 0%
 
 ## Overzicht {#usage-rep-overview}
 
-De **Gebruiksrapporten voor gelijktijdige bewaking** De service is beschikbaar via een REST-API die inzicht biedt in het gelijktijdige gebruik zoals gemeld door de toepassingen van de klant.
+De **dienst van het Gebruik van de Controle van de Gelijktijdige** is beschikbaar via REST API die inzicht in het gezamenlijke gebruik zoals die door de toepassingen van de klant wordt gemeld verstrekt.
 
 ## Vereisten {#usage-rep-prerequisites}
 
-Voor toegang tot het product Concurrency Monitoring Usage Reports moet een klant eerst contact opnemen met de Gelijktijdige Controle [Ondersteuningsteam](mailto:tve-support@adobe.com) en zullen de noodzakelijke stappen uitvoeren om u toegang tot het API-product te verlenen.
+Om tot het product van de Rapporten van het Gebruik van de Controle van de Gelijktijdige toegang te hebben, moet een klant eerst het Gelijktijdige Controle [ Team van de Steun ](mailto:tve-support@adobe.com) contacteren en zij zullen de noodzakelijke stappen uitvoeren om u toegang tot het API product te verlenen. Meer details op [ CMU API Toegang ](/help/concurrency-monitoring/cmu-api-access.md).
 
 ## Algemene rapportcijfers en uitsplitsingen {#general-rep-metrics-breakdown}
 
@@ -54,12 +54,12 @@ Voor toegang tot het product Concurrency Monitoring Usage Reports moet een klant
 ### De gebruikers van de Rapporten van het gebruik kunnen de hierboven vermelde metriek door de volgende afmetingen filtreren: {#dimensions-2-filter-metrics}
 
 | Naam Dimension | Beschrijving |
-|:---|:---|
+|:---------------|:------------------------------------------------------------------------------------------------------------------|
 | jaar | Jaar met 4 cijfers |
 | maand | De maand van het jaar (1-12) |
 | dag | Dag van de maand (1-31) |
 | uur | Het uur van de dag |
-| minuut | De minuut van het uur |
+| minuut | De minuut van het uur [^1 ] |
 | toepassing | De toepassingsnaam die is geregistreerd in Gelijktijdige bewaking die wordt gebruikt voor het beheren van sessies |
 | application-id | De toepassings-id die is geregistreerd in Gelijktijdige bewaking die wordt gebruikt voor het beheren van sessies |
 | kanaal | De kanaalmetagegevens die tijdens de initialisatie van de sessie worden verzonden (gemarkeerd als Onbekend als er geen metagegevens zijn verzonden) |
@@ -68,7 +68,7 @@ Voor toegang tot het product Concurrency Monitoring Usage Reports moet een klant
 
 ## Gelijktijdige rapportage Metriek en uitsplitsingen {#concurrency-reports-metrics-breakdown}
 
-Vanaf versie 2.9.0 van de Controle van de Valuta hebben wij een nieuw rapport voor begrip van gelijktijdig gebruik geïntroduceerd: een histogram voor **gelijktijdig** en **activiteitsniveau**.
+Beginnend met Concurrency Controle versie 2.9.0 hebben wij een nieuw rapport voor begrip gelijktijdig gebruik geïntroduceerd: een histogram voor **gelijktijdig-niveau** en **activiteit-niveau**.
 
 Het belangrijkste doel van dit verslag is om u te helpen begrijpen wat het effect is van het vaststellen van een beleid met een bepaalde limiet van gelijktijdige uitvoering en om u voldoende informatie te geven om te beslissen of u de limiet moet verhogen.
 
@@ -85,6 +85,12 @@ Het belangrijkste doel van dit verslag is om u te helpen begrijpen wat het effec
 | jaar | Jaar met 4 cijfers |
 | maand | De maand van het jaar (1-12) |
 | dag | Dag van de maand (1-31) |
-| gelijktijdig | Vertegenwoordigt elke vorm **streaming activiteit die tijdens de initialisatiefase van de sessie is goedgekeurd** voor een gebruiker om te kunnen observeren hoeveel gelijktijdige stromen **geopend** door een gebruiker en om inzicht te krijgen in de gevolgen van het toepassen van een bepaalde gelijktijdige limiet |
-| activiteitsniveau | Vertegenwoordigt elke vorm **streamactiviteit (ongeacht de status: gestart, actief, gestopt, afgewezen)** voor een gebruiker om te kunnen observeren hoeveel gelijktijdige streams door een gebruiker zijn geopend en om te begrijpen wat de gevolgen zijn van het toepassen van een bepaalde gelijktijdige limiet |
+| gelijktijdig | Vertegenwoordigt om het even welke duidelijke **stroomactiviteit die bij de fase van de zittingsinitialisering** voor een gebruiker werd goedgekeurd om te kunnen waarnemen hoeveel gezamenlijke stromen **** door een gebruiker werden geopend en om het effect te begrijpen van het toepassen van een bepaalde gelijktijdig grens |
+| activiteitsniveau | Vertegenwoordigt om het even welke duidelijke **stroomactiviteit (geen kwestie van zijn staat: begonnen, actief, tegengehouden, verworpen)** voor een gebruiker om te kunnen waarnemen hoeveel gezamenlijke stromen werden geprobeerd om door een gebruiker te worden geopend en het effect te begrijpen van het toepassen van een bepaalde gelijktijdig grens |
 | mvpd | MVPD verstrekt bij zittingsbeheer |
+
+### Voorbeelden van rapporten
+
+Voor beste gegevensnauwkeurigheid, adviseren wij de rapporten die op deze pagina [ worden voorgesteld CMU voorbeelden van rapporten ](/help/concurrency-monitoring/cm-usage-reports-examples.md)
+
+[^1 ]: Mindere rapporten zijn niet standaard beschikbaar. Gelieve te contacteren het Gelijktijdige Controle [ Team van de Steun ](mailto:tve-support@adobe.com) om hen te verzoeken.

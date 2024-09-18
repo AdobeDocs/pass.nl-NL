@@ -1,13 +1,13 @@
 ---
 title: API-overzicht
 description: API-overzicht
-source-git-commit: 19ed211c65deaa1fe97ae462065feac9f77afa64
+exl-id: 3fe6f6d8-5b2f-47e5-a8da-06fb18a5d46b
+source-git-commit: 301825253b21746684df9b6372a239b03305d50e
 workflow-type: tm+mt
-source-wordcount: '2054'
+source-wordcount: '2043'
 ht-degree: 0%
 
 ---
-
 
 # API voor gelijktijdige bewaking {#cmu-api-usage}
 
@@ -17,18 +17,18 @@ ht-degree: 0%
 
 ## API-overzicht {#api-overview}
 
-Het gebruik van de Controle van de gelijktijdige (CMU) wordt uitgevoerd als WOLAP (Web-based) [Online analytische verwerking](http://en.wikipedia.org/wiki/Online_analytical_processing)). CMU is een generiek zaken-meldend Web API die door een gegevenspakhuis wordt gesteund. Het doet dienst als de vraagtaal van HTTP die typische verrichtingen toelaat OLAP om RESTfully worden uitgevoerd.
+Het gebruik van de Controle van de gelijktijdige (CMU) wordt uitgevoerd als WOLAP (Web-based [ Online Analytische Verwerking ](http://en.wikipedia.org/wiki/Online_analytical_processing)) project. CMU is een generiek zaken-meldend Web API die door een gegevenspakhuis wordt gesteund. Het doet dienst als de vraagtaal van HTTP die typische verrichtingen toelaat OLAP om RESTfully worden uitgevoerd.
 
 
 >[!NOTE]
 >
 >De CMU-API is niet algemeen beschikbaar. Neem contact op met uw Adobe voor vragen over beschikbaarheid.
 
-CMU API verstrekt een hiërarchische mening van de onderliggende kubussen OLAP. Elke bron ([dimensie](/help/authentication/entitlement-service-monitoring-overview.md#progr-filter-metrics) in de dimensiehiërarchie, in kaart gebracht als segment van de weg URL) produceert rapporten met (bijeengevoegde [cijfers](/help/authentication/entitlement-service-monitoring-overview.md#programmers-can-monitor-the-following-metrics) voor de huidige selectie. Elke bron wijst naar de bovenliggende bron (voor roll-up) en de bijbehorende subbronnen (voor boor-down). Segmenteren en dicing worden bereikt via parameters van queryreeksen die de afmetingen vastzetten op specifieke waarden of bereiken.
+CMU API verstrekt een hiërarchische mening van de onderliggende kubussen OLAP. Elk middel ([ afmeting ](/help/concurrency-monitoring/cm-usage-reports.md#dimensions-2-filter-metrics) in de afmetinghiërarchie, in kaart gebracht als segment van de weg URL) produceert rapporten met (bijeengevoegde) [ metriek ](/help/concurrency-monitoring/cm-usage-reports.md#monitor-metrics) voor de huidige selectie. Elke bron wijst naar de bovenliggende bron (voor roll-up) en de bijbehorende subbronnen (voor boor-down). Segmenteren en dicing worden bereikt via parameters van queryreeksen die de afmetingen vastzetten op specifieke waarden of bereiken.
 
 De REST API verstrekt de beschikbare gegevens binnen een tijdsinterval dat in het verzoek wordt gespecificeerd (die terug naar standaardwaarden als niets wordt verstrekt), volgens de afmetingspad, verstrekte filters, en geselecteerde metriek. Het tijdbereik wordt niet toegepast op rapporten die geen tijdafmetingen bevatten (jaar, maand, dag, uur, minuut, seconde).
 
-Het eindpunt URL wortelweg zal de algemene bijeengevoegde metriek binnen één enkel verslag, samen met de verbindingen aan de beschikbare boor-down opties terugkeren. De API-versie wordt toegewezen als het volgende segment van het URI-eindpuntpad. Bijvoorbeeld https://mgmt.auth.adobe.com/cmu/*v2* betekent dat de cliënten tot WOLAP versie 2 zullen toegang hebben.
+Het eindpunt URL wortelweg zal de algemene bijeengevoegde metriek binnen één enkel verslag, samen met de verbindingen aan de beschikbare boor-down opties terugkeren. De API-versie wordt toegewezen als het volgende segment van het URI-eindpuntpad. Bijvoorbeeld, https://mgmt.auth.adobe.com/cmu/ *v2* betekent dat de cliënten tot versie 2 van WOLAP zullen toegang hebben.
 
 De beschikbare URL-paden kunnen worden gevonden via koppelingen in het antwoord. Geldige URL-paden worden vastgehouden om een pad in de onderliggende boor-down structuur toe te wijzen dat (pre)geaggregeerde metriek bevat. Een weg in de vorm /afmetingen1/dimensie2/dimensie3 zal op een pre-samenvoeging van die drie dimensies (het equivalent van een SQL componentenGROEP DOOR dimensie1, dimensie2, dimensie3) wijzen. Als een dergelijke pre-samenvoeging niet bestaat en het systeem het niet kan onmiddellijk berekenen, zal API een 404 niet Gevonden reactie terugkeren.
 
@@ -36,11 +36,11 @@ De beschikbare URL-paden kunnen worden gevonden via koppelingen in het antwoord.
 
 De volgende boor-down bomen illustreren de afmetingen (middelen) beschikbaar in CMU 2.0:
 
-**Dimensionen beschikbaar voor plaatselijke aanbestedingen**
+**Dimensionen beschikbaar aan de HUIDIGEN van CM**
 
 ![](assets/new_breakdown.png)
 
-A `GET` aan de `https://mgmt.auth.adobe.com/cmu/v2` API-eindpunt retourneert een representatie met:
+Een `GET` naar het API-eindpunt van `https://mgmt.auth.adobe.com/cmu/v2` retourneert een representatie met:
 
 * Koppelingen naar de beschikbare basisverdiepingspaden:
 
@@ -62,10 +62,10 @@ Met uitzondering van de datum-/tijddimensies, kan elke dimensie die beschikbaar 
 
 De volgende filteropties zijn beschikbaar:
 
-* **Gelijk** filters worden verstrekt door de afmetingsnaam aan een bepaalde waarde in het vraagkoord te plaatsen.
-* **IN** U kunt filters opgeven door dezelfde parameter dimensienaam meerdere keren met verschillende waarden toe te voegen: dimensie=waarde1&amp;dimensie=waarde2
-* **Niet gelijk** filters moeten de &#39;!&#39; gebruiken symbool na de naam van de dimensie die resulteert in de &#39;!=&#39; &quot;operator&quot;: dimensie!=value
-* **NIET IN** voor filters is de waarde &#39;!=&#39;-operator moet meerdere keren worden gebruikt, één keer voor elke waarde in de set: dimensie!=value1&amp;dimensie!=value2&amp;...
+* **evenaart** filters worden verstrekt door de afmetingsnaam aan een bepaalde waarde in het vraagkoord te plaatsen.
+* **IN** de filters kunnen worden gespecificeerd door de zelfde dimensie-naam parameter veelvoudige tijden met verschillende waarden toe te voegen: dimensie=value1&amp;dimensie=value2
+* **niet evenaart** filters moeten &quot;!&quot; gebruiken symbool na de naam van de dimensie die resulteert in de &#39;!=&#39; &quot;operator&quot;: dimensie!=value
+* **NIET IN** filters vereisen &quot;!=&#39;-operator moet meerdere keren worden gebruikt, één keer voor elke waarde in de set: dimensie!=value1&amp;dimensie!=value2&amp;...
 
 
 Er is ook een speciaal gebruik voor de afmetingsnamen in het vraagkoord: Als de afmetingsnaam als parameter van het vraagkoord zonder waarde wordt gebruikt, zal dit API instrueren om een projectie terug te keren die die afmeting in het rapport omvat.
@@ -78,7 +78,7 @@ Voorbeeld-CMU-query&#39;s:
 | /dimensie1/dimensie2/dimensie3?dimensie1=waarde1&amp;dimensie1=waarde2 | SELECTEER * vanuit projectie WAAR dimensie1 IN (&#39;value1&#39;, &#39;value2&#39;) GROEP BY dimensie1, dimensie2, dimensie3 |
 | /dimensie1/dimensie2/dimensie3?dimensie1!=value1 | SELECTEER * vanuit projectie WAAR dimensie1 &lt;> &#39;waarde1&#39; GROEP BY dimensie1, dimensie2, dimensie3 |
 | /dimensie1/dimensie2/dimensie3?dimensie1!=value1&amp;Dimensie2!=value2 | SELECTEER * vanuit projectie WAAR dimensie1 NIET IN (&#39;value1&#39;, &#39;value2&#39;) GROEP BY dimensie1, dimensie2, dimensie3 |
-| Ervan uitgaande dat er geen direct pad is: /dimensie1/dimensie3 maar er is een pad: /dimensie1/dimensie2/dimensie3  </br></br> /dimensie1?dimensie3 | SELECTEREN * vanuit projectiegroep BY dimensie1,dimensie3 |
+| Ervan uitgaande dat er geen direct pad is: /dimensie1/dimensie3 maar er is een pad: /dimensie1/dimensie2/dimensie3 </br></br> /dimensie1?dimensie3 | SELECTEREN * vanuit projectiegroep BY dimensie1,dimensie3 |
 
 >[!NOTE]
 >
@@ -96,7 +96,7 @@ Parameters voor door CMU API gereserveerde queryreeks:
 | format | Ja | Gebruikt voor inhoudonderhandeling (met het zelfde effect maar lagere belangrijkheid dan de weg &quot;uitbreiding&quot; - zie hieronder). | Geen: tijdens de onderhandelingen over de inhoud worden de andere strategieën uitgeprobeerd | format=json |
 | limiet | Ja | Maximumaantal rijen dat moet worden geretourneerd | Standaardwaarde die door de server in de zelfkoppeling wordt gerapporteerd als er geen limiet is opgegeven in de aanvraag | limit=1500 |
 | cijfers | Ja | Lijst met door komma&#39;s gescheiden metrische namen die moeten worden geretourneerd. Deze lijst moet worden gebruikt voor het filteren van een subset van de beschikbare metriek (om de laadgrootte te reduceren) en ook voor het afdwingen van de API om een projectie te retourneren die de gevraagde metriek bevat (in plaats van de standaard optimale projectie). | Alle metriek beschikbaar voor de huidige projectie zal worden teruggekeerd voor het geval deze parameter niet wordt verstrekt. | metriek=m1,m2 |
-| start | Ja | Begintijd voor het rapport als ISO8601; de server vult het resterende deel in als er alleen een voorvoegsel wordt opgegeven: start=2012 resulteert bijvoorbeeld in start=2012-01-01:00:00:00 | Gerapporteerd door de server in de zelfverbinding; de server probeert redelijke gebreken te verstrekken die op geselecteerde tijdgranulariteit worden gebaseerd | start=2012-07-15 |
+| start | Ja | De tijd van het begin voor het rapport als ISO8601; de server zal het resterende deel invullen als slechts een prefix wordt verstrekt: b.v., zal start=2012 in start=2012-01-01 :00: 00:00 resulteren | Gerapporteerd door de server in de zelfverbinding; de server probeert redelijke gebreken te verstrekken die op geselecteerde tijdgranulariteit worden gebaseerd | start=2012-07-15 |
 
 
 De enige beschikbare HTTP-methode die momenteel beschikbaar is, is GET. Ondersteuning voor OPTIONS/HEAD-methoden is mogelijk in toekomstige versies beschikbaar.
@@ -129,9 +129,9 @@ De gegevens zijn beschikbaar in de volgende indelingen:
 
 De volgende strategieën voor inhoudonderhandeling kunnen door klanten worden gebruikt (de prioriteit wordt gegeven door de positie in de lijst - eerst dingen):
 
-1. Een &quot;bestandsextensie&quot; die is toegevoegd aan het laatste segment van het URL-pad: bijvoorbeeld /cmu/v2/tenant/year/month/day.xml. Als de URL een querytekenreeks bevat, moet de extensie voor het vraagteken komen: `/cmu/v2/tenant/year/month/day.csv?mvpd=SomeMVPD`
-1. Een opmaakqueryreeksparameter: bijvoorbeeld `/cmu/report?format=json`
-1. De standaard HTTP Accept-header: bijvoorbeeld `Accept: application/xml`
+1. Een &quot;bestandsextensie&quot; die is toegevoegd aan het laatste segment van het URL-pad: bijvoorbeeld /cmu/v2/tenant/year/month/day.xml. Als de URL een queryreeks bevat, moet de extensie vóór het vraagteken komen: `/cmu/v2/tenant/year/month/day.csv?mvpd=SomeMVPD`
+1. Een query-tekenreeksparameter voor indeling: bijv., `/cmu/report?format=json`
+1. De standaard HTTP Accept-header: bijvoorbeeld, `Accept: application/xml`
 
 Zowel ondersteunen de parameter &quot;extension&quot; als de parameter query de volgende waarden:
 
@@ -144,7 +144,7 @@ Als geen mediatype wordt opgegeven door een van de strategieën, produceert de A
 
 ## Hypertext Application Language (HAL) {#hypertext-app-lang}
 
-Voor JSON en XML wordt de payload gecodeerd als HAL, zoals hier beschreven: `http://stateless.co/hal_specification.html`.
+Voor JSON en XML wordt de payload gecodeerd als HAL, zoals hier beschreven: `http://stateless.co/hal_specification.html` .
 
 Het werkelijke rapport (een geneste tag/eigenschap genaamd &quot;report&quot;) bestaat uit de feitelijke lijst met records die alle geselecteerde/toepasselijke afmetingen en meetgegevens met hun waarden bevatten, en die als volgt zijn gecodeerd:
 
@@ -174,9 +174,9 @@ Het werkelijke rapport (een geneste tag/eigenschap genaamd &quot;report&quot;) b
 
 Voor XML- en JSON-indelingen is de volgorde van de velden (afmetingen en metriek) in een record niet opgegeven, maar consistent (de volgorde is in alle records hetzelfde). Klanten mogen echter niet vertrouwen op een bepaalde volgorde van de velden in een record.
 
-De middelverbinding (het &quot;zelf&quot;rel in JSON en het &quot;href&quot;middelattribuut in XML) bevat de huidige weg en het vraagkoord dat voor het gealigneerde rapport wordt gebruikt. De vraagkoord zal alle impliciete en expliciete parameters openbaren, zodat de nuttige lading uitdrukkelijk het gebruikte tijdinterval, de impliciete filters (als om het even welk) zal wijzen, etc. De rest verbindingen binnen het middel zullen alle beschikbare segmenten bevatten die kunnen worden gevolgd om neer in de huidige gegevens te boren. Er wordt ook een koppeling voor roll-up toegevoegd die naar het bovenliggende pad verwijst (indien aanwezig). De `href` De waarde voor de boor-down/roll-up verbindingen bevat slechts de weg URL (het omvat niet het vraagkoord, zodat moet dit zo nodig door de cliënt worden toegevoegd). Merk op dat niet alle parameters van het vraagkoord die (of geïmpliceerd) door het huidige middel worden gebruikt voor &quot;roll-up&quot;of &quot;boor-down&quot;verbindingen van toepassing zullen zijn (bijvoorbeeld, kunnen de filters niet op sub of super-middelen van toepassing zijn).
+De middelverbinding (het &quot;zelf&quot;rel in JSON en het &quot;href&quot;middelattribuut in XML) bevat de huidige weg en het vraagkoord dat voor het gealigneerde rapport wordt gebruikt. De vraagkoord zal alle impliciete en expliciete parameters openbaren, zodat de nuttige lading uitdrukkelijk het gebruikte tijdinterval, de impliciete filters (als om het even welk) zal wijzen, etc. De rest verbindingen binnen het middel zullen alle beschikbare segmenten bevatten die kunnen worden gevolgd om neer in de huidige gegevens te boren. Er wordt ook een koppeling voor roll-up toegevoegd die naar het bovenliggende pad verwijst (indien aanwezig). De `href` -waarde voor de boor-down/roll-up koppelingen bevat alleen het URL-pad (de queryreeks is niet inbegrepen, dus deze moet zo nodig door de client worden toegevoegd). Merk op dat niet alle parameters van het vraagkoord die (of geïmpliceerd) door het huidige middel worden gebruikt voor &quot;roll-up&quot;of &quot;boor-down&quot;verbindingen van toepassing zullen zijn (bijvoorbeeld, kunnen de filters niet op sub of super-middelen van toepassing zijn).
 
-Voorbeeld (ervan uitgaande dat we een enkele metrische, zogenaamde client hebben en dat er een pre-aggregatie is voor `year/month/day/...`):
+Voorbeeld (ervan uitgaande dat er één metrische waarde is die clients wordt genoemd en dat er een pre-aggregatie voor `year/month/day/...` is):
 
 * `https://mgmt.auth.adobe.com/cmu/v2/year/month.xml`
 
@@ -228,11 +228,11 @@ In de CSV-gegevensindeling worden geen koppelingen of andere metagegevens (behal
 report__<start-date>_<end-date>_<filter-values,...>.csv
 ```
 
-CSV zal een kopbalrij en dan de rapportgegevens als verdere rijen bevatten. De koptekstrij bevat alle afmetingen gevolgd door alle meetgegevens. De soortorde van de rapportgegevens zal in de orde van de dimensies worden weerspiegeld. Daarom als het gegeven door D1 en dan door D2 wordt gesorteerd, zal de kopbal CSV als kijken: `D1, D2, ...metrics....`
+CSV zal een kopbalrij en dan de rapportgegevens als verdere rijen bevatten. De koptekstrij bevat alle afmetingen gevolgd door alle meetgegevens. De soortorde van de rapportgegevens zal in de orde van de dimensies worden weerspiegeld. Daarom als de gegevens door D1 en dan door D2 worden gesorteerd, zal de kopbal CSV als: `D1, D2, ...metrics....` kijken
 
 De volgorde van de velden in de koptekstrij komt overeen met de sorteervolgorde van de tabelgegevens.
 
-Voorbeeld: https://mgmt.auth.adobe.com/cmu/v2/year/month.csv produceert een bestand met de naam ```report__2012-07-20_2012-08-20_1000.csv``` met de volgende inhoud:
+Voorbeeld: https://mgmt.auth.adobe.com/cmu/v2/year/month.csv maakt een bestand met de naam ```report__2012-07-20_2012-08-20_1000.csv``` met de volgende inhoud:
 
 | Jaar | Maand | Clients |
 |:----:|:-----:|:-------:|
@@ -241,14 +241,14 @@ Voorbeeld: https://mgmt.auth.adobe.com/cmu/v2/year/month.csv produceert een best
 
 ## Gegevensversheid {#data-freshness}
 
-Hoewel het verzoek een Laatst gewijzigde kopbal bevat, het **DOET NIET** geeft de tijd weer waarop het verslag in het lichaam voor het laatst is bijgewerkt. De algemene verslagen worden op regelmatige basis berekend, met de volgende regels:
+Hoewel het verzoek een Laatst-Gewijzigde kopbal bevat, wijst het **NIET** op de tijd toen het rapport in het lichaam het laatst werd bijgewerkt. De algemene verslagen worden op regelmatige basis berekend, met de volgende regels:
 
-* als de tijdsgranulariteit **jaar** of **maand**, dan wordt het rapport om de twee dagen bijgewerkt
-* als de tijdsgranulariteit **dag**, dan wordt het rapport om de 3 uur bijgewerkt
-* als de tijdsgranulariteit **uur**, dan wordt het rapport elk uur bijgewerkt
-* als de tijdsgranulariteit **minuut**, dan wordt het rapport elke minuut bijgewerkt
+* als de tijdgranulariteit **jaar** of **maand** is, dan wordt het rapport bijgewerkt om de 2 dagen
+* als de tijdgranulariteit **dag** is, dan wordt het rapport bijgewerkt om de 3 uren
+* als de tijdgranulariteit **uur** is, dan wordt het rapport bijgewerkt elk uur
+* als de tijdgranulariteit **minuut** is, dan wordt het rapport bijgewerkt elke minuut
 
-De **activiteitsniveau** en **gelijknamigheidsniveau** de rapporten worden bijgewerkt elke dag, ongeacht de tijdgranulariteit.
+Het **activiteitsniveau** en **gelijktijdig niveau** rapporten worden bijgewerkt elke dag, ongeacht de tijdgranulariteit.
 
 ## GZIP-compressie {#gzip-compression}
 
