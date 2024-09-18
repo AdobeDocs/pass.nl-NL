@@ -1,13 +1,13 @@
 ---
 title: Overzicht van dynamische clientregistratie
 description: Overzicht van dynamische clientregistratie
-source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
+exl-id: 9f98dfcd-4375-48c3-beff-259dfb1d3a26
+source-git-commit: acff285f7db1bdd32d5da3e01a770d9581d3ba75
 workflow-type: tm+mt
 source-wordcount: '840'
 ht-degree: 0%
 
 ---
-
 
 # Overzicht van dynamische clientregistratie {#dynamic-client-registration-overview}
 
@@ -53,7 +53,7 @@ Raadpleeg de volgende secties voor meer informatie over het beheren en gebruiken
 
 Het dynamische proces van het cliëntregistratiebeheer staat cliënttoepassingen toe die op specifieke platforms lopen en toegang tot specifieke de Authentificatie APIs van Adobe Pass moeten registreren door het [ Dashboard van Adobe Pass TVE ](https://console.auth.adobe.com/).
 
-Het Adobe Pass TVE-dashboard is een hulpmiddel voor Adobe Pass Authentication-klanten (Programmers) om hun configuratie en gegevens te beheren. Dit zelfbedienings dashboard laat een waaier van functionaliteit toe die in de [ documentatie van de Gids van de Gebruiker van het Dashboard van Adobe Pass TVE ](../tve-dashboard-user-guide.md) wordt beschreven.
+Het Adobe Pass TVE-dashboard is een hulpmiddel voor Adobe Pass Authentication-klanten (Programmers) om hun configuratie en gegevens te beheren. Dit zelfbedienings dashboard laat een waaier van functionaliteit toe die in de [ documentatie van de Gids van de Gebruiker van het Dashboard van Adobe Pass TVE ](../tve-dashboard/old-tve-dashboard/tve-dashboard-user-guide.md) wordt beschreven.
 
 Voor het geval u toegang tot het [ Adobe Pass TVE Dashboard ](https://console.auth.adobe.com/) hebt, volg de stappen in de hieronder secties om een geregistreerde toepassing tot stand te brengen en de softwareverklaring te downloaden.
 
@@ -67,12 +67,12 @@ Er zijn twee manieren waarop u een geregistreerde toepassing kunt maken:
 
 * **het niveau van de Programmer**
 
-  Met het registratieproces op programmeerniveau kunt u een geregistreerde toepassing maken die is gekoppeld aan alle beschikbare kanalen of een geselecteerde subset kanalen. Voor meer details, verwijs naar [ creeer een geregistreerde toepassing op programmeerniveau ](../tve-dashboard-user-guide.md#create-registered-application-programmer-level) sectie van de [ Gids van de Gebruiker van het Dashboard van de TVE ](../tve-dashboard-user-guide.md) documentatie.
+  Met het registratieproces op programmeerniveau kunt u een geregistreerde toepassing maken die is gekoppeld aan alle beschikbare kanalen of een geselecteerde subset kanalen. Voor meer details, verwijs naar [ creeer een geregistreerde toepassing op programmeerniveau ](../tve-dashboard/old-tve-dashboard/tve-dashboard-user-guide.md#create-registered-application-programmer-level) sectie van de [ Gids van de Gebruiker van het Dashboard van de TVE ](../tve-dashboard/old-tve-dashboard/tve-dashboard-user-guide.md) documentatie.
 
 
 * **niveau van het Kanaal**
 
-  Met het registratieproces op kanaalniveau kunt u een geregistreerde toepassing maken die alleen aan het geselecteerde kanaal is gekoppeld. Voor meer details, verwijs naar [ creeer een geregistreerde toepassing op kanaalniveau ](../tve-dashboard-user-guide.md#create-registered-application-channel-level) sectie van de [ Gids van de Gebruiker van het Dashboard van TVE ](../tve-dashboard-user-guide.md) documentatie.
+  Met het registratieproces op kanaalniveau kunt u een geregistreerde toepassing maken die alleen aan het geselecteerde kanaal is gekoppeld. Voor meer details, verwijs naar [ creeer een geregistreerde toepassing op kanaalniveau ](../tve-dashboard/old-tve-dashboard/tve-dashboard-user-guide.md#create-registered-application-channel-level) sectie van de [ Gids van de Gebruiker van het Dashboard van TVE ](../tve-dashboard/old-tve-dashboard/tve-dashboard-user-guide.md) documentatie.
 
 >[!IMPORTANT]
 >
@@ -92,11 +92,11 @@ Er zijn twee beschikbare manieren u een softwareverklaring kunt downloaden die o
 
 * **het niveau van de Programmer**
 
-  Voor meer details, verwijs naar [ Download een softwareverklaring op programmeerniveau ](../tve-dashboard-user-guide.md#download-software-statement-programmer-level) sectie van de [ Gids van de Gebruiker van het Dashboard van de TVE ](../tve-dashboard-user-guide.md) documentatie.
+  Voor meer details, verwijs naar [ Download een softwareverklaring op programmeerniveau ](../tve-dashboard/old-tve-dashboard/tve-dashboard-user-guide.md#download-software-statement-programmer-level) sectie van de [ Gids van de Gebruiker van het Dashboard van de TVE ](../tve-dashboard/old-tve-dashboard/tve-dashboard-user-guide.md) documentatie.
 
 * **niveau van het Kanaal**
 
-  Voor meer details, verwijs naar [ Download een softwareverklaring op kanaalniveau ](../tve-dashboard-user-guide.md#download-software-statement-channel-level) sectie van de [ Gids van de Gebruiker van het Dashboard van de TVE ](../tve-dashboard-user-guide.md) documentatie.
+  Voor meer details, verwijs naar [ Download een softwareverklaring op kanaalniveau ](../tve-dashboard/old-tve-dashboard/tve-dashboard-user-guide.md#download-software-statement-channel-level) sectie van de [ Gids van de Gebruiker van het Dashboard van de TVE ](../tve-dashboard/old-tve-dashboard/tve-dashboard-user-guide.md) documentatie.
 
 De softwareverklaring is een Token van het Web JSON (`JWT`) dat informatie over uw software van de cliënttoepassing als bundel bevat. Wanneer voorgesteld aan [ wint cliëntgeloofsbrieven ](./apis/dynamic-client-registration-apis-retrieve-client-credentials.md) API terug, wordt de softwareverklaring digitaal ondertekend gebruikend de Handtekening van het Web JSON (`JWS`).
 

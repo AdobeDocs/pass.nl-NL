@@ -4,7 +4,7 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass-verificatie
 user-guide-description: Adobe Pass-verificatie is een machtigingsoplossing voor TV Everywhere, die een modulair kader verstrekt om te bepalen of iemand die toegang tot een bron vraagt, daar rechten voor heeft.
-source-git-commit: 82fd63a0e208a90753235b81fa52757283c9d314
+source-git-commit: acff285f7db1bdd32d5da3e01a770d9581d3ba75
 workflow-type: tm+mt
 source-wordcount: '1155'
 ht-degree: 2%
@@ -274,16 +274,16 @@ ht-degree: 2%
       + [Charles Proxy gebruiken](using-charles-proxy.md)
    + Concepten {#concepts}
       + [Gebruikersnaam](understanding-user-ids.md)
-+ [Gebruikershandleiding voor TVE Dashboard](tve-dashboard-user-guide.md)
++ [Gebruikershandleiding voor TVE Dashboard](tve-dashboard/old-tve-dashboard/tve-dashboard-user-guide.md)
 + Nieuwe TVE-dashboardgebruikershandleiding {#user-guide}
-   + [Overzicht van TVE-dashboard](/help/authentication/tve-dashboard-overview.md)
-   + [Omgevingen](/help/authentication/tve-dashboard-environments.md)
-   + [Wijzigingen controleren en duwen](/help/authentication/tve-dashboard-review-push-changes.md)
-   + [Dashboard](/help/authentication/tve-dashboard-home.md)
-   + [Kanalen](/help/authentication/tve-dashboard-channels.md)
-   + [Programmeurs](/help/authentication/tve-dashboard-programmers.md)
-   + [MVPD&#39;s](/help/authentication/tve-dashboard-mvpds.md)
-   + [Integraties](/help/authentication/tve-dashboard-integrations.md)
-   + [Rapporten](/help/authentication/tve-dashboard-reports.md)
-   + [Wijzigingenlogboek](/help/authentication/tve-dashboard-changes-log.md)
+   + [Overzicht van TVE-dashboard](/help/authentication/tve-dashboard/new-tve-dashboard/tve-dashboard-overview.md)
+   + [Omgevingen](/help/authentication/tve-dashboard/new-tve-dashboard/tve-dashboard-environments.md)
+   + [Wijzigingen controleren en duwen](/help/authentication/tve-dashboard/new-tve-dashboard/tve-dashboard-review-push-changes.md)
+   + [Dashboard](/help/authentication/tve-dashboard/new-tve-dashboard/tve-dashboard-home.md)
+   + [Kanalen](/help/authentication/tve-dashboard/new-tve-dashboard/tve-dashboard-channels.md)
+   + [Programmeurs](/help/authentication/tve-dashboard/new-tve-dashboard/tve-dashboard-programmers.md)
+   + [MVPD&#39;s](/help/authentication/tve-dashboard/new-tve-dashboard/tve-dashboard-mvpds.md)
+   + [Integraties](/help/authentication/tve-dashboard/new-tve-dashboard/tve-dashboard-integrations.md)
+   + [Rapporten](/help/authentication/tve-dashboard/new-tve-dashboard/tve-dashboard-reports.md)
+   + [Wijzigingenlogboek](/help/authentication/tve-dashboard/new-tve-dashboard/tve-dashboard-changes-log.md)
 + [Verklarende woordenlijst](glossary.md)
