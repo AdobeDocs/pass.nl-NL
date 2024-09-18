@@ -1,7 +1,7 @@
 ---
 title: REST API V2 - Cookbook - stappen voor implementatie client/server
 description: REST API V2 - Cookbook - stappen voor implementatie client/server
-source-git-commit: 5ba888b35731ef64b3dd1878f2fa55083989f857
+source-git-commit: 5ba538bdb13d121ba27005df82d4ae604f912241
 workflow-type: tm+mt
 source-wordcount: '698'
 ht-degree: 0%
@@ -26,6 +26,7 @@ Als u Adobe Pass REST API V2 wilt implementeren, moet u de onderstaande stappen 
 ## A. Registratiefase {#registration-phase}
 
 ### Stap 1: De toepassing registreren {#step-1-register-your-application}
+
 De toepassing kan Adobe Pass REST API V2 alleen aanroepen als hiervoor een toegangstoken is vereist op basis van de API-beveiligingslaag.
 Om het toegangstoken te krijgen, moet de toepassing stappen zoals beschreven volgen:
 [ Dynamische Registratie van de Cliënt ](./dynamic-client-registration.md)
@@ -33,6 +34,7 @@ Om het toegangstoken te krijgen, moet de toepassing stappen zoals beschreven vol
 ## B. Verificatiefase {#authentication-phase}
 
 ### Stap 2: Controleren op bestaande geverifieerde profielen {#step-2-check-for-existing-authenticated-profiles}
+
 Streaming toepassing checks for existing authenticated profiles: <b> /api/v2/{serviceProvider}/profiles </b><br>
 ([ wint voor authentiek verklaarde profielen ](./apis/profiles-apis/rest-api-v2-retrieve-authenticated-profiles.md) terug)
 
@@ -49,6 +51,7 @@ Streaming toepassing checks for existing authenticated profiles: <b> /api/v2/{se
       * als een profiel wordt gevonden, kan de Streaming toepassing aan <a href="#preauthorization-phase"> C te werk gaan. De fase van de voorafgaande vergunning </a> of <a href="#authorization-phase"> D. Autorisatiefase </a>
 
 ### Stap 3: De gebruiker verifiëren {#step-3-authenticate-the-user}
+
 Gebruikend Browser of een Tweede het Web-based toepassing van het Scherm:
 
 * Optie 1. Streaming toepassing kan een browser of webweergave openen, de URL voor verificatie laden en de gebruiker landt op de MVPD-aanmeldingspagina waar gegevens moeten worden ingediend
@@ -57,6 +60,7 @@ Gebruikend Browser of een Tweede het Web-based toepassing van het Scherm:
    * gebruiker inlognaam/wachtwoord invoeren, eindomleiding geeft een succespagina weer
 
 ### Stap 4: Controleren op geverifieerde profielen {#step-4-check-for-authenticated-profiles}
+
 Streaming toepassing controleert op verificatie met MVPD om te voltooien in browser of tweede scherm
 
 * het opiniepeilen om de 15 seconden wordt geadviseerd op <b> /api/v2/{serviceProvider}/profiles/{mvpd} </b><br>
@@ -70,8 +74,10 @@ Streaming toepassing controleert op verificatie met MVPD om te voltooien in brow
 ## C. Pretoelatingsfase {#preauthorization-phase}
 
 ### Stap 5: Controleren op vooraf geautoriseerde bronnen {#step-5-check-for-preauthorized-resources}
+
 Streaming toepassing bereidt zich voor op het weergeven van de video&#39;s die beschikbaar zijn voor de geverifieerde gebruiker en heeft de mogelijkheid om de
 toegang tot deze bronnen.
+
 * De stap is optioneel en wordt uitgevoerd als de toepassing de bronnen die niet beschikbaar zijn in het geverifieerde gebruikerspakket wil filteren
 * oproep aan <b> /api/v2/{serviceProvider} /decisions/preauthorize/{mvpd} </b><br>
 ([ verkrijg pre-vergunningsbesluit gebruikend specifieke MVPD ](.apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md))
@@ -80,6 +86,7 @@ toegang tot deze bronnen.
 ## D. Vergunningsfase {#authorization-phase}
 
 ### Stap 6: Controleren op geautoriseerde bronnen {#step-6-check-for-authorized-resources}
+
 Streaming toepassing bereidt zich voor op het afspelen van een video/middel/bron die door de gebruiker is geselecteerd.
 
 * stap is nodig voor elke start van het afspelen
@@ -91,6 +98,7 @@ Streaming toepassing bereidt zich voor op het afspelen van een video/middel/bron
 ## E. Afmeldingsfase {#logout-phase}
 
 ### Stap 7: Afmelden {#step-7-logout}
+
 Streaming apparaat: gebruiker wil zich afmelden bij de MVPD
 
 * call <b>/api/v2/{serviceProvider}/logout/{mvpd} </b><br>
