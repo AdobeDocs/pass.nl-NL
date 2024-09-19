@@ -1,7 +1,7 @@
 ---
 title: REST API V2 Cookbook (client-naar-server)
 description: REST API V2 Cookbook (client-naar-server)
-source-git-commit: 837276ce85445da5c3877592b194e37adf35fa32
+source-git-commit: 709835276710ec4b92abec3e39aaecae99872e77
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 0%
@@ -29,24 +29,24 @@ Als u Adobe Pass REST API V2 wilt implementeren, moet u de onderstaande stappen 
 
 De toepassing kan Adobe Pass REST API V2 alleen aanroepen als hiervoor een toegangstoken is vereist op basis van de API-beveiligingslaag.
 
-Om het toegangstoken te krijgen, moet de toepassing stappen zoals beschreven volgen: [ Dynamische Registratie van de Cliënt ](./dynamic-client-registration.md)
+Om het toegangstoken te krijgen, moet de toepassing stappen zoals beschreven volgen: [ Dynamische Registratie van de Cliënt ](../../dcr-api/apis/dynamic-client-registration-apis-retrieve-access-token.md)
 
 ## B. Verificatiefase {#authentication-phase}
 
 ### Stap 2: Controleren op bestaande geverifieerde profielen {#step-2-check-for-existing-authenticated-profiles}
 
 Streaming toepassing controleert bestaande geverifieerde profielen: <b> /api/v2/{serviceProvider} /profiles </b><br>
-([ wint voor authentiek verklaarde profielen ](./apis/profiles-apis/rest-api-v2-retrieve-authenticated-profiles.md) terug)
+([ wint voor authentiek verklaarde profielen ](../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md) terug)
 
 * Als er geen profiel is gevonden en Streaming toepassing een TempPass-flow implementeert
    * Volg documentatie op hoe te om [ Tijdelijke toegangsstromen uit te voeren ](../flows/temporary-access-flows/rest-api-v2-access-temporary-flows.md)
 * Als er geen profiel wordt gevonden, implementeert streaming toepassing een verificatiestroom
    * De het stromen toepassing wint de lijst van MVPDs beschikbaar voor serviceProvider terug: <b>/api/v2/{serviceProvider}/configuration </b><br>
-([ wint lijst van beschikbare MVPDs ](./apis/configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider.md) terug)
+([ wint lijst van beschikbare MVPDs ](../apis/configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider.md) terug)
    * Streaming-toepassing kan filteren toepassen op de lijst van MVPD&#39;s en alleen MVPD&#39;s weergeven die zijn bedoeld terwijl andere worden verborgen (TempPass, test MVPD&#39;s, MVPD&#39;s die in ontwikkeling zijn, enz.)
    * De gebruiker selecteert de weergavekiezer voor streaming toepassingen
    * Streaming toepassing maakt een sessie: <b> /api/v2/{serviceProvider} /session</b><br>
-([ creeer authentificatiesessie ](./apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md)) <br>
+([ creeer authentificatiesessie ](../apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md)) <br>
       * er wordt een CODE en URL geretourneerd die voor verificatie moeten worden gebruikt
       * als een profiel wordt gevonden, kan de Streaming toepassing aan <a href="#preauthorization-phase"> C te werk gaan. De fase van de voorafgaande vergunning </a> of <a href="#authorization-phase"> D. Autorisatiefase </a>
 
@@ -64,9 +64,9 @@ Gebruikend Browser of een Tweede het Web-based toepassing van het Scherm:
 Streaming toepassing controleert op verificatie met MVPD om te voltooien in browser of tweede scherm
 
 * Opiniepeiling om de 15 seconden wordt aanbevolen op <b> /api/v2/{serviceProvider} /profiles/{mvpd} </b><br>
-([ wint voor authentiek verklaarde profielen voor specifieke MVPD ](.apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) terug)
+([ wint voor authentiek verklaarde profielen voor specifieke MVPD ](../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) terug)
    * Als de selectie MVPD niet in de Streaming toepassing wordt gemaakt aangezien de plukker MVPD in de Tweede toepassing van het Scherm wordt voorgesteld, zou de opiniepeiling met CODE <b>/api/v2/ {serviceProvider} /profiles/code/ {CODE} moeten gebeuren </b><br>
-([ wint voor authentiek verklaarde profielen voor specifieke CODE ](./apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) terug)
+([ wint voor authentiek verklaarde profielen voor specifieke CODE ](../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) terug)
 * De opiniepeiling mag niet langer zijn dan 30 minuten, als 30 minuten zijn bereikt en de streamingtoepassing nog actief is, moet een nieuwe sessie worden gestart en worden een nieuwe CODE en URL geretourneerd
 * Wanneer de authentificatie volledig is is de terugkeer 200 met voor authentiek verklaard profiel
 * De het stromen toepassing kan aan <a href="#preauthorization-phase"> C te werk gaan. De fase van de voorafgaande vergunning </a> of <a href="#authorization-phase"> D. Autorisatiefase </a>
@@ -80,7 +80,7 @@ toegang tot deze bronnen.
 
 * De stap is optioneel en wordt uitgevoerd als de toepassing de bronnen die niet beschikbaar zijn in het geverifieerde gebruikerspakket wil filteren
 * Aanroep van <b> /api/v2/{serviceProvider} /decisions/preauthorize/{mvpd} </b><br>
-([ verkrijg pre-vergunningsbesluit gebruikend specifieke MVPD ](.apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md))
+([ verkrijg pre-vergunningsbesluit gebruikend specifieke MVPD ](../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md))
 
 ## D. Vergunningsfase {#authorization-phase}
 
@@ -90,7 +90,7 @@ Streaming toepassing bereidt zich voor op het afspelen van een video/middel/bron
 
 * Stap is nodig voor elke start van het afspelen
 * Roep <b> /api/v2/{serviceProvider} /Decision/Authze/{mvpd} </b><br>
-([ ontvang vergunningsbesluit gebruikend specifieke MVPD ](.apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md))
+([ ontvang vergunningsbesluit gebruikend specifieke MVPD ](../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md))
    * Decision = &#39;Permit&#39; , streamingapparaat start streaming
    * Decision = &#39;Deny&#39;, het streamingapparaat geeft de gebruiker te horen dat het geen toegang heeft tot die video
 
@@ -101,5 +101,5 @@ Streaming toepassing bereidt zich voor op het afspelen van een video/middel/bron
 Streaming apparaat: gebruiker wil zich afmelden bij de MVPD
 
 * Roep <b> /api/v2/{serviceProvider}/logout/{mvpd} </b><br>
-([ initieert logout voor specifieke MVPD ](.apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md))
+([ initieert logout voor specifieke MVPD ](../apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md))
 * Als de reactie actionType=&#39;interactive&#39; en url aanwezig is, open url in Browser/Tweede Scherm om logout met MVPD te voltooien
