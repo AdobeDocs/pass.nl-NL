@@ -1,9 +1,9 @@
 ---
 title: Voorbeelden van gebruiksrapporten voor gelijktijdige bewaking
 description: Voorbeelden van gebruiksrapporten voor gelijktijdige bewaking
-source-git-commit: 1ee6ba156364b183e7b5271e38af2c34687fca65
+source-git-commit: 7adfa5c803d27ac63f4fde64cf86edfb6bfca9cd
 workflow-type: tm+mt
-source-wordcount: '2400'
+source-wordcount: '2387'
 ht-degree: 0%
 
 ---
@@ -37,8 +37,6 @@ ht-degree: 0%
 | Maandelijks activiteitenverslag | &quot;year&quot;, &quot;month&quot;, &quot;activity-level&quot; | cmu/v2/jaar/maand/activiteit | &quot;activity-level&quot;, &quot;users&quot; |
 | Maandelijks activiteitenniveau per huurder | &quot;year&quot;, &quot;month&quot;, &quot;activity-level&quot;, &quot;huurder&quot; | cmu/v2/jaar/maand/activiteit-niveau/huurder | &quot;activity-level&quot;, &quot;huurder&quot;, &quot;gebruikers&quot; |
 | Maandelijks activiteitenrapport per huurder mvpd | &quot;year&quot;, &quot;month&quot;, &quot;activity-level&quot;, &quot;huurder&quot;, &quot;mvpd&quot; | cmu/v2/jaar/maand/activiteit-niveau/huurder/mvpd | &quot;activity-level&quot;, &quot;huurder&quot;, &quot;mvpd&quot;, &quot;gebruikers&quot; |
-
-*TODO:controleer met BG als de gelijktijdige en activiteitenniveaurapporten correct zijn *
 
 ## Voorbeelden van dagelijkse rapporten {#daily-reports-examples}
 
