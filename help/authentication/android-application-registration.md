@@ -2,7 +2,7 @@
 title: Android-toepassingsregistratie
 description: Android-toepassingsregistratie
 exl-id: 6238bd87-ac97-4a5c-9d92-3631f7b2d46a
-source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
+source-git-commit: 7107d4a915113fb237602143aafc350b776c55d6
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Hier zijn manieren u een Verklaring van de Software kunt verkrijgen.
 
 ### Als u toegang hebt tot het TVE-dashboard van de Adobe
 
-1. Open uw browser en navigeer aan [ Adobe Pass TVE Dashboard ](https://console.auth.adobe.com).
+1. Open uw browser en navigeer aan [ Adobe Pass TVE Dashboard ](https://experience.adobe.com/#/pass/authentication).
 
 1. Navigeer naar de sectie **[!UICONTROL Channels]** en selecteer vervolgens het kanaal.
 

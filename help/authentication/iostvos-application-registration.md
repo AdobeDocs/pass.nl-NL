@@ -2,7 +2,7 @@
 title: iOS/tvOS-toepassingsregistratie
 description: iOS/tvOS-toepassingsregistratie
 exl-id: 89ee6b5a-29fa-4396-bfc8-7651aa3d6826
-source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
+source-git-commit: 7107d4a915113fb237602143aafc350b776c55d6
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Een verklaring van de Software is een teken JWT dat informatie over uw toepassin
 
 ### Als u toegang hebt tot het TVE-dashboard van de Adobe:
 
-- Uw browser openen en naar <https://console.auth.adobe.com> navigeren
+- Uw browser openen en naar <https://experience.adobe.com/#/pass/authentication> navigeren
 - Navigeer naar de sectie `Channels` en selecteer het kanaal.
 - Ga naar `Registered Applications` Tab.
 - Klik op `Add new application` .
@@ -55,7 +55,7 @@ Nadat u uw Verklaring van de Software krijgt moet u het als parameter in de aann
 
 ### Als u toegang hebt tot het TVE-dashboard van de Adobe:
 
-- Uw browser openen en naar <https://console.auth.adobe.com> navigeren
+- Uw browser openen en naar <https://experience.adobe.com/#/pass/authentication> navigeren
 - Navigeer naar de sectie `Channels` en selecteer het kanaal.
 - Ga naar `Custom Schemes` Tab.
 - Klik op `Generate a new custom scheme` .

@@ -1,9 +1,10 @@
 ---
 title: CMU API-toegang
 description: CMU API-toegang
-source-git-commit: 598eb878168f6e352a8eae369cbc8cb833033328
+exl-id: 8d216703-aabc-489e-93fe-d4d105616b1d
+source-git-commit: 7107d4a915113fb237602143aafc350b776c55d6
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '420'
 ht-degree: 0%
 
 ---
@@ -20,37 +21,39 @@ Wij hebben CMU- rapporten toegang bijgewerkt om met het Dynamische Protocol van 
 Opdat de toepassingen van de Cliënt de vergunning OAuth 2.0 gebruiken, moet de server dynamisch registreren om specifieke informatie (cliëntgeloofsbrieven) te verkrijgen om met het te kunnen communiceren. Als deel van het registratieproces, moet de cliënt een reeks ingebouwde meta-gegevens aan het eindpunt van de cliëntregistratie voorleggen.
 Deze metagegevens worden doorgegeven als een softwareinstructie, die een &quot;software_id&quot; bevat waarmee onze verificatieserver verschillende exemplaren van een toepassing kan correleren met dezelfde softwareinstructie.
 Een softwareverklaring is een Token van het Web JSON (JWT) die meta-gegevenswaarden over de cliëntsoftware als bundel bevestigt. Wanneer voorgesteld aan de vergunningsserver als deel van een verzoek van de cliëntregistratie, moet de softwareverklaring digitaal worden ondertekend of MACed gebruikend de Handtekening van het Web JSON (JWS). \
-In de officiële documentatie vindt u een gedetailleerdere uitleg van de software-instructies en de manier waarop deze werken  <a href="https://datatracker.ietf.org/doc/html/rfc7591" target="_blank">[RFC7591]</a>.
+U kunt een gedetailleerdere verklaring vinden over welke softwareverklaringen zijn en hoe zij in de officiële documentatie <a href="https://datatracker.ietf.org/doc/html/rfc7591" target="_blank">[ RFC7591 ]</a> werken.
 Voer de stappen in de onderstaande secties uit om toegang te krijgen.
 
 ## Toegangsprocedures {#access-procedure-steps}
 
-1. Een geregistreerde toepassing hebben op de Adobe Pass DCR-server. Neem voor deze stap contact op met onze [Ondersteuningsteam](mailto:tve-support@adobe.com).
+1. Een geregistreerde toepassing hebben op de Adobe Pass DCR-server. Voor deze stap gelieve ons [ Team van de Steun ](mailto:tve-support@adobe.com) te contacteren.
+
 2. De software-instructie ophalen
-   1. Ga naar TVE-dashboard <a href="https://console-preprod.auth.adobe.com/#!/" target="_blank"> Pre-Prod </a>  of <a href="https://console.auth.adobe.com/" target="_blank">PROD</a>
+   1. Ga naar [ Adobe Pass TVE Dashboard ](https://experience.adobe.com/#/pass/authentication)
    2. Programmeur selecteren
-   3. Ga naar tabblad Toepassingen
+   3. Ga naar *Geregistreerde Toepassingen* lusje
    4. Toepassing selecteren
-   5. Klik op Software-instructie DownLoad om een bestand weer te geven dat vergelijkbaar is met onderste opname
+   5. Klik op Downloaden op de geregistreerde toepassingsrij waarvoor u een softwareverklaring wilt krijgen en sparen het als dossier op uw lokale machine
       <figure>
-          <img src="assets/software_statement_1_download.png"
+          <img src="assets/programmer-download-software-statement-button.png"
                alt="Softwareinstructie downloaden">
-       </figure>
+      </figure>
+
       <figure>
           <img src="assets/software_statement_2.png"
                alt="Voorbeeld van softwareinstructie">
-       </figure>
+      </figure>
 
 3. Toegangstoken verkrijgen
    1. Krijg cliëntgeloofsbrieven door de hierboven verkregen softwareverklaring te gebruiken en de hieronder vraag uit te voeren. Op deze manier zal een client_id - client_geheime paar worden verkregen, die kan worden gebruikt om het toegangstoken te krijgen.
-      *Deze stap mag niet elke keer worden uitgevoerd. Het zou opnieuw moeten worden gedaan slechts wanneer de geloofsbrieven verlopen.*
+      *deze stap zou niet elke keer moeten worden uitgevoerd. Het zou opnieuw moeten worden gedaan slechts wanneer de geloofsbrieven verlopen.*
       <figure>
           <img src="assets/dcr_request_1_get_client_credentials.png"
                alt="Clientgegevens ophalen">
        </figure>
 
    2. Krijg toegangstoken door de lagere vraag te gebruiken. Gebruik dit toegangstoken om een CMU API aan te roepen tot het teken zal verlopen.
-      *Deze stap zou slechts moeten worden uitgevoerd als het laatste geproduceerde teken verliep.*
+      *deze stap zou moeten worden uitgevoerd slechts als het laatste geproduceerde teken verliep.*
       <figure>
           <img src="assets/dcr_get_access_token_call.png"
                alt="Toegangstoken ophalen">

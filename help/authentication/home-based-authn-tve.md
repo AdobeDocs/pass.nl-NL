@@ -2,7 +2,7 @@
 title: Verificatie op thuisbasis voor tv overal
 description: Verificatie op thuisbasis voor tv overal
 exl-id: abdc7724-4290-404a-8f93-953662cdc2bc
-source-git-commit: acff285f7db1bdd32d5da3e01a770d9581d3ba75
+source-git-commit: 7107d4a915113fb237602143aafc350b776c55d6
 workflow-type: tm+mt
 source-wordcount: '1638'
 ht-degree: 0%
@@ -115,7 +115,7 @@ Beschrijving van de HBA-verificatiestroom voor het SAML-verificatieprotocol
 ## HBA activeren {#how-to-activate-hba}
 
 * **protocol OAuth:**
-   * Voor het toelaten van HBA zie, [ de Gids van de Gebruiker van het Dashboard van Adobe Pass TVE ](/help/authentication/tve-dashboard/old-tve-dashboard/tve-dashboard-user-guide.md)
+   * Voor het toelaten van HBA zie, [ de Gids van de Gebruiker van het Dashboard van Adobe Pass TVE ](/help/authentication/tve-dashboard/new-tve-dashboard/tve-dashboard-overview.md)
 * **SAML protocol:** Op huis gebaseerde Authentificatie wordt geactiveerd op de kant MVPD. De programmeur of Adobe heeft geen actie nodig.
 Voor meer informatie over MVPDs die huis Gebaseerde Authentificatie steunen, zie [ status HBA voor MVPDs ](/help/authentication/hba-status-mvpds.md).
 
@@ -156,5 +156,5 @@ Voor meer informatie over MVPDs die huis Gebaseerde Authentificatie steunen, zie
 * [ Op huis gebaseerde Authentificatie Infographic ](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/AdobeNewsletterHBA.pdf?dc=201604260953-2640) {target=_blank} - door Adobe
 * [Verificatie met het OAuth 2.0-protocol](/help/authentication/authn-oauth2-protocol.md)
 * [Verificatie met SAML MVPDs](/help/authentication/authn-usecase.md)
-* [Gebruikershandleiding voor Adobe Pass TVE-dashboard](/help/authentication/tve-dashboard/old-tve-dashboard/tve-dashboard-user-guide.md)
+* [Gebruikershandleiding voor Adobe Pass TVE-dashboard](/help/authentication/tve-dashboard/new-tve-dashboard/tve-dashboard-overview.md)
 * [hba_status-gebruikersmetagegevens](/help/authentication/user-metadata-feature.md#obtaining)

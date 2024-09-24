@@ -2,7 +2,7 @@
 title: Welkom bij Adobe&reg; Verificatie doorgeven!
 description: Welkom bij Adobe&reg; controle van verificatie doorgeven
 exl-id: a8b01469-3d5f-4a44-9ae8-06a68c29d56d
-source-git-commit: acff285f7db1bdd32d5da3e01a770d9581d3ba75
+source-git-commit: 7107d4a915113fb237602143aafc350b776c55d6
 workflow-type: tm+mt
 source-wordcount: '331'
 ht-degree: 0%
@@ -26,8 +26,8 @@ Je feedback wordt altijd gewaardeerd!
 ## Populaire Help en veelgestelde vragen {#help-faqs}
 
 | **Aanbevolen Punten** |
-|-|
-| <ul><li>[ Enige Sign-On voor iOS ](/help/authentication/apple-sso-overview.md)</li><li>[ Bevorderingscontrole van de Temperatuur ](/help/authentication/promotional-temp-pass.md)</li><li>[ huis-Gebaseerde Authentificatie (HBA) ](/help/authentication/home-based-authn-tve.md)</li><li>[ HBA Infographic ](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/AdobeNewsletterHBA.pdf)</li><li>[ de Gids van de Gebruiker van het Dashboard van Adobe Pass TVE ](/help/authentication/tve-dashboard/old-tve-dashboard/tve-dashboard-user-guide.md)</li></ul> |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <ul><li>[ Enige Sign-On voor iOS ](/help/authentication/apple-sso-overview.md)</li><li>[ Bevorderingscontrole van de Temperatuur ](/help/authentication/promotional-temp-pass.md)</li><li>[ huis-Gebaseerde Authentificatie (HBA) ](/help/authentication/home-based-authn-tve.md)</li><li>[ HBA Infographic ](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/AdobeNewsletterHBA.pdf)</li><li>[ de Gids van de Gebruiker van het Dashboard van Adobe Pass TVE ](/help/authentication/tve-dashboard/new-tve-dashboard/tve-dashboard-overview.md)</li></ul> |
 
 | **voor Programmeurs** | **voor MVPDs** |
 |------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
