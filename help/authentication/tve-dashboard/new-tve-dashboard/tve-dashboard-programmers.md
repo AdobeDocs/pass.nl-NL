@@ -2,9 +2,9 @@
 title: Programmeurs
 description: Leer over programmeurs en zijn configuraties binnen het dashboard van TVE.
 exl-id: b450d7cc-d5b5-4454-8f95-8047856bfb98
-source-git-commit: acff285f7db1bdd32d5da3e01a770d9581d3ba75
+source-git-commit: c29af84963b010ef9d2a2d318486aae8fffccecc
 workflow-type: tm+mt
-source-wordcount: '701'
+source-wordcount: '1139'
 ht-degree: 0%
 
 ---
@@ -122,11 +122,87 @@ Er is een nieuwe configuratiewijziging gemaakt en deze is gereed voor serverupda
 
 ### Geregistreerde toepassingen {#registered-applications}
 
-Dit tabblad bevat een lijst met toepassingsregistraties.
+Op dit tabblad wordt een lijst met geregistreerde toepassingen weergegeven. Voor meer details met betrekking tot geregistreerd toepassingsgebruik, verwijs naar het [ dynamische overzicht van de cliëntregistratie ](../../dcr-api/dynamic-client-registration-overview.md) documentatie.
+
+U kunt de volgende handelingen uitvoeren met geregistreerde toepassingen:
+
+* [Een nieuwe geregistreerde toepassing toevoegen](#add-registered-applications)
+* [Software-instructies downloaden](#download-software-statement)
+
+#### Nieuwe geregistreerde toepassing toevoegen {#add-registered-applications}
+
+Ga als volgt te werk om een nieuwe geregistreerde toepassing toe te voegen.
+
+1. Selecteer **nieuwe toepassing** bij de hoger-juiste hoek van de **Geregistreerde sectie van Toepassingen** toevoegen.
+
+   ![ voeg een nieuwe toepassing ](../../assets/tve-dashboard/new-tve-dashboard/programmers/programmer-add-new-application-button.png) toe
+
+   *voeg een nieuwe toepassing* toe
+
+1. Selecteer **Toegewezen aan Kanaal** van het dropdown menu in het **Nieuwe de dialoogvakje van de Toepassing**.
+
+   >[!IMPORTANT]
+   >
+   > Het wordt aanbevolen geregistreerde toepassingen te maken met specifiekere en beperkte machtigingen om de beveiliging te verbeteren en ongeoorloofde toegang te voorkomen. Wanneer u geregistreerde toepassingen maakt, kunt u daarom overwegen om smallere opties te gebruiken voor de toegewezen `channel` .
+
+1. Selecteer **Platforms** van het dropdown menu.
+
+   >[!IMPORTANT]
+   >
+   > Het wordt aanbevolen geregistreerde toepassingen te maken met specifiekere en beperkte machtigingen om de beveiliging te verbeteren en ongeoorloofde toegang te voorkomen. Wanneer u geregistreerde toepassingen maakt, kunt u daarom overwegen om smallere opties te gebruiken voor de toegewezen `platforms` .
+
+1. Selecteer **Domeinen** van het dropdown menu.
+
+   >[!IMPORTANT]
+   >
+   > In het clientregistratieproces kan de clienttoepassing vragen om een omleidings-URL te mogen gebruiken voor de voltooiing van de verificatiestroom. Wanneer een clienttoepassing een specifieke omleidings-URL gebruikt, wordt deze gevalideerd op basis van de geselecteerde `domains` .
+
+1. Typ de **Naam** van de toepassing.
+
+1. Typ de **Versie** van de toepassing.
+
+   >[!IMPORTANT]
+   >
+   > Het wordt aanbevolen een nieuwe geregistreerde toepassing te maken voor elke belangrijke update van uw clienttoepassing om de levenscyclus en het gebruik ervan te beheren. Indien noodzakelijk, creeer een kaartje door onze [ Zendesk ](https://adobeprimetime.zendesk.com) en vraag uw Technische Manager van de Rekening (TAM) om een geregistreerde toepassing te herroepen om de functionaliteit van een specifieke versie van de cliënttoepassing te blokkeren.
+
+1. Selecteer **waarde &quot;DIRECT van het Type 0} {van het drop-down menu.**
+
+1. Selecteer **toepassing** toevoegen.
+
+Er is een nieuwe configuratiewijziging gemaakt en deze is gereed voor serverupdate. Om de nieuwe geregistreerde toepassing te gebruiken die in de **Geregistreerde sectie van Toepassingen** wordt vermeld, ga met de [ overzicht en duw veranderingen ](/help/authentication/tve-dashboard/new-tve-dashboard/tve-dashboard-review-push-changes.md) stroom te werk.
+
+#### Software-instructie downloaden {#download-software-statement}
+
+Voer de volgende stappen uit om een softwareinstructie te downloaden.
+
+1. Beweeg op de geregistreerde toepassing u de softwareverklaring van de lijst van **Geregistreerde Toepassingen** wilt downloaden.
+
+1. Selecteer **Download**.
+
+   ![ Download een softwareverklaring ](../../assets/tve-dashboard/new-tve-dashboard/programmers/programmer-download-software-statement-button.png)
+
+   *Download een softwareverklaring*
+
 
 ### Aangepaste schema&#39;s {#custom-schemes}
 
-Op dit tabblad wordt een lijst met aangepaste schema&#39;s weergegeven. De toepassingsregistratie van de mening [ iOS/tvOS ](/help/authentication/iostvos-application-registration.md).
+Op dit tabblad wordt een lijst met aangepaste schema&#39;s weergegeven. Voor meer details met betrekking tot het gebruik van douaneregelingen, verwijs naar de [ iOS/tvOS toepassingsregistratie ](/help/authentication/iostvos-application-registration.md).
+
+U kunt de volgende wijzigingen aanbrengen in aangepaste schema&#39;s:
+
+* [Een nieuw aangepast schema genereren](#generate-custom-schemes)
+
+#### Nieuw aangepast schema genereren {#generate-custom-schemes}
+
+Voer de volgende stappen uit om een nieuw aangepast schema te genereren.
+
+1. Selecteer **produceer nieuwe douaneregeling**.
+
+   ![ produceer een nieuw douaneregeling ](../../assets/tve-dashboard/new-tve-dashboard/programmers/programmer-add-new-custom-scheme-button.png)
+
+   *produceer een nieuw douaneregeling*
+
+Er is een nieuwe configuratiewijziging gemaakt en deze is gereed voor serverupdate. Om de nieuwe douaneregeling te gebruiken die in de **sectie van de Douane van de Schema&#39;s** wordt vermeld, ga met de [ overzicht te werk en druk veranderingen ](/help/authentication/tve-dashboard/new-tve-dashboard/tve-dashboard-review-push-changes.md) stroom.
 
 ## Nieuwe programmeur toevoegen {#add-new-programmer}
 
