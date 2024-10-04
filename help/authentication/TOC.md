@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass-verificatie
 user-guide-description: Adobe Pass-verificatie is een machtigingsoplossing voor TV Everywhere, die een modulair kader verstrekt om te bepalen of iemand die toegang tot een bron vraagt, daar rechten voor heeft.
-source-git-commit: 837276ce85445da5c3877592b194e37adf35fa32
+source-git-commit: dd3451f8761ce6183e9a11099fb3094abae09466
 workflow-type: tm+mt
-source-wordcount: '1165'
+source-wordcount: '1169'
 ht-degree: 2%
 
 ---
@@ -53,9 +53,10 @@ ht-degree: 2%
          + [Tokenuitwisseling](token-exchange.md)
          + [Gratis voorvertoning voor tijdelijke controle en tijdelijke controle voor speciale acties](free-preview-for-temp-pass-and-promotional-temp-pass.md)
    + REST API V2 {#rest-api-v2}
-      + [REST API V2 - Overzicht](./rest-api-v2/rest-api-v2-overview.md)
+      + [Overzicht van REST API V2](./rest-api-v2/rest-api-v2-overview.md)
+      + [Woordenlijst REST API V2](./rest-api-v2/rest-api-v2-glossary.md)
       + API&#39;s {#rest-api-v2-apis}
-         + [REST API V2 - API&#39;s - Overzicht](./rest-api-v2/apis/rest-api-v2-apis-overview.md)
+         + [REST API V2 API&#39;s - Overzicht](./rest-api-v2/apis/rest-api-v2-apis-overview.md)
          + Configuratie {#rest-api-v2-configuration-apis}
             + [Win configuratie voor specifieke dienstverlener terug](./rest-api-v2/apis/configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider.md)
          + Sessies {#rest-api-v2-sessions-apis}
@@ -76,7 +77,7 @@ ht-degree: 2%
             + [Vraag van partnerverificatie ophalen](rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-partner-authentication-request.md)
             + [Profiel ophalen met verificatierespons van partner](rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md)
       + Stromen {#rest-api-v2-flows}
-         + [REST API V2 - Stromen - Overzicht](./rest-api-v2/flows/rest-api-v2-flows-overview.md)
+         + [Overzicht van REST API V2-stromen](./rest-api-v2/flows/rest-api-v2-flows-overview.md)
          + Basistoegangsstromen {#rest-api-v2-basic-access-flows}
             + [Stroom van basisprofielen uitgevoerd in primaire toepassing](rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-primary-application-flow.md)
             + [De stroom van basisprofielen die binnen secundaire toepassing wordt uitgevoerd](rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-secondary-application-flow.md)

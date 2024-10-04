@@ -1,21 +1,21 @@
 ---
-title: REST API V2 - Stromen - Overzicht
-description: REST API V2 - Stromen - Overzicht
+title: Overzicht van REST API V2-stromen
+description: Overzicht van REST API V2-stromen
 exl-id: 84a9ac0f-c26a-4159-82a8-3a31bb31f529
-source-git-commit: 94fcb4e8c94330561596cd4006738c4f4d75e371
+source-git-commit: dd3451f8761ce6183e9a11099fb3094abae09466
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '170'
 ht-degree: 0%
 
 ---
 
-# REST API V2 - Stromen - Overzicht {#rest-api-v2-flows-overview}
+# Overzicht van REST API V2-stromen {#rest-api-v2-flows-overview}
 
 >[!IMPORTANT]
 >
 > De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
-Ga om aan de slag te gaan naar de openbare documentatie van elk item in de onderstaande lijst.
+Ga om aan de slag te gaan naar de openbare documentatie van de stromen die u interesseert voor de onderstaande lijst.
 
 ## Basistoegangsstromen {#rest-api-v2-flows-access-basic}
 

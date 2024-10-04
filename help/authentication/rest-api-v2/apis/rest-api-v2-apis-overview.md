@@ -1,21 +1,21 @@
 ---
-title: REST API V2 - API's - Overzicht
-description: REST API V2 - API's - Overzicht
+title: REST API V2 API's - Overzicht
+description: REST API V2 API's - Overzicht
 exl-id: 62b48bf0-d200-4949-b268-8f8ea2daabfa
-source-git-commit: 94fcb4e8c94330561596cd4006738c4f4d75e371
+source-git-commit: dd3451f8761ce6183e9a11099fb3094abae09466
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '144'
 ht-degree: 0%
 
 ---
 
-# REST API V2 - API&#39;s - Overzicht {#rest-api-v2-apis-overview}
+# REST API V2 API&#39;s - Overzicht {#rest-api-v2-apis-overview}
 
 >[!IMPORTANT]
 >
 > De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
-Ga om aan de slag te gaan naar de openbare documentatie van elk item in de onderstaande lijst.
+Ga om aan de slag te gaan naar de openbare documentatie van de API&#39;s die u interesseert voor de onderstaande lijst.
 
 ## Configuratie {#rest-api-v2-apis-configuration}
 

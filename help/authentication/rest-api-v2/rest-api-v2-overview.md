@@ -1,14 +1,14 @@
 ---
-title: REST API V2 - Overzicht
-description: REST API V2 - Overzicht
-source-git-commit: 94fcb4e8c94330561596cd4006738c4f4d75e371
+title: Overzicht van REST API V2
+description: Overzicht van REST API V2
+source-git-commit: dd3451f8761ce6183e9a11099fb3094abae09466
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '490'
 ht-degree: 0%
 
 ---
 
-# REST API V2 - Overzicht {#rest-api-v2-overview}
+# Overzicht van REST API V2 {#rest-api-v2-overview}
 
 >[!IMPORTANT]
 >
@@ -70,7 +70,11 @@ Alle toekomstige ontwikkelingen zullen echter gebaseerd zijn op de REST API V2. 
 
 ## Meer informatie?
 
-Om begonnen te worden, bezoek onze openbare documentatie om tot [ stroombeschrijving ](./flows/rest-api-v2-flows-overview.md) en [ API verwijzing ](./apis/rest-api-v2-apis-overview.md) toegang te hebben.
+Ga om te beginnen naar onze openbare documentatie:
+
+- [Verklarende woordenlijst](rest-api-v2-glossary.md)
+- [API&#39;s](./apis/rest-api-v2-apis-overview.md)
+- [Stromen](./flows/rest-api-v2-flows-overview.md)
 
 Ons toegewijde supportteam is ook beschikbaar om u te helpen met vragen of technische ondersteuning die u nodig hebt.
 
