@@ -1,13 +1,13 @@
 ---
 title: Vraag van partnerverificatie ophalen
 description: REST API V2 - verzoek voor partnerverificatie ophalen
-source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
+exl-id: 52d8a8e9-c176-410f-92bc-e83449278943
+source-git-commit: 6c328eb2c635a1d76fc7dae8148a4de291c126e0
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1097'
 ht-degree: 0%
 
 ---
-
 
 # Vraag van partnerverificatie ophalen {#retrieve-partner-authentication-request}
 
@@ -339,8 +339,8 @@ ht-degree: 0%
       <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
-      <td style="background-color: #DEEBFF;">fout</td>
-      <td>De fout verstrekt extra informatie die aan de <a href="../../../enhanced-error-codes.md"> Verbeterde documentatie van de Codes van de Fout </a> volgt.</td>
+      <td style="background-color: #DEEBFF;"></td>
+      <td>Het reactielichaam kan extra fouteninformatie verstrekken die aan de <a href="../../../enhanced-error-codes.md"> Verbeterde documentatie van de Codes van de Fout </a> volgt.</td>
       <td><i>vereist</i></td>
    </tr>
 </table>

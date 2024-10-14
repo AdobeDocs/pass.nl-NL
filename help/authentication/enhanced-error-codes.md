@@ -2,190 +2,369 @@
 title: Verbeterde foutcodes
 description: Verbeterde foutcodes
 exl-id: 2b0a9095-206b-4dc7-ab9e-e34abf4d359c
-source-git-commit: 87639ad93d8749ae7b1751cd13a099ccfc2636ac
+source-git-commit: 6c328eb2c635a1d76fc7dae8148a4de291c126e0
 workflow-type: tm+mt
-source-wordcount: '2299'
+source-wordcount: '2593'
 ht-degree: 2%
 
 ---
 
 # Verbeterde foutcodes {#enhanced-error-codes}
 
->[!NOTE]
+>[!IMPORTANT]
 >
 >De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
-## Overzicht {#overview}
+Enhanced Error Codes vertegenwoordigen een Adobe Pass-verificatiefunctie die aanvullende foutinformatie biedt voor clienttoepassingen die zijn geïntegreerd met:
 
-In dit document wordt de lijst met API-foutcodes en aanvullende foutinformatie beschreven die naar de toepassingen wordt geretourneerd.
+* Adobe Pass-verificatie REST-API&#39;s:
+   * [REST API v1](./rest-api-overview.md)
+   * [REST API v2](./rest-api-v2/apis/rest-api-v2-apis-overview.md)
+* Adobe Pass-verificatie-SDK&#39;s autoriseren-API:
+   * [JavaScript SDK (API voor voorafgaande autorisatie)](./preauthorize-api-javascript-sdk.md)
+   * [iOS/tvOS SDK (API vooraf autoriseren)](./preauthorize-api-ios-tvos-sdk.md)
+   * [Android SDK (API voor voorafgaande autorisatie)](./preauthorize-api-android-sdk.md)
 
-Om de Verbeterde Codes van de Fout in de toepassing van Programmers te gebruiken, moet een verzoek aan het team van de Steun worden ingediend om het met een configuratieverandering toe te laten.
+  _(*) Vooraf autoriseren API is de enige Adobe Pass Authentication SDK API die ondersteuning biedt voor Enhanced Error Codes._
 
-## Behandeling van antwoordfout {#response-error-handling}
+>[!IMPORTANT]
+>
+> Toepassingen waarin Adobe Pass Authentication REST API v2 is geïntegreerd, profiteren standaard van Enhanced Error Codes zonder dat hiervoor extra configuratie nodig is.
+>
+> <br/>
+>
+> Toepassingen waarin de Adobe Pass Authentication REST API v1 of SDK&#39;s Preauthorize API zijn geïntegreerd, kunnen alleen profiteren van de uitgebreide foutcodes als de functie expliciet is ingeschakeld.
+>
+> <br/>
+>
+> Om deze eigenschap uitdrukkelijk toe te laten, creeer een kaartje door onze [ Zendesk ](https://adobeprimetime.zendesk.com) en vraag uw Technische Manager van de Rekening (TAM) voor hulp.
 
-In de meeste scenario&#39;s bevat de Adobe Pass Authentication API aanvullende foutinformatie in de responsiestructuur om **betekenisvolle context** waarom een bepaalde fout is opgetreden en/of mogelijke oplossingen om het probleem automatisch op te lossen.  *In sommige specifieke gevallen met verificatie- of uitlogstromen kunnen de Adobe Pass-verificatieservices echter een HTML-reactie of een leeg lichaam retourneren. Raadpleeg de API-documentatie voor meer informatie.*
+## Vertegenwoordiging {#enhanced-error-codes-representation}
 
-Terwijl bepaalde types van fouten automatisch kunnen worden behandeld (zoals het opnieuw proberen van een vergunningsverzoek in het geval van een netwerkonderbreking of gebruiker vereisen om opnieuw voor authentiek te verklaren als hun zitting is verlopen), zouden andere types configuratieveranderingen of de interactie van het team van de klantenzorg kunnen vereisen. Het is belangrijk voor Programmeurs om volledige fouteninformatie in dergelijke gevallen te verzamelen en te verstrekken.
+Enhanced Error Codes kunnen worden weergegeven in de `JSON` - of `XML` -indeling, afhankelijk van de geïntegreerde Adobe Pass Authentication API en de gebruikte headerwaarde Accept (d.w.z. `application/json` of `application/xml`):
 
-De Adobe Pass-verificatie-API retourneert HTTP-statuscodes in het bereik 400-500 om fouten of fouten aan te geven. Elke HTTP-statuscode heeft bepaalde implicaties:
+| Adobe Pass-verificAPI | JSON | XML |
+|-------------------------------|---------|---------|
+| REST API v1 | &amp;check; | &amp;check; |
+| REST API v2 | &amp;check; |         |
+| API voor voorafgaande autorisatie van SDK&#39;s | &amp;check; |         |
 
-- De 4xx-foutcodes impliceren dat de fout door de client wordt gegenereerd en dat de client extra werk moet doen om de fout te verhelpen (bijvoorbeeld een toegangstoken verkrijgen voordat beschermde API&#39;s worden aangeroepen of een vereiste parameter wordt opgegeven)
+>[!IMPORTANT]
+>
+> Adobe Pass-verificatie kan uitgebreide foutcodes in twee formulieren doorgeven aan clienttoepassingen:
+>
+> <br/>
+>
+> * **Top-level fouteninformatie**: In dit geval, wordt het ***&quot;fout&quot;*** voorwerp gevestigd op het hoogste niveau, daarom kan het antwoordlichaam slechts het ***&quot;fout&quot;*** voorwerp bevatten.
+> * **punt-vlakke fouteninformatie**: In dit geval, wordt het ***&quot;fout&quot;*** voorwerp gevestigd op het puntenniveau, daarom kan het antwoordlichaam een ***&quot;fout&quot;*** voorwerp voor alle punten bevatten die een fout terwijl het worden onderhouden ervaren.
+>
+> <br/>
+>
+> Controleer de openbare documentatie voor elke geïntegreerde Adobe Pass Authentication API om de representatiespecificaties van de Enhanced Error Codes te bepalen.
 
-- De 5xx-foutcodes impliceren dat de fout wordt gegenereerd door de server en dat de server extra werk moet doen om deze te herstellen.
+Raadpleeg de volgende HTTP-reacties met voorbeelden van uitgebreide foutcodes die worden weergegeven als `JSON` of `XML` .
 
-De aanvullende foutinformatie wordt opgenomen in het veld &quot;Fout&quot; in de antwoordinstantie.
+>[!BEGINTABS]
 
-<table>
-<thead>
-  <tr>
-    <th>Naam</th>
-    <th>Type</th>
-    <th>Voorbeeld</th>
-    <th>Beschrijving</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>fout</td>
-    <td><i>object</i></td>
-    <td><strong>JSON</strong>
-    <br>
-    <code>{<br>&nbsp;&nbsp;&nbsp;&nbsp;"status" : 403,<br>&nbsp;&nbsp;&nbsp;&nbsp;"code" : "network_connection_failure",<br>&nbsp;&nbsp;&nbsp;&nbsp;"message" : "Unable to contact your TV provider<br>&nbsp;&nbsp;&nbsp;&nbsp;services",<br>&nbsp;&nbsp;&nbsp;&nbsp;"helpUrl" : "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",<br>&nbsp;&nbsp;&nbsp;&nbsp;"trace" : "12f6fef9-d2e0-422b-a9d7-60d799abe353",<br>&nbsp;&nbsp;&nbsp;&nbsp;"action" : "retry"<br>}
-    </code>
-    <p>
-    <p>
-    <strong>XML</strong>
-    <br>
-    <code>&lt;error&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;status&gt;403&lt;/status&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;code&gt;network_connection_failure&lt;/code&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;message&gt;Unable to contact your TV provider services&lt;/message&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;helpUrl&gt;https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html&lt;/helpUrl&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;trace>12f6fef9-d2e0-422b-a9d7-60d799abe353&lt;/trace&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;action>retry&lt;/action&gt;<br>&lt;/error&gt;
-    </code>
-    </td>
-    <td>Verwijst naar verzamelde inzameling of foutenvoorwerpen terwijl het proberen om het verzoek te voltooien.</td>
-  </tr>
-</tbody>
-</table>
+>[!TAB  REST API v1 - top-level fouteninformatie (JSON) ]
 
-</br>
-
-Adobe Pass API&#39;s die meerdere items verwerken (API voor voorafgaande toestemming, enz.) geven mogelijk aan of de verwerking voor een bepaald item is mislukt en met succes voor andere items is uitgevoerd met behulp van foutgegevens op itemniveau. In dit geval worden de ***&quot;error&quot;*** object bevindt zich op itemniveau en de responstekst kan meerdere items bevatten ***&quot;fouten&quot;*** objecten - raadpleeg de API-documentatie.
-
-</br>
-
-**Voorbeeld met gedeeltelijk succes en fout op itemniveau**
-
-```json
+```JSON
+HTTP/1.1 400 Bad Request
+Content-Type: application/json
+        
 {
-   "resources" : [
-        {
-            "id" : "TestStream1",
-            "authorized" : true
-        },
-        {
-            "id" : "TestStream2",
-            "authorized" : false,
-            "error" : {
- 
-               "status" : 403,
-               "code" : "network_connection_failure",
-               "message" : "Unable to contact your TV provider services",
-               "details" : "",
-               "helpUrl" : "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
-               "trace" : "8bcb17f9-b172-47d2-86d9-3eb146eba85e",
-               "action" : "retry"
-            }
- 
-        }
-    ]
+  "action": "none",
+  "status": 400,
+  "code": "invalid_requestor",
+  "message": "The requestor parameter is missing or invalid.",
+  "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
+  "trace": "8bcb17f9-b172-47d2-86d9-3eb146eba85e"
 }
 ```
 
-</br>
+>[!TAB  REST API v1 - Top-level fouteninformatie (XML) ]
 
-Elk foutobject heeft de volgende parameters:
+```XML
+HTTP/1.1 400 Bad Request
+Content-Type: application/xml
+
+<error>
+  <action>none</action>
+  <status>400</status>
+  <code>invalid_requestor</code>
+  <message>The requestor parameter is missing or invalid.</message>
+  <helpUrl>https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html</helpUrl>
+  <trace>8bcb17f9-b172-47d2-86d9-3eb146eba85e</trace>
+</error>
+```
+
+>[!TAB  REST API v1 - punt-vlakke fouteninformatie (JSON) ]
+
+```JSON
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "resources": [
+    {
+      "id": "TestStream1",
+      "authorized": true
+    },
+    {
+      "id": "TestStream2",
+      "authorized": false,
+      "error": {
+        "action": "retry",
+        "status": 403,
+        "code": "network_connection_failure",
+        "message": "Unable to contact your TV provider services",
+        "details": "Your subscription package does not include the \"Live\" channel",
+        "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
+        "trace": "12f6fef9-d2e0-422b-a9d7-60d799abe353"
+      }
+    }
+  ]
+}
+```
+
+>[!TAB  REST API v2 - Top-level fouteninformatie (JSON) ]
+
+```JSON
+HTTP/1.1 400 Bad Request
+Content-Type: application/json
+
+{
+  "action": "none",
+  "status": 400,
+  "code": "invalid_parameter_service_provider",
+  "message": "The service provider parameter value is missing or invalid.",
+  "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
+  "trace": "12f6fef9-d2e0-422b-a9d7-60d799abe353"
+}
+```
+
+>[!TAB  REST API v2 - punt-vlakke fouteninformatie (JSON) ]
+
+```JSON
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "decisions": [
+    {
+      "resource": "REF30",
+      "serviceProvider": "REF30",
+      "mvpd": "Cablevision",
+      "source": "mvpd",
+      "authorized": true,
+      "token": {
+        "issuedAt": 1697094207324,
+        "notBefore": 1697094207324,
+        "notAfter": 1697094802367,
+        "serializedToken": "PHNpZ25hdHVyZUluZm8..."
+      }
+    },
+    {
+      "resource": "REF40",
+      "serviceProvider": "REF40",
+      "mvpd": "Cablevision",
+      "source": "mvpd",
+      "authorized": false,
+      "error" : {
+        "action": "retry",
+        "status": 403,
+        "code": "network_connection_failure",
+        "message": "Unable to contact your TV provider services",
+        "details": "Your subscription package does not include the \"Live\" channel",
+        "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
+        "trace": "12f6fef9-d2e0-422b-a9d7-60d799abe353"
+      }
+    }
+  ]
+}
+```
+
+>[!ENDTABS]
+
+Uitgebreide foutcodes bevatten de volgende `JSON` velden of `XML` kenmerken:
 
 | Naam | Type | Voorbeeld | Beperkt | Beschrijving |
-|---|---|----|:---:|---|
-| *status* | *integer* | *403* | &amp;controleren; | De HTTP-statuscode van de respons zoals beschreven in RFC 7231 (<https://tools.ietf.org/html/rfc7231#section-6>) <ul><li>400 Ongeldig verzoek</li><li>401 Niet-toegelaten</li><li>403 Niet toegestaan</li><li>404 Niet gevonden</li><li>405 Methode niet toegestaan</li><li>409 Conflict</li><li>410 Gone</li><li>412 Voorwaarde is mislukt</li><li>429 Te veel verzoeken</li><li>500 Interval-serverfout</li><li>503 Service niet beschikbaar</li></ul> |
-| *code* | *string* | *network_connection_failure* | &amp;controleren; | De standaard Adobe Pass-verificatiefoutecode. De volledige lijst met foutcodes is hieronder opgenomen. |
-| *message* | *string* | *Kan geen contact opnemen met uw tv-provider services* | | Het leesbare bericht van de mens dat aan het eind - gebruiker kan worden getoond. |
-| *details* | *string* | *Uw abonnementspakket bevat niet het kanaal &quot;Live&quot;* | | In sommige gevallen wordt een gedetailleerd bericht verstrekt door de MVPD toestemmingseindpunten of door de programmeur door degradatieregels. <p> Merk op dat als geen douanebericht van de partnerdiensten werd ontvangen dan dit gebied niet op de foutengebieden zou kunnen aanwezig zijn. |
-| *helpUrl* | *url* | &quot;`http://`&quot; | | Een URL die een koppeling bevat naar meer informatie over waarom deze fout is opgetreden en mogelijke oplossingen. <p>De URI vertegenwoordigt een absolute URL en mag niet worden afgeleid van foutcode. Afhankelijk van de foutcontext kan een andere URL worden opgegeven. Bijvoorbeeld, zal de zelfde bad_request foutencode verschillende URL&#39;s voor authentificatie en vergunningsdiensten opbrengen. |
-| *traceren* | *string* | *12f6fef9-d2e0-422b-a9d7-60d799abe353* | | Een unieke id voor deze reactie die kan worden gebruikt wanneer contact wordt opgenomen met ondersteuning om specifieke problemen in complexere scenario&#39;s te identificeren. |
-| *action* | *string* | *opnieuw proberen* | &amp;controleren; | Aanbevolen maatregelen om de situatie te verhelpen: <ul><li> *none* - Helaas is er geen vooraf bepaalde actie om dit probleem op te lossen. Dit kan wijzen op een onjuiste aanroep van de openbare API</li><li>*configuratie* - Een configuratiewijziging is nodig via het TVE-dashboard of door contact op te nemen met de ondersteuningsafdeling. </li><li>*registratie van aanvragen* - De toepassing moet zich opnieuw registreren. </li><li>*verificatie* - De gebruiker moet verifiëren of opnieuw verifiëren. </li><li>*autorisatie* - De gebruiker moet toestemming voor de specifieke bron verkrijgen. </li><li>*aantasting* - Er dient enige vorm van afbraak te worden toegepast. </li><li>*opnieuw proberen* - Het opnieuw proberen van het verzoek zou de kwestie kunnen oplossen</li><li>*retry-after* - Het opnieuw indienen van het verzoek na de aangegeven periode zou de kwestie kunnen oplossen.</li></ul> |
+|-----------|-----------|---------------------------------------------------------------------------------------------------------------------|:----------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| *actie* | *koord* | *opnieuw proberen* | &amp;check; | De Adobe Pass-verificatie raadt u aan een actie uit te voeren om de situatie zoals die in dit document is gedefinieerd, te verhelpen. <br/><br/> voor meer details, verwijs naar de [ sectie van de Actie ](#enhanced-error-codes-action). |
+| *status* | *geheel* | *403* | &amp;check; | De code van de de reactiestatus van HTTP zoals die in [ wordt bepaald RFC 7231 ](https://tools.ietf.org/html/rfc7231#section-6) document. <br/><br/> voor meer details, verwijs naar de [ 2} sectie van de Status {.](#enhanced-error-codes-status) |
+| *code* | *koord* | *network_connection_failure* | &amp;check; | De unieke identificatiecode van de Adobe Pass-verificatie die is gekoppeld aan de fout zoals gedefinieerd in dit document. <br/><br/> voor meer details, verwijs naar de [ sectie van de Code ](#enhanced-error-codes-code). |
+| *bericht* | *koord* | *Onbekwaam om uw de leveranciersdiensten van TV te contacteren* |            | Het leesbare bericht dat in sommige gevallen aan de eindgebruiker kan worden weergegeven. <br/><br/> voor meer details, verwijs naar de [ Behandeling van de Reactie ](#enhanced-error-codes-response-handling) sectie. |
+| *details* | *koord* | *Uw abonnementspakket omvat niet het &quot;Levende&quot;kanaal* |            | Het gedetailleerde bericht dat in sommige gevallen door een dienstenpartner kon worden verstrekt, <br/><br/> Dit gebied zou niet aanwezig kunnen zijn voor het geval de de dienstenpartner geen douanebericht verstrekt. |
+| *helpUrl* | *url* | *https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html* |            | De openbare documentatie URL van de Authentificatie van Adobe Pass die met meer informatie over verbindt waarom deze fout en mogelijke oplossingen voorkwam. <br/><br/> Dit veld bevat een absolute URL en mag niet worden afgeleid van foutcode, afhankelijk van de foutcontext kan een andere URL worden opgegeven. |
+| *spoor* | *koord* | *12f6fef9-d2e0-422b-a9d7-60d799abe353* |            | De unieke id voor de reactie die kan worden gebruikt wanneer contact wordt opgenomen met de ondersteuning van Adobe Pass-verificatie om specifieke problemen op te lossen. |
 
-</br>
+>[!IMPORTANT]
+>
+> De **Beperkte** kolom wijst erop als het respectieve gebied een waarde van een eindige reeks houdt, terwijl de onbeperkte gebieden om het even welke gegevens kunnen bevatten.
+>
+> <br/>
+>
+> In toekomstige updates van dit document kunnen waarden aan de eindige sets worden toegevoegd, maar worden bestaande sets niet verwijderd of gewijzigd.
 
-**Opmerkingen:**
+### Handeling {#enhanced-error-codes-representation-action}
 
-- ***Beperkt*** kolom *Hiermee wordt aangegeven of de desbetreffende veldwaarde een eindige set vertegenwoordigt* (bijvoorbeeld bestaande HTTP-statuscodes voor &quot;*status*&quot;). In de toekomst kunnen updates van deze specificatie waarden toevoegen aan de beperkte lijst, maar worden bestaande waarden niet verwijderd of gewijzigd. Onbeperkte velden kunnen doorgaans gegevens bevatten, maar er kunnen beperkingen gelden om een redelijke grootte te garanderen.
+De uitgebreide foutcodes bevatten een veld &quot;Handeling&quot; met een aanbevolen handeling die de situatie zou kunnen verhelpen.
 
-- Elke reactie van de Adobe zal &quot;Adobe-verzoek-identiteitskaart&quot;bevatten die het cliëntverzoek door onze diensten van HTTP identificeert. De &quot;**traceren**&quot; het veld vult dat aan en zij dienen samen te worden gerapporteerd.
+De mogelijke waarden voor het veld &quot;Handeling&quot; zijn:
 
-## HTTP-statuscodes en foutcodes {#http-status-codes-and-error-codes}
+| Handeling | Beschrijving | Categorie |
+|--------------------------|---------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|
+| none | Er is geen vooraf gedefinieerde actie om dit probleem op te lossen, maar in sommige gevallen kan dit wijzen op een onjuiste aanroep van de API. | Verbeter de verzoekcontext. |
+| configuratie | Voor de clienttoepassing is een configuratiewijziging vereist. Deze wijziging vindt meestal plaats via het Adobe Pass TVE-dashboard. | Verbeter de context van de integratieconfiguratie. |
+| registratie van aanvragen | De clienttoepassing moet zich opnieuw registreren. | Verbeter de context van de clienttoepassing. |
+| verificatie | De clienttoepassing moet de gebruiker verifiëren of opnieuw verifiëren. | Verbeter de context van de clienttoepassing. |
+| autorisatie | De cliënttoepassing vereist om vergunning voor het gespecificeerde middel te verkrijgen. | Verbeter de context van de clienttoepassing. |
+| opnieuw proberen | De clienttoepassing moet de aanvraag opnieuw proberen. | Verbeter de verzoekcontext. |
 
-De inconsistenties tussen verschillende foutcodes en de bijbehorende HTTP-statuscodes zijn het gevolg van de achterwaartse compatibiliteitsvereisten met oudere SDK&#39;s en toepassingen (bijvoorbeeld *onbekend\_toepassing* resulteert in een onjuiste aanvraag van 400 aanvragen terwijl *onbekend\_software\_statement* rendement 401 niet toegestaan). Het oplossen van deze inconsistenties zal in toekomstige herhalingen gericht zijn.
+_(*) Voor sommige fouten, zouden de veelvoudige acties mogelijke oplossingen kunnen zijn, maar het gebied van de &quot;actie&quot;wijst met de hoogste waarschijnlijkheid aan om de fout te bevestigen._
 
-## Handelingen en foutcodes {#actions-and-error-codes}
+### Status {#enhanced-error-codes-representation-status}
 
-Voor de meeste foutcodes kunnen meerdere acties in aanmerking komen als paden naar het oplossen van het probleem in kwestie of zelfs meerdere acties zijn vereist om ze automatisch te corrigeren. We hebben ervoor gekozen de fout met de hoogste waarschijnlijkheid aan te geven. De **handelingen** kan in drie categorieën worden gesplitst:
+Uitgebreide foutcodes bevatten een veld &quot;status&quot; dat de HTTP-statuscode aangeeft die aan de fout is gekoppeld.
 
-1. degenen die proberen om de verzoekcontext te bevestigen (opnieuw proberen, opnieuw proberen-na)
-1. degenen die proberen de gebruikerscontext binnen de toepassing (toepassing-registratie, authentificatie, vergunning) te bevestigen
-1. die de integratiecontext tussen een toepassing en een identiteitsprovider proberen te herstellen (configuratie, degradatie)
+De mogelijke waarden voor het veld status zijn:
 
-Voor de eerste categorie (opnieuw proberen en opnieuw proberen-na), eenvoudig zou het opnieuw proberen van het zelfde verzoek genoeg kunnen zijn om de kwestie op te lossen. In gevallen van APIs die veelvoudige punten behandelen, zou de toepassing het verzoek moeten herhalen en slechts die punten met &quot;retry&quot;of &quot;retry-after&quot;actie omvatten. Voor &quot;*retry-after*&quot; actie, een &quot;<u>Opnieuw proberen na</u>De header geeft aan hoeveel seconden de toepassing moet wachten voordat de aanvraag wordt herhaald.
+| Code | Reden/woordgroep |
+|------|-----------------------|
+| 400 | Ongeldig verzoek |
+| 401 | Ongeautoriseerd |
+| 403 | Verboden |
+| 404 | Niet gevonden |
+| 405 | Methode niet toegestaan |
+| 410 | Gone |
+| 412 | Voorwaarde is mislukt |
+| 500 | Interne serverfout |
 
-Voor de tweede en derde categorie is de daadwerkelijke uitvoering van de actie in hoge mate afhankelijk van de toepassingsfuncties. Bijvoorbeeld &quot;*aantasting*&quot; kan worden geïmplementeerd als &quot;switch to 15 minuten temporary pass to allow users playback of the content&quot; of als &quot;automatic tool to apply AUTHN-ALL or AUTHZ-ALL degradatie for its integration with the specified MVPD&quot;. Vergelijkbaar met &quot;*verificatie*&quot;Actie kan een passieve verificatie (back-kanaalverificatie) op een tablet en een volledige tweede schermverificatiestroom op aangesloten tv&#39;s activeren. Daarom hebben we ervoor gekozen om volledige URL&#39;s een schema en alle parameters te geven.
+Verbeterde foutcodes met een 4xx-&quot;status&quot; worden meestal weergegeven wanneer de fout door de client wordt gegenereerd en meestal impliceert dit dat de client extra werk nodig heeft om de fout te verhelpen.
 
-## Foutcodes {#error-codes}
+Uitgebreide foutcodes met een &quot;status&quot; van 5 xx worden meestal weergegeven wanneer de fout door de server wordt gegenereerd en het grootste deel van de tijd dat dit impliceert dat de server extra werk nodig heeft om de fout te verhelpen.
 
-In de onderstaande tabel met fouten worden de mogelijke foutcodes, de bijbehorende berichten en mogelijke acties weergegeven.
+>[!IMPORTANT]
+>
+> Er zijn gevallen waarin de statuscode van het HTTP-antwoord afwijkt van het veld &#39;status&#39; van de uitgebreide foutcode, met name bij interactie met een Adobe Pass-verificatie-API die uitgebreide foutcodes als foutinformatie op itemniveau communiceert.
 
-| Handeling | Foutcode | HTTP-statuscode | Beschrijving |
-|---|---|---|---|
-| **none** | *authentication_deny_by_mvpd* | 403 | MVPD heeft een &quot;Weigeren&quot;besluit teruggegeven toen het verzoeken van vergunning voor de gespecificeerde middel. |
-|  | *authentication_deny_by_parental_controls* | 403 | MVPD heeft een &quot;Weigeren&quot;besluit wegens ouderlijke controlemontages voor het gespecificeerde middel teruggegeven. |
-|  | *authentication_deny_by_programmer* | 403 | De degradatieregel die door de Programmer wordt toegepast handhaaft een &quot;ontkent&quot;besluit voor de huidige gebruiker. |
-|  | *bad_request* | 400 | De API-aanvraag is ongeldig of heeft een onjuiste indeling. Controleer de API-documentatie om de vereisten voor de aanvraag te bepalen. |
-|  | *individualization_service_unavailable* | 503 | De aanvraag is mislukt omdat de individualisatieservice niet beschikbaar is. |
-|  | *internal_error* | 500 | De aanvraag is mislukt vanwege een interne serverfout. |
-|  | *invalid_client_time* | 400 | Datum/tijd/tijdzone van de clientcomputer is niet correct ingesteld. Dit zal waarschijnlijk leiden tot verificatie-/vergunningsfouten. |
-|  | *invalid_custom_scheme* | 400 | Het opgegeven aangepaste schema dat in de toepassingsregistratie wordt gebruikt, wordt niet herkend. Controleer de TVE-dashboardconfiguratie op de juiste aangepaste schemawaarden. |
-|  | *invalid_domain* | 400 | De aanvrager gebruikt een ongeldig domein. Alle domeinen die door een bepaalde identiteitskaart van de Aanvrager worden gebruikt moeten door Adobe worden gewhitelliseerd. |
-|  | *invalid_header* | 400 | De aanvraag is mislukt omdat deze een ongeldige koptekst bevat. Controleer de API-documentatie om te bepalen welke headers geldig zijn voor uw aanvraag en of er beperkingen zijn voor de waarde ervan. |
-|  | *invalid_http_method* | 405 | De HTTP-methode die aan de aanvraag is gekoppeld, wordt niet ondersteund. Controleer de API documentatie om de gesteunde methodes van HTTP voor uw verzoek te bepalen. |
-|  | *invalid_parameter_value* | 400 | De aanvraag is mislukt omdat deze een ongeldige parameter of parameterwaarde bevat. Controleer de API-documentatie om te bepalen welke parameters geldig zijn voor uw aanvraag en of er beperkingen zijn voor de waarde ervan. |
-|  | *invalid_resource_value* | 400 | De aanvraag is mislukt omdat een ongeldige of onjuist gevormde bron is gebruikt. Controleer de API-documentatie om te bepalen hoe complexe bronnen voor uw aanvraag moeten worden gecodeerd en of er beperkingen zijn voor de waarde en/of grootte van de bronnen. |
-|  | *invalid_registration_code* | 404 | De opgegeven registratiecode is niet langer geldig of is verlopen. |
-|  | *invalid_service_configuration* | 500 | De aanvraag is mislukt vanwege een onjuiste serviceconfiguratie. |
-|  | *missing_authentication_header* | 400 | De aanvraag is mislukt omdat deze niet de vereiste verificatieheader voor de specifieke API bevat. |
-|  | *missing_resource_mapping* | 400 | Er is geen overeenkomstige afbeelding voor de opgegeven bron. Neem contact op met de ondersteuning om de vereiste toewijzing te herstellen. |
-|  | *preauthentication_deny_by_mvpd* | 403 | MVPD heeft een &quot;Weigeren&quot;besluit teruggegeven toen het verzoeken van pre-vergunning voor de gespecificeerde middel. |
-|  | *preauthentication_deny_by_programmer* | 403 | De degradatieregels die door Programmer worden toegepast dwingen een &quot;ontkennen&quot;besluit voor de huidige gebruiker af. |
-|  | *registration_code_service_unavailable* | 503 | De aanvraag is mislukt omdat de service voor registratiecode niet beschikbaar is. |
-|  | *service_unavailable* | 503 | Het verzoek is mislukt omdat de authenticatie- of autorisatiedienst niet beschikbaar is. |
-|  | *access_token_unavailable* | 400 | De aanvraag is mislukt vanwege een onverwachte fout tijdens het ophalen van het toegangstoken. Controleer de configuratie van het TVE-dashboard op beschikbare softwareinstructies en geregistreerde aangepaste schema&#39;s. |
-|  | *unsupported_client_version* | 400 | Deze versie van de Adobe Pass Authentication SDK is te oud en wordt niet meer ondersteund. Raadpleeg de API-documentatie voor de stappen die nodig zijn om een upgrade naar de nieuwste versie uit te voeren. |
-| **configuratie** | *network_required_ssl* | 403 | Er is een SSL verbindingsprobleem voor de dienst van de doelpartner. Neem contact op met het ondersteuningsteam. |
-|  | *te_many_resources* | 403 | De autorisatie- of voorafgaande autorisatieaanvraag is mislukt omdat er te veel bronnen zijn gevraagd. Neem contact op met het ondersteuningsteam om de beperkingen voor autorisatie en autorisatie correct te configureren. |
-|  | *unknown_programmer* | 400 | De programmeur of serviceprovider wordt niet herkend. Gebruik het TVE-dashboard om de opgegeven programmeur te registreren. |
-|  | *unknown_application* | 400 | De toepassing wordt niet herkend. Gebruik het TVE-dashboard om de opgegeven toepassing te registreren. |
-|  | *unknown_integration* | 400 | De integratie tussen de opgegeven programmeur en identiteitsprovider bestaat niet. Gebruik het TVE-dashboard om de vereiste integratie te maken. |
-|  | *unknown_software_statement* | 401 | De softwareverklaring verbonden aan het toegangstoken wordt niet erkend. Neem contact op met het ondersteuningsteam voor meer informatie over de status van de software-instructie. |
-| **registratie van aanvragen** | *access_token_expired* | 401 | Het toegangstoken is verlopen. De toepassing moet het toegangstoken vernieuwen, zoals aangegeven in de API-documentatie. |
-|  | *invalid_access_token_signature* | 401 | De handtekening voor het toegangstoken is niet meer geldig. De toepassing moet het toegangstoken vernieuwen, zoals aangegeven in de API-documentatie. |
-|  | *invalid_client_id* | 401 | De bijbehorende client-id wordt niet herkend. De toepassing moet het registratieproces van de toepassing volgen, zoals aangegeven in de API-documentatie. |
-| **verificatie** | *authentication_session_expired* | 410 | De huidige verificatiesessie is verlopen. De gebruiker moet opnieuw met gesteund MVPD voor verdere verificatie verifiëren. |
-|  | *authentication_session_missing* | 401 | De verificatiesessie die aan deze aanvraag is gekoppeld, kan niet worden opgehaald. De gebruiker moet opnieuw met gesteund MVPD voor verdere verificatie verifiëren. |
-|  | *authentication_session_invalidate* | 401 | De verificatiesessie is ongeldig gemaakt door de identiteitsprovider. De gebruiker moet opnieuw met gesteund MVPD voor verdere verificatie verifiëren. |
-|  | *authentication_session_publisher_mismatch* | 400 | De autorisatieaanvraag is mislukt omdat de aangegeven MVPD voor de autorisatiestroom anders is dan die welke de authenticatiesessie heeft afgegeven. De gebruiker moet met gewenste MVPD opnieuw voor authentiek verklaren om verder te gaan. |
-|  | *authentication_deny_by_hba_policies* | 403 | MVPD heeft een &quot;Weigeren&quot;besluit op huis-gebaseerd authentificatiebeleid teruggegeven. De huidige authentificatie werd verkregen gebruikend een op huis-gebaseerde authentificatiestroom (HBA) maar het apparaat is niet meer thuis wanneer het verzoeken van om toestemming voor het gespecificeerde middel. De gebruiker moet opnieuw met gesteund MVPD voor verdere verificatie verifiëren. |
-|  | *identity_not_recognized_by_mvpd* | 403 | Het verzoek om toestemming is mislukt omdat de identiteit van de gebruiker niet door het MVPD is erkend. |
-| **autorisatie** | *authentication_expired* | 410 | De vorige autorisatie voor de opgegeven resource is verlopen. De gebruiker moet een nieuwe vergunning verkrijgen om verder te gaan. |
-|  | *authentication_not_found* | 404 | Er is geen autorisatie gevonden voor de opgegeven resource. De gebruiker moet een nieuwe vergunning verkrijgen om verder te gaan. |
-|  | *device_identifier_mismatch* | 403 | De opgegeven apparaat-id komt niet overeen met de identificatie van het autorisatieapparaat. De gebruiker moet een nieuwe vergunning verkrijgen om verder te gaan. |
-| **opnieuw proberen** | *network_connection_failure* | 403 | Er was een verbindingsmislukking met de bijbehorende partnerdienst. Het opnieuw proberen van het verzoek zou de kwestie kunnen oplossen. |
-|  | *network_connection_timeout* | 403 | Er was een verbindingsonderbreking met de bijbehorende partnerdienst. Het opnieuw proberen van het verzoek zou de kwestie kunnen oplossen. |
-|  | *network_receive_error* | 403 | Er was een gelezen fout terwijl het terugwinnen van de reactie van de bijbehorende partnerdienst. Het opnieuw proberen van het verzoek zou de kwestie kunnen oplossen. |
-|  | *maximum_execute_time_over* | 403 | De aanvraag is niet binnen de maximaal toegestane tijd voltooid. Het opnieuw proberen van het verzoek zou de kwestie kunnen oplossen. |
-| **retry-after** | *te_many_Requests* | 429 | Er zijn te veel verzoeken verzonden binnen een bepaald interval. De toepassing kan het verzoek na de voorgestelde periode opnieuw proberen. |
-|  | *user_rate_limit_over* | 429 | Een bepaalde gebruiker heeft binnen een bepaald interval te veel aanvragen ingediend. De toepassing kan het verzoek na de voorgestelde periode opnieuw proberen. |
+### Code {#enhanced-error-codes-representation-code}
+
+Uitgebreide foutcodes bevatten een veld &quot;code&quot; met een unieke id voor Adobe Pass-verificatie die aan de fout is gekoppeld.
+
+De mogelijke waarden voor het &quot;code&quot;gebied worden samengevoegd [ hieronder ](#enhanced-error-codes-list) in twee lijsten die op de geïntegreerde Authentificatie API van Adobe Pass worden gebaseerd.
+
+## Lijsten {#enhanced-error-codes-lists}
+
+### REST API v1 {#enhanced-error-codes-lists-rest-api-v1}
+
+In de onderstaande tabel worden mogelijke Enhanced Error Codes weergegeven die een clienttoepassing kan tegenkomen bij integratie met Adobe Pass Authentication REST API v1.
+
+| Handeling | Code | Status | Bericht |
+|--------------------|---------------------------------------------------|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **niets** | *invalid_requestor* | 400 | De parameter requestor ontbreekt of is ongeldig. |
+|                    | *invalid_device_info* | 400 | De apparaatinformatie ontbreekt of is ongeldig. |
+|                    | *invalid_device_id* | 400 | De apparaat-id ontbreekt of is ongeldig. |
+|                    | *missing_resource* | 400 412 | De parameter resource ontbreekt. |
+|                    | *misformed_authz_request* | 400 412 | Autorisatieaanvraag is null of ongeldig. |
+|                    | *preauthentication_deny_by_mvpd* | 403 | MVPD heeft een &quot;Weigeren&quot;besluit teruggegeven toen het verzoeken van pre-vergunning voor de gespecificeerde middel. |
+|                    | *authentication_deny_by_mvpd* | 403 | MVPD heeft een &quot;Weigeren&quot;besluit teruggegeven toen het verzoeken van vergunning voor de gespecificeerde middel. |
+|                    | *authentication_deny_by_parental_controls* | 403 | MVPD heeft een &quot;Weigeren&quot;besluit wegens ouderlijke controlemontages voor het gespecificeerde middel teruggegeven. |
+|                    | *internal_error* | 400 405 500 | De aanvraag is mislukt vanwege een interne serverfout. |
+| **configuratie** | *unknown_integration* | 400 412 | De integratie tussen de opgegeven programmeur en identiteitsprovider bestaat niet. Gebruik het TVE-dashboard om de vereiste integratie te maken. |
+|                    | *too_many_resources* | 403 | De autorisatie- of voorafgaande autorisatieaanvraag is mislukt omdat er te veel bronnen zijn gevraagd. Neem contact op met het ondersteuningsteam om de beperkingen voor autorisatie en autorisatie correct te configureren. |
+| **authentificatie** | *authentication_session_publisher_mismatch* | 400 | De autorisatieaanvraag is mislukt omdat de aangegeven MVPD voor de autorisatiestroom anders is dan die welke de authenticatiesessie heeft afgegeven. De gebruiker moet met gewenste MVPD opnieuw voor authentiek verklaren om verder te gaan. |
+|                    | *authentication_deny_by_hba_policies* | 403 | MVPD heeft een &quot;Weigeren&quot;besluit op huis-gebaseerd authentificatiebeleid teruggegeven. De huidige authentificatie werd verkregen gebruikend een op huis-gebaseerde authentificatiestroom (HBA) maar het apparaat is niet meer thuis wanneer het verzoeken van om toestemming voor het gespecificeerde middel. De gebruiker moet opnieuw met gesteund MVPD voor verdere verificatie verifiëren. |
+|                    | *authentication_deny_by_session_invalidate* | 403 | De verificatiesessie is ongeldig gemaakt door de identiteitsprovider. De gebruiker moet opnieuw met gesteund MVPD voor verdere verificatie verifiëren. |
+|                    | *identity_not_recognized_by_mvpd* | 403 | Het verzoek om toestemming is mislukt omdat de identiteit van de gebruiker niet door het MVPD is erkend. |
+|                    | *authentication_session_invalidate* | 403 | De verificatiesessie is ongeldig gemaakt door de identiteitsprovider. De gebruiker moet opnieuw met gesteund MVPD voor verdere verificatie verifiëren. |
+|                    | *authentication_session_missing* | 403 412 | De verificatiesessie die aan deze aanvraag is gekoppeld, kan niet worden opgehaald. De gebruiker moet opnieuw met gesteund MVPD voor verdere verificatie verifiëren. |
+|                    | *authentication_session_expired* | 403 412 | De huidige verificatiesessie is verlopen. De gebruiker moet opnieuw met gesteund MVPD voor verdere verificatie verifiëren. |
+|                    | *preauthentication_authentication_session_missing* | 412 | De verificatiesessie die aan deze aanvraag is gekoppeld, kan niet worden opgehaald. De gebruiker moet opnieuw met gesteund MVPD voor verdere verificatie verifiëren. |
+|                    | *preauthentication_authentication_session_expired* | 412 | De huidige verificatiesessie is verlopen. De gebruiker moet opnieuw met gesteund MVPD voor verdere verificatie verifiëren. |
+| **vergunning** | *authentication_not_found* | 403 404 | Er is geen autorisatie gevonden voor de opgegeven resource. De gebruiker moet een nieuwe vergunning verkrijgen om verder te gaan. |
+|                    | *authentication_expired* | 410 | De vorige autorisatie voor de opgegeven resource is verlopen. De gebruiker moet een nieuwe vergunning verkrijgen om verder te gaan. |
+| **opnieuw proberen** | *network_receive_error* | 403 | Er was een gelezen fout terwijl het terugwinnen van de reactie van de bijbehorende partnerdienst. Het opnieuw proberen van het verzoek zou de kwestie kunnen oplossen. |
+|                    | *network_connection_timeout* | 403 | Er was een verbindingsonderbreking met de bijbehorende partnerdienst. Het opnieuw proberen van het verzoek zou de kwestie kunnen oplossen. |
+|                    | *maximum_executing_time_overtroffen* | 403 | De aanvraag is niet binnen de maximaal toegestane tijd voltooid. Het opnieuw proberen van het verzoek zou de kwestie kunnen oplossen. |
+
+### API voor voorafgaande autorisatie van SDK&#39;s {#enhanced-error-codes-lists-sdks-preauthorize-api}
+
+Verwijs naar de vorige [ sectie ](#enhanced-error-codes-list-rest-api-v1) voor mogelijke Verbeterde Codes van de Fout een cliënttoepassing zou kunnen ontmoeten wanneer geïntegreerd met de Authentificatie SDKs van Adobe Pass preauthorize API.
+
+### REST API v2 {#enhanced-error-codes-lists-rest-api-v2}
+
+In de onderstaande tabel worden mogelijke Enhanced Error Codes weergegeven die een clienttoepassing kan tegenkomen bij integratie met Adobe Pass Authentication REST API v2.
+
+| Handeling | Code | Status | Bericht |
+|------------------------------|--------------------------------------------------------|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **niets** | *invalid_parameter_service_provider* | 400 | De parameterwaarde van het prepress-bureau ontbreekt of is ongeldig. |
+|                              | *invalid_parameter_mvpd* | 400 | De parameterwaarde mvpd ontbreekt of is ongeldig. |
+|                              | *invalid_parameter_code* | 400 | De waarde van de codeparameter ontbreekt of is ongeldig. |
+|                              | *invalid_parameter_resources* | 400 | De waarde van de parameter redirect URL ontbreekt of is ongeldig. |
+|                              | *invalid_parameter_redirect_url* | 400 | De parameterwaarde voor resources ontbreekt of is ongeldig. |
+|                              | *invalid_parameter_partner* | 400 | De parameterwaarde van de partner ontbreekt of is ongeldig. |
+|                              | *invalid_parameter_saml_response* | 400 | De parameterwaarde voor SAML-reactie ontbreekt of is ongeldig. |
+|                              | *invalid_header_device_info* | 400 | De koptekstwaarde voor apparaatinformatie ontbreekt of is ongeldig. |
+|                              | *invalid_header_device_identifier* | 400 | De koptekstwaarde van de apparaat-id ontbreekt of is ongeldig. |
+|                              | *invalid_header_identity_for_temporary_access* | 400 | De identiteit voor de koptekstwaarde voor tijdelijke toegang ontbreekt of is ongeldig. |
+|                              | *invalid_header_pfs_permission_access_not_present* | 400 | De statuswaarde van de toestemmingstoegang van de de statuskopbal van het partnerkader is niet aanwezig. |
+|                              | *invalid_header_pfs_permission_access_not_determine* | 400 | De statuswaarde van de toestemmingstoegang van de de statuskopbal van het partnerkader is onbepaald. |
+|                              | *invalid_header_pfs_permission_access_not_allowed* | 400 | De de statuswaarde van de toestemmingstoegang van de de statuskopbal van het partnerkader wordt niet verleend. |
+|                              | *invalid_header_pfs_provider_id_not_determine* | 400 | De waarde van leverancier id van de de statuskopbal van het partnerkader wordt niet geassocieerd met bekende mvpd. |
+|                              | *invalid_header_pfs_provider_id_mismatch* | 400 | De waarde van leverancier id van de de statuskopbal van het partnerkader past mvpd niet aan die als parameter wordt verzonden. |
+|                              | *invalid_integration* | 400 | De integratie tussen de opgegeven serviceprovider en mvpd bestaat niet of is uitgeschakeld. |
+|                              | *invalid_authentication_session* | 400 | De verificatiesessie die aan dit verzoek is gekoppeld, ontbreekt of is ongeldig. |
+|                              | *preauthentication_deny_by_mvpd* | 403 | MVPD heeft een &quot;Weigeren&quot;besluit teruggegeven toen het verzoeken van pre-vergunning voor de gespecificeerde middel. |
+|                              | *authentication_deny_by_mvpd* | 403 | MVPD heeft een &quot;Weigeren&quot;besluit teruggegeven toen het verzoeken van vergunning voor de gespecificeerde middel. |
+|                              | *authentication_deny_by_parental_controls* | 403 | MVPD heeft een &quot;Weigeren&quot;besluit wegens ouderlijke controlemontages voor het gespecificeerde middel teruggegeven. |
+|                              | *authentication_deny_by_degradate_rule* | 403 | De integratie tussen de gespecificeerde dienstverlener en mvpd heeft een degradatieregel wordt toegepast die vergunning voor de gevraagde middelen ontkent. |
+|                              | *internal_server_error* | 500 | De aanvraag is mislukt vanwege een interne serverfout. |
+| **configuratie** | *too_many_resources* | 403 | De autorisatie- of voorafgaande autorisatieaanvraag is mislukt omdat er te veel bronnen zijn gevraagd. Neem contact op met het ondersteuningsteam om de beperkingen voor autorisatie en autorisatie correct te configureren. |
+|                              | *invalid_configuration_user_metadata_certificate* | 500 | De configuratie van het gebruikerscertificaat voor metagegevens ontbreekt of is ongeldig. |
+|                              | *invalid_configuration_temporary_access* | 500 | De tijdelijke toegangsconfiguratie is ongeldig. |
+|                              | *invalid_configuration_platform* | 500 | De platformconfiguratie ontbreekt of is ongeldig voor integratie. |
+|                              | *invalid_configuration_platform_id* | 500 | De configuratie van de platform-id ontbreekt of is ongeldig. |
+|                              | *invalid_configuration_platform_trait* | 500 | De configuratie van de platformeigenschap ontbreekt of is ongeldig. |
+|                              | *invalid_configuration_platform_category_trait* | 500 | De standaardconfiguratie van de platformcategorie ontbreekt of is ongeldig. |
+|                              | *invalid_configuration_platform_services* | 500 | De configuratie van de platformservices ontbreekt of is ongeldig voor integratie. |
+|                              | *invalid_configuration_mvpd_platform* | 500 | De configuratie van het mvpd-platform ontbreekt of is ongeldig voor mvpd en het platform. |
+|                              | *invalid_configuration_mvpd_platform_boarding_status* | 500 | De statusconfiguratie voor instaptoegang via het mvpd-platform ontbreekt of is ongeldig voor mvpd en het platform. |
+|                              | *invalid_configuration_mvpd_platform_profile_exchange* | 500 | De configuratie voor het uitwisselen van profielen voor mvpd-platformen ontbreekt of is ongeldig voor mvpd en platform. |
+| **toepassing-registratie** | *invalid_access_token_service_provider* | 401 | Het toegangstoken is ongeldig vanwege een ongeldige serviceprovider. |
+|                              | *invalid_access_token_client_application* | 401 | Het toegangstoken is ongeldig vanwege een ongeldige clienttoepassing. |
+| **authentificatie** | *authenticated_profile_missing* | 403 | Het geverifieerde profiel voor deze aanvraag ontbreekt. |
+|                              | *authenticated_profile_expired* | 403 | Het geverifieerde profiel voor deze aanvraag is verlopen. |
+|                              | *authenticated_profile_invalidate* | 403 | Het geverifieerde profiel dat aan dit verzoek is gekoppeld, is ongeldig. |
+|                              | *temporary_access_duration_limit_over* | 403 | De tijdelijke toegangslimiet is overschreden. |
+|                              | *temporary_access_resources_limit_over* | 403 | De limiet voor tijdelijke toegangsmiddelen is overschreden. |
+|                              | *authentication_deny_by_hba_policies* | 403 | MVPD heeft een &quot;Weigeren&quot;besluit op huis-gebaseerd authentificatiebeleid teruggegeven. De huidige authentificatie werd verkregen door een op huis-gebaseerde authentificatiestroom en maar het apparaat is niet meer in-huis wanneer het verzoeken van om toestemming voor het gespecificeerde middel. De gebruiker moet opnieuw met gesteund MVPD voor verdere verificatie verifiëren. |
+|                              | *authentication_deny_by_session_invalidate* | 403 | De verificatiesessie is ongeldig gemaakt door de identiteitsprovider. De gebruiker moet opnieuw met gesteund MVPD voor verdere verificatie verifiëren. |
+|                              | *identity_not_recognized_by_mvpd* | 403 | Het verzoek om toestemming is mislukt omdat de identiteit van de gebruiker niet door het MVPD is erkend. |
+| **opnieuw proberen** | *network_receive_error* | 403 | Er was een gelezen fout terwijl het terugwinnen van de reactie van de bijbehorende partnerdienst. Het opnieuw proberen van het verzoek zou de kwestie kunnen oplossen. |
+|                              | *network_connection_timeout* | 403 | Er was een verbindingsonderbreking met de bijbehorende partnerdienst. Het opnieuw proberen van het verzoek zou de kwestie kunnen oplossen. |
+|                              | *maximum_executing_time_overtroffen* | 403 | De aanvraag is niet binnen de maximaal toegestane tijd voltooid. Het opnieuw proberen van het verzoek zou de kwestie kunnen oplossen. |
+
+## Reactieafhandeling {#enhanced-error-codes-response-handling}
+
+>[!IMPORTANT]
+>
+> Er zijn Verbeterde Codes van de Fout die automatisch in code van de cliënttoepassing kunnen worden behandeld, zoals het opnieuw proberen van een vergunningsverzoek in het geval van een netwerkonderbreking of vereisen de gebruiker om opnieuw voor authentiek te verklaren wanneer hun zitting is verlopen, maar andere types zouden configuratieveranderingen of de interactie van het team van de klantenzorg van de Authentificatie van Adobe Pass kunnen vereisen.
+>
+> <br/>
+>
+> Daarom is het belangrijk om volledige fouteninformatie te verzamelen en te verstrekken wanneer het creëren van een kaartje door onze [ Zendesk ](https://adobeprimetime.zendesk.com), om ervoor te zorgen dat de noodzakelijke veranderingen alvorens de nieuwe toepassing of de nieuwe eigenschap worden aangebracht.
+
+Samenvattend, wanneer het behandelen van reacties die de Geavanceerde Codes van de Fout bevatten, zou u het volgende moeten overwegen:
+
+1. **Controle beide statuswaarden**: Controleer altijd zowel de code van de de reactiestatus van HTTP als het Verbeterde gebied van de Code van de Fout &quot;status&quot;. Ze kunnen verschillen en beide bieden waardevolle informatie.
+
+1. **Agnostisch aan top-level versus punt-niveau fouteninformatie**: Behandel top-level en punt-vlakke fouteninformatie agnostisch aan de manier het wordt meegedeeld, zorg ervoor u beide vormen van het overbrengen van de Verbeterde Codes van de Fout kunt behandelen.
+
+1. **probeert logica** opnieuw: Voor fouten die een herpoging vereisen, zorg ervoor dat de pogingen met exponentiële backoff worden gedaan om het overweldigen van de server te vermijden. In het geval van Adobe Pass Authentication API&#39;s die meerdere items tegelijk verwerken (bijvoorbeeld API vooraf autoriseren), moet u in de herhaalde aanvraag ook alleen die items opnemen die zijn gemarkeerd met &quot;retry&quot; en niet de volledige lijst.
+
+1. **de veranderingen van de Configuratie**: Voor fouten die configuratieveranderingen vereisen, zorg ervoor dat de noodzakelijke veranderingen worden aangebracht alvorens de nieuwe toepassing of de nieuwe eigenschap te lanceren.
+
+1. **Authentificatie en vergunning**: Voor fouten met betrekking tot authentificatie en vergunning, moet u de gebruiker ertoe aanzetten opnieuw voor authentiek te verklaren of nieuwe vergunning te verkrijgen zoals nodig.
+
+1. **Gebruiker terugkoppelt**: Facultatief, gebruik het mens-leesbare &quot;bericht&quot;en (potentiële) &quot;details&quot;gebieden om de gebruiker over de kwestie te informeren. Het &quot;details&quot;tekstbericht zou van MVPD kunnen worden overgegaan pre- of toestemmingseindpunten of van de Programmer wanneer het toepassen van degradatieregels.

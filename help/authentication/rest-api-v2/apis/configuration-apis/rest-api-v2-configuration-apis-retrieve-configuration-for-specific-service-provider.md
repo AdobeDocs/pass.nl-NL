@@ -1,13 +1,13 @@
 ---
 title: Win configuratie voor specifieke dienstverlener terug
 description: REST API V2 - Configuratie ophalen voor specifieke serviceprovider
-source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
+exl-id: ad7e4c6d-ed96-4ae7-82a9-3c24e5fc9302
+source-git-commit: 6c328eb2c635a1d76fc7dae8148a4de291c126e0
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '525'
 ht-degree: 1%
 
 ---
-
 
 # Win configuratie voor specifieke dienstverlener terug {#retrieve-configuration-for-specific-service-provider}
 
@@ -270,8 +270,8 @@ ht-degree: 1%
       <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
-      <td style="background-color: #DEEBFF;">fout</td>
-      <td>De fout verstrekt extra informatie die aan de <a href="../../../enhanced-error-codes.md"> Verbeterde documentatie van de Codes van de Fout </a> volgt.</td>
+      <td style="background-color: #DEEBFF;"></td>
+      <td>Het reactielichaam kan extra fouteninformatie verstrekken die aan de <a href="../../../enhanced-error-codes.md"> Verbeterde documentatie van de Codes van de Fout </a> volgt.</td>
       <td><i>vereist</i></td>
    </tr>
 </table>

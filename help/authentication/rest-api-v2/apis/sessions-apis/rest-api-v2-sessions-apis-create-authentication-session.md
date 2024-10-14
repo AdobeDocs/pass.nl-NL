@@ -1,13 +1,13 @@
 ---
 title: Verificatiesessie maken
 description: REST API V2 - Verificatiesessie maken
-source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
+exl-id: bb2a6bb4-0778-4748-a674-df9d0e8242c8
+source-git-commit: 6c328eb2c635a1d76fc7dae8148a4de291c126e0
 workflow-type: tm+mt
-source-wordcount: '968'
+source-wordcount: '970'
 ht-degree: 0%
 
 ---
-
 
 # Verificatiesessie maken {#create-authentication-session}
 
@@ -324,8 +324,8 @@ ht-degree: 0%
       <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
-      <td style="background-color: #DEEBFF;">fout</td>
-      <td>De fout verstrekt extra informatie die aan de <a href="../../../enhanced-error-codes.md"> Verbeterde documentatie van de Codes van de Fout </a> volgt.</td>
+      <td style="background-color: #DEEBFF;"></td>
+      <td>Het reactielichaam kan extra fouteninformatie verstrekken die aan de <a href="../../../enhanced-error-codes.md"> Verbeterde documentatie van de Codes van de Fout </a> volgt.</td>
       <td><i>vereist</i></td>
    </tr>
 </table>

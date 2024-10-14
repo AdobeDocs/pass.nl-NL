@@ -4,7 +4,7 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass-verificatie
 user-guide-description: Adobe Pass-verificatie is een machtigingsoplossing voor TV Everywhere, die een modulair kader verstrekt om te bepalen of iemand die toegang tot een bron vraagt, daar rechten voor heeft.
-source-git-commit: 8c5203aa4a897a5e119a9886afc64a1b1556ee4f
+source-git-commit: 6c328eb2c635a1d76fc7dae8148a4de291c126e0
 workflow-type: tm+mt
 source-wordcount: '1174'
 ht-degree: 2%
@@ -113,8 +113,8 @@ ht-degree: 2%
          + [JavaScript SDK API-naslag](javascript-sdk-api-reference.md)
          + Richtlijnen {#js-sdk-guidelines}
             + [Aanmelding en afmelding zonder vernieuwen](refreshless-login-and-logout.md)
-         + JavaScript API {#js-api}
-            + [Voorvoegsel](js-preauthorize.md)
+         + JavaScript API {#javascript-sdk-api}
+            + [Voorvoegsel](preauthorize-api-javascript-sdk.md)
       + iOS/tvOS SDK {#ios-sdk}
          + [Overzicht iOS/tvOS SDK](iostvos-sdk-overview.md)
          + [iOS/tvOS SDK Cookbook](iostvos-sdk-cookbook.md)
@@ -124,8 +124,8 @@ ht-degree: 2%
             + Richtlijnen voor migratie {#migration-guidelines}
                + [Migratiehandleiding voor iOS/tvOS v3.x](iostvos-v3x-migration-guide.md)
             + [Integriteitscontroles iOS/tvOS-opslag](iostvos-sdk-storage-integrity-checks.md)
-         + iOS/tvOS API {#ios-tvos-api}
-            + [Voorvoegsel](preauthorize.md)
+         + iOS/tvOS API {#ios-tvos-sdk-api}
+            + [Voorvoegsel](preauthorize-api-ios-tvos-sdk.md)
       + Android SDK {#androidsdk}
          + [Overzicht van Android SDK](android-sdk-overview.md)
          + [Android SDK Cookbook](android-sdk-cookbook.md)
@@ -133,8 +133,8 @@ ht-degree: 2%
          + Richtlijnen {#androidguidelines}
             + [Android-toepassingsregistratie](android-application-registration.md)
             + [Android SDK met Dynamic Client-registratie](android-sdk-with-dynamic-client-registration.md)
-         + Android API {#androidapi}
-            + [Voorvoegsel](preauthorize-android.md)
+         + Android API {#android-sdk-api}
+            + [Voorvoegsel](preauthorize-api-android-sdk.md)
       + Amazon FireOS SDK {#fireossdk}
          + [Amazon FireOS SSO - Handleiding voor het starten van de programma&#39;s](amazon-firetv-sso-programmer-kickoff-guide.md)
          + [Amazon FireOS SSO met Cookbook zonder client](amazon-fireos-sso-using-clientless-api-cookbook.md)

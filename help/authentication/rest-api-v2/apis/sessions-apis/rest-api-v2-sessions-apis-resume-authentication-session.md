@@ -1,13 +1,13 @@
 ---
 title: Verificatiesessie hervatten
 description: REST API V2 - Verificatiesessie hervatten
-source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
+exl-id: 66c33546-2be0-473f-9623-90499d1c13eb
+source-git-commit: 6c328eb2c635a1d76fc7dae8148a4de291c126e0
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '755'
 ht-degree: 0%
 
 ---
-
 
 # Verificatiesessie hervatten {#resume-authentication-session}
 
@@ -289,8 +289,8 @@ ht-degree: 0%
       <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
-      <td style="background-color: #DEEBFF;">fout</td>
-      <td>De fout verstrekt extra informatie die aan de <a href="../../../enhanced-error-codes.md"> Verbeterde documentatie van de Codes van de Fout </a> volgt.</td>
+      <td style="background-color: #DEEBFF;"></td>
+      <td>Het reactielichaam kan extra fouteninformatie verstrekken die aan de <a href="../../../enhanced-error-codes.md"> Verbeterde documentatie van de Codes van de Fout </a> volgt.</td>
       <td><i>vereist</i></td>
    </tr>
 </table>

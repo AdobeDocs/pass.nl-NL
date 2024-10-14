@@ -1,13 +1,13 @@
 ---
 title: Verificatiesessie ophalen met gebruik van code
 description: REST API V2 - Verificatiesessie ophalen met code
-source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
+exl-id: 5cc209eb-ee6b-4bb9-9c04-3444408844b7
+source-git-commit: 6c328eb2c635a1d76fc7dae8148a4de291c126e0
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '408'
 ht-degree: 1%
 
 ---
-
 
 # Verificatiesessie ophalen met gebruik van code {#retrieve-authentication-session-using-code}
 
@@ -188,8 +188,8 @@ ht-degree: 1%
       <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
-      <td style="background-color: #DEEBFF;">fout</td>
-      <td>De fout verstrekt extra informatie die aan de <a href="../../../enhanced-error-codes.md"> Verbeterde documentatie van de Codes van de Fout </a> volgt.</td>
+      <td style="background-color: #DEEBFF;"></td>
+      <td>Het reactielichaam kan extra fouteninformatie verstrekken die aan de <a href="../../../enhanced-error-codes.md"> Verbeterde documentatie van de Codes van de Fout </a> volgt.</td>
       <td><i>vereist</i></td>
    </tr>
 </table>

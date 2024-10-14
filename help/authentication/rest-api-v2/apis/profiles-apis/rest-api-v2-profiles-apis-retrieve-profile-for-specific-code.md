@@ -1,13 +1,13 @@
 ---
 title: Profiel ophalen voor specifieke code
 description: REST API V2 - Profiel ophalen voor specifieke code
-source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
+exl-id: d6ead7d5-de5f-4033-8115-980953a370c0
+source-git-commit: 6c328eb2c635a1d76fc7dae8148a4de291c126e0
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '573'
 ht-degree: 1%
 
 ---
-
 
 # Profiel ophalen voor specifieke code {#retrieve-profile-for-specific-code}
 
@@ -265,8 +265,8 @@ ht-degree: 1%
       <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
-      <td style="background-color: #DEEBFF;">fout</td>
-      <td>De fout verstrekt extra informatie die aan de <a href="../../../enhanced-error-codes.md"> Verbeterde documentatie van de Codes van de Fout </a> volgt.</td>
+      <td style="background-color: #DEEBFF;"></td>
+      <td>Het reactielichaam kan extra fouteninformatie verstrekken die aan de <a href="../../../enhanced-error-codes.md"> Verbeterde documentatie van de Codes van de Fout </a> volgt.</td>
       <td><i>vereist</i></td>
    </tr>
 </table>
