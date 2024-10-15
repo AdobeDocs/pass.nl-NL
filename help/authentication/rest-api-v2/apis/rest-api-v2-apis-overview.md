@@ -2,9 +2,9 @@
 title: REST API V2 API's - Overzicht
 description: REST API V2 API's - Overzicht
 exl-id: 62b48bf0-d200-4949-b268-8f8ea2daabfa
-source-git-commit: dd3451f8761ce6183e9a11099fb3094abae09466
+source-git-commit: ca8eaff83411daab5f136f01394e1d425e66f393
 workflow-type: tm+mt
-source-wordcount: '144'
+source-wordcount: '149'
 ht-degree: 0%
 
 ---
@@ -26,6 +26,7 @@ Ga om aan de slag te gaan naar de openbare documentatie van de API&#39;s die u i
 * [Verificatiesessie maken](sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md)
 * [Verificatiesessie hervatten](sessions-apis/rest-api-v2-sessions-apis-resume-authentication-session.md)
 * [Verificatiesessie ophalen](sessions-apis/rest-api-v2-sessions-apis-retrieve-authentication-session-information-using-code.md)
+* [Verificatie uitvoeren in gebruikersagent](sessions-apis/rest-api-v2-sessions-apis-perform-authentication-in-user-agent.md)
 
 ## Profielen {#rest-api-v2-apis-profiles}
 

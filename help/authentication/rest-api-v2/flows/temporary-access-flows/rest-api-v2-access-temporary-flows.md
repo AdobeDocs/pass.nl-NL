@@ -1,13 +1,13 @@
 ---
 title: Tijdelijke toegangsstromen
 description: REST API V2 - Tijdelijke toegangsstromen
-source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
+exl-id: 387fcdb0-3a42-4893-ba83-e809426f92be
+source-git-commit: ca8eaff83411daab5f136f01394e1d425e66f393
 workflow-type: tm+mt
-source-wordcount: '3210'
+source-wordcount: '3215'
 ht-degree: 0%
 
 ---
-
 
 # Tijdelijke toegangsstromen {#temporary-access-flows}
 
@@ -369,7 +369,7 @@ Voordat u autorisatiebesluiten ophaalt wanneer de basis- of promotionele TempPas
 > <br/>
 > 
 > * Er moet een geldige configuratie-instelling zijn voor basis- of promotionele TempPass die wordt toegepast op de integratie tussen de opgegeven `serviceProvider` en `mvpd` .
-> * De tijd-aan-Levende (TTL) die voor basis of promotionele TempPass wordt gevormd is verlopen.
+> * De tijd-aan-Levende (TTL) die voor de basis of de bevordering wordt gevormd de tijdelijke toegangsduurgrens is overschreden.
 
 ### Workflow {#workflow-retrieve-authorization-decisions-when-basic-or-promotional-temppass-expires}
 
