@@ -1,9 +1,9 @@
 ---
 title: REST API V2 Cookbook (client-naar-server)
 description: REST API V2 Cookbook (client-naar-server)
-source-git-commit: 709835276710ec4b92abec3e39aaecae99872e77
+source-git-commit: 0d6693d51887c9e794401e984f3a4075be091ee5
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '695'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## Stappen om REST API V2 in cliënt zijtoepassingen uit te voeren {#steps-to-implement-the-rest-api-v2-in-client-side-applications}
 
-Als u Adobe Pass REST API V2 wilt implementeren, moet u de onderstaande stappen in fasen uitvoeren.
+Als u Adobe Pass REST API V2 wilt implementeren, moet u de onderstaande stappen volgen, gegroepeerd in fasen.
 
 ## A. Registratiefase {#registration-phase}
 
@@ -38,14 +38,14 @@ Om het toegangstoken te krijgen, moet de toepassing stappen zoals beschreven vol
 Streaming toepassing controleert bestaande geverifieerde profielen: <b> /api/v2/{serviceProvider} /profiles </b><br>
 ([ wint voor authentiek verklaarde profielen ](../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md) terug)
 
-* Als er geen profiel is gevonden en Streaming toepassing een TempPass-flow implementeert
+* Als er geen profiel wordt gevonden en de streamingtoepassing een TempPass-flow implementeert
    * Volg documentatie op hoe te om [ Tijdelijke toegangsstromen uit te voeren ](../flows/temporary-access-flows/rest-api-v2-access-temporary-flows.md)
-* Als er geen profiel wordt gevonden, implementeert streaming toepassing een verificatiestroom
+* Als er geen profiel wordt gevonden en de streamingtoepassing een verificatiestroom implementeert
    * De het stromen toepassing wint de lijst van MVPDs beschikbaar voor serviceProvider terug: <b>/api/v2/{serviceProvider}/configuration </b><br>
 ([ wint lijst van beschikbare MVPDs ](../apis/configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider.md) terug)
    * Streaming-toepassing kan filteren toepassen op de lijst van MVPD&#39;s en alleen MVPD&#39;s weergeven die zijn bedoeld terwijl andere worden verborgen (TempPass, test MVPD&#39;s, MVPD&#39;s die in ontwikkeling zijn, enz.)
-   * De gebruiker selecteert de weergavekiezer voor streaming toepassingen
-   * Streaming toepassing maakt een sessie: <b> /api/v2/{serviceProvider} /session</b><br>
+   * De gebruiker selecteert de MVPD voor de weergave van streaming-toepassingen
+   * Streaming toepassing maakt een sessie: <b> /api/v2/{serviceProvider} /sessies</b><br>
 ([ creeer authentificatiesessie ](../apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md)) <br>
       * er wordt een CODE en URL geretourneerd die voor verificatie moeten worden gebruikt
       * als een profiel wordt gevonden, kan de Streaming toepassing aan <a href="#preauthorization-phase"> C te werk gaan. De fase van de voorafgaande vergunning </a> of <a href="#authorization-phase"> D. Autorisatiefase </a>
@@ -55,7 +55,7 @@ Streaming toepassing controleert bestaande geverifieerde profielen: <b> /api/v2/
 Gebruikend Browser of een Tweede het Web-based toepassing van het Scherm:
 
 * Optie 1. Streaming toepassing kan een browser of webweergave openen, de URL voor verificatie laden en de gebruiker landt op de MVPD-aanmeldingspagina waar gegevens moeten worden ingediend
-   * gebruiker inlognaam/wachtwoord invoeren, eindomleiding geeft een succespagina weer
+   * gebruiker voert login/wachtwoord in, definitieve omleiding toont een succespagina
 * Optie 2. Streaming toepassing kan geen browser openen en alleen de CODE weergeven. <b> een afzonderlijke Webtoepassing moet worden ontwikkeld </b> om de gebruiker te vragen om CODE in te gaan, bouw en open URL: <b>/api/v2/authenticate/{serviceProvider} {CODE} </b>
    * gebruiker inlognaam/wachtwoord invoeren, eindomleiding geeft een succespagina weer
 
@@ -68,7 +68,7 @@ Streaming toepassing controleert op verificatie met MVPD om te voltooien in brow
    * Als de selectie MVPD niet in de Streaming toepassing wordt gemaakt aangezien de plukker MVPD in de Tweede toepassing van het Scherm wordt voorgesteld, zou de opiniepeiling met CODE <b>/api/v2/ {serviceProvider} /profiles/code/ {CODE} moeten gebeuren </b><br>
 ([ wint voor authentiek verklaarde profielen voor specifieke CODE ](../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) terug)
 * De opiniepeiling mag niet langer zijn dan 30 minuten, als 30 minuten zijn bereikt en de streamingtoepassing nog actief is, moet een nieuwe sessie worden gestart en worden een nieuwe CODE en URL geretourneerd
-* Wanneer de authentificatie volledig is is de terugkeer 200 met voor authentiek verklaard profiel
+* Wanneer de authentificatie volledig is, is de terugkeer 200 met voor authentiek verklaard profiel
 * De het stromen toepassing kan aan <a href="#preauthorization-phase"> C te werk gaan. De fase van de voorafgaande vergunning </a> of <a href="#authorization-phase"> D. Autorisatiefase </a>
 
 ## C. Pretoelatingsfase {#preauthorization-phase}
