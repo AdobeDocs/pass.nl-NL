@@ -2,9 +2,9 @@
 title: Entitlement Service Monitoring API
 description: Entitlement Service Monitoring API
 exl-id: a9572372-14a6-4caa-9ab6-4a6baababaa1
-source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
+source-git-commit: 8fa1e63619f4e22794d701a218c77649f73d9f60
 workflow-type: tm+mt
-source-wordcount: '2070'
+source-wordcount: '2027'
 ht-degree: 0%
 
 ---
@@ -36,13 +36,13 @@ ESM API verstrekt een hiërarchische mening van de onderliggende kubussen OLAP. 
 
 De REST API verstrekt de beschikbare gegevens binnen een tijdsinterval dat in het verzoek wordt gespecificeerd (die terug naar standaardwaarden als niets wordt verstrekt), volgens de afmetingspad, verstrekte filters, en geselecteerde metriek. Het tijdbereik wordt niet toegepast op rapporten die geen tijdafmetingen bevatten (jaar, maand, dag, uur, minuut, seconde).
 
-Het eindpunt URL wortelweg zal de algemene bijeengevoegde metriek binnen één enkel verslag, samen met de verbindingen aan de beschikbare boor-down opties terugkeren. De API-versie wordt toegewezen als het volgende segment van het URI-eindpuntpad. `https://mgmt.auth.adobe.com/*v2*` betekent bijvoorbeeld dat de clients toegang hebben tot WOLAP versie 2.
+Het eindpunt URL wortelweg zal de algemene bijeengevoegde metriek binnen één enkel verslag, samen met de verbindingen aan de beschikbare boor-down opties terugkeren. De API-versie wordt toegewezen als het volgende segment van het URI-eindpuntpad. `https://mgmt.auth.adobe.com/esm/v3` betekent bijvoorbeeld dat de clients toegang hebben tot WOLAP versie 3.
 
 De beschikbare URL-paden kunnen worden gevonden via koppelingen in het antwoord. Geldige URL-paden worden vastgehouden om een pad in de onderliggende boor-down structuur toe te wijzen dat (pre)geaggregeerde metriek bevat. Een pad in de vorm `/dimension1/dimension2/dimension3` geeft een pre-aggregatie van deze drie dimensies weer (het equivalent van een SQL `clause GROUP` BY `dimension1` , `dimension2` , `dimension3` ). Als een dergelijke pre-samenvoeging niet bestaat en het systeem het niet kan onmiddellijk berekenen, zal API een 404 niet Gevonden reactie terugkeren.
 
 ## Boor-down Boom {#drill-down-tree}
 
-De volgende boor-benedenbomen illustreren de afmetingen (middelen) beschikbaar in ESM 2.0 voor [ Programmers ](#progr-dimensions) en [ MVPDs ](#mvpd-dimensions).
+De volgende boor-benedenbomen illustreren de afmetingen (middelen) beschikbaar in ESM 3.0 voor [ Programmers ](#progr-dimensions) en [ MVPDs ](#mvpd-dimensions).
 
 
 ### Dimensionen beschikbaar voor programmeurs {#progr-dimensions}
@@ -63,13 +63,13 @@ De volgende boor-benedenbomen illustreren de afmetingen (middelen) beschikbaar i
 
 ![](assets/esm-mvpd-dimensions.png)
 
-Een GET naar het API-eindpunt van `https://mgmt.auth.adobe.com/v2` retourneert een representatie met:
+Een GET naar het API-eindpunt van `https://mgmt.auth.adobe.com/esm/v3` retourneert een representatie met:
 
 * Koppelingen naar de beschikbare basisverdiepingspaden:
 
-   * `<link rel="drill-down" href="/v2/dimensionA"/>`
+   * `<link rel="drill-down" href="/v3/dimensionA"/>`
 
-   * `<link rel="drill-down" href="/v2/dimensionB"/>`
+   * `<link rel="drill-down" href="/v3/dimensionB"/>`
 
 * Een overzicht (geaggregeerde waarden) voor alle metriek (in de standaardwaarde)
 interval, aangezien geen parameters van het vraagkoord worden verstrekt, zie hieronder).
@@ -119,8 +119,8 @@ De volgende parameters van het vraagkoord hebben gereserveerde betekenis voor AP
 ### Door ESM API gereserveerde parameters voor queryreeks
 
 | Parameter | Optioneel | Beschrijving | Standaardwaarde | Voorbeeld |
-| --- | ---- | --- | ---- | --- |
-| access_token | Ja | Als de IMS OAuth-beveiliging is ingeschakeld, kan het IMS-token worden doorgegeven als een standaardtoken voor Vergunning onder of als een parameter voor de queryreeks. | Geen | access_token=XXXXXX |
+| --- | ---- |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| ---- | --- |
+| access_token | Ja | Het token DCR kan worden doorgegeven als een standaard token voor Vergunninghouder. | Geen | access_token=XXXXXX |
 | dimensienaam | Ja | Elke naam van een dimensie - deze bevindt zich in het huidige URL-pad of in een geldig subpad. De waarde wordt behandeld als een filter voor gelijke waarden. Als er geen waarde is opgegeven, wordt de opgegeven dimensie ook in de uitvoer opgenomen, zelfs als deze niet is opgenomen of grenst aan het huidige pad | Geen | someDimension=someValue&amp;someOtherDimension |
 | end | Ja | Eindtijd van het rapport in millis | Huidige tijd van de server | end=2012-07-30 |
 | format | Ja | Gebruikt voor inhoudonderhandeling (met het zelfde effect maar lagere belangrijkheid dan de weg &quot;uitbreiding&quot; - zie hieronder). | Geen: tijdens de onderhandelingen over de inhoud worden de andere strategieën uitgeprobeerd | format=json |
@@ -128,8 +128,7 @@ De volgende parameters van het vraagkoord hebben gereserveerde betekenis voor AP
 | cijfers | Ja | Lijst met door komma&#39;s gescheiden metrische namen die moeten worden geretourneerd. Deze lijst moet worden gebruikt voor het filteren van een subset van de beschikbare metriek (om de laadgrootte te reduceren) en ook voor het afdwingen van de API om een projectie te retourneren die de gevraagde metriek bevat (in plaats van de standaard optimale projectie). | Alle metriek beschikbaar voor de huidige projectie zal worden teruggekeerd voor het geval deze parameter niet wordt verstrekt. | metriek=m1,m2 |
 | start | Ja | De tijd van het begin voor het rapport als ISO8601; de server zal het resterende deel invullen als slechts een prefix wordt verstrekt: b.v., zal start=2012 in start=2012-01-01 :00: 00:00 resulteren | Gerapporteerd door de server in de zelfverbinding; de server probeert redelijke gebreken te verstrekken die op geselecteerde tijdgranulariteit worden gebaseerd | start=2012-07-15 |
 
-De enige beschikbare HTTP-methode die momenteel beschikbaar is, is GET. Ondersteuning voor OPTIONS /
-HEAD-methoden kunnen in toekomstige versies worden opgegeven.
+De enige beschikbare HTTP-methode die momenteel beschikbaar is, is GET.
 
 ## ESM API-statuscodes {#esm-api-status-codes}
 
@@ -156,7 +155,7 @@ De gegevens zijn beschikbaar in de volgende indelingen:
 
 De volgende strategieën voor inhoudonderhandeling kunnen door klanten worden gebruikt (de prioriteit wordt gegeven door de positie in de lijst - eerst dingen):
 
-1. Een &quot;bestandsextensie&quot; die is toegevoegd aan het laatste segment van het URL-pad: bijvoorbeeld `/esm/v2/media-company/year/month/day.xml` . Als de URL een queryreeks bevat, moet de extensie vóór het vraagteken komen: `/esm/v2/media-company/year/month/day.csv?mvpd= SomeMVPD`
+1. Een &quot;bestandsextensie&quot; die is toegevoegd aan het laatste segment van het URL-pad: bijvoorbeeld `/esm/v3/media-company/year/month/day.xml` . Als de URL een queryreeks bevat, moet de extensie vóór het vraagteken komen: `/esm/v3/media-company/year/month/day.csv?mvpd= SomeMVPD`
 1. Een query-tekenreeksparameter voor indeling: bijv., `/esm/report?format=json`
 1. De standaard HTTP Accept-header: bijvoorbeeld, `Accept: application/xml`
 
@@ -205,13 +204,13 @@ De middelverbinding (het &quot;zelf&quot;rel in JSON en het &quot;href&quot;midd
 
 Voorbeeld (ervan uitgaande dat er één metrische waarde is met de naam `clients` en dat er een vooraggregatie voor `year/month/day/...` is):
 
-* https://mgmt.auth.adobe.com/esm/v2/year/month.xml
+* https://mgmt.auth.adobe.com/esm/v3/year/month.xml
 
 ```XML
-   <resource href="/esm/v2/year/month?start=2012-07-20T00:00:00&end=2012-08-20T14:35:21">
+   <resource href="/esm/v3/year/month?start=2012-07-20T00:00:00&end=2012-08-20T14:35:21">
    <links>
-   <link rel="roll-up" href="/esm/v2/year"/>
-   <link rel="drill-down" href="/esm/v2/year/month/day"/>
+   <link rel="roll-up" href="/esm/v3/year"/>
+   <link rel="drill-down" href="/esm/v3/year/month/day"/>
    </links>
    <report>
    <record month="6" year="2012" clients="205"/>
@@ -220,19 +219,19 @@ Voorbeeld (ervan uitgaande dat er één metrische waarde is met de naam `clients
    </resource>
 ```
 
-* https://mgmt.auth.adobe.com/esm/v2/year/month.json
+* https://mgmt.auth.adobe.com/esm/v3/year/month.json
 
   ```JSON
       {
         "_links" : {
           "self" : {
-            "href" : "/esm/v2/year/month?start=2012-07-20T00:00:00&end=2012-08-20T14:35:21"
+            "href" : "/esm/v3/year/month?start=2012-07-20T00:00:00&end=2012-08-20T14:35:21"
           },
           "roll-up" : {
-            "href" : "/esm/v2/year"
+            "href" : "/esm/v3/year"
           },
           "drill-down" : {
-            "href" : "/esm/v2/year/month/day"
+            "href" : "/esm/v3/year/month/day"
           }
         },
         "report" : [ {
@@ -260,7 +259,7 @@ CSV zal een kopbalrij en dan de rapportgegevens als verdere rijen bevatten. De k
 De volgorde van de velden in de koptekstrij komt overeen met de sorteervolgorde van de tabelgegevens.
 
 
-Voorbeeld: https://mgmt.auth.adobe.com/v2/year/month.csv maakt een bestand met de naam `report__2012-07-20_2012-08-20_1000.csv` met de volgende inhoud:
+Voorbeeld: https://mgmt.auth.adobe.com/esm/v3/year/month.csv maakt een bestand met de naam `report__2012-07-20_2012-08-20_1000.csv` met de volgende inhoud:
 
 
 | Jaar | Maand | Clients |
@@ -273,8 +272,6 @@ Voorbeeld: https://mgmt.auth.adobe.com/v2/year/month.csv maakt een bestand met d
 De geslaagde HTTP-reacties bevatten een `Last-Modified` -header die aangeeft op welk tijdstip het rapport in de hoofdtekst voor het laatst is bijgewerkt. Het gebrek aan een Laatst-Gewijzigde kopbal wijst erop dat de rapportgegevens in real time worden gegevens verwerkt.
 
 Gewoonlijk worden grove korrelige gegevens minder vaak bijgewerkt dan fijnkorrelige gegevens (bijv. waarden per minuut of uurwaarden kunnen actueler zijn dan de dagelijkse waarden, vooral voor metriek die niet kan worden berekend op basis van kleinere granulariteiten, zoals unieke tellingen).
-
-Toekomstige versies van ESM kunnen cliënten toestaan om voorwaardelijke GETs uit te voeren door de standaard &quot;if-Modified-Since&quot;kopbal te verstrekken.
 
 ## GZIP-compressie {#gzip-compression}
 
