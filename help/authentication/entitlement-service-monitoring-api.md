@@ -2,7 +2,7 @@
 title: Entitlement Service Monitoring API
 description: Entitlement Service Monitoring API
 exl-id: a9572372-14a6-4caa-9ab6-4a6baababaa1
-source-git-commit: 8fa1e63619f4e22794d701a218c77649f73d9f60
+source-git-commit: 59ece09a8a72e67ea0944059064dba65e3137bd7
 workflow-type: tm+mt
 source-wordcount: '2027'
 ht-degree: 0%
@@ -122,11 +122,11 @@ De volgende parameters van het vraagkoord hebben gereserveerde betekenis voor AP
 | --- | ---- |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| ---- | --- |
 | access_token | Ja | Het token DCR kan worden doorgegeven als een standaard token voor Vergunninghouder. | Geen | access_token=XXXXXX |
 | dimensienaam | Ja | Elke naam van een dimensie - deze bevindt zich in het huidige URL-pad of in een geldig subpad. De waarde wordt behandeld als een filter voor gelijke waarden. Als er geen waarde is opgegeven, wordt de opgegeven dimensie ook in de uitvoer opgenomen, zelfs als deze niet is opgenomen of grenst aan het huidige pad | Geen | someDimension=someValue&amp;someOtherDimension |
-| end | Ja | Eindtijd van het rapport in millis | Huidige tijd van de server | end=2012-07-30 |
+| end | Ja | Eindtijd van het rapport in millis | Huidige tijd van de server | end=2024-07-30 |
 | format | Ja | Gebruikt voor inhoudonderhandeling (met het zelfde effect maar lagere belangrijkheid dan de weg &quot;uitbreiding&quot; - zie hieronder). | Geen: tijdens de onderhandelingen over de inhoud worden de andere strategieën uitgeprobeerd | format=json |
 | limiet | Ja | Maximumaantal rijen dat moet worden geretourneerd | Standaardwaarde die door de server in de zelfkoppeling wordt gerapporteerd als er geen limiet is opgegeven in de aanvraag | limit=1500 |
 | cijfers | Ja | Lijst met door komma&#39;s gescheiden metrische namen die moeten worden geretourneerd. Deze lijst moet worden gebruikt voor het filteren van een subset van de beschikbare metriek (om de laadgrootte te reduceren) en ook voor het afdwingen van de API om een projectie te retourneren die de gevraagde metriek bevat (in plaats van de standaard optimale projectie). | Alle metriek beschikbaar voor de huidige projectie zal worden teruggekeerd voor het geval deze parameter niet wordt verstrekt. | metriek=m1,m2 |
-| start | Ja | De tijd van het begin voor het rapport als ISO8601; de server zal het resterende deel invullen als slechts een prefix wordt verstrekt: b.v., zal start=2012 in start=2012-01-01 :00: 00:00 resulteren | Gerapporteerd door de server in de zelfverbinding; de server probeert redelijke gebreken te verstrekken die op geselecteerde tijdgranulariteit worden gebaseerd | start=2012-07-15 |
+| start | Ja | De tijd van het begin voor het rapport als ISO8601; de server zal het resterende deel invullen als slechts een prefix wordt verstrekt: b.v., zal start=2024 in start=2024-01-01 :00: 00:00 resulteren | Gerapporteerd door de server in de zelfverbinding; de server probeert redelijke gebreken te verstrekken die op geselecteerde tijdgranulariteit worden gebaseerd | start=2024-07-15 |
 
 De enige beschikbare HTTP-methode die momenteel beschikbaar is, is GET.
 
@@ -207,14 +207,14 @@ Voorbeeld (ervan uitgaande dat er één metrische waarde is met de naam `clients
 * https://mgmt.auth.adobe.com/esm/v3/year/month.xml
 
 ```XML
-   <resource href="/esm/v3/year/month?start=2012-07-20T00:00:00&end=2012-08-20T14:35:21">
+   <resource href="/esm/v3/year/month?start=2024-07-20T00:00:00&end=2024-08-20T14:35:21">
    <links>
    <link rel="roll-up" href="/esm/v3/year"/>
    <link rel="drill-down" href="/esm/v3/year/month/day"/>
    </links>
    <report>
-   <record month="6" year="2012" clients="205"/>
-   <record month="7" year="2012" clients="466"/>
+   <record month="6" year="2024" clients="205"/>
+   <record month="7" year="2024" clients="466"/>
    </report>
    </resource>
 ```
@@ -225,7 +225,7 @@ Voorbeeld (ervan uitgaande dat er één metrische waarde is met de naam `clients
       {
         "_links" : {
           "self" : {
-            "href" : "/esm/v3/year/month?start=2012-07-20T00:00:00&end=2012-08-20T14:35:21"
+            "href" : "/esm/v3/year/month?start=2024-07-20T00:00:00&end=2024-08-20T14:35:21"
           },
           "roll-up" : {
             "href" : "/esm/v3/year"
@@ -236,11 +236,11 @@ Voorbeeld (ervan uitgaande dat er één metrische waarde is met de naam `clients
         },
         "report" : [ {
           "month" : "6",
-          "year" : "2012",
+          "year" : "2024",
           "clients" : "205"
         }, {
           "month" : "7",
-          "year" : "2012",
+          "year" : "2024",
           "clients" : "466"
         } ]
       }
@@ -259,13 +259,13 @@ CSV zal een kopbalrij en dan de rapportgegevens als verdere rijen bevatten. De k
 De volgorde van de velden in de koptekstrij komt overeen met de sorteervolgorde van de tabelgegevens.
 
 
-Voorbeeld: https://mgmt.auth.adobe.com/esm/v3/year/month.csv maakt een bestand met de naam `report__2012-07-20_2012-08-20_1000.csv` met de volgende inhoud:
+Voorbeeld: https://mgmt.auth.adobe.com/esm/v3/year/month.csv maakt een bestand met de naam `report__2024-07-20_2024-08-20_1000.csv` met de volgende inhoud:
 
 
 | Jaar | Maand | Clients |
 | ---- | :---: | ------- |
-| 2012 | 6 | 580 |
-| 2012 | 7 | 231 |
+| 2024 | 6 | 580 |
+| 2024 | 7 | 231 |
 
 ## Gegevensversheid {#data-freshness}
 
