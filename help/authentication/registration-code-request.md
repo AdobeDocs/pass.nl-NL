@@ -2,9 +2,9 @@
 title: Registratiepagina
 description: Registratiepagina
 exl-id: 581b8e2e-7420-4511-88b9-f2cd43a41e10
-source-git-commit: ea064031c3a1fee3298d85cf442c40bd4bb56281
+source-git-commit: 3c44f1dfbbb5b9ec31f13e267dc691e14dd2ddfa
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '493'
 ht-degree: 0%
 
 ---
@@ -19,186 +19,123 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> REST API-implementatie is beperkt door [Draaimechanisme](/help/authentication/throttling-mechanism.md)
+> De implementatie van REST API wordt begrensd door [ Throttling mechanisme ](/help/authentication/throttling-mechanism.md)
 
-&lt;reggie_fqdn>:
+&lt;REGGIE_FQDN>:
 
-* Productie - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Productie - [ api.auth.adobe.com ](http://api.auth.adobe.com/)
+* Het opvoeren - [ api.auth-staging.adobe.com ](http://api.auth-staging.adobe.com/)
 
-&lt;sp_fqdn>:
+&lt;SP_FQDN>:
 
-* Productie - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Productie - [ api.auth.adobe.com ](http://api.auth.adobe.com/)
+* Het opvoeren - [ api.auth-staging.adobe.com ](http://api.auth-staging.adobe.com/)
 
-</br>
+<br>
 
 ## Beschrijving {#create-reg-code-svc}
 
 Retourneert willekeurig gegenereerde registratie- en aanmeldingspagina-URI.
 
-| Endpoint | Geroepen  </br>Door | Invoer   </br>Parameter | HTTP  </br>Methode | Antwoord | HTTP  </br>Antwoord |
+| Endpoint | Geroepen <br> door | Invoer   <br> Parameter | HTTP <br> Methode | Antwoord | HTTP-respons <br> |
 | --- | --- | --- | --- | --- | --- |
-| &lt;reggie_fqdn>/reggie/v1/{requestor}/regcode</br>Bijvoorbeeld:</br>REGGIE_FQDN/Reggie/v1/sampleRequestorId/regcode | Streaming-app</br>of</br>Programmeringsservice | 1. aanvrager  </br>    (component Path)</br>2.  deviceId (Hashed)   </br>    (Verplicht)</br>3.  device_info/X-Device-Info (verplicht)</br>4.  mvpd (optioneel)</br>5.  ttl (optioneel)</br>6.  _deviceType_</br> 7.  _deviceUser_ (Verouderd)</br>8.  _appId_ (Verouderd) | POST | XML of JSON met een registratiecode en informatie of foutdetails als dit mislukt. Zie schema&#39;s en voorbeelden hieronder. | 201 |
+| &lt;REGGIE_FQDN>/reggie/v1/{requestor}/regcode <br> bijvoorbeeld:<br> REGGIE_FQDN/reggie/v1/sampleRequestorId/regcode | Streaming App <br> of <br> de Dienst van de Programmer | 1. aanvrager <br>    (De component van de Weg) <br> 2.  deviceId (Hashed)   <br>    (Verplicht) <br> 3.  device_info/x-apparaat-Info (Verplicht) <br> 4.  mvpd (Facultatief) <br> 5.  ttl (Facultatief) <br> | POST | XML of JSON met een registratiecode en informatie of foutdetails als dit mislukt. Zie onderstaande voorbeelden. | 201 |
 
 {style="table-layout:auto"}
 
-| Invoerparameter | Beschrijving |
-| --- | --- |
-| aanvrager | De programmeeraanvragerId waarvoor deze verrichting geldig is. |
-| deviceId | Het apparaat-id bytes. |
-| device_info/</br>X-Apparaat-Info | Informatie over streaming apparaat.</br>**Opmerking**: This MAY BE passed device_info as a URL parameter, but due to the potential size of this parameter and constraints on the length of a GET URL, it should be passed as X-Device-Info in the http header. </br>Zie de volledige details in [Gegevens van apparaat en verbinding doorgeven](/help/authentication/passing-client-information-device-connection-and-application.md). |
-| mvpd | De MVPD-id waarvoor deze bewerking geldig is. |
-| ttl | Hoe lang deze regcode in seconden zou moeten leven.</br>**Opmerking**: De maximaal toegestane waarde voor ttl is 36000 seconden (10 uur). Hogere waarden resulteren in een 400 HTTP-respons (onjuiste aanvraag). Indien `ttl` is leeg, stelt Adobe Pass-verificatie een standaardwaarde van 30 minuten in. |
-| _deviceType_ | Het apparaattype (bijvoorbeeld Roku, PC).</br>Als deze parameter correct is ingesteld, biedt ESM metriek die [uitgesplitst per apparaattype](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) wanneer u Clientless gebruikt, zodat verschillende typen analyses kunnen worden uitgevoerd, bijvoorbeeld Roku, AppleTV en Xbox.</br>Zie, [Voordelen van het gebruiken van clientless apparatentype parameter in pasmetriek ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br>**Opmerking**: device_info zal deze parameter vervangen. |
-| _deviceUser_ | De gebruikers-id van het apparaat. |
-| _appId_ | De toepassings-id/-naam. </br>**Opmerking**: device_info vervangt deze parameter. |
+| Invoerparameter | Type | Beschrijving |
+| --- |------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Toestemming | Koptekst <br> Waarde: drager &lt;access_token> | DCR-toegangstoken |
+| Accepteren | Koptekst <br> Waarde: toepassing/json | aangeven welk inhoudstype de client moet kunnen begrijpen |
+| aanvrager | Query-parameter | De programmeeraanvragerId waarvoor deze verrichting geldig is. |
+| deviceId | Query-parameter | Het apparaat-id bytes. |
+| device_info/<br> x-apparaat-Info | device_info: Body <br> X-Device-Info: Koptekst | Informatie over streaming apparaat.<br>**Nota**: Dit KAN device_info als parameter worden overgegaan URL, maar wegens de potentiële grootte van deze parameter en beperkingen op de lengte van een GET URL, ZOU het als x-Apparaat-Info in de kopbal van http moeten worden overgegaan. <br> zie de volledige details in [ het overgaan van Apparaat en de Informatie van de Verbinding ](/help/authentication/passing-client-information-device-connection-and-application.md). |
+| mvpd | Query-parameter | De MVPD-id waarvoor deze bewerking geldig is. |
+| ttl | Query-parameter | Hoe lang deze regcode in seconden zou moeten leven.<br>**Nota**: De maximumwaarde die voor ttl wordt toegestaan is 36000 seconden (10 uren). Hogere waarden resulteren in een 400 HTTP-respons (onjuiste aanvraag). Als `ttl` leeg blijft, stelt Adobe Pass Authentication een standaardwaarde van 30 minuten in. |
+| _deviceType_ | Query-parameter | Vervangen, niet gebruiken. |
+| _deviceUser_ | Query-parameter | Vervangen, niet gebruiken. |
+| _appId_ | Query-parameter | Vervangen, niet gebruiken. |
 
 {style="table-layout:auto"}
-
 
 >[!CAUTION]
 >
->**IP-adres van streaming apparaat**
-></br>
->Voor client-aan-server implementaties, wordt het Streaming Apparaat IP Adres impliciet verzonden met deze vraag.  Voor server-aan-server implementaties, waar **herschrijven** De vraag wordt gemaakt is de Dienst van de Programmer en niet het Streaming Apparaat, wordt de volgende kopbal vereist om het Streaming Apparaat IP Adres over te gaan:
+>**het Streamen IP van het Apparaat Adres**
+><br>
+>Voor client-aan-server implementaties, wordt het Streaming Apparaat IP Adres impliciet verzonden met deze vraag.  Voor Server-aan-Server implementaties, waar de **regcode** vraag wordt gemaakt is de Dienst van de Programmer en niet het Streaming Apparaat, wordt de volgende kopbal vereist om het Streaming IP van het Apparaat Adres over te gaan:
 >
 >
 >```
 >X-Forwarded-For : <streaming_device_ip> 
 >```
 >
->waar `<streaming\_device\_ip>` is het openbare IP-adres van het streaming apparaat.
-></br></br>
->Voorbeeld:</br>
+>waarbij `<streaming\_device\_ip>` het openbare IP-adres van het streaming apparaat is.
+><br><br>
+>Voorbeeld: <br>
 >
 >```
->POST /reggie/v1/{req_id}/regcode HTTP/1.1</br>X-Forwarded-For:203.45.101.20
+>POST /reggie/v1/{req_id}/regcode HTTP/1.1<br>X-Forwarded-For:203.45.101.20
 >```
 >
-</br>
+<br>
 
-### XML-schema van reactie {#xml-schema}
+### Response JSON
 
 
-#### Registratiecode XSD {#registration-code-xsd}
+#### Registratiecode JSON-MONSTERS
 
-```XML
-    <?xml version="1.0" encoding="UTF-8"?>
-    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="model.mvc.reggie.pass.adobe.com"
-            targetNamespace="model.mvc.reggie.pass.adobe.com"
-            attributeFormDefault="unqualified"
-            elementFormDefault="unqualified">
-        <xs:element name="regcode">
-            <xs:complexType>
-                <xs:all>
-                    <xs:element name="id" type="xs:string" />
-                    <xs:element name="code" type="xs:string" />
-                    <xs:element name="requestor" type="xs:string" minOccurs="1" maxOccurs="1"/>
-                    <xs:element name="mvpd" type="xs:string" minOccurs="1" maxOccurs="1"/
-                    <xs:element name="generated" type="xs:long" />
-                    <xs:element name="expires" type="xs:long" />
-                    <xs:element name="info" type="infoType" maxOccurs="1"/>
-                </xs:all>
-            </xs:complexType>
-        </xs:element>
-        <xs:complexType name="infoType">
-            <xs:all>
-                <xs:element name="deviceId" type="xs:base64Binary" minOccurs="1" maxOccurs="1"/>
-                <xs:element name="deviceType" type="xs:string" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="deviceUser" type="xs:string" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="appId" type="xs:string" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="appVersion" type="xs:string" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="registrationURL" type="xs:anyURI" minOccurs="0" maxOccurs="1"/>
-            </xs:all>
-        </xs:complexType>
-    </xs:schema>
+```JSON
+{
+  "id": "ef5a79e8-7c8a-41d6-a45a-e378c6c7c8b5",
+  "code": "IYQD5JQ",
+  "requestor": "sampleRequestorId",
+  "mvpd": "sampleMvpdId",
+  "generated": 1704963921144,
+  "expires": 1704965721144,
+  "info": {
+    "deviceId": "c28tZGV2aWQtMDAz",
+    "deviceInfo": "eyJ0eXBlIjoiU2V0VG9wQm94IiwibW9kZWwiOiJBRlRNTSIsInZlcnNpb24iOnsibWFqb3IiOjAsIm1pbm9yIjowLCJwYXRjaCI6MCwicHJvZmlsZSI6IiJ9LCJoYXJkd2FyZSI6eyJuYW1lIjoiQUZUTU0iLCJ2ZW5kb3IiOiJVbmtub3duIiwidmVyc2lvbiI6eyJtYWpvciI6MCwibWlub3IiOjAsInBhdGNoIjowLCJwcm9maWxlIjoiIn0sIm1hbnVmYWN0dXJlciI6IlJva3UifSwib3BlcmF0aW5nU3lzdGVtIjp7Im5hbWUiOiJBbmRyb2lkIiwiZmFtaWx5IjoiQW5kcm9pZCIsInZlbmRvciI6IkFtYXpvbiIsInZlcnNpb24iOnsibWFqb3IiOjcsIm1pbm9yIjoxLCJwYXRjaCI6MiwicHJvZmlsZSI6IiJ9fSwiYnJvd3NlciI6eyJuYW1lIjoiQ2hyb21lIiwidmVuZG9yIjoiR29vZ2xlIiwidmVyc2lvbiI6eyJtYWpvciI6MTEyLCJtaW5vciI6MCwicGF0Y2giOjU2MTUsInByb2ZpbGUiOiIifSwidXNlckFnZW50IjoiTW96aWxsYS81LjAgKExpbnV4OyBBbmRyb2lkIDcuMS4yOyBBRlRNTSBCdWlsZC9OUzYyOTc7IHd2KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBWZXJzaW9uLzQuMCBDaHJvbWUvMTEyLjAuNTYxNS4xOTcgTW9iaWxlIFNhZmFyaS81MzcuMzYgQWRvYmVQYXNzTmF0aXZlRmlyZVRWLzMuMC44Iiwib3JpZ2luYWxVc2VyQWdlbnQiOiJNb3ppbGxhLzUuMCAoTGludXg7IEFuZHJvaWQgNy4xLjI7IEFGVE1NIEJ1aWxkL05TNjI5Nzsgd3YpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIFZlcnNpb24vNC4wIENocm9tZS8xMTIuMC41NjE1LjE5NyBNb2JpbGUgU2FmYXJpLzUzNy4zNiBBZG9iZVBhc3NOYXRpdmVGaXJlVFYvMy4wLjgifSwiZGlzcGxheSI6eyJ3aWR0aCI6MCwiaGVpZ2h0IjowLCJwcGkiOjAsIm5hbWUiOiJESVNQTEFZIiwidmVuZG9yIjpudWxsLCJ2ZXJzaW9uIjpudWxsLCJkaWFnb25hbFNpemUiOm51bGx9LCJhcHBsaWNhdGlvbklkIjpudWxsLCJjb25uZWN0aW9uIjp7ImlwQWRkcmVzcyI6IjE5My4xMDUuMTQwLjEzMSIsInBvcnQiOiI5OTM0Iiwic2VjdXJlIjpmYWxzZSwidHlwZSI6bnVsbH19",
+    "userAgent": "Mozilla/5.0 (Linux; Android 7.1.2; AFTMM Build/NS6297; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/112.0.5615.197 Mobile Safari/537.36 AdobePassNativeFireTV/3.0.8",
+    "originalUserAgent": "Mozilla/5.0 (Linux; Android 7.1.2; AFTMM Build/NS6297; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/112.0.5615.197 Mobile Safari/537.36 AdobePassNativeFireTV/3.0.8",
+    "authorizationType": "OAUTH2",
+    "sourceApplicationInformation": {
+      "id": "14138364-application-id",
+      "name": "application name",
+      "version": "1.0.0"
+    }
+  }
+}
 ```
 
-</br>
+<br>
 
 | Elementnaam | Beschrijving |
-| --------------- | ------------------------------------------------------------------------------------ |
+|-----------------------------------|------------------------------------------------------------------------------------------------------------------|
 | id | UUID gegenereerd door de Registratiecode Service |
 | code | Registratiecode gegenereerd door de registratiecodeservice |
 | aanvrager | Id van aanvrager |
 | mvpd | Mvpd-id |
 | gegenereerd | Tijdstempel voor het maken van de registratiecode (in milliseconden sinds 1 januari 1970 GMT) |
 | verloopt | Tijdstempel wanneer de registratiecode verloopt (in milliseconden sinds 1 januari 1970 GMT) |
-| deviceId | Unieke apparaat-id (of XSTS-token) |
-| deviceType | Apparaattype |
-| deviceUser | Gebruiker heeft zich bij het apparaat aangemeld |
-| appId | Toepassings-id |
-| appVersion | Toepassingsversie |
-| registrationURL | URL aan de Login App van het Web om aan het eind te tonen - gebruiker |
+| deviceId | Base64 Unique Device ID |
+| info:deviceId | Base64-apparaattype |
+| info:deviceInfo | Base64 Normalized de Informatie van het Apparaat bouwt op informatie die van gebruiker-Agent, x-Apparaat-Info of device_info wordt ontvangen |
+| info:userAgent | Gebruikersagent verzonden door de toepassing |
+| info:originalUserAgent | Gebruikersagent verzonden door de toepassing |
+| info:authenticationType | OAUTH2 voor vraag die DCR gebruiken |
+| info:sourceApplicationInformation | Application Info zoals geconfigureerd in DCR |
 
 {style="table-layout:auto"}
 
 
-</br>
+<br>
 
-### Foutbericht XSD  {#error-message}
-
-```XML
-    <?xml version="1.0" encoding="UTF-8"?>
-    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="rest.pass.adobe.com"
-               targetNamespace="rest.pass.adobe.com"
-               attributeFormDefault="unqualified"
-               elementFormDefault="unqualified">
-        <xs:element name="error">
-            <xs:complexType>
-                <xs:all>
-                    <xs:element name="status" type="xs:int" minOccurs="1" maxOccurs="1"/>
-                    <xs:element name="message" type="xs:string" minOccurs="1" maxOccurs="1"/>
-                    <xs:element name="details" type="xs:string" minOccurs="0" maxOccurs="1"/>
-                </xs:all>
-            </xs:complexType>
-        </xs:element>
-    </xs:schema>
-```
-
-
-### Samplereactie {#sample-response}
-
-**XML:**
-
-```XML
-    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-    <ns2:regcode xmlns:ns2="model.mvc.reggie.pass.adobe.com">
-        <id>678f9fea-a1cafec8-1ff0-4a26-8564-f6cd020acf13</id>
-        <code>TJJCFK</code>
-        <requestor>sampleRequestorId</requestor>
-        <mvpd>sampleMvpdId</mvpd>
-        <generated>1348039846647</generated>
-        <expires>1348043446647</expires>
-        <info>
-            <deviceId>dGhpc0lkQUR1bW15RGV2aWNlSWQ=</deviceId>
-            <deviceType>xbox</deviceType>
-            <deviceUser>JD</deviceUser>
-            <appId>2345</appId>
-            <appVersion>2.0</appVersion>
-            <registrationURL>http://loginwebapp.com</registrationURL>
-        </info>
-    </ns2:regcode>
-```
-
-**JSON:**
+### Foutbericht JSON-responsvoorbeeld (#error-sample-response)
 
 ```JSON
-    {
-        "id": "678f9fea-9d364b29-246c-488f-b97e-298566d1b9e0",
-        "code": "D4BDU2W",
-        "requestor": "sampleRequestorId",
-        "mvpd": "sampleMvpdId",
-        "generated": 1348039555877,
-        "expires": 1348043155877,
-        "info": {
-            "deviceId": "dGhpc0l.kQUR1bW15RGV2.aWNlSWQ=",
-            "deviceType": "xboxOne",
-            "deviceUser": "JD",
-            "appId": "2345",
-            "appVersion": "2.0",
-            "registrationURL": "http://loginwebapp.com"
-        }
-    }
+{
+  "status": 400,
+  "message": "Required '<>' is not present"
+}
 ```
+
