@@ -1,13 +1,13 @@
 ---
 title: Basisverificatie - Secundaire toepassing - Stroom
 description: REST API V2 - Basisverificatie - Secundaire toepassing - Stroom
-source-git-commit: d59afc0384a1c3617143efcef4ab5fb1a323e511
+exl-id: 83bf592e-c679-4cfe-984d-710a9598c620
+source-git-commit: 21b4ad42709351eac1c2089026f84a43deb50f8a
 workflow-type: tm+mt
 source-wordcount: '2000'
 ht-degree: 0%
 
 ---
-
 
 # Basisverificatiestroom uitgevoerd binnen secundaire toepassing {#basic-authentication-flow-performed-within-secondary-application}
 
@@ -137,7 +137,7 @@ Volg de gegeven stappen om de basisauthentificatiestroom uit te voeren die binne
    >
    > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../enhanced-error-codes.md) volgt.
 
-   >[!NOTE]
+   >[!TIP]
    >
    > Suggestie: de secundaire toepassing kan gebruikers informeren dat de gebruikte `code` ongeldig is in het geval van een foutreactie die een ontbrekende verificatiesessie aangeeft, en hen adviseren opnieuw te proberen met een nieuwe.
 
@@ -162,7 +162,7 @@ Volg de gegeven stappen om de basisauthentificatiestroom uit te voeren die binne
    > * Alle _vereiste_ kopballen, als `Authorization`, `AP-Device-Identifier`
    > * Alle _facultatieve_ parameters en kopballen
 
-   >[!NOTE]
+   >[!TIP]
    >
    > Suggestie: de streamingtoepassing kan een opiniepeilingsmechanisme implementeren met behulp van `code` om te controleren of het standaardprofiel is gegenereerd en opgeslagen.
 
@@ -271,7 +271,7 @@ Volg de gegeven stappen om de basisauthentificatiestroom uit te voeren die binne
    > 
    > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../enhanced-error-codes.md) volgt.
 
-   >[!NOTE]
+   >[!TIP]
    >
    > Suggestie: de secundaire toepassing kan gebruikers informeren dat de gebruikte `code` ongeldig is in het geval van een foutreactie die een ontbrekende verificatiesessie aangeeft, en hen adviseren opnieuw te proberen met een nieuwe.
 
@@ -300,7 +300,7 @@ Volg de gegeven stappen om de basisauthentificatiestroom uit te voeren die binne
    > * Alle _vereiste_ kopballen, als `Authorization`, `AP-Device-Identifier`
    > * Alle _facultatieve_ parameters en kopballen
 
-   >[!NOTE]
+   >[!TIP]
    >
    > Suggestie: de streamingtoepassing kan een opiniepeilingsmechanisme implementeren met behulp van `code` om te controleren of het standaardprofiel is gegenereerd en opgeslagen.
 

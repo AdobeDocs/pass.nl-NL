@@ -1,13 +1,13 @@
 ---
 title: Single Sign On - Service Token - Flows
 description: REST API V2 - Single Sign On - Service Token - Flows
-source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
+exl-id: b0082d2a-e491-4cb5-bb40-35ba10db6b1a
+source-git-commit: 21b4ad42709351eac1c2089026f84a43deb50f8a
 workflow-type: tm+mt
 source-wordcount: '1848'
 ht-degree: 0%
 
 ---
-
 
 # Single Sign-On die de stromen van het de dienstteken gebruikt{#single-sign-on-service-token-full-flows}
 
@@ -120,7 +120,7 @@ Voer de bepaalde stappen uit om de authentificatiestroom door enige sign-on uit 
    > * Alle _vereiste_ kopballen, als `Authorization`, `AP-Device-Identifier`
    > * Alle _facultatieve_ parameters en kopballen
 
-   >[!NOTE]
+   >[!TIP]
    >
    > Suggestie: de streamingtoepassing kan wachten tot de gebruikersagent de opgegeven `redirectUrl` heeft bereikt om te controleren of het standaardprofiel is gegenereerd en opgeslagen.
 

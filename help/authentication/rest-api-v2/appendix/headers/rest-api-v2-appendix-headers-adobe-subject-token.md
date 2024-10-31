@@ -1,13 +1,13 @@
 ---
 title: Koptekst - Onderwerptoken voor Adobe
 description: REST API V2 - Koptekst - Onderwerptoken voor Adobe
-source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
+exl-id: 906d88f4-3b8f-491a-ab58-8e63d3b958d8
+source-git-commit: 21b4ad42709351eac1c2089026f84a43deb50f8a
 workflow-type: tm+mt
-source-wordcount: '156'
+source-wordcount: '166'
 ht-degree: 0%
 
 ---
-
 
 # Koptekst - Onderwerptoken voor Adobe {#header-adobe-subject-token}
 
@@ -47,10 +47,10 @@ De handtekening van JSON-web (`JWS`) of JSON-webcodering (`JWE` ) die een ondert
 
 Dit is beschikbaar voor de volgende platforms:
 
-* [Amazon](../../../amazon-fireos-sso-using-clientless-api-cookbook.md)
+* [Amazon SSO Cookbook (REST API V2)](../../../single-sign-on/platform-single-sign-on/amazon-single-sign-on/amazon-sso-cookbook-rest-api-v1.md)
 
 ## Voorbeelden {#examples}
 
 Zie de voorbeelden die worden beschreven voor de volgende platformen:
 
-* [Amazon](../../../amazon-fireos-sso-using-clientless-api-cookbook.md)
+* [Amazon SSO Cookbook (REST API V2)](../../../single-sign-on/platform-single-sign-on/amazon-single-sign-on/amazon-sso-cookbook-rest-api-v1.md)

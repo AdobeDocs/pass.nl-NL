@@ -2,9 +2,9 @@
 title: REST API Cookbook (client-naar-server)
 description: Testen van API-cookboekclient naar server.
 exl-id: f54a1eda-47d5-4f02-b343-8cdbc99a73c0
-source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
+source-git-commit: 21b4ad42709351eac1c2089026f84a43deb50f8a
 workflow-type: tm+mt
-source-wordcount: '868'
+source-wordcount: '876'
 ht-degree: 0%
 
 ---
@@ -130,16 +130,22 @@ gebruiker.
 
 1. Stuur de gebruiker terug naar de toepassing van het slimme apparaat om de autorisatiestroom te voltooien.
 
-## Platform SSO {#platform-sso}
+## Single Sign-On voor partners {#partner-sso}
 
-Sommige platforms bieden specifieke ondersteuning voor Single Sign-On (SSO). De implementatiedetails zijn te vinden voor elk platform:
+Sommige apparaten verstrekken specifieke steun voor Partner Enige Sign-On (SSO):
 
-* [APPLE SSO](/help/authentication/apple-sso-cookbook-rest-api.md)
-* AMAZON SSO
+* [APPLE SSO](/help/authentication/single-sign-on/partner-single-sign-on/apple-single-sign-on/apple-sso-cookbook-rest-api-v1.md)
+
+## Platform Single Sign-On {#platform-sso}
+
+Sommige apparaten bieden specifieke ondersteuning voor Platform Single Sign-On (SSO):
+
+* [AMAZON SSO](./single-sign-on/platform-single-sign-on/amazon-single-sign-on/amazon-sso-cookbook-rest-api-v1.md)
+* [Roku SSO](./single-sign-on/platform-single-sign-on/roku-single-sign-on/roku-sso-overview.md)
 
 ## TempPass en Promotional TempPass voor REST API {#temppass}
 
-Voor TempPass- en Promotional TempPass-implementaties waarbij de gebruiker geen referenties hoeft in te voeren, kan verificatie rechtstreeks worden geïmplementeerd in de streamingtoepassing.
+Voor TempPass- en Promotional TempPass-implementaties waarbij de gebruiker geen referenties hoeft in te voeren, kan verificatie rechtstreeks in de streamingtoepassing worden geïmplementeerd.
 
 **om deze API te gebruiken moet de Streaming App van de uniciteit van apparatenidentiteitskaart verzekeren aangezien dit voor het identificeren van het teken, samen met de facultatieve extra gegevens wordt gebruikt.**
 

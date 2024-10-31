@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass-verificatie
 user-guide-description: Adobe Pass-verificatie is een machtigingsoplossing voor TV Everywhere, die een modulair kader verstrekt om te bepalen of iemand die toegang tot een bron vraagt, daar rechten voor heeft.
-source-git-commit: 2f5e511f774e1a2d8b8b60084844edfe27be6c76
+source-git-commit: 21b4ad42709351eac1c2089026f84a43deb50f8a
 workflow-type: tm+mt
-source-wordcount: '1181'
+source-wordcount: '1199'
 ht-degree: 2%
 
 ---
@@ -56,28 +56,28 @@ ht-degree: 2%
       + [Overzicht van REST API V2](./rest-api-v2/rest-api-v2-overview.md)
       + [Woordenlijst REST API V2](./rest-api-v2/rest-api-v2-glossary.md)
       + API&#39;s {#rest-api-v2-apis}
-         + [REST API V2 API&#39;s - Overzicht](./rest-api-v2/apis/rest-api-v2-apis-overview.md)
+         + [REST API V2 API&#39;s - Overzicht](rest-api-v2/apis/rest-api-v2-apis-overview.md)
          + Configuratie {#rest-api-v2-configuration-apis}
-            + [Win configuratie voor specifieke dienstverlener terug](./rest-api-v2/apis/configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider.md)
+            + [Win configuratie voor specifieke dienstverlener terug](rest-api-v2/apis/configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider.md)
          + Sessies {#rest-api-v2-sessions-apis}
-            + [Verificatiesessie maken](./rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md)
-            + [Verificatiesessie hervatten](./rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-resume-authentication-session.md)
-            + [Verificatiesessie ophalen](./rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-retrieve-authentication-session-information-using-code.md)
-            + [Verificatie uitvoeren in gebruikersagent](./rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-perform-authentication-in-user-agent.md)
+            + [Verificatiesessie maken](rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md)
+            + [Verificatiesessie hervatten](rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-resume-authentication-session.md)
+            + [Verificatiesessie ophalen](rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-retrieve-authentication-session-information-using-code.md)
+            + [Verificatie uitvoeren in gebruikersagent](rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-perform-authentication-in-user-agent.md)
          + Profielen {#rest-api-v2-profiles-apis}
-            + [Profielen ophalen](./rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md)
-            + [Profiel ophalen voor specifieke mvpd](./rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md)
-            + [Profiel ophalen voor specifieke code](./rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md)
+            + [Profielen ophalen](rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md)
+            + [Profiel ophalen voor specifieke mvpd](rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md)
+            + [Profiel ophalen voor specifieke code](rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md)
          + Besluiten {#rest-api-v2-decisions-apis}
-            + [Autorisatiebesluiten ophalen met specifieke mvpd](./rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md)
-            + [Besluiten vóór toelating met specifieke mvpd ophalen](./rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md)
+            + [Autorisatiebesluiten ophalen met specifieke mvpd](rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md)
+            + [Besluiten vóór toelating met specifieke mvpd ophalen](rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md)
          + Afmelden {#rest-api-v2-logout-apis}
-            + [Afmelden starten voor specifieke mvpd](./rest-api-v2/apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md)
+            + [Afmelden starten voor specifieke mvpd](rest-api-v2/apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md)
          + Single Sign-On voor partners {#rest-api-v2-partner-single-sign-on-apis}
             + [Vraag van partnerverificatie ophalen](rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-partner-authentication-request.md)
             + [Profiel ophalen met verificatierespons van partner](rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md)
       + Stromen {#rest-api-v2-flows}
-         + [Overzicht van REST API V2-stromen](./rest-api-v2/flows/rest-api-v2-flows-overview.md)
+         + [Overzicht van REST API V2-stromen](rest-api-v2/flows/rest-api-v2-flows-overview.md)
          + Basistoegangsstromen {#rest-api-v2-basic-access-flows}
             + [Stroom van basisprofielen uitgevoerd in primaire toepassing](rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-primary-application-flow.md)
             + [De stroom van basisprofielen die binnen secundaire toepassing wordt uitgevoerd](rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-secondary-application-flow.md)
@@ -99,13 +99,13 @@ ht-degree: 2%
          + [REST API V2 Cookbook (client-naar-server)](rest-api-v2/cookbooks/rest-api-v2-cookbooks-client-server.md)
       + Bijlage {#rest-api-v2-appendix}
          + Kopteksten {#rest-api-v2-appendix-headers}
-            + [Koptekst - Autorisatie](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-authorization.md)
-            + [Koptekst - AP-apparaat-id](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-device-identifier.md)
-            + [Koptekst - X-Apparaat-Info](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-device-info.md)
-            + [Koptekst - AD-Service-token](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md)
-            + [Koptekst - Onderwerptoken voor Adobe](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md)
-            + [Koptekst - AP-Partner-Framework-Status](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md)
-            + [Koptekst - AP-TempPass-Identity](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-temppass-identity.md)
+            + [Koptekst - Autorisatie](rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-authorization.md)
+            + [Koptekst - AP-apparaat-id](rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-device-identifier.md)
+            + [Koptekst - X-Apparaat-Info](rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-device-info.md)
+            + [Koptekst - AD-Service-token](rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md)
+            + [Koptekst - Onderwerptoken voor Adobe](rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md)
+            + [Koptekst - AP-Partner-Framework-Status](rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md)
+            + [Koptekst - AP-TempPass-Identity](rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-temppass-identity.md)
    + AccessEnabler SDK {#accessenabler-sdk}
       + JavaScript SDK {#javascriptsdk}
          + [Overzicht van JavaScript SDK](javascript-sdk-overview.md)
@@ -136,20 +136,24 @@ ht-degree: 2%
          + Android API {#android-sdk-api}
             + [Voorvoegsel](preauthorize-api-android-sdk.md)
       + Amazon FireOS SDK {#fireossdk}
-         + [Amazon FireOS SSO - Handleiding voor het starten van de programma&#39;s](amazon-firetv-sso-programmer-kickoff-guide.md)
-         + [Amazon FireOS SSO met Cookbook zonder client](amazon-fireos-sso-using-clientless-api-cookbook.md)
          + [Technisch overzicht van Amazon FireOS](amazon-fireos-technical-overview.md)
          + [Amazon FireOS Integration Cookbook](amazon-fireos-integration-cookbook.md)
          + [Amazon FireOS API-naslaggids](amazon-fireos-native-client-api-reference.md)
          + [Amazon FireOS-toepassingsregistratie](amazon-fireos-application-registration.md)
          + [FireOS SDK met Dynamic Client-registratie](fireos-sdk-with-dynamic-client-registration.md)
-   + Platform SSO {#platform-sso}
-      + Apple SSO {#apple-sso}
-         + [Apple SSO - Overzicht](apple-sso-overview.md)
-         + [Apple SSO Cookbook (REST API)](apple-sso-cookbook-rest-api.md)
-         + [Apple SSO Cookbook (iOS/tvOS SDK)](apple-sso-cookbook-iostvos-sdk.md)
-      + Roku SSO {#roku-sso}
-         + [Roku SSO](roku-sso-overview.md)
+         + [Amazon FireOS SSO - Handleiding voor het starten van de programma&#39;s](amazon-firetv-sso-programmer-kickoff-guide.md)
+   + Single Sign-On {#sso}
+      + Single Sign-On voor partners {#partner-sso}
+         + Apple Single Sign-On {#apple-sso}
+            + [Apple SSO - Overzicht](single-sign-on/partner-single-sign-on/apple-single-sign-on/apple-sso-overview.md)
+            + [Apple SSO Cookbook (REST API V2)](single-sign-on/partner-single-sign-on/apple-single-sign-on/apple-sso-cookbook-rest-api-v2.md)
+            + [Apple SSO Cookbook (REST API V1)](single-sign-on/partner-single-sign-on/apple-single-sign-on/apple-sso-cookbook-rest-api-v1.md)
+            + [Apple SSO Cookbook (iOS/tvOS SDK)](single-sign-on/partner-single-sign-on/apple-single-sign-on/apple-sso-cookbook-iostvos-sdk.md)
+      + Platform Single Sign-On {#platform-sso}
+         + Amazon Single Sign-On {#amazon-sso}
+            + [Amazon SSO Cookbook (REST API V1)](single-sign-on/platform-single-sign-on/amazon-single-sign-on/amazon-sso-cookbook-rest-api-v1.md)
+         + Single Sign-On {#roku-sso}
+            + [Overzicht van Roku SSO](single-sign-on/platform-single-sign-on/roku-single-sign-on/roku-sso-overview.md)
    + Metagegevens inhoud {#content-metadata}
       + [Beveiligde bron identificeren](identify-protected-resources.md)
    + Integratie van inhoudsservers {#content-serv-int}

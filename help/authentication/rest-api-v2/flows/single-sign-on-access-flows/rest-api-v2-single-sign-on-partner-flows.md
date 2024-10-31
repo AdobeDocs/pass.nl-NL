@@ -1,13 +1,13 @@
 ---
 title: Single Sign-On - Partner - Stromen
 description: REST API V2 - Single Sign-On - Partner - Flows
-source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
+exl-id: 5735d67f-a311-4d03-ad48-93c0fcbcace5
+source-git-commit: 21b4ad42709351eac1c2089026f84a43deb50f8a
 workflow-type: tm+mt
-source-wordcount: '1317'
+source-wordcount: '1444'
 ht-degree: 0%
 
 ---
-
 
 # Enig teken-op het gebruiken van partnerstromen {#single-sign-on-partner-flows}
 
@@ -18,6 +18,18 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 > De implementatie van REST API V2 wordt begrensd door de [ Throttling mechanisme ](/help/authentication/throttling-mechanism.md) documentatie.
+
+De methode van de Partner laat veelvoudige toepassingen toe om een de statuslading van het partnerkader te gebruiken om enige sign-on (SSO) op het apparatenniveau te bereiken wanneer het gebruiken van de diensten van Adobe Pass.
+
+De toepassingen zijn verantwoordelijk voor het terugwinnen van de de statuslading van het partnerkader gebruikend partnerspecifieke kaders of bibliotheken buiten de systemen van Adobe Pass.
+
+De toepassingen zijn verantwoordelijk voor het opnemen van deze statuslading van het partnerframework als onderdeel van de header `AP-Partner-Framework-Status` voor alle aanvragen die deze opgeven.
+
+Voor meer details over `AP-Partner-Framework-Status` kopbal, verwijs naar [ AP-partner-kader-status ](../../appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md) documentatie.
+
+De Adobe Pass Authentication REST API V2 biedt ondersteuning voor Single Sign-On (SSO) voor eindgebruikers van clienttoepassingen die op iOS, iPadOS of tvOS worden uitgevoerd.
+
+Voor meer details over enig teken-binnen (SSO) voor het platform van Apple, verwijs naar [ Apple SSO Cookbook (REST API V2) ](/help/authentication/single-sign-on/partner-single-sign-on/apple-single-sign-on/apple-sso-cookbook-rest-api-v2.md) documentatie.
 
 ## Vraag van partnerverificatie ophalen {#retrieve-partner-authentication-request}
 
@@ -61,7 +73,7 @@ Voer de bepaalde stappen uit om het verzoek van de partnerauthentificatie zoals 
    > Verwijs naar [ ophalen de verzoek van de partnerauthentificatie ](../../apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-partner-authentication-request.md) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `serviceProvider` en `partner`
-   > * Alle _vereiste_ kopballen zoals `Authorization`, `AP-Device-Identifier`, en `AP-Partner-Framework-Status`
+   > * Alle _vereiste_ kopballen zoals `Authorization`, `AP-Device-Identifier`, `Content-Type`, `X-Device-Info`, en `AP-Partner-Framework-Status`
    > * Alle _facultatieve_ kopballen en parameters
    >
    > <br/>
@@ -175,7 +187,7 @@ Voer de bepaalde stappen uit om de stroom van de profielherwinning uit te voeren
    > Verwijs naar [ terug wint profiel gebruikend de reactie van de partnerauthentificatie ](../../apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `serviceProvider`, `partner`, en `SAMLResponse`
-   > * Alle _vereiste_ kopballen, als `Authorization`, `AP-Device-Identifier`, en `AP-Partner-Framework-Status`
+   > * Alle _vereiste_ kopballen, als `Authorization`, `AP-Device-Identifier`, `Content-Type`, `X-Device-Info`, en `AP-Partner-Framework-Status`
    > * Alle _facultatieve_ kopballen en parameters
    >
    > <br/>

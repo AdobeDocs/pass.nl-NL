@@ -2,7 +2,7 @@
 title: Tijdelijke toegangsstromen
 description: REST API V2 - Tijdelijke toegangsstromen
 exl-id: 387fcdb0-3a42-4893-ba83-e809426f92be
-source-git-commit: ca8eaff83411daab5f136f01394e1d425e66f393
+source-git-commit: 21b4ad42709351eac1c2089026f84a43deb50f8a
 workflow-type: tm+mt
 source-wordcount: '3215'
 ht-degree: 0%
@@ -349,7 +349,7 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren wanneer het verbru
 
 1. **handvat `Deny` besluitvormingsdetails:** de het stromen toepassing verwerkt de fouteninformatie van de reactie en kan het gebruiken om naar keuze een specifiek bericht op het gebruikersinterface te tonen.
 
-   >[!NOTE]
+   >[!TIP]
    >
    > Suggestie: de streamingtoepassing kan gebruikers informeren dat het maximumaantal bronnen is overschreden en hen adviseren een basisverificatiestroom te starten met een normale MVPD om te blijven kijken.
 
@@ -429,7 +429,7 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren wanneer basis of p
 
 1. **handvat `Deny` besluitvormingsdetails:** de het stromen toepassing verwerkt de fouteninformatie van de reactie en kan het gebruiken om naar keuze een specifiek bericht op het gebruikersinterface te tonen.
 
-   >[!NOTE]
+   >[!TIP]
    >
    > Suggestie: de streaming toepassing kan gebruikers informeren dat de tijdelijke toegang is verlopen en hen adviseren om een basisauthentificatiestroom in werking te stellen gebruikend een regelmatige MVPD om het letten voort te zetten.
 

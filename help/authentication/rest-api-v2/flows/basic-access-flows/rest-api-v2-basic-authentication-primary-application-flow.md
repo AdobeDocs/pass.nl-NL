@@ -1,13 +1,13 @@
 ---
 title: Basisverificatie - Primaire toepassing - Stroom
 description: REST API V2 - Basisverificatie - Primaire toepassing - Stroom
-source-git-commit: dc9fab27c7eced2be5dd9f364ab8f2d64f8e4177
+exl-id: 8122108d-e9da-43c5-9abb-ab177cb21eb6
+source-git-commit: 21b4ad42709351eac1c2089026f84a43deb50f8a
 workflow-type: tm+mt
 source-wordcount: '894'
 ht-degree: 0%
 
 ---
-
 
 # Standaardverificatiestroom uitgevoerd binnen primaire toepassing {#basic-authentication-flow-performed-within-primary-application}
 
@@ -121,7 +121,7 @@ Volg de gegeven stappen om de basisauthentificatiestroom uit te voeren die binne
    > * Alle _vereiste_ kopballen, als `Authorization`, `AP-Device-Identifier`
    > * Alle _facultatieve_ parameters en kopballen
 
-   >[!NOTE]
+   >[!TIP]
    >
    > Suggestie: de streamingtoepassing kan wachten tot de gebruikersagent de opgegeven `redirectUrl` heeft bereikt om te controleren of het standaardprofiel is gegenereerd en opgeslagen.
 

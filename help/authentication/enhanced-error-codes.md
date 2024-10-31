@@ -2,7 +2,7 @@
 title: Verbeterde foutcodes
 description: Verbeterde foutcodes
 exl-id: 2b0a9095-206b-4dc7-ab9e-e34abf4d359c
-source-git-commit: 6c328eb2c635a1d76fc7dae8148a4de291c126e0
+source-git-commit: 21b4ad42709351eac1c2089026f84a43deb50f8a
 workflow-type: tm+mt
 source-wordcount: '2593'
 ht-degree: 2%
@@ -301,8 +301,8 @@ In de onderstaande tabel worden mogelijke Enhanced Error Codes weergegeven die e
 | **niets** | *invalid_parameter_service_provider* | 400 | De parameterwaarde van het prepress-bureau ontbreekt of is ongeldig. |
 |                              | *invalid_parameter_mvpd* | 400 | De parameterwaarde mvpd ontbreekt of is ongeldig. |
 |                              | *invalid_parameter_code* | 400 | De waarde van de codeparameter ontbreekt of is ongeldig. |
-|                              | *invalid_parameter_resources* | 400 | De waarde van de parameter redirect URL ontbreekt of is ongeldig. |
-|                              | *invalid_parameter_redirect_url* | 400 | De parameterwaarde voor resources ontbreekt of is ongeldig. |
+|                              | *invalid_parameter_resources* | 400 | De parameterwaarde voor resources ontbreekt of is ongeldig. |
+|                              | *invalid_parameter_redirect_url* | 400 | De waarde van de parameter redirect URL ontbreekt of is ongeldig. |
 |                              | *invalid_parameter_partner* | 400 | De parameterwaarde van de partner ontbreekt of is ongeldig. |
 |                              | *invalid_parameter_saml_response* | 400 | De parameterwaarde voor SAML-reactie ontbreekt of is ongeldig. |
 |                              | *invalid_header_device_info* | 400 | De koptekstwaarde voor apparaatinformatie ontbreekt of is ongeldig. |
