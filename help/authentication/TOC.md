@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass-verificatie
 user-guide-description: Adobe Pass-verificatie is een machtigingsoplossing voor TV Everywhere, die een modulair kader verstrekt om te bepalen of iemand die toegang tot een bron vraagt, daar rechten voor heeft.
-source-git-commit: 21b4ad42709351eac1c2089026f84a43deb50f8a
+source-git-commit: e1e1835d0d523377c48b39170919f7120cc3ef90
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1204'
 ht-degree: 2%
 
 ---
@@ -96,7 +96,8 @@ ht-degree: 2%
             + [Single Sign-On die de stromen van het de dienstteken gebruikt](rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-service-token-flows.md)
             + [Single Logout-flow](rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-logout-flow.md)
       + Cookbooks {#rest-api-v2-cookbooks}
-         + [REST API V2 Cookbook (client-naar-server)](rest-api-v2/cookbooks/rest-api-v2-cookbooks-client-server.md)
+         + [REST API V2 Cookbook (client-naar-server)](rest-api-v2/cookbooks/rest-api-v2-cookbook-client-server.md)
+         + [REST API V2 Cookbook (Server-to-Server)](rest-api-v2/cookbooks/rest-api-v2-cookbook-server-server.md)
       + Bijlage {#rest-api-v2-appendix}
          + Kopteksten {#rest-api-v2-appendix-headers}
             + [Koptekst - Autorisatie](rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-authorization.md)
