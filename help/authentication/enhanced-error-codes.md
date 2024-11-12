@@ -2,9 +2,9 @@
 title: Verbeterde foutcodes
 description: Verbeterde foutcodes
 exl-id: 2b0a9095-206b-4dc7-ab9e-e34abf4d359c
-source-git-commit: 21b4ad42709351eac1c2089026f84a43deb50f8a
+source-git-commit: ce9659074bfa3fac3ea62a70a6da470f15bad3fe
 workflow-type: tm+mt
-source-wordcount: '2593'
+source-wordcount: '2606'
 ht-degree: 2%
 
 ---
@@ -313,6 +313,7 @@ In de onderstaande tabel worden mogelijke Enhanced Error Codes weergegeven die e
 |                              | *invalid_header_pfs_permission_access_not_allowed* | 400 | De de statuswaarde van de toestemmingstoegang van de de statuskopbal van het partnerkader wordt niet verleend. |
 |                              | *invalid_header_pfs_provider_id_not_determine* | 400 | De waarde van leverancier id van de de statuskopbal van het partnerkader wordt niet geassocieerd met bekende mvpd. |
 |                              | *invalid_header_pfs_provider_id_mismatch* | 400 | De waarde van leverancier id van de de statuskopbal van het partnerkader past mvpd niet aan die als parameter wordt verzonden. |
+|                              | *invalid_header_pfs_provider_info_expired* | 400 | De leveranciersinformatie van de de statuskopbal van het partnerkader is verlopen. |
 |                              | *invalid_integration* | 400 | De integratie tussen de opgegeven serviceprovider en mvpd bestaat niet of is uitgeschakeld. |
 |                              | *invalid_authentication_session* | 400 | De verificatiesessie die aan dit verzoek is gekoppeld, ontbreekt of is ongeldig. |
 |                              | *preauthentication_deny_by_mvpd* | 403 | MVPD heeft een &quot;Weigeren&quot;besluit teruggegeven toen het verzoeken van pre-vergunning voor de gespecificeerde middel. |
