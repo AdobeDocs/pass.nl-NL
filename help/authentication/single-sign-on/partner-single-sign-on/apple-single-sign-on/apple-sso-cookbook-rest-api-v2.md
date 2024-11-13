@@ -1,9 +1,10 @@
 ---
 title: Apple SSO Cookbook (REST API V2)
 description: Apple SSO Cookbook (REST API V2)
-source-git-commit: 21b4ad42709351eac1c2089026f84a43deb50f8a
+exl-id: 81476312-9ba4-47a0-a4f7-9a557608cfd6
+source-git-commit: e5ef8c0cba636ac4d2bda1abe0e121d0ecc1b795
 workflow-type: tm+mt
-source-wordcount: '3402'
+source-wordcount: '3410'
 ht-degree: 0%
 
 ---
@@ -16,11 +17,11 @@ ht-degree: 0%
 
 De Adobe Pass Authentication REST API V2 biedt ondersteuning voor Single Sign-On (SSO) voor eindgebruikers van clienttoepassingen die op iOS, iPadOS of tvOS worden uitgevoerd.
 
-Dit document doet dienst als uitbreiding aan de bestaande REST API V2 documentatie die beschrijft hoe te om [ Enige sign-on uit te voeren gebruikend partnerstromen ](/help/authentication/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-partner-flows.md).
+Dit document doet dienst als uitbreiding aan het bestaande [ REST API V2 Overzicht ](/help/authentication/rest-api-v2/rest-api-v2-overview.md) dat een mening op hoog niveau en het document verstrekt dat beschrijft hoe te om [ Enige sign-on uit te voeren gebruikend partnerstromen ](/help/authentication/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-partner-flows.md).
 
-## Apple Single Sign-On met gebruik van partnerstromen {#apple-sso-cookbook-rest-api-v2-cookbook}
+## Apple Single Sign-On met gebruik van partnerstromen {#cookbook}
 
-### Vereisten {#apple-sso-cookbook-rest-api-v2-prerequisites}
+### Vereisten {#prerequisites}
 
 Voordat u verdergaat met de Apple Single Sign-On met behulp van partnerstromen, moet u ervoor zorgen dat aan de volgende voorwaarden wordt voldaan:
 
@@ -40,7 +41,7 @@ Voordat u verdergaat met de Apple Single Sign-On met behulp van partnerstromen, 
 >
 > * De het stromen toepassing heeft [ op het instappen eerste vereisten ](/help/authentication/single-sign-on/partner-single-sign-on/apple-single-sign-on/apple-sso-overview.md#apple-sso-prerequisites-programmer) voltooid die op een Programmer van toepassing zijn en worden vereist om Apple enige sign-on gebruikerservaring toe te laten.
 
-### Workflow {#apple-sso-cookbook-rest-api-v2-workflow}
+### Workflow {#workflow}
 
 Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend partnerstromen zoals aangetoond in het volgende diagram.
 

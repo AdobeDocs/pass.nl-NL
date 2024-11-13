@@ -1,23 +1,22 @@
 ---
-title: Amazon SSO Cookbook (REST API V1)
-description: Amazon SSO Cookbook (REST API V1)
-exl-id: 4c65eae7-81c1-4926-9202-a36fd13af6ec
+title: Amazon SSO Cookbook (REST API V2)
+description: Amazon SSO Cookbook (REST API V2)
 source-git-commit: e5ef8c0cba636ac4d2bda1abe0e121d0ecc1b795
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '542'
 ht-degree: 0%
 
 ---
 
-# Amazon SSO Cookbook (REST API V1) {#amazon-sso-cookbook-rest-api-v1}
+# Amazon SSO Cookbook (REST API V2) {#amazon-sso-cookbook-rest-api-v2}
 
 >[!IMPORTANT]
 >
 >De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
-De Adobe Pass Authentication REST API V1 biedt ondersteuning voor Platform Single Sign-On (SSO) voor eindgebruikers van clienttoepassingen die op FireOS worden uitgevoerd.
+De Adobe Pass Authentication REST API V2 biedt ondersteuning voor Platform Single Sign-On (SSO) voor eindgebruikers van clienttoepassingen die op FireOS worden uitgevoerd.
 
-Dit document doet dienst als uitbreiding aan het bestaande [ REST API V1 Overzicht ](/help/authentication/rest-api-overview.md) dat een mening op hoog niveau verstrekt.
+Dit document doet dienst als uitbreiding aan het bestaande [ REST API V2 Overzicht ](/help/authentication/rest-api-v2/rest-api-v2-overview.md) dat een mening op hoog niveau en het document verstrekt dat beschrijft hoe te om [ Enige sign-on uit te voeren gebruikend de stromen van de platformidentiteit ](/help/authentication/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-platform-identity-flows.md).
 
 ## Amazon Single Sign-On met identiteitsstromen van platforms {#cookbook}
 
@@ -139,56 +138,31 @@ Zorg ervoor dat de streamingtoepassing de volgende handelingen uitvoert:
 
 ### Workflow {#workflow}
 
-De payload van het Amazon SSO-token (platform identity) moet aanwezig zijn op alle HTTP-aanvragen die worden ingediend tegen de eindpunten van de Adobe Pass-verificatie:
+De payload van het Amazon SSO-token (platform identity) moet aanwezig zijn op alle HTTP-aanvragen die zijn ingediend tegen de eindpunten van de Adobe Pass Authentication REST API V2:
 
 ```
-/adobe-services/*
-/reggie/*
-/api/*
+/api/v2/*
 ```
+
+Adobe Pass Authentication REST API V2 ondersteunt de volgende methoden voor het ontvangen van de SSO token (platform identity) payload die een apparaat-scoped of platform-scoped identifier is:
+
+* Als een header met de naam: `Adobe-Subject-Token`
 
 >[!IMPORTANT]
 > 
-> De streamingtoepassing kan het verzenden van de payload van het Amazon SSO-token (platformidentiteit) tijdens de `/authenticate` -aanroep overslaan, zoals deze werd aangeboden tijdens de `/regcode` -aanroep.
-
-Adobe Pass-verificatie ondersteunt de volgende methoden om de payload van het SSO-token (platformidentiteit) te ontvangen. Dit is een apparaat- of platformscoped-id:
-
-* Als een header met de naam: `Adobe-Subject-Token`
-* Als een queryparameter met de naam: `ast`
-* Als parameter post: `ast`
-
->[!IMPORTANT]
->
-> Als verzonden als vraagparameter, dan kan volledige URL zeer lang worden en verworpen.
->
-> Als verzonden als vraag/post parameter, dan moet het worden omvat wanneer het produceren van de verzoekhandtekening.
+> Voor meer details over `Adobe-Subject-Token` kopbal, verwijs naar [ Adobe-Onderwerp-Symbolische ](/help/authentication/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) documentatie.
 
 #### Voorbeelden
 
 **die als kopbal** verzendt
 
 ```HTTPS
-GET /api/v1/config/{requestorId} HTTP/1.1 
+GET /api/v2/{serviceProvider}/sessions HTTP/1.1 
 Host: sp-preprod.auth.adobe.com
 
 Adobe-Subject-Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJyb2t1IiwiaWF0IjoxNTExMzY4ODAyLCJleHAiOjE1NDI5MDQ4MDIsImF1ZCI6ImFkb2JlIiwic3ViIjoiNWZjYzMwODctYWJmZi00OGU4LWJhZTgtODQzODViZTFkMzQwIiwiZGlkIjoiY2FmZjQ1ZDAtM2NhMy00MDg3LWI2MjMtNjFkZjNhMmNlOWM4In0.JlBFhNhNCJCDXLwBjy5tt3PtPcqbMKEIGZ6sr2NA
 ```
 
-**die als vraagparameter** verzendt
-
-```HTTPS
-GET /api/v1/config/{requestorId}?ast=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJyb2t1IiwiaWF0IjoxNTExMzY4ODAyLCJleHAiOjE1NDI5MDQ4MDIsImF1ZCI6ImFkb2JlIiwic3ViIjoiNWZjYzMwODctYWJmZi00OGU4LWJhZTgtODQzODViZTFkMzQwIiwiZGlkIjoiY2FmZjQ1ZDAtM2NhMy00MDg3LWI2MjMtNjFkZjNhMmNlOWM4In0.JlBFhNhNCJCDXLwBjy5tt3PtPcqbMKEIGZ6sr2NA HTTP/1.1
-Host: sp.auth.adobe.com
-```
-
-**die als postparameter** verzendt
-
-```HTTPS
-POST /api/v1/config/{requestorId}?ast=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJyb2t1IiwiaWF0IjoxNTExMzY4ODAyLCJleHAiOjE1NDI5MDQ4MDIsImF1ZCI6ImFkb2JlIiwic3ViIjoiNWZjYzMwODctYWJmZi00OGU4LWJhZTgtODQzODViZTFkMzQwIiwiZGlkIjoiY2FmZjQ1ZDAtM2NhMy00MDg3LWI2MjMtNjFkZjNhMmNlOWM4In0.Jl\_BFhN\_h\_NCJCDXLwBjy5tt3PtPcqbMKEIGZ6sr2NA HTTP/1.1
-Host: sp.auth.adobe.com 
-Content-Type: multipart/form-data;
-```
-
 >[!IMPORTANT]
 >
-> Als de parameterwaarde `Adobe-Subject-Token` header of `ast` ontbreekt of ongeldig is, worden de aanvragen door Adobe Pass-verificatie verwerkt zonder dat rekening wordt gehouden met Single Sign-On.
+> Als de headerwaarde van `Adobe-Subject-Token` ontbreekt of ongeldig is, zal Adobe Pass Authentication de aanvragen verwerken zonder dat Single Sign-On hiermee rekening wordt gehouden.
