@@ -1,9 +1,10 @@
 ---
 title: Woordenlijst REST API V2
 description: Woordenlijst REST API V2
-source-git-commit: dd3451f8761ce6183e9a11099fb3094abae09466
+exl-id: 8b3bd2de-1ff8-4c57-b18d-27ecdf2b0de2
+source-git-commit: 1370554c66116a357970fb05c046608e261f0ed3
 workflow-type: tm+mt
-source-wordcount: '1872'
+source-wordcount: '1964'
 ht-degree: 0%
 
 ---
@@ -34,6 +35,8 @@ De authentificatiecode is een concept van de Authentificatie van Adobe Pass dat 
 
 De authentificatiecode kan door zowel a [ Primaire (Programmer) Toepassing ](#primary-application) of de Secundaire (Programmer) Toepassing van de a [ worden gebruikt ](#secondary-application) om het [ authentificatie ](#authentication) proces te voltooien, informatie over de [ authentificatiesessie ](#session) terug te winnen, of tot het gebruiker [ profiel ](#profile) toegang te hebben.
 
+Gelijk aan de voormalige term gebruikte registratiecode.
+
 #### Verificatiesessie {#session}
 
 De authentificatiesessie is een concept van de Authentificatie van Adobe Pass dat informatie over het begonnen (of voortgezette) authentificatieproces van de gebruiker van de toepassing van de a [ Programmer ](#programmer) opslaat, en uniek geïdentificeerd door een [ authentificatiecode ](#code).
@@ -45,6 +48,10 @@ De authentificatiesessie kan op de ](#programmer) toepassing van de 0} Programme
 De vergunning is een proces dat een gebruiker toestaat om tot beschermde inhoud ([ middel ](#resource)) van de catalogus van de a [ Programmer ](#programmer) toegang te hebben die op het bezeten [ wordt gebaseerd MVPD ](#mvpd), na het bevestigen van de gebruikersrechten met [ MVPD ](#mvpd).
 
 ### C {#c}
+
+#### Client Credentials {#client-credentials}
+
+De cliëntgeloofsbrieven zijn een reeks unieke waarden die tijdens het [ Dynamische Registratie van de Cliënt (DCR) ](#dcr) proces worden geproduceerd en moeten worden gebruikt om een [ toegangstoken ](#access-token) te verkrijgen.
 
 #### Configuratie {#configuration}
 
@@ -114,6 +121,8 @@ Het media teken is een teken dat door de Authentificatie van Adobe Pass als resu
 
 Het media teken wordt overgegaan tot [ Programmer ](#programmer), die het dan bevestigt om de veiligheid van toegang voor dat [ middel ](#resource) te verzekeren.
 
+Gelijk aan de vroegere termijn gebruikte korte toestemmingstoken.
+
 #### Verificator mediatokens {#media-token-verifier}
 
 De Symbolische Verifier van Media is een bibliotheek die door de Authentificatie van Adobe Pass wordt verdeeld die voor het verifiëren van de authenticiteit van a [ media teken ](#media-token) verantwoordelijk is.
@@ -138,7 +147,15 @@ De partner wordt geïdentificeerd door een unieke waarde (bijvoorbeeld &quot;app
 
 #### Voorafgaande goedkeuring {#preauthorization}
 
-De voorafgaande toestemming is een proces dat een gebruiker toestaat om de lijst van [ middelen ](#resource) van de catalogus van de a [ Programmer ](#programmer) te voorproef tot welke het gerechtigd zou zijn toegang te hebben, na het bevestigen van de gebruikersrechten met [ MVPD ](#mvpd).
+De voorafgaande toestemming is een proces dat een gebruiker toestaat om een ondergroep van [ middelen ](#resource) van de catalogus van de a [ Programmer ](#programmer) voor te vertonen zij zouden gerechtigd zijn om tot toegang te hebben, na het bevestigen van de gebruikersrechten met [ MVPD ](#mvpd).
+
+Gelijk aan [ Preflight ](#preflight).
+
+#### Preflight {#preflight}
+
+Preflight is een proces dat een gebruiker toestaat om een ondergroep van [ middelen ](#resource) van de catalogus van de a [ Programmer ](#programmer) voor te vertonen zij zouden gerechtigd zijn om, na het bevestigen van de gebruikersrechten met [ MVPD ](#mvpd) toegang te hebben.
+
+Synoniem met [ preAuthoring ](#preauthorization).
 
 #### Primaire toepassing (programmeur) {#primary-application}
 
@@ -147,6 +164,8 @@ De primaire toepassing verwijst naar de toepassing van de a [ Programmer ](#prog
 #### Profiel {#profile}
 
 Het profiel is een concept van de Authentificatie van Adobe Pass dat informatie over de datum en einddatum van het de authentificatiebegin van de gebruiker, de [ meta-gegevens van de gebruiker ](#user-metadata) samen met andere gebieden opslaat die op de methode wijzen om de authentificatie (b.v. &quot;regelmatig&quot;, &quot;gedegradeerd&quot;, &quot;tijdelijk&quot;, &quot;enig teken-op&quot;, enz.) te verkrijgen.
+
+Gelijk aan vroegere termijn gebruikte authentificatietoken.
 
 #### Programmeur {#programmer}
 
@@ -270,7 +289,7 @@ De gebruikersagent verwijst naar browser of gelijkaardige component (platform sp
 
 #### Metagegevens gebruiker {#user-metadata}
 
-De metagegevens van de gebruiker verwijzen naar gebruikersspecifieke kenmerken (bijv. postcodes, ouderlijke beoordelingen, gebruikers-id&#39;s enz.) die door [ MVPD ](#mvpd) worden gehandhaafd en door de Authentificatie van Adobe Pass als deel van a [ profiel ](#profile) worden verstrekt.
+De gebruikersmeta-gegevens verwijst naar gebruiker specifieke attributen (b.v., postcodes, ouderlijke classificaties, gebruiker IDs, enz.) die door [ MVPD ](#mvpd) worden gehandhaafd en door de Authentificatie van Adobe Pass als deel van a [ profiel ](#profile) worden verstrekt.
 
 Voor meer informatie, verwijs naar de ](/help/authentication/user-metadata-feature.md) documentatie van Meta-gegevens van de Gebruiker 0}.[
 

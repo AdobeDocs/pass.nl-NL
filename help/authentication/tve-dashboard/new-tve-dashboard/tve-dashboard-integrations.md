@@ -2,7 +2,7 @@
 title: TVE-dashboardintegratie
 description: Wis over de integratie tussen uw kanalen en MVPDs en hoe te om integratie te beheren.
 exl-id: 0add340b-120c-4e82-8e3c-6c190d77cf7e
-source-git-commit: acff285f7db1bdd32d5da3e01a770d9581d3ba75
+source-git-commit: 1370554c66116a357970fb05c046608e261f0ed3
 workflow-type: tm+mt
 source-wordcount: '2093'
 ht-degree: 0%
@@ -328,7 +328,7 @@ Voer de volgende stappen uit om een nieuwe integratie te maken met een nieuwe MV
 Een nieuwe integratie zal slechts na [ overzicht en duw veranderingen ](/help/authentication/tve-dashboard/new-tve-dashboard/tve-dashboard-review-push-changes.md) worden gecreeerd.
 
 
-## Integratie uitschakelen {#disable-integratgion}
+## Integratie uitschakelen {#disable-integration}
 
 Voer de volgende stappen uit om een integratie uit te schakelen:
 
