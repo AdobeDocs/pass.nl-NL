@@ -2,9 +2,9 @@
 title: Apple SSO Cookbook (REST API V2)
 description: Apple SSO Cookbook (REST API V2)
 exl-id: 81476312-9ba4-47a0-a4f7-9a557608cfd6
-source-git-commit: e5ef8c0cba636ac4d2bda1abe0e121d0ecc1b795
+source-git-commit: dbf68d75962e3e34f0c569c409f8c98ae6b9e036
 workflow-type: tm+mt
-source-wordcount: '3410'
+source-wordcount: '3442'
 ht-degree: 0%
 
 ---
@@ -508,7 +508,10 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
    > * Alle _vereiste_ kopballen, als `Authorization`, `AP-Device-Identifier`
    > * Alle _facultatieve_ parameters en kopballen
 
-1. **wijs op de volgende actie:** De het eindpuntreactie van het Logout van Adobe Pass bevat de noodzakelijke gegevens om de het stromen toepassing betreffende de volgende actie te begeleiden.
+1. **wijs op de volgende actie:** De het eindpuntreactie van het Logout van Adobe Pass bevat de noodzakelijke gegevens om de het stromen toepassing betreffende de volgende actie te begeleiden:
+   * Het attribuut `url` ontbreekt aangezien de gebruiker met het partner (systeem) niveau moet in wisselwerking staan om de logout stroom te voltooien.
+   * Het attribuut `actionName` wordt geplaatst aan &quot;partner_logout&quot;.
+   * Het kenmerk `actionType` wordt ingesteld op &quot;partner_interactive&quot;.
 
    >[!IMPORTANT]
    >
