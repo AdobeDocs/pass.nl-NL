@@ -2,7 +2,7 @@
 title: Welkom bij Adobe&reg; Verificatie doorgeven!
 description: Welkom bij Adobe&reg; controle van verificatie doorgeven
 exl-id: a8b01469-3d5f-4a44-9ae8-06a68c29d56d
-source-git-commit: 21b4ad42709351eac1c2089026f84a43deb50f8a
+source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
 workflow-type: tm+mt
 source-wordcount: '331'
 ht-degree: 0%
@@ -26,16 +26,16 @@ Je feedback wordt altijd gewaardeerd!
 ## Populaire Help en veelgestelde vragen {#help-faqs}
 
 | **Aanbevolen Punten** |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <ul><li>[ Enige Sign-On voor iOS ](/help/authentication/single-sign-on/partner-single-sign-on/apple-single-sign-on/apple-sso-overview.md)</li><li>[ Bevorderingscontrole van de Temperatuur ](/help/authentication/promotional-temp-pass.md)</li><li>[ huis-Gebaseerde Authentificatie (HBA) ](/help/authentication/home-based-authn-tve.md)</li><li>[ HBA Infographic ](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/AdobeNewsletterHBA.pdf)</li><li>[ de Gids van de Gebruiker van het Dashboard van Adobe Pass TVE ](/help/authentication/tve-dashboard/new-tve-dashboard/tve-dashboard-overview.md)</li></ul> |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <ul><li>[ Enige Sign-On voor iOS ](/help/authentication/integration-guide-programmers/features-standard/sso-access/partner-sso/apple-sso/apple-sso-overview.md)</li><li>[ Bevorderingscontrole van de Temperatuur ](/help/authentication/integration-guide-programmers/features-premium/temporary-access/promotional-temp-pass.md)</li><li>[ huis-Gebaseerde Authentificatie (HBA) ](/help/authentication/integration-guide-programmers/features-standard/hba-access/home-based-authn-tve.md)</li><li>[ HBA Infographic ](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/AdobeNewsletterHBA.pdf)</li><li>[ de Gids van de Gebruiker van het Dashboard van Adobe Pass TVE ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-overview.md)</li></ul> |
 
 | **voor Programmeurs** | **voor MVPDs** |
-|------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
-| <ul><li>[ Gids van Kickstart van de Programmer ](/help/authentication/programmer-kickstart-guide.md)</li><li>[ Metagegevens van de Gebruiker ](/help/authentication/user-metadata.md)</li></ul> | <ul><li>[ MVPD Kickstart Gids ](/help/authentication/mvpd-kickstart-guide.md)</li><li>[ Authentificatie ](/help/authentication/authn-usecase.md)</li><li>[ Vergunning ](/help/authentication/authz-usecase.md)</li><li>[ Logout ](/help/authentication/usecase-mvpd-logout.md)</li></ul> |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <ul><li>[ Gids van Kickstart van de Programmer ](/help/authentication/kickstart/programmer-kickstart-guide.md)</li><li>[ Metagegevens van de Gebruiker ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/user-metadata.md)</li></ul> | <ul><li>[ MVPD Kickstart Gids ](/help/authentication/kickstart/mvpd-kickstart-guide.md)</li><li>[ Authentificatie ](/help/authentication/integration-guide-mvpds/authn-usecase.md)</li><li>[ Vergunning ](/help/authentication/integration-guide-mvpds/authz-usecase.md)</li><li>[ Logout ](/help/authentication/integration-guide-mvpds/usecase-mvpd-logout.md)</li></ul> |
 | **voor inheemse cliënten van de Toepassing** | **voor iedereen** |
-| <ul><li>[ iOS Technisch Overzicht ](/help/authentication/iostvos-sdk-overview.md)</li><li>[ Android Technisch Overzicht ](/help/authentication/android-sdk-overview.md)</li></ul> | <ul><li>[ Technisch Document ](/help/authentication/technical-paper.md)</li><li>[ Escalation Procedures ](/help/authentication/escalation-procedures.md)</li><li>[ Verklarende woordenlijst ](/help/authentication/glossary.md)</li></ul> |
-| **voor Slimme Apparaten** | |
-| <ul><li>[ Klantloos Technisch Overzicht ](/help/authentication/rest-api-overview.md)</li><li>[ Clientless API ](/help/authentication/rest-api-reference.md)</li></ul> | |
+| <ul><li>[ iOS Technisch Overzicht ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-overview.md)</li><li>[ Android Technisch Overzicht ](/help/authentication/integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-overview.md)</li></ul> | <ul><li>[ Technisch Document ](/help/authentication/kickstart/technical-paper.md)</li><li>[ Escalation Procedures ](/help/authentication/notes-technical/escalation-procedures.md)</li><li>[ Verklarende woordenlijst ](/help/authentication/kickstart/glossary.md)</li></ul> |
+| **voor Slimme Apparaten** |                                                                                                                                                                                                                                                                                                                                                                       |
+| <ul><li>[ Klantloos Technisch Overzicht ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/rest-api-overview.md)</li><li>[ Clientless API ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/rest-api-reference.md)</li></ul> |                                                                                                                                                                                                                                                                                                                                                                       |
 
 >[!IMPORTANT]
 >
@@ -43,7 +43,7 @@ Je feedback wordt altijd gewaardeerd!
 >
 >[ het Emailen van ons steunteam ](mailto:tve-support@adobe.com) is ook de eerste stap voor om het even welk kwestie of inherente rapport.
 >
->Als u a [ SEVERITY 1 LIVE ](/help/authentication/escalation-procedures.md) kwestie hebt en u ons hebt gemaild en 30 minuten zonder een reactie zijn verstreken, dan zie het [ document van de Procedures van de Escalatie ](/help/authentication/escalation-procedures.md) voor telefoonaantallen om te roepen.
+>Als u a [ SEVERITY 1 LIVE ](/help/authentication/notes-technical/escalation-procedures.md) kwestie hebt en u ons hebt gemaild en 30 minuten zonder een reactie zijn verstreken, dan zie het [ document van de Procedures van de Escalatie ](/help/authentication/notes-technical/escalation-procedures.md) voor telefoonaantallen om te roepen.
 >
 
 
