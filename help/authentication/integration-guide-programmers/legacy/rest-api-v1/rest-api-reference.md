@@ -2,9 +2,9 @@
 title: REST API Reference
 description: Referentie van rustapi
 exl-id: 67e4639e-db0b-4400-bb81-e214263e8395
-source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
+source-git-commit: 3e69473bdb9818416e67b03e6c35d24dc3e0f991
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '647'
 ht-degree: 2%
 
 ---
@@ -66,7 +66,7 @@ In de onderstaande tabel staan de beschikbare webservices voor de clientless-aan
 | 10. | [&lt;SP_FQDN>/api/v1/checkauthn ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/check-authentication-token.md) | Geeft aan of het apparaat een niet-verlopen AuthN-token heeft. |                                                                                             | Adobe Pass </br> authentificatie </br> de Dienst | Slim apparaat |
 | 11. | [&lt;SP_FQDN>/api/v1/tokens/authn](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-authentication-token.md) | Retourneert het token AuthN indien gevonden. |                                                                                             | Adobe Pass </br> authentificatie </br> de Dienst | Slim apparaat |
 | 12. | [&lt;SP_FQDN>/api/v1/tokens/authz](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-authorization-token.md) | Retourneert de token AuthZ indien gevonden. |                                                                                             | Adobe Pass </br> authentificatie </br> de Dienst | Slim apparaat |
-| 13. | [&lt;SP_FQDN>/api/v1/tokens/media] (/help/authentication/integration-guide-programmer/rest-apis/rest-api-v1/apis/obtain-short-media-token.md | Retourneert het token voor korte media indien gevonden - gelijk aan /api/v1/mediatoken |                                                                                             | Adobe Pass </br> authentificatie </br> de Dienst | Slim apparaat |
+| 13. | [&lt;SP_FQDN>/api/v1/tokens/media](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/obtain-short-media-token.md) | Retourneert het token voor korte media indien gevonden - gelijk aan /api/v1/mediatoken |                                                                                             | Adobe Pass </br> authentificatie </br> de Dienst | Slim apparaat |
 | 14. | [&lt;SP_FQDN>/api/v1/mediatoken ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/obtain-short-media-token.md) | Verkrijgt de Korte Token van Media |                                                                                             | Adobe Pass </br> authentificatie </br> de Dienst | Slim apparaat |
 | 15. | [&lt;SP_FQDN>/api/v1/preauthorize ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-list-of-preauthorized-resources.md) | Hiermee wordt de lijst met vooraf geautoriseerde bronnen opgehaald |                                                                                             | Adobe Pass </br> authentificatie </br> de Dienst | Slim apparaat |
 | 16. | [ &lt;SP_FQDN>/api/v1/preauthorize/{code} ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-list-of-preauthorized-resources-by-second-screen-web-app.md) | Hiermee wordt de lijst met vooraf gemachtigde bronnen opgehaald |                                                                                             | Adobe Pass </br> authentificatie </br> de Dienst | Aanmeldingswebtoepassing |
