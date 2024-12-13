@@ -2,14 +2,14 @@
 title: Lijst met vooraf gemachtigde bronnen ophalen
 description: Lijst met vooraf gemachtigde bronnen ophalen
 exl-id: 3821378c-bab5-4dc9-abd7-328df4b60cc3
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
 
-# Lijst met vooraf gemachtigde bronnen ophalen {#retrieve-list-of-preauthorized-resources}
+# (Verouderd) Lijst met vooraf gemachtigde bronnen ophalen {#retrieve-list-of-preauthorized-resources}
 
 >[!NOTE]
 >
@@ -50,8 +50,8 @@ Er zijn twee reeksen APIs: één reeks voor de Streaming App of de Dienst van Pr
 | aanvrager | De programmeeraanvragerId waarvoor deze verrichting geldig is. |
 | deviceId | Het apparaat-id bytes. |
 | resourcerelijst | Een tekenreeks die een door komma&#39;s gescheiden lijst met resourceIds bevat die de inhoud identificeert die toegankelijk kan zijn voor een gebruiker en die wordt herkend door MVPD-autorisatieeindpunten. |
-| device_info/</br></br> x-apparaat-Info | Informatie over streaming apparaat.</br></br>**Nota**: Dit KAN device_info als parameter worden overgegaan URL, maar wegens de potentiële grootte van deze parameter en beperkingen op de lengte van een GET URL, ZOU het als x-Apparaat-Info in de kopbal van http moeten worden overgegaan. </br></br> zie de volledige details in [ het overgaan van Apparaat en de Informatie van de Verbinding ](/help/authentication/integration-guide-programmers/passing-client-information-device-connection-and-application.md). |
-| _deviceType_ | Het apparaattype (bijvoorbeeld Roku, PC).</br></br> als deze parameter correct wordt geplaatst, biedt ESM metriek aan die [ uitgesplitst per apparatentype ](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview.md#clientless_device_type) zijn wanneer het gebruiken van Clientless, zodat de verschillende types van analyse kunnen worden uitgevoerd bijvoorbeeld, Roku, AppleTV, en Xbox.</br></br> zie, [ voordelen om clientless apparatentype parameter in pas te gebruiken metriek ](/help/authentication/notes-technical/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**Nota**: `device_info` zal deze parameter vervangen. |
+| device_info/</br></br> x-apparaat-Info | Informatie over streaming apparaat.</br></br>**Nota**: Dit KAN device_info als parameter worden overgegaan URL, maar wegens de potentiële grootte van deze parameter en beperkingen op de lengte van een GET URL, ZOU het als x-Apparaat-Info in de kopbal van http moeten worden overgegaan. </br></br> zie de volledige details in [ het overgaan van Apparaat en de Informatie van de Verbinding ](/help/authentication/integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md). |
+| _deviceType_ | Het apparaattype (bijvoorbeeld Roku, PC).</br></br> als deze parameter correct wordt geplaatst, biedt ESM metriek aan die [ uitgesplitst per apparatentype ](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview.md#clientless_device_type) zijn wanneer het gebruiken van Clientless, zodat de verschillende types van analyse kunnen worden uitgevoerd bijvoorbeeld, Roku, AppleTV, en Xbox.</br></br> zie, [ voordelen om clientless apparatentype parameter in pas te gebruiken metriek ](/help/authentication/integration-guide-programmers/legacy/notes-technical/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**Nota**: `device_info` zal deze parameter vervangen. |
 | _deviceUser_ | De gebruikers-id van het apparaat. |
 | _appId_ | De toepassings-id/-naam. </br></br>**Nota**: device_info vervangt deze parameter. |
 

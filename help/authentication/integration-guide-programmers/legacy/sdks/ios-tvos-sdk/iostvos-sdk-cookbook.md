@@ -2,14 +2,14 @@
 title: iOS/tvOS Cookbook
 description: iOS/tvOS Cookbook
 exl-id: 4743521e-d323-4d1d-ad24-773127cfbe42
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '2402'
+source-wordcount: '2403'
 ht-degree: 0%
 
 ---
 
-# iOS/tvOS SDK Cookbook {#iostvos-sdk-cookbook}
+# (Verouderd) iOS/tvOS SDK Cookbook {#iostvos-sdk-cookbook}
 
 >[!NOTE]
 >
@@ -76,7 +76,7 @@ I. [ Logout Stroom met Apple SSO ](#logout_flow_with_AppleSSO) </br>
       * De geretourneerde status is geslaagd of mislukt. De foutcode beschrijft het type fout.
 
    * [`navigateToUrl(url)`](#$nav2url) </br>
-      * Wordt geactiveerd door [`getAuthentication()`](#$getAuthN) nadat de gebruiker een MVPD selecteert. De parameter `url` geeft de locatie van de aanmeldingspagina van de MVPD.
+      * Wordt geactiveerd door [`getAuthentication()`](#$getAuthN) nadat de gebruiker een MVPD selecteert. De parameter `url` biedt de locatie van de MVPD-aanmeldingspagina.
 
    * `sendTrackingData(event, data)` </br>
       * Wordt geactiveerd door `checkAuthentication()`, [`getAuthentication()`](#$getAuthN), `checkAuthorization()`, [`getAuthorization()`](#$getAuthZ), `setSelectedProvider()` .
@@ -165,9 +165,9 @@ geverifieerd.
 1. De gebruiker de lijst met providers presenteren die is verzonden naar
    [`displayProviderDialog()`](#dispProvDialog).
 
-1. Nadat de gebruiker een provider heeft geselecteerd, verkrijgt u de URL van de MVPD van de gebruiker via de callback `navigateToUrl:` of `navigateToUrl:useSVC:` en opent u een `UIWebView/WKWebView` - of `SFSafariViewController` -controller en stuurt u die controller naar de URL.
+1. Nadat de gebruiker een provider heeft geselecteerd, haalt u de URL van de MVPD van de gebruiker op via de callback `navigateToUrl:` of `navigateToUrl:useSVC:` en opent u een controller `UIWebView/WKWebView` of `SFSafariViewController` en stuurt u die controller naar de URL.
 
-1. Via `UIWebView/WKWebView` of `SFSafariViewController` die in de vorige stap is geïnstantieerd, landt de gebruiker op de aanmeldingspagina van de MVPD en voert deze de aanmeldingsgegevens in. Verscheidene omleidingsverrichtingen vinden binnen het controlemechanisme plaats.</br>
+1. Via de `UIWebView/WKWebView` - of `SFSafariViewController` -code die in de vorige stap is geïnstantieerd, landt de gebruiker op de MVPD-aanmeldingspagina en voert deze de aanmeldingsgegevens in. Verscheidene omleidingsverrichtingen vinden binnen het controlemechanisme plaats.</br>
 
 >[!NOTE]
 >
@@ -177,7 +177,7 @@ geverifieerd.
 
 1. Sluit het UIWebView/WKWebView of SFSafariViewController controlemechanisme en vraag de API methode van AccessEnabler `handleExternalURL:url`, die AccessEnabler opdraagt om het authentificatietoken van de backendserver terug te winnen.
 
-1. (Optioneel) Roep [`checkPreauthorizedResources(resources)`](#$checkPreauth) aan om te controleren welke bronnen de gebruiker mag bekijken. De parameter `resources` is een array met beveiligde bronnen die is gekoppeld aan het verificatietoken van de gebruiker. U kunt onder andere de machtigingsinformatie van de MVPD van de gebruiker gebruiken om de gebruikersinterface te versieren (bijvoorbeeld vergrendelde/ontgrendelde symbolen naast beveiligde inhoud).
+1. (Optioneel) Roep [`checkPreauthorizedResources(resources)`](#$checkPreauth) aan om te controleren welke bronnen de gebruiker mag bekijken. De parameter `resources` is een array met beveiligde bronnen die is gekoppeld aan het verificatietoken van de gebruiker. U kunt onder andere de machtigingsgegevens van de MVPD van de gebruiker gebruiken om de gebruikersinterface te versieren (bijvoorbeeld vergrendelde/ontgrendelde symbolen naast beveiligde inhoud).
 
    * **Trekkers:** [`preauthorizedResources()`](#preauthResources) callback
    * **het punt van de Uitvoering:** na de voltooide Stroom van de Authentificatie
@@ -195,7 +195,7 @@ geverifieerd.
 
 1. [ setAuthenticationStatus () ](#setAuthNStatus) callback zal worden teweeggebracht. Op dit moment moet de gebruiker worden geverifieerd met Apple SSO.
 
-1. [ Facultatieve ] Vraag [`checkPreauthorizedResources(resources)`](#$checkPreauth) om te controleren welke middelen de gebruiker aan mening wordt gemachtigd. De parameter `resources` is een array met beveiligde bronnen die is gekoppeld aan het verificatietoken van de gebruiker. U kunt onder andere de machtigingsinformatie van de MVPD van de gebruiker gebruiken om de gebruikersinterface te versieren (bijvoorbeeld vergrendelde/ontgrendelde symbolen naast beveiligde inhoud).
+1. [ Facultatieve ] Vraag [`checkPreauthorizedResources(resources)`](#$checkPreauth) om te controleren welke middelen de gebruiker aan mening wordt gemachtigd. De parameter `resources` is een array met beveiligde bronnen die is gekoppeld aan het verificatietoken van de gebruiker. U kunt onder andere de machtigingsgegevens van de MVPD van de gebruiker gebruiken om de gebruikersinterface te versieren (bijvoorbeeld vergrendelde/ontgrendelde symbolen naast beveiligde inhoud).
 
    * **Trekkers:** [`preauthorizedResources()`](#preauthResources) callback
    * **het punt van de Uitvoering:** na de voltooide Stroom van de Authentificatie
@@ -213,7 +213,7 @@ geverifieerd.
 1. Nadat de gebruiker een provider selecteert, wordt de callback van [`status()`](#status_callback_implementation) aangeroepen. Er wordt een registratiecode opgegeven en de AccessEnabler-bibliotheek begint de server te pollen voor een geslaagde verificatie op het tweede scherm.
 
 1. Als de opgegeven registratiecode is gebruikt voor verificatie op het tweede scherm, wordt de callback van [`setAuthenticatiosStatus()`](#setAuthNStatus) geactiveerd. Op dit moment moet de gebruiker worden geverifieerd met Apple SSO.
-1. [ Facultatieve ] Vraag [`checkPreauthorizedResources(resources)`](#$checkPreauth) om te controleren welke middelen de gebruiker aan mening wordt gemachtigd. De parameter `resources` is een array met beveiligde bronnen die is gekoppeld aan het verificatietoken van de gebruiker. U kunt onder andere de machtigingsinformatie van de MVPD van de gebruiker gebruiken om de gebruikersinterface te versieren (bijvoorbeeld vergrendelde/ontgrendelde symbolen naast beveiligde inhoud).
+1. [ Facultatieve ] Vraag [`checkPreauthorizedResources(resources)`](#$checkPreauth) om te controleren welke middelen de gebruiker aan mening wordt gemachtigd. De parameter `resources` is een array met beveiligde bronnen die is gekoppeld aan het verificatietoken van de gebruiker. U kunt onder andere de machtigingsgegevens van de MVPD van de gebruiker gebruiken om de gebruikersinterface te versieren (bijvoorbeeld vergrendelde/ontgrendelde symbolen naast beveiligde inhoud).
 
    * **Trekkers:** [`preauthorizedResources()`](#preauthResources) callback
 

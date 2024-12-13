@@ -2,14 +2,14 @@
 title: Verificatie starten
 description: Verificatie starten
 exl-id: 55dddd29-68d6-4aae-8744-307fea285e29
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '292'
 ht-degree: 0%
 
 ---
 
-# Verificatie starten {#initiate-authentication}
+# (Verouderd) Verificatie starten {#initiate-authentication}
 
 >[!NOTE]
 >
@@ -36,13 +36,13 @@ ht-degree: 0%
 
 ## Beschrijving {#description}
 
-Hiermee wordt het verificatieproces gestart door een MVPD-selectiegebeurtenis op de hoogte te stellen. Maakt een record in de Adobe Pass Authentication-database, die wordt afgestemd wanneer een geslaagde reactie van de MVPD wordt ontvangen.
+Hiermee wordt het verificatieproces gestart door een MVPD-selectiegebeurtenis op de hoogte te stellen. Hiermee maakt u een record in de Adobe Pass Authentication-database, die wordt afgestemd wanneer de MVPD een succesvol antwoord heeft ontvangen.
 
 
 
 | Endpoint | Geroepen </br> door | Invoer   </br> Params | HTTP </br> Methode | Antwoord | HTTP-respons </br> |
 | --- | --- | --- | --- | --- | --- |
-| &lt;SP_FQDN>/api/v1/authenticate | Module AuthN | 1. request_id (Verplicht) </br> .  mso_id (Verplicht) </br> .  reg_code (Verplicht) </br> 4.  domain_name (Verplicht) </br> 5.  noflash=true - </br>    (Verplicht, Resterende parameter) </br> 6.  no_iframe=true (Verplicht, Resterende parameter) </br> 7.  extra (Facultatieve) parameters </br> 8.  redirect_url (verplicht) | GET | De Login App van het Web wordt opnieuw gericht aan de MVPD login pagina. | 302 voor volledige omleiding |
+| &lt;SP_FQDN>/api/v1/authenticate | Module AuthN | 1. request_id (Verplicht) </br> .  mso_id (Verplicht) </br> .  reg_code (Verplicht) </br> 4.  domain_name (Verplicht) </br> 5.  noflash=true - </br>    (Verplicht, Resterende parameter) </br> 6.  no_iframe=true (Verplicht, Resterende parameter) </br> 7.  extra (Facultatieve) parameters </br> 8.  redirect_url (verplicht) | GET | De Web-app voor aanmelding wordt omgeleid naar de aanmeldingspagina van MVPD. | 302 voor volledige omleiding |
 
 {style="table-layout:auto"}
 
@@ -93,7 +93,7 @@ Hiermee wordt het verificatieproces gestart door een MVPD-selectiegebeurtenis op
 
 * De waarde van de parameter `domain_name` moet worden ingesteld op een van de domeinnamen die zijn geregistreerd bij Adobe Pass-verificatie. Voor meer details, verwijs naar [ Registratie en Initialisatie ](/help/authentication/kickstart/programmer-overview.md).
 
-* [Gebruik geen &#39;&amp;&#39;reg\_code in /authenticate request (Tech Note)](/help/authentication/notes-technical/clientless-avoid-using-reg-code-in-authenticate-request.md)
+* [Gebruik geen &#39;&amp;&#39;reg\_code in /authenticate request (Tech Note)](/help/authentication/integration-guide-programmers/legacy/notes-technical/clientless-avoid-using-reg-code-in-authenticate-request.md)
 
 * De parameter `redirect_url` moet de laatste zijn.
 

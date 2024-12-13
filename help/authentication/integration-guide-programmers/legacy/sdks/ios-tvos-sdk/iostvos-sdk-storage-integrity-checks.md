@@ -2,14 +2,14 @@
 title: Integriteitscontrole iOS/tvOS-opslag
 description: Integriteitscontrole iOS/tvOS
 exl-id: 5d7cdc46-3e51-4e14-9e30-d7f48bc87506
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '324'
 ht-degree: 0%
 
 ---
 
-# Integriteitscontrole iOS/tvOS {#iostvos-sdk-storage-integrity-checks}
+# (Verouderd) Integriteitscontrole iOS/tvOS {#iostvos-sdk-storage-integrity-checks}
 
 >[!NOTE]
 >
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ## Inleiding {#Intro}
 
-Vanaf versie 3.8.3 van de iOS/tvOS AccessEnabler SDK is de mogelijkheid om controles op de integriteit van de opslag uit te voeren beschikbaar bij de AccessEnabler-initialisatie.
+Vanaf versie 3.8.3 van de iOS/tvOS AccessEnabler SDK is de mogelijkheid om controles van de opslagintegriteit uit te voeren beschikbaar bij de AccessEnabler-initialisatie.
 
 Om dit mechanisme te gebruiken, werd api uitgebreid met een extra initialisatiemethode voor de klasse AccessEnabler.
 
@@ -69,5 +69,5 @@ Het enum IntegrityCheckType wordt aan de cliënttoepassing blootgesteld en heeft
 | Waarde | Uitgevoerde controles | Opslag uitgeschakeld | Beschrijving | Aanbevolen gebruiksgeval |
 |-----------------------|-----------------------------------------------------|-----------------|------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
 | INTEGRITY_CHECK_NONE | Geen | Nooit | Er worden geen integriteitscontroles uitgevoerd bij opslaginitialisatie | Wanneer de SDK-stromen werken zoals verwacht |
-| INTEGRITY_CHECK_ALL | Opslagoperabiliteit <br/> Geldigheid van opgeslagen waarden | Bij controle mislukt | Alle beschikbare integriteitscontroles worden uitgevoerd bij opslaginitialisatie | Wanneer beschadiging van SDK-opslag wordt vermoed. <br/> Als een van de integriteitscontroles mislukt, wordt de gebruiker uitgelogd |
+| INTEGRITY_CHECK_ALL | Opslagoperabiliteit <br/> Geldigheid van opgeslagen waarden | Bij controle mislukt | Alle beschikbare integriteitscontroles worden uitgevoerd bij opslaginitialisatie | Als er een vermoeden van beschadiging van SDK-opslag bestaat. <br/> Als een van de integriteitscontroles mislukt, wordt de gebruiker uitgelogd |
 | INTEGRITY_CHECK_CLEAR | Geen | Altijd | De opslag wordt gewist bij de initialisatie van de opslag | Wanneer de SDK-stromen niet naar verwachting kunnen worden voltooid |

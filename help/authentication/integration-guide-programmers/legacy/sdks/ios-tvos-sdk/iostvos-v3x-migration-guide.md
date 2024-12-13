@@ -2,14 +2,14 @@
 title: Migratiehandleiding voor iOS/tvOS v3.x
 description: Migratiehandleiding voor iOS/tvOS v3.x
 exl-id: 4c43013c-40af-48b7-af26-0bd7f8df2bdb
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '560'
 ht-degree: 0%
 
 ---
 
-# Migratiehandleiding voor iOS/tvOS v3.x {#iostvos-v3x-migration-guide}
+# (Verouderd) Handleiding voor migratie naar iOS/tvOS v3.x {#iostvos-v3x-migration-guide}
 
 >[!NOTE]
 >
@@ -89,7 +89,7 @@ Voeg in de `AppDelegate` de volgende methode toe:
 
 ## De handtekening van de methode setRequestor bijwerken {#update-setreq}
 
-Omdat de nieuwe SDK een nieuw verificatiemechanisme gebruikt, is er geen behoefte aan de parameter signedRequestId of de openbare sleutel en het geheim (voor tvOS). De methode `setRequestor` is vereenvoudigd en heeft alleen de aanvragerID nodig.
+Omdat de nieuwe SDK een nieuw authentificatiemechanisme gebruikt, is er geen behoefte aan de parameter signedRequestId of de openbare sleutel en het geheim (voor tvOS). De methode `setRequestor` is vereenvoudigd en heeft alleen de aanvragerID nodig.
 
 ### iOS
 

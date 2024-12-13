@@ -2,14 +2,14 @@
 title: Technisch overzicht van Amazon FireOS
 description: Technisch overzicht van Amazon FireOS
 exl-id: 939683ee-0dd9-42ab-9fde-8686d2dc0cd0
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '2166'
+source-wordcount: '2167'
 ht-degree: 0%
 
 ---
 
-# Technisch overzicht van Amazon FireOS {#amazon-fireos-technical-overview}
+# (Verouderd) Technisch overzicht van Amazon FireOS {#amazon-fireos-technical-overview}
 
 >[!NOTE]
 >
@@ -46,11 +46,11 @@ Hoewel de volgende native clientworkflow afwijkt van de typische browsergebaseer
 
 1. Uw pagina of speler stelt het authentificatiewerkschema met een vraag [ in werking getAuthentication () ](#getAuthN), die voor een geldig in de cache opgenomen authentificatietoken controleert. Deze methode heeft een optionele parameter `redirectURL` ; als u geen waarde opgeeft voor `redirectURL` , wordt de gebruiker na een geslaagde verificatie geretourneerd naar de URL vanwaar de verificatie is geïnitialiseerd.
 1. AccessEnabler bepaalt de huidige authentificatiestatus. Als de gebruiker momenteel voor authentiek wordt verklaard, roept AccessEnabler uw `setAuthenticationStatus()` callback functie, die een authentificatiestatus overgaat die op succes wijst (Stap 7 hieronder).
-1. Als de gebruiker niet voor authentiek wordt verklaard, gaat AccessEnabler de authentificatiestroom door te bepalen of de laatste authentificatiepoging van de gebruiker met bepaalde MVPD succesvol was. Als een MVPD-id in de cache is opgeslagen EN de markering `canAuthenticate` true is OF als een MVPD is geselecteerd met [`setSelectedProvider()`](#setSelectedProvider) , wordt de gebruiker niet gevraagd het dialoogvenster MVPD-selectie te openen. De authentificatiestroom gaat verder gebruikend de caching waarde van MVPD (namelijk zelfde MVPD die tijdens de laatste succesvolle authentificatie werd gebruikt). Een netwerkvraag wordt gemaakt aan de backendserver, en de gebruiker wordt opnieuw gericht aan de MVPD login pagina (Stap 6 hieronder).
-1. Als er geen MVPD-id in de cache is opgeslagen EN er geen MVPD is geselecteerd met [`setSelectedProvider()`](#setSelectedProvider) OF als de markering `canAuthenticate` is ingesteld op false, wordt de callback [`displayProviderDialog()`](#displayProviderDialog) aangeroepen. Deze callback leidt uw pagina of speler om tot UI te leiden die de gebruiker met een lijst van MVPDs voorstelt om te kiezen van. Er wordt een array met MVPD-objecten geleverd, die de benodigde informatie bevat om de MVPD-kiezer te maken. Elk MVPD-object beschrijft een MVPD-entiteit en bevat informatie zoals de id van de MVPD (bijvoorbeeld XFINITY, AT\&amp;T, enz.) en de URL waar het MVPD-logo kan worden gevonden.
-1. Zodra een bepaalde MVPD wordt geselecteerd, moet uw pagina of speler AccessEnabler op de hoogte brengen van de keus van de gebruiker. Voor niet-Flash cliënten, zodra de gebruiker gewenste MVPD selecteert, informeert u AccessEnabler van de gebruikersselectie via een vraag aan de [`setSelectedProvider()`](#setSelectedProvider) methode. Clients van Flash verzenden in plaats daarvan een gedeelde `MVPDEvent` van het type &quot;`mvpdSelection`&quot;, waarbij de geselecteerde provider wordt doorgegeven.
+1. Als de gebruiker niet voor authentiek wordt verklaard, gaat AccessEnabler de authentificatiestroom door te bepalen of de laatste authentificatiepoging van de gebruiker met bepaalde MVPD succesvol was. Als een MVPD-id in de cache wordt opgeslagen EN de markering `canAuthenticate` true is OF als een MVPD is geselecteerd met [`setSelectedProvider()`](#setSelectedProvider) , wordt de gebruiker niet gevraagd het dialoogvenster voor MVPD-selectie te openen. De verificatiestroom gaat verder met gebruik van de cachewaarde van de MVPD (hetzelfde MVPD dat tijdens de laatste geslaagde verificatie is gebruikt). Er wordt een netwerkaanroep naar de back-endserver gemaakt en de gebruiker wordt omgeleid naar de MVPD-aanmeldingspagina (stap 6 hieronder).
+1. Als er geen MVPD-id in de cache is opgeslagen EN er geen MVPD is geselecteerd met [`setSelectedProvider()`](#setSelectedProvider) OF als de markering `canAuthenticate` is ingesteld op false, wordt de callback [`displayProviderDialog()`](#displayProviderDialog) aangeroepen. Deze callback leidt uw pagina of speler om tot UI te leiden die de gebruiker met een lijst van MVPDs voorstelt om te kiezen van. Er is een array met MVPD-objecten beschikbaar, die de benodigde informatie bevat voor het maken van de MVPD-kiezer. Elk MVPD-object beschrijft een MVPD-entiteit en bevat informatie zoals de id van de MVPD (bijvoorbeeld XFINITY, AT\&amp;T, enzovoort) en de URL waar het MVPD-logo kan worden gevonden.
+1. Wanneer een bepaalde MVPD is geselecteerd, moet uw pagina of speler de AccessEnabler op de hoogte stellen van de keuze van de gebruiker. Voor niet-Flash cliënten, zodra de gebruiker de gewenste MVPD selecteert, informeert u AccessEnabler van de gebruikersselectie via een vraag aan de [`setSelectedProvider()`](#setSelectedProvider) methode. Clients van Flash verzenden in plaats daarvan een gedeelde `MVPDEvent` van het type &quot;`mvpdSelection`&quot;, waarbij de geselecteerde provider wordt doorgegeven.
 1. Voor Amazon-toepassingen wordt de callback van [`navigateToUrl()`](#navigagteToUrl) genegeerd. De bibliotheek van Inschakelen van de Toegang vergemakkelijkt toegang tot een gemeenschappelijke controle WebView om gebruikers voor authentiek te verklaren.
-1. Via `WebView` arriveert de gebruiker op de aanmeldingspagina van de MVPD en voert hij zijn gegevens in. Houd er rekening mee dat tijdens deze overdracht verschillende omleidingsbewerkingen plaatsvinden.
+1. Via `WebView` arriveert de gebruiker op de aanmeldingspagina van MVPD en voert hij zijn gegevens in. Houd er rekening mee dat tijdens deze overdracht verschillende omleidingsbewerkingen plaatsvinden.
 1. Zodra WebView de authentificatie zal voltooien, zal het sluiten en AccessEnabler informeren dat de gebruiker met succes heeft het programma geopend, AccessEnabler wint het daadwerkelijke authentificatietoken van de backendserver terug. AccessEnabler roept [`setAuthenticationStatus()`](#setAuthNStatus) callback met een statuscode van 1 aan, die op succes wijst. Als er een fout optreedt tijdens het uitvoeren van deze stappen, wordt de callback van [`setAuthenticationStatus()`](#setAuthNStatus) geactiveerd met een statuscode 0, samen met een bijbehorende foutcode, die aangeeft dat de gebruiker niet is geverifieerd.
 
 ### Logout-workflow {#logout}
@@ -80,7 +80,7 @@ Bij geslaagde verificatie en autorisatie geeft Adobe Pass Authentication, Authen
 
 #### Verificatietoken
 
-- **AccessEnabler 1.10.1 voor FireOS** is gebaseerd op AccessEnabler voor Android 1.9.1 - Deze SDK introduceert een nieuwe methode van symbolische opslag, toelatend veelvoudige Programmer-MVPD emmers, en daarom, veelvoudige authentificatietokens.
+- **AccessEnabler 1.10.1 voor FireOS** is gebaseerd op AccessEnabler voor Android 1.9.1 - Deze SDK introduceert een nieuwe methode van symbolische opslag, toelatend veelvoudige emmers programmer-MVPD, en daarom, veelvoudige authentificatietokens.
 
 #### Token voor autorisatie
 
@@ -107,10 +107,10 @@ Zodra een bepaald teken in het symbolische geheime voorgeheugen wordt geplaatst,
 De symbolische opslag kan veelvoudige combinaties programmmer-MVPD steunen, die op een op meerdere niveaus genestelde kaartstructuur vertrouwen die veelvoudige authentificatietokens kan houden. Deze nieuwe opslag heeft op geen enkele wijze invloed op de openbare API van AccessEnabler en vereist geen wijzigingen aan de kant van de programmeur. Hier volgt een voorbeeld van deze nieuwere functionaliteit:
 
 1. Open App1 (ontwikkeld door Programmer1).
-1. Verifieer met MVPD1 (die met Programmer1) geïntegreerd is.
+1. Verifieer met MVPD1 (die met Programmer1) wordt geïntegreerd.
 1. Onderbreek of sluit de huidige toepassing en open App2 (ontwikkeld door Programmer2).
-1. Laten wij veronderstellen dat Programmer2 niet met MVPD2 geïntegreerd is; daarom zal de gebruiker NIET in App2 voor authentiek worden verklaard.
-1. Verifieer met MVPD2 (die met Programmer2) in App2 geïntegreerd is.
+1. Laten we aannemen dat Programmer2 niet is geïntegreerd met MVPD2. Daarom wordt de gebruiker NIET geverifieerd in App2.
+1. Verifieer met MVPD2 (die met Programmer2) in App2 wordt geïntegreerd.
 1. De schakelaar terug naar App1; de gebruiker zal nog met Programmer1 voor authentiek worden verklaard.
 
 ### Indeling {#format}

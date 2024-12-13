@@ -2,9 +2,9 @@
 title: Apple SSO - Overzicht
 description: Apple SSO - Overzicht
 exl-id: 7cf47d01-a35a-4c85-b562-e5ebb6945693
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1260'
 ht-degree: 0%
 
 ---
@@ -51,13 +51,13 @@ Om te profiteren van de Single Sign-On (SSO) gebruikerservaring, moet één prog
 
      Verwijs naar [ Apple SSO Cookbook (REST API V2) ](apple-sso-cookbook-rest-api-v2.md) documentatie.
 
-   * De Adobe Pass Authentication REST API V1 biedt ondersteuning voor Single Sign-On (SSO) voor partners.
+   * De oudere Adobe Pass Authentication REST API V1 biedt ondersteuning voor Single Sign-On (SSO) voor partners.
 
-     Verwijs naar [ Apple SSO Cookbook (REST API V1) ](apple-sso-cookbook-rest-api-v1.md) documentatie.
+     Raadpleeg de [ (Verouderd) Apple SSO Cookbook (REST API V1) ](../../../../legacy/sso-access/apple-sso-cookbook-rest-api-v1.md) -documentatie.
 
-   * De Adobe Pass Authentication AccessEnabler iOS/tvOS SDK biedt ondersteuning voor Single Sign-On (SSO) voor partners.
+   * De verouderde Adobe Pass Authentication AccessEnabler iOS/tvOS SDK biedt ondersteuning voor Single Sign-On (SSO) voor partners.
 
-     Verwijs naar [ Apple SSO Cookbook (iOS/tvOS SDK) ](apple-sso-cookbook-iostvos-sdk.md) documentatie.
+     Raadpleeg de [ (Verouderd) Apple SSO Cookbook (iOS/tvOS SDK) ](../../../../legacy/sso-access/apple-sso-cookbook-iostvos-sdk.md) -documentatie.
 
 ### MVPD {#apple-sso-prerequisites-mvpd}
 
@@ -73,7 +73,7 @@ Om te profiteren van de Single Sign-On (SSO) gebruikerservaring, moet één MVPD
 
 ## Veelgestelde vragen {#FAQ}
 
-* Als er iets mis gaat met de Apple SSO-workflow, kan de toepassing die gebruikmaakt van de Adobe Pass Authentication AccessEnabler iOS/tvOS SDK dan terugvallen naar de normale verificatiestroom?
+* Als er iets mis gaat met de Apple SSO-workflow, kan de toepassing die gebruikmaakt van de Adobe Pass Authentication AccessEnabler iOS/tvOS SDK dan terugvallen op de normale verificatiestroom?
 
   Dit is mogelijk maar vereist een configuratieverandering die door het [ Dashboard van Adobe Pass TVE ](https://experience.adobe.com/#/pass/authentication) wordt uitgevoerd om **toe te laten Enige Sign-On** op **** voor de gewenste integratie en het platform (iOS/tvOS). Ben zich ervan bewust dat de cliënttoepassing de configuratieverandering slechts na het roepen van [ setRequestor ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#setReqV3) API zal erkennen.
 
@@ -90,30 +90,30 @@ Om te profiteren van de Single Sign-On (SSO) gebruikerservaring, moet één MVPD
 
 * Wat gebeurt er als een gebruiker zich aanmeldt door naar de sectie *`Settings -> TV Provider`* op iOS/iPadOS of *`Settings -> Accounts -> TV Provider`* op tvOS te gaan met een MVPD die niet is geïntegreerd met de toepassing?
 
-  Wanneer de gebruiker de toepassing start, wordt de gebruiker niet geverifieerd via de Apple SSO-workflow. Daarom zou de toepassing terug naar regelmatige authentificatiestroom moeten vallen en zijn eigen plukker moeten voorstellen MVPD.
+  Wanneer de gebruiker de toepassing start, wordt de gebruiker niet geverifieerd via de Apple SSO-workflow. Daarom moet de toepassing terugvallen op de normale verificatiestroom en een eigen MVPD-kiezer presenteren.
 
 
-* Wat gebeurt als een gebruiker binnen ondertekent door naar *`Settings -> TV Provider`* op iOS/iPadOS of *`Settings -> Accounts -> TV Provider`* op tvOS sectie te gaan gebruikend MVPD die **** geplaatst **** op [ Adobe Pass TVE Dashboard ](https://experience.adobe.com/#/pass/authentication) voor het platform van iOS/tvOS toelaat?
+* Wat gebeurt als een gebruiker binnen ondertekent door naar *`Settings -> TV Provider`* op iOS/iPadOS of *`Settings -> Accounts -> TV Provider`* op tvOS sectie te gaan die een MVPD heeft die **toelaten Enig Teken** geplaatst op **** door [ Adobe Pass TVE Dashboard ](https://experience.adobe.com/#/pass/authentication) voor iOS/tvOS platform heeft?
 
-  Wanneer de gebruiker de toepassing start, wordt de gebruiker niet geverifieerd via de Apple SSO-workflow. Daarom zou de toepassing terug naar regelmatige authentificatiestroom moeten vallen en zijn eigen plukker moeten voorstellen MVPD.
-
-
-* Wat gebeurt er als een gebruiker een MVPD heeft die niet door Apple wordt geregistreerd (wordt niet ondersteund), maar die wel aanwezig is in de Apple-kiezer?
-
-  Wanneer de gebruiker de toepassing start, zal de gebruiker de MVPD alleen selecteren via de Apple SSO-workflow zonder de verificatiestroom te voltooien. Daarom zou de toepassing terug naar regelmatige authentificatiestroom moeten vallen, maar kon reeds geselecteerde MVPD gebruiken.
+  Wanneer de gebruiker de toepassing start, wordt de gebruiker niet geverifieerd via de Apple SSO-workflow. Daarom moet de toepassing terugvallen op de normale verificatiestroom en een eigen MVPD-kiezer presenteren.
 
 
-* Wat gebeurt er als een gebruiker een MVPD heeft die niet wordt geregistreerd (niet wordt gesteund) door Apple?
+* Wat gebeurt er als een gebruiker een MVPD heeft die niet door Apple wordt geregistreerd (niet wordt ondersteund), maar die wel aanwezig is in de Apple-kiezer?
 
-  Wanneer de gebruiker de toepassing start, selecteert de gebruiker de optie Andere tv-providers via de Apple SSO-workflow. Daarom zou de toepassing terug naar regelmatige authentificatiestroom moeten vallen en zijn eigen plukker moeten voorstellen MVPD.
+  Wanneer de gebruiker de toepassing start, zal de gebruiker de MVPD alleen selecteren via de SSO-workflow van Apple zonder de verificatiestroom te voltooien. Daarom moet de toepassing terugvallen op de normale verificatiestroom, maar kan de reeds geselecteerde MVPD worden gebruikt.
 
 
-* Wat gebeurt als een gebruiker MVPD heeft die door het middel van [ het Dashboard van Adobe Pass TVE ](https://experience.adobe.com/#/pass/authentication) wordt gedegradeerd?
+* Wat gebeurt er als een gebruiker een MVPD heeft die niet door Apple wordt geactiveerd (niet wordt ondersteund)?
+
+  Wanneer de gebruiker de toepassing start, selecteert de gebruiker de optie Andere tv-providers via de Apple SSO-workflow. Daarom moet de toepassing terugvallen op de normale verificatiestroom en een eigen MVPD-kiezer presenteren.
+
+
+* Wat gebeurt als een gebruiker een MVPD heeft die door het middel van [ het Dashboard van Adobe Pass TVE ](https://experience.adobe.com/#/pass/authentication) wordt gedegradeerd?
 
   Wanneer de gebruiker de toepassing start, wordt de gebruiker geverifieerd via het afbraakmechanisme en niet via de Apple SSO-workflow. De ervaring zou naadloos voor de gebruiker moeten zijn, terwijl de toepassing door *N010* waarschuwingscode zal worden geïnformeerd voor het geval het Adobe Pass Authentication AccessEnabler iOS/tvOS SDK gebruikt.
 
 
-* Zal de MVPD gebruiker - identiteitskaart veranderen tussen Apple SSO en niet-Apple SSO authentificatiestromen?
+* Zal de MVPD gebruiker - identiteitskaart veranderen tussen de SSO van Apple en niet-Apple SSO authentificatiestromen?
 
   De verwachting is dat de gebruikers-id niet verandert, maar dat deze voor elke geselecteerde provider moet worden geverifieerd.
 

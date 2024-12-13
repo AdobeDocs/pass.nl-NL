@@ -1,15 +1,15 @@
 ---
-title: Overzicht iOS/tvOS SDK
-description: Overzicht iOS/tvOS SDK
+title: iOS/tvOS SDK - Overzicht
+description: iOS/tvOS SDK - Overzicht
 exl-id: b02a6234-d763-46c0-bc69-9cfd65917a19
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '3731'
+source-wordcount: '3732'
 ht-degree: 0%
 
 ---
 
-# Overzicht iOS/tvOS SDK {#iostvos-sdk-overview}
+# (Verouderd) iOS/tvOS SDK - Overzicht {#iostvos-sdk-overview}
 
 >[!NOTE]
 >
@@ -25,7 +25,7 @@ iOS AccessEnabler is een Objectieve C iOS/tvOS-bibliotheek waarmee mobiele apps 
 
 ## iOS- en tvOS-vereisten {#reqs}
 
-Voor huidige technische vereisten met betrekking tot het iOS en tvOS platform en de Authentificatie van Adobe Pass, zie [ de Vereisten van het Platform / van het Apparaat / van het Hulpmiddel ](#ios), en raadpleeg de versienota&#39;s inbegrepen met de download SDK. In de rest van deze pagina ziet u secties waarin wijzigingen worden vermeld die van toepassing zijn op bepaalde SDK-versies en hoger. Hier volgt bijvoorbeeld een legitieme opmerking met betrekking tot de 1.7.5-SDK:
+Voor huidige technische vereisten met betrekking tot het iOS en tvOS platform en de Authentificatie van Adobe Pass, zie [ de Vereisten van het Platform / van het Apparaat / van het Hulpmiddel ](#ios), en raadpleeg de versienota&#39;s inbegrepen met de download van SDK. In de rest van deze pagina ziet u secties die wijzigingen bevatten die van toepassing zijn op bepaalde SDK-versies en hoger. Hier volgt bijvoorbeeld een legitieme opmerking met betrekking tot de 1.7.5-SDK:
 
 ## Native clientworkflows begrijpen {#flows}
 
@@ -61,10 +61,10 @@ Hoewel deze workflow voor native clients verschilt van de typische browsergebase
 
 1. Uw toepassing stelt het authentificatiewerkschema met een vraag in werking aan API van AccessEnabler `getAuthentication() ` methode, die op een geldig in de cache opgenomen authentificatietoken controleert.
 1. Als de gebruiker momenteel voor authentiek wordt verklaard, roept AccessEnabler uw [`setAuthenticationStatus()`](#setAuthNStatus) callback functie, die een authentificatiestatus overgaat die op succes wijst, en die de stroom beëindigt.
-1. Als de gebruiker momenteel niet voor authentiek wordt verklaard, gaat AccessEnabler de authentificatiestroom door te bepalen of de laatste authentificatiepoging van de gebruiker met bepaalde MVPD succesvol was. Als een MVPD-id in de cache is opgeslagen EN de markering `canAuthenticate` true is OF als een MVPD is geselecteerd met [`setSelectedProvider()`](#setSelProv) , wordt de gebruiker niet gevraagd het dialoogvenster MVPD-selectie te openen. De authentificatiestroom gaat verder gebruikend de caching waarde van MVPD (namelijk zelfde MVPD die tijdens de laatste succesvolle authentificatie werd gebruikt). Een netwerkvraag wordt gemaakt aan de backendserver, en de gebruiker wordt opnieuw gericht aan de MVPD login pagina (Stap 6 hieronder).
-1. Als er geen MVPD-id in de cache is opgeslagen EN er geen MVPD is geselecteerd met [`setSelectedProvider()`](#setSelProv) OF als de markering `canAuthenticate` is ingesteld op false, wordt de callback [`displayProviderDialog()`](#dispProvDialog) aangeroepen. Deze callback draagt uw toepassing op om tot UI te leiden die de gebruiker een lijst van MVPDs voorstelt om te kiezen van. Er wordt een array met MVPD-objecten geleverd, die de benodigde informatie bevat om de MVPD-kiezer te maken. Elk MVPD-object beschrijft een MVPD-entiteit en bevat informatie zoals de id van de MVPD (bijvoorbeeld XFINITY, AT\&amp;T, enz.) en de URL waar het MVPD-logo kan worden gevonden.
-1. Zodra een bepaalde MVPD wordt geselecteerd, moet uw toepassing AccessEnabler van de keus van de gebruiker op de hoogte brengen. Zodra de gebruiker gewenste MVPD selecteert, informeert u AccessEnabler van de gebruikersselectie via een vraag aan de [`setSelectedProvider()`](#setSelProv) methode.
-1. IOS AccessEnabler roept de `navigateToUrl:` callback of `navigateToUrl:useSVC:` callback aan om de gebruiker om te leiden naar de MVPD login pagina. Door één van beide teweeg te brengen, vraagt AccessEnabler aan uw toepassing om tot een `UIWebView/WKWebView or SFSafariViewController` controlemechanisme te leiden en URL te laden die in de parameter `url` van callback wordt verstrekt. Dit is URL van het authentificatieeindpunt op de backendserver. Voor tvOS AccessEnabler, wordt [ status () ](#status_callback_implementation) callback geroepen met een `statusDictionary` parameter en de opiniepeiling voor de tweede het schermauthentificatie is onmiddellijk begonnen. `statusDictionary` bevat `registration code` die moet worden gebruikt voor de tweede schermverificatie.
+1. Als de gebruiker momenteel niet voor authentiek wordt verklaard, gaat AccessEnabler de authentificatiestroom door te bepalen of de laatste authentificatiepoging van de gebruiker met bepaalde MVPD succesvol was. Als een MVPD-id in de cache wordt opgeslagen EN de markering `canAuthenticate` true is OF als een MVPD is geselecteerd met [`setSelectedProvider()`](#setSelProv) , wordt de gebruiker niet gevraagd het dialoogvenster voor MVPD-selectie te openen. De verificatiestroom gaat verder met gebruik van de cachewaarde van de MVPD (hetzelfde MVPD dat tijdens de laatste geslaagde verificatie is gebruikt). Er wordt een netwerkaanroep naar de back-endserver gemaakt en de gebruiker wordt omgeleid naar de MVPD-aanmeldingspagina (stap 6 hieronder).
+1. Als er geen MVPD-id in de cache is opgeslagen EN er geen MVPD is geselecteerd met [`setSelectedProvider()`](#setSelProv) OF als de markering `canAuthenticate` is ingesteld op false, wordt de callback [`displayProviderDialog()`](#dispProvDialog) aangeroepen. Deze callback draagt uw toepassing op om tot UI te leiden die de gebruiker een lijst van MVPDs voorstelt om te kiezen van. Er is een array met MVPD-objecten beschikbaar, die de benodigde informatie bevat voor het maken van de MVPD-kiezer. Elk MVPD-object beschrijft een MVPD-entiteit en bevat informatie zoals de id van de MVPD (bijvoorbeeld XFINITY, AT\&amp;T, enzovoort) en de URL waar het MVPD-logo kan worden gevonden.
+1. Zodra een bepaalde MVPD wordt geselecteerd, moet uw toepassing AccessEnabler van de keus van de gebruiker op de hoogte brengen. Zodra de gebruiker de gewenste MVPD selecteert, informeert u AccessEnabler over de gebruikersselectie via een aanroep van de methode [`setSelectedProvider()`](#setSelProv) .
+1. De iOS AccessEnabler roept de `navigateToUrl:` callback of `navigateToUrl:useSVC:` callback aan om de gebruiker om te leiden naar de MVPD-aanmeldingspagina. Door één van beide teweeg te brengen, vraagt AccessEnabler aan uw toepassing om tot een `UIWebView/WKWebView or SFSafariViewController` controlemechanisme te leiden en URL te laden die in de parameter `url` van callback wordt verstrekt. Dit is URL van het authentificatieeindpunt op de backendserver. Voor tvOS AccessEnabler, wordt [ status () ](#status_callback_implementation) callback geroepen met een `statusDictionary` parameter en de opiniepeiling voor de tweede het schermauthentificatie is onmiddellijk begonnen. `statusDictionary` bevat `registration code` die moet worden gebruikt voor de tweede schermverificatie.
 1. In het geval van iOS AccessEnabler, landt de gebruiker op de MVPD login pagina om zijn geloofsbrieven door het middel van uw toepassing `UIWebView/WKWebView or SFSafariViewController ` controlemechanisme in te voeren. Houd er rekening mee dat tijdens deze overdracht verschillende omleidingsbewerkingen plaatsvinden en dat uw toepassing de URL&#39;s moet controleren die door de controller worden geladen tijdens de meervoudige omleidingsbewerkingen.
 1. In het geval van iOS AccessEnabler, wanneer het `UIWebView/WKWebView or SFSafariViewController` controlemechanisme een specifieke douane URL laadt moet uw toepassing het controlemechanisme sluiten en de 1} API methode roepen van AccessEnabler {. `handleExternalURL:url ` Deze specifieke aangepaste URL is in feite ongeldig en is niet bestemd voor de controller om deze daadwerkelijk te laden. Het moet alleen door uw toepassing worden geïnterpreteerd als een signaal dat de verificatiestroom is voltooid en dat het veilig is om de `UIWebView/WKWebView or SFSafariViewController` -controller te sluiten. Als uw toepassing a `SFSafariViewController ` controlemechanisme moet gebruiken wordt de specifieke douane URL bepaald door `application's custom scheme` (b.v.: `adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com`), anders wordt deze specifieke douane URL bepaald door de `ADOBEPASS_REDIRECT_URL` constante (d.w.z. `adobepass://ios.app`).
 1. Zodra uw toepassing het `UIWebView/WKWebView or SFSafariViewController` controlemechanisme sluit en de 1} API methode van AccessEnabler {roept, wint AccessEnabler het authentificatietoken van de backendserver terug en informeert uw toepassing dat de authentificatiestroom volledig is. `handleExternalURL:url ` AccessEnabler roept [`setAuthenticationStatus()`](#setAuthNStatus) callback met een statuscode van 1 aan, die op succes wijst. Als er tijdens de uitvoering van deze stappen een fout optreedt, wordt de callback van [`setAuthenticationStatus()`](#setAuthNStatus) geactiveerd met een statuscode 0 die een verificatiefout en een bijbehorende foutcode aangeeft.
@@ -79,7 +79,7 @@ Hoewel deze workflow voor native clients verschilt van de typische browsergebase
 
 Voor native clients wordt afmelding op dezelfde manier afgehandeld als het hierboven beschreven verificatieproces.
 
-1. Uw toepassing stelt het logout werkschema met een vraag in werking aan API van AccessEnabler `logout() ` methode. De logout is het resultaat van een reeks van HTTP omleidingsverrichtingen toe te schrijven aan het feit dat de gebruiker uit zowel de servers van de Authentificatie van Adobe Pass als van de servers van MVPD moet worden geregistreerd. Omdat deze stroom niet kan worden voltooid met een eenvoudige HTTP-aanvraag die is uitgegeven door de AccessEnabler-bibliotheek, moet een `UIWebView/WKWebView or SFSafariViewController` -controller worden geïnstantieerd om de HTTP-omleidingsbewerkingen te kunnen volgen.
+1. Uw toepassing stelt het logout werkschema met een vraag in werking aan API van AccessEnabler `logout() ` methode. De logout is het resultaat van een reeks HTTP-omleidingsbewerkingen omdat de gebruiker moet worden afgemeld bij zowel de Adobe Pass Authentication-servers als bij de MVPD-servers. Omdat deze stroom niet kan worden voltooid met een eenvoudige HTTP-aanvraag die is uitgegeven door de AccessEnabler-bibliotheek, moet een `UIWebView/WKWebView or SFSafariViewController` -controller worden geïnstantieerd om de HTTP-omleidingsbewerkingen te kunnen volgen.
 
 1. Een patroon gelijkend op de authentificatiestroom wordt gebruikt. De iOS AccessEnabler activeert de callback `navigateToUrl:` of de `navigateToUrl:useSVC:` om een controller `UIWebView/WKWebView or SFSafariViewController` te maken en de URL te laden die in de parameter `url` van de callback wordt opgegeven. Dit is URL van het logout eindpunt op de achtergrondserver. Voor tvOS AccessEnabler wordt noch de callback `navigateToUrl:` , noch de callback `navigateToUrl:useSVC:` aangeroepen.
 
@@ -128,11 +128,11 @@ Bij geslaagde verificatie en autorisatie geeft Adobe Pass Authentication, Authen
 #### Verificatietoken
 
 - **AccessEnabler 1.7:** Deze SDK introduceert een nieuwe methode van symbolische opslag, toelatend veelvoudige emmers programmer-MVPD, en daarom, veelvoudige authentificatietokens. Nu, wordt de zelfde opslaglay-out gebruikt voor zowel het &quot;Authentificatie per Vraag&quot;scenario als voor de normale authentificatiestroom. Het enige verschil tussen beide is in de manier de authentificatie wordt uitgevoerd: &quot;Authentificatie per Aanvrager&quot;bevat een nieuwe verbetering (Passieve Authentificatie) die het voor AccessEnabler mogelijk maakt om backchannel authentificatie uit te voeren, die op het bestaan van een authentificatietoken in de opslag (voor een verschillende Programmer) wordt gebaseerd. De gebruiker hoeft slechts eenmaal te verifiëren en deze sessie wordt gebruikt om verificatietokens te verkrijgen in aanvullende apps. Deze backchannel flow vindt plaats tijdens de [`setRequestor()`](#setReq) oproep en is meestal transparant voor de programmeur. **is er, echter, één belangrijk vereiste hier: De programmeur MOET setRequestor () van de belangrijkste draad UI roepen.**
-- **AccessEnabler 1.6 en ouder:** De manier waarin de authentificatietokens in het voorgeheugen ondergebracht op het apparaat afhangt van &quot;**Authentificatie per Vraagster&quot;** vlag verbonden aan huidige MVPD:
+- **AccessEnabler 1.6 en ouder:** De manier waarin de authentificatietokens in het voorgeheugen ondergebracht op het apparaat van de &quot;**Authentificatie per Vraagster&quot;** vlag verbonden aan huidige MVPD afhangt:
 
 <!-- end list -->
 
-1. Als de eigenschap &quot;Authentificatie per Aanvrager&quot;gehandicapt is, dan zal één enkel authentificatietoken plaatselijk in het globale plakbord worden opgeslagen; dit teken zal tussen alle toepassingen worden gedeeld die met huidige MVPD worden geïntegreerd.
+1. Als de functie &#39;Verificatie per aanvrager&#39; is uitgeschakeld, wordt één verificatietoken lokaal opgeslagen in het algemene plakbord. Dit token wordt gedeeld tussen alle toepassingen die zijn geïntegreerd met de huidige MVPD.
 1. Als de eigenschap &quot;Authentificatie per Aanvrager&quot;wordt toegelaten, dan zal een teken uitdrukkelijk met de Programmer worden geassocieerd die de authentificatiestroom uitvoerde (het teken zal niet in het globale plakbord, maar in een privé dossier worden opgeslagen dat slechts aan de toepassing van die Programmer zichtbaar is). Specifieker, Single Sign-On (SSO) tussen verschillende toepassingen zal worden onbruikbaar gemaakt; de gebruiker zal de authentificatiestroom uitdrukkelijk moeten uitvoeren wanneer het schakelen naar een nieuwe app (op voorwaarde dat Programmer van tweede app met huidige MVPD wordt geïntegreerd en dat geen authentificatietoken voor die Programmer in het lokale geheime voorgeheugen bestaat).
 
 
@@ -194,21 +194,21 @@ Lees deze technische notitie voor meer informatie over het configureren van SSO 
 
 ### Token Storage (AccessEnabler 1.7)
 
-Beginnend met AccessEnabler 1.7, kan de symbolische opslag veelvoudige combinaties programmmer-MVPD steunen, die zich op een op meerdere niveaus genestelde kaartstructuur baseren die veelvoudige authentificatietokens kan houden. Deze nieuwe opslag heeft op geen enkele wijze invloed op de openbare API van AccessEnabler en vereist geen wijzigingen aan de kant van de programmeur. Hier is een voorbeeld dat
+Beginnend met AccessEnabler 1.7, kan de symbolische opslag veelvoudige combinaties programmmer-MVPD steunen, die op een op meerdere niveaus genestelde kaartstructuur vertrouwen die veelvoudige authentificatietokens kan houden. Deze nieuwe opslag heeft op geen enkele wijze invloed op de openbare API van AccessEnabler en vereist geen wijzigingen aan de kant van de programmeur. Hier is een voorbeeld dat
 illustreert deze nieuwe functionaliteit:
 
 1. Open App1 (ontwikkeld door Programmer1).
-1. Verifieer met MVPD1 (die met Programmer1) geïntegreerd is.
+1. Verifieer met MVPD1 (die met Programmer1) wordt geïntegreerd.
 1. Onderbreek of sluit de huidige toepassing en open App2 (ontwikkeld door Programmer2).
-1. Laten wij veronderstellen dat Programmer2 niet met MVPD2 geïntegreerd is; daarom zal de gebruiker NIET in App2 voor authentiek worden verklaard.
-1. Verifieer met MVPD2 (die met Programmer2) in App2 geïntegreerd is.
+1. Laten we aannemen dat Programmer2 niet is geïntegreerd met MVPD2. Daarom wordt de gebruiker NIET geverifieerd in App2.
+1. Verifieer met MVPD2 (die met Programmer2) in App2 wordt geïntegreerd.
 1. De schakelaar terug naar App1; de gebruiker zal nog met Programmer1 voor authentiek worden verklaard.
 
 In oudere versies van AccessEnabler, zou Stap 6 de gebruiker als niet-voor authentiek verklaard teruggeven, omdat de symbolische opslag vroeger slechts één authentificatietoken steunde.
 
 
 
-Als u zich afmeldt bij een programmeur-/MVPD-sessie, wordt de volledige onderliggende opslag gewist, inclusief alle andere programma-/MVPD-verificatietokens op het apparaat. Anderzijds, zal het annuleren van de authentificatiestroom (het aanhalen van [`setSelectedProvider(null)`](#setSelProv)) NIET de onderliggende opslag ontruimen, maar het zal slechts de huidige programmeur/MVPD authentificatiepoging beïnvloeden (door MVPD voor de huidige programmeur te wissen).
+Als u zich afmeldt bij een programmeur-/MVPD-sessie, wordt de volledige onderliggende opslag gewist, inclusief alle andere verificatie-tokens van de programmeur/MVPD op het apparaat. Anderzijds zal het annuleren van de authentificatiestroom (het aanhalen van [`setSelectedProvider(null)`](#setSelProv)) NIET de onderliggende opslag ontruimen, maar het zal slechts de huidige de authentificatiepoging van Programmer/MVPD beïnvloeden (door MVPD voor de huidige Programmer te wissen).
 
 
 

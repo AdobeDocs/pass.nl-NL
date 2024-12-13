@@ -1,15 +1,15 @@
 ---
-title: Overzicht van Android SDK
-description: Overzicht van Android SDK
+title: Android SDK - Overzicht
+description: Android SDK - Overzicht
 exl-id: a1d98325-32a1-4881-8635-9a3c38169422
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '2731'
+source-wordcount: '2732'
 ht-degree: 0%
 
 ---
 
-# Overzicht van Android SDK {#android-sdk-overview}
+# (Verouderd) Android SDK - Overzicht {#android-sdk-overview}
 
 >[!NOTE]
 >
@@ -21,7 +21,7 @@ Android AccessEnabler is een Java Android-bibliotheek waarmee mobiele apps Adobe
 
 ## Android-vereisten {#reqs}
 
-Voor huidige technische vereisten met betrekking tot het platform van Android en de Authentificatie van Adobe Pass, zie [ de Vereisten van het Platform / van het Apparaat / van het Hulpmiddel ](#android), of raadpleeg de versienota&#39;s inbegrepen met de download van SDK van Android.
+Voor huidige technische vereisten met betrekking tot het platform van Android en de Authentificatie van Adobe Pass, zie [ de Vereisten van het Platform / van het Apparaat / van het Hulpmiddel ](#android), of raadpleeg de versienota&#39;s inbegrepen met de download van Android SDK.
 
 ## Native clientworkflows begrijpen {#native_client_workflows}
 
@@ -54,11 +54,11 @@ Hoewel de volgende native clientworkflow afwijkt van de typische browsergebaseer
 
 1. Uw pagina of speler stelt het authentificatiewerkschema met een vraag [ in werking getAuthentication () ](#getAuthN), die voor een geldig in de cache opgenomen authentificatietoken controleert. Deze methode heeft een optionele parameter `redirectURL` ; als u geen waarde opgeeft voor `redirectURL` , wordt de gebruiker na een geslaagde verificatie geretourneerd naar de URL vanwaar de verificatie is geïnitialiseerd.
 1. AccessEnabler bepaalt de huidige authentificatiestatus. Als de gebruiker momenteel voor authentiek wordt verklaard, roept AccessEnabler uw `setAuthenticationStatus()` callback functie, die een authentificatiestatus overgaat die op succes wijst (Stap 7 hieronder).
-1. Als de gebruiker niet voor authentiek wordt verklaard, gaat AccessEnabler de authentificatiestroom door te bepalen of de laatste authentificatiepoging van de gebruiker met bepaalde MVPD succesvol was. Als een MVPD-id in de cache is opgeslagen EN de markering `canAuthenticate` true is OF als een MVPD is geselecteerd met [`setSelectedProvider()`](#setSelectedProvider) , wordt de gebruiker niet gevraagd het dialoogvenster MVPD-selectie te openen. De authentificatiestroom gaat verder gebruikend de caching waarde van MVPD (namelijk zelfde MVPD die tijdens de laatste succesvolle authentificatie werd gebruikt). Een netwerkvraag wordt gemaakt aan de backendserver, en de gebruiker wordt opnieuw gericht aan de MVPD login pagina (Stap 6 hieronder).
-1. Als er geen MVPD-id in de cache is opgeslagen EN er geen MVPD is geselecteerd met [`setSelectedProvider()`](#setSelectedProvider) OF als de markering `canAuthenticate` is ingesteld op false, wordt de callback [`displayProviderDialog()`](#displayProviderDialog) aangeroepen. Deze callback leidt uw pagina of speler om tot UI te leiden die de gebruiker met een lijst van MVPDs voorstelt om te kiezen van. Er wordt een array met MVPD-objecten geleverd, die de benodigde informatie bevat om de MVPD-kiezer te maken. Elk MVPD-object beschrijft een MVPD-entiteit en bevat informatie zoals de id van de MVPD (bijvoorbeeld XFINITY, AT\&amp;T, enz.) en de URL waar het MVPD-logo kan worden gevonden.
-1. Zodra een bepaalde MVPD wordt geselecteerd, moet uw pagina of speler AccessEnabler op de hoogte brengen van de keus van de gebruiker. Voor niet-Flash cliënten, zodra de gebruiker gewenste MVPD selecteert, informeert u AccessEnabler van de gebruikersselectie via een vraag aan de [`setSelectedProvider()`](#setSelectedProvider) methode. Clients van Flash verzenden in plaats daarvan een gedeelde `MVPDEvent` van het type &quot;`mvpdSelection`&quot;, waarbij de geselecteerde provider wordt doorgegeven.
+1. Als de gebruiker niet voor authentiek wordt verklaard, gaat AccessEnabler de authentificatiestroom door te bepalen of de laatste authentificatiepoging van de gebruiker met bepaalde MVPD succesvol was. Als een MVPD-id in de cache wordt opgeslagen EN de markering `canAuthenticate` true is OF als een MVPD is geselecteerd met [`setSelectedProvider()`](#setSelectedProvider) , wordt de gebruiker niet gevraagd het dialoogvenster voor MVPD-selectie te openen. De verificatiestroom gaat verder met gebruik van de cachewaarde van de MVPD (hetzelfde MVPD dat tijdens de laatste geslaagde verificatie is gebruikt). Er wordt een netwerkaanroep naar de back-endserver gemaakt en de gebruiker wordt omgeleid naar de MVPD-aanmeldingspagina (stap 6 hieronder).
+1. Als er geen MVPD-id in de cache is opgeslagen EN er geen MVPD is geselecteerd met [`setSelectedProvider()`](#setSelectedProvider) OF als de markering `canAuthenticate` is ingesteld op false, wordt de callback [`displayProviderDialog()`](#displayProviderDialog) aangeroepen. Deze callback leidt uw pagina of speler om tot UI te leiden die de gebruiker met een lijst van MVPDs voorstelt om te kiezen van. Er is een array met MVPD-objecten beschikbaar, die de benodigde informatie bevat voor het maken van de MVPD-kiezer. Elk MVPD-object beschrijft een MVPD-entiteit en bevat informatie zoals de id van de MVPD (bijvoorbeeld XFINITY, AT\&amp;T, enzovoort) en de URL waar het MVPD-logo kan worden gevonden.
+1. Wanneer een bepaalde MVPD is geselecteerd, moet uw pagina of speler de AccessEnabler op de hoogte stellen van de keuze van de gebruiker. Voor niet-Flash cliënten, zodra de gebruiker de gewenste MVPD selecteert, informeert u AccessEnabler van de gebruikersselectie via een vraag aan de [`setSelectedProvider()`](#setSelectedProvider) methode. Clients van Flash verzenden in plaats daarvan een gedeelde `MVPDEvent` van het type &quot;`mvpdSelection`&quot;, waarbij de geselecteerde provider wordt doorgegeven.
 1. Als com.android.chrome beschikbaar is voor Android-toepassingen, wordt de verificatie-URL geladen in Chrome Custom Tabs.
-1. Via Chrome Custom Tabs arriveert de gebruiker op de aanmeldingspagina van het MVPD en voert hij zijn gegevens in. Houd er rekening mee dat tijdens deze overdracht verschillende omleidingsbewerkingen plaatsvinden.
+1. Via Chrome Custom Tabs arriveert de gebruiker op de aanmeldingspagina van MVPD en voert hij zijn gegevens in. Houd er rekening mee dat tijdens deze overdracht verschillende omleidingsbewerkingen plaatsvinden.
 1. Wanneer Chrome Custom Tabs detecteert dat een URL overeenkomt met het schema (adobepass://) en de diepe koppeling van de resource &quot;redirect\_uri&quot; (i.e. adobepass://com.adobepass), haalt AccessEnabler het daadwerkelijke verificatietoken op van de back-endservers. De uiteindelijke omleidings-URL&#39;s zijn in feite ongeldig en zijn niet bedoeld voor Chrome Custom Tabs om deze daadwerkelijk te laden. Zij moeten slechts door SDK als signaal worden geïnterpreteerd dat de authentificatiestroom heeft voltooid.
 1. AccessEnabler deelt uw toepassing mee dat de authentificatiestroom volledig is. AccessEnabler roept [`setAuthenticationStatus()`](#setAuthNStatus) callback met een statuscode van 1 aan, die op succes wijst. Als er tijdens de uitvoering van deze stappen een fout optreedt, wordt de callback van [`setAuthenticationStatus()`](#setAuthNStatus) geactiveerd met een statuscode 0, samen met een bijbehorende foutcode die verificatiefout aangeeft.
 
@@ -68,7 +68,7 @@ Voor native clients worden aanmeldgegevens op dezelfde manier verwerkt als het h
 
 
 
-**Nota:** Logging uit van één zitting van de Programmer/MVPD zal ontruimen
+**Nota:** het programma openen uit één zitting van de Programmer/van MVPD zal ontruimen
 de onderliggende opslag voor die specifieke MVPD, met inbegrip van alle
 andere door SSO op verkregen programmamachtigingstokens
 dat apparaat. Tokens die voor andere MVPD&#39;s of niet door SSO worden verkregen zullen niet
@@ -113,7 +113,7 @@ Bij geslaagde verificatie en autorisatie geeft Adobe Pass Authentication, Authen
 - **AccessEnabler 1.6 en ouder** - de manier waarin de authentificatietokens in het voorgeheugen ondergebracht op het apparaat afhangt van &quot;**Authentificatie per Vraagster&quot;** vlag verbonden aan huidige MVPD:
 
 
-1. Als de &quot;Authentificatie per de eigenschap&quot;*gehandicapt* is, dan zal één enkel authentificatietoken plaatselijk in het globale plakbord worden opgeslagen. Dit teken zal tussen alle toepassingen worden gedeeld die met huidige MVPD geïntegreerd zijn.
+1. Als de &quot;Authentificatie per de eigenschap&quot;*gehandicapt* is, dan zal één enkel authentificatietoken plaatselijk in het globale plakbord worden opgeslagen. Dit token wordt gedeeld tussen alle toepassingen die zijn geïntegreerd met de huidige MVPD.
 1. Als de &quot;Authentificatie per de eigenschap van de Aanvrager&quot;** wordt toegelaten, dan zal een teken uitdrukkelijk met de Programmer worden geassocieerd die de authentificatiestroom (het teken zal niet in het globale plakbord worden opgeslagen, maar in een privé dossier dat slechts aan de toepassing van die Programmer zichtbaar is). Specifieker, Single Sign-On (SSO) tussen verschillende toepassingen zal worden onbruikbaar gemaakt; de gebruiker zal de authentificatiestroom uitdrukkelijk moeten uitvoeren wanneer het schakelen naar een nieuwe app (op voorwaarde dat Programmer van tweede app met huidige MVPD wordt geïntegreerd en dat geen authentificatietoken voor die Programmer in het lokale geheime voorgeheugen bestaat).
 
    **Nota:** AE 1.6 Google GSON Tech Nota: [ hoe te om de gebiedsdelen van Gson op te lossen ](https://tve.zendesk.com/entries/22902516-Android-AccessEnabler-1-6-How-to-resolve-Gson-dependencies)
@@ -153,19 +153,19 @@ Zodra een bepaald teken in het symbolische geheime voorgeheugen wordt geplaatst,
 
 
 
-Beginnend met AccessEnabler 1.7, kan de symbolische opslag veelvoudige combinaties programmmer-MVPD steunen, die zich op een op meerdere niveaus genestelde kaartstructuur baseren die veelvoudige authentificatietokens kan houden. Deze nieuwe opslag heeft op geen enkele wijze invloed op de openbare API van AccessEnabler en vereist geen wijzigingen aan de kant van de programmeur. Hier volgt een voorbeeld van deze nieuwere functionaliteit:
+Beginnend met AccessEnabler 1.7, kan de symbolische opslag veelvoudige combinaties programmmer-MVPD steunen, die op een op meerdere niveaus genestelde kaartstructuur vertrouwen die veelvoudige authentificatietokens kan houden. Deze nieuwe opslag heeft op geen enkele wijze invloed op de openbare API van AccessEnabler en vereist geen wijzigingen aan de kant van de programmeur. Hier volgt een voorbeeld van deze nieuwere functionaliteit:
 
 1. Open App1 (ontwikkeld door Programmer1).
-1. Verifieer met MVPD1 (die met Programmer1) geïntegreerd is.
+1. Verifieer met MVPD1 (die met Programmer1) wordt geïntegreerd.
 1. Onderbreek of sluit de huidige toepassing en open App2 (ontwikkeld door Programmer2).
-1. Laten wij veronderstellen dat Programmer2 niet met MVPD2 geïntegreerd is; daarom zal de gebruiker NIET in App2 voor authentiek worden verklaard.
-1. Verifieer met MVPD2 (die met Programmer2) in App2 geïntegreerd is.
+1. Laten we aannemen dat Programmer2 niet is geïntegreerd met MVPD2. Daarom wordt de gebruiker NIET geverifieerd in App2.
+1. Verifieer met MVPD2 (die met Programmer2) in App2 wordt geïntegreerd.
 1. De schakelaar terug naar App1; de gebruiker zal nog met Programmer1 voor authentiek worden verklaard.
 
 In oudere versies van AccessEnabler, zou Stap 6 de gebruiker als niet-voor authentiek verklaard teruggeven, omdat de symbolische opslag vroeger slechts één authentificatietoken steunde.
 
 
-**NOTA:** Logging uit van één zitting Programma/MVPD zal de onderliggende opslag, met inbegrip van alle andere de authentificatietokens van de Programmer op het apparaat met SSO ontruimen. Tokens die voor andere MVPD&#39;s of niet via SSO zijn verkregen, worden niet verwijderd. Als de verificatiestroom wordt geannuleerd (door [`setSelectedProvider(null)`](#setSelectedProvider) aan te roepen), wordt de onderliggende opslag NIET gewist, maar wordt alleen de huidige verificatiepoging van programmeur/MVPD beïnvloed (door de MVPD voor de huidige programmeur te wissen).
+**NOTA:** Logging uit van één zitting van de Programmer/van MVPD zal de onderliggende opslag, met inbegrip van alle andere de authentificatietokens van de Programmer op het apparaat met SSO ontruimen. Tokens die voor andere MVPD&#39;s of niet via SSO zijn verkregen, worden niet verwijderd. Als de verificatiestroom wordt geannuleerd (door [`setSelectedProvider(null)`](#setSelectedProvider) aan te roepen), wordt de onderliggende opslag NIET gewist, maar wordt alleen de huidige verificatiepoging van programmeur/MVPD beïnvloed (door de MVPD voor de huidige programmeur te wissen).
 
 
 Een andere opslag-verwante eigenschap die in AccessEnabler 1.7 inbegrepen is maakt het mogelijk om authentificatietokens van oudere opslaggebieden in te voeren. Deze &quot;Symbolische Importer&quot;helpt om verenigbaarheid tussen opeenvolgende versies te bereiken AccessEnabler, die de SSO staat handhaven zelfs wanneer de opslagversie wordt bevorderd.

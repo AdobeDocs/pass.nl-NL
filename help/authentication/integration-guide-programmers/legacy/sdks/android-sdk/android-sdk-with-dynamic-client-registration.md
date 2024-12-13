@@ -2,14 +2,14 @@
 title: Android SDK met Dynamic Client-registratie
 description: Android SDK met Dynamic Client-registratie
 exl-id: 8d0c1507-8e80-40a4-8698-fb795240f618
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1279'
 ht-degree: 0%
 
 ---
 
-# Android SDK met Dynamic Client-registratie {#android-sdk-with-dynamic-client-registration}
+# (Verouderd) Android SDK met Dynamic Client-registratie {#android-sdk-with-dynamic-client-registration}
 
 >[!NOTE]
 >
@@ -17,18 +17,18 @@ ht-degree: 0%
 
 ## Inleiding {#Intro}
 
-Android AccessEnabler SDK voor Android is gewijzigd om verificatie in te schakelen zonder sessiecookies te gebruiken. Aangezien steeds meer browsers de toegang tot cookies beperken, moet een andere methode worden gebruikt om verificatie toe te staan.
+Android AccessEnabler SDK for Android is gewijzigd om verificatie in te schakelen zonder sessiecookies te gebruiken. Aangezien steeds meer browsers de toegang tot cookies beperken, moet een andere methode worden gebruikt om verificatie toe te staan.
 
 Voor Android beperkt het gebruik van aangepaste Chrome-tabbladen de toegang tot cookies van andere toepassingen.
 
->**SDK 3.0.0 van Android** introduceert:
+>**Android SDK 3.0.0** introduceert:
 
 - dynamische clientregistratie vervangt het huidige mechanisme voor toepassingsregistratie op basis van ondertekende id- en sessiecookie-verificatie van aanvrager
 - Aangepaste Chrome-tabbladen voor verificatiestromen
 
 >[!NOTE]
 >
->Voor oudere Android-versies zonder Chrome Custom Tabs gebruikt de WebView-verificatie ongeveer zoals in oudere versies van AccessEnabler SDK.
+>Voor oudere Android-versies zonder Chrome Custom Tabs gebruikt de WebView-verificatie ongeveer zoals in oudere AccessEnabler SDK-versies.
 
 
 ## Dynamische clientregistratie {#DCR}
@@ -38,7 +38,7 @@ Android SDK v3.0+ zal de Dynamische procedure van de Registratie van de Cliënt 
 
 ## Functiedemo {#Demo}
 
-Gelieve te letten op [ dit webinar ](https://my.adobeconnect.com/pzkp8ujrigg1/) dat meer context van de eigenschap geeft en een demo op bevat hoe te om de softwareverklaringen te beheren gebruikend het Dashboard van TVE en hoe te om de geproduceerde degenen te testen gebruikend een duotoepassing die door Adobe als deel van SDK van Android wordt verstrekt.
+Gelieve te letten op [ dit webinar ](https://my.adobeconnect.com/pzkp8ujrigg1/) dat meer context van de eigenschap geeft en een demo op bevat hoe te om de softwareverklaringen te beheren gebruikend het Dashboard van TVE en hoe te om de geproduceerde degenen te testen gebruikend een duotoepassing die door Adobe als deel van Android SDK wordt verstrekt.
 
 ## API-wijzigingen {#API}
 
@@ -73,7 +73,7 @@ De serverreactie bevat een lijst van MVPDs samen met wat configuratieinformatie 
 
 Als de *urls* parameter niet wordt gebruikt, richt de resulterende netwerkvraag de standaarddienstverlener URL: het milieu van de Versie van de Adobe/van de Productie.
 
-Als een waarde voor de *urls* parameter wordt verstrekt, richt de resulterende netwerkvraag alle URLs die in de *wordt verstrekt urls* parameter. Alle configuratieverzoeken worden teweeggebracht gelijktijdig in afzonderlijke draden. De eerste responder krijgt voorrang wanneer het compileren van de lijst van MVPDs. Voor elke MVPD in de lijst, onthoudt Toegangsbeheer URL van de bijbehorende dienstverlener. Alle verdere machtigingsverzoeken worden gericht aan URL verbonden aan de dienstverlener die met doel MVPD tijdens de configuratiefase in paren werd gebracht.
+Als een waarde voor de *urls* parameter wordt verstrekt, richt de resulterende netwerkvraag alle URLs die in de *wordt verstrekt urls* parameter. Alle configuratieverzoeken worden teweeggebracht gelijktijdig in afzonderlijke draden. De eerste responder krijgt voorrang wanneer het compileren van de lijst van MVPDs. Voor elke MVPD in de lijst onthoudt de Access Enabler de URL van de bijbehorende serviceprovider. Alle volgende machtigingsaanvragen worden doorgestuurd naar de URL die is gekoppeld aan de serviceprovider die tijdens de configuratiefase aan de doel-MVPD is gekoppeld.
 
 | API-aanroep: configuratie aanvrager |
 | --- |
@@ -90,7 +90,7 @@ Als een waarde voor de *urls* parameter wordt verstrekt, richt de resulterende n
 **Parameters:**
 
 - *requestID*: Unieke identiteitskaart verbonden aan het Kanaal. Geef de unieke id die door Adobe is toegewezen door aan uw site wanneer u zich voor het eerst hebt geregistreerd bij de Adobe Pass-verificatieservice.
-- *urls*: Facultatieve parameter; door gebrek, wordt de dienstverlener van Adobe gebruikt [ http://sp.auth.adobe.com/ ](http://sp.auth.adobe.com/). Deze serie staat u toe om eindpunten voor authentificatie en vergunningsdiensten te specificeren die door Adobe worden verleend (verschillende instanties zouden voor het zuiveren doeleinden kunnen worden gebruikt). U kunt dit gebruiken om meerdere instanties van Adobe Pass-verificatieproviders op te geven. Wanneer het doen van dit, is de lijst MVPD samengesteld uit de eindpunten van alle dienstverleners. Elke MVPD wordt geassocieerd met de snelste dienstverlener; namelijk de leverancier die eerst antwoordde en die die MVPD steunt.
+- *urls*: Facultatieve parameter; door gebrek, wordt de dienstverlener van Adobe gebruikt [ http://sp.auth.adobe.com/ ](http://sp.auth.adobe.com/). Deze serie staat u toe om eindpunten voor authentificatie en vergunningsdiensten te specificeren die door Adobe worden verleend (verschillende instanties zouden voor het zuiveren doeleinden kunnen worden gebruikt). U kunt dit gebruiken om meerdere instanties van Adobe Pass-verificatieproviders op te geven. Daarbij bestaat de MVPD-lijst uit de eindpunten van alle serviceproviders. Elke MVPD is gekoppeld aan de snelste serviceprovider, dat wil zeggen de provider die eerst heeft gereageerd en die die MVPD ondersteunt.
 
 Vervangen:
 
@@ -119,7 +119,7 @@ Vervangen:
 
 a. Vraag software\_statement en omleiding\_uri aan vanuit Adobe Pass ( TVE-dashboard )
 
-b. Er zijn twee opties om deze waarden door te geven aan de Adobe Pass SDK:
+b. Er zijn twee mogelijkheden om deze waarden door te geven aan Adobe Pass SDK:
 
 In strings.xml voegt u toe:
 
@@ -147,17 +147,17 @@ SDK voert de volgende bewerkingen uit:
 | Foutreacties | | |
 | --- | --- | --- |
 | HTTP 400 (Ongeldige aanvraag) | {&quot;error&quot;: &quot;invalid\_request&quot;} | Het verzoek mist een vereiste parameter, omvat een niet gestaafde parameterwaarde (buiten giftetype), herhaalt een parameter, omvat veelvoudige geloofsbrieven, gebruikt meer dan één mechanisme om de cliënt voor authentiek te verklaren, of anders misvormd is. |
-| HTTP 400 (Ongeldige aanvraag) | {&quot;error&quot;: &quot;invalid\_client&quot;} | Clientverificatie is mislukt omdat de client onbekend was. De SDK MOET zich opnieuw bij de machtigingsserver registreren. |
+| HTTP 400 (Ongeldige aanvraag) | {&quot;error&quot;: &quot;invalid\_client&quot;} | Clientverificatie is mislukt omdat de client onbekend was. De SDK MOET zich opnieuw bij de verificatieserver registreren. |
 | HTTP 400 (Ongeldige aanvraag) | {&quot;error&quot;: &quot;unauthorised\_client&quot;} | De geverifieerde client is niet gemachtigd om dit type autorisatieverlening te gebruiken. |
 
-- in het geval dat een MVPD Passieve Authentificatie vereist, zal een Aangepast Lusje van Chrome openen om passief met dat MVPD uit te voeren en zal sluiten wanneer volledig
+- als een MVPD Passive Authentication vereist, wordt een aangepaste tab van Chrome geopend voor passieve uitvoering met die MVPD en wordt deze gesloten wanneer deze gereed is
 
 b. checkAuthentication()
 
 - true : ga naar Autorisatie
 - false: ga naar Select MVPD
 
-c. getAuthentication : SDK zal **access_token** in vraagparameters omvatten
+c. getAuthentication: SDK zal **access_token** in vraagparameters omvatten
 
 - mvpd onthouden : ga naar setSelectedProvider(mvpd_id)
 - mvpd niet geselecteerd : displayProviderDialog
@@ -177,16 +177,16 @@ media-token
 
 f. afmelden:
 
-- SDK verwijdert een geldig token voor de huidige aanvrager (de verificatie die door andere toepassingen en niet via SSO wordt verkregen, blijft geldig).
+- SDK verwijdert een geldig token voor de huidige aanvrager (de verificatie die door andere toepassingen en niet door SSO wordt verkregen, blijft geldig)
 - SDK opent Chrome Custom Tabs om het mvpd_id-uitlogeindpunt te bereiken. Nadat de aangepaste Chrome-tabbladen zijn voltooid, worden deze gesloten
 - Het URL-schema is ingesteld als &quot;adobepass://logout&quot; om het moment vast te leggen waarop de afmelding is voltooid
 - logout zal sendTrackingData (nieuwe Gebeurtenis (EVENT_LOGOUT, USER_NOT_AUTHENTICATED_ERROR) en callback activeren: setAuthenticationStatus (0, &quot;Logout&quot;)
 
-**Nota:** aangezien elke vraag een **access_token vereist,** de mogelijke hieronder foutencodes worden behandeld in SDK.
+**Nota:** aangezien elke vraag een **access_token vereist,** de mogelijke foutencodes hieronder worden behandeld in SDK.
 
 
 | Foutreacties | | |
 | --- | ---|--- |
-| invalid_request | 400 | Het verzoek is onjuist geformuleerd. SDK zou moeten ophouden uitvoerend vraag aan de server. |
+| invalid_request | 400 | Het verzoek is onjuist geformuleerd. De SDK moet stoppen met het uitvoeren van aanroepen naar de server. |
 | invalid_client | 403 | De client-id mag geen aanvragen meer uitvoeren. De SDK MOET de clientregistratie opnieuw uitvoeren. |
 | access_deny | 401 | De toegangstoken is ongeldig. De sdk MOET om een nieuwe access_token verzoeken. |

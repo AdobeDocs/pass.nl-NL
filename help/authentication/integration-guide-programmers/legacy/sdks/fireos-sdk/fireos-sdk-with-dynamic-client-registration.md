@@ -2,15 +2,15 @@
 title: Amazon FireOS SDK met Dynamic Client-registratie
 description: Amazon FireOS SDK met Dynamic Client-registratie
 exl-id: 27acf3f5-8b7e-4299-b0f0-33dd6782aeda
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1147'
 ht-degree: 0%
 
 ---
 
 
-# Amazon FireOS SDK met Dynamic Client-registratie {#amazon-fireos-sdk-with-dynamic-client-registration}
+# (Verouderd) Amazon FireOS SDK met registratie van dynamische clients {#amazon-fireos-sdk-with-dynamic-client-registration}
 
 >[!NOTE]
 >
@@ -20,9 +20,9 @@ ht-degree: 0%
 
 ## <span id=""></span> Inleiding {#Intro}
 
-FireOS AccessEnabler SDK voor FireTV is gewijzigd om verificatie in te schakelen zonder sessiecookies te gebruiken. Aangezien steeds meer browsers de toegang tot cookies beperken, was een andere methode nodig om verificatie toe te staan.
+FireOS AccessEnabler SDK for FireTV is gewijzigd om verificatie in te schakelen zonder sessiecookies te gebruiken. Aangezien steeds meer browsers de toegang tot cookies beperken, was een andere methode nodig om verificatie toe te staan.
 
-**FireOS SDK 3.0.4** vervangt het huidige mechanisme van de toepassingsregistratie dat op ondertekende identiteitskaart van de aanvrager en de authentificatie van het zittingskoekje met [ het Dynamische Overzicht van de Registratie van de Cliënt ](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) wordt gebaseerd.
+**FireOS SDK 3.0.4** vervangt het huidige mechanisme van de toepassingsregistratie dat op ondertekende identiteitskaart van de aanvrager en de authentificatie van het zittingskoekje met [ Dynamisch Overzicht van de Registratie van de Cliënt ](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) wordt gebaseerd.
 
 
 ## API-wijzigingen {#API}
@@ -46,7 +46,7 @@ FireOS AccessEnabler SDK voor FireTV is gewijzigd om verificatie in te schakelen
 **Nota&#39;s**
 
 - ongeldige softwareStatement zal de toepassing veroorzaken om AccessEnabler niet te initialiseren of toepassing voor de Authentificatie van Adobe Pass en vergunning te registreren
-- de parameter redirectUrl voor FireTV wordt geplaatst door SDK aan adobepass://android.app aangezien de authentificatie door unieke instantie AccessEnabler wordt behandeld.
+- redirectUrl de parameter voor FireTV wordt geplaatst door SDK aan adobepass://android.app aangezien de authentificatie door unieke instantie AccessEnabler wordt behandeld.
 
 ### setRequestor
 
@@ -56,7 +56,7 @@ De serverreactie bevat een lijst van MVPDs samen met wat configuratieinformatie 
 
 Als de *urls* parameter niet wordt gebruikt, richt de resulterende netwerkvraag de standaarddienstverlener URL: het milieu van de Productie van de Versie van de Adobe.
 
-Als een waarde voor de *urls* parameter wordt verstrekt, richt de resulterende netwerkvraag alle URLs die in de *wordt verstrekt urls* parameter. Alle configuratieverzoeken worden teweeggebracht gelijktijdig in afzonderlijke draden. De eerste responder krijgt voorrang wanneer het compileren van de lijst van MVPDs. Voor elke MVPD in de lijst, onthoudt Toegangsbeheer URL van de bijbehorende dienstverlener. Alle verdere machtigingsverzoeken worden gericht aan URL verbonden aan de dienstverlener die met doel MVPD tijdens de configuratiefase in paren werd gebracht.
+Als een waarde voor de *urls* parameter wordt verstrekt, richt de resulterende netwerkvraag alle URLs die in de *wordt verstrekt urls* parameter. Alle configuratieverzoeken worden teweeggebracht gelijktijdig in afzonderlijke draden. De eerste responder krijgt voorrang wanneer het compileren van de lijst van MVPDs. Voor elke MVPD in de lijst onthoudt de Access Enabler de URL van de bijbehorende serviceprovider. Alle volgende machtigingsaanvragen worden doorgestuurd naar de URL die is gekoppeld aan de serviceprovider die tijdens de configuratiefase aan de doel-MVPD is gekoppeld.
 
 | API-aanroep: configuratie aanvrager |
 | --- |
@@ -73,7 +73,7 @@ Als een waarde voor de *urls* parameter wordt verstrekt, richt de resulterende n
 **Parameters:**
 
 - *requestID*: Unieke identiteitskaart verbonden aan het Kanaal. Geef de unieke id die door Adobe aan uw site is toegewezen door wanneer u zich voor het eerst aanmeldt bij de Adobe Pass-verificatieservice.
-- *urls*: Facultatieve parameter; door gebrek, wordt de dienstverlener van Adobe gebruikt (http://sp.auth.adobe.com/). Deze serie staat u toe om eindpunten voor authentificatie en vergunningsdiensten te specificeren die door Adobe worden verleend (verschillende instanties zouden voor het zuiveren doeleinden kunnen worden gebruikt). U kunt dit gebruiken om meerdere instanties van Adobe Pass-verificatieproviders op te geven. Wanneer het doen van dit, is de lijst MVPD samengesteld uit de eindpunten van alle dienstverleners. Elke MVPD wordt geassocieerd met de snelste dienstverlener; namelijk de leverancier die eerst antwoordde en die die MVPD steunt.
+- *urls*: Facultatieve parameter; door gebrek, wordt de dienstverlener van Adobe gebruikt (http://sp.auth.adobe.com/). Deze serie staat u toe om eindpunten voor authentificatie en vergunningsdiensten te specificeren die door Adobe worden verleend (verschillende instanties zouden voor het zuiveren doeleinden kunnen worden gebruikt). U kunt dit gebruiken om meerdere instanties van Adobe Pass-verificatieproviders op te geven. Daarbij bestaat de MVPD-lijst uit de eindpunten van alle serviceproviders. Elke MVPD is gekoppeld aan de snelste serviceprovider, dat wil zeggen de provider die eerst heeft gereageerd en die die MVPD ondersteunt.
 
 Vervangen:
 
@@ -119,8 +119,8 @@ Vervangen:
 
   De SDK voert de volgende bewerkingen uit:
 
-   - registratietoepassing: het gebruiken van **software \_statement**, SDK zal a **cliënt\_id, cliënt\_gehechtheid, client\_id\_issued\_at, omleiding \_uris, subsidie \_types** verkrijgen. Deze informatie wordt opgeslagen in de interne opslag van de toepassing.
-   - verkrijg een **toegang \_token** gebruikend cliënt\_id, cliënt\_gehechtheid en gift \_type= &quot;cliënt\_credentials&quot;. Deze access\_token wordt gebruikt voor elke aanroep van de SDK naar Adobe Pass-servers.
+   - registratietoepassing: het gebruiken van **software \_statement**, zal SDK a **cliënt\_id, cliënt\_gehechtheid, client\_id\_issued\_at, omleiding \_uris, subsidie \_types** verkrijgen. Deze informatie wordt opgeslagen in de interne opslag van de toepassing.
+   - verkrijg een **toegang \_token** gebruikend cliënt\_id, cliënt\_gehechtheid en gift \_type= &quot;cliënt\_credentials&quot;. Deze access\_token wordt gebruikt voor elke oproep die door de SDK aan Adobe Pass-servers wordt gedaan.
 
 | Token-foutreacties: |  |  |
 |--- | --- | --- |
@@ -128,12 +128,12 @@ Vervangen:
 | HTTP 400 (Ongeldige aanvraag) | {&quot;error&quot;: &quot;invalid\_client&quot;} | Clientverificatie is mislukt omdat de client onbekend was. SDK *MOET* opnieuw bij de vergunningsserver registreren. |
 | HTTP 400 (Ongeldige aanvraag) | {&quot;error&quot;: &quot;unauthorised\_client&quot;} | De geverifieerde client is niet gemachtigd om dit type autorisatieverlening te gebruiken. |
 
-- in het geval MVPD Passieve Authentificatie vereist, zal een WebView openen om passief met dat MVPD uit te voeren en zal sluiten wanneer volledig
+- als een MVPD Passieve Authentificatie vereist, zal een WebView openen om passief met die MVPD uit te voeren en zal sluiten wanneer volledig
 
 - b. checkAuthentication()
 
    - *waar* : ga naar Vergunning
-   - *vals* : ga MVPD selecteren
+   - *vals* : ga om MVPD te selecteren
 
 - c. getAuthentication: SDK zal **access_token** in vraagparameters omvatten
 
@@ -154,8 +154,8 @@ Vervangen:
 
 - f. afmelden:
 
-   - SDK verwijdert een geldig token voor de huidige aanvrager (de verificatie die door andere toepassingen en niet via SSO wordt verkregen, blijft geldig).
-   - SDK opent Aangepaste Chrome-tabbladen om het mvpd\_id-logout-eindpunt te bereiken. Nadat de aangepaste Chrome-tabbladen zijn voltooid, worden deze gesloten
+   - SDK verwijdert een geldig token voor de huidige aanvrager (de verificatie die door andere toepassingen en niet door SSO wordt verkregen, blijft geldig)
+   - SDK opent Aangepaste Chrome-tabbladen om het mvpd\_id-uitlogeindpunt te bereiken. Nadat de aangepaste Chrome-tabbladen zijn voltooid, worden deze gesloten
    - Het URL-schema is ingesteld als &quot;adobepass://logout&quot; om het moment vast te leggen waarop de afmelding is voltooid
    - Logout activeert een sendTrackingData(new Event(EVENT\_LOGOUT,USER\_NOT\_AUTHENTICATED\_ERROR) en een callback: setAuthenticationStatus(0,&quot;Logout&quot;)
 
@@ -165,6 +165,6 @@ Vervangen:
 
 | Foutreacties |  |  |
 |--- | --- | --- |
-| invalid_request | 400 | Het verzoek is onjuist geformuleerd. SDK zou moeten ophouden uitvoerend vraag aan de server. |
+| invalid_request | 400 | Het verzoek is onjuist geformuleerd. De SDK moet stoppen met het uitvoeren van aanroepen naar de server. |
 | invalid_client | 403 | De client-id mag geen aanvragen meer uitvoeren. De SDK MOET de clientregistratie opnieuw uitvoeren. |
 | access_deny | 401 | Access_token is not valid. De sdk MOET om een nieuwe access_token verzoeken. |

@@ -2,14 +2,14 @@
 title: Aanmelding en afmelding zonder vernieuwen
 description: Aanmelding en afmelding zonder vernieuwen
 exl-id: 3ce8dfec-279a-4d10-93b4-1fbb18276543
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '1761'
+source-wordcount: '1762'
 ht-degree: 0%
 
 ---
 
-# Aanmelding en afmelding zonder vernieuwen {#tefresh-less-login-and-logout}
+# (Verouderd) Aanmelding en afmelding zonder vernieuwen {#tefresh-less-login-and-logout}
 
 >[!NOTE]
 >
@@ -20,7 +20,7 @@ ht-degree: 0%
 Voor webtoepassingen moet u rekening houden met enkele verschillende mogelijke scenario&#39;s voor het verifiëren en afmelden van gebruikers.  MVPDs vereist dat de gebruikers login op de Web-pagina van MVPD voor authentiek verklaren, met de volgende extra factoren die in spel komen:
 
 - Sommige MVPD&#39;s vereisen een volledige omleiding van uw site naar de aanmeldingspagina
-- Sommige MVPDs vereisen u om een iFrame op uw plaats te openen om de MVPD login pagina te tonen
+- Sommige MVPD&#39;s vereisen dat u een iFrame op uw site opent om de MVPD-aanmeldingspagina weer te geven
 - Sommige browsers verwerken het iFrame-scenario niet goed, dus voor deze browsers is het beter om een popup-venster te gebruiken in plaats van het iFrame
 
 Voorafgaand aan Adobe Pass-verificatie 2.7 zorgden al deze scenario&#39;s voor het verifiëren van een gebruiker voor een volledige pagina van de pagina van de programmeur. Voor 2.7 en volgende versies verbeterde het Adobe Pass-verificatieteam deze stromen, zodat de gebruiker geen pagina hoeft te vernieuwen in uw app tijdens het aanmelden en het afmelden.
@@ -44,10 +44,10 @@ Laten we beginnen met een samenvatting van de oorspronkelijke verificatie- en lo
 
 De het Webcliënten van de Authentificatie van Adobe Pass hebben twee manieren om voor authentiek te verklaren, afhankelijk van de vereisten van MVPDs:
 
-1. **Volledig-pagina Redirect -** Na de gebruiker selecteert een leverancier    (geconfigureerd met doorverwijzing van volledige pagina) van de MVPD-kiezer op het tabblad    De website van de programmeur, `setSelectedProvider(<mvpd>)` wordt aangehaald op AccessEnabler en de gebruiker wordt opnieuw gericht aan de MVPD login pagina. Nadat de gebruiker geldige geloofsbrieven verstrekt wordt hij opnieuw gericht terug naar de website van de Programmer. AccessEnabler wordt geïnitialiseerd en het authentificatietoken wordt teruggewonnen van de Authentificatie van Adobe Pass tijdens `setRequestor`.
-1. **iFrame/Pop - PopVenster -** nadat de gebruiker een leverancier (die met iFrame wordt gevormd) selecteert, `setSelectedProvider(<mvpd>)` wordt aangehaald op AccessEnabler. Deze actie activeert de callback van `createIFrame(width, height)`, waarbij de programmeur op de hoogte wordt gesteld van het maken van een iFrame (of pop-up, afhankelijk van de browser/voorkeuren) met de naam `"mvpdframe"` en de opgegeven afmetingen. Nadat iFrame/popup wordt gecreeerd, laadt AccessEnabler de MVPD login pagina in iFrame/popup. De gebruiker verstrekt geldige geloofsbrieven en iFrame/popup wordt opnieuw gericht aan de Authentificatie van Adobe Pass, die een JS fragment terugkeert dat iFrame/popup sluit en de ouderpagina (de website van de Programmer) opnieuw laadt. Net als bij stroom 1 wordt het verificatietoken opgehaald tijdens `setRequestor` .
+1. **Volledig-pagina Redirect -** Na de gebruiker selecteert een leverancier    (geconfigureerd met volledige paginaomleiding) van de MVPD-kiezer op de    De website van de programmeur, `setSelectedProvider(<mvpd>)` wordt aangehaald op AccessEnabler en de gebruiker wordt opnieuw gericht aan de MVPD login pagina. Nadat de gebruiker geldige geloofsbrieven verstrekt wordt hij opnieuw gericht terug naar de website van de Programmer. AccessEnabler wordt geïnitialiseerd en het authentificatietoken wordt teruggewonnen van de Authentificatie van Adobe Pass tijdens `setRequestor`.
+1. **iFrame/Pop - PopVenster -** nadat de gebruiker een leverancier (die met iFrame wordt gevormd) selecteert, `setSelectedProvider(<mvpd>)` wordt aangehaald op AccessEnabler. Deze actie activeert de callback van `createIFrame(width, height)`, waarbij de programmeur op de hoogte wordt gesteld van het maken van een iFrame (of pop-up, afhankelijk van de browser/voorkeuren) met de naam `"mvpdframe"` en de opgegeven afmetingen. Nadat iFrame/popup wordt gecreeerd, laadt AccessEnabled de MVPD login pagina in iFrame/popup. De gebruiker verstrekt geldige geloofsbrieven en iFrame/popup wordt opnieuw gericht aan de Authentificatie van Adobe Pass, die een JS fragment terugkeert dat iFrame/popup sluit en de ouderpagina (de website van de Programmer) opnieuw laadt. Net als bij stroom 1 wordt het verificatietoken opgehaald tijdens `setRequestor` .
 
-De `displayProviderDialog` callback (teweeggebracht door `getAuthentication`/ `getAuthorization`) keert een lijst van MVPDs en hun aangewezen montages terug. De `iFrameRequired` eigenschap van een MVPD stelt de programmeur in staat te weten of deze flow 1 of flow 2 moet activeren. Merk op dat de programmeur extra actie (het creëren van een iFrame/popup) slechts voor stroom 2 moet ondernemen.
+De `displayProviderDialog` callback (teweeggebracht door `getAuthentication`/ `getAuthorization`) keert een lijst van MVPDs en hun aangewezen montages terug. Met de eigenschap `iFrameRequired` van een MVPD kan de programmeur controleren of flow 1 of flow 2 moet worden geactiveerd. Merk op dat de programmeur extra actie (het creëren van een iFrame/popup) slechts voor stroom 2 moet ondernemen.
 
 **annuleert Authentificatie**
 
@@ -61,7 +61,7 @@ Er is ook de situatie waarin de gebruiker uitdrukkelijk de authentificatiestroom
 
 ## Oorspronkelijke afmeldingsstroom {#orig_logout}
 
-De logout-API van de AccessEnabler wist de lokale status van de bibliotheek en laadt de aanmeldings-URL van de MVPD in het huidige tabblad/venster. Browser navigeert aan het logout eindpunt van MVPD en nadat het proces volledig is, wordt de gebruiker opnieuw gericht terug naar de website van de Programmer. De enige actie die namens de gebruiker wordt vereist is het drukken van de Logout knoop/verbinding en het in werking stellen van de stroom; geen gebruikersinteractie wordt vereist op het logout eindpunt van MVPD.
+De logout-API van de AccessEnabler wist de lokale status van de bibliotheek en laadt de MVPD-aanmeldings-URL in het huidige tabblad/venster. De browser navigeert naar het MVPD logout-eindpunt en nadat het proces is voltooid, wordt de gebruiker teruggeleid naar de website van de programmeur. De enige actie die namens de gebruiker wordt vereist is het drukken van de Logout knoop/verbinding en het in werking stellen van de stroom; geen gebruikersinteractie wordt vereist op het MVPD logout eindpunt.
 
 **Oorspronkelijke Authentificatie/Logout Stroom met Pagina verfrist zich**
 
@@ -92,7 +92,7 @@ Zowel de hierboven beschreven verificatie- (aanmelding) als aanmeldstromen biede
 
 De volgende punten beschrijven de overgang tussen de originele authentificatiestromen en de verbeterde stromen:
 
-1. Het omleiden van de volledige pagina wordt vervangen door een nieuw browser lusje waarin MVPD login wordt uitgevoerd. De programmeur moet een nieuw tabblad met de naam `mvpdwindow` maken (via `window.open` ) wanneer de gebruiker een MVPD selecteert (met `iFrameRequired = false` ). De programmeur voert dan `setSelectedProvider(<mvpd>)` uit, toestaand AccessEnabler om MVPD login URL in het nieuwe lusje te laden. Nadat de gebruiker geldige geloofsbrieven verstrekt, zal de Authentificatie van Adobe Pass het lusje sluiten en een window.postMessage naar de website van de Programmer verzenden die aan AccessEnabler signaleert dat de authentificatiestroom heeft gebeëindigd. De volgende callbacks worden teweeggebracht:
+1. De omleiding van de volledige pagina wordt vervangen door een nieuw browsertabblad waarin de MVPD-aanmelding wordt uitgevoerd. De programmeur moet een nieuw tabblad (via `window.open` ) met de naam `mvpdwindow` maken wanneer de gebruiker een MVPD selecteert (met `iFrameRequired = false` ). De programmeur voert dan `setSelectedProvider(<mvpd>)` uit, toestaand AccessEnabler om MVPD login URL in het nieuwe lusje te laden. Nadat de gebruiker geldige geloofsbrieven verstrekt, zal de Authentificatie van Adobe Pass het lusje sluiten en een window.postMessage naar de website van de Programmer verzenden die aan AccessEnabler signaleert dat de authentificatiestroom heeft gebeëindigd. De volgende callbacks worden teweeggebracht:
 
    - Als de flow is gestart door `getAuthentication` : `setAuthenticationStatus` en `sendTrackingData(AUTHENTICATION_DETECTION...)` , worden geactiveerd om te signaleren dat de verificatie is gelukt of mislukt.
 
@@ -104,7 +104,7 @@ De volgende punten beschrijven de overgang tussen de originele authentificatiest
 
 >[!IMPORTANT]
 > 
->U moet MVPD login iFrame of popup venster als direct kind van de pagina laden die de instantie AccessEnabler bevat. Als het MVPD login iFrame of popup venster twee of meer niveaus onder de pagina die de instantie AccessEnabler bevatten wordt genesteld, kon de stroom hangen. Als u bijvoorbeeld een iFrame had tussen de hoofdpagina en het MVPD iFrame (Pagina =\> iFrame =\> MVPD iFrame), zou de aanmeldingsstroom kunnen mislukken.
+>U moet het MVPD login iFrame of popup venster als direct kind van de pagina laden die de instantie AccessEnabler bevat. Als het MVPD-aanmeldings-iFrame of pop-upvenster twee of meer niveaus onder de pagina met de AccessEnabler-instantie bevat, kan de flow hangen. Als u bijvoorbeeld een iFrame hebt tussen de hoofdpagina en de MVPD iFrame (Pagina =\> iFrame =\> MVPD iFrame), zou de aanmeldstroom kunnen mislukken.
 
 </br>
 
@@ -122,11 +122,11 @@ Dit zijn de stromen voor het annuleren van authentificatie:
 
 ## Verbeterde afmeldingsstroom {#improved_logout}
 
-De nieuwe logout-flow wordt uitgevoerd in een verborgen iFrame, waardoor de volledige paginareeiding wordt verwijderd.  Dit is mogelijk omdat de gebruiker geen specifieke actie op de MVPD logout pagina hoeft te ondernemen.
+De nieuwe logout-flow wordt uitgevoerd in een verborgen iFrame, waardoor de volledige paginareeiding wordt verwijderd.  Dit is mogelijk omdat de gebruiker geen specifieke actie hoeft uit te voeren op de MVPD-aanmeldpagina.
 
 Nadat de logout-flow is voltooid, wordt het iFrame omgeleid naar een aangepast Adobe Pass-verificatieeindpunt. Dit zal een fragment van JS dienen dat `window.postMessage` aan de ouder uitvoert, die AccessEnabler op de hoogte brengt dat logout volledig is. De volgende callbacks worden getriggerd: `setAuthenticationStatus()` en `sendTrackingData(AUTHENTICATION_DETECTION ...)` , die aangeven dat de gebruiker niet langer geverifieerd is.
 
-In de onderstaande illustratie ziet u de flow zonder vernieuwen, waarmee een gebruiker zich kan aanmelden bij de MVPD zonder de mainpage van uw toepassing te vernieuwen:
+In de onderstaande afbeelding ziet u de workflow zonder vernieuwen waarmee een gebruiker zich kan aanmelden bij zijn of haar MVPD zonder de mainpage van uw toepassing te vernieuwen:
 
 **Verbeterde (verfrissen-minder) Authentificatie/Logout Stroom**
 
@@ -156,7 +156,7 @@ Hier zijn de aspecten die de programmeur zich van bewust moet zijn wanneer het u
 
 </br>
 
-Het volgende codevoorbeeld toont aan hoe te om een venster MVPD op de website van een Programmer (zowel voor normale MVPDs als voor TempPass) te behandelen:
+Het volgende codevoorbeeld toont hoe te om een venster van MVPD op de website van een Programmer (zowel voor normale MVPDs als voor TempPass) te behandelen:
 
 ```javascript
     var aeHostname = "https://entitlement.auth.adobe.com";

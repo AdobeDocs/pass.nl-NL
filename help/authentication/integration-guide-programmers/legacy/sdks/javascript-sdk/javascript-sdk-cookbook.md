@@ -2,14 +2,14 @@
 title: JavaScript SDK Cookbook
 description: JavaScript SDK Cookbook
 exl-id: d57f7a4a-ac77-4f3c-8008-0cccf8839f7c
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '934'
+source-wordcount: '935'
 ht-degree: 0%
 
 ---
 
-# JavaScript SDK Cookbook {#javascript-sdk-cookbook}
+# (Verouderd) JavaScript SDK Cookbook {#javascript-sdk-cookbook}
 
 >[!NOTE]
 >
@@ -51,7 +51,7 @@ Maak uw callback-functies:
 
 - `displayProviderDialog(mvpds)`
 
-  **Trekker:** `getAuthentication(),` slechts als de gebruiker geen leverancier (MVPD) heeft geselecteerd, en nog niet voor authentiek verklaard
+  **Trekker:** `getAuthentication(),` slechts als de gebruiker geen leverancier (een MVPD) heeft geselecteerd, en nog niet voor authentiek verklaard
 De parameter mvpds is een array van providers die beschikbaar zijn voor de gebruiker.
 
 - `setAuthenticationStatus(status, errorcode)`
@@ -182,7 +182,7 @@ AccessEnabler-bibliotheek)
 
 ## De bezoeker-id configureren {#visitorID}
 
-Het vormen a ](https://experienceleague.adobe.com/docs/id-service/using/home.html) waarde van bezoekerID van het Experience Cloud 0} {is zeer belangrijk van het analytische standpunt. [ Zodra een EC bezoekerID-waarde is ingesteld, zal de SDK deze informatie samen met elke netwerkaanroep verzenden en zal de Adobe Pass Authentication-service deze informatie verzamelen. Op deze manier kunt u de analysegegevens van de Adobe Pass Authentication-service correleren met andere analytische rapporten die u van andere toepassingen of websites hebt. De informatie over hoe te opstelling EC bezoekorID kan worden gevonden [ hier ](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=en).
+Het vormen a ](https://experienceleague.adobe.com/docs/id-service/using/home.html) waarde van bezoekerID van het Experience Cloud 0} {is zeer belangrijk van het analytische standpunt. [ Zodra een EC bezoekerID-waarde is ingesteld, zal de SDK deze informatie samen met elk netwerkgesprek verzenden en zal de Adobe Pass Authentication-service deze informatie verzamelen. Op deze manier kunt u de analysegegevens van de Adobe Pass Authentication-service correleren met andere analytische rapporten die u van andere toepassingen of websites hebt. De informatie over hoe te opstelling EC bezoekorID kan worden gevonden [ hier ](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=en).
 
 
 >[!NOTE]

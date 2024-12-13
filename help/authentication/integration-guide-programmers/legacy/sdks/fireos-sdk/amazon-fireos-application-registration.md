@@ -2,14 +2,14 @@
 title: Amazon FireOS-toepassingsregistratie
 description: Amazon FireOS-toepassingsregistratie
 exl-id: 650fd4a2-dfc3-4c74-9b5b-6bea832a28ca
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
 
-# Amazon FireOS-toepassingsregistratie {#amazon-fireos-application-registration}
+# (Verouderd) Amazon FireOS-toepassingsregistratie {#amazon-fireos-application-registration}
 
 >[!NOTE]
 >
@@ -25,7 +25,7 @@ Meer informatie, zie [ Dynamisch het Overzicht van de Registratie van de Cliënt
 
 ## Wat is een Software Statement? {#what}
 
-Een verklaring van de Software is een teken JWT dat informatie over uw toepassing bevat. Elke toepassing zou een unieke Verklaring van de Software moeten hebben die door onze servers wordt gebruikt om de toepassing in het systeem van de Adobe te identificeren. De verklaring van de Software moet worden overgegaan wanneer u AccessEnabler SDK initialiseert en het zal worden gebruikt om de toepassing met Adobe te registreren. Na registratie ontvangt de SDK een client-id en een clientgeheim die worden gebruikt om een toegangstoken te verkrijgen. Om het even welke vraag die SDK aan onze servers maakt zal een geldig toegangstoken vereisen. De SDK is verantwoordelijk voor het registreren van de toepassing, het verkrijgen en vernieuwen van het toegangstoken.
+Een verklaring van de Software is een teken JWT dat informatie over uw toepassing bevat. Elke toepassing zou een unieke Verklaring van de Software moeten hebben die door onze servers wordt gebruikt om de toepassing in het systeem van de Adobe te identificeren. De verklaring van de Software moet worden overgegaan wanneer u AccessEnabler SDK initialiseert en het zal worden gebruikt om de toepassing met Adobe te registreren. Na registratie ontvangt de SDK een client-id en een clientgeheim die worden gebruikt om een toegangstoken te verkrijgen. Om het even welke vraag die de SDK aan onze servers maakt zal een geldig toegangstoken vereisen. De SDK is verantwoordelijk voor het registreren van de toepassing, het verkrijgen en vernieuwen van het toegangstoken.
 
 **Nota:** de Verklaringen van de Software zijn app-specifiek en een individuele Verklaring van de Software kan niet voor meer dan één toepassing worden gebruikt. Dit geldt ook voor toepassingen die toegang bieden tot meerdere kanalen.
 

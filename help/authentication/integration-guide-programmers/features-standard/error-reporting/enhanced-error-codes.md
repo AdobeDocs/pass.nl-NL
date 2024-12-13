@@ -2,9 +2,9 @@
 title: Verbeterde foutcodes
 description: Verbeterde foutcodes
 exl-id: 2b0a9095-206b-4dc7-ab9e-e34abf4d359c
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '2606'
+source-wordcount: '2610'
 ht-degree: 2%
 
 ---
@@ -18,12 +18,12 @@ ht-degree: 2%
 Enhanced Error Codes vertegenwoordigen een Adobe Pass-verificatiefunctie die aanvullende foutinformatie biedt voor clienttoepassingen die zijn geïntegreerd met:
 
 * Adobe Pass-verificatie REST-API&#39;s:
-   * [REST API v1](../../legacy/rest-api-v1/apis/rest-api-overview.md)
    * [REST API v2](../../rest-apis/rest-api-v2/apis/rest-api-v2-apis-overview.md)
+   * [(Verouderd) REST API v1](../../legacy/rest-api-v1/rest-api-overview.md)
 * Adobe Pass-verificatie-SDK&#39;s autoriseren-API:
-   * [JavaScript SDK (API voor voorafgaande autorisatie)](../../legacy/sdks/javascript-sdk/preauthorize-api-javascript-sdk.md)
-   * [iOS/tvOS SDK (API vooraf autoriseren)](../../legacy/sdks/ios-tvos-sdk/preauthorize-api-ios-tvos-sdk.md)
-   * [Android SDK (API voor voorafgaande autorisatie)](../../legacy/sdks/android-sdk/preauthorize-api-android-sdk.md)
+   * [(Verouderd) JavaScript SDK (voorheen-API)](../../legacy/sdks/javascript-sdk/preauthorize-api-javascript-sdk.md)
+   * [(Verouderd) iOS/tvOS SDK (API voor voorafgaande autorisatie)](../../legacy/sdks/ios-tvos-sdk/preauthorize-api-ios-tvos-sdk.md)
+   * [(Verouderd) Android SDK (voorheen-API)](../../legacy/sdks/android-sdk/preauthorize-api-android-sdk.md)
 
   _(*) Vooraf autoriseren API is de enige Adobe Pass Authentication SDK API die ondersteuning biedt voor Enhanced Error Codes._
 
@@ -256,42 +256,6 @@ De mogelijke waarden voor het &quot;code&quot;gebied worden samengevoegd [ hiero
 
 ## Lijsten {#enhanced-error-codes-lists}
 
-### REST API v1 {#enhanced-error-codes-lists-rest-api-v1}
-
-In de onderstaande tabel worden mogelijke Enhanced Error Codes weergegeven die een clienttoepassing kan tegenkomen bij integratie met Adobe Pass Authentication REST API v1.
-
-| Handeling | Code | Status | Bericht |
-|--------------------|---------------------------------------------------|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **niets** | *invalid_requestor* | 400 | De parameter requestor ontbreekt of is ongeldig. |
-|                    | *invalid_device_info* | 400 | De apparaatinformatie ontbreekt of is ongeldig. |
-|                    | *invalid_device_id* | 400 | De apparaat-id ontbreekt of is ongeldig. |
-|                    | *missing_resource* | 400 412 | De parameter resource ontbreekt. |
-|                    | *misformed_authz_request* | 400 412 | Autorisatieaanvraag is null of ongeldig. |
-|                    | *preauthentication_deny_by_mvpd* | 403 | MVPD heeft een &quot;Weigeren&quot;besluit teruggegeven toen het verzoeken van pre-vergunning voor de gespecificeerde middel. |
-|                    | *authentication_deny_by_mvpd* | 403 | MVPD heeft een &quot;Weigeren&quot;besluit teruggegeven toen het verzoeken van vergunning voor de gespecificeerde middel. |
-|                    | *authentication_deny_by_parental_controls* | 403 | MVPD heeft een &quot;Weigeren&quot;besluit wegens ouderlijke controlemontages voor het gespecificeerde middel teruggegeven. |
-|                    | *internal_error* | 400 405 500 | De aanvraag is mislukt vanwege een interne serverfout. |
-| **configuratie** | *unknown_integration* | 400 412 | De integratie tussen de opgegeven programmeur en identiteitsprovider bestaat niet. Gebruik het TVE-dashboard om de vereiste integratie te maken. |
-|                    | *too_many_resources* | 403 | De autorisatie- of voorafgaande autorisatieaanvraag is mislukt omdat er te veel bronnen zijn gevraagd. Neem contact op met het ondersteuningsteam om de beperkingen voor autorisatie en autorisatie correct te configureren. |
-| **authentificatie** | *authentication_session_publisher_mismatch* | 400 | De autorisatieaanvraag is mislukt omdat de aangegeven MVPD voor de autorisatiestroom anders is dan die welke de authenticatiesessie heeft afgegeven. De gebruiker moet met gewenste MVPD opnieuw voor authentiek verklaren om verder te gaan. |
-|                    | *authentication_deny_by_hba_policies* | 403 | MVPD heeft een &quot;Weigeren&quot;besluit op huis-gebaseerd authentificatiebeleid teruggegeven. De huidige authentificatie werd verkregen gebruikend een op huis-gebaseerde authentificatiestroom (HBA) maar het apparaat is niet meer thuis wanneer het verzoeken van om toestemming voor het gespecificeerde middel. De gebruiker moet opnieuw met gesteund MVPD voor verdere verificatie verifiëren. |
-|                    | *authentication_deny_by_session_invalidate* | 403 | De verificatiesessie is ongeldig gemaakt door de identiteitsprovider. De gebruiker moet opnieuw met gesteund MVPD voor verdere verificatie verifiëren. |
-|                    | *identity_not_recognized_by_mvpd* | 403 | Het verzoek om toestemming is mislukt omdat de identiteit van de gebruiker niet door het MVPD is erkend. |
-|                    | *authentication_session_invalidate* | 403 | De verificatiesessie is ongeldig gemaakt door de identiteitsprovider. De gebruiker moet opnieuw met gesteund MVPD voor verdere verificatie verifiëren. |
-|                    | *authentication_session_missing* | 403 412 | De verificatiesessie die aan deze aanvraag is gekoppeld, kan niet worden opgehaald. De gebruiker moet opnieuw met gesteund MVPD voor verdere verificatie verifiëren. |
-|                    | *authentication_session_expired* | 403 412 | De huidige verificatiesessie is verlopen. De gebruiker moet opnieuw met gesteund MVPD voor verdere verificatie verifiëren. |
-|                    | *preauthentication_authentication_session_missing* | 412 | De verificatiesessie die aan deze aanvraag is gekoppeld, kan niet worden opgehaald. De gebruiker moet opnieuw met gesteund MVPD voor verdere verificatie verifiëren. |
-|                    | *preauthentication_authentication_session_expired* | 412 | De huidige verificatiesessie is verlopen. De gebruiker moet opnieuw met gesteund MVPD voor verdere verificatie verifiëren. |
-| **vergunning** | *authentication_not_found* | 403 404 | Er is geen autorisatie gevonden voor de opgegeven resource. De gebruiker moet een nieuwe vergunning verkrijgen om verder te gaan. |
-|                    | *authentication_expired* | 410 | De vorige autorisatie voor de opgegeven resource is verlopen. De gebruiker moet een nieuwe vergunning verkrijgen om verder te gaan. |
-| **opnieuw proberen** | *network_receive_error* | 403 | Er was een gelezen fout terwijl het terugwinnen van de reactie van de bijbehorende partnerdienst. Het opnieuw proberen van het verzoek zou de kwestie kunnen oplossen. |
-|                    | *network_connection_timeout* | 403 | Er was een verbindingsonderbreking met de bijbehorende partnerdienst. Het opnieuw proberen van het verzoek zou de kwestie kunnen oplossen. |
-|                    | *maximum_executing_time_overtroffen* | 403 | De aanvraag is niet binnen de maximaal toegestane tijd voltooid. Het opnieuw proberen van het verzoek zou de kwestie kunnen oplossen. |
-
-### API voor voorafgaande autorisatie van SDK&#39;s {#enhanced-error-codes-lists-sdks-preauthorize-api}
-
-Verwijs naar de vorige [ sectie ](#enhanced-error-codes-list-rest-api-v1) voor mogelijke Verbeterde Codes van de Fout een cliënttoepassing zou kunnen ontmoeten wanneer geïntegreerd met de Authentificatie SDKs van Adobe Pass preauthorize API.
-
 ### REST API v2 {#enhanced-error-codes-lists-rest-api-v2}
 
 In de onderstaande tabel worden mogelijke Enhanced Error Codes weergegeven die een clienttoepassing kan tegenkomen bij integratie met Adobe Pass Authentication REST API v2.
@@ -316,9 +280,9 @@ In de onderstaande tabel worden mogelijke Enhanced Error Codes weergegeven die e
 |                              | *invalid_header_pfs_provider_info_expired* | 400 | De leveranciersinformatie van de de statuskopbal van het partnerkader is verlopen. |
 |                              | *invalid_integration* | 400 | De integratie tussen de opgegeven serviceprovider en mvpd bestaat niet of is uitgeschakeld. |
 |                              | *invalid_authentication_session* | 400 | De verificatiesessie die aan dit verzoek is gekoppeld, ontbreekt of is ongeldig. |
-|                              | *preauthentication_deny_by_mvpd* | 403 | MVPD heeft een &quot;Weigeren&quot;besluit teruggegeven toen het verzoeken van pre-vergunning voor de gespecificeerde middel. |
-|                              | *authentication_deny_by_mvpd* | 403 | MVPD heeft een &quot;Weigeren&quot;besluit teruggegeven toen het verzoeken van vergunning voor de gespecificeerde middel. |
-|                              | *authentication_deny_by_parental_controls* | 403 | MVPD heeft een &quot;Weigeren&quot;besluit wegens ouderlijke controlemontages voor het gespecificeerde middel teruggegeven. |
+|                              | *preauthentication_deny_by_mvpd* | 403 | De MVPD heeft een &quot;Weigeren&quot;-besluit geretourneerd wanneer zij een voorafgaande toestemming voor de opgegeven bron aanvraagt. |
+|                              | *authentication_deny_by_mvpd* | 403 | De MVPD heeft een &quot;Weigeren&quot;-beslissing geretourneerd wanneer een aanvraag voor een vergunning voor de opgegeven bron wordt ingediend. |
+|                              | *authentication_deny_by_parental_controls* | 403 | De MVPD heeft een &quot;Weigeren&quot;besluit wegens ouderlijke controlemontages voor de gespecificeerde middel teruggegeven. |
 |                              | *authentication_deny_by_degradate_rule* | 403 | De integratie tussen de gespecificeerde dienstverlener en mvpd heeft een degradatieregel wordt toegepast die vergunning voor de gevraagde middelen ontkent. |
 |                              | *internal_server_error* | 500 | De aanvraag is mislukt vanwege een interne serverfout. |
 | **configuratie** | *too_many_resources* | 403 | De autorisatie- of voorafgaande autorisatieaanvraag is mislukt omdat er te veel bronnen zijn gevraagd. Neem contact op met het ondersteuningsteam om de beperkingen voor autorisatie en autorisatie correct te configureren. |
@@ -339,12 +303,48 @@ In de onderstaande tabel worden mogelijke Enhanced Error Codes weergegeven die e
 |                              | *authenticated_profile_invalidate* | 403 | Het geverifieerde profiel dat aan dit verzoek is gekoppeld, is ongeldig. |
 |                              | *temporary_access_duration_limit_over* | 403 | De tijdelijke toegangslimiet is overschreden. |
 |                              | *temporary_access_resources_limit_over* | 403 | De limiet voor tijdelijke toegangsmiddelen is overschreden. |
-|                              | *authentication_deny_by_hba_policies* | 403 | MVPD heeft een &quot;Weigeren&quot;besluit op huis-gebaseerd authentificatiebeleid teruggegeven. De huidige authentificatie werd verkregen door een op huis-gebaseerde authentificatiestroom en maar het apparaat is niet meer in-huis wanneer het verzoeken van om toestemming voor het gespecificeerde middel. De gebruiker moet opnieuw met gesteund MVPD voor verdere verificatie verifiëren. |
-|                              | *authentication_deny_by_session_invalidate* | 403 | De verificatiesessie is ongeldig gemaakt door de identiteitsprovider. De gebruiker moet opnieuw met gesteund MVPD voor verdere verificatie verifiëren. |
-|                              | *identity_not_recognized_by_mvpd* | 403 | Het verzoek om toestemming is mislukt omdat de identiteit van de gebruiker niet door het MVPD is erkend. |
+|                              | *authentication_deny_by_hba_policies* | 403 | De MVPD heeft een &quot;Weigeren&quot;besluit wegens op huis-gebaseerd authentificatiebeleid teruggegeven. De huidige authentificatie werd verkregen door een op huis-gebaseerde authentificatiestroom en maar het apparaat is niet meer in-huis wanneer het verzoeken van om toestemming voor het gespecificeerde middel. De gebruiker moet opnieuw verifiëren met een ondersteunde MVPD om door te kunnen gaan. |
+|                              | *authentication_deny_by_session_invalidate* | 403 | De verificatiesessie is ongeldig gemaakt door de identiteitsprovider. De gebruiker moet opnieuw verifiëren met een ondersteunde MVPD om door te kunnen gaan. |
+|                              | *identity_not_recognized_by_mvpd* | 403 | Het verzoek om toestemming is mislukt omdat de identiteit van de gebruiker niet door de MVPD is erkend. |
 | **opnieuw proberen** | *network_receive_error* | 403 | Er was een gelezen fout terwijl het terugwinnen van de reactie van de bijbehorende partnerdienst. Het opnieuw proberen van het verzoek zou de kwestie kunnen oplossen. |
 |                              | *network_connection_timeout* | 403 | Er was een verbindingsonderbreking met de bijbehorende partnerdienst. Het opnieuw proberen van het verzoek zou de kwestie kunnen oplossen. |
 |                              | *maximum_executing_time_overtroffen* | 403 | De aanvraag is niet binnen de maximaal toegestane tijd voltooid. Het opnieuw proberen van het verzoek zou de kwestie kunnen oplossen. |
+
+### REST API v1 {#enhanced-error-codes-lists-rest-api-v1}
+
+In de onderstaande tabel worden mogelijke Enhanced Error Codes weergegeven die een clienttoepassing kan tegenkomen bij integratie met Adobe Pass Authentication REST API v1.
+
+| Handeling | Code | Status | Bericht |
+|--------------------|---------------------------------------------------|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **niets** | *invalid_requestor* | 400 | De parameter requestor ontbreekt of is ongeldig. |
+|                    | *invalid_device_info* | 400 | De apparaatinformatie ontbreekt of is ongeldig. |
+|                    | *invalid_device_id* | 400 | De apparaat-id ontbreekt of is ongeldig. |
+|                    | *missing_resource* | 400 412 | De parameter resource ontbreekt. |
+|                    | *misformed_authz_request* | 400 412 | Autorisatieaanvraag is null of ongeldig. |
+|                    | *preauthentication_deny_by_mvpd* | 403 | De MVPD heeft een &quot;Weigeren&quot;-besluit geretourneerd wanneer zij een voorafgaande toestemming voor de opgegeven bron aanvraagt. |
+|                    | *authentication_deny_by_mvpd* | 403 | De MVPD heeft een &quot;Weigeren&quot;-beslissing geretourneerd wanneer een aanvraag voor een vergunning voor de opgegeven bron wordt ingediend. |
+|                    | *authentication_deny_by_parental_controls* | 403 | De MVPD heeft een &quot;Weigeren&quot;besluit wegens ouderlijke controlemontages voor de gespecificeerde middel teruggegeven. |
+|                    | *internal_error* | 400 405 500 | De aanvraag is mislukt vanwege een interne serverfout. |
+| **configuratie** | *unknown_integration* | 400 412 | De integratie tussen de opgegeven programmeur en identiteitsprovider bestaat niet. Gebruik het TVE-dashboard om de vereiste integratie te maken. |
+|                    | *too_many_resources* | 403 | De autorisatie- of voorafgaande autorisatieaanvraag is mislukt omdat er te veel bronnen zijn gevraagd. Neem contact op met het ondersteuningsteam om de beperkingen voor autorisatie en autorisatie correct te configureren. |
+| **authentificatie** | *authentication_session_publisher_mismatch* | 400 | De autorisatieaanvraag is mislukt omdat de aangegeven MVPD voor de autorisatiestroom anders is dan de die de autorisatiesessie heeft afgegeven. De gebruiker moet opnieuw verifiëren met de gewenste MVPD om verder te kunnen gaan. |
+|                    | *authentication_deny_by_hba_policies* | 403 | De MVPD heeft een &quot;Weigeren&quot;besluit wegens op huis-gebaseerd authentificatiebeleid teruggegeven. De huidige authentificatie werd verkregen gebruikend een op huis-gebaseerde authentificatiestroom (HBA) maar het apparaat is niet meer thuis wanneer het verzoeken van om toestemming voor het gespecificeerde middel. De gebruiker moet opnieuw verifiëren met een ondersteunde MVPD om door te kunnen gaan. |
+|                    | *authentication_deny_by_session_invalidate* | 403 | De verificatiesessie is ongeldig gemaakt door de identiteitsprovider. De gebruiker moet opnieuw verifiëren met een ondersteunde MVPD om door te kunnen gaan. |
+|                    | *identity_not_recognized_by_mvpd* | 403 | Het verzoek om toestemming is mislukt omdat de identiteit van de gebruiker niet door de MVPD is erkend. |
+|                    | *authentication_session_invalidate* | 403 | De verificatiesessie is ongeldig gemaakt door de identiteitsprovider. De gebruiker moet opnieuw verifiëren met een ondersteunde MVPD om door te kunnen gaan. |
+|                    | *authentication_session_missing* | 403 412 | De verificatiesessie die aan deze aanvraag is gekoppeld, kan niet worden opgehaald. De gebruiker moet opnieuw verifiëren met een ondersteunde MVPD om door te kunnen gaan. |
+|                    | *authentication_session_expired* | 403 412 | De huidige verificatiesessie is verlopen. De gebruiker moet opnieuw verifiëren met een ondersteunde MVPD om door te kunnen gaan. |
+|                    | *preauthentication_authentication_session_missing* | 412 | De verificatiesessie die aan deze aanvraag is gekoppeld, kan niet worden opgehaald. De gebruiker moet opnieuw verifiëren met een ondersteunde MVPD om door te kunnen gaan. |
+|                    | *preauthentication_authentication_session_expired* | 412 | De huidige verificatiesessie is verlopen. De gebruiker moet opnieuw verifiëren met een ondersteunde MVPD om door te kunnen gaan. |
+| **vergunning** | *authentication_not_found* | 403 404 | Er is geen autorisatie gevonden voor de opgegeven resource. De gebruiker moet een nieuwe vergunning verkrijgen om verder te gaan. |
+|                    | *authentication_expired* | 410 | De vorige autorisatie voor de opgegeven resource is verlopen. De gebruiker moet een nieuwe vergunning verkrijgen om verder te gaan. |
+| **opnieuw proberen** | *network_receive_error* | 403 | Er was een gelezen fout terwijl het terugwinnen van de reactie van de bijbehorende partnerdienst. Het opnieuw proberen van het verzoek zou de kwestie kunnen oplossen. |
+|                    | *network_connection_timeout* | 403 | Er was een verbindingsonderbreking met de bijbehorende partnerdienst. Het opnieuw proberen van het verzoek zou de kwestie kunnen oplossen. |
+|                    | *maximum_executing_time_overtroffen* | 403 | De aanvraag is niet binnen de maximaal toegestane tijd voltooid. Het opnieuw proberen van het verzoek zou de kwestie kunnen oplossen. |
+
+### API voor voorafgaande autorisatie van SDK&#39;s {#enhanced-error-codes-lists-sdks-preauthorize-api}
+
+Verwijs naar de vorige [ sectie ](#enhanced-error-codes-list-rest-api-v1) voor mogelijke Verbeterde Codes van de Fout een cliënttoepassing zou kunnen ontmoeten wanneer geïntegreerd met de Authentificatie SDKs van Adobe Pass preauthorize API.
 
 ## Reactieafhandeling {#enhanced-error-codes-response-handling}
 
@@ -368,4 +368,4 @@ Samenvattend, wanneer het behandelen van reacties die de Geavanceerde Codes van 
 
 1. **Authentificatie en vergunning**: Voor fouten met betrekking tot authentificatie en vergunning, moet u de gebruiker ertoe aanzetten opnieuw voor authentiek te verklaren of nieuwe vergunning te verkrijgen zoals nodig.
 
-1. **Gebruiker terugkoppelt**: Facultatief, gebruik het mens-leesbare &quot;bericht&quot;en (potentiële) &quot;details&quot;gebieden om de gebruiker over de kwestie te informeren. Het &quot;details&quot;tekstbericht zou van MVPD kunnen worden overgegaan pre- of toestemmingseindpunten of van de Programmer wanneer het toepassen van degradatieregels.
+1. **Gebruiker terugkoppelt**: Facultatief, gebruik het mens-leesbare &quot;bericht&quot;en (potentiële) &quot;details&quot;gebieden om de gebruiker over de kwestie te informeren. Het tekstbericht &quot;details&quot; kan worden doorgegeven vanuit de eindpunten van de MVPD-autorisatie of -autorisatie of vanuit de programmeur wanneer afbraakregels worden toegepast.

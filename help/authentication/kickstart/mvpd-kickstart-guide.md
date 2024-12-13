@@ -1,15 +1,15 @@
 ---
-title: MVPD Direct Integration Plan
-description: MVPD Direct Integration Plan
+title: MVPD Direct-integratieplan
+description: MVPD Direct-integratieplan
 exl-id: 6423cc9a-a45a-4cde-b562-4cb72c98e505
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
 source-wordcount: '1071'
 ht-degree: 0%
 
 ---
 
-# MVPD kickstart guide: MVPD Direct Integration Plan {#mvpd-dir-int-plan}
+# MVPD Kickstart-gids: MVPD Direct-integratieplan {#mvpd-dir-int-plan}
 
 >[!NOTE]
 >
@@ -31,28 +31,28 @@ Ondersteuning is altijd beschikbaar via het Adobe Pass Authentication-kaartsyste
 
 ## 1. Kick-offvergaderingen {#kickoff-meetings}
 
-De mogelijkheid voor deze bijeenkomsten is het begin van technische besprekingen tussen Adobe en de MVPD. Op dit moment van het proces moeten beide partijen documenten uitwisselen. Als follow-up moet de Adobe een ticket openen in ons kaartverkoopsysteem (https://tve.zendesk.com/) om de status van de integratie te kunnen volgen.
+De mogelijkheid voor deze bijeenkomsten is het begin van technische besprekingen tussen Adobe en MVPD. Op dit moment van het proces moeten beide partijen documenten uitwisselen. Als follow-up moet de Adobe een ticket openen in ons kaartverkoopsysteem (https://tve.zendesk.com/) om de status van de integratie te kunnen volgen.
 
 ## 2. Functies {#features}
 
-De Adobe zal een wekelijkse statusvraag opstellen om het algemene programma, de stappen, de chronologie, en de implementatiedetails van de integratie te bespreken en te volgen. In deze fase voert de Adobe een herziening uit van de specificaties van het MVPD. Het resultaat hiervan moet een speciale pagina zijn die alle functies bevat die de MVPD nodig heeft. De MVPD zal de Adobe een specificatiedocument sturen met gedetailleerde informatie over de uitvoering van de verificatie/machtiging van de MVPD.
+De Adobe zal een wekelijkse statusvraag opstellen om het algemene programma, de stappen, de chronologie, en de implementatiedetails van de integratie te bespreken en te volgen. In deze fase voert Adobe een herziening uit van de specificaties van MVPD. Het resultaat hiervan moet een speciale pagina zijn met alle functies die de MVPD nodig heeft. De MVPD zal de Adobe een specificatiedocument sturen waarin de uitvoering van de MVPD-verificatie/-autorisatie wordt beschreven.
 
-Punten om te verduidelijken, zie {de Eigenschappen van de Integratie 0} MVPD ](/help/authentication/integration-guide-mvpds/mvpd-integr-features.md).[
+Punten om te verduidelijken, zie {de Eigenschappen van de Integratie van 0} MVPD ](/help/authentication/integration-guide-mvpds/mvpd-integr-features.md).[
 
 Er zijn verschillende instellingen die op dit punt in detail moeten worden beschreven:
 
 * **het embleem URL van MVPD** - dit is een dossier met de volgende afmetingen: 112 x 33 pixel. Het logo wordt weergegeven door Programmers op hun sites wanneer de gebruiker op de knop Aanmelden klikt om hun Pay TV-provider te selecteren.
-* **TTL (tijd-aan-levende) Waarden** - TTL wordt typisch geplaatst door MVPD tijdens het authentificatie/goedkeuringsproces. Nochtans kan de Adobe die waarden van TTL met voeten treden en verschillende waarden verstrekken afhankelijk van wat door zowel de Programmer als MVPD wordt overeengekomen.
+* **TTL (tijd-aan-levende) Waarden** - TTL wordt typisch geplaatst door MVPD tijdens het authentificatie/goedkeuringsproces. De Adobe kan deze TTL-waarden echter overschrijven en verschillende waarden bieden, afhankelijk van wat door zowel de programmeur als de MVPD is overeengekomen.
 * **naam van de Vertoning** - dit wordt getoond door Programmers op hun plaatsen wanneer de gebruiker op de &quot;Teken binnen&quot;knoop klikt om hun leverancier van de Tv van de Betaal te selecteren.
 * **geloofsbrieven van de Test** - Beide profielen (het opvoeren en productie) zouden een lijst van testgeloofsbrieven moeten hebben.
 
 >[!IMPORTANT]
 >
->Elke keer dat een gebruiker een machtigingsstroom start, wordt hij gekoppeld aan één ondoorzichtige, unieke gebruikersnaam.  De gebruikers-id wordt gebruikt om de gebruiker van de app van een programmeur te identificeren, maar is afkomstig van de MVPD.
+>Elke keer dat een gebruiker een machtigingsstroom start, wordt hij gekoppeld aan één ondoorzichtige, unieke gebruikersnaam.  De gebruikers-id wordt gebruikt om de gebruiker van de app van een programmeur te identificeren, maar komt uit de MVPD.
 
 >[!CAUTION]
 >
->Een belangrijke kennisgeving voor elke MVPD: de gebruikers-id mag GEEN PII (Persoonlijk Identificeerbare Informatie) bevatten, informatie die zelfstandig of met andere informatie kan worden gebruikt om de gebruiker te identificeren, te contacteren of te vinden.
+>Een belangrijke kennisgeving voor elke MVPD: de gebruikers-id mag GEEN PII (Persoonlijk Identificeerbare informatie) bevatten, informatie die zelfstandig kan worden gebruikt of met andere informatie om de gebruiker te identificeren, in contact te brengen of te vinden.
 
 ## 2. Metagegevensuitwisseling {#metadata-ex}
 
@@ -79,7 +79,7 @@ De duur van de ontwikkelingsfase wordt bepaald na de herziening van de specifica
 
 >[!NOTE]
 >
->Merk op dat de vergunning per middel wordt uitgevoerd. De vergunningstransactie wordt typisch uitgevoerd met een koord van identiteitskaart, dat van de plaats van de Programmer wordt overgegaan, die het kanaal vertegenwoordigen waarvoor de gebruiker om toestemming verzoekt. Deze identiteitskaart van Middel wordt gevestigd tussen Programmer en MVPD en kan zo korrelig zijn zoals noodzakelijk.
+>Merk op dat de vergunning per middel wordt uitgevoerd. De vergunningstransactie wordt typisch uitgevoerd met een koord van identiteitskaart, dat van de plaats van de Programmer wordt overgegaan, die het kanaal vertegenwoordigen waarvoor de gebruiker om toestemming verzoekt. Deze Resource ID wordt vastgesteld tussen de programmeur en MVPD en kan zo korrelig zijn als nodig.
 
 ## 6. Adobe {#adobe-env}
 
@@ -88,23 +88,23 @@ Adobe biedt verschillende omgevingen voor verschillende stadia van het ontwikkel
 * **Prequalification** (PRE-QUAL): Het milieu PRE-QUAL bevat de volgende versiekandidaat. De Adobe integreert aanvankelijk nieuwe partners in dit milieu, alvorens de integratie aan het milieu van de Versie te bevorderen. De partners hebben twee weken om op het PRE-QUAL milieu te testen en moeten uitdrukkelijk om het even welke veranderingen in de PRE-QUAL configuratie verzoeken (contacteer uw vertegenwoordiger van de Adobe voor details over het proces van het veranderingsverzoek). Bugfixes brengen nieuwe plaatsingen in dit milieu teweeg.
 * **Versie** (RELEASE): De huidige productie van de Adobe bouwt wordt opgesteld aan een levend milieu hier.
 
-Voor meer informatie over hoe te om de milieu&#39;s van de Adobe te gebruiken, zie [ Begrijpend de Milieu&#39;s van de Adobe ](/help/authentication/notes-technical/understanding-the-adobe-environments.md)
+Voor meer informatie over hoe te om de milieu&#39;s van de Adobe te gebruiken, zie [ Begrijpend de Milieu&#39;s van de Adobe ](/help/authentication/notes-technical/environments/understanding-the-adobe-environments.md)
 
 ## 7. Stationering {#stag-env}
 
-Gebaseerd op de meta-gegevens die van MVPD worden ontvangen, zal de Adobe tot een nieuwe MVPD in het systeem van de Authentificatie van Adobe Pass leiden en vormen. Dit zal in het prequal het opvoeren milieu van de Adobe worden opgesteld, en zal met onze testprogrammeur (TestDistributors) worden gevormd.
+Op basis van de metagegevens die zijn ontvangen van de MVPD, maakt en configureert Adobe een nieuwe MVPD in het Adobe Pass Authentication-systeem. Dit zal in het prequal het opvoeren milieu van de Adobe worden opgesteld, en zal met onze testprogrammeur (TestDistributors) worden gevormd.
 
-MVPD moet de zelfde plaatsing in hun QA/het opvoeren/testmilieu doen.
+De MVPD moet dezelfde implementatie uitvoeren in hun omgeving voor kwaliteitscontrole/testtests.
 
 ## 8. Testen en problemen oplossen {#tes-troubleshoot}
 
-In deze fase, Adobe en de test MVPD en los de integratie problemen op. Het Adobe Pass Authentication-team kan de API-testsite van de Adobe gebruiken om de integratie te testen. Om meer over het gebruiken van de de testplaats van API van de Adobe te weten zie [ de authentificatie en de toestemmingsstromen van de Test gebruikend de Adobe API testplaats ](/help/authentication/notes-technical/test-authn-authz-flows-using-adobes-api-test-site.md).
+In deze fase, test de Adobe en de test van MVPD en los de integratie problemen op. Het Adobe Pass Authentication-team kan de API-testsite van de Adobe gebruiken om de integratie te testen. Om meer over het gebruiken van de de testplaats van API van de Adobe te weten zie [ de authentificatie en de toestemmingsstromen van de Test gebruikend de Adobe API testplaats ](/help/authentication/integration-guide-programmers/legacy/notes-technical/test-authn-authz-flows-using-adobes-api-test-site.md).
 
-Wanneer het testen en het oplossen van problemen met succes heeft voltooid, wordt de integratie toegelaten in de het opvoeren van de versie van de Adobe milieu. Op dit punt, kan de Adobe MVPD met daadwerkelijke programmeur integreren.
+Wanneer het testen en het oplossen van problemen met succes heeft voltooid, wordt de integratie toegelaten in de het opvoeren van de versie van de Adobe milieu. Op dit moment kan Adobe de MVPD integreren met een echte programmeur.
 
 ## 9. Productie {#prod-dep}
 
-* MVPD moet eerst in het productieprofiel opstellen, om de connectiviteit te testen.
+* De MVPD moet eerst in het productieprofiel worden geïmplementeerd om de connectiviteit te testen.
 
 * Adobe wordt ingezet in productie op voorhand.
 

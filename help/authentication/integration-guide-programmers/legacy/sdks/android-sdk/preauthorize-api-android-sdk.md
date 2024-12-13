@@ -2,14 +2,14 @@
 title: Android vooraf autoriseren
 description: Android vooraf autoriseren
 exl-id: b5337595-135f-4981-a578-2da432f125d6
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '195'
+source-wordcount: '196'
 ht-degree: 0%
 
 ---
 
-# Voorvoegsel {#preuthorize-android}
+# (Verouderd) Vooraf autoriseren {#preuthorize-android}
 
 >[!NOTE]
 >
@@ -22,7 +22,7 @@ De methode van de preauthorize API moet door toepassingen worden gebruikt om een
 
 
 
-In het geval van een onverwachte fout (bv. netwerkprobleem, MVPD-autorisatiepunt niet beschikbaar, enz.) die plaatsvindt wanneer een voorafgaande API-aanvraag wordt verwerkt door de Adobe Pass-verificatieservices, worden een of meer gescheiden foutgegevens opgenomen voor de desbetreffende bron(nen) als onderdeel van het resultaat van de eerdere autorisatie-API-reactie.
+In het geval van een onverwachte fout (bv. netwerkprobleem, MVPD-autorisatiepunt niet beschikbaar, enz.) die plaatsvindt wanneer een aanvraag voor een voorafgaande API wordt verwerkt door de Adobe Pass-verificatieservices, worden een of meer gescheiden foutgegevens opgenomen voor de desbetreffende bron(nen) als onderdeel van het resultaat van de eerdere autorisatie-API-reactie.
 
 
 ## `public void preauthorize(PreauthorizeRequest request, AccessEnablerCallback<PreauthorizeResponse> callback);`

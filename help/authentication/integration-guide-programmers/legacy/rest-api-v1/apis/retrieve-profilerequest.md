@@ -2,14 +2,14 @@
 title: Platform SSO profiel-request ophalen
 description: Platform SSO profiel-request ophalen
 exl-id: 44fd4e26-4d9a-4607-ac2c-b85d848f5fc6
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '190'
 ht-degree: 0%
 
 ---
 
-# Platform SSO profiel-request ophalen {#retrieve-platform-sso-profile-request}
+# (Verouderd) Win Platform SSO profiel-request {#retrieve-platform-sso-profile-request}
 
 >[!NOTE]
 >
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 ## Beschrijving {#description}
 
-Deze bron produceert profielaanvragen voor een aanvraag-id en een MVPD-bestand.
+Met deze bron worden profielaanvragen voor een aanvraag-id en een MVPD-bestand gemaakt.
 
 
 | Endpoint | Geroepen </br> door | Invoer   </br> Params | HTTP </br> Methode | Antwoord | HTTP-respons </br> |

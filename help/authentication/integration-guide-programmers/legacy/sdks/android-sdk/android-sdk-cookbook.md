@@ -2,14 +2,14 @@
 title: Android SDK Cookbook
 description: Android SDK Cookbook
 exl-id: 7f66ab92-f52c-4dae-8016-c93464dd5254
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '1681'
+source-wordcount: '1682'
 ht-degree: 0%
 
 ---
 
-# Android SDK Cookbook {#android-sdk-cookbook}
+# (Verouderd) Android SDK Cookbook {#android-sdk-cookbook}
 
 >[!NOTE]
 >
@@ -76,7 +76,7 @@ De het netwerkactiviteit van AccessEnabler vindt in een verschillende draad plaa
 
    - [navigateToUrl(url)](#$navigateToUrl)
 
-     Wordt geactiveerd door `getAuthentication()` nadat de gebruiker een MVPD selecteert. De parameter `url` geeft de locatie van de aanmeldingspagina van de MVPD.
+     Wordt geactiveerd door `getAuthentication()` nadat de gebruiker een MVPD selecteert. De parameter `url` biedt de locatie van de MVPD-aanmeldingspagina.
 
    - [` sendTrackingData(event, data)`](#$sendTrackingData)
 
@@ -148,7 +148,7 @@ Android Library (AccessEnabler)
 
 1. Geef de gebruiker de lijst met providers weer die naar `displayProviderDialog()` is verzonden.
 
-1. Nadat de gebruiker een leverancier selecteert, verkrijg URL van MVPD van de gebruiker van `navigateToUrl()` callback.  Open een WebView en richt die controle WebView aan URL.
+1. Nadat de gebruiker een provider selecteert, verkrijgt u de URL van de MVPD van de gebruiker via de callback van `navigateToUrl()` .  Open een WebView en richt die controle WebView aan URL.
 
 1. Via WebView die in de vorige stap wordt geconcretiseerd, landt de gebruiker op de MVPD login pagina en input login geloofsbrieven. Verscheidene omleidingsverrichtingen vinden binnen WebView plaats.
 
@@ -171,7 +171,7 @@ Android Library (AccessEnabler)
 1. Vraag [ getAuthorization () ](#$getAuthZ) om de vergunning in werking te stellen
 stroom.
 
-   Afhankelijkheid: geldige ResourceID(s) overeengekomen met de MVPD(s).
+   Afhankelijkheid: geldige ResourceID(&#39;s) overeengekomen met de MVPD(s).
 
    **Nota:** ResourceIDs zou het zelfde moeten zijn als die gebruikt op andere apparaten of platforms, en zal het zelfde over MVPDs zijn.
 
@@ -203,7 +203,7 @@ stroom.
 ### F. Afmeldingsstroom {#logout_flow}
 
 1. Roep [`logout()`](#$logout) aan om de gebruiker af te melden.\
-   AccessEnabler ontruimt alle caching waarden en tekenen voor huidige MVPD voor huidige aanvrager en ook voor aanvrager met Enige Teken. Na het ontruimen van het geheime voorgeheugen, richt AccessEnabler een servervraag om de server-zijzittingen schoon te maken.  Merk op dat aangezien de servervraag in SAML kon resulteren die aan IdP (dit staat voor de zittingsschoonmaak op de kant IdP toe) wordt omgeleid, deze vraag moet alle omleidingen volgen. Om deze reden, moet deze vraag binnen een controle worden behandeld WebView.
+   AccessEnabler wist alle in het cachegeheugen opgeslagen waarden en tokens voor de huidige MVPD voor de huidige aanvrager en ook voor aanvragers met Single Sign On. Na het ontruimen van het geheime voorgeheugen, richt AccessEnabler een servervraag om de server-zijzittingen schoon te maken.  Merk op dat aangezien de servervraag in SAML kon resulteren die aan IdP (dit staat voor de zittingsschoonmaak op de kant IdP toe) wordt omgeleid, deze vraag moet alle omleidingen volgen. Om deze reden, moet deze vraag binnen een controle worden behandeld WebView.
 
    a. Na het zelfde patroon zoals het authentificatiewerkschema, doet het domein AccessEnabler een verzoek aan de UI toepassingslaag (via `navigateToUrl()` callback) om tot een controle te leiden WebView en die controle op te dragen om URL van het logout eindpunt op de backendserver te laden.
 
@@ -217,4 +217,4 @@ stroom.
 
 [ hier ](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/AndroidSSOUserFlows.pdf) u hebt een document beschrijvend het gedrag wanneer het gebruiken van veelvoudige MVPDs en wat gebeurt wanneer de gebruiker zich uit een toepassing afmeldt.
 
-Het beschreven gedrag is beschikbaar bij gebruik van Android SDK versie >= 2.0.0.
+Het beschreven gedrag is beschikbaar als u Android SDK versie >= 2.0.0 gebruikt.

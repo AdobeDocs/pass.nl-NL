@@ -2,14 +2,14 @@
 title: Android-toepassingsregistratie
 description: Android-toepassingsregistratie
 exl-id: 6238bd87-ac97-4a5c-9d92-3631f7b2d46a
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '587'
 ht-degree: 0%
 
 ---
 
-# Android-toepassingsregistratie {#android-application-registration}
+# (Verouderd) Android-toepassingsregistratie {#android-application-registration}
 
 >[!NOTE]
 >
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ## Inleiding {#intro}
 
-Vanaf versie 3.0 van de Android AccessEnabler SDK veranderen we het verificatiemechanisme met de servers van de Adobe. In plaats van het gebruiken van een openbare sleutel en een geheim systeem om requestorID te ondertekenen, introduceren wij het concept een koord van de Verklaring van de Software dat kan worden gebruikt om een toegangstoken te verkrijgen dat later voor alle vraag wordt gebruikt die SDK aan onze servers maakt. Naast een verklaring van de Software zult u ook een diepe verbinding voor uw toepassing moeten creëren.
+Vanaf versie 3.0 van Android AccessEnabler SDK veranderen we het verificatiemechanisme met de servers van de Adobe. In plaats van het gebruiken van een openbare sleutel en een geheim systeem om requestorID te ondertekenen, introduceren wij het concept een koord van de Verklaring van de Software dat kan worden gebruikt om een toegangstoken te verkrijgen dat later voor alle vraag wordt gebruikt die SDK aan onze servers maakt. Naast een verklaring van de Software zult u ook een diepe verbinding voor uw toepassing moeten creëren.
 
 Voor meer informatie, zie [ Dynamisch Overzicht van de Registratie van de Cliënt 1}.](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)
 
@@ -25,7 +25,7 @@ Voor meer informatie, zie [ Dynamisch Overzicht van de Registratie van de Cliën
 
 Een verklaring van de Software is een teken JWT dat informatie over uw toepassing bevat. Elke toepassing moet een unieke software-instructie hebben die door onze servers wordt gebruikt om de toepassing in het systeem van de Adobe te identificeren.
 
-De Software-instructie moet worden doorgegeven wanneer u de `AccessEnabler` SDK initialiseert. Deze wordt gebruikt om de toepassing met Adobe te registreren. Bij registratie ontvangt de SDK een client-id en een clientgeheim, die worden gebruikt om een toegangstoken te verkrijgen. Om het even welke vraag die SDK aan Adobe servers maakt vereist een geldig toegangstoken. De SDK is verantwoordelijk voor het registreren van de toepassing, het verkrijgen en het vernieuwen van het toegangstoken.
+De Software Statement moet worden doorgegeven wanneer u de `AccessEnabler` SDK initialiseert. Deze wordt gebruikt om de toepassing met Adobe te registreren. Bij registratie ontvangt de SDK een client-id en een clientgeheim, die worden gebruikt om een toegangstoken te verkrijgen. Om het even welke vraag die de SDK aan de servers van de Adobe maakt vereist een geldig toegangstoken. De SDK is verantwoordelijk voor het registreren van de toepassing, het verkrijgen en het vernieuwen van de toegangstoken.
 
 >[!NOTE]
 >

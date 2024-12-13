@@ -2,14 +2,14 @@
 title: Metagegevens gebruiker
 description: Metagegevens gebruiker
 exl-id: 3d7b6429-972f-4ccb-80fd-a99870a02f65
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '496'
 ht-degree: 0%
 
 ---
 
-# Metagegevens gebruiker {#user-metadata}
+# (Verouderd) Gebruikersmetagegevens {#user-metadata}
 
 >[!NOTE]
 >
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 ## Beschrijving {#description}
 
-Haal meta-gegevens terug die MVPD over de voor authentiek verklaarde gebruiker deelde.
+Haal metagegevens op die MVPD over de geverifieerde gebruiker heeft gedeeld.
 
 
 | Endpoint | Geroepen </br> door | Invoer   </br> Params | HTTP </br> Methode | Antwoord | HTTP-respons </br> |
@@ -47,14 +47,14 @@ Haal meta-gegevens terug die MVPD over de voor authentiek verklaarde gebruiker d
 |------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | aanvrager | De programmeeraanvragerId waarvoor deze verrichting geldig is. |
 | deviceId | Het apparaat-id bytes. |
-| device_info/<p>X-Apparaat-Info | Informatie over streaming apparaat.</br></br> **Nota:** Dit KAN device_info als parameter worden overgegaan URL, maar wegens de potentiële grootte van deze parameter en beperkingen op de lengte van een GET URL, ZOU het als x-Apparaat-Info in de HTTP- kopbal moeten worden overgegaan. </br></br> zie de volledige details in [ het overgaan Apparaat en de Informatie van de Verbinding ](/help/authentication/integration-guide-programmers/passing-client-information-device-connection-and-application.md). |
-| _deviceType_ | Het apparaattype (bijvoorbeeld Roku, PC).</br></br> Als deze parameter correct wordt geplaatst, biedt ESM metriek aan die [ uitgesplitst per apparatentype ](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview.md#progr-filter-metrics) wanneer het gebruiken van Clientless zijn, zodat de verschillende soorten analyse voor bijvoorbeeld Roku, AppleTV, Xbox enz. kunnen worden uitgevoerd.</br></br> Zie [ Voordelen om clientless apparatentype parameter in de metriek van de Pas te gebruiken ](/help/authentication/notes-technical/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md) </br></br> **Nota:** vervangt `device_info` deze parameter. |
+| device_info/<p>X-Apparaat-Info | Informatie over streaming apparaat.</br></br> **Nota:** Dit KAN device_info als parameter worden overgegaan URL, maar wegens de potentiële grootte van deze parameter en beperkingen op de lengte van een GET URL, ZOU het als x-Apparaat-Info in de HTTP- kopbal moeten worden overgegaan. </br></br> zie de volledige details in [ het overgaan Apparaat en de Informatie van de Verbinding ](/help/authentication/integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md). |
+| _deviceType_ | Het apparaattype (bijvoorbeeld Roku, PC).</br></br> Als deze parameter correct wordt geplaatst, biedt ESM metriek aan die [ uitgesplitst per apparatentype ](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview.md#progr-filter-metrics) wanneer het gebruiken van Clientless zijn, zodat de verschillende soorten analyse voor bijvoorbeeld Roku, AppleTV, Xbox enz. kunnen worden uitgevoerd.</br></br> Zie [ Voordelen om clientless apparatentype parameter in de metriek van de Pas te gebruiken ](/help/authentication/integration-guide-programmers/legacy/notes-technical/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md) </br></br> **Nota:** vervangt `device_info` deze parameter. |
 | _deviceUser_ | De herkenningsteken van de apparatengebruiker.</br></br> **Nota:** Indien gebruikt, `deviceUser` zou de zelfde waarden moeten hebben zoals in [ creeer de verzoek van de Code van de Registratie ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md). |
 | _appId_ | De toepassings-id/-naam. </br></br> **Nota:** vervangt `device_info` deze parameter. Indien gebruikt, `appId` zou de zelfde waarden moeten hebben zoals in [ creeer de verzoek van de Code van de Registratie ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md). |
 
 >[!NOTE]
 > 
->De informatie van gebruikersmeta-gegevens zou beschikbaar moeten zijn nadat de authentificatiestroom heeft voltooid, maar kan op de vergunningsstroom, afhankelijk van MVPD en op het meta-gegevenstype worden bijgewerkt.
+>De informatie van gebruikersmeta-gegevens zou beschikbaar moeten zijn nadat de authentificatiestroom is voltooid, maar kan op de toestemmingsstroom, afhankelijk van MVPD en het meta-gegevenstype worden bijgewerkt.
 
 
 

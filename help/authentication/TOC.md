@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass-verificatie
 user-guide-description: Adobe Pass-verificatie is een machtigingsoplossing voor TV Everywhere, die een modulair kader verstrekt om te bepalen of iemand die toegang tot een bron vraagt, daar rechten voor heeft.
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '1154'
+source-wordcount: '1258'
 ht-degree: 2%
 
 ---
@@ -20,8 +20,8 @@ ht-degree: 2%
    + [Overzicht van programmeerprogramma](kickstart/programmer-overview.md)
    + [MVPD-overzicht](kickstart/mvpd-overview.md)
    + [Kickstart-handleiding voor programmeurs](kickstart/programmer-kickstart-guide.md)
-   + [MVPD kickstart-handleiding](kickstart/mvpd-kickstart-guide.md)
-   + [Doorverwijsprocedures](notes-technical/escalation-procedures.md)
+   + [MVPD-gids voor kickstart](kickstart/mvpd-kickstart-guide.md)
+   + [Doorverwijsprocedures](kickstart/escalation-procedures.md)
    + [Verklarende woordenlijst](kickstart/glossary.md)
 + Integratiehandleiding voor programmeurs {#integration-guide-programmers}
    + REST API&#39;s {#rest-apis}
@@ -97,22 +97,16 @@ ht-degree: 2%
          + [Metagegevenscertificaat van gebruiker voor versleuteling](integration-guide-programmers/features-standard/entitlements/user-metadata-certificate.md)
       + Fout bij rapporteren {#error-reporting}
          + [Verbeterde foutcodes](integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md)
-         + [Foutmelding](integration-guide-programmers/features-standard/error-reporting/error-reporting.md)
       + Single Sign-On Access {#sso-access}
          + Single Sign-On voor partners {#partner-sso}
             + Apple Single Sign-On {#apple-sso}
                + [Apple SSO - Overzicht](integration-guide-programmers/features-standard/sso-access/partner-sso/apple-sso/apple-sso-overview.md)
                + [Apple SSO Cookbook (REST API V2)](integration-guide-programmers/features-standard/sso-access/partner-sso/apple-sso/apple-sso-cookbook-rest-api-v2.md)
-               + [Apple SSO Cookbook (REST API V1)](integration-guide-programmers/features-standard/sso-access/partner-sso/apple-sso/apple-sso-cookbook-rest-api-v1.md)
-               + [Apple SSO Cookbook (iOS/tvOS SDK)](integration-guide-programmers/features-standard/sso-access/partner-sso/apple-sso/apple-sso-cookbook-iostvos-sdk.md)
          + Platform Single Sign-On {#platform-sso}
             + Amazon Single Sign-On {#amazon-sso}
                + [Amazon SSO Cookbook (REST API V2)](integration-guide-programmers/features-standard/sso-access/platform-sso/amazon-single-sign-on/amazon-sso-cookbook-rest-api-v2.md)
-               + [Amazon SSO Cookbook (REST API V1)](integration-guide-programmers/features-standard/sso-access/platform-sso/amazon-single-sign-on/amazon-sso-cookbook-rest-api-v1.md)
             + Single Sign-On {#roku-sso}
                + [Overzicht van Roku SSO](integration-guide-programmers/features-standard/sso-access/platform-sso/roku-single-sign-on/roku-sso-overview.md)
-         + [Ondersteuning voor Single Sign-On](integration-guide-programmers/features-standard/sso-access/sso-support.md)
-         + [SSO via passieve verificatie](integration-guide-programmers/features-standard/sso-access/sso-passive-authn.md)
       + Toegang tot verificatie op thuisbasis {#hba-access}
          + [Thuisgebaseerde verificatie voor tv overal](integration-guide-programmers/features-standard/hba-access/home-based-authn-tve.md)
          + [HBA-status voor MVPD&#39;s](integration-guide-programmers/features-standard/hba-access/hba-status-mvpds.md)
@@ -135,81 +129,127 @@ ht-degree: 2%
          + [Experience Cloud-id gebruiken in Adobe Pass-verificatie](integration-guide-programmers/features-premium/analytics/exp-cloud-id-authn.md)
    + Verouderd {#legacy}
       + (Verouderd) REST API V1 {#rest-api-v1}
-         + [Overzicht van REST API V1](integration-guide-programmers/legacy/rest-api-v1/apis/rest-api-overview.md)
-         + [REST API V1 Reference](integration-guide-programmers/legacy/rest-api-v1/rest-api-reference.md)
+         + [(Verouderd) Overzicht REST API V1](integration-guide-programmers/legacy/rest-api-v1/rest-api-overview.md)
+         + [(Verouderd) Referentie voor REST API V1](integration-guide-programmers/legacy/rest-api-v1/rest-api-reference.md)
          + (Verouderd) API&#39;s {#rest-api-v1-apis}
-            + [Registratiecode-aanvraag](integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md)
-            + [Registratierecord retourneren](integration-guide-programmers/legacy/rest-api-v1/apis/return-registration-record.md)
-            + [Registratierecord verwijderen](integration-guide-programmers/legacy/rest-api-v1/apis/delete-registration-record.md)
-            + [MVPD-lijst opgeven](integration-guide-programmers/legacy/rest-api-v1/apis/provide-mvpd-list.md)
-            + [Verificatie starten](integration-guide-programmers/legacy/rest-api-v1/apis/initiate-authentication.md)
-            + [Verificatietoken controleren](integration-guide-programmers/legacy/rest-api-v1/apis/check-authentication-token.md)
-            + [Verificatietoken ophalen](integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-authentication-token.md)
-            + [Autorisatie starten](integration-guide-programmers/legacy/rest-api-v1/apis/initiate-authorization.md)
-            + [Token voor autorisatie ophalen](integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-authorization-token.md)
-            + [Token voor korte media verkrijgen](integration-guide-programmers/legacy/rest-api-v1/apis/obtain-short-media-token.md)
-            + [Verificatiestroom controleren op tweede scherm van webtoepassing](integration-guide-programmers/legacy/rest-api-v1/apis/check-authentication-flow-by-second-screen-web-app.md)
-            + [Lijst met vooraf gemachtigde bronnen ophalen](integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-list-of-preauthorized-resources.md)
-            + [Lijst met vooraf geautoriseerde bronnen ophalen via tweede webtoepassing voor scherm](integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-list-of-preauthorized-resources-by-second-screen-web-app.md)
-            + [Afmelden starten](integration-guide-programmers/legacy/rest-api-v1/apis/initiate-logout.md)
-            + [Metagegevens gebruiker](integration-guide-programmers/legacy/rest-api-v1/apis/user-metadata.md)
-            + [Profiel-verzoek ophalen](integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-profilerequest.md)
-            + [Tokenuitwisseling](integration-guide-programmers/legacy/rest-api-v1/apis/token-exchange.md)
-            + [Gratis voorvertoning voor tijdelijke controle en tijdelijke controle voor speciale acties](integration-guide-programmers/legacy/rest-api-v1/apis/free-preview-for-temp-pass-and-promotional-temp-pass.md)
+            + [(Verouderd) Registratiecode-aanvraag](integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md)
+            + [(Verouderd) Registratierecord retourneren](integration-guide-programmers/legacy/rest-api-v1/apis/return-registration-record.md)
+            + [(Verouderd) Registratierecord verwijderen](integration-guide-programmers/legacy/rest-api-v1/apis/delete-registration-record.md)
+            + [(Verouderd) MVPD-lijst opgeven](integration-guide-programmers/legacy/rest-api-v1/apis/provide-mvpd-list.md)
+            + [(Verouderd) Verificatie starten](integration-guide-programmers/legacy/rest-api-v1/apis/initiate-authentication.md)
+            + [(Verouderd) Verificatietoken controleren](integration-guide-programmers/legacy/rest-api-v1/apis/check-authentication-token.md)
+            + [(Verouderd) Verificatietoken ophalen](integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-authentication-token.md)
+            + [(Verouderd) Autorisatie starten](integration-guide-programmers/legacy/rest-api-v1/apis/initiate-authorization.md)
+            + [(Verouderd) Token voor autorisatie ophalen](integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-authorization-token.md)
+            + [(Verouderd) Token voor korte media verkrijgen](integration-guide-programmers/legacy/rest-api-v1/apis/obtain-short-media-token.md)
+            + [(Verouderd) Verificatiestroom controleren op tweede scherm van webtoepassing](integration-guide-programmers/legacy/rest-api-v1/apis/check-authentication-flow-by-second-screen-web-app.md)
+            + [(Verouderd) Lijst met vooraf gemachtigde bronnen ophalen](integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-list-of-preauthorized-resources.md)
+            + [(Verouderd) Hiermee wordt de lijst met vooraf geautoriseerde bronnen opgehaald via de webtoepassing voor tweede scherm](integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-list-of-preauthorized-resources-by-second-screen-web-app.md)
+            + [(Verouderd) Afmelden starten](integration-guide-programmers/legacy/rest-api-v1/apis/initiate-logout.md)
+            + [(Verouderd) Gebruikersmetagegevens](integration-guide-programmers/legacy/rest-api-v1/apis/user-metadata.md)
+            + [(Verouderd) Profiel-verzoek ophalen](integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-profilerequest.md)
+            + [(Verouderd) Symbolische Exchange](integration-guide-programmers/legacy/rest-api-v1/apis/token-exchange.md)
+            + [(Verouderd) Gratis voorvertoning voor een tijdelijke controle en een tijdelijke controle voor speciale acties](integration-guide-programmers/legacy/rest-api-v1/apis/free-preview-for-temp-pass-and-promotional-temp-pass.md)
          + (Verouderd) Cookbooks {#rest-api-v1-cookbooks}
-            + [REST API V1 Cookbook (client-naar-server)](integration-guide-programmers/legacy/rest-api-v1/cookbooks/rest-api-cookbook-clienttoserver.md)
-            + [REST API V1 Cookbook (Server-to-Server)](integration-guide-programmers/legacy/rest-api-v1/cookbooks/rest-api-cookbook-servertoserver.md)
+            + [(Verouderd) REST API V1 Cookbook (client-naar-server)](integration-guide-programmers/legacy/rest-api-v1/cookbooks/rest-api-cookbook-clienttoserver.md)
+            + [(Verouderd) REST API V1 Cookbook (Server-to-Server)](integration-guide-programmers/legacy/rest-api-v1/cookbooks/rest-api-cookbook-servertoserver.md)
       + (Verouderd) SDK&#39;s {#sdks}
          + (Verouderd) JavaScript SDK {#javascript-sdk}
-            + [Overzicht van JavaScript SDK](integration-guide-programmers/legacy/sdks/javascript-sdk/javascript-sdk-overview.md)
-            + [JavaScript SDK Cookbook](integration-guide-programmers/legacy/sdks/javascript-sdk/javascript-sdk-cookbook.md)
-            + [JavaScript SDK API-naslag](integration-guide-programmers/legacy/sdks/javascript-sdk/javascript-sdk-api-reference.md)
-            + [JavaScript SDK API vooraf autoriseren](integration-guide-programmers/legacy/sdks/javascript-sdk/preauthorize-api-javascript-sdk.md)
+            + [(Verouderd) JavaScript SDK - Overzicht](integration-guide-programmers/legacy/sdks/javascript-sdk/javascript-sdk-overview.md)
+            + [(Verouderd) JavaScript SDK Cookbook](integration-guide-programmers/legacy/sdks/javascript-sdk/javascript-sdk-cookbook.md)
+            + [(Verouderd) JavaScript SDK API-naslag](integration-guide-programmers/legacy/sdks/javascript-sdk/javascript-sdk-api-reference.md)
+            + [(Verouderd) JavaScript SDK API Vooraf autoriseren](integration-guide-programmers/legacy/sdks/javascript-sdk/preauthorize-api-javascript-sdk.md)
             + (Verouderd) Richtlijnen {#javascript-sdk-guidelines}
-               + [Aanmelding en afmelding zonder vernieuwen](integration-guide-programmers/legacy/sdks/javascript-sdk/refreshless-login-and-logout.md)
+               + [(Verouderd) Aanmelding en afmelding zonder vernieuwen](integration-guide-programmers/legacy/sdks/javascript-sdk/refreshless-login-and-logout.md)
          + (Verouderd) iOS/tvOS SDK {#ios-tvos-sdk}
-            + [Overzicht iOS/tvOS SDK](integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-overview.md)
-            + [iOS/tvOS SDK Cookbook](integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-cookbook.md)
-            + [iOS/tvOS SDK API-naslaggids](integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md)
-            + [iOS/tvOS SDK API Voorkeuren](integration-guide-programmers/legacy/sdks/ios-tvos-sdk/preauthorize-api-ios-tvos-sdk.md)
+            + [(Verouderd) iOS/tvOS SDK - Overzicht](integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-overview.md)
+            + [(Verouderd) iOS/tvOS SDK Cookbook](integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-cookbook.md)
+            + [(Verouderd) Referentie iOS/tvOS SDK API](integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md)
+            + [(Verouderd) iOS/tvOS SDK API Vooraf autoriseren](integration-guide-programmers/legacy/sdks/ios-tvos-sdk/preauthorize-api-ios-tvos-sdk.md)
             + (Verouderd) Richtlijnen {#ios-tvos-sdk-guidelines}
-               + [iOS/tvOS-toepassingsregistratie](integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-application-registration.md)
-               + [Migratiehandleiding voor iOS/tvOS v3.x](integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-v3x-migration-guide.md)
-               + [Integriteitscontroles iOS/tvOS-opslag](integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-storage-integrity-checks.md)
+               + [(Verouderd) iOS/tvOS-toepassingsregistratie](integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-application-registration.md)
+               + [(Verouderd) Handleiding voor migratie naar iOS/tvOS v3.x](integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-v3x-migration-guide.md)
+               + [(Verouderd) Integriteitscontroles van iOS/tvOS-opslag](integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-storage-integrity-checks.md)
          + (Verouderd) Android SDK {#android-sdk}
-            + [Overzicht van Android SDK](integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-overview.md)
-            + [Android SDK Cookbook](integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-cookbook.md)
-            + [Android SDK API-naslag](integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-api-reference.md)
-            + [Android SDK API vooraf autoriseren](integration-guide-programmers/legacy/sdks/android-sdk/preauthorize-api-android-sdk.md)
+            + [(Verouderd) Android SDK - Overzicht](integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-overview.md)
+            + [(Verouderd) Android SDK Cookbook](integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-cookbook.md)
+            + [(Verouderd) Android SDK API-naslag](integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-api-reference.md)
+            + [(Verouderd) Android SDK API Vooraf autoriseren](integration-guide-programmers/legacy/sdks/android-sdk/preauthorize-api-android-sdk.md)
             + (Verouderd) Richtlijnen {#android-sdk-guidelines}
-               + [Android-toepassingsregistratie](integration-guide-programmers/legacy/sdks/android-sdk/android-application-registration.md)
-               + [Android SDK met Dynamic Client-registratie](integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-with-dynamic-client-registration.md)
+               + [(Verouderd) Android-toepassingsregistratie](integration-guide-programmers/legacy/sdks/android-sdk/android-application-registration.md)
+               + [(Verouderd) Android SDK met Dynamic Client-registratie](integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-with-dynamic-client-registration.md)
          + (Verouderd) FireOS SDK {#fireos-sdk}
-            + [Technisch overzicht van Amazon FireOS](integration-guide-programmers/legacy/sdks/fireos-sdk/amazon-fireos-technical-overview.md)
-            + [Amazon FireOS Integration Cookbook](integration-guide-programmers/legacy/sdks/fireos-sdk/amazon-fireos-integration-cookbook.md)
-            + [Amazon FireOS API-naslaggids](integration-guide-programmers/legacy/sdks/fireos-sdk/amazon-fireos-native-client-api-reference.md)
-            + [Amazon FireOS-toepassingsregistratie](integration-guide-programmers/legacy/sdks/fireos-sdk/amazon-fireos-application-registration.md)
-            + [FireOS SDK met Dynamic Client-registratie](integration-guide-programmers/legacy/sdks/fireos-sdk/fireos-sdk-with-dynamic-client-registration.md)
-            + [Amazon FireOS SSO - Handleiding voor het starten van de programma&#39;s](integration-guide-programmers/legacy/sdks/fireos-sdk/amazon-firetv-sso-programmer-kickoff-guide.md)
+            + [(Verouderd) Technisch overzicht van Amazon FireOS](integration-guide-programmers/legacy/sdks/fireos-sdk/amazon-fireos-technical-overview.md)
+            + [(Verouderd) Amazon FireOS Integration Cookbook](integration-guide-programmers/legacy/sdks/fireos-sdk/amazon-fireos-integration-cookbook.md)
+            + [(Verouderd) Referentie voor Amazon FireOS API](integration-guide-programmers/legacy/sdks/fireos-sdk/amazon-fireos-native-client-api-reference.md)
+            + [(Verouderd) Amazon FireOS-toepassingsregistratie](integration-guide-programmers/legacy/sdks/fireos-sdk/amazon-fireos-application-registration.md)
+            + [(Verouderd) FireOS SDK met dynamische clientregistratie](integration-guide-programmers/legacy/sdks/fireos-sdk/fireos-sdk-with-dynamic-client-registration.md)
+            + [(Verouderd) Amazon FireOS SSO - Handleiding voor het afschoppen van programma&#39;s](integration-guide-programmers/legacy/sdks/fireos-sdk/amazon-firetv-sso-programmer-kickoff-guide.md)
+      + (Verouderd) Clientgegevens {#client-information}
+         + [(Verouderd) clientgegevens doorgeven (apparaat, verbinding en toepassing)](integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md)
+      + (Verouderd) Fout bij rapporteren {#error-reporting}
+         + [(Verouderd) Foutmelding](integration-guide-programmers/legacy/error-reporting/error-reporting.md)
+      + (Verouderd) Single Sign-On Access {#sso-access}
+         + [(Verouderd) Single Sign-On-ondersteuning](integration-guide-programmers/legacy/sso-access/sso-support.md)
+         + [(Verouderd) SSO via passieve verificatie](integration-guide-programmers/legacy/sso-access/sso-passive-authn.md)
+         + [(Verouderd) Amazon SSO Cookbook (REST API V1)](integration-guide-programmers/legacy/sso-access/amazon-sso-cookbook-rest-api-v1.md)
+         + [(Verouderd) Apple SSO Cookbook (REST API V1)](integration-guide-programmers/legacy/sso-access/apple-sso-cookbook-rest-api-v1.md)
+         + [(Verouderd) Apple SSO Cookbook (iOS/tvOS SDK)](integration-guide-programmers/legacy/sso-access/apple-sso-cookbook-iostvos-sdk.md)
+      + (Verouderd) TVE-dashboard {#tve-dashboard}
+         + [(Verouderd) Gebruikershandleiding voor het TVE-dashboard](integration-guide-programmers/legacy/tve-dashboard/tve-dashboard-user-guide.md)
+      + (Verouderd) Technische notities {#tech-notes}
+         + (Verouderd) REST API V1 {#rest-api-v1}
+            + [(Verouderd) Clientless API-implementatie - foutcodes / berichten met vermoedelijke oorzaak / oorzaak](integration-guide-programmers/legacy/notes-technical/clientless-api-implementation-error-codes-messages-with-probable-reason-cause.md)
+            + [(Verouderd) Clientless API Flow bij afwezigheid van apparaat-id](integration-guide-programmers/legacy/notes-technical/clientless-api-flow-in-the-absence-of-device-id.md)
+            + [(Verouderd) Zonder client: gebruik geen &#39;&amp;&#39;reg_code in /authenticate Request](integration-guide-programmers/legacy/notes-technical/clientless-avoid-using-reg-code-in-authenticate-request.md)
+            + [(Verouderd) Adobe Pass Entitlement Services inschakelen voor een programmeur op Xbox 360 en XboxOne Clientless](integration-guide-programmers/legacy/notes-technical/enabling-primetime-entitlement-services-for-a-programmer-on-xbox-360-and-xboxone-clientless-solution.md)
+            + [(Verouderd) Apparaattype en maateenheden zonder client](integration-guide-programmers/legacy/notes-technical/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)
+         + (Verouderd) SDK&#39;s {#sdks}
+            + [(Verouderd) Certificaten Vragen en antwoorden](integration-guide-programmers/legacy/notes-technical/certificates-qa.md)
+            + [(Verouderd) Gebruikersnaam](integration-guide-programmers/legacy/notes-technical/understanding-user-ids.md)
+            + (Verouderd) JavaScript SDK {#javascript-sdk}
+               + [(Legacy) Tracking Prevention Assessment - Apple Safari](integration-guide-programmers/legacy/notes-technical/tracking-prevention-assessment-apple-safari.md)
+               + [(Legacy) Tracking Prevention Assessment - Google Chrome](integration-guide-programmers/legacy/notes-technical/tracking-prevention-assessment-google-chrome.md)
+               + [(Verouderd) Cookies-updates - SameSite- en Secure-vlaggen](integration-guide-programmers/legacy/notes-technical/cookies-updates-samesite-and-secure-flags.md)
+               + [(Verouderd) Tips voor foutopsporing](integration-guide-programmers/legacy/notes-technical/appendix-b-debugging-tips.md)
+            + (Verouderd) Android SDK {#android-sdk}
+               + [(Verouderd) Access Enabler Android SDK Single Sign-On (SSO) voor Android 10-apps](integration-guide-programmers/legacy/notes-technical/access-enabler-android-sdk-single-signon-sso-on-android-10-devices.md)
+               + [(Verouderd) Adobe Pass-verificatie en het nieuwe machtigingenmodel voor Android 6 &quot;Marshmallow&quot;](integration-guide-programmers/legacy/notes-technical/adobe-primetime-authentication-and-the-android-6-marshmallow-new-permissions-model.md)
+            + (Verouderd) iOS/tvOS SDK {#ios-tvos-sdk}
+               + [(Verouderd) WKWebView-ondersteuning op iOS SDK 3.1+](integration-guide-programmers/legacy/notes-technical/wkwebview-support-on-ios-sdk-31.md)
+               + [(Verouderd) SFSafariViewController-ondersteuning op iOS SDK 3.2+](integration-guide-programmers/legacy/notes-technical/sfsafariviewcontroller-support-on-ios-sdk-32.md)
+               + [(Verouderd) SSO op iOS bij gebruik van de Adobe Pass Authentication Access Enabler](integration-guide-programmers/legacy/notes-technical/sso-on-ios-when-using-the-primetime-authentication-access-enabler.md)
+               + [(Verouderd) iOS-verificatiefout - adobepass.ios.app is niet gevonden](integration-guide-programmers/legacy/notes-technical/ios-authentication-error-adobepassiosapp-cannot-be-found.md)
+               + [(Verouderd) Tijdelijke controle opnieuw instellen op iOS](integration-guide-programmers/legacy/notes-technical/reset-temp-pass-on-ios.md)
+               + [(Verouderd) Foutopsporing in de AccessEnabler iOS/tvOS SDK met behulp van console-app-logbestanden](integration-guide-programmers/legacy/notes-technical/debugging-the-accessenabler-iostvos-sdk-using-console-app-logs.md)
+               + [(Verouderd) AccessEnabler iOS/tvOS 3.7.0 Upgradepad](integration-guide-programmers/legacy/notes-technical/accessenabler-iostvos-370-upgrade-path.md)
+         + (Verouderd) Ervaring voor gebruikers {#user-experience}
+            + [(Verouderd) De MVPD-aanmeldingspagina migreren van iFrame naar popup](integration-guide-programmers/legacy/notes-technical/migr-mvpd-login-iframe-popup.md)
+            + [(Verouderd) Preflight-functie: Hoe kan ik het probleem inschakelen, oplossen of vaststellen](integration-guide-programmers/legacy/notes-technical/preflight-feature.md)
+            + [(Verouderd) MVPD&#39;s toestaan in het dialoogvenster Selectie](integration-guide-programmers/legacy/notes-technical/allow-mvpd-selectn-dialog.md)
+            + [(Verouderd) Voorkomen dat MVPD&#39;s het dialoogvenster Selectie weergeven](integration-guide-programmers/legacy/notes-technical/prevent-mvpd-selectn-dialog.md)
+         + (Verouderd) Problemen oplossen {#troubleshooting}
+            + [(Verouderd) Charles Proxy gebruiken](integration-guide-programmers/legacy/notes-technical/using-charles-proxy.md)
+            + [(Verouderd) Controle van Adobe Pass Adobe PayTV-controle](integration-guide-programmers/legacy/notes-technical/monitoring-adobe-pay-tv-pass.md)
+            + [(Verouderd) Procedure voor het testen van verificatie- en autorisatiestromen met de testsite voor de Adobe-API](integration-guide-programmers/legacy/notes-technical/test-authn-authz-flows-using-adobes-api-test-site.md)
    + [Overzicht van de integratiegids voor programmeerprogramma&#39;s](integration-guide-programmers/programmer-integration-guide-overview.md)
-   + [Draaimechanisme](integration-guide-programmers/throttling-mechanism.md)
-   + [Minimale systeemvereisten](integration-guide-programmers/minimum-system-requirements.md)
    + [Machtigingsstroom voor programmeerprogramma&#39;s](integration-guide-programmers/entitlement-flow.md)
    + [Gebruiksgevallen voor programmeerprogramma&#39;s](integration-guide-programmers/programmer-use-cases.md)
-   + [Clientgegevens doorgeven (apparaat, verbinding en toepassing)](integration-guide-programmers/passing-client-information-device-connection-and-application.md)
+   + [Draaimechanisme](integration-guide-programmers/throttling-mechanism.md)
+   + [Minimale systeemvereisten](integration-guide-programmers/minimum-system-requirements.md)
 + Integratiehandleiding voor MVPD&#39;s {#integration-guide-mvpds}
    + [Integratiefuncties](integration-guide-mvpds/mvpd-integr-features.md)
    + [Verificatie](integration-guide-mvpds/authn-usecase.md)
    + [Verificatie met het OAuth 2.0-protocol](integration-guide-mvpds/authn-oauth2-protocol.md)
    + [Toestemming](integration-guide-mvpds/authz-usecase.md)
    + [Preflight-autorisatie](integration-guide-mvpds/mvpd-preflight-authz.md)
-   + [MVPD Logout](integration-guide-mvpds/usecase-mvpd-logout.md)
+   + [MVPD-aanmelding](integration-guide-mvpds/usecase-mvpd-logout.md)
    + [Uitwisseling van metagegevens voor inhoud](integration-guide-mvpds/mvpd-content-metadata-exchange.md)
    + [Gegevensuitwisseling van gebruikers](integration-guide-mvpds/mvpd-user-metadata-exchng.md)
    + [Proxy MVPD-webservice](integration-guide-mvpds/proxy-mvpd-webserv.md)
-   + [Proxy MVPD SAML integratie](integration-guide-mvpds/proxy-mvpd-saml-int.md)
+   + [Proxy MVPD SAML-integratie](integration-guide-mvpds/proxy-mvpd-saml-int.md)
    + [Serviceleverancier](integration-guide-mvpds/serv-provider-scoping.md)
-   + [MVPD staat IP adressen toe](integration-guide-mvpds/mvpd-listing-ip-addres.md)
+   + [MVPD staat IP-adressen toe](integration-guide-mvpds/mvpd-listing-ip-addres.md)
 + Handboek voor TVE-dashboard {#user-guide-tve-dashboard}
    + [Overzicht van TVE-dashboard](/help/authentication/user-guide-tve-dashboard/tve-dashboard-overview.md)
    + [Omgevingen](/help/authentication/user-guide-tve-dashboard/tve-dashboard-environments.md)
@@ -221,7 +261,6 @@ ht-degree: 2%
    + [Integraties](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md)
    + [Rapporten](/help/authentication/user-guide-tve-dashboard/tve-dashboard-reports.md)
    + [Wijzigingenlogboek](/help/authentication/user-guide-tve-dashboard/tve-dashboard-changes-log.md)
-   + [Gebruikershandleiding voor TVE Dashboard](user-guide-tve-dashboard/tve-dashboard-user-guide.md)
 + Opmerkingen bij de release {#release-notes}
    + 2024 {#release-notes-2024}
       + [Opmerkingen bij de release Adobe Pass Authentication 3.0.3](notes-releases/auth-rn-303.md)
@@ -251,40 +290,6 @@ ht-degree: 2%
       + [Opmerkingen bij de release Adobe Pass Authentication JavaScript 4.4.0](notes-releases/authn-rn-javascript-440.md)
       + [Opmerkingen bij de release Adobe Pass Authentication iOS / tvOS 3.7.0](notes-releases/authn-rn-ios-tvos-370.md)
 + Technische opmerkingen {#tech-notes}
-   + Omgevingen {#tech-notes-environments}
-      + [De Adobe omgevingen begrijpen](notes-technical/understanding-the-adobe-environments.md)
-      + [Uw omgeving instellen en testen in een proefversie](notes-technical/setting-up-your-environment-and-testing-in-prequal.md)
-      + [Verificatie- en autorisatiestromen testen met de testsite voor Adobe API](notes-technical/test-authn-authz-flows-using-adobes-api-test-site.md)
-   + Gebruikerservaring {#tech-notes-user-experience}
-      + [Hoe te om de MVPD login pagina van iFrame aan popup te migreren](notes-technical/migr-mvpd-login-iframe-popup.md)
-      + [Preflight-functie: Het probleem inschakelen, oplossen of vaststellen](notes-technical/preflight-feature.md)
-      + [MVPD&#39;s toestaan in het dialoogvenster Selectie](notes-technical/allow-mvpd-selectn-dialog.md)
-      + [Voorkomen dat MVPD&#39;s het selectiedialoogvenster weergeven](notes-technical/prevent-mvpd-selectn-dialog.md)
-   + REST API V1 {#tech-notes-rest-api-v1}
-      + [Implementatie van de API zonder client - foutcodes / berichten met mogelijke reden / oorzaak](notes-technical/clientless-api-implementation-error-codes-messages-with-probable-reason-cause.md)
-      + [Clientless API Flow bij afwezigheid van apparaat-id](notes-technical/clientless-api-flow-in-the-absence-of-device-id.md)
-      + [Zonder clip: gebruik geen &#39;&amp;&#39;reg_code in /authenticate Request](notes-technical/clientless-avoid-using-reg-code-in-authenticate-request.md)
-      + [Adobe Pass Entitlement Services inschakelen voor een programmeur op Xbox 360 en XboxOne-client](notes-technical/enabling-primetime-entitlement-services-for-a-programmer-on-xbox-360-and-xboxone-clientless-solution.md)
-      + [Apparaattype en afmetingen zonder clip](notes-technical/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)
-   + SDK&#39;s {#tech-notes-sdks}
-      + [Certificaten Vragen en antwoorden](notes-technical/certificates-qa.md)
-      + [Gebruikersnaam](notes-technical/understanding-user-ids.md)
-      + JavaScript SDK {#tech-notes-javascript-sdk}
-         + [Trackingpreventiebeoordeling - Apple Safari](notes-technical/tracking-prevention-assessment-apple-safari.md)
-         + [Trackingpreventiebeoordeling - Google Chrome](notes-technical/tracking-prevention-assessment-google-chrome.md)
-         + [Cookies-updates - vlaggen SameSite en Secure](notes-technical/cookies-updates-samesite-and-secure-flags.md)
-         + [Tips voor foutopsporing](notes-technical/appendix-b-debugging-tips.md)
-      + Android SDK {#tech-notes-android-sdk}
-         + [Access Enabler Android SDK Single Sign-On (SSO) voor Android 10-apps](notes-technical/access-enabler-android-sdk-single-signon-sso-on-android-10-devices.md)
-         + [Adobe Pass Authentication and the Android 6 &quot;Marshmallow&quot; New Permissions Model](notes-technical/adobe-primetime-authentication-and-the-android-6-marshmallow-new-permissions-model.md)
-      + iOS/tvOS SDK {#tech-notes-ios-tvos-sdk}
-         + [WKWebView-ondersteuning op iOS SDK 3.1+](notes-technical/wkwebview-support-on-ios-sdk-31.md)
-         + [Ondersteuning voor SFSafariViewController op iOS SDK 3.2+](notes-technical/sfsafariviewcontroller-support-on-ios-sdk-32.md)
-         + [SSO op iOS bij gebruik van Adobe Pass Authentication Access Enabler](notes-technical/sso-on-ios-when-using-the-primetime-authentication-access-enabler.md)
-         + [iOS-verificatiefout - adobepass.ios.app is niet gevonden](notes-technical/ios-authentication-error-adobepassiosapp-cannot-be-found.md)
-         + [Tijdelijke controle opnieuw instellen op iOS](notes-technical/reset-temp-pass-on-ios.md)
-         + [Fouten opsporen in de AccessEnabler iOS/tvOS SDK met behulp van console-app-logboeken](notes-technical/debugging-the-accessenabler-iostvos-sdk-using-console-app-logs.md)
-         + [Upgradepad voor iOS/tvOS 3.7.0 inschakelen](notes-technical/accessenabler-iostvos-370-upgrade-path.md)
-   + Problemen oplossen {#tech-notes-troubleshooting}
-      + [Charles Proxy gebruiken](notes-technical/using-charles-proxy.md)
-      + [Adobe Pass Adobe PayPal-controle](notes-technical/monitoring-adobe-pay-tv-pass.md)
+   + Omgevingen {#environments}
+      + [De Adobe omgevingen begrijpen](notes-technical/environments/understanding-the-adobe-environments.md)
+      + [Uw omgeving instellen en testen in een proefversie](notes-technical/environments/setting-up-your-environment-and-testing-in-prequal.md)

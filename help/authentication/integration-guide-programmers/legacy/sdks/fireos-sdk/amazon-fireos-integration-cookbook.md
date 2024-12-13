@@ -2,14 +2,14 @@
 title: Amazon FireOS Integration Cookbook
 description: Amazon FireOS Integration Cookbook
 exl-id: 1982c485-f0ed-4df3-9a20-9c6a928500c2
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '1424'
+source-wordcount: '1425'
 ht-degree: 0%
 
 ---
 
-# Amazon FireOS Integration Cookbook {#amazon-fireos-integration-cookbook}
+# (Verouderd) Amazon FireOS Integration Cookbook {#amazon-fireos-integration-cookbook}
 
 >[!NOTE]
 >
@@ -70,7 +70,7 @@ De het netwerkactiviteit van `AccessEnabler` vindt in een verschillende draad pl
 
    - [navigateToUrl(url)](#$navigateToUrl)
 
-      - Deze methode, die is genegeerd in AmazonFireOS SDK, wordt gebruikt op Android-platforms waar deze wordt geactiveerd door `getAuthentication()` nadat de gebruiker een MVPD heeft geselecteerd.  De parameter `url` geeft de locatie van de aanmeldingspagina van de MVPD.
+      - Deze methode, die is genegeerd in AmazonFireOS SDK, wordt gebruikt op Android-platforms waar deze wordt geactiveerd door `getAuthentication()` nadat de gebruiker een MVPD heeft geselecteerd.  De parameter `url` biedt de locatie van de MVPD-aanmeldingspagina.
 
    - [` sendTrackingData(event, data)`](#$sendTrackingData)
 
@@ -164,7 +164,7 @@ De parameter `event` geeft aan welke machtigingsgebeurtenis heeft plaatsgevonden
 
 1. Roep [`getAuthorization()`](#$getAuthZ) aan om de machtigingsstroom te starten.
 
-   Afhankelijkheid: geldige ResourceID(s) overeengekomen met de MVPD(s).
+   Afhankelijkheid: geldige ResourceID(&#39;s) overeengekomen met de MVPD(s).
 
    **Nota:** ResourceIDs zou het zelfde moeten zijn als die gebruikt op andere apparaten of platforms, en zal het zelfde over MVPDs zijn.
 
@@ -194,6 +194,6 @@ De parameter `event` geeft aan welke machtigingsgebeurtenis heeft plaatsgevonden
 
 ### F. Afmeldingsstroom {#logout_flow}
 
-1. Roep [`logout()`](#$logout) aan om de gebruiker af te melden. In `AccessEnabler` worden alle in de cache opgeslagen waarden en tokens die de gebruiker voor de huidige MVPD heeft verkregen, gewist voor alle aanvragers die de aanmelding delen via Single Sign On. Nadat de cache is verwijderd, roept `AccessEnabler` de server aan om de sessies aan de serverzijde op te schonen.  Merk op dat aangezien de servervraag in SAML kon resulteren die aan IdP (dit staat voor de zittingsschoonmaak op de kant IdP toe) wordt omgeleid, deze vraag moet alle omleidingen volgen. Om deze reden, zal deze vraag binnen een controle WebView worden behandeld, onzichtbaar voor de gebruiker.
+1. Roep [`logout()`](#$logout) aan om de gebruiker af te melden. In `AccessEnabler` worden alle in de cache opgeslagen waarden en tokens die de gebruiker voor de huidige MVPD heeft opgehaald, gewist voor alle aanvragers die de aanmelding delen via Single Sign On. Nadat de cache is verwijderd, roept `AccessEnabler` de server aan om de sessies aan de serverzijde op te schonen.  Merk op dat aangezien de servervraag in SAML kon resulteren die aan IdP (dit staat voor de zittingsschoonmaak op de kant IdP toe) wordt omgeleid, deze vraag moet alle omleidingen volgen. Om deze reden, zal deze vraag binnen een controle WebView worden behandeld, onzichtbaar voor de gebruiker.
 
    **Nota:** de logout stroom verschilt van de authentificatiestroom in die zin dat de gebruiker niet wordt vereist om met WebView op om het even welke manier in wisselwerking te staan. Aldus is het mogelijk (en geadviseerd) om de controle WebView onzichtbaar (d.w.z.: verborgen) tijdens het logout proces te maken.

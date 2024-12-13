@@ -2,14 +2,14 @@
 title: REST API Reference
 description: Referentie van rustapi
 exl-id: 67e4639e-db0b-4400-bb81-e214263e8395
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '654'
 ht-degree: 2%
 
 ---
 
-# REST API Reference {#rest-api-reference}
+# (Verouderd) REST API Reference {#rest-api-reference}
 
 >[!NOTE]
 >
@@ -57,8 +57,8 @@ In de onderstaande tabel staan de beschikbare webservices voor de clientless-aan
 | 1. | [&lt;REGGIE_FQDN>/reggie/v1/ </br> {requestorId} /regcode ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md) | Retourneert willekeurig gegenereerde registratiecode en inlogpagina-URI | 2 | Adobe </br> Reg de Dienst van de Code | Slim apparaat |
 | 2. | [&lt;REGGIE_FQDN>/reggie/v1/ </br> {requestorId} /regcode/ </br> {registrationCode} ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/return-registration-record.md) | Hiermee wordt de registratie-code met de registratiecode UUID, de registratiecode en de hashcomponent-id geretourneerd | 8 | Adobe </br> Reg de Dienst van de Code | Adobe Pass-verificatie |
 | 3. | [&lt;SP_FQDN>/api/v1/config/ </br> {requestorId} ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/provide-mvpd-list.md) | Keert lijst van gevormde MVPDs voor de aanvrager terug | 5 | Adobe </br> de authentificatie </br> Dienst van Adobe Pass </br> | Aanmeldings </br> Web </br> App |
-| 4. | [&lt;SP_FQDN>/api/v1/authenticate](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/initiate-authentication.md) | Hiermee wordt het AuthN-proces gestart door de MVPD-selectiegebeurtenis op de hoogte te stellen. Creeert een verslag op authentificatiegegevensbestand, dat in overeenstemming wordt gebracht wanneer een succesvolle reactie van MVPD wordt ontvangen (Stap 13) | 7 | Adobe </br> de authentificatie </br> Dienst van Adobe Pass </br> | Aanmeldings </br> Web </br> App |
-| 5. | SAML Assertion Consumer | Bestaande SAML-workflow tussen Adobe Pass-verificatie en MVPD | 13 | Adobe Pass </br> authentificatie </br> de Dienst | Adobe Pass-verificatie |
+| 4. | [&lt;SP_FQDN>/api/v1/authenticate](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/initiate-authentication.md) | Hiermee wordt het AuthN-proces gestart door de MVPD-selectiegebeurtenis op de hoogte te stellen. Hiermee maakt u een record in een verificatiedatabase die wordt afgestemd wanneer een geslaagde reactie van MVPD wordt ontvangen (stap 13) | 7 | Adobe </br> de authentificatie </br> Dienst van Adobe Pass </br> | Aanmeldings </br> Web </br> App |
+| 5. | SAML Assertion Consumer | Bestaande SAML-workflow tussen Adobe Pass Authentication en MVPD | 13 | Adobe Pass </br> authentificatie </br> de Dienst | Adobe Pass-verificatie |
 | 6. | [&lt;SP_FQDN>/api/v1/checkauthn/ </br> {registrationCode} ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/check-authentication-flow-by-second-screen-web-app.md) | De Web App van de Login kan controleren of de poging login stroom succesvol was |                                                                                             | Adobe Pass </br> -verificatie   </br> Service | Aanmelden   </br> Web   </br> App |
 | 7. | [&lt;SP_FQDN>/api/v1/tokens/authn](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-authentication-token.md) | Hiermee worden metagegevens opgehaald die betrekking hebben op AuthN-token | 15 | Adobe Pass </br> authentificatie </br> de Dienst | Slim apparaat |
 | 8. | [&lt;REGGIE_FQDN>/reggie/v1/ </br> {requestorId} /regcode/ </br> {registrationCode} ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/delete-registration-record.md) | Hiermee verwijdert u de reg-coderecord en geeft u de reg-code vrij voor hergebruik | 16 | Adobe </br> Reg de Dienst van de Code | Adobe Pass-verificatie |

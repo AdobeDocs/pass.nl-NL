@@ -1,15 +1,15 @@
 ---
-title: Overzicht van JavaScript SDK
-description: Overzicht van JavaScript SDK
+title: JavaScript SDK - Overzicht
+description: JavaScript SDK - Overzicht
 exl-id: 8756c804-a4c1-4ee3-b2b9-be45f38bdf94
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '511'
 ht-degree: 0%
 
 ---
 
-# Overzicht van JavaScript SDK {#javascript-sdk-overview}
+# (Verouderd) JavaScript SDK - Overzicht {#javascript-sdk-overview}
 
 >[!NOTE]
 >
@@ -29,9 +29,9 @@ De algemene de machtigingsstroom van de Authentificatie van Adobe Pass wordt beh
 
 ## Het dialoogvenster MVPD-selectie maken {#creating-the-mvpd-selection-dialog}
 
-Om een gebruiker aan login aan hun MVPD en voor authentiek verklaard te worden, moet uw pagina of speler een manier voor de gebruiker verstrekken om hun MVPD te identificeren. Een standaardversie van een MVPD selectiedialoog wordt verstrekt voor ontwikkeling. Voor productiegebruik, moet u uw eigen selecteur uitvoeren MVPD.
+Een gebruiker kan zich alleen aanmelden bij de MVPD en vervolgens worden geverifieerd als de pagina of speler de gebruiker een manier biedt om zijn of haar MVPD te identificeren. Er is een standaardversie van een dialoogvenster voor MVPD-selectie beschikbaar voor ontwikkeling. Voor productiegebruik moet u uw eigen MVPD-kiezer implementeren.
 
-Als u reeds weet wie de leverancier van de klant is, kunt u [ MVPD programmatically plaatsen ](/help/authentication/home.md), zonder gebruikersinteractie. De techniek is het zelfde, maar negeert de stap om het de dialoogvakje van de Selecteur van de Leverancier aan te halen en de klant te vragen om hun MVPD te selecteren.
+Als u reeds weet wie de leverancier van de klant is, kunt u [ MVPD programmatically plaatsen ](/help/authentication/home.md), zonder gebruikersinteractie. De techniek is hetzelfde, maar passeert de stap om het dialoogvenster Provider aan te roepen en de klant te vragen zijn of haar MVPD te selecteren.
 
 ## De serviceprovider weergeven {#displaying-the-service-provider}
 
@@ -76,7 +76,7 @@ Het volgende codevoorbeeld toont aan hoe te om de dienstverlener voor de huidige
 ```
 
 
-**JavaScript** Dit dossier van JavaScript vraagt Toegelaten voor de huidige leverancier als de gebruiker reeds het programma wordt geopend, en toont het resultaat in de paginasectie die voor het wordt gereserveerd. Het voert ook een MVPD selecteerdialoog uit:
+**JavaScript** Dit dossier van JavaScript vraagt Toegelaten voor de huidige leverancier als de gebruiker reeds het programma wordt geopend, en toont het resultaat in de paginasectie die voor het wordt gereserveerd. Het implementeert ook een MVPD-selectordialoogvenster:
 
 ```JS
     $(function() {
@@ -207,7 +207,7 @@ In sommige gevallen is de speler niet verantwoordelijk voor het afhandelen van g
 
 >[!NOTE]
 >
->Als de gebruiker de computer lang genoeg inactief laat om de tokens te laten verlopen, kan hij of zij nog steeds terugkeren naar zijn of haar sessie en met succes het afmelden starten. De Authentificatie van Adobe Pass zorgt ervoor dat alle tokens worden geschrapt en MVPD meedeelt om hun zitting te schrappen, eveneens.
+>Als de gebruiker de computer lang genoeg inactief laat om de tokens te laten verlopen, kan hij of zij nog steeds terugkeren naar zijn of haar sessie en met succes het afmelden starten. De Authentificatie van Adobe Pass zorgt ervoor dat alle tokens worden geschrapt en deelt MVPD mee om hun zitting te schrappen, eveneens.
 
 De volgende JavaScript-code demonstreert het afmelden (verifiëren) van een momenteel geverifieerde gebruiker:
 

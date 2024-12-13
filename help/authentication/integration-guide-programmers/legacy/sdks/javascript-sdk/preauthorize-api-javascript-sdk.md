@@ -2,14 +2,14 @@
 title: Voorvoegsel
 description: JavaScript vooraf autoriseren
 exl-id: b7493ca6-1862-4cea-a11e-a634c935c86e
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '1465'
+source-wordcount: '1466'
 ht-degree: 0%
 
 ---
 
-# Voorvoegsel {#js-preauthorize}
+# (Verouderd) Vooraf autoriseren {#js-preauthorize}
 
 >[!NOTE]
 >
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 De methode van de preauthorize API moet door toepassingen worden gebruikt om pre-vergunningsbesluiten voor één of meerdere middelen te verkrijgen. De aanvraag van de API voor voorafgaande toestemming moet worden gebruikt voor UI-tips en/of het filteren van inhoud. Een daadwerkelijke vergunning API verzoek moet worden gemaakt alvorens gebruikerstoegang tot de gespecificeerde middelen toe te staan.
 
-Als er een onverwachte fout optreedt (bijvoorbeeld netwerkprobleem en MVPD-autorisatiepunt niet beschikbaar) wanneer een aanvraag voor een voorafgaande API wordt verwerkt door de Adobe Pass-verificatieservices, wordt er een of meer afzonderlijke foutinformatie opgenomen voor de betrokken bronnen als onderdeel van het resultaat van de eerdere API-reactie.
+Als er een onverwachte fout optreedt (bijvoorbeeld netwerkprobleem en MVPD-autorisatiepunt niet beschikbaar) wanneer een API-aanvraag vooraf autoriseren wordt verwerkt door de Adobe Pass-verificatieservices, wordt een of meer afzonderlijke foutinformatie opgenomen voor de betrokken bronnen als onderdeel van het resultaat van de eerdere API-reactie.
 
 ### public preauthorize(request: PreauthorizeRequest, callback: AccessEnablerCallback&lt;any>): void {#preauth-method}
 
@@ -39,7 +39,7 @@ Als er een onverwachte fout optreedt (bijvoorbeeld netwerkprobleem en MVPD-autor
 
 * Hiermee stelt u de lijst met bronnen in waarvoor u voorafgaande autorisatiebeslissingen wilt verkrijgen.
 * Het is verplicht deze in te stellen voor het gebruik van de voorafgaande autorisatie-API.
-* Elk element in de lijst moet een Koord zijn die of de waarde van middelidentiteitskaart of het mediaRSS fragment vertegenwoordigen dat met MVPD moet worden overeengekomen.
+* Elk element in de lijst moet een tekenreeks zijn die de bron-id-waarde vertegenwoordigt of het media-RSS-fragment dat met de MVPD moet worden overeengekomen.
 * Deze methode stelt de informatie alleen in in de context van de huidige objectinstantie `PreauthorizeRequestBuilder` , die de ontvanger is van deze methodeaanroep.
 
 * Als u een werkelijke `PreauthorizeRequest` wilt maken, kunt u de methode van `PreauthorizeRequestBuilder` bekijken:
@@ -72,7 +72,7 @@ public func build() -> PreauthorizeRequest
 * Deze methode instantieert telkens wanneer een nieuw `PreauthorizeRequest` -object wordt aangeroepen.
 * Deze methode gebruikt de waarden die vooraf zijn ingesteld in de context van de huidige objectinstantie `PreauthorizeRequestBuilder` , die de ontvanger is van deze methodeaanroep.
 * Houd er rekening mee dat deze methode geen bijwerkingen veroorzaakt.
-* daarom verandert het de status van de SDK of de status van de objectinstantie `PreauthorizeRequestBuilder` , die de ontvanger is van deze methodeaanroep, niet.
+* daarom wijzigt de methode de status van de SDK of de status van de objectinstantie `PreauthorizeRequestBuilder` , die de ontvanger is van deze methodeaanroep, niet.
 * Dit betekent dat opeenvolgende aanroepen van deze methode voor dezelfde ontvanger verschillende nieuwe `PreauthorizeRequest` -objectinstanties maken, maar dezelfde informatie hebben, voor het geval de waarden die zijn ingesteld op `PreauthorizeRequestBuilder` waar ze niet tussen de aanroepen zijn gewijzigd.
 * Als u geen van de verschafte informatie (bronnen en caching) hoeft bij te werken, kunt u de instantie PreauthorizeRequest opnieuw gebruiken voor meerdere toepassingen van de API voor voorafgaande toestemming.
 * `@returns {PreauthorizeRequest}`
@@ -81,13 +81,13 @@ public func build() -> PreauthorizeRequest
 
 #### onResponse(resultaat: T); {#on-response-result}
 
-* De callback van de reactie die door SDK wordt geroepen toen de preauthorize API verzoek werd vervuld.
+* Callback van de reactie die door de SDK wordt aangeroepen toen de voorafgaande autorisatie-API-aanvraag werd uitgevoerd.
 * Het resultaat is een geslaagd resultaat of een foutresultaat met een status.
 * `@param {T} result`
 
 #### onFailed(result: T); {#on-failure-result}
 
-* De mislukte callback die door SDK wordt geroepen wanneer het preauthorize API verzoek kon niet worden onderhouden.
+* De callback van de mislukking die door de SDK wordt geroepen wanneer het preauthorize API verzoek kon niet worden onderhouden.
 * Het resultaat is een mislukkingsresultaat dat een status bevat.
 * `@param {T} result`
 
@@ -117,12 +117,12 @@ public func build() -> PreauthorizeRequest
 
 #### openbare boodschap: tekenreeks; {#public-msg-string}
 
-* Het gedetailleerde bericht dat in sommige gevallen wordt verstrekt door de MVPD toestemmingseindpunten of door de degradatieregels van de Programmer.
+* De gedetailleerde boodschap die in sommige gevallen wordt verstrekt door de eindpunten van de MVPD-autorisatie of door de regels voor de achteruitgang van programmeurs.
 * Kan een lege tekenreeks of een `null` -waarde bevatten.
 
 #### publieke details: tekenreeks; {#public-details-strng}
 
-* Bevat een gedetailleerd bericht dat in sommige gevallen wordt verstrekt door de MVPD toestemmingseindpunten of door de degradatieregels van de Programmer.
+* Bevat een gedetailleerd bericht dat in sommige gevallen wordt verstrekt door de autorisatieeindpunten van MVPD of door de degradatieregels van Programmer.
 * Kan een lege tekenreeks of een `null` -waarde bevatten.
 
 
@@ -290,11 +290,11 @@ accessEnablerApi.preauthorize(request, callback);
      &quot;fout&quot;: 
      &quot;status&quot;: 40 3, 
      &quot;code&quot;: &quot;preauthentication_deny_by_mvpd&quot;, 
-     &quot;bericht&quot;: &quot;MVPD heeft een &quot;ontkennen\&quot;besluit teruggegeven wanneer het verzoeken van pre-vergunning voor het gespecificeerde middel.&quot;, 
+     &quot;bericht&quot;: &quot;De MVPD heeft een &quot;Weigeren\&quot;besluit teruggegeven toen het verzoeken van pre-vergunning voor de gespecificeerde middel.&quot;, 
      &quot;helpUrl&quot;: &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;, 
      &quot;actie&quot;: &quot;niets&quot;
      
-    },
+    , 
      {
      &quot;identiteitskaart&quot;: &quot;RES03&quot;, 
      &quot;geautoriseerd&quot;: waar 
@@ -361,29 +361,29 @@ accessEnablerApi.preauthorize(request, callback);
      &quot;fout&quot;: 
      &quot;status&quot;: 403, 
      &quot;code&quot;: &quot;preauthentication_deny_by_mvpd&quot;, 
-     &quot;bericht&quot;: &quot;MVPD heeft Keerde een &quot;Weigeren\&quot;besluit terug toen het verzoeken van pre-vergunning voor het gespecificeerde middel.&quot;, 
+     &quot;bericht&quot;: &quot;MVPD heeft a teruggekeerd Beslissing \ &quot;ontken\&quot;wanneer het verzoeken van pre-vergunning voor het gespecificeerde middel.&quot;, 
      &quot;helpUrl&quot;: &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;, 
      &quot;actie&quot;: &quot;niets&quot;
      
     , 
-     {
+     
      &quot;id&quot;: &quot;RES02&quot;, 
-     &quot;geautoriseerd&quot;: vals,
-    } &quot;error&quot;: {
+     &quot;geautoriseerd&quot;: vals, 
+     fout&quot;: 
      &quot;status&quot;: 403, 
      &quot;code&quot;: &quot;prepermission_by_mvpd&quot;, 
-     &quot;message&quot;: &quot;MVPD heeft een &quot;Weigering\&quot;besluit teruggegeven toen het verzoeken van pre-vergunning voor het gespecificeerde middel.&quot;, 
+     &quot;message&quot;: &quot;The MVPD has returned a \&quot;Deny\&quot; decisions when request pre-Authorisation for the specified resource.&quot;, 
      &quot;helpUrl&quot;: &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;, 
-    } &quot;actie&quot;: &quot;niets&quot;
+     &quot;actie&quot;: &quot;none&quot;
      
     , 
      {
-     &quot;identiteitskaart&quot;: &quot;RES03&quot;, 
-     &quot;toegestaan&quot;: vals, 
+     &quot;id&quot;: &quot;RES03&quot;, 
+     &quot;geautoriseerd&quot;: vals, 
      &quot;fout&quot;: 
      &quot;status&quot;: 403, 
      &quot;code&quot;: &quot;maximum_executing_time_over&quot;, 
-    &quot;message&quot;: &quot;The request did not complete in the maximum allowed time. Het opnieuw proberen van het verzoek zou de kwestie kunnen oplossen.&quot;, 
+     &quot;message&quot;: &quot;The request did not complete in the maximum allowed time. Het opnieuw proberen van het verzoek zou de kwestie kunnen oplossen.&quot;, 
      &quot;helpUrl&quot;: &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;, 
      &quot;actie&quot;: &quot;retry&quot;
      

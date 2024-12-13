@@ -2,14 +2,14 @@
 title: JavaScript SDK API-naslag
 description: JavaScript SDK API-naslag
 exl-id: 48d48327-14e6-46f3-9e80-557f161acd8a
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '2860'
+source-wordcount: '2861'
 ht-degree: 0%
 
 ---
 
-# JavaScript SDK API-naslag {#javascript-sdk-api-reference}
+# (Verouderd) JavaScript SDK API-naslag {#javascript-sdk-api-reference}
 
 >[!NOTE]
 >
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ## API-naslag {#api-reference}
 
-Deze functies stellen verzoeken om interactie met MVPD in werking. Alle vraag is asynchroon; u moet [ callbacks ](#callbacks) uitvoeren om de reacties te behandelen:
+Met deze functies worden aanvragen voor interactie met een MVPD gestart. Alle vraag is asynchroon; u moet [ callbacks ](#callbacks) uitvoeren om de reacties te behandelen:
 
 - [setRequestor()](#setReq)
 - [getAuthorization()](#getAuthZ)
@@ -40,12 +40,12 @@ Deze functies stellen verzoeken om interactie met MVPD in werking. Alle vraag is
 
 - *eindpunten* - Deze parameter is facultatief. Dit kan een van de volgende waarden zijn:
 
-   - Een serie die u toestaat om eindpunten voor authentificatie en vergunningsdiensten te specificeren die door Adobe worden verleend (verschillende instanties zouden voor het zuiveren doeleinden kunnen worden gebruikt). Als er meerdere URL&#39;s worden opgegeven, bestaat de MVPD-lijst uit de eindpunten van alle serviceproviders. Elke MVPD wordt geassocieerd met de snelste dienstverlener; namelijk de leverancier die eerst antwoordde en die die MVPD steunt. Standaard (als geen waarde is opgegeven) wordt de Adobe-serviceprovider gebruikt (<http://sp.auth.adobe.com/>).
+   - Een serie die u toestaat om eindpunten voor authentificatie en vergunningsdiensten te specificeren die door Adobe worden verleend (verschillende instanties zouden voor het zuiveren doeleinden kunnen worden gebruikt). Als er meerdere URL&#39;s worden opgegeven, bestaat de MVPD-lijst uit de eindpunten van alle serviceproviders. Elke MVPD is gekoppeld aan de snelste serviceprovider, dat wil zeggen de provider die eerst heeft gereageerd en die die MVPD ondersteunt. Standaard (als geen waarde is opgegeven) wordt de Adobe-serviceprovider gebruikt (<http://sp.auth.adobe.com/>).
 
   Voorbeeld:
    - `setRequestor("IFC", ["http://sp.auth-dev.adobe.com/adobe-services"])`
 
-- *opties* - een voorwerp JSON dat de waarde van identiteitskaart van de Toepassing, de waarde van identiteitskaart van de Bezoeker verfrist-minus montages (achtergrond login logout) en montages MVPD (iFrame) bevat. Alle waarden zijn optioneel.
+- *opties* - een voorwerp JSON dat de waarde van identiteitskaart van de Toepassing, de waarde van identiteitskaart van de Bezoeker verfrist-minus montages (achtergrond login logout) en de montages van MVPD (iFrame) bevat. Alle waarden zijn optioneel.
    1. Indien gespecificeerd, zou Experience Cloud bezoekerID op alle netwerkvraag worden gemeld die door de bibliotheek wordt uitgevoerd. De waarde kan later worden gebruikt voor geavanceerde analyserapporten.
    2. Als uniek herkenningsteken van de toepassing wordt gespecificeerd - `applicationId` - zal de waarde aan alle verdere vraag worden toegevoegd die door de toepassing als deel van de x-Apparaat-Info HTTP- kopbal wordt gemaakt. Deze waarde kan later van [ ESM ](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview.md) rapporten worden gehaald gebruikend de juiste vraag.
 
@@ -60,7 +60,7 @@ Deze functies stellen verzoeken om interactie met MVPD in werking. Alle vraag is
   })
 ```
 
-- Programmeur kan de montages met voeten treden MVPD die in de Authentificatie van Adobe Pass worden gevormd, door te specificeren als een iFrame of niet voor login (*iFrameRequired* sleutel) en de iFrame afmetingen (*iFrameWidth* en *iFrameHeight* sleutels) wordt vereist. Het JSON-object heeft de volgende sjabloon:
+- Programmeur kan de montages van MVPD met voeten treden die in de Authentificatie van Adobe Pass worden gevormd, door te specificeren als een iFrame of niet voor login (*iFrameRequired* sleutel) en de afmetingen iFrame (*iFrameWidth* en *iFrameHeight* sleutels) wordt vereist. Het JSON-object heeft de volgende sjabloon:
 
 ```JSON
     {  
@@ -84,14 +84,14 @@ Deze functies stellen verzoeken om interactie met MVPD in werking. Alle vraag is
 ```
 
 
-Alle top-level sleutels in het malplaatje hierboven zijn facultatief en hebben standaardwaarden (*backgroundLogin*, *backgroundLogut* zijn vals door gebrek, en mvpdConfig is ongeldig - betekenend dat geen montages MVPD worden met voeten getreden).
+Alle top-level sleutels in het malplaatje hierboven zijn facultatief en hebben standaardwaarden (*backgroundLogin*, *backgroundLogut* zijn vals door gebrek, en mvpdConfig is ongeldig - betekenend dat geen montages van MVPD worden met voeten getreden).
 
 
 - **Nota**: Het specificeren van ongeldige waarden/types voor de bovengenoemde parameters zal in ongedefinieerd gedrag resulteren.
 
 
 
-Hier is een voorbeeldconfiguratie voor het volgende scenario: het activeren van login en logout verfrist zich zonder, veranderend MVPD1 in volledige pagina-omleiding login (niet-iFrame) en MVPD2 aan iFrame login met width=500 en height=300:
+Hier volgt een voorbeeldconfiguratie voor het volgende scenario: het activeren van login en logout zonder vernieuwen, het veranderen van MVPD1 in volledig pagina-redirect login (niet-iFrame) en MVPD2 in login iFrame met width=500 en height=300:
 
 ```JSON
     {  
@@ -120,14 +120,14 @@ Hier is een voorbeeldconfiguratie voor het volgende scenario: het activeren van 
 
 ## getAuthorization(inResourceID, redirect_url) {#getauthorization(inresourceid,redirect_url)}
 
-**Beschrijving:** vraagt vergunning voor het gespecificeerde middel. Telkens als een klant probeert om tot een toegelaten middel toegang te hebben, roep deze functie om een kort-levend vergunningsteken van Toegang te verkrijgen Enabler. Middel IDs wordt overeengekomen met MVPD die vergunning verstrekt.
+**Beschrijving:** vraagt vergunning voor het gespecificeerde middel. Telkens als een klant probeert om tot een toegelaten middel toegang te hebben, roep deze functie om een kort-levend vergunningsteken van Toegang te verkrijgen Enabler. Resource IDs wordt overeengekomen met MVPD die vergunning verstrekt.
 
 Gebruikt het caching authentificatietoken voor de huidige klant. Als zulk een teken niet wordt gevonden, stelt eerst het authentificatieproces in werking, dan gaat met vergunning verder.
 
 **Parameters:**
 
 - `inResourceID` - De id van de bron waarvoor de gebruiker toestemming aanvraagt.
-- `redirect_url` - Geef optioneel een omleidings-URL op, zodat de gebruiker door het MVPD-autorisatieproces naar die pagina wordt geretourneerd in plaats van de pagina vanwaar de autorisatie is gestart.
+- `redirect_url` - Geef desgewenst een omleidings-URL op, zodat de gebruiker tijdens het autorisatieproces van MVPD naar die pagina terugkeert in plaats van naar de pagina vanwaar de autorisatie is gestart.
 
 
 **Toegelaten callbacks:** [ setToken () ](#settokeninrequestedresourceid-intoken-settokeninrequestedresourceidintoken) op succes, [ tokenRequestFailed ](#tokenrequestfailedinrequestedresourceid-inrequesterrorcode-inrequestdetailederrormessage-tokenrequestfailedinrequestedresourceidinrequesterrorcodeinrequestdetailederrormessage) op mislukking
@@ -144,13 +144,13 @@ Gebruikt het caching authentificatietoken voor de huidige klant. Als zulk een te
 
 ## getAuthentication(redirect_url) {#getauthentication(redirect_url}
 
-**Beschrijving:** Verzoekt authentificatie voor de huidige klant. Wordt doorgaans aangeroepen als reactie op een klik op een knop Aanmelden. Controleert op een in de cache opgeslagen verificatietoken voor de huidige klant. Als een dergelijk token niet wordt gevonden, wordt het verificatieproces gestart. Dit roept het gebrek of de douane leverancier-selectie dialoog aan, dan gebruikt de geselecteerde leverancier om aan de login van MVPD interface om te leiden.
+**Beschrijving:** Verzoekt authentificatie voor de huidige klant. Wordt doorgaans aangeroepen als reactie op een klik op een knop Aanmelden. Controleert op een in de cache opgeslagen verificatietoken voor de huidige klant. Als een dergelijk token niet wordt gevonden, wordt het verificatieproces gestart. Dit roept het standaard of aangepaste provider-selection dialoogvenster aan en gebruikt vervolgens de geselecteerde provider om naar de MVPD-aanmeldinterface te leiden.
 
 Als de verificatie is gelukt, wordt een verificatietoken voor de gebruiker gemaakt en opgeslagen. Als de authentificatie ontbreekt, keert de leverancier een aangewezen foutenmelding aan uw [ setAuthenticationStatus () terug ](#setauthenticationstatusisauthenticated-errorcode) callback.
 
 **Parameters:**
 
-- redirect_url - Naar keuze verstrek URL, zodat het de authentificatieproces van MVPD de gebruiker aan die pagina eerder dan de pagina terugkeert waarvan authentificatie werd in werking gesteld.
+- redirect_url - Verstrek naar keuze een omleidingsURL, zodat het de authentificatieproces van MVPD de gebruiker aan die pagina eerder dan de pagina terugkeert waarvan de authentificatie werd in werking gesteld.
 
 **geroepen Callbacks teweeggebracht:** [ setAuthenticationStatus () ](#setauthenticationstatusisauthenticated-errorcode), [ displayProviderDialog () ](#displayproviderdialogproviders-displayproviderdialogproviders), [ sendTrackingData () ](#sendtrackingdatatrackingeventtype-trackingdata-sendtrackingdatatrackingeventtypetrackingdata)
 
@@ -197,7 +197,7 @@ middelen.
 
 **Parameters:**
 
-- *middelen*: De middelenparameter is een serie van middelen waarvoor de vergunning zou moeten worden gecontroleerd. Elk element in de lijst moet een tekenreeks zijn die de bron-id vertegenwoordigt. Voor de bron-id gelden dezelfde beperkingen als voor de bron-id in de aanroep van `getAuthorization()` . Dit houdt in dat de bron-id een overeengekomen waarde is die is vastgesteld tussen de programmeur en de MVPD, of een RSS-fragment voor media.
+- *middelen*: De middelenparameter is een serie van middelen waarvoor de vergunning zou moeten worden gecontroleerd. Elk element in de lijst moet een tekenreeks zijn die de bron-id vertegenwoordigt. Voor de bron-id gelden dezelfde beperkingen als voor de bron-id in de aanroep van `getAuthorization()` , dat wil zeggen dat het een overeengekomen waarde betreft die is vastgesteld tussen de programmeur en de MVPD, of een RSS-fragment voor media.
 
 </br>
 
@@ -208,7 +208,7 @@ Deze API-variant is beschikbaar vanaf JS SDK versie 4.0
 
 **Parameters:**
 
-- *middelen*: De middelenparameter is een serie van middelen waarvoor de vergunning zou moeten worden gecontroleerd. Elk element in de lijst moet een tekenreeks zijn die de bron-id vertegenwoordigt. Voor de bron-id gelden dezelfde beperkingen als voor de bron-id in de aanroep van `getAuthorization()` . Dit houdt in dat de bron-id een overeengekomen waarde is die is vastgesteld tussen de programmeur en de MVPD, of een RSS-fragment voor media.
+- *middelen*: De middelenparameter is een serie van middelen waarvoor de vergunning zou moeten worden gecontroleerd. Elk element in de lijst moet een tekenreeks zijn die de bron-id vertegenwoordigt. Voor de bron-id gelden dezelfde beperkingen als voor de bron-id in de aanroep van `getAuthorization()` , dat wil zeggen dat het een overeengekomen waarde betreft die is vastgesteld tussen de programmeur en de MVPD, of een RSS-fragment voor media.
 
 - *geheime voorgeheugen*: Of om het interne geheime voorgeheugen te gebruiken wanneer het controleren op preauthorised middelen. Dit is een facultatieve parameter, die **waar** in gebreke blijft. Als de waarde true is, is het gedrag identiek aan de bovenstaande API. Dit betekent dat volgende aanroepen naar deze functie een interne cache gebruiken om vooraf geautoriseerde resource op te lossen. Het overgaan van **vals** voor deze parameter zal het interne geheime voorgeheugen onbruikbaar maken, resulterend in een servervraag telkens als **checkPreauthorisedResources** API wordt geroepen.
 
@@ -226,7 +226,7 @@ Deze API-variant is beschikbaar vanaf JS SDK versie 4.0
 Er zijn twee typen metagegevens:
 
 - **Statische** (het teken van de Authentificatie TTL, het tekenTTL van de Token van de Vergunning, en identiteitskaart van het Apparaat)
-- **Metagegevens van de Gebruiker** (Dit omvat gebruiker specifieke informatie die van MVPD aan het apparaat van de gebruiker tijdens de Authentificatie en/of de stromen van de Vergunning wordt overgegaan)
+- **Metagegevens van de Gebruiker** (Dit omvat gebruiker specifieke informatie die van MVPD tot het apparaat van de gebruiker tijdens de Authentificatie en/of de stromen van de Vergunning wordt overgegaan)
 
 **Meer Informatie:** [ Metagegevens van de Gebruiker ](#UserMetadata)
 
@@ -245,11 +245,11 @@ Er zijn twee typen metagegevens:
 
    - `"encryptedZip"` - Gecodeerde postcode
 
-   - `"householdID"` - Huishoudelijke id. Als een MVPD geen subaccounts ondersteunt, is dit identiek aan userID.
+   - `"householdID"` - Huishoudelijke id. Als een MVPD geen subaccounts ondersteunt, is dit dezelfde als de gebruikersnaam.
 
    - `"maxRating"` - Maximale ouderlijke classificatie voor de gebruiker
 
-   - `"userID"` - De gebruikers-id. In het geval waarin een MVPD subaccounts ondersteunt en de gebruiker niet het hoofdaccount is, zal de gebruikersnaam anders zijn dan de huishoudelijke id.
+   - `"userID"` - De gebruikers-id. Als een MVPD subaccounts ondersteunt en de gebruiker niet de hoofdaccount is, is de gebruikersnaam anders dan de huishoudelijke id.
 
    - `"channelID"` - De lijst met kanalen die de gebruiker mag bekijken
 
@@ -267,7 +267,7 @@ Er zijn twee typen metagegevens:
 
    - `"acctParentID"` - Bovenliggende id van account
 
-  **Nota**: De daadwerkelijke Meta-gegevens van de Gebruiker beschikbaar aan een Programmer hangt van af wat MVPD beschikbaar maakt.  Zie [ Metagegevens van de Gebruiker ](#UserMetadata) voor de huidige lijst van beschikbare Metagegevens van de Gebruiker.
+  **Nota**: De daadwerkelijke Meta-gegevens van de Gebruiker beschikbaar aan een Programmer hangt van af wat een MVPD ter beschikking stelt.  Zie [ Metagegevens van de Gebruiker ](#UserMetadata) voor de huidige lijst van beschikbare Metagegevens van de Gebruiker.
 
 
 Bijvoorbeeld:
@@ -302,7 +302,7 @@ Bijvoorbeeld:
 
 ## setSelectedProvider(providerid) {#setSelectedProvider}
 
-**Beschrijving:** Vraag deze functie wanneer de gebruiker een MVPD van uw leverancier-selectie UI heeft geselecteerd om de leveranciersselectie naar Toegelaten te verzenden of deze functie met een ongeldige parameter te roepen voor het geval dat de gebruiker uw leverancier-selectie UI zonder een leverancier te selecteren verwierp.
+**Beschrijving:** Vraag deze functie wanneer de gebruiker een MVPD van uw leverancier-selectie UI heeft geselecteerd om de leveranciersselectie naar Toegelaten te verzenden of deze functie met een ongeldige parameter te roepen voor het geval de gebruiker uw leverancier-selectie UI zonder een leverancier te selecteren verwierp.
 
 **Callbacks
 teweeggebracht:**[ setAuthentcationStatus () ](#setauthenticationstatusisauthenticated-errorcode), [ sendTrackingData () ](#sendtrackingdatatrackingeventtype-trackingdata-sendtrackingdatatrackingeventtypetrackingdata)
@@ -370,11 +370,11 @@ U moet deze callbacks uitvoeren om de reacties op uw asynchrone verzoekvraag te 
 
 ## setConfig(configXML) {#setconfig(configXML)}
 
-**Beschrijving:** voer deze callback uit om de configuratieinformatie en lijst te ontvangen MVPD.
+**Beschrijving:** voer deze callback uit om de configuratieinformatie en de lijst van MVPD te ontvangen.
 
 **Parameters:**
 
-- *configXML*: xml voorwerp die de configuratie voor de huidige VERZOEKER met inbegrip van de lijst houden MVPD.
+- *configXML*: xml voorwerp die de configuratie voor de huidige VERZOEKER met inbegrip van de lijst van MVPD houden.
 
 
 **teweeggebracht door:** [ setRequestor () ](#setrequestor-inrequestorid-endpoints-optionssetreq)
@@ -409,7 +409,7 @@ U moet deze callbacks uitvoeren om de reacties op uw asynchrone verzoekvraag te 
 
 ## createIFrame(inWidth, inHeight) {#createIFrame(inWidth,inHeight)}
 
-**Beschrijving:** voer deze callback uit als de gebruiker een MVPD selecteerde die een iFrame vereist waarin om zijn authentificatie login pagina UI te tonen.
+**Beschrijving:** voer deze callback uit als de gebruiker een MVPD selecteerde die iFrame vereist waarin om zijn authentificatie login pagina UI te tonen.
 
 **teweeggebracht door:**[ setSelectedProvider () ](#setselectedproviderproviderid-setselectedprovider)
 
@@ -423,7 +423,7 @@ U moet deze callbacks uitvoeren om de reacties op uw asynchrone verzoekvraag te 
 
 >[!NOTE]
 > 
->Als u het huidige, [ Geavanceerde Fout die ](/help/authentication/integration-guide-programmers/features-standard/error-reporting/error-reporting.md) systeem meldt, kunt u de parameter negeren errorCode naar deze functie wordt verzonden die.  Nochtans, is de isAuthenticated vlag nog van gebruik voor het volgen van de authentificatiestatus van een gebruiker in de machtigingsstroom
+>Als u het huidige, [ Geavanceerde Fout die ](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md) systeem meldt, kunt u de parameter negeren errorCode naar deze functie wordt verzonden die.  Nochtans, is de isAuthenticated vlag nog van gebruik voor het volgen van de authentificatiestatus van een gebruiker in de machtigingsstroom
 
 
 **Parameters:**
@@ -463,7 +463,7 @@ U moet deze callbacks uitvoeren om de reacties op uw asynchrone verzoekvraag te 
 
 Geeft het gebeurtenistype en een array van bijbehorende informatie door. Gebeurtenistypen zijn:
 
-| mvpdSelection | De gebruiker selecteerde een MVPD in een leverancier-selectie dialoog. |
+| mvpdSelection | De gebruiker heeft een MVPD geselecteerd in een dialoogvenster voor het selecteren van leveranciers. |
 | ----------------------- | --------------------------------------------------------- |
 | authenticationDetection | Een verificatiecontrole is voltooid. |
 | authentication | Een vergunningsverzoek is volledig. |
@@ -517,7 +517,7 @@ Gegevens zijn specifiek voor elk gebeurtenistype:
 
 ## tokenRequestFailed(inRequestedResourceID, inRequestErrorCode, inRequestDetailErrorMessage) {#token-request-failed-error-msg}
 
-**Beschrijving:** voer deze callback uit die moet worden gesignaleerd wanneer een vergunning of een controle-vergunning verzoek is ontbroken. Kan optioneel door een MVPD worden gebruikt om een aangepast bericht te verstrekken dat door de programmeur moet worden getoond.
+**Beschrijving:** voer deze callback uit die moet worden gesignaleerd wanneer een vergunning of een controle-vergunning verzoek is ontbroken. Kan optioneel door een MVPD worden gebruikt om een aangepast bericht weer te geven dat door de programmeur moet worden weergegeven.
 
 >[!IMPORTANT]
 >
@@ -527,7 +527,7 @@ Gegevens zijn specifiek voor elk gebeurtenistype:
 
 - *inRequestedResourceID* - een koord dat identiteitskaart van het Middel verstrekt die op het vergunningsverzoek werd gebruikt.
 - *inRequestErrorCode* - een koord dat de de foutencode van de Authentificatie van Adobe Pass toont, die op de reden voor de mislukking wijst; de mogelijke waarden zijn &quot;Gebruiker niet Voor authentiek verklaarde Fout&quot;en &quot;Gebruiker niet Toegelaten Fout&quot;; voor meer details, zie &quot;Callback foutencodes&quot;hieronder.
-- *inRequestDetailErrorMessage* - een extra beschrijvend koord geschikt voor vertoning. Als dit beschrijvende koord om het even welke reden niet beschikbaar is, verzendt de Authentificatie van Adobe Pass een leeg koord **(&quot;&quot;&quot;)**.  Dit kan door MVPD worden gebruikt om de berichten van de douanefout of verkoop-verwante berichten over te gaan. Als een abonnee bijvoorbeeld geen autorisatie voor een resource wordt verleend, kan de MVPD reageren met een instructie `*inRequestDetailedErrorMessage*` zoals: **&quot;U hebt momenteel geen toegang tot dit kanaal in uw pakket. Klik \*hier\* als u het pakket wilt bijwerken.&quot;** Het bericht wordt door de Authentificatie van Adobe Pass door deze callback tot de plaats van de Programmer overgegaan. De programmeur heeft dan de optie om het te tonen of te negeren. Adobe Pass-verificatie kan `*inRequestDetailedErrorMessage*` ook gebruiken om de programmeur op de hoogte te stellen van de voorwaarde die tot een fout kan hebben geleid. Bijvoorbeeld, **&quot;Een netwerkfout kwam voor toen het communiceren met de de vergunningsdienst van de leverancier&quot;.**
+- *inRequestDetailErrorMessage* - een extra beschrijvend koord geschikt voor vertoning. Als dit beschrijvende koord om het even welke reden niet beschikbaar is, verzendt de Authentificatie van Adobe Pass een leeg koord **(&quot;&quot;&quot;)**.  Dit kan door MVPD worden gebruikt om de berichten van de douanefout of verkoop-verwante berichten over te gaan. Als een abonnee bijvoorbeeld geen autorisatie voor een resource wordt verleend, kan de MVPD reageren met een `*inRequestDetailedErrorMessage*` zoals: **&quot;U hebt momenteel geen toegang tot dit kanaal in uw pakket. Klik \*hier\* als u het pakket wilt bijwerken.&quot;** Het bericht wordt door de Authentificatie van Adobe Pass door deze callback tot de plaats van de Programmer overgegaan. De programmeur heeft dan de optie om het te tonen of te negeren. Adobe Pass-verificatie kan `*inRequestDetailedErrorMessage*` ook gebruiken om de programmeur op de hoogte te stellen van de voorwaarde die tot een fout kan hebben geleid. Bijvoorbeeld, **&quot;Een netwerkfout kwam voor toen het communiceren met de de vergunningsdienst van de leverancier&quot;.**
 
 
 
@@ -607,7 +607,7 @@ Bijvoorbeeld:
 
 ## selectedProvider(result) {#selectedProvider(result)}
 
-**Beschrijving:** voer deze callback uit om momenteel geselecteerde MVPD en het resultaat van authentificatie van huidige gebruiker te ontvangen die in de `result` parameter omhoog wordt verpakt. De parameter `result` is een object met de volgende eigenschappen:
+**Beschrijving:** voer deze callback uit om momenteel geselecteerde MVPD en het resultaat van authentificatie van huidige gebruiker te ontvangen die in de `result` parameter wordt verpakt. De parameter `result` is een object met de volgende eigenschappen:
 
 - **MVPD** momenteel geselecteerde MVPD, of ongeldig als geen MVPD werd geselecteerd.
 - **AE \_State** het resultaat van authentificatie voor de huidige gebruiker, één van &quot;Nieuwe Gebruiker&quot;, &quot;Gebruiker niet voor authentiek verklaard&quot;, of &quot;Gebruiker voor authentiek verklaard

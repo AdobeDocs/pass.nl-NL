@@ -2,14 +2,14 @@
 title: REST API Cookbook (Server-to-Server)
 description: Testen van API-cookboekserver op de server.
 exl-id: 36ad4a64-dde8-4a5f-b0fe-64b6c0ddcbee
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '1844'
+source-wordcount: '1845'
 ht-degree: 0%
 
 ---
 
-# REST API Cookbook (Server-to-Server) {#rest-api-cookbook-server-to-server}
+# (Verouderd) REST API Cookbook (Server-to-Server) {#rest-api-cookbook-server-to-server}
 
 >[!NOTE]
 >
@@ -36,9 +36,9 @@ In een werkende server-aan-server oplossing zijn de volgende componenten betrokk
 | | \[Optioneel\] AuthN-module | als het Streamen Apparaat een Agent van de Gebruiker (d.w.z. Browser van het Web) heeft, is de Module AuthN verantwoordelijk voor het voor authentiek verklaren van de gebruiker op MVPD IdP. |
 | \[Optioneel\] AuthN-apparaat | AuthN App | als het Streaming Apparaat geen Agent van de Gebruiker (d.w.z. Browser van het Web) heeft, is de Toepassing AuthN een Toepassing van het Web van de Programmer die van een afzonderlijk apparaat van de gebruiker gebruikend Webbrowser wordt betreden. |
 | Programmeringsinfrastructuur | Programmeringsservice | Een service die het streamingapparaat koppelt aan de Adobe Pass-service om verificatie- en autorisatiebeslissingen te verkrijgen. |
-| Adobe-infrastructuur | Adobe Pass Service | De dienst die met de Dienst MVPD IdP en AuthZ integreert en authentificatie en vergunningsbesluiten verstrekt. |
-| MVPD-infrastructuur | MVPD IdP | Een eindpunt MVPD dat op referentie-gebaseerde authentificatiedienst verleent om de identiteit van hun gebruiker te bevestigen. |
-| | MVPD AuthZ Service | Een eindpunt MVPD dat vergunningsbesluiten verstrekt die op de abonnementen van de gebruiker, ouderlijke controles, enz. worden gebaseerd. |
+| Adobe-infrastructuur | Adobe Pass Service | De dienst die met de Dienst van MVPD IdP en AuthZ integreert en authentificatie en vergunningsbesluiten verstrekt. |
+| MVPD-infrastructuur | MVPD IdP | Een eindpunt van MVPD dat op referentie-gebaseerde authentificatiedienst verleent om de identiteit van hun gebruiker te bevestigen. |
+| | MVPD AuthZ Service | Een eindpunt van MVPD dat vergunningsbesluiten verstrekt die op gebruikersabonnementen, ouderlijke controles, enz. worden gebaseerd. |
 
 
 Aanvullende termen die in de flow worden gebruikt, worden gedefinieerd in de
@@ -55,7 +55,7 @@ Adobe Pass gebruikt DCR om clientcommunicatie tussen een programmeertoepassing o
 ### Verificatie (authN)
 
 De authentificatiestroom wordt gebruikt om een gebruiker toe te staan om zich te identificeren
-aan hun MVPD om te bepalen of de gebruiker een geldige rekening heeft.
+aan hun MVPD om te bepalen of de gebruiker een geldig account heeft.
 
 1. De gebruiker start de Streaming Device-app en probeert zich aan te melden of beveiligde inhoud weer te geven.
 2. De toepassing Streaming Device (Streaming Device) vraagt de programmeerservice of het apparaat al is geverifieerd.
@@ -65,9 +65,9 @@ aan hun MVPD om te bepalen of de gebruiker een geldige rekening heeft.
 6. Voor het geval waar de **controleauteur** vraag de status terugkeert die het Apparaat van de Gebruiker NIET voor authentiek wordt verklaard, dan zou app op een gebruikersverzoek moeten wachten om login.
 7. Wanneer de gebruiker om direct login (b.v. selecteert login knoop) of onrechtstreeks login (b.v. selecteert beschermde inhoud wanneer niet reeds voor authentiek verklaard), doet de Streaming Apparaat app een verzoek aan de Dienst van de Programmer om gebruikersauthentificatie in werking te stellen. De dienst van de Programmer verzoekt en ontvangt een unieke registratiecode (regcode) door de Dienst van Adobe Pass **te roepen regcode** API.
 8. De dienst van de Programmer wint ook de lijst van huidige MVPDs en attributen terug door de Dienst van Adobe Pass **config** API te roepen. Opmerking: deze API kan ook eerder in de flow en cache worden aangeroepen.
-9. De programmeerservice retourneert de regcode naar de app Streaming Device en de verwerkte MVPD-lijst die is aangevraagd in stap \#7. Opmerking: de verwerkte MVPD-lijstindeling wordt opgegeven door de programmeur en kan worden gefilterd om specifieke MVPD&#39;s (dat wil zeggen allow- of block-lists) expliciet toe te staan of te blokkeren.
+9. De programmeerservice retourneert de regcode naar de app Streaming Device en de verwerkte MVPD-lijst die is aangevraagd in stap \#7. Opmerking: de bewerkte MVPD-lijstindeling wordt opgegeven door de programmeur en kan worden gefilterd om specifieke MVPD&#39;s (dat wil zeggen allow- of block-lists) expliciet toe te staan of te blokkeren.
 10. Als het apparaat van AuthN (d.w.z. &quot;tweede scherm&quot;), of door keus of behoefte (d.w.z. het Streaming Apparaat steunt geen Agent van de Gebruiker) verschillend is, dan zou het Streaming Apparaat de regcode en URI voor de gebruiker moeten tonen om tot de Toepassing van AuthN toegang te hebben. De gebruiker typt URI in de Agent van de Gebruiker op het Apparaat AuthN om de Toepassing te lanceren AuthN, en typt dan regcode in die toepassing. Als het Streaming Apparaat het zelfde als het Apparaat AuthN is, dan kan regcode programmatically tot de Module worden overgegaan AuthN.
-11. De module AuthN stelt de gebruikersauthentificatie met MVPD door een Plukker te tonen MVPD in werking. Nadat de gebruiker MVPD selecteert, verklaart de Module AuthN **** met regcode voor authentiek, die de Agent van de Gebruiker aan MVPD IdP opnieuw richt. Wanneer de gebruiker met succes met MVPD voor authentiek verklaart, wordt de Agent van de Gebruiker opnieuw gericht terug door de Dienst van Adobe Pass, waar de succesvolle authentificatie met regcode wordt geregistreerd, en dan opnieuw gericht terug naar de Module AuthN.
+11. De module AuthN stelt de gebruikersauthentificatie met MVPD door een Plukker van MVPD te tonen in werking. Nadat de gebruiker MVPD selecteert, verklaart de Module AuthN **** met regcode voor authentiek, die de Agent van de Gebruiker aan MVPD IDP opnieuw richt. Wanneer de gebruiker met succes met de MVPD voor authentiek verklaart, wordt de Agent van de Gebruiker opnieuw geleid door de Dienst van Adobe Pass, waar de succesvolle authentificatie met regcode wordt geregistreerd, en dan opnieuw gericht terug naar de Module AuthN.
 12. Als het streamingapparaat verschilt van het AuthN-apparaat, geeft het AuthN-apparaat een succesvol verificatiebericht weer aan de gebruiker en worden de stappen uitgevoerd (bijvoorbeeld &quot;Success\!! U kunt nu terugkeren naar uw gameconsole om door te gaan met \[..\]&quot;). Als het streamingapparaat hetzelfde is als het AuthN-apparaat, kan het streamingapparaat de voltooiing van de verificatie programmatisch detecteren.
 
 
@@ -81,7 +81,7 @@ Het volgende diagram illustreert de authentificatiestroom:
 De machtigingsstroom wordt gebruikt om te bepalen of een gebruiker toegang heeft tot gevraagde inhoud.
 
 1. Telkens wanneer de gebruiker beveiligde inhoud probeert te bekijken op de Streaming Device-app, roept de Streaming Device-app de Programmer Service aan om de inhoud te identificeren en om toestemming en informatie te vragen die nodig zijn om de stream te starten.
-1. De dienst van de Programmer roept Adobe Pass **** API goedkeurt die identiteitskaart van het Middel samen met andere vereiste parameters overgaat. De dienst van Adobe roept de Dienst MVPD AuthZ met identiteitskaart van het Middel en ontvangt en vergunningsbesluit dat dan aan de Dienst van de Programmer wordt overgegaan. Dit vergunningsbesluit zal door de Dienst van Adobe Pass voor een configureerbare periode in het voorgeheugen ondergebracht worden. Op verdere **machtigt** vraag van de Dienst van de Programmer aan de Dienst van Adobe Pass, zal de caching waarde zijn teruggekeerd zolang het geldig is.
+1. De dienst van de Programmer roept Adobe Pass **** API goedkeurt die identiteitskaart van het Middel samen met andere vereiste parameters overgaat. De dienst van Adobe roept de Dienst van MVPD AuthZ met identiteitskaart van het Middel en ontvangt en vergunningsbesluit dat dan aan de Dienst van de Programmer wordt teruggegeven. Dit vergunningsbesluit zal door de Dienst van Adobe Pass voor een configureerbare periode in het voorgeheugen ondergebracht worden. Op verdere **machtigt** vraag van de Dienst van de Programmer aan de Dienst van Adobe Pass, zal de caching waarde zijn teruggekeerd zolang het geldig is.
 1. Als de vergunning wordt verleend, zou de Dienst van de Programmer Adobe Pass **/tokens/media** API moeten roepen, die een ondertekend media teken zal terugkeren. De programmeerservice moet het mediatoken valideren met behulp van de JAR (Media Token Verifier Library). Indien geldig, zou de Dienst van de Programmer toestemming en nodig moeten terugkeren om de stroom (b.v. stroom URL) te beginnen die in stap \#1 wordt gevraagd.
 1. Als de vergunning wordt ontkend, **goedkeurt** vraag zal een foutencode en een beschrijving aan de Dienst van de Programmer terugkeren. De dienst van de Programmer zou de foutencode en de beschrijving (of een programma gewijzigd bericht) aan het verzoek in stap \#1 moeten terugkeren.
 
@@ -94,7 +94,7 @@ In het volgende diagram wordt de stroom van de autorisatie weergegeven:
 Met de afmeldingsstroom kan de gebruiker de huidige identiteit verwijderen
 is gekoppeld aan de toepassing.
 
-1. Wanneer de gebruiker om logout (d.w.z. verwijder van het apparaat de huidige rekening MVPD verbonden aan de toepassing) verzoekt, roept het Streaming Apparaat app de Dienst van de Programmer die het vertelt om het apparaat te logout.
+1. Wanneer de gebruiker om logout (d.w.z. verwijder van het apparaat de huidige MVPD-account verbonden aan de toepassing), roept de app Streaming Device de Programmer Service op om het apparaat af te melden.
 1. De dienst van de Programmer zou de Adobe Pass **logout** API moeten roepen.
 
 Het volgende diagram illustreert de logout flow:
@@ -107,7 +107,7 @@ Voortoestemming kan worden gebruikt om van een reeks middelen snel te bepalen de
 
 1. Zodra de gebruiker voor authentiek wordt verklaard, kan het Steaming Apparaat de Dienst van de Programmer roepen om de inhoud te verzoeken waarop de gebruiker gerechtigd is te stromen.
 
-1. De dienst van de Programmer zou Adobe Pass **moeten roepen pre goedkeurt** API met een lijst van Middel IDs, die een eenvoudig koord zijn dat typisch een kanaal vertegenwoordigt een gebruiker zou kunnen gerechtigd zijn om te stromen. *Nota: Momenteel, machtigt* ****** *vraag vooraf om de lijst tot vijf (5) Middel IDs te beperken. Wanneer meer dan vijf middelen nodig zijn, machtigt het veelvoud* ****** *vraag kan worden gemaakt, of de vraag kan worden gevormd om meer dan vijf middelen met een overeenkomst van MVPDs goed te keuren. De uitvoerders zouden in mening de kosten van a* ***moeten houden pre machtigt*** *vraag zowel aan middelen MVPD evenals de reactietijd aan de Programmer en structureren hun gebruik van de vraag oordeelkundig.*
+1. De dienst van de Programmer zou Adobe Pass **moeten roepen pre goedkeurt** API met een lijst van Middel IDs, die een eenvoudig koord zijn dat typisch een kanaal vertegenwoordigt een gebruiker zou kunnen gerechtigd zijn om te stromen. *Nota: Momenteel, machtigt* ****** *vraag vooraf om de lijst tot vijf (5) Middel IDs te beperken. Wanneer meer dan vijf middelen nodig zijn, machtigt het veelvoud* ****** *vraag kan worden gemaakt, of de vraag kan worden gevormd om meer dan vijf middelen met een overeenkomst van MVPDs goed te keuren. Implementors zouden in mening moeten houden de kosten van a* ****** *vraag zowel aan de middelen van MVPD evenals de reactietijd aan de Programmer vooraf machtigen en hun gebruik van de vraag goed structureren.*
 
 1. De **pre autoriseert** vraag zal aan de Dienst van de Programmer met een voorwerp JSON antwoorden die een WAAR of VALS waarde voor elke identiteitskaart van het Middel in het verzoek bevatten die erop wijst of de gebruiker aan het bijbehorende kanaal of niet gerechtigd is. *Nota: Als een MVPD geen antwoord voor bepaalde identiteitskaart van het Middel (b.v. wegens netwerkfouten of onderbrekingen) verstrekt, zal de waarde aan VALS in gebreke blijven.*
 
@@ -120,12 +120,12 @@ In het volgende diagram wordt de stroom voorafgaand aan de autorisatie weergegev
 
 ### Metagegevens \[optioneel\]
 
-De meta-gegevens kunnen worden gebruikt om gebruikersinformatie terug te winnen die door MVPD wordt gedeeld.
+U kunt metagegevens gebruiken om gebruikersgegevens op te halen die door de MVPD worden gedeeld.
 Voorbeelden hiervan kunnen gebruikers-id, postcode enzovoort zijn.
 
 1. Zodra de gebruiker voor authentiek wordt verklaard, kan de Dienst van de Programmer Adobe Pass **gebruikersmeta-gegevens** API roepen om informatie over de voor authentiek verklaarde gebruiker te verzoeken.
 
-1. De reactie omvat alle metagegevens die beschikbaar zijn voor de opgegeven gebruiker. De specifieke gebieden worden gevormd afzonderlijk voor elke integratie Programmer/MVPD.
+1. De reactie omvat alle metagegevens die beschikbaar zijn voor de opgegeven gebruiker. De specifieke gebieden worden gevormd afzonderlijk voor elke integratie van Programmer/MVPD.
 
 In het volgende diagram wordt de stroom voorafgaand aan de autorisatie weergegeven:
 

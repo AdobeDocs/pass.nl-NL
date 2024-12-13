@@ -2,7 +2,7 @@
 title: Rapporten
 description: Leer hoe de gegevens worden samengevoegd in TVE-dashboardrapporten.
 exl-id: d8ba48de-d743-4dc2-866c-7d6e3ff94773
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 0%
@@ -35,7 +35,7 @@ Voer de volgende stappen uit om een specifiek rapport weer te geven.
 
 ### AuthN TTL-rapporten {#authn-ttl-reports}
 
-De rapporten van AuthN TTL, die ook als Tijd-aan-Levende Authentificatie (TTL) worden bedoeld, tonen de duur waarvoor de authentificatietokens voor uw Integraties van Kanalen met diverse MVPDs over alle [ platforms ](#platforms) worden gevormd. Deze rapporten staan u toe om de hoeveelheid tijd te inspecteren een gebruiker voor een specifieke MVPD en een platform voor authentiek verklaard blijft. De duurwaarden worden voorgesteld in gebruikersvriendelijke formaten zoals, **dagen**, **uren**, **notulen**, en **seconden**. De tabel AuthN TTL-rapporten biedt horizontaal en verticaal schuiven voor verschillende schermgrootten.
+De rapporten van AuthN TTL, die ook als Tijd-aan-Levende Authentificatie (TTL) worden bedoeld, tonen de duur waarvoor de authentificatietokens voor uw Integraties van Kanalen met diverse MVPDs over alle [ platforms ](#platforms) worden gevormd. Met deze rapporten kunt u controleren hoeveel tijd een gebruiker nog steeds is geverifieerd voor een specifieke MVPD en een bepaald platform. De duurwaarden worden voorgesteld in gebruikersvriendelijke formaten zoals, **dagen**, **uren**, **notulen**, en **seconden**. De tabel AuthN TTL-rapporten biedt horizontaal en verticaal schuiven voor verschillende schermgrootten.
 
 U kunt gegevens voor [ specifieke kanalen of MVPDs ](#selecting-specific-channels-mvpds) ook bekijken en downloaden.
 
@@ -45,13 +45,13 @@ U kunt gegevens voor [ specifieke kanalen of MVPDs ](#selecting-specific-channel
 
 >[!IMPORTANT]
 >
-> **die door MVPD** wordt geplaatst placeholder wordt gebruikt wanneer MVPD de waarde AuthN TTL eerder dan de configuratie van de Authentificatie van Adobe Pass afdwingt.
+> **die door plaatsaanduiding van MVPD** wordt geplaatst wordt gebruikt wanneer MVPD de waarde AuthN TTL eerder dan de configuratie van de Authentificatie van Adobe Pass afdwingt.
 
 Selecteer **de rapporten van de Uitvoer** om de gegevens als Csv- dossier op uw lokale machine te bewaren.
 
 ### AuthZ TTL-rapporten {#authz-ttl-reports}
 
-De rapporten van AuthZ TTL, die ook als Vergunning tijd-aan-Levend (TTL) worden bedoeld, tonen de duur van het toestemmingstoken dat voor uw Integraties van Kanalen met diverse MVPDs over alle [ platforms ](#platforms) wordt gevormd. Deze rapporten staan u toe om de hoeveelheid tijd te inspecteren een gebruiker geautoriseerd blijft om inhoud voor een specifiek MVPD en platform te letten. De duurwaarden worden voorgesteld in gebruikersvriendelijke formaten zoals, **dagen**, **uren**, **notulen**, en **seconden**. De tabel AuthZ TTL-rapporten biedt horizontaal en verticaal schuiven voor verschillende schermgrootten.
+De rapporten van AuthZ TTL, die ook als Vergunning tijd-aan-Levend (TTL) worden bedoeld, tonen de duur van het toestemmingstoken dat voor uw Integraties van Kanalen met diverse MVPDs over alle [ platforms ](#platforms) wordt gevormd. Met deze rapporten kunt u controleren hoeveel tijd een gebruiker nog heeft om inhoud voor een specifieke MVPD en een bepaald platform te bekijken. De duurwaarden worden voorgesteld in gebruikersvriendelijke formaten zoals, **dagen**, **uren**, **notulen**, en **seconden**. De tabel AuthZ TTL-rapporten biedt horizontaal en verticaal schuiven voor verschillende schermgrootten.
 
 U kunt de gegevens voor [ specifieke kanalen of MVPDs ](#selecting-specific-channels-mvpds) ook bekijken en downloaden.
 
@@ -61,7 +61,7 @@ U kunt de gegevens voor [ specifieke kanalen of MVPDs ](#selecting-specific-chan
 
 >[!IMPORTANT]
 >
-> **die door MVPD** wordt geplaatst placeholder wordt gebruikt wanneer MVPD de waarde AuthZ TTL eerder dan de configuratie van de Authentificatie van Adobe Pass afdwingt.
+> **die door plaatsaanduiding van MVPD** wordt geplaatst wordt gebruikt wanneer MVPD de waarde van AuthZ TTL eerder dan de configuratie van de Authentificatie van Adobe Pass afdwingt.
 
 Selecteer **de rapporten van de Uitvoer** om de gegevens als Csv- dossier op uw lokale machine te bewaren.
 
@@ -95,7 +95,7 @@ De [ Rapporten van AuthN TTL ](#authn-ttl-reports), [ Rapporten AuthZ TTL ](#aut
 
   **iOS**: De waarden van vertoningen die gebruikend de Authentificatie iOS SDK van Adobe Pass worden toegepast.
 
-  **Android**: De waarden van vertoningen die door de Authentificatie van Adobe Pass Android SDK worden toegepast.
+  **Android**: De waarden van vertoningen die door de SDK van Android van de Authentificatie van Adobe Pass worden toegepast.
 
   **anderen**: De waarden van vertoningen die gebruikend de VERANTWOORDELIJKE API van de Authentificatie van Adobe Pass worden toegepast die voor mobiele apparaten wordt ontwikkeld.
 
@@ -103,7 +103,7 @@ De [ Rapporten van AuthN TTL ](#authn-ttl-reports), [ Rapporten AuthZ TTL ](#aut
 
   **Roku**: De waarden van vertoningen die via de VERTONING API van de Authentificatie van Adobe Pass worden toegepast, die Roku identificeren als apparatentype.
 
-  **FireTV**: De waarden van vertoningen die door de Authentificatie van Adobe Pass worden toegepast FireTV SDK.
+  **FireTV**: De waarden van vertoningen die door de SDK van de Authentificatie van Adobe Pass worden toegepast FireTV.
 
   **AppleTV**: De waarden van vertoningen die via de Authentificatie tvOS SDK van Adobe Pass worden toegepast.
 
@@ -111,7 +111,7 @@ De [ Rapporten van AuthN TTL ](#authn-ttl-reports), [ Rapporten AuthZ TTL ](#aut
 
 * **Platform niet geïdentificeerd**: De waarden van vertoningen die op programmeerimplementaties worden toegepast wanneer de diensten van de Authentificatie van Adobe Pass een onbekend apparatentype ontdekken.
 
-Meer over leren hoe te om het gewenste apparatentype, zoals **Roku** met de Authentificatie van Adobe Pass REST APIs of SDKs te delen, bekijk het mechanisme van [ het overgaan cliëntinformatie ](/help/authentication/integration-guide-programmers/passing-client-information-device-connection-and-application.md).
+Meer over leren hoe te om het gewenste apparatentype, zoals **Roku** met de Authentificatie van Adobe Pass REST APIs of SDKs te delen, bekijk het mechanisme van [ het overgaan cliëntinformatie ](/help/authentication/integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md).
 
 >[!IMPORTANT]
 >

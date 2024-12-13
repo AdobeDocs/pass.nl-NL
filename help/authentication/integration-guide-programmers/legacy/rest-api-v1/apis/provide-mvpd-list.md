@@ -2,14 +2,14 @@
 title: MVPD-lijst opgeven
 description: MVPD-lijst opgeven
 exl-id: db2d8f19-d0b9-4195-bf0b-f9de0d96062b
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '233'
 ht-degree: 1%
 
 ---
 
-# MVPD-lijst opgeven {#provide-mvpd-list}
+# (Verouderd) MVPD-lijst opgeven {#provide-mvpd-list}
 
 >[!NOTE]
 >
@@ -53,12 +53,12 @@ Keert lijst van gevormde MVPDs voor de aanvrager terug.
 
 ### Samplereactie {#sample-response}
 
-Hetzelfde als de bestaande Reactie van XML MVPD op /config servlet
+Hetzelfde als bestaande MVPD XML-respons op /config servlet
 
 Opmerking: alle MVPD&#39;s die zijn geconfigureerd om gebruik te maken van Platform SSO, hebben de volgende extra eigenschappen binnen het corresponderende knooppunt (JSON/XML):
 
 * **enablePlatformServices (boolean):** vlag erop wijst die of dit MVPD via Platform SSO wordt geïntegreerd
-* **boardingStatus (koord):** vlag erop wijst die of MVPD volledig Platform SSO (STEUND) steunt of als MVPD slechts in de platformplukker (PICKER) verschijnt
-* **displayInPlatformPicker (boolean):** zou dit MVPD in de platformplukker verschijnen
+* **boardingStatus (koord):** vlag die erop wijst of MVPD volledig Platform SSO (STEUND) steunt of als MVPD slechts in de platformplukker (PICKER) verschijnt
+* **displayInPlatformPicker (boolean):** moet dit MVPD in de platformkiezer verschijnen
 * **platformMappingId (koord):** het herkenningsteken van dit MVPD zoals gekend door het platform
 * **requiredMetadataFields (koordserie):** de gebieden van gebruikersmeta-gegevens die op succesvolle login worden verwacht beschikbaar te zijn

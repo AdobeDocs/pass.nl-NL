@@ -2,14 +2,14 @@
 title: Verificatiestroom controleren op tweede scherm van webtoepassing
 description: Verificatiestroom controleren op tweede scherm van webtoepassing
 exl-id: 5807f372-a520-4069-b837-67ae41b7f79b
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '212'
 ht-degree: 0%
 
 ---
 
-# Verificatiestroom controleren op tweede scherm van webtoepassing {#check-authentication-flow-by-second-screen-web-app}
+# (Verouderd) Verificatiestroom controleren op tweede scherm van webtoepassing {#check-authentication-flow-by-second-screen-web-app}
 
 >[!NOTE]
 >
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 ## Beschrijving {#description}
 
-Deze API moet worden gebruikt door de tweede webtoepassing voor schermaanmelding om te bevestigen dat Adobe Pass Authentication de geslaagde aanmelding door MVPD heeft bevestigd. Wij adviseren roepend deze API alvorens een succesbericht aan het eind te tonen - gebruiker die hem/haar instrueert om aan de apparatenconsole te werk te gaan om met de werkschema&#39;s verder te gaan.
+Deze API moet worden gebruikt door de tweede schermaanmelding via de webapp om te bevestigen dat Adobe Pass Authentication de geslaagde aanmelding door MVPD heeft bevestigd. Wij adviseren roepend deze API alvorens een succesbericht aan het eind te tonen - gebruiker die hem/haar instrueert om aan de apparatenconsole te werk te gaan om met de werkschema&#39;s verder te gaan.
 
 
 | Endpoint | Geroepen </br> door | Invoer   </br> Params | HTTP </br> Methode | Antwoord | HTTP-respons </br> |

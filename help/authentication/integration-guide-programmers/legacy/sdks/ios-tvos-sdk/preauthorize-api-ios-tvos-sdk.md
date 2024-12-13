@@ -2,14 +2,14 @@
 title: iOS/tvOS-API vooraf autoriseren
 description: iOS/tvOS-API vooraf autoriseren
 exl-id: 79c596a4-0e38-4b6c-bb85-f97c6af45ed8
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '391'
+source-wordcount: '392'
 ht-degree: 0%
 
 ---
 
-# Voorvoegsel {#preauthorize}
+# (Verouderd) Vooraf autoriseren {#preauthorize}
 
 >[!NOTE]
 >
@@ -27,7 +27,7 @@ Als het resultaat van de preauthorize API-reactie een of meer bronnen bevat met 
 >
 >De verbeterde functie voor foutmelding, die aanvullende foutinformatie toevoegt voor beslissingen vóór de autorisatie is op verzoek beschikbaar, omdat deze functie moet worden ingeschakeld aan de configuratiekant van Adobe Pass Authentication.
 
-Als de aanvraag voor de voorafgaande autorisatie-API niet kon worden onderhouden vanwege een Adobe Pass Authentication SDK-fout of als er een fout met de Adobe Pass Authentication-services optreedt, wordt er een extra foutinformatie (ongeacht de bovenstaande configuratie) toegevoegd en worden er geen bronnen opgenomen als onderdeel van het resultaat van de preautorisatie-API.
+Als de aanvraag voor de voorafgaande autorisatie-API niet kon worden onderhouden vanwege een Adobe Pass Authentication SDK-fout of als er een fout met de Adobe Pass Authentication-services optreedt, wordt er een extra foutinformatie (ongeacht de bovenstaande configuratie) toegevoegd en worden er geen bronnen opgenomen als onderdeel van het responsresultaat van de voorafgaande autorisatie-API.
 
 </br>
 
@@ -273,7 +273,7 @@ Bij Adobe Pass-verificatieservices is een fout opgetreden tijdens het onderhoud 
 
 #### Mislukt
 
-De Adobe Pass Authentication SDK slaat een fout op tijdens het uitvoeren van de API-aanvraag voor voorafgaande autorisatie.
+Adobe Pass Authentication SDK slaat een fout op tijdens het onderhoud van de API-aanvraag voor voorafgaande autorisatie
 
 ```JSON
     {
