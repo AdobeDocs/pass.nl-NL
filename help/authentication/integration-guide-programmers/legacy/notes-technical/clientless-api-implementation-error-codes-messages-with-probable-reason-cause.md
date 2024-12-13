@@ -2,9 +2,9 @@
 title: Clientless API-implementatie - Foutcodes / berichten met waarschijnlijke reden / oorzaak
 description: Clientless API-implementatie - Foutcodes / berichten met waarschijnlijke reden / oorzaak
 exl-id: 616e35fc-9b72-422b-9a05-e6248bd52490
-source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
+source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 >[!NOTE]
 >
 >De inhoud van deze pagina is uitsluitend bedoeld voor informatieve doeleinden. Voor het gebruik van deze API is een actuele licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
+
+>[!IMPORTANT]
+>
+> Zorg ervoor dat u op de hoogte blijft van de meest recente productaankondigingen voor Adobe Pass-verificatie en tijdlijnen voor buitengebruikstelling die zijn verzameld op de [pagina Productaankondigingen](/help/authentication/product-announcements.md) .
 
 </br>
 
@@ -33,7 +37,7 @@ ht-degree: 0%
 1. Het kan zijn dat je problemen ondervindt met cross-domain scripting
 1. De juiste spoofing moet worden toegevoegd aan het bestand /etc/hosts
 
-## Fout: 400 Ongeldig verzoek
+## Fout: 400 onjuist verzoek
 
 ### Oorzaken:
 
@@ -52,8 +56,8 @@ ht-degree: 0%
 ### Oorzaken:
 
 1. Gebruikersnaam en wachtwoord komen niet overeen
-2. Inloggen is mogelijk uitgeschakeld
-3. Controleren of de aanmelding is bedoeld voor productie of staging
+2. Aanmelding is mogelijk uitgeschakeld
+3. Controleer of de login voor productie of enscenering is
 
 
 <!--

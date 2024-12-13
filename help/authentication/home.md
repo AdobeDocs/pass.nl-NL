@@ -2,26 +2,20 @@
 title: Welkom bij Adobe&reg; Verificatie doorgeven!
 description: Welkom bij Adobe&reg; controle van verificatie doorgeven
 exl-id: a8b01469-3d5f-4a44-9ae8-06a68c29d56d
-source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
+source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
 workflow-type: tm+mt
-source-wordcount: '331'
+source-wordcount: '296'
 ht-degree: 0%
 
 ---
 
 # Welkom bij Adobe® Pass Authentication {#pt-auth-overview}
 
->[!NOTE]
+>[!IMPORTANT]
 >
->De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 De Authentificatie van Adobe Pass is een gerechtigheidsoplossing voor TV overal, die een modulair kader verstrekt om te bepalen of iemand die om toegang tot een middel verzoekt het tot het recht heeft. Om deel te nemen aan de Adobe Pass Authentication-machtigingsoplossing, integreren Content Providers (Programmers) en Pay TV Providers (MVPD&#39;s) hun machtigingssystemen met de Adobe Pass Authentication-workflows. Deze documentatieplaats verstrekt details over het integratieproces, evenals uiteinden voor bestaande partners.
-
-Je feedback wordt altijd gewaardeerd!
-
->[!NOTE]
->
->De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
 ## Populaire Help en veelgestelde vragen {#help-faqs}
 
@@ -39,13 +33,11 @@ Je feedback wordt altijd gewaardeerd!
 
 >[!IMPORTANT]
 >
->Als u geen antwoord kunt vinden, [**e-mail ons**](mailto:tve-support@adobe.com).
+> Als u geen antwoord kunt vinden, [**e-mail ons**](mailto:tve-support@adobe.com).
 >
->[ het Emailen van ons steunteam ](mailto:tve-support@adobe.com) is ook de eerste stap voor om het even welk kwestie of inherente rapport.
+> [ het Emailen van ons steunteam ](mailto:tve-support@adobe.com) is ook de eerste stap voor om het even welk kwestie of inherente rapport.
 >
->Als u a [ SEVERITY 1 LIVE ](/help/authentication/kickstart/escalation-procedures.md) kwestie hebt en u ons hebt gemaild en 30 minuten zonder een reactie zijn verstreken, dan zie het [ document van de Procedures van de Escalatie ](/help/authentication/kickstart/escalation-procedures.md) voor telefoonaantallen om te roepen.
->
-
+> Als u a [ SEVERITY 1 LIVE ](/help/authentication/kickstart/escalation-procedures.md) kwestie hebt, en u ons hebt gemaild en 30 minuten zonder een reactie zijn verstreken, dan zie het [ document van de Procedures van de Escalatie ](/help/authentication/kickstart/escalation-procedures.md) voor telefoonaantallen om te roepen.
 
 ## Om te vinden wat u nodig hebt {#how-to-search}
 

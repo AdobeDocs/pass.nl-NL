@@ -2,9 +2,9 @@
 title: Amazon SSO Cookbook (REST API V1)
 description: Amazon SSO Cookbook (REST API V1)
 exl-id: 4c65eae7-81c1-4926-9202-a36fd13af6ec
-source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
+source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '613'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
+
+>[!IMPORTANT]
+>
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 De Adobe Pass Authentication REST API V1 biedt ondersteuning voor Platform Single Sign-On (SSO) voor eindgebruikers van clienttoepassingen die op FireOS worden uitgevoerd.
 
