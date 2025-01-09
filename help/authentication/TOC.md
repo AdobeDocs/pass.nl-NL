@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass-verificatie
 user-guide-description: Adobe Pass-verificatie is een machtigingsoplossing voor TV Everywhere, die een modulair kader verstrekt om te bepalen of iemand die toegang tot een bron vraagt, daar rechten voor heeft.
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
 workflow-type: tm+mt
-source-wordcount: '1260'
+source-wordcount: '1267'
 ht-degree: 2%
 
 ---
@@ -51,16 +51,17 @@ ht-degree: 2%
    + [Kickstart-handleiding voor programmeurs](kickstart/programmer-kickstart-guide.md)
    + [MVPD-gids voor kickstart](kickstart/mvpd-kickstart-guide.md)
    + [Doorverwijsprocedures](kickstart/escalation-procedures.md)
-   + [Verklarende woordenlijst](kickstart/glossary.md)
 + Integratiehandleiding voor programmeurs {#integration-guide-programmers}
    + REST API&#39;s {#rest-apis}
       + REST API DCR {#rest-api-dcr}
          + [Overzicht van dynamische clientregistratie](integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)
+         + [Woordenlijst Dynamische clientregistratie](integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-glossary.md)
+         + [Veelgestelde vragen over dynamische clientregistratie](integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-faqs.md)
          + API&#39;s {#rest-api-dcr-apis}
             + [Client-referenties ophalen](integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-client-credentials.md)
             + [Toegangstoken ophalen](integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md)
          + Stromen {#rest-api-dcr-flows}
-            + [Dynamische clientregistratiestroom](integration-guide-programmers/rest-apis/rest-api-dcr/flows/dynamic-client-registration-flow.md)
+            + [Dynamic Client Registration Flow](integration-guide-programmers/rest-apis/rest-api-dcr/flows/dynamic-client-registration-flow.md)
       + REST API V2 {#rest-api-v2}
          + [Overzicht van REST API V2](integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md)
          + [Woordenlijst REST API V2](integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md)

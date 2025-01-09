@@ -2,9 +2,9 @@
 title: REST API Cookbook (client-naar-server)
 description: Testen van API-cookboekclient naar server.
 exl-id: f54a1eda-47d5-4f02-b343-8cdbc99a73c0
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '888'
 ht-degree: 0%
 
 ---
@@ -44,10 +44,6 @@ In een werkende cliënt-aan-server oplossing zijn de volgende componenten betrok
 | Adobe-infrastructuur | Adobe Pass Service | De dienst die met de Dienst van MVPD IdP en AuthZ integreert en authentificatie en vergunningsbesluiten verstrekt. |
 | MVPD-infrastructuur | MVPD IdP | Een eindpunt van MVPD dat op referentie-gebaseerde authentificatiedienst verleent om de identiteit van hun gebruiker te bevestigen. |
 | | MVPD AuthZ Service | Een eindpunt van MVPD dat vergunningsbesluiten verstrekt die op gebruikersabonnementen, ouderlijke controles, enz. worden gebaseerd. |
-
-
-
-De extra termijnen die in de stroom worden gebruikt worden bepaald in de [ Verklarende woordenlijst ](/help/authentication/kickstart/glossary.md).
 
 ## Stromen{#flows}
 

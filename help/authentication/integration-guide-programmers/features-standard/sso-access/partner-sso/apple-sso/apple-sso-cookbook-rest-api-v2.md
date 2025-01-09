@@ -2,9 +2,9 @@
 title: Apple SSO Cookbook (REST API V2)
 description: Apple SSO Cookbook (REST API V2)
 exl-id: 81476312-9ba4-47a0-a4f7-9a557608cfd6
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
 workflow-type: tm+mt
-source-wordcount: '3442'
+source-wordcount: '3443'
 ht-degree: 0%
 
 ---
@@ -189,15 +189,15 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
    >
    > <br/>
    >
-   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, die extra informatie verstrekken die aan de [ Verbeterde Codes van de Fout ](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) volgt
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
    >[!IMPORTANT]
    >
-   > De streamingtoepassing moet ervoor zorgen dat de volgende details voor elke MVPD worden verwerkt wanneer verder wordt gegaan:
+   > De streamingtoepassing moet ervoor zorgen dat deze de volgende gegevens verwerkt die voor elke MVPD worden verstrekt wanneer verder wordt gegaan:
    >
-   > * `enablePlatformServices`: geeft aan of de MVPD momenteel ondersteuning biedt voor het eenmalige aanmelding voor Apple.
+   > * `enablePlatformServices`: Geeft aan of de MVPD momenteel ondersteuning biedt voor de eenmalige aanmelding voor Apple.
    > * `displayInPlatformPicker`: geeft aan of de MVPD kan worden weergegeven in de Apple-kiezer.
-   > * `boardingStatus`: geeft aan of de MVPD is ingeschakeld in het eenmalige Apple-teken.
+   > * `boardingStatus`: geeft aan of de MVPD is geactiveerd in het eenmalige aanmelding voor Apple.
 
 1. **wint de status van het partnerkader terug:** de het stromen toepassing roept het [ Video Kader van de Rekening van de Abonnee ](https://developer.apple.com/documentation/videosubscriberaccount) dat door Apple wordt ontwikkeld, om gebruikerstoestemming en leveranciersinformatie te verkrijgen.
 
@@ -287,13 +287,13 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
 1. **ga met terug profiel gebruikend de stroom van de partnerauthentificatiereactie:** De het eindpuntreactie van de Partner van Sessies bevat de volgende gegevens:
    * Het attribuut `actionName` wordt ingesteld op &quot;partner_profile&quot;.
    * Het attribuut `actionType` wordt ingesteld op &quot;direct&quot;.
-   * Het attribuut `authenticationRequest - type` omvat het veiligheidsprotocol dat door het partnerkader voor MVPD login wordt gebruikt (momenteel geplaatst aan SAML slechts).
+   * Het attribuut `authenticationRequest - type` omvat het veiligheidsprotocol dat door het partnerkader voor login van MVPD wordt gebruikt (momenteel geplaatst aan SAML slechts).
    * Het attribuut `authenticationRequest - request` omvat het SAML- verzoek dat tot het partnerkader wordt overgegaan.
    * Het attribuut `authenticationRequest - attributesNames` omvat de attributen SAML die tot het partnerkader worden overgegaan.
 
-   Als de Adobe Pass backend geen geldig profiel identificeert en de partner enige sign-on bevestiging overgaat, ontvangt de het stromen toepassing een reactie met acties en gegevens om tot het partnerkader over te gaan om de authentificatiestroom met MVPD te beginnen.
+   Als de Adobe Pass backend geen geldig profiel identificeert en de partner enige sign-on bevestiging overgaat, ontvangt de het stromen toepassing een reactie met acties en gegevens om tot het partnerkader over te gaan voor het beginnen van de authentificatiestroom met MVPD.
 
-1. **Volledige authentificatie MVPD met partnerkader:** door:sturen het verzoek van de partnerauthentificatie (SAML verzoek) in vorige stap aan het [ Video Kader van de Rekening van de Abonnee ](https://developer.apple.com/documentation/videosubscriberaccount) wordt verkregen. Als de authentificatiestroom succesvol is, veroorzaakt de ](https://developer.apple.com/documentation/videosubscriberaccount) interactie van het Kader van de Rekening van de Abonnee 0} Video met MVPD een reactie van de partnerauthentificatie (reactie van SAML) die samen met de informatie van de de statusstatus van het partnerkader is teruggekeerd.[
+1. **Volledige authentificatie van MVPD met partnerkader:** door:sturen het verzoek van de partnerauthentificatie (SAML verzoek) in vorige stap aan het [ Video Kader van de Rekening van de Abonnee ](https://developer.apple.com/documentation/videosubscriberaccount) wordt verkregen. Als de authentificatiestroom succesvol is, veroorzaakt de ](https://developer.apple.com/documentation/videosubscriberaccount) interactie van het Kader van de Rekening van de Abonnee 0} Video met MVPD een reactie van de partnerauthentificatie (reactie van SAML) die samen met de informatie van de de statusstatus van het partnerkader is teruggekeerd.[
 
    >[!IMPORTANT]
    >

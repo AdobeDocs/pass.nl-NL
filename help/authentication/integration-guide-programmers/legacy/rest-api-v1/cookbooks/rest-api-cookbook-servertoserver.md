@@ -2,9 +2,9 @@
 title: REST API Cookbook (Server-to-Server)
 description: Testen van API-cookboekserver op de server.
 exl-id: 36ad4a64-dde8-4a5f-b0fe-64b6c0ddcbee
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
 workflow-type: tm+mt
-source-wordcount: '1867'
+source-wordcount: '1856'
 ht-degree: 0%
 
 ---
@@ -42,10 +42,6 @@ In een werkende server-aan-server oplossing zijn de volgende componenten betrokk
 | Adobe-infrastructuur | Adobe Pass Service | De dienst die met de Dienst van MVPD IdP en AuthZ integreert en authentificatie en vergunningsbesluiten verstrekt. |
 | MVPD-infrastructuur | MVPD IdP | Een eindpunt van MVPD dat op referentie-gebaseerde authentificatiedienst verleent om de identiteit van hun gebruiker te bevestigen. |
 | | MVPD AuthZ Service | Een eindpunt van MVPD dat vergunningsbesluiten verstrekt die op gebruikersabonnementen, ouderlijke controles, enz. worden gebaseerd. |
-
-
-Aanvullende termen die in de flow worden gebruikt, worden gedefinieerd in de
-[ Verklarende woordenlijst ](/help/authentication/kickstart/glossary.md).
 
 ## Stromen {#flows}
 
@@ -197,10 +193,3 @@ De programmeerservice moet gegevens en opmaak verzenden die vereist zijn voor af
 De dienst van de Programmer moet authN en authZ TTLs respecteren wanneer het caching en maakt authN of authZ zittingen onbruikbaar wanneer op de hoogte gebracht.
 
 De programmeur moet certificaten onderhouden die met Adobe worden gedeeld.
-
-<!--
-## Related Information {#related}
-
-* [REST API Reference](/help/authentication/rest-api-reference.md)
-* [Glossary of Terms](/help/authentication/adobe-pass-glossary.md)
--->

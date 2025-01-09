@@ -2,9 +2,9 @@
 title: Welkom bij Adobe&reg; Verificatie doorgeven!
 description: Welkom bij Adobe&reg; controle van verificatie doorgeven
 exl-id: a8b01469-3d5f-4a44-9ae8-06a68c29d56d
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '295'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ De Authentificatie van Adobe Pass is een gerechtigheidsoplossing voor TV overal,
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <ul><li>[ Gids van Kickstart van de Programmer ](/help/authentication/kickstart/programmer-kickstart-guide.md)</li><li>[ Metagegevens van de Gebruiker ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/user-metadata.md)</li></ul> | <ul><li>[ MVPD Kickstart Guide ](/help/authentication/kickstart/mvpd-kickstart-guide.md)</li><li>[ Authentificatie ](/help/authentication/integration-guide-mvpds/authn-usecase.md)</li><li>[ Vergunning ](/help/authentication/integration-guide-mvpds/authz-usecase.md)</li><li>[ Logout ](/help/authentication/integration-guide-mvpds/usecase-mvpd-logout.md)</li></ul> |
 | **voor inheemse cliënten van de Toepassing** | **voor iedereen** |
-| <ul><li>[ iOS Technisch Overzicht ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-overview.md)</li><li>[ Android Technisch Overzicht ](/help/authentication/integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-overview.md)</li></ul> | <ul><li>[ Technisch Document ](/help/authentication/kickstart/technical-paper.md)</li><li>[ Escalation Procedures ](/help/authentication/kickstart/escalation-procedures.md)</li><li>[ Verklarende woordenlijst ](/help/authentication/kickstart/glossary.md)</li></ul> |
+| <ul><li>[ iOS Technisch Overzicht ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-overview.md)</li><li>[ Android Technisch Overzicht ](/help/authentication/integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-overview.md)</li></ul> | <ul><li>[ Technisch Document ](/help/authentication/kickstart/technical-paper.md)</li><li>[ Escalation Procedures ](/help/authentication/kickstart/escalation-procedures.md)</li></ul> |
 | **voor Slimme Apparaten** |                                                                                                                                                                                                                                                                                                                                                                       |
 | <ul><li>[ Klantloos Technisch Overzicht ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/rest-api-overview.md)</li><li>[ Clientless API ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/rest-api-reference.md)</li></ul> |                                                                                                                                                                                                                                                                                                                                                                       |
 

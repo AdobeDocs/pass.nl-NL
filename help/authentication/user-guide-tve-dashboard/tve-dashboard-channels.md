@@ -2,7 +2,7 @@
 title: Kanalen
 description: Leer meer over kanalen en hun verschillende configuraties in het TVE-dashboard.
 exl-id: bbddeccb-6b6f-4a8f-87ab-d4af538eee1d
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
 workflow-type: tm+mt
 source-wordcount: '1556'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Het **lusje van Kanalen** in het linkerpaneel toont een lijst van verbonden kana
 
 * **naam van de Vertoning**: De merknaam van het kanaal dat voor commerciële doeleinden wordt gebruikt.
 * **identiteitskaart van het Kanaal**: Een uniek herkenningsteken, die ook als identiteitskaart van de Aanvrager wordt bedoeld.
-* **Integraties**: Het aantal verbindingen die met [ worden gevestigd MVPDs ](/help/authentication/kickstart/glossary.md#mvpd).
+* **Integraties**: Het aantal verbindingen die met [ worden gevestigd MVPDs ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#mvpd).
 
 ![ Lijst van bestaande kanalen ](../assets/tve-dashboard/new-tve-dashboard/channels/channels-list-view.png)
 

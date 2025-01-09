@@ -2,7 +2,7 @@
 title: REST API V2 Cookbook (Server-to-Server)
 description: REST API V2 Cookbook (Server-to-Server)
 exl-id: 3160c03c-849d-4d39-95e5-9a9cbb46174d
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
 workflow-type: tm+mt
 source-wordcount: '1578'
 ht-degree: 0%
@@ -31,11 +31,11 @@ In een werkende server-aan-server oplossing, zijn de volgende componenten betrok
 |                           | \[Optioneel\] AuthN-module | Als het Streamen Apparaat een Agent van de Gebruiker (d.w.z. Browser van het Web) heeft, is de Module AuthN verantwoordelijk voor het voor authentiek verklaren van de gebruiker op MVPD IdP. |
 | \[Optioneel\] AuthN-apparaat | AuthN App | Als het Streaming Apparaat geen Agent van de Gebruiker (d.w.z. Browser van het Web) heeft, is de Toepassing AuthN een Toepassing van het Web van de Programmer die van het apparaat van een afzonderlijke gebruiker gebruikend Webbrowser wordt betreden. |
 | Programmeringsinfrastructuur | Programmeringsservice | Een service die het streamingapparaat koppelt aan de Adobe Pass-service om verificatie- en autorisatiebeslissingen te verkrijgen. |
-| Adobe-infrastructuur | Adobe Pass Service | De dienst die met de Dienst MVPD IdP en AuthZ integreert en authentificatie en vergunningsbesluiten verstrekt. |
-| MVPD-infrastructuur | MVPD IdP | Een eindpunt MVPD dat op referentie-gebaseerde authentificatiedienst verleent om de identiteit van hun gebruiker te bevestigen. |
-|                           | MVPD AuthZ Service | Een eindpunt MVPD dat vergunningsbesluiten verstrekt die op de abonnementen van de gebruiker, ouderlijke controles, enz. worden gebaseerd. |
+| Adobe-infrastructuur | Adobe Pass Service | De dienst die met de Dienst van MVPD IdP en AuthZ integreert en authentificatie en vergunningsbesluiten verstrekt. |
+| MVPD-infrastructuur | MVPD IdP | Een eindpunt van MVPD dat op referentie-gebaseerde authentificatiedienst verleent om de identiteit van hun gebruiker te bevestigen. |
+|                           | MVPD AuthZ Service | Een eindpunt van MVPD dat vergunningsbesluiten verstrekt die op gebruikersabonnementen, ouderlijke controles, enz. worden gebaseerd. |
 
-De extra termijnen die in de stroom worden gebruikt worden bepaald in de [ Verklarende woordenlijst ](/help/authentication/kickstart/glossary.md).
+De extra termijnen die in de stroom worden gebruikt worden bepaald in de [ Verklarende woordenlijst ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md).
 
 Het volgende diagram illustreert de volledige flow:
 
@@ -78,8 +78,8 @@ De dienst van de Programmer controleert namens Streaming App voor bestaande voor
    * <b> Stap 2.a:</b> de Dienst van de Programmer wint de lijst van MVPDs beschikbaar voor serviceProvider terug: <b>/api/v2/{serviceProvider}/configuration </b><br>
 ([ wint lijst van beschikbare MVPDs ](../apis/configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider.md) terug)
    * De Programmeringsdienst kan filteren op de lijst van MVPD&#39;s uitvoeren en alleen MVPD&#39;s weergeven die zijn bedoeld terwijl andere worden verborgen (TempPass, test MVPD&#39;s, MVPD&#39;s die in ontwikkeling zijn, enz.)
-   * De dienst van de Programmer zou een gefiltreerde MVPD lijst voor de Streaming App aan vertoningsplukker moeten terugkeren, selecteert de Gebruiker MVPD
-   * Met MVPD die van het Stromen App wordt geselecteerd, leidt de Dienst van de Programmer tot een zitting: <b>/api/v2/{serviceProvider}/zittingen </b><br>
+   * De Programmeringsservice moet een gefilterde MVPD-lijst voor de Streaming-app retourneren naar de weergavekiezer. De gebruiker selecteert de MVPD
+   * Als de MVPD is geselecteerd in Streaming App, maakt de Programmer Service een sessie: <b> /api/v2/{serviceProvider} /sessies </b><br>
 ([ creeer authentificatiesessie ](../apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md)) <br>
       * Er wordt een CODE en URL geretourneerd die voor verificatie moeten worden gebruikt
       * Als een profiel wordt gevonden, kan de Dienst van de Programmer aan <a href="#preauthorization-phase"> C te werk gaan. Voorbereidende fase </a>
@@ -89,18 +89,18 @@ De dienst van de Programmer controleert namens Streaming App voor bestaande voor
 
 Een webtoepassing voor het tweede scherm of een browser gebruiken:
 
-* Optie 1. Streaming App kan een browser of webweergave openen, de voor verificatie te gebruiken URL laden en de gebruiker landt op de MVPD-aanmeldingspagina waar gegevens moeten worden ingediend
+* Optie 1. Streaming app kan een browser of webweergave openen, de voor verificatie te gebruiken URL laden en de gebruiker landt op de MVPD-aanmeldingspagina waar gegevens moeten worden ingediend
    * Gebruiker voert login/wachtwoord in, definitieve omleiding toont een succespagina
 * Optie 2. Streaming app kan geen browser openen en alleen de CODE weergeven. <b> een afzonderlijke Webtoepassing, AuthN_APP, moet worden ontwikkeld </b> om de gebruiker te vragen om CODE in te gaan, URL te bouwen en te openen: <b>/api/v2/authenticate/{serviceProvider} {CODE} </b>
    * Gebruiker voert login/wachtwoord in, definitieve omleiding toont een succespagina
 
 ### Stap 4: Controleren op geverifieerde profielen {#step-4-check-for-authenticated-profiles}
 
-De dienst van de Programmer controleert authentificatie met MVPD om in Browser of Tweede Scherm te voltooien
+De Programmeringsservice controleert of verificatie met MVPD is voltooid in Browser of Second Screen
 
 * Opiniepeiling om de 15 seconden wordt aanbevolen op <b> /api/v2/{serviceProvider} /profiles/{mvpd} </b><br>
 ([ wint voor authentiek verklaarde profielen voor specifieke MVPD ](../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) terug)
-   * Als de selectie MVPD niet in de Streaming toepassing wordt gemaakt aangezien de plukker MVPD in de Tweede toepassing van het Scherm wordt voorgesteld, zou de opiniepeiling met CODE <b>/api/v2/ {serviceProvider} /profiles/code/ {CODE} moeten gebeuren </b><br>
+   * Als MVPD niet in de Streaming toepassing wordt geselecteerd aangezien de plukker van MVPD in de Tweede toepassing van het Scherm wordt voorgesteld, zou het opiniepeilen met CODE <b>/api/v2/ {serviceProvider} /profiles/code/ {CODE} </b><br> moeten gebeuren
 ([ wint voor authentiek verklaarde profielen voor specifieke CODE ](../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) terug)
 * De opiniepeiling zou niet 30 minuten moeten overschrijden, als 30 minuten worden bereikt, en de Streaming Toepassing nog actief is, moet een nieuwe zitting in werking worden gesteld en een nieuwe CODE en URL zullen zijn teruggekeerd
 * Wanneer de authentificatie volledig is, is de terugkeer 200 met voor authentiek verklaard profiel
@@ -114,7 +114,7 @@ Met een geldig authentificatieprofiel voor een gebruiker, heeft de Dienst van de
 
 * De stap is optioneel en wordt uitgevoerd als de toepassing de bronnen wil uitfilteren die niet beschikbaar zijn in het geverifieerde gebruikerspakket.
 * Aanroep van <b> /api/v2/{serviceProvider} /decisions/preauthorize/{mvpd} </b><br>
-([ verkrijg pre-vergunningsbesluit gebruikend specifieke MVPD ](../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md))
+([ ontvang pre-vergunningsbesluit gebruikend specifieke MVPD ](../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md))
 
 ## D. Vergunningsfase {#authorization-phase}
 
@@ -139,10 +139,10 @@ Streaming app: gebruiker wil zich afmelden bij de MVPD
 * Streaming App informeert de Programmer Service dat deze zich moet afmelden bij de MVPD voor deze specifieke app.
 * De Programmeringsservice kan de informatie die deze over de geverifieerde gebruiker opslaat opschonen
 * De vraag van de Dienst van de Programmer <b>/api/v2/{serviceProvider}/logout/{mvpd} </b><br>
-([ initieert logout voor specifieke MVPD ](../apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md))
+([ initiate logout voor specifieke MVPD ](../apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md))
 * Als de reactie actionType=&#39;interactive&#39; en url aanwezig is, zal de Programmer Service aan de Streaming App url terugkeren
 * Op basis van bestaande mogelijkheden opent de streamingtoepassing mogelijk de URL in de browser (meestal dezelfde als voor verificatie)
-* Als de Streaming-app geen browser heeft of een andere instantie is dan de Streaming-app bij verificatie, kan de stroom worden gestopt omdat de MVPD-sessie niet in de cache van de browser werd herhaald.
+* Als de streamingtoepassing geen browser heeft of een andere instantie is dan de streamingtoepassing bij verificatie, kan de stroom worden gestopt omdat de MVPD-sessie niet in de cache van de browser werd voortgezet.
 
 ## Omgevingen en functionele vereisten{#environments}
 

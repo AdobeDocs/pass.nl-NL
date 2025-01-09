@@ -2,9 +2,9 @@
 title: Gebruikershandleiding voor Primetime TVE-dashboard
 description: Gebruikershandleiding voor Primetime TVE-dashboard
 exl-id: 6f7f7901-db3a-4c68-ac6a-27082db9240a
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
 workflow-type: tm+mt
-source-wordcount: '5527'
+source-wordcount: '5526'
 ht-degree: 0%
 
 ---
@@ -34,8 +34,6 @@ Voordat u deze gebruikershandleiding dieper ingaat, raden we u aan de volgende b
 * [TVE - Technisch document](/help/authentication/kickstart/technical-paper.md)
 * [Programmer Kickstart Guide](/help/authentication/kickstart/programmer-kickstart-guide.md)
 * [Entitlement Flow](/help/authentication/integration-guide-programmers/entitlement-flow.md)
-* [Verklarende woordenlijst](/help/authentication/kickstart/glossary.md)
-
 
 Vervolg aan de volgende secties van deze gebruikershandleiding, zult u manieren ontdekken om verschillende montages voor de Kanalen van uw bedrijf, Programma&#39;s of de Integraties tussen Kanalen en MVPDs (Multichannel Video Programma Distributors) te beheren.
 

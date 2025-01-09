@@ -2,7 +2,7 @@
 title: Programmeurs
 description: Leer over programmeurs en zijn configuraties binnen het dashboard van TVE.
 exl-id: b450d7cc-d5b5-4454-8f95-8047856bfb98
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
 workflow-type: tm+mt
 source-wordcount: '1139'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 >
 >De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
-De **sectie van Programmeurs** van het Dashboard van TVE staat u toe om montages voor de [ programmeurs ](/help/authentication/kickstart/glossary.md#programmer) verbonden aan uw rekeningsrechten te bekijken en te beheren. U kunt ook [ een nieuwe programmeur ](#add-new-programmer) volgens uw vereiste toevoegen.
+De **sectie van Programmeurs** van het Dashboard van TVE staat u toe om montages voor de [ programmeurs ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#programmer) verbonden aan uw rekeningsrechten te bekijken en te beheren. U kunt ook [ een nieuwe programmeur ](#add-new-programmer) volgens uw vereiste toevoegen.
 
 Het **lusje van Programmeurs** in het linkerpaneel toont een lijst van bestaande programmeurs met de volgende details:
 

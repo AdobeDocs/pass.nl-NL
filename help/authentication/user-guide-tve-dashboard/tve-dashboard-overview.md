@@ -2,9 +2,9 @@
 title: Overzicht van TVE-dashboard
 description: Meer informatie over het TVE-dashboard en de bronnen.
 exl-id: 91baeb34-a32a-4dc3-94d8-f6cfca59dc4e
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '303'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Het [[!DNL Adobe]  Dashboard van TVE van de pas ](https://experience.adobe.com/p
    * De categorieën van het platform zoals *Desktop, Mobiele, en TV Verbonden Apparaten*
    * Platforms zoals *iOS, Android™, tvOS, Roku, en FireTV*
 
-  De rapporten verstrekken inzicht in Enige Sign-On (SSO) steun en abonneeverificatie of de duur van de vergunningszitting op MVPD en platformniveaus.
+  De rapporten bevatten inzichten in de ondersteuning voor Single Sign-On (SSO) en de duur van de verificatie- of autorisatiesessie voor abonnees op MVPD- en platformniveau.
 
 * **visualisatie van het Verkeer**: visualiseer high-level authentificatie en gegevens van het vergunningsverkeer van de programmeereigenschappen.
 
@@ -53,4 +53,5 @@ Adobe stelt voor de volgende bronnen te gebruiken om de stromen en functies gron
 * [TVE - Technisch document](/help/authentication/kickstart/technical-paper.md)
 * [Programmer Kickstart Guide](/help/authentication/kickstart/programmer-kickstart-guide.md)
 * [Entitlement Flow](/help/authentication/integration-guide-programmers/entitlement-flow.md)
-* [Verklarende woordenlijst](/help/authentication/kickstart/glossary.md)
+* [Woordenlijst Dynamische clientregistratie (DCR)](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-glossary.md)
+* [Woordenlijst REST API v2](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md)

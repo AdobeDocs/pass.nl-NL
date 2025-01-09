@@ -2,9 +2,9 @@
 title: Woordenlijst REST API V2
 description: Woordenlijst REST API V2
 exl-id: 8b3bd2de-1ff8-4c57-b18d-27ecdf2b0de2
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
 workflow-type: tm+mt
-source-wordcount: '1964'
+source-wordcount: '1747'
 ht-degree: 0%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 0%
 >
 > De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
-Dit document verstrekt definities voor termijnen die worden gebruikt wanneer het integreren van de V2 documentatie van de Authentificatie van Adobe Pass REST API en dienst als opheffing aan onze erfenis [ Verklarende woordenlijst ](/help/authentication/kickstart/glossary.md).
+Dit document bevat definities voor termen die worden gebruikt bij de integratie van de Adobe Pass Authentication REST API V2.
+
+>[!MORELIKETHIS]
+>
+> * [ Dynamische Verklarende woordenlijst van de Registratie van de Cliënt (DCR) ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-glossary.md)
 
 ## Verklarende termen {#glossary-terms}
 
 ### A {#a}
-
-#### Toegangstoken {#access-token}
-
-Het toegangstoken is een teken dat door de Authentificatie van Adobe Pass als resultaat van de [ Dynamische Registratie van de Cliënt (DCR) ](#dcr) wordt geproduceerd proces dat wordt bedoeld om toegang tot beschermde APIs te verzekeren.
 
 #### Verificatie {#authentication}
 
@@ -45,31 +45,15 @@ De authentificatiesessie kan op de ](#programmer) toepassing van de 0} Programme
 
 #### Toestemming {#authorization}
 
-De vergunning is een proces dat een gebruiker toestaat om tot beschermde inhoud ([ middel ](#resource)) van de catalogus van de a [ Programmer ](#programmer) toegang te hebben die op het bezeten [ wordt gebaseerd MVPD ](#mvpd), na het bevestigen van de gebruikersrechten met [ MVPD ](#mvpd).
+De vergunning is een proces dat een gebruiker toestaat om tot beschermde inhoud ([ middel ](#resource)) van de catalogus van de a [ Programmer ](#programmer) toegang te hebben die op het bezeten [ MVPD ](#mvpd) abonnement wordt gebaseerd, na het bevestigen van de gebruikersrechten met [ MVPD ](#mvpd).
 
 ### C {#c}
 
-#### Client Credentials {#client-credentials}
-
-De cliëntgeloofsbrieven zijn een reeks unieke waarden die tijdens het [ Dynamische Registratie van de Cliënt (DCR) ](#dcr) proces worden geproduceerd en moeten worden gebruikt om een [ toegangstoken ](#access-token) te verkrijgen.
-
 #### Configuratie {#configuration}
 
-De configuratie is een concept van de Authentificatie van Adobe Pass dat informatie over de [ Programmer ](#programmer) en [ 3} integratiemontages MVPD {opslaat en tijdens het [ authentificatie ](#authentication) proces kan worden gebruikt wanneer het vragen van de gebruiker om hun [ Tv- Leverancier ](#tv-provider) van een lijst van actieve integratie te selecteren.](#mvpd)
-
-#### Aangepast schema {#custom-scheme}
-
-De douaneregeling is een unieke waarde die a [ van de Programmer ](#programmer) van verwijzingen voorziet toepassing die van het Dashboard van Adobe Pass [ kan worden geproduceerd en worden gedownload TVE ](#tve-dashboard) en bedoeld om als definitieve omleiding in toepassingen te worden gebruikt die op de apparaten van iOS lopen.
+De configuratie is een concept van de Authentificatie van Adobe Pass dat informatie over de [ Programmer ](#programmer) en [ de integratiemontages van MVPD ](#mvpd) opslaat en tijdens het [ authentificatie ](#authentication) proces kan worden gebruikt wanneer het vragen van de gebruiker om hun [ Tv- Leverancier ](#tv-provider) van een lijst van actieve integratie te selecteren.
 
 ### D {#d}
-
-#### DCR {#dcr}
-
-De Dynamische Registratie van de Cliënt (DCR) is een vergunningsmechanisme dat door [ wordt bepaald RFC 7591 ](https://datatracker.ietf.org/doc/html/rfc7591), en het is gebaseerd op het OAuth 2.0 vergunningskader dat door [ RFC 6749 ](https://datatracker.ietf.org/doc/html/rfc6749) wordt beschreven.
-
-DCR wordt geleverd aan a [ Programmer ](#programmer) als dienst van de Authentificatie van Adobe Pass die toegang tot beschermde APIs verder kan toelaten.
-
-Voor meer informatie, verwijs naar het [ Dynamische Overzicht van de Registratie van de Cliënt ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) documentatie.
 
 #### Besluit {#decision}
 
@@ -81,11 +65,15 @@ De degradatie is een eigenschap van de Authentificatie van Adobe Pass die een ge
 
 Voor meer informatie, verwijs naar het [ Verslechterings API Overzicht ](/help/authentication/integration-guide-programmers/features-premium/degraded-access/degradation-api-overview.md) documentatie.
 
+#### Apparaat-id {#device-id}
+
+Apparaatidentiteitskaart is een uniek herkenningsteken gebonden aan het apparaat van de gebruiker en moet door de [ 1} toepassing van de Programmer {op alle fasen van de [ betitelings ](#entitlement) stroom worden verstrekt.](#programmer)
+
 ### E {#e}
 
 #### Entitlement {#entitlement}
 
-De bewering is een concept van de Authentificatie van Adobe Pass dat de beschikbare stromen en eigenschappen opneemt die een gebruiker door verschillende fasen, om tot beschermde inhoud toegang te hebben gaan, die zich van [ authentificatie ](#authentication), [ pre-autorisatie ](#preauthorization), [ vergunning ](#authorization), en tenslotte [ logout ](#logout) uitstrekken.
+De bewering is een concept van de Authentificatie van Adobe Pass dat de beschikbare stromen en eigenschappen opneemt die een gebruiker door verschillende fasen gaan, om tot beschermde inhoud toegang te hebben, die zich van [ authentificatie ](#authentication), [ pre-autorisatie ](#preauthorization), [ vergunning ](#authorization), en tenslotte [ logout ](#logout) uitstrekken.
 
 #### Verbeterde foutcode {#enhanced-error-code}
 
@@ -117,7 +105,7 @@ Logout is een proces dat een gebruiker toestaat om hun voor authentiek verklaard
 
 #### Mediumtoken {#media-token}
 
-Het media teken is een teken dat door de Authentificatie van Adobe Pass als resultaat van een vergunning [ besluit ](#decision) wordt geproduceerd die toegang tot beschermde inhoud moet verlenen.
+Het media teken is een teken dat door de Authentificatie van Adobe Pass als resultaat van een vergunning [ wordt geproduceerd besluit ](#decision) wordt bedoeld om toegang tot beschermde inhoud te verlenen die.
 
 Het media teken wordt overgegaan tot [ Programmer ](#programmer), die het dan bevestigt om de veiligheid van toegang voor dat [ middel ](#resource) te verzekeren.
 
@@ -133,7 +121,7 @@ Voor meer informatie, verwijs naar [ Integrerend de Symbolische documentatie van
 
 De multichannel video programming distributor (MVPD) is een bedrijf dat televisiediensten levert aan consumenten via kabel, satelliet of internetdiensten.
 
-MVPD wordt geïdentificeerd door een unieke waarde die tijdens het aan boord nemen proces tussen MVPD en Adobe wordt bepaald.
+De MVPD wordt geïdentificeerd door een unieke waarde die tijdens het instapproces tussen de MVPD en de Adobe is gedefinieerd.
 
 Synoniem met [ Tv- Leverancier ](#tv-provider) en [ Leverancier van de Identiteit ](#identity-provider).
 
@@ -147,7 +135,7 @@ De partner wordt geïdentificeerd door een unieke waarde (bijvoorbeeld &quot;app
 
 #### Voorafgaande goedkeuring {#preauthorization}
 
-De voorafgaande toestemming is een proces dat een gebruiker toestaat om een ondergroep van [ middelen ](#resource) van de catalogus van de a [ Programmer ](#programmer) voor te vertonen zij zouden gerechtigd zijn om tot toegang te hebben, na het bevestigen van de gebruikersrechten met [ MVPD ](#mvpd).
+De voorafgaande toestemming is een proces dat een gebruiker toestaat om een ondergroep van [ middelen ](#resource) van de catalogus van de a [ Programmer ](#programmer) voor te vertonen zij zouden gerechtigd zijn om, na het bevestigen van de gebruikersrechten met [ MVPD ](#mvpd) toegang te hebben.
 
 Gelijk aan [ Preflight ](#preflight).
 
@@ -165,7 +153,7 @@ De primaire toepassing verwijst naar de toepassing van de a [ Programmer ](#prog
 
 Het profiel is een concept van de Authentificatie van Adobe Pass dat informatie over de datum en einddatum van het de authentificatiebegin van de gebruiker, de [ meta-gegevens van de gebruiker ](#user-metadata) samen met andere gebieden opslaat die op de methode wijzen om de authentificatie (b.v. &quot;regelmatig&quot;, &quot;gedegradeerd&quot;, &quot;tijdelijk&quot;, &quot;enig teken-op&quot;, enz.) te verkrijgen.
 
-Gelijk aan vroegere termijn gebruikte authentificatietoken.
+Gelijk aan de vroegere termijn gebruikte authentificatietoken.
 
 #### Programmeur {#programmer}
 
@@ -183,15 +171,11 @@ Proxied MVPD is een bedrijf dat geen directe integratie met de Authentificatie v
 
 #### Platformidentiteit {#platform-identity}
 
-De platformidentiteit is een unieke lading van het platformherkenningsteken die door de dienst of het kader (bibliotheek) verbindend aan het apparaat van de gebruiker wordt geproduceerd en aan de [ Programmer ](#programmer) wordt verstrekt om één enkele sign-on gebruikerservaring toe te laten.
+De platformidentiteit is een unieke die lading van het platformherkenningsteken door de dienst of een kader (bibliotheek) wordt geproduceerd verbindend aan het apparaat van de gebruiker en aan de [ Programmer ](#programmer) wordt verstrekt om één enkele sign-on gebruikerservaring toe te laten.
 
 Voor meer informatie, verwijs naar [ Enige sign-on gebruikend de stromen van de platformidentiteit ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-platform-identity-flows.md) documentatie.
 
 ### R {#r}
-
-#### Geregistreerde toepassing {#registered-application}
-
-De geregistreerde toepassing is een concept van de Authentificatie van Adobe Pass dat informatie over de [ toepassing van de Programmer ](#programmer) opslaat die met het [ Dynamische Registratie van de Cliënt (DCR) ](#dcr) proces moet te werk gaan.
 
 #### Bron {#resource}
 
@@ -215,7 +199,7 @@ De secundaire toepassing kan worden uitgevoerd op hetzelfde apparaat als de prim
 
 #### Servicetoken {#service-token}
 
-Het de dienstteken is een uniek gebruikersherkenningsteken dat door de dienst of een kader (bibliotheek) verbindend aan de gebruiker wordt geproduceerd en aan de [ Programmer ](#programmer) wordt verstrekt om één enkele sign-on gebruikerservaring toe te laten.
+Het de dienstteken is een uniek gebruikersherkenningsteken dat door de dienst of een kader (bibliotheek) wordt geproduceerd verbindend aan de gebruiker en aan de [ Programmer ](#programmer) wordt verstrekt om één enkele sign-on gebruikerservaring toe te laten.
 
 Voor meer informatie, verwijs naar [ Enige sign-on het gebruiken van de stromen van het de dienstteken ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-service-token-flows.md) documentatie.
 
@@ -225,11 +209,7 @@ De dienstverlener is een kanaal (merk) dat door a [ Programmer ](#programmer) wo
 
 De dienstverlener wordt geïdentificeerd door een unieke waarde die tijdens het aan boord nemen proces tussen de Programmer en de Adobe wordt bepaald.
 
-Synoniem met vroegere gebruikte termijn [ aanvrager identiteitskaart ](/help/authentication/kickstart/glossary.md#requestor-id).
-
-#### Softwareinstructie {#software-statement}
-
-De softwareverklaring is een Symbolisch van het Web JSON (JWT) dat van het Dashboard van Adobe Pass [ kan worden gedownload TVE ](#tve-dashboard) en moet als deel van het [ Dynamische Registratie van de Cliënt (DCR) ](#dcr) proces worden gebruikt.
+Gelijk aan de voormalige gebruikte term aanvrager-id.
 
 #### SLO {#slo}
 
@@ -237,7 +217,7 @@ Enige logout (SLO) is een proces dat een gebruiker toestaat om uit alle toepassi
 
 #### SP {#sp}
 
-De dienstverlener (SP) verwijst naar de rol die door de Authentificatie van Adobe Pass namens a [ Programmer ](#programmer) in een integratie met een [ MVPD ](#mvpd) wordt gespeeld.
+De dienstverlener (SP) verwijst naar de rol die door de Authentificatie van Adobe Pass namens a [ Programmer ](#programmer) in een integratie met a [ MVPD ](#mvpd) wordt gespeeld.
 
 #### SSO {#sso}
 
@@ -247,13 +227,13 @@ Enige sign-on (SSO) is een proces dat een gebruiker toestaat om eens voor authen
 
 #### TempPass Basic {#temp-pass-basic}
 
-Basis TempPass is een eigenschap van de Authentificatie van Adobe Pass die een gebruiker toestaat om tot beschermde inhoud voor een beperkte tijd toegang te hebben zonder de behoefte om met een [ MVPD ](#mvpd) voor authentiek te verklaren.
+Basis TempPass is een eigenschap van de Authentificatie van Adobe Pass die een gebruiker toestaat om tot beschermde inhoud voor een beperkte tijd toegang te hebben zonder de behoefte om met a [ MVPD ](#mvpd) voor authentiek te verklaren.
 
 Voor meer informatie, verwijs naar de ](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass.md) documentatie van de Pas van 0} Temperatuur {.[
 
 #### Promotie voor TempPass {#temp-pass-promotional}
 
-De promotionele TempPass is een eigenschap van de Authentificatie van Adobe Pass die een gebruiker toestaat om tot beschermde inhoud voor een maximumaantal middelen en een beperkte tijd toegang te hebben zonder de behoefte om met een [ MVPD ](#mvpd) voor authentiek te verklaren.
+Promotional TempPass is een eigenschap van de Authentificatie van Adobe Pass die een gebruiker toestaat om tot beschermde inhoud voor een maximumaantal middelen en een beperkte tijd toegang te hebben zonder de behoefte om met een [ MVPD ](#mvpd) voor authentiek te verklaren.
 
 Voor meer informatie, verwijs naar de ](/help/authentication/integration-guide-programmers/features-premium/temporary-access/promotional-temp-pass.md) documentatie van de Pas van de Bevordering van Temperatuur [.
 
@@ -261,7 +241,7 @@ Voor meer informatie, verwijs naar de ](/help/authentication/integration-guide-p
 
 De tijd om te leven (TTL) is een waarde die op de hoeveelheid tijd wijst die een onderliggende entiteit geldig voor is.
 
-TTL kan voor een [ toegangstoken ](#access-token), a [ profiel ](#profile), een toestemmings [ besluit ](#decision), of a [ media teken ](#media-token) worden vermeld.
+TTL kan voor een [ toegangstoken ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-glossary.md#access-token), a [ profiel ](#profile), een toestemmings [ besluit ](#decision), of a [ media teken ](#media-token) worden vermeld.
 
 #### TVE {#tve}
 
@@ -269,7 +249,7 @@ De TVE (TV Anywhere) is een industriesecche die consumenten toegang biedt tot hu
 
 #### TVE-dashboard {#tve-dashboard}
 
-Het dashboard van TV overal (TVE) is een hulpmiddel van de Authentificatie van Adobe Pass dat aan [ Programmeurs ](#programmer) wordt verstrekt om hun configuratie en gegevens te beheren.
+Het dashboard van TV overal (TVE) is een hulpmiddel van de Authentificatie van Adobe Pass dat aan [ wordt verstrekt Programmeurs ](#programmer) om hun configuratie en gegevens te beheren.
 
 Voor meer informatie, verwijs naar de ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-overview.md) documentatie van de Gids van de Gebruiker van het Dashboard van 0} TVE.[
 
@@ -277,7 +257,7 @@ Voor meer informatie, verwijs naar de ](/help/authentication/user-guide-tve-dash
 
 De tv-provider is een bedrijf dat televisiediensten levert aan consumenten via kabel, satelliet of internet.
 
-De tv-provider wordt geïdentificeerd door een unieke waarde die tijdens het instapproces tussen de tv-provider en de Adobe wordt gedefinieerd.
+De tv-provider wordt geïdentificeerd door een unieke waarde die tijdens het instapproces tussen de tv-provider en de Adobe is gedefinieerd.
 
 Synoniem met [ MVPD ](#mvpd) en [ Leverancier van de Identiteit ](#identity-provider).
 
@@ -285,11 +265,15 @@ Synoniem met [ MVPD ](#mvpd) en [ Leverancier van de Identiteit ](#identity-prov
 
 #### Gebruikersagent {#user-agent}
 
-De gebruikersagent verwijst naar browser of gelijkaardige component (platform specifiek) geschikt om het Web te navigeren en de [ MVPD ](#mvpd) login pagina terug te geven.
+De gebruikersagent verwijst naar browser of gelijkaardige component (platform-specifiek) geschikt om het Web te navigeren en de [ MVPD ](#mvpd) login pagina terug te geven.
+
+#### Gebruikersnaam {#user-id}
+
+De gebruiker - identiteitskaart is een uniek herkenningsteken verbindend aan de gebruiker en komt van het [ MVPD ](#mvpd) authentificatieproces voort.
 
 #### Metagegevens gebruiker {#user-metadata}
 
-De gebruikersmeta-gegevens verwijst naar gebruiker specifieke attributen (b.v., postcodes, ouderlijke classificaties, gebruiker IDs, enz.) die door [ MVPD ](#mvpd) worden gehandhaafd en door de Authentificatie van Adobe Pass als deel van a [ profiel ](#profile) worden verstrekt.
+De gebruikersmeta-gegevens verwijst naar gebruiker-specifieke attributen (b.v., postcodes, ouderlijke classificaties, gebruiker IDs, enz.) die door [ MVPD ](#mvpd) worden gehandhaafd en door de Authentificatie van Adobe Pass als deel van a [ profiel ](#profile) worden verstrekt.
 
 Voor meer informatie, verwijs naar de ](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata-feature.md) documentatie van Meta-gegevens van de Gebruiker 0}.[
 
