@@ -2,9 +2,9 @@
 title: Lijst met vooraf geautoriseerde bronnen ophalen via tweede webtoepassing voor scherm
 description: Lijst met vooraf geautoriseerde bronnen ophalen via tweede webtoepassing voor scherm
 exl-id: 78eeaf24-4cc1-4523-8298-999c9effdb7a
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: 1c357b918fa4f6d4b92a9055de018c55ee5861e0
 workflow-type: tm+mt
-source-wordcount: '277'
+source-wordcount: '275'
 ht-degree: 0%
 
 ---
@@ -46,15 +46,15 @@ Er zijn twee reeksen APIs: één reeks voor de Streaming App of de Dienst van Pr
 
 | Endpoint | Geroepen </br> door | Invoer   </br> Params | HTTP </br> Methode | Antwoord | HTTP-respons </br> |
 | --- | --- | --- | --- | --- | --- |
-| &lt;SP_FQDN>/api/v1/preauthorize/{registration code} | Module AuthN | 1. registratiecode </br>    (De component van de Weg) </br> 2.  (Verplicht) </br> .  resourcerelijst (verplicht) | GET | XML of JSON met individuele aan de autorisatie voorafgaande beslissingen of foutdetails. Zie onderstaande voorbeelden. | 200 - Succes </br></br> 400 - het Onjuiste verzoek </br></br> 401 - ongeoorloofd </br></br> 405 - Methode niet toegestaan </br></br> 412 - Voorwaarde ontbrak </br></br> 500 - Interne Fout van de Server |
+| &lt;SP_FQDN>/api/v1/preauthorize/{registration code} | Module AuthN | 1. registratiecode </br>    (De component van de Weg) </br> 2.  (Verplicht) </br> .  bron (verplicht) | GET | XML of JSON met individuele aan de autorisatie voorafgaande beslissingen of foutdetails. Zie onderstaande voorbeelden. | 200 - Succes </br></br> 400 - het Onjuiste verzoek </br></br> 401 - ongeoorloofd </br></br> 405 - Methode niet toegestaan </br></br> 412 - Voorwaarde ontbrak </br></br> 500 - Interne Fout van de Server |
 
 
 
 | Invoerparameter | Beschrijving |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | registratiecode | De waarde van de registratiecode die door de gebruiker aan het begin van de authentificatiestroom wordt verstrekt. |
 | aanvrager | De programmeeraanvragerId waarvoor deze verrichting geldig is. |
-| resourcerelijst | Een tekenreeks die een door komma&#39;s gescheiden lijst met resourceIds bevat die de inhoud identificeert die toegankelijk kan zijn voor een gebruiker en die wordt herkend door MVPD-autorisatieeindpunten. |
+| resource | Een tekenreeks die een door komma&#39;s gescheiden lijst met resourceIds bevat die de inhoud identificeert die toegankelijk kan zijn voor een gebruiker en die wordt herkend door MVPD-autorisatieeindpunten. |
 
 
 ### Samplereactie {#sample-response}
