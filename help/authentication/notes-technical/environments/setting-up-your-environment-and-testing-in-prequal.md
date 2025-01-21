@@ -2,9 +2,9 @@
 title: Uw omgeving instellen en testen in een proefversie
 description: Uw omgeving instellen en testen in een proefversie
 exl-id: f822c0a1-045a-401f-a44f-742ed25bfcdc
-source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
+source-git-commit: ca95bc45027410becf8987154c7c9f8bb8c2d5f8
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '478'
 ht-degree: 0%
 
 ---
@@ -41,6 +41,16 @@ Stap 1 en 2 zijn het inrichten van de testomgeving op een van de testmachines, s
 
 ```Choose any IP from **addresses** section (e.g. `52.13.71.11)```
 
+```cmd
+C:\>nslookup entitlement-prequal.auth.adobe.com 
+...
+Addresses:  52.26.79.43
+            54.190.212.171
+```
+
+```Choose any IP from **addresses** section (e.g. `54.190.212.171)```
+
+
 * **Op Linux/Mac**
 
 ```sh
@@ -53,6 +63,17 @@ Stap 1 en 2 zijn het inrichten van de testomgeving op een van de testmachines, s
 ```
 
 ```Choose any IP from **A records (**e.g `52.13.71.11)```
+
+```sh
+    $ dig entitlement-prequal.auth.adobe.com
+    
+    ;; ANSWER SECTION:
+    ...
+    ............ 60 IN A      52.26.79.43
+    ............ 60 IN A      54.190.212.171
+```
+
+```Choose any IP from **A records (**e.g `54.190.212.171)```
 
 >[!NOTE]
 >
@@ -68,14 +89,15 @@ Stap 1 en 2 zijn het inrichten van de testomgeving op een van de testmachines, s
 * Bewerk het *bestand c:\\windows\\System32\\drivers\\etc\\hosts* (in Windows) of */etc/hosts* bestand (op Macintosh/Linux/Android) en voeg het volgende toe:
 
 * Spoof productieprofiel
-   * 52.13.71.11 entitlement.auth.adobe.com sp.auth.adobe.com api.auth.adobe.com
+   * 52.13.71.11 sp.auth.adobe.com api.auth.adobe.com
+   * 54.19.212.171 entitlement.auth.adobe.com
 
 **het Vlekken op Android:** om op Android te spoof, moet u een mededinger van Android gebruiken.
 
 * Zodra spoofing op zijn plaats is, kunt u gewone URLs voor de productie en het opvoeren profielen eenvoudig gebruiken: (namelijk `http://sp.auth-staging.adobe.com` en `http://entitlement.auth-staging.adobe.com` en u zult eigenlijk het *pre-kwalificatiemilieu/ productie* van de* nieuwe bouwstijl raken.
 
 
-## STAP 3.  Controleren of u naar de juiste omgeving wijst {#Verify-you-are-pointing-to-the-right-environment}
+## STAP 3.  Controleer of u naar de juiste omgeving verwijst {#Verify-you-are-pointing-to-the-right-environment}
 
 **Dit is een eenvoudige stap:**
 
@@ -86,13 +108,13 @@ Stap 1 en 2 zijn het inrichten van de testomgeving op een van de testmachines, s
 
 * Deze stap vereist het websiteadres van de programmeur en enkele geldige MVPD-inloggegevens (een gebruiker die is geverifieerd en geautoriseerd).
 
-## STAP 5.  Scenariotests uitvoeren met behulp van de websites van de programmeur {#perform-scenario-testing-using-programmer-website}
+## STAP 5.  Scènetests uitvoeren met de websites van de programmeur {#perform-scenario-testing-using-programmer-website}
 
-* Nadat u de omgeving hebt ingesteld en ervoor hebt gezorgd dat de basisverificatie-autorisatiestroom werkt, kunt u doorgaan met het testen van complexere scenario&#39;s.
+* Na de voltooiing van de milieu opstelling en het verzekeren dat de basisauthentificatie-vergunning stroom werkt kunt u met het testen van complexere scenario&#39;s te werk gaan.
 
 
 ## STAP 6.  Testen met de API-testsite {#perform-testing-using-api-testing-site}
 
 * Als u dieper in het testen van de Authentificatie van Adobe Pass wilt gaan, adviseren wij u de [ API testplaats ](http://entitlement-prequal.auth.adobe.com/apitest/api.html) gebruiken.
 
-U kunt meer details op API testplaats bij [ vinden hoe te om de stromen van de Authentificatie en van de Toestemming te testen gebruikend de de testplaats van API van de Adobe ](/help/authentication/integration-guide-programmers/legacy/notes-technical/test-authn-authz-flows-using-adobes-api-test-site.md).
+Meer informatie over de API-testsite vindt u op [Verificatie- en autorisatiestromen testen met behulp van de API-testsite](/help/authentication/integration-guide-programmers/legacy/notes-technical/test-authn-authz-flows-using-adobes-api-test-site.md) van Adobe.
