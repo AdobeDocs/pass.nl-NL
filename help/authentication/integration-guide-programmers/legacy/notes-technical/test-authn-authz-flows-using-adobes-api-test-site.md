@@ -2,9 +2,9 @@
 title: Verificatie- en autorisatiestromen testen met de API-testsite van de Adobe
 description: Verificatie- en autorisatiestromen testen met de API-testsite van de Adobe
 exl-id: 04af4aed-35e4-44cb-98ce-7643165a8869
-source-git-commit: 811feba1f2476bdfacb20e332e33df7f7ae8ac00
+source-git-commit: 65475d6da7a1b25cb2d8ebd6229a7cb360c7ab4a
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '368'
 ht-degree: 0%
 
 ---
@@ -33,8 +33,8 @@ Voer de volgende stappen uit nadat u deel I hebt voltooid:
 
 1. Open webpage: [ het Staging API test ](https://sp.auth-staging.adobe.com/apitest/api.html).
 1. Toegangsfunctie laden via:
-   * Het kiezen van van het dropdown menu welke versie van AccessEnabler (v3 of v4) nodig is, van waar u tot het (het opvoeren of productie) wilt toegang hebben en of het op zuivert wijze zou moeten zijn
-   * De software-instructie invoeren waarmee u wilt testen of v4 wordt gebruikt
+   * In het vervolgkeuzemenu kiezen waar u het wilt openen (opmaken of maken) en in de foutopsporingsmodus kiezen
+   * Het ingaan van de softwareverklaring waarmee u wilt testen
    * Dan klikkend op &quot;**Toegelaten van de Toegang van de Lading**&quot;knoop.
 1. Plaats nu de aanvrager identiteitskaart waarde aan &quot;**requestID**&quot;en klik op de &quot;setRequestor&quot;knoop.
 1. Vervolgens drukt u op de knop &quot;getAuthentication&quot; en wacht u tot de weergavekiezer verschijnt.
