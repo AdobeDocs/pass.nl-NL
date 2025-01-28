@@ -2,9 +2,9 @@
 title: Verificatiesessie maken
 description: REST API V2 - Verificatiesessie maken
 exl-id: bb2a6bb4-0778-4748-a674-df9d0e8242c8
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 5cb14959d6e9af91252316fbdd14ff33d813089b
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '1000'
 ht-degree: 0%
 
 ---
@@ -73,7 +73,7 @@ ht-degree: 0%
    <tr>
       <td style="background-color: #DEEBFF;">redirectUrl</td>
       <td>
-        De laatste omleiding URL waaraan de gebruikersagent navigeert wanneer de authentificatiestroom voor MVPD wordt voltooid.
+        De laatste omleidings-URL waarnaar de gebruikersagent navigeert wanneer de verificatiestroom voor de MVPD is voltooid.
         <br/><br/>
         De waarde moet URL-gecodeerd zijn.
         <br/><br/>
@@ -266,6 +266,23 @@ ht-degree: 0%
                <td><i>vereist</i></td>
             </tr>
             <tr>
+               <td style="background-color: #DEEBFF;">reasonType</td>
+               <td>
+                  Het type reden dat wordt gebruikt om de 'actionName' uit te leggen.
+                  <br/><br/>
+                  De mogelijke waarden zijn:
+                  <ul>
+                    <li><b>none</b></li>
+                    <li><b>geverifieerd</b></li>
+                    <li><b>tijdelijk</b></li>
+                    <li><b>aangetast</b></li>
+                    <li><b>authenticatedSSO</b></li>
+                    <li><b>pfs_fallback</b></li>
+                    <li><b>configuration_fallback</b></li>
+                  </ul>
+               <td><i>vereist</i></td>
+            </tr>
+            <tr>
                <td style="background-color: #DEEBFF;">missingParameters</td>
                <td>De ontbrekende parameters die moeten worden verstrekt om de basisauthentificatiestroom te voltooien.</td>
                <td>optioneel</td>
@@ -295,7 +312,17 @@ ht-degree: 0%
                <td>De interne unieke id die tijdens het instapproces aan de Serviceleverancier is gekoppeld.</td>
                <td><i>vereist</i></td>
             </tr>
-         </table>
+            <tr>
+               <td style="background-color: #DEEBFF;">notBefore</td>
+               <td>Het tijdstempel waarvóór de verificatiecode niet geldig is.</td>
+               <td>optioneel</td>
+            </tr>
+            <tr>
+               <td style="background-color: #DEEBFF;">notAfter</td>
+               <td>De tijdstempel waarna de verificatiecode niet geldig is.</td>
+               <td>optioneel</td>
+            </tr>
+</table>
       </td>
       <td><i>vereist</i></td>
 </table>
@@ -363,11 +390,14 @@ Content-Type: application/json;charset=UTF-8
 {
     "actionName": "authenticate",
     "actionType": "interactive",
+    "reasonType": "none",
     "url": "/api/v2/authenticate/REF30/8ER640M",
     "code": "8ER640M",
     "sessionId": "1b614390-6610-4d14-9421-6565f6e75958",
     "mvpd": "Cablevision",
-    "serviceProvider": "REF30"
+    "serviceProvider": "REF30",
+    "notBefore": "1733735289035",
+    "notAfter": "1733737089035"
 }
 ```
 
@@ -402,11 +432,14 @@ Content-Type: application/json;charset=UTF-8
 {
     "actionName": "resume",
     "actionType": "direct",
+    "reasonType": "none",
     "url": "/api/v2/REF30/sessions/8ER640M",
     "missingParameters": ["mvpd", "domain", "redirectUrl"],
     "code": "8ER640M",
     "sessionId": "1b614390-6610-4d14-9421-6565f6e75958",
-    "serviceProvider": "REF30"
+    "serviceProvider": "REF30",
+    "notBefore": "1733735289035",
+    "notAfter": "1733737089035"
 }
 ```
 
@@ -443,6 +476,7 @@ Content-Type: application/json;charset=UTF-8
 {
     "actionName": "authorize",
     "actionType": "direct",
+    "reasonType": "authenticated",
     "url": "/api/v2/REF30/decisions/authorize/Cablevision",
     "sessionId": "1b614390-6610-4d14-9421-6565f6e75958",
     "mvpd": "Cablevision",
@@ -481,6 +515,7 @@ Content-Type: application/json;charset=UTF-8
 {
     "actionName": "authorize",
     "actionType": "direct",
+    "reasonType": "temporary",
     "url": "/api/v2/REF30/decisions/authorize/TempPass_TEST40",
     "sessionId": "1b614390-6610-4d14-9421-6565f6e75958",
     "mvpd": "TempPass_TEST40",
@@ -521,6 +556,7 @@ Content-Type: application/json;charset=UTF-8
 {
     "actionName": "authorize",
     "actionType": "direct",
+    "reasonType": "degraded",
     "url": "/api/v2/REF30/decisions/authorize/Cablevision",
     "sessionId": "1b614390-6610-4d14-9421-6565f6e75958",
     "mvpd": "Cablevision",
