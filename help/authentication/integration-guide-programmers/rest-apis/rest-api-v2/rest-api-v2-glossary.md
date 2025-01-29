@@ -2,7 +2,7 @@
 title: Woordenlijst REST API V2
 description: Woordenlijst REST API V2
 exl-id: 8b3bd2de-1ff8-4c57-b18d-27ecdf2b0de2
-source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
+source-git-commit: ae2e61152695b738b0bb08d1dcd81417f3bbdfb5
 workflow-type: tm+mt
 source-wordcount: '1747'
 ht-degree: 0%
@@ -275,7 +275,7 @@ De gebruiker - identiteitskaart is een uniek herkenningsteken verbindend aan de 
 
 De gebruikersmeta-gegevens verwijst naar gebruiker-specifieke attributen (b.v., postcodes, ouderlijke classificaties, gebruiker IDs, enz.) die door [ MVPD ](#mvpd) worden gehandhaafd en door de Authentificatie van Adobe Pass als deel van a [ profiel ](#profile) worden verstrekt.
 
-Voor meer informatie, verwijs naar de ](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata-feature.md) documentatie van Meta-gegevens van de Gebruiker 0}.[
+Voor meer informatie, verwijs naar de ](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata.md) documentatie van Meta-gegevens van de Gebruiker 0}.[
 
 ### V {#v}
 

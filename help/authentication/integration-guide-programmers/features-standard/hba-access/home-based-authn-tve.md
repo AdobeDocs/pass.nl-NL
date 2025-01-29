@@ -2,7 +2,7 @@
 title: Verificatie op thuisbasis voor tv overal
 description: Verificatie op thuisbasis voor tv overal
 exl-id: abdc7724-4290-404a-8f93-953662cdc2bc
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: ae2e61152695b738b0bb08d1dcd81417f3bbdfb5
 workflow-type: tm+mt
 source-wordcount: '1638'
 ht-degree: 0%
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 ## Wat is verificatie op thuisbasis? {#whatis-home-based-authn}
 
-HBA (Home Based Authentication) is een tv-functie overal waarmee betaaltv-abonnees tv-inhoud online kunnen bekijken zonder MVPD-referenties in te voeren als ze thuis zijn. Hierdoor wordt de gebruikerservaring van de verificatiestroom aanzienlijk verbeterd.
+HBA (Home Based Authentication) is een tv-functie overal waarmee betaaltelevisieabonnees tv-inhoud online kunnen bekijken zonder MVPD-referenties in te voeren als ze thuis zijn. Hierdoor wordt de gebruikerservaring van de verificatiestroom aanzienlijk verbeterd.
 
-Thuisgebaseerde verificatie-definitie door het Open Authentication Technology Committee (OATC): &quot;In-home automatische verificatie is het proces waarbij een MVPD/OVD gebruikmaakt van kenmerken van het thuisnetwerk (of id&#39;s die automatisch toegankelijk zijn tussen apparaten op het thuisnetwerk) om te verifiëren welke abonneeaccount aan dat thuisnetwerk is gekoppeld, zodat gebruikers niet handmatig aanmeldingsgegevens hoeven in te voeren bij het instellen van een TVE-sessie voor toegang tot beveiligde inhoud.&quot;
+Thuisgebaseerde verificatie-definitie door het Open Authentication Technology Committee (OATC): &quot;Automatische interne verificatie is het proces waarbij een MVPD/OVD gebruikmaakt van kenmerken van het thuisnetwerk (of van herkenningstekens die automatisch toegankelijk zijn tussen apparaten op het thuisnetwerk) om te verifiëren welke abonneeaccount aan dat thuisnetwerk is gekoppeld, zodat gebruikers niet handmatig aanmeldingsgegevens hoeven in te voeren bij het instellen van een TVE-sessie voor toegang tot beveiligde inhoud.&quot;
 
 
 
@@ -43,7 +43,7 @@ Hieronder ziet u ook de aanmeldingsconversiesnelheid voor een kanaal dat is geï
 
 ![](../../../assets/hba-vs-non-hba.png)
 
-Zes maanden nadat HBA voor de meeste kanalen die met dit MVPD worden geïntegreerd, werd toegelaten, merkten wij een verhoging van 82% in unieke gebruikers (het aantal gebruikers die tot TV overal door dit MVPD toegang hebben bijna verdubbelde).
+Zes maanden na het inschakelen van HBA voor de meeste kanalen die met deze MVPD zijn geïntegreerd, zagen we een toename van 82% van de unieke gebruikers (het aantal gebruikers dat via deze MVPD toegang heeft tot tv-zenders overal, is bijna verdubbeld).
 
 2w3In tegenstelling, zoals u in de grafiek kunt zien hieronder, hadden andere MVPDs die HBA niet hadden toegelaten slechts een 26% toename in de unieke gebruikers in de afgelopen zes maanden.
 
@@ -59,9 +59,9 @@ In deze sectie wordt de HBA-ondersteuning beschreven die wordt geboden door Adob
 
 Adobe Pass-verificatiefuncties die HBA ondersteunen
 
-* Mogelijkheid om verschillende verificatie-TTL&#39;s in te stellen voor HBA- en niet-HBA-verificatie (ook ondersteuning voor MVPD vereist)
-* Mogelijkheid om automatisch een MVPD (de plukker van MVPD overslaan) te selecteren als de authentificatie verliep. Dit is nuttig, vooral wanneer HBA TTLs klein is.
-* Mogelijkheid om de programmeurs te informeren als de verificatie HBA was of niet (ook ondersteuning van MVPD vereist)
+* Mogelijkheid om verschillende verificatie-TTL&#39;s in te stellen voor HBA- en niet-HBA-verificatie (ook MVPD-ondersteuning vereist)
+* Mogelijkheid om automatisch een MVPD (MVPD-kiezer overslaan) te selecteren als de verificatie is verlopen. Dit is nuttig, vooral wanneer HBA TTLs klein is.
+* Mogelijkheid om de programmeurs te informeren als de verificatie HBA was of niet (ook MVPD-ondersteuning is vereist)
 
 ### HBA-gebruikerservaring op Adobe Pass-verificatieplatforms {#hba-user-exp}
 
@@ -74,21 +74,21 @@ De volgende tabellen bevatten informatie over de gebruikerservaring voor de onde
 
 | Gebruikersstroom - Type platform | js, Windows (native) |
 |---|---|
-| Met HBA ingeschakeld | Wanneer gebruikers thuis zijn, worden ze automatisch geverifieerd. Nadat het teken van AuthN HBA verloopt, moeten de gebruikers hun MVPD van de plukker opnieuw selecteren en zullen automatisch voor authentiek verklaard worden. |
-| Zonder HBA | De gebruikers worden gevraagd om hun MVPD te selecteren en hun geloofsbrieven in te gaan, zelfs als zij thuis zijn. Nadat het teken AuthN verloopt, moeten de gebruikers hun geloofsbrieven opnieuw ingaan. |
+| Met HBA ingeschakeld | Wanneer gebruikers thuis zijn, worden ze automatisch geverifieerd. Nadat het token HBA AuthN is verlopen, moeten gebruikers hun MVPD opnieuw selecteren in de kiezer en worden ze automatisch geverifieerd. |
+| Zonder HBA | Gebruikers wordt gevraagd hun MVPD te selecteren en hun referenties in te voeren, zelfs als ze zich thuis bevinden. Nadat het teken AuthN verloopt, moeten de gebruikers hun geloofsbrieven opnieuw ingaan. |
 
 | Gebruikersstroom - Type platform | REST-API zonder client (tweede schermverificatie) |
 |---|---|
 | Met HBA ingeschakeld | Wanneer gebruikers thuis zijn en een Clientless REST API-toepassing gebruiken, worden ze automatisch geverifieerd op het tweede schermapparaat nadat ze de registratiecode hebben ingevoerd en hun MVPD hebben geselecteerd. Nadat het token HBA AuthN is verlopen, worden gebruikers automatisch opnieuw geverifieerd (op het tweede schermapparaat). |
-| Zonder HBA | De gebruikers worden gevraagd om hun MVPD te selecteren en hun geloofsbrieven in te gaan, zelfs als zij thuis zijn. Nadat het teken AuthN verloopt, moeten de gebruikers hun geloofsbrieven opnieuw ingaan. |
+| Zonder HBA | Gebruikers wordt gevraagd hun MVPD te selecteren en hun referenties in te voeren, zelfs als ze zich thuis bevinden. Nadat het teken AuthN verloopt, moeten de gebruikers hun geloofsbrieven opnieuw ingaan. |
 
 ### Technische details van de implementatie van HBA {#tech-details-hba}
 
 #### Protocol OAuth 2.0 {#oauth-2-protocol}
 
-In de stroom HBA voor MVPDs die met het OAuth 2.0 authentificatieprotocol wordt geïntegreerd, geeft MVPD een vernieuwingstoken uit en de Adobe geeft een token van de authentificatie van HBA uit:
+In de stroom HBA voor MVPDs die met het OAuth 2.0 authentificatieprotocol wordt geïntegreerd, geeft de MVPD een vernieuwingstoken uit en de Adobe geeft een token van de authentificatie van HBA uit:
 
-* Vernieuwingstoken heeft TTL die door de bedrijfsvereisten van MVPD wordt bepaald.
+* Het vernieuwingstoken heeft TTL die door de bedrijfsvereisten van MVPD wordt bepaald.
 * Het de authentificatietoken TTL van HBA **moet minder dan of gelijk aan** zijn verfrist teken TTL.
 
 
@@ -96,9 +96,9 @@ In de stroom HBA voor MVPDs die met het OAuth 2.0 authentificatieprotocol wordt 
 
 
 | Handelingen van gebruikers | Systeemhandelingen |
-|---|---|
-| De gebruiker navigeert naar de site van de programmeur. Wanneer u probeert een video af te spelen, wordt de MVPD-kiezer weergegeven. De gebruiker selecteert hun MVPD en klikt login. | Er wordt een achtergrondcontrole uitgevoerd. MVPD past hun reeks regels voor gebruikersopsporing toe (bijvoorbeeld, kaart het IP van de gebruiker adres met het adres van MAC van verdeler-provisioned modems of breedband-verbonden reeks-top dozen). |
-| Er wordt een scherm weergegeven dat ongeveer 3 seconden aanhoudt. Er kan een interstitiële pagina worden weergegeven om de gebruiker te laten weten dat hij/zij automatisch wordt aangemeld via hun MVPD-account. | <ol><li>AccessEnabler, die aan de kant van de programmeur geïnstalleerd is, verzendt een authentificatieverzoek (als HTTP- verzoek) naar het eindpunt van de Authentificatie van Adobe Pass.</li><li>Het eindpunt van de Authentificatie van Adobe Pass richt het verzoek aan het MVPD authentificatieeindpunt opnieuw. <br />**Nota:** het verzoek bevat de `hba_flag` parameter (poging HBA = waar) die signaleert dat MVPD authentificatie HBA zou moeten proberen.</li><li>Het MVPD authentificatieeindpunt verzendt een vergunningscode naar het eindpunt van de Authentificatie van Adobe Pass.</li><li>De Authentificatie van Adobe Pass gebruikt de vergunningscode om te verzoeken verfrist token en een toegangstoken van het symbolische eindpunt van MVPD.</li><li>De MVPD verzendt een verificatiebeslissing en de parameter `hba_status` (true/false) in de `id_token` .</li><li>Een vraag aan het MVPD eindpunt van het gebruikersprofiel wordt verzonden om de [ hba_status sleutel in gebruikersmeta-gegevens ](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata-feature.md#obtaining) bloot te stellen.</li><li>MVPD plaatst vernieuwt teken TTL aan een MVPD-Goedgekeurde waarde en de Adobe plaatst het teken AuthN TTL aan een waarde minder of gelijk aan de waarde van het vernieuwingstoken.</li></ol> |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| De gebruiker navigeert naar de site van de programmeur. Wanneer u een video probeert af te spelen, wordt de MVPD-kiezer weergegeven. De gebruiker selecteert de MVPD en klikt op de aanmelding. | Er wordt een achtergrondcontrole uitgevoerd. MVPD past zijn reeks regels voor gebruikersopsporing toe (bijvoorbeeld, kaart het IP van de gebruiker adres met het adres van MAC van verdeler-provisioned modems of breedband-verbonden reeks-top dozen). |
+| Er wordt een scherm weergegeven dat ongeveer 3 seconden aanhoudt. Er kan een interstitiële pagina worden weergegeven om de gebruiker te laten weten dat hij/zij automatisch wordt aangemeld via hun MVPD-account. | <ol><li>AccessEnabler, die aan de kant van de programmeur geïnstalleerd is, verzendt een authentificatieverzoek (als HTTP- verzoek) naar het eindpunt van de Authentificatie van Adobe Pass.</li><li>Het eindpunt van de Authentificatie van Adobe Pass richt het verzoek aan het de authentificatieeindpunt van MVPD opnieuw. <br />**Nota:** het verzoek bevat de `hba_flag` parameter (poging HBA = waar) die signaleert dat MVPD authentificatie HBA zou moeten proberen.</li><li>Het de authentificatieeindpunt van MVPD verzendt een vergunningscode naar het eindpunt van de Authentificatie van Adobe Pass.</li><li>De Authentificatie van Adobe Pass gebruikt de vergunningscode om te verzoeken verfrist token en een toegangstoken van het het symbolische eindpunt van MVPD.</li><li>De MVPD verzendt een verificatiebeslissing en de parameter `hba_status` (true/false) in de `id_token` .</li><li>Een vraag aan het eindpunt van het gebruikersprofiel van MVPD wordt verzonden om [ hba_status sleutel in gebruikersmeta-gegevens ](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata.md) bloot te stellen.</li><li>De MVPD plaatst vernieuwingstokenTTL aan een MVPD-Toegelaten waarde en de Adobe plaatst het teken AuthN TTL aan een waarde minder of gelijk aan de waarde van het vernieuwingstoken.</li></ol> |
 | De gebruiker is geverifieerd en kan nu bladeren naar tv-inhoud overal. | Het verificatietoken wordt doorgegeven aan de gebruiker die nu met succes door de site van de programmeur kan bladeren. |
 
 #### SAML-protocol {#saml-protocol}
@@ -106,9 +106,9 @@ In de stroom HBA voor MVPDs die met het OAuth 2.0 authentificatieprotocol wordt 
 Beschrijving van de HBA-verificatiestroom voor het SAML-verificatieprotocol
 
 | Handelingen van gebruikers | Systeemhandelingen |
-|---|---|
-| De gebruiker navigeert naar de site van de programmeur. Wanneer u probeert een video af te spelen, wordt de MVPD-kiezer weergegeven. De gebruiker selecteert hun MVPD en klikt login. | Er wordt een achtergrondcontrole uitgevoerd. MVPD past hun reeks regels voor gebruikersopsporing toe (bijvoorbeeld, kaart het IP van de gebruiker adres met het adres van MAC van verdeler-provisioned modems of breedband-verbonden reeks-top dozen). |
-| Er wordt een scherm weergegeven dat ongeveer 3 seconden aanhoudt. Er kan een interstitiële pagina worden weergegeven om de gebruiker te laten weten dat hij/zij automatisch wordt aangemeld via hun MVPD-account. | <ol><li>AccessEnabler, die aan de kant van de programmeur geïnstalleerd is, verzendt een authentificatieverzoek (als HTTP- verzoek) naar het eindpunt van de Authentificatie van Adobe Pass.</li><li>Het eindpunt van de Authentificatie van Adobe Pass richt het verzoek aan het MVPD authentificatieeindpunt opnieuw.</li><li>De MVPD moet een authenticatiebesluit verzenden in de vorm van een SAML-reactie die de HBA-markering moet bevatten: hba_status (true/false).</li><li>Een vraag aan het MVPD eindpunt van het gebruikersprofiel wordt verzonden om de [ hba_status sleutel in gebruikersmeta-gegevens ](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata-feature.md#obtaining) bloot te stellen.</li></ol> |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| De gebruiker navigeert naar de site van de programmeur. Wanneer u een video probeert af te spelen, wordt de MVPD-kiezer weergegeven. De gebruiker selecteert de MVPD en klikt op de aanmelding. | Er wordt een achtergrondcontrole uitgevoerd. MVPD past zijn reeks regels voor gebruikersopsporing toe (bijvoorbeeld, kaart het IP van de gebruiker adres met het adres van MAC van verdeler-provisioned modems of breedband-verbonden reeks-top dozen). |
+| Er wordt een scherm weergegeven dat ongeveer 3 seconden aanhoudt. Er kan een interstitiële pagina worden weergegeven om de gebruiker te laten weten dat hij/zij automatisch wordt aangemeld via hun MVPD-account. | <ol><li>AccessEnabler, die aan de kant van de programmeur geïnstalleerd is, verzendt een authentificatieverzoek (als HTTP- verzoek) naar het eindpunt van de Authentificatie van Adobe Pass.</li><li>Het eindpunt van de Authentificatie van Adobe Pass richt het verzoek aan het de authentificatieeindpunt van MVPD opnieuw.</li><li>De MVPD moet een authenticatiebesluit verzenden in de vorm van een SAML-reactie die de HBA-markering moet bevatten: hba_status (true/false).</li><li>Een vraag aan het eindpunt van het gebruikersprofiel van MVPD wordt verzonden om [ hba_status sleutel in gebruikersmeta-gegevens ](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata.md) bloot te stellen.</li></ol> |
 | De gebruiker is geverifieerd en kan nu bladeren naar tv-inhoud overal. | Het verificatietoken wordt doorgegeven aan de gebruiker die nu met succes door de site van de programmeur kan bladeren. |
 
 
@@ -116,7 +116,7 @@ Beschrijving van de HBA-verificatiestroom voor het SAML-verificatieprotocol
 
 * **protocol OAuth:**
    * Voor het toelaten van HBA zie, [ de Gids van de Gebruiker van het Dashboard van Adobe Pass TVE ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-overview.md)
-* **SAML protocol:** Op huis gebaseerde Authentificatie wordt geactiveerd op de kant MVPD. De programmeur of Adobe heeft geen actie nodig.
+* **SAML protocol:** Op huis gebaseerde Authentificatie wordt geactiveerd op de kant van MVPD. De programmeur of Adobe heeft geen actie nodig.
 Voor meer informatie over MVPDs die huis Gebaseerde Authentificatie steunen, zie [ status HBA voor MVPDs ](/help/authentication/integration-guide-programmers/features-standard/hba-access/hba-status-mvpds.md).
 
 ## Veelgestelde vragen {#faqs}
@@ -157,4 +157,4 @@ Voor meer informatie over MVPDs die huis Gebaseerde Authentificatie steunen, zie
 * [Verificatie met het OAuth 2.0-protocol](/help/authentication/integration-guide-mvpds/authn-oauth2-protocol.md)
 * [Verificatie met SAML MVPDs](/help/authentication/integration-guide-mvpds/authn-usecase.md)
 * [Gebruikershandleiding voor Adobe Pass TVE-dashboard](/help/authentication/user-guide-tve-dashboard/tve-dashboard-overview.md)
-* [hba_status-gebruikersmetagegevens](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata-feature.md#obtaining)
+* [hba_status-gebruikersmetagegevens](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata.md)

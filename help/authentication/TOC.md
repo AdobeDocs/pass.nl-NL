@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass-verificatie
 user-guide-description: Adobe Pass-verificatie is een machtigingsoplossing voor TV Everywhere, die een modulair kader verstrekt om te bepalen of iemand die toegang tot een bron vraagt, daar rechten voor heeft.
-source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
+source-git-commit: ae2e61152695b738b0bb08d1dcd81417f3bbdfb5
 workflow-type: tm+mt
-source-wordcount: '1267'
+source-wordcount: '1262'
 ht-degree: 2%
 
 ---
@@ -123,8 +123,7 @@ ht-degree: 2%
          + [Beveiligde bron identificeren](integration-guide-programmers/features-standard/entitlements/identify-protected-resources.md)
          + [Preflight-autorisatie](integration-guide-programmers/features-standard/entitlements/preflight-authz.md)
          + [Hoe te om de Symbolische Verifier van Media te integreren](integration-guide-programmers/features-standard/entitlements/media-token-verifier-int.md)
-         + [Metagegevens gebruiker](integration-guide-programmers/features-standard/entitlements/user-metadata-feature.md)
-         + [Metagegevenscertificaat van gebruiker voor versleuteling](integration-guide-programmers/features-standard/entitlements/user-metadata-certificate.md)
+         + [Metagegevens gebruiker](integration-guide-programmers/features-standard/entitlements/user-metadata.md)
       + Fout bij rapporteren {#error-reporting}
          + [Verbeterde foutcodes](integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md)
       + Single Sign-On Access {#sso-access}

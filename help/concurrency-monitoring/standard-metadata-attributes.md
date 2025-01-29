@@ -2,7 +2,7 @@
 title: Standaardmetagegevenskenmerken
 description: Standaardmetagegevenskenmerken
 exl-id: 99ffa98c-213f-47a5-a6e7-fbacb77875d0
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: ae2e61152695b738b0bb08d1dcd81417f3bbdfb5
 workflow-type: tm+mt
 source-wordcount: '1053'
 ht-degree: 0%
@@ -21,10 +21,10 @@ Deze pagina is bedoeld om een limitatieve lijst te verstrekken van metagegevensk
 De Gelijktijdige Controle API dwingt cliënten om de volgende waarden als deel van om het even welke geldige initialisatievraag te verzenden: [ vraag van de zittingsinitiatie ](/help/concurrency-monitoring/restrict-concurr-usage-mult-apps.md#api-calls-descr).
 
 | Veldnaam | Voorbeeldwaarde | Waar wordt het gebruikt? | Verkregen van |
-|-------------|---------------------------|--------------------|------------------------------------------------------------------------------------------------------------------------------------|
+|---------------|-----------------------------|----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | applicationId | 75b4-431b-adb2-eb6b9e546013 | Koptekst van autorisatie | Zendesk-ticket bij integratie |
-| mvpdName | Sample_MVPD | URI-pad | De Authentificatie van Adobe Pass van config eindpunt wanneer de gebruiker MVPD selecteert |
-| accountId | 12345 | URI-pad | De Authentificatie upstreamUserID meta-gegevens van de Gebruiker na gebruikerslogin [ Meta-gegevens upstreamUserID - de Authentificatie van Adobe Pass ](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata-feature.md) |
+| mvpdName | Voorbeeld_MVPD | URI-pad | Adobe Pass-verificatie van configuratiepunt wanneer de gebruiker de MVPD selecteert |
+| accountId | 12345 | URI-pad | De Authentificatie upstreamUserID meta-gegevens van de Gebruiker na gebruikerslogin [ Meta-gegevens upstreamUserID - de Authentificatie van Adobe Pass ](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata.md) |
 
 
 ## Kenmerken van metagegevens {#metadata-attr}
@@ -55,7 +55,7 @@ Met [ API v2.0 ](http://docs.adobeptime.io/cm-api-v2/), als om het even welk van
 |                 | applicationId | string | De toepassings-id die een clienttoepassing op unieke wijze identificeert. | NVT | de305d54-75b4-431b-adb2-eb6b9e546013 |                                                                                   |
 |                 | applicationPlatform | string | Het native platform van de toepassing | NVT | ios, android |                                                                                   |
 |                 | applicationVersion | string | Deze waarde kan voor analysedoeleinden worden gebruikt | NVT | 1.0, 2.0 |                                                                                   |
-| Onderwerp | accountId | string | De rekeningnummer van het onderwerp &quot;Concurrency Monitoring&quot; (binnen het toepassingsgebied van het MVPD) | NVT | testaccount |                                                                                   |
+| Onderwerp | accountId | string | Rekeningnummer van het onderwerp Concurrency Monitoring (binnen het toepassingsgebied van de MVPD) | NVT | testaccount |                                                                                   |
 |                 | contractType | string | premie, basis. De klanten zijn vrij om dit als douanemetagegevens toe te voegen en het binnen hun eigen gebieden te gebruiken | NVT | premie, basis |                                                                                   |
 | Gebruiker | name | string | Sommige MVPDs verstrekken informatie met betrekking tot de specifieke gebruiker die inhoud speelt. | NVT |                                                                                                                                                         |                                                                                   |
 |                 | hba | boolean | Geeft aan of de gebruiker de stream probeert te starten vanaf zijn thuislocatie | NVT | true, false | true of false |

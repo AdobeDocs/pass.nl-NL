@@ -2,7 +2,7 @@
 title: Metagegevens gebruiker
 description: Metagegevens gebruiker
 exl-id: 3d7b6429-972f-4ccb-80fd-a99870a02f65
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: ae2e61152695b738b0bb08d1dcd81417f3bbdfb5
 workflow-type: tm+mt
 source-wordcount: '518'
 ht-degree: 0%
@@ -48,7 +48,7 @@ Haal metagegevens op die MVPD over de geverifieerde gebruiker heeft gedeeld.
 
 
 | Invoerparameter | Beschrijving |
-|------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | aanvrager | De programmeeraanvragerId waarvoor deze verrichting geldig is. |
 | deviceId | Het apparaat-id bytes. |
 | device_info/<p>X-Apparaat-Info | Informatie over streaming apparaat.</br></br> **Nota:** Dit KAN device_info als parameter worden overgegaan URL, maar wegens de potentiële grootte van deze parameter en beperkingen op de lengte van een GET URL, ZOU het als x-Apparaat-Info in de HTTP- kopbal moeten worden overgegaan. </br></br> zie de volledige details in [ het overgaan Apparaat en de Informatie van de Verbinding ](/help/authentication/integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md). |
@@ -94,6 +94,6 @@ Aan de basis van het object bevinden zich drie knooppunten:
 
 Bij een fout retourneert de server een XML- of JSON-object dat een gedetailleerd foutbericht opgeeft.
 
-Voor meer informatie, zie [ Metagegevens van de Gebruiker ](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata-feature.md).
+Voor meer informatie, zie [ Metagegevens van de Gebruiker ](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata.md).
 
 [Terug naar REST API Reference](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/rest-api-reference.md)
