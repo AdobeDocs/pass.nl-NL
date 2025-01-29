@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass-verificatie
 user-guide-description: Adobe Pass-verificatie is een machtigingsoplossing voor TV Everywhere, die een modulair kader verstrekt om te bepalen of iemand die toegang tot een bron vraagt, daar rechten voor heeft.
-source-git-commit: ae2e61152695b738b0bb08d1dcd81417f3bbdfb5
+source-git-commit: dbca6c630fcbfcc5b50ccb34f6193a35888490a3
 workflow-type: tm+mt
-source-wordcount: '1262'
+source-wordcount: '1256'
 ht-degree: 2%
 
 ---
@@ -120,9 +120,9 @@ ht-degree: 2%
                + [Koptekst - AP-TempPass-Identity](integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-temppass-identity.md)
    + Standaardfuncties {#standard-features}
       + Entitlements {#entitlements}
-         + [Beveiligde bron identificeren](integration-guide-programmers/features-standard/entitlements/identify-protected-resources.md)
          + [Preflight-autorisatie](integration-guide-programmers/features-standard/entitlements/preflight-authz.md)
-         + [Hoe te om de Symbolische Verifier van Media te integreren](integration-guide-programmers/features-standard/entitlements/media-token-verifier-int.md)
+         + [Beveiligde bron](integration-guide-programmers/features-standard/entitlements/protected-resources.md)
+         + [Media-tokens](integration-guide-programmers/features-standard/entitlements/media-tokens.md)
          + [Metagegevens gebruiker](integration-guide-programmers/features-standard/entitlements/user-metadata.md)
       + Fout bij rapporteren {#error-reporting}
          + [Verbeterde foutcodes](integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md)

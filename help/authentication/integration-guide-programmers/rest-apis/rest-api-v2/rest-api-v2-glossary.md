@@ -2,9 +2,9 @@
 title: Woordenlijst REST API V2
 description: Woordenlijst REST API V2
 exl-id: 8b3bd2de-1ff8-4c57-b18d-27ecdf2b0de2
-source-git-commit: ae2e61152695b738b0bb08d1dcd81417f3bbdfb5
+source-git-commit: dbca6c630fcbfcc5b50ccb34f6193a35888490a3
 workflow-type: tm+mt
-source-wordcount: '1747'
+source-wordcount: '1744'
 ht-degree: 0%
 
 ---
@@ -115,7 +115,7 @@ Gelijk aan de vroegere termijn gebruikte korte toestemmingstoken.
 
 De Symbolische Verifier van Media is een bibliotheek die door de Authentificatie van Adobe Pass wordt verdeeld die voor het verifiëren van de authenticiteit van a [ media teken ](#media-token) verantwoordelijk is.
 
-Voor meer informatie, verwijs naar [ Integrerend de Symbolische documentatie van de Verificateur van Media ](/help/authentication/integration-guide-programmers/features-standard/entitlements/media-token-verifier-int.md).
+Voor meer informatie, verwijs naar de [ Symbolische documentatie van de Verificateur van Media ](/help/authentication/integration-guide-programmers/features-standard/entitlements/media-tokens.md#media-token-verifier).
 
 #### MVPD {#mvpd}
 
@@ -183,7 +183,7 @@ Het middel is een beschermde inhoud die een gebruiker probeert om tot van a [ de
 
 De bron wordt geïdentificeerd door een unieke waarde die is overeengekomen tussen de programmeur en de MVPD.
 
-Voor meer informatie, verwijs naar [ het identificeren van Beschermde Middelen ](/help/authentication/integration-guide-programmers/features-standard/entitlements/identify-protected-resources.md) documentatie.
+Voor meer informatie, verwijs naar de [ Beschermde documentatie van Middelen ](/help/authentication/integration-guide-programmers/features-standard/entitlements/protected-resources.md#identifiers).
 
 ### S {#s}
 

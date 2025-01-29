@@ -2,7 +2,7 @@
 title: De machtigingsstroom van de programmeur
 description: De machtigingsstroom van de programmeur
 exl-id: b1c8623a-55da-4b7b-9827-73a9fe90ebac
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: dbca6c630fcbfcc5b50ccb34f6193a35888490a3
 workflow-type: tm+mt
 source-wordcount: '1823'
 ht-degree: 0%
@@ -22,7 +22,7 @@ In dit document wordt de elementaire machtigingsstroom vanuit het perspectief va
 De Authentificatie van Adobe Pass bemiddelen de machtigingsstroom tussen Programmers en MVPDs door veilige, verenigbare interfaces voor beide partijen te verstrekken.  Aan de kant van de programmeur biedt Adobe Pass Authentication twee algemene typen machtigingsinterface:
 
 1. AccessEnabler - Een clientcomponent die een bibliotheek met API&#39;s voor toepassingen biedt op apparaten die webpagina&#39;s kunnen weergeven (bijvoorbeeld webapps, smartphone/tablet-apps).
-2. Clientless API - RESTful-webservices voor apparaten die geen webpagina&#39;s kunnen weergeven (bijvoorbeeld set-top boxes, spelconsoles, smart TV&#39;s). De vereiste voor het weergeven van webpagina&#39;s vloeit voort uit de eis van het MVPD dat gebruikers zich op de website van het MVPD verifiëren.
+2. Clientless API - RESTful-webservices voor apparaten die geen webpagina&#39;s kunnen weergeven (bijvoorbeeld set-top boxes, spelconsoles, smart TV&#39;s). De vereiste voor het weergeven van webpagina&#39;s komt voort uit de MVPD-vereiste dat gebruikers zich op de MVPD-website verifiëren.
 
 Naast het platformneutrale overzicht dat hier wordt gepresenteerd, is er hier een API-specifiek overzicht zonder clips: documentatie voor de API zonder clips. AccessEnabler wordt native uitgevoerd op ondersteunde platforms (AS / JS op internet, doelstelling-C op iOS en Java op Android). De API&#39;s van AccessEnabler zijn consistent op alle ondersteunde platforms. Alle platforms die geen ondersteuning bieden voor AccessEnabler gebruiken dezelfde API zonder Clientless.
 
@@ -35,7 +35,7 @@ Voor beide typen interfaces zorgt Adobe Pass-verificatie veilig voor de overdrac
 
 >[!IMPORTANT]
 >
->Opmerking in het bovenstaande diagram: er is één onderdeel van de machtigingsstroom dat niet door Adobe Pass-verificatieservers wordt uitgevoerd: de MVPD-aanmelding. Gebruikers moeten zich aanmelden bij de aanmeldingspagina van hun MVPD. Vanwege deze vereiste moet de toepassing van de programmeur gebruikers op apparaten die geen webpagina&#39;s kunnen renderen, de opdracht geven om over te schakelen naar een apparaat voor web om zich aan te melden bij hun MVPD, waarna ze voor de rest van de machtigingsstroom terugkeren naar het oorspronkelijke apparaat.
+>In het bovenstaande diagram ziet u dat een deel van de machtigingsstroom niet door Adobe Pass-verificatieservers wordt geleid: de MVPD-aanmelding. Gebruikers moeten zich aanmelden bij hun aanmeldingspagina voor MVPD. Daarom moet de toepassing van de programmeur gebruikers op apparaten die geen webpagina&#39;s kunnen renderen, de opdracht geven om over te schakelen naar een apparaat dat geschikt is voor het web om zich aan te melden bij hun MVPD, waarna ze voor de rest van de machtigingsstroom terugkeren naar het oorspronkelijke apparaat.
 
 ## Entitlement Flow {#entitlement-flow}
 
@@ -86,24 +86,24 @@ De succesvolle authentificatie produceert een teken AuthN verbonden aan het appa
 
 * `<FQDN>/.../checkauthn` - De bovenstaande webserviceversie van `checkAuthentication()` .
 * `<FQDN>/.../config` - Hiermee wordt de lijst met MVPD&#39;s geretourneerd naar de app voor het tweede scherm.
-* `<FQDN>/.../authenticate` - Hiermee wordt de verificatiestroom gestart vanuit de app voor het tweede scherm en worden gebruikers omgeleid naar hun geselecteerde MVPD voor aanmelding. Als dit gelukt is, genereert Adobe Pass Authentication een AuthN-token en slaat deze op de server op. De gebruiker keert terug naar het oorspronkelijke apparaat om de machtigingsstroom te voltooien.
+* `<FQDN>/.../authenticate` - Hiermee wordt de verificatiestroom gestart vanuit de app voor het tweede scherm, waarbij gebruikers worden omgeleid naar hun geselecteerde MVPD voor aanmelding. Als dit gelukt is, genereert Adobe Pass Authentication een AuthN-token en slaat deze op de server op. De gebruiker keert terug naar het oorspronkelijke apparaat om de machtigingsstroom te voltooien.
 
 Een token AuthN wordt als geldig beschouwd als de volgende twee punten waar zijn:
 
 * De AuthN-token is niet verlopen
-* MVPD verbonden aan het teken AuthN is op de lijst van toegestane MVPDs voor huidige identiteitskaart van de Aanvrager
+* De MVPD die aan de token AuthN is gekoppeld, staat in de lijst met toegestane MVPD&#39;s voor de huidige id van de aanvrager
 
 #### Generic AccessEnabler Initial Authentication Workflow {#generic-ae-initial-authn-flow}
 
 1. Uw app start de verificatieworkflow met een aanroep van `getAuthentication()` , die controleert op een geldig verificatietoken in de cache. Deze methode heeft een optionele parameter `redirectURL` ; als u geen waarde opgeeft voor `redirectURL` , wordt de gebruiker na een geslaagde verificatie geretourneerd naar de URL vanwaar de verificatie is geïnitialiseerd.
 1. AccessEnabler bepaalt de huidige authentificatiestatus. Als de gebruiker momenteel voor authentiek wordt verklaard, roept AccessEnabler uw `setAuthenticationStatus()` callback functie, die een authentificatiestatus overgaat die op succes wijst.
-1. Als de gebruiker niet voor authentiek wordt verklaard, gaat AccessEnabler de authentificatiestroom door te bepalen of de laatste authentificatiepoging van de gebruiker met bepaalde MVPD succesvol was. Als een MVPD-id in de cache is opgeslagen EN de markering `canAuthenticate` true is OF als een MVPD is geselecteerd met `setSelectedProvider()` , wordt de gebruiker niet gevraagd het dialoogvenster MVPD-selectie te openen. De authentificatiestroom gaat verder gebruikend de caching waarde van MVPD (namelijk zelfde MVPD die tijdens de laatste succesvolle authentificatie werd gebruikt). Een netwerkvraag wordt gemaakt aan de backendserver, en de gebruiker wordt opnieuw gericht aan de MVPD login pagina.
+1. Als de gebruiker niet voor authentiek wordt verklaard, gaat AccessEnabler de authentificatiestroom door te bepalen of de laatste authentificatiepoging van de gebruiker met bepaalde MVPD succesvol was. Als een MVPD-id in de cache wordt opgeslagen EN de markering `canAuthenticate` true is OF als een MVPD is geselecteerd met `setSelectedProvider()` , wordt de gebruiker niet gevraagd het dialoogvenster voor MVPD-selectie te openen. De verificatiestroom gaat verder met gebruik van de cachewaarde van de MVPD (hetzelfde MVPD dat tijdens de laatste geslaagde verificatie is gebruikt). Er wordt een netwerkaanroep naar de back-endserver uitgevoerd en de gebruiker wordt omgeleid naar de MVPD-aanmeldingspagina.
 
-1. Als er geen MVPD-id in de cache is opgeslagen EN er geen MVPD is geselecteerd met `setSelectedProvider()` OF als de markering `canAuthenticate` is ingesteld op false, wordt de callback `displayProviderDialog()` aangeroepen. Deze callback leidt uw app om UI tot stand te brengen die de gebruiker een lijst van MVPDs voorstelt om van te kiezen. Er wordt een array met MVPD-objecten geleverd, die de benodigde informatie bevat om de MVPD-kiezer te maken. Elk voorwerp MVPD beschrijft een entiteit MVPD, en bevat informatie zoals identiteitskaart van MVPD en URL waar het embleem MVPD kan worden gevonden.
+1. Als er geen MVPD-id in de cache is opgeslagen EN er geen MVPD is geselecteerd met `setSelectedProvider()` OF als de markering `canAuthenticate` is ingesteld op false, wordt de callback `displayProviderDialog()` aangeroepen. Deze callback leidt uw app om UI tot stand te brengen die de gebruiker een lijst van MVPDs voorstelt om van te kiezen. Er is een array met MVPD-objecten beschikbaar, die de benodigde informatie bevat voor het maken van de MVPD-kiezer. Elk MVPD-object beschrijft een MVPD-entiteit en bevat informatie zoals de id van de MVPD en de URL waar het MVPD-logo kan worden gevonden.
 
-1. Zodra een MVPD wordt geselecteerd, moet uw app AccessEnabler op de hoogte brengen van de keus van de gebruiker. Voor niet-Flash cliënten, zodra de gebruiker gewenste MVPD selecteert, informeert u AccessEnabler van de gebruikersselectie via een vraag aan de `setSelectedProvider()` methode. Clients van Flash verzenden in plaats daarvan een gedeelde `MVPDEvent` van het type &quot;`mvpdSelection`&quot;, waarbij de geselecteerde provider wordt doorgegeven.
+1. Nadat een MVPD is geselecteerd, moet uw toepassing de AccessEnabler op de hoogte stellen van de keuze van de gebruiker. Voor niet-Flash cliënten, zodra de gebruiker de gewenste MVPD selecteert, informeert u AccessEnabler van de gebruikersselectie via een vraag aan de `setSelectedProvider()` methode. Clients van Flash verzenden in plaats daarvan een gedeelde `MVPDEvent` van het type &quot;`mvpdSelection`&quot;, waarbij de geselecteerde provider wordt doorgegeven.
 
-1. Wanneer AccessEnabler van de selectie van MVPD van de gebruiker wordt geïnformeerd, wordt een netwerkvraag gemaakt aan de backendserver, en de gebruiker wordt opnieuw gericht aan de MVPD login pagina.
+1. Wanneer AccessEnabler van de selectie van MVPD van de gebruiker op de hoogte wordt gebracht, wordt een netwerkvraag gemaakt aan de backend server, en de gebruiker wordt opnieuw gericht aan de MVPD login pagina.
 
 1. Binnen het authentificatiewerkschema, communiceert AccessEnabler met de Authentificatie van Adobe Pass en geselecteerde MVPD om de geloofsbrieven van de gebruiker (gebruiker - identiteitskaart en wachtwoord) te vragen en hun identiteit te verifiëren. Terwijl sommige MVPDs aan hun eigen plaats voor login opnieuw richt, vereisen anderen u om hun login pagina binnen een iFrame te tonen. Uw pagina moet callback omvatten die tot een iFrame leidt, voor het geval de klant één van die MVPDs.<!-- For more information on creating a login iFrame, see  [Managing the Login IFrame](https://tve.helpdocsonline.com/managing-the-login-iframe)--> kiest.
 
@@ -115,7 +115,7 @@ Een token AuthN wordt als geldig beschouwd als de volgende twee punten waar zijn
 
 ### Autorisatiestroom {#authorization}
 
-Autorisatie is een eerste vereiste voor het weergeven van beveiligde inhoud. Succesvolle autorisatie genereert een AuthZ-token, samen met een kortstondig Media Token dat voor beveiligingsdoeleinden aan de app van de programmeur wordt geleverd. Merk op dat, om het vergunningswerkschema te steunen, u de noodzakelijke verzoekersopstelling moet eerder hebben uitgevoerd en de [ Symbolische Verifier van Media ](/help/authentication/integration-guide-programmers/features-standard/entitlements/media-token-verifier-int.md) geïntegreerd. Met deze voltooide, kunt u vergunning in werking stellen.
+Autorisatie is een eerste vereiste voor het weergeven van beveiligde inhoud. Succesvolle autorisatie genereert een AuthZ-token, samen met een kortstondig Media Token dat voor beveiligingsdoeleinden aan de app van de programmeur wordt geleverd. Merk op dat, om het vergunningswerkschema te steunen, u de noodzakelijke verzoekersopstelling moet eerder hebben uitgevoerd en de [ Symbolische Verifier van Media ](/help/authentication/integration-guide-programmers/features-standard/entitlements/media-tokens.md#media-token-verifier) geïntegreerd. Met deze voltooide, kunt u vergunning in werking stellen.
 
 Uw app start een autorisatie wanneer een gebruiker toegang tot een beveiligde bron aanvraagt. U geeft een bron-id door die de gewenste bron opgeeft (bijvoorbeeld een kanaal, aflevering, enz.). Uw app controleert eerst op een opgeslagen verificatietoken. Als er geen wordt gevonden, start u het verificatieproces.
 
