@@ -2,7 +2,7 @@
 title: Autorisatie starten
 description: Autorisatie starten
 exl-id: 2f8a5499-e94f-40dd-9fb0-aac8e080de66
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: c1f891fabd47954dc6cf76a575c3376ed0f5cd3d
 workflow-type: tm+mt
 source-wordcount: '446'
 ht-degree: 0%
@@ -51,7 +51,7 @@ Verkrijgt de reactie van de vergunning.
 
 
 | Invoerparameter | Beschrijving |
-| --- | --- |
+| --- |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | aanvrager | De programmeeraanvragerId waarvoor deze verrichting geldig is. |
 | deviceId | Het apparaat-id bytes. |
 | resource | Een tekenreeks die een resourceId (of MRSS-fragment) bevat, de inhoud identificeert die door een gebruiker is aangevraagd en die wordt herkend door de eindpunten van MVPD-autorisaties. |
@@ -59,7 +59,7 @@ Verkrijgt de reactie van de vergunning.
 | _deviceType_ | Het apparaattype (bijvoorbeeld Roku, PC).</br></br> als deze parameter correct wordt geplaatst, biedt ESM metriek aan die [ uitgesplitst per apparatentype ](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview.md#clientless_device_type) zijn wanneer het gebruiken van Clientless, zodat de verschillende soorten analyse voor bijvoorbeeld Roku, AppleTV, Xbox enz. kunnen worden uitgevoerd.</br></br> zie [ Voordelen van clientless apparatentype parameter in pas metriek ](/help/authentication/integration-guide-programmers/legacy/notes-technical/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**Nota**: device_info zal deze parameter vervangen. |
 | _deviceUser_ | De gebruikers-id van het apparaat. |
 | _appId_ | De toepassings-id/-naam. </br></br>**Nota**: device_info vervangt deze parameter. |
-| extra parameters | De vraag kan facultatieve parameters ook bevatten die andere functionaliteiten zoals toelaten:</br></br>* generic_data - laat het gebruik van [ Promotional TempPass ](/help/authentication/integration-guide-programmers/features-premium/temporary-access/promotional-temp-pass.md)</br></br> Voorbeeld toe: `generic_data=("email":"email@domain.com")` |
+| extra parameters | De vraag kan facultatieve parameters ook bevatten die andere functionaliteiten zoals toelaten:</br></br>* generic_data - laat het gebruik van [ Promotional TempPass ](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md#promotional-temp-pass)</br></br> Voorbeeld toe: `generic_data=("email":"email@domain.com")` |
 
 {style="table-layout:auto"}
 

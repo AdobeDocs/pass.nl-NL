@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass-verificatie
 user-guide-description: Adobe Pass-verificatie is een machtigingsoplossing voor TV Everywhere, die een modulair kader verstrekt om te bepalen of iemand die toegang tot een bron vraagt, daar rechten voor heeft.
-source-git-commit: dbca6c630fcbfcc5b50ccb34f6193a35888490a3
+source-git-commit: c1f891fabd47954dc6cf76a575c3376ed0f5cd3d
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1250'
 ht-degree: 2%
 
 ---
@@ -144,9 +144,7 @@ ht-degree: 2%
          + [Een privacyverzoek indienen](integration-guide-programmers/features-premium/privacy-support/make-privacy-req.md)
    + Premiumfuncties {#features-premium}
       + Tijdelijke toegang {#temporary-access}
-         + [Temperatuurcontrole](integration-guide-programmers/features-premium/temporary-access/temp-pass.md)
-         + [Tijdelijke doorloop voor speciale acties](integration-guide-programmers/features-premium/temporary-access/promotional-temp-pass.md)
-         + [Tijdelijke controle opnieuw instellen](integration-guide-programmers/features-premium/temporary-access/reset-temp-pass.md)
+         + [Functie TempPass](integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md)
       + Verminderde toegang {#degraded-access}
          + [Gradatie-API - overzicht](integration-guide-programmers/features-premium/degraded-access/degradation-api-overview.md)
       + ESM {#esm}

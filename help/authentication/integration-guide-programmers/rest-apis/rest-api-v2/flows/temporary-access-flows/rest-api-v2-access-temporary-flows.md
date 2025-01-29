@@ -2,7 +2,7 @@
 title: Tijdelijke toegangsstromen
 description: REST API V2 - Tijdelijke toegangsstromen
 exl-id: 387fcdb0-3a42-4893-ba83-e809426f92be
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: c1f891fabd47954dc6cf76a575c3376ed0f5cd3d
 workflow-type: tm+mt
 source-wordcount: '3215'
 ht-degree: 0%
@@ -19,9 +19,9 @@ ht-degree: 0%
 >
 > De implementatie van REST API V2 wordt begrensd door de [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
 
-Met TempPass kunnen programmeurs tijdelijke toegang geven tot hun beveiligde inhoud zonder dat gebruikers wordt gevraagd om te verifiëren met een geldig MVPD-account.
+Met TempPass kunnen programmeurs tijdelijke toegang geven tot hun beveiligde inhoud zonder dat gebruikers wordt gevraagd zich te verifiëren met een geldig MVPD-account.
 
-Voor meer details over eigenschap TempPass, verwijs naar [ TempPass ](../../../../features-premium/temporary-access/temp-pass.md) documentatie.
+Voor meer details over eigenschap TempPass, verwijs naar [ TempPass ](../../../../features-premium/temporary-access/temp-pass-feature.md) documentatie.
 
 Met tijdelijke toegangsstromen kunt u zoeken naar de volgende scenario&#39;s:
 
@@ -351,7 +351,7 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren wanneer het verbru
 
    >[!TIP]
    >
-   > Suggestie: de streamingtoepassing kan gebruikers informeren dat het maximumaantal bronnen is overschreden en hen adviseren een basisverificatiestroom te starten met een normale MVPD om te blijven kijken.
+   > Suggestie: de streamingtoepassing kan gebruikers informeren dat het maximumaantal bronnen is overschreden en hen adviseren een basisverificatiestroom te starten met een gewone MVPD om te blijven kijken.
 
 ## Autorisatiebesluiten ophalen wanneer basis- of promotionele TempPass verloopt {#retrieve-authorization-decisions-when-basic-or-promotional-temppass-expires}
 
@@ -431,7 +431,7 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren wanneer basis of p
 
    >[!TIP]
    >
-   > Suggestie: de streaming toepassing kan gebruikers informeren dat de tijdelijke toegang is verlopen en hen adviseren om een basisauthentificatiestroom in werking te stellen gebruikend een regelmatige MVPD om het letten voort te zetten.
+   > Suggestie: de streamingtoepassing kan gebruikers informeren dat de tijdelijke toegang is verlopen en hen adviseren een basisverificatiestroom te starten met een gewone MVPD om te blijven kijken.
 
 ## Profiel ophalen voor standaard TempPass {#retrieve-profile-for-basic-temppass}
 

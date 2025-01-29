@@ -2,7 +2,7 @@
 title: Trackingpreventiebeoordeling Apple Safari
 description: Trackingpreventiebeoordeling Apple Safari
 exl-id: a3362020-92ff-4232-b923-e462868730d5
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: c1f891fabd47954dc6cf76a575c3376ed0f5cd3d
 workflow-type: tm+mt
 source-wordcount: '1849'
 ht-degree: 0%
@@ -133,7 +133,7 @@ Op dit punt richten deze vereisten/herinneringen van Safari zich niet op onze ve
 
 **Controle van het Temperatuur**
 
-Om de individualisatieproblemen te verlichten en een gebruikersinteractie te hebben adviseren wij u om **[de Voldoende Pas van de Bevordering](/help/authentication/integration-guide-programmers/features-premium/temporary-access/promotional-temp-pass.md)** op een interactieve manier te gebruiken, en minstens één extra informatie over de gebruiker (bijvoorbeeld, e-mailadres) te verstrekken.
+Om de individualisatieproblemen te verlichten en een gebruikersinteractie te hebben adviseren wij u om **[de Voldoende Pas van de Bevordering](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md#promotional-temp-pass)** op een interactieve manier te gebruiken, en minstens één extra informatie over de gebruiker (bijvoorbeeld, e-mailadres) te verstrekken.
 
 ## Safari 13 {#safari13}
 

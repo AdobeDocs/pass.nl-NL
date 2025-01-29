@@ -2,9 +2,9 @@
 title: Woordenlijst REST API V2
 description: Woordenlijst REST API V2
 exl-id: 8b3bd2de-1ff8-4c57-b18d-27ecdf2b0de2
-source-git-commit: dbca6c630fcbfcc5b50ccb34f6193a35888490a3
+source-git-commit: c1f891fabd47954dc6cf76a575c3376ed0f5cd3d
 workflow-type: tm+mt
-source-wordcount: '1744'
+source-wordcount: '1743'
 ht-degree: 0%
 
 ---
@@ -229,13 +229,13 @@ Enige sign-on (SSO) is een proces dat een gebruiker toestaat om eens voor authen
 
 Basis TempPass is een eigenschap van de Authentificatie van Adobe Pass die een gebruiker toestaat om tot beschermde inhoud voor een beperkte tijd toegang te hebben zonder de behoefte om met a [ MVPD ](#mvpd) voor authentiek te verklaren.
 
-Voor meer informatie, verwijs naar de ](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass.md) documentatie van de Pas van 0} Temperatuur {.[
+Voor meer informatie, verwijs naar de [ BasisTempPass ](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md#basic-temp-pass) documentatie.
 
 #### Promotie voor TempPass {#temp-pass-promotional}
 
 Promotional TempPass is een eigenschap van de Authentificatie van Adobe Pass die een gebruiker toestaat om tot beschermde inhoud voor een maximumaantal middelen en een beperkte tijd toegang te hebben zonder de behoefte om met een [ MVPD ](#mvpd) voor authentiek te verklaren.
 
-Voor meer informatie, verwijs naar de ](/help/authentication/integration-guide-programmers/features-premium/temporary-access/promotional-temp-pass.md) documentatie van de Pas van de Bevordering van Temperatuur [.
+Voor meer informatie, verwijs naar de [ BevorderingsTempPass ](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md#promotional-temp-pass) documentatie.
 
 #### TTL {#ttl}
 

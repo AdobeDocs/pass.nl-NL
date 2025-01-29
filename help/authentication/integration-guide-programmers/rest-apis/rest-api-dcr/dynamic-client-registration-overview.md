@@ -2,7 +2,7 @@
 title: Overzicht van dynamische clientregistratie
 description: Overzicht van dynamische clientregistratie
 exl-id: 9f98dfcd-4375-48c3-beff-259dfb1d3a26
-source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
+source-git-commit: c1f891fabd47954dc6cf76a575c3376ed0f5cd3d
 workflow-type: tm+mt
 source-wordcount: '813'
 ht-degree: 0%
@@ -20,7 +20,7 @@ De dynamische cliëntregistratie vertegenwoordigt een vergunningsmechanisme dat 
 Adobe Pass biedt een dynamische service voor clientregistratie die toegang biedt tot de volgende beveiligde API&#39;s:
 
 * Adobe Pass Authentication Management API&#39;s:
-   * [Tijdcontrole-API opnieuw instellen](../../features-premium/temporary-access/reset-temp-pass.md)
+   * [Tijdcontrole-API opnieuw instellen](../../features-premium/temporary-access/temp-pass-feature.md)
    * [Verslechterings-API](../../features-premium/degraded-access/degradation-api-overview.md)
    * [Proxy MVPD API](../../../integration-guide-mvpds/proxy-mvpd-webserv.md)
    * [Entitlement Service Monitoring API](../../features-premium/esm/entitlement-service-monitoring-api.md)
