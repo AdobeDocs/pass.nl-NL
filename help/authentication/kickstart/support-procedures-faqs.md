@@ -2,7 +2,7 @@
 title: Veelgestelde vragen over ondersteuningsprocedures
 description: Veelgestelde vragen over ondersteuningsprocedures
 exl-id: 1d754e5a-d5fa-4411-8932-2a36294da6eb
-source-git-commit: 1b9847d8dcb078755fd68a6363972f8973290e52
+source-git-commit: 0ab1fc212752dd4a4d6e12a4ab1287ef74e4a282
 workflow-type: tm+mt
 source-wordcount: '777'
 ht-degree: 0%
@@ -61,7 +61,7 @@ Een fout op het niveau SEVERITY 1 kan worden geïnitieerd door een Adobe of een 
    * HTTP-tracerings- of apparaatlogboeken waarin het probleem wordt aangegeven
    * (optioneel) Alle beschikbare schermafbeeldingen of video-opnamen die het probleem aantonen
 
-1. Als de Adobe niet aan het kaartje binnen een periode antwoordt, kan de partner het volgende aantal roepen: **1-205-693-9813**.
+1. Als de Adobe niet aan het kaartje binnen een periode antwoordt, kan de partner het volgende aantal roepen: **1-657-312-4623**.
 
 >[!IMPORTANT]
 >
