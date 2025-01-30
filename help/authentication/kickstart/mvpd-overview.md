@@ -2,9 +2,9 @@
 title: Overzicht voor MVPDs
 description: Overzicht voor MVPDs
 exl-id: b918550b-96a8-4e80-af28-0a2f63a02396
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 9dc25b66d12b05a8afe16d1a866707880b5d6a51
 workflow-type: tm+mt
-source-wordcount: '2734'
+source-wordcount: '2727'
 ht-degree: 0%
 
 ---
@@ -55,11 +55,11 @@ Steunt de Authentificatie van Adobe Pass de opkomende normen voor TV overal? Ado
 
 
 
-Wat is verificatie? De authentificatie is het proces waarin een MVPD bevestigt dat een bepaalde gebruiker een bekende klant is.
+Wat is verificatie? Verificatie is het proces waarbij een MVPD bevestigt dat een bepaalde gebruiker een bekende klant is.
 
 
 
-Wat is autorisatie? De vergunning is het proces waarin een MVPD bevestigt dat een voor authentiek verklaarde gebruiker een geldig abonnement op een bepaalde middel heeft.
+Wat is autorisatie? Autorisatie is het proces waarbij een MVPD bevestigt dat een geverifieerde gebruiker een geldig abonnement heeft op een bepaalde resource.
 
 
 
@@ -77,23 +77,23 @@ Clientloze webservices (voor apparaten die niet geschikt zijn voor het web) - RE
 
 >[!NOTE]
 >
->Als MVPD, moeten uw Webdiensten verzoeken om authentificatie en vergunning van de Authentificatie van Adobe Pass kunnen erkennen en met de vereiste gegevens in het verwachte formaat antwoorden.
+>Als MVPD moeten uw webservices aanvragen voor verificatie en autorisatie van Adobe Pass-verificatie kunnen herkennen en de vereiste gegevens in de verwachte indeling kunnen verwerken.
 >
 
-Met Adobe Pass Authentication kunt u klanten een gefederaliseerd identiteitsbeheer bieden, ook wel SSO-verificatie (Single Sign-On) en -verificatie genoemd. Met de Authentificatie van Adobe Pass, is er geen behoefte voor abonnees om opnieuw aan te melden na hun eerste authentificatie, zolang die authentificatie door MVPD wordt toegestaan om te blijven. (Doorgaans 30 dagen.) Om dit te bereiken, verstrekt de Authentificatie van Adobe Pass een gemeenschappelijk domein voor authentificatietokens voor onze klanten. Deze informatie van de authentificatiestatus is beschikbaar aan alle deelnemende plaatsen die met een bepaalde MVPD geïntegreerd zijn.
+Met Adobe Pass Authentication kunt u klanten een gefederaliseerd identiteitsbeheer bieden, ook wel SSO-verificatie (Single Sign-On) en -verificatie genoemd. Met de Authentificatie van Adobe Pass, is er geen behoefte voor abonnees om zich opnieuw aan te melden na hun eerste authentificatie, zolang die authentificatie door MVPD wordt toegestaan om te blijven. (Doorgaans 30 dagen.) Om dit te bereiken, verstrekt de Authentificatie van Adobe Pass een gemeenschappelijk domein voor authentificatietokens voor onze klanten. Deze informatie over de verificatiestatus is beschikbaar voor alle deelnemende sites die zijn geïntegreerd met een bepaalde MVPD.
 
 
 Momenteel, gebruiken de meeste integratie van de Authentificatie van Adobe Pass met MVPDs het protocol van SAML, één van de primaire authentificatienormen. De Authentificatie van Adobe Pass doet dienst als volmachtsdienstverlener in de architectuur van SAML en handhaaft de authentificatiereactie van SAML als veilig teken in het gemeenschappelijke domein van de Adobe. Adobe Pass-verificatie is compatibel met SAML 2.0. Nochtans, terwijl de Authentificatie van Adobe Pass typisch met de oplossingen van SAML SSO op dit punt wordt gebruikt, is de architectuur van de Authentificatie van Adobe Pass niet gebonden aan om het even welk specifiek protocol. Daarom kan de steun voor nieuwe protocollen - zoals die op OAuth 2.0 of douaneprotocollen worden gebaseerd - in tijd worden toegevoegd.
 
 
-De Adobe werkt met het technische team van MVPD om de Authentificatie van Adobe Pass te vormen om aan de behoeften van om het even welke bestaande integratie te voldoen. De integratie is gratis voor MVPD&#39;s, uitgaande van een &quot;standaard&quot; integratie en minimale supportvereisten (documentatie en standaard e-mailondersteuning). Als een MVPD significante steun of een geëscaleerde chronologie vereist, kan een steunprijs worden in rekening gebracht, of de leverancier kan met een derde willen werken die met onze oplossing zoals Synacor vertrouwd is.
+Adobe werkt samen met een technisch team van MVPD om de Authentificatie van Adobe Pass te vormen om aan de behoeften van om het even welke bestaande integratie te voldoen. De integratie is gratis voor MVPD&#39;s, uitgaande van een &quot;standaard&quot; integratie en minimale supportvereisten (documentatie en standaard e-mailondersteuning). Als een MVPD aanzienlijke ondersteuning of een geescaleerde tijdlijn vereist, kan een supportvergoeding in rekening worden gebracht, of de provider wil werken met een derde die vertrouwd is met onze oplossing, zoals Synacor.
 
 
-De Authentificatie van Adobe Pass steunt ook de efficiënte behandeling van MVPD bedrijfslogica, als volgt:
+Adobe Pass Authentication biedt ook ondersteuning voor de efficiënte verwerking van MVPD-bedrijfslogica, als volgt:
 
-Voor bedrijfslogica die op zichzelf staand is en door MVPD kan worden toegepast wanneer een verzoek om toestemming wordt ontvangen, verstrekt de Adobe de noodzakelijke gegevens die worden vereist om de bedrijfslogische handhaving te steunen wanneer MVPD een vergunningsverzoek ontvangt. Deze gegevens kunnen, maar zijn niet beperkt tot, unieke apparaat-id voor de gebruiker die het verzoek indient en het IP-adres van het apparaat bevatten.
+Voor bedrijfslogica die op zichzelf staat en door de MVPD kan worden toegepast wanneer een vergunningsaanvraag wordt ontvangen, verstrekt de Adobe de noodzakelijke gegevens die nodig zijn om de handhaving van de bedrijfslogica te ondersteunen wanneer de MVPD een vergunningsverzoek ontvangt. Deze gegevens kunnen, maar zijn niet beperkt tot, unieke apparaat-id voor de gebruiker die het verzoek indient en het IP-adres van het apparaat bevatten.
 
-Voor bedrijfslogica die gebruikersinterventie en/of specifieke behandeling door de oplossing van de Adobe vereist, kan de Adobe sommige douaneeigenschappen voor elke MVPD handhaven. Deze MVPD-specifieke configuraties/beleid omvatten het toelaten van vooraf bepaalde werkschema&#39;s die op specifieke punten van het top-level werkschema kunnen worden afgezet. Neem voor meer informatie over ondersteuning van aangepaste eigenschappen contact op met uw Adobe.
+Voor bedrijfslogica die gebruikersinterventie en/of specifieke behandeling door de oplossing van de Adobe vereist, kan de Adobe sommige douaneeigenschappen voor elke MVPD handhaven. Deze MVPD-specifieke configuraties/beleidsvormen omvatten het inschakelen van vooraf gedefinieerde workflows die op specifieke punten van de workflow op hoofdniveau kunnen worden uitgeschakeld. Neem voor meer informatie over ondersteuning van aangepaste eigenschappen contact op met uw Adobe.
 
 Het volgende diagram illustreert de verhouding van MVPD en Programmer met deze componenten van de Authentificatie van Adobe Pass:
 
@@ -111,15 +111,15 @@ Hieronder vindt u een overzicht van een aantal van de belangrijkste onderdelen v
 
 ### Toegang tot webservices zonder client {#ae}
 
-De Toegangsmanager vergemakkelijkt alle authentificatie en vergunningsinteractie met de gebruiker en loopt plaatselijk op hun systeem. Het is Toegangsbeheer die de daadwerkelijke machtigingswerkstromen met MVPD behandelt, terwijl de programmeur verantwoordelijkheid voor de hoger-vlakke Web-pagina of spelertoepassing handhaaft.
+De Toegangsmanager vergemakkelijkt alle authentificatie en vergunningsinteractie met de gebruiker en loopt plaatselijk op hun systeem. De toegangsfunctie zorgt voor de afhandeling van de feitelijke machtigingsworkflows met de MVPD, terwijl de programmeur verantwoordelijk blijft voor de webpagina of de spelertoepassing op een hoger niveau.
 
-Webservices zonder clips worden geleverd door Adobe Pass-verificatie voor apparaten die geen webpagina&#39;s kunnen weergeven.  Voor deze apparaten, wordt het machtigingsproces in werking gesteld en de inhoud bekeken op het slimme apparaat, terwijl de authentificatie met een MVPD op een web-geschikt apparaat (PC, smart-phone, en tablet) plaatsvindt.
+Webservices zonder clips worden geleverd door Adobe Pass-verificatie voor apparaten die geen webpagina&#39;s kunnen weergeven.  Voor deze apparaten wordt het machtigingsproces gestart en wordt de inhoud weergegeven op het slimme apparaat, terwijl de verificatie met een MVPD plaatsvindt op een apparaat voor internet (pc, smartphone en tablet).
 
 Toegangsfunctie:
 
-* Initieert MVPD-specifieke authentificatie en vergunningswerkschema&#39;s.
+* Initieert MVPD-specifieke verificatie- en autorisatieworkflows.
 * Beheert de succesvolle vergunningsreacties per middel/kanaal van de Programmer om onnodig verzoekverkeer te minimaliseren.
-* Kan voor vooraf bepaalde werkschema&#39;s specifiek voor elke MVPD, zoals expliciete apparatenregistratie worden gevormd.
+* Kan worden geconfigureerd voor vooraf gedefinieerde workflows die specifiek zijn voor elke MVPD, zoals expliciete apparaatregistratie.
 * Het is beschikbaar in de volgende vormen:
    * Een SWF-bestand dat de Flash Player-runtime kan uitvoeren
    * Een JS-bestand dat rechtstreeks door de browser wordt uitgevoerd
@@ -140,19 +140,19 @@ De Adobe Pass-verificatiemachtigingsoplossing richt zich op het genereren van sp
 
 Er zijn drie soorten tokens die tijdens de authentificatie/vergunningswerkschema&#39;s worden uitgegeven. Twee zijn &quot;van lange duur,&quot;die continuïteit in de kijkervaring van de gebruiker verstrekken. Het derde, een korte token, biedt ondersteuning voor best practices van de branche om fraude te beperken door middel van streaming ripping. De time-to-live (&quot;TTL&quot;) waarden voor tokens worden ingesteld op basis van overeenkomsten tussen MVPD&#39;s en programmeurs. U besluit over een waarde van TTL die het best uw zaken en uw klanten dient.
 
-**het lang-levende authentificatietoken**. Verificatie is geslaagd wanneer een klant Adobe Pass Authentication gebruikt om zich met succes aan te melden bij zijn MVPD-account. De Authentificatie van Adobe Pass produceert dan een lang-levende authentificatie (&quot;authN&quot;) teken verbonden aan het het vragen apparaat en (afhankelijk van MVPD) een globally uniek herkenningsteken (&quot;GUID&quot;) dat anoniem de gebruiker identificeert.
+**het lang-levende authentificatietoken**. Verificatie is geslaagd wanneer een klant Adobe Pass-verificatie gebruikt om zich met succes aan te melden bij zijn MVPD-account. De Authentificatie van Adobe Pass veroorzaakt dan een van lange duur authentificatietoken (&quot;authN&quot;) verbonden aan het verzoekende apparaat en (afhankelijk van MVPD) een globally uniek herkenningsteken (&quot;GUID&quot;) dat anoniem de gebruiker identificeert.
 
 **het langlevende toestemmingstoken**. Na een geslaagde autorisatie maakt Adobe Pass Authentication een token voor een langdurige autorisatie (&quot;authZ&quot;). Dit token is niet overdraagbaar omdat het is gekoppeld aan het verzoekende apparaat en een specifieke beveiligde bron (bijvoorbeeld een kanaal, serie of aflevering). Toegangsbeheer gebruikt het lange-levende authZ teken om de kortstondige media tokens tot stand te brengen die voor daadwerkelijke het bekijken toegang worden gebruikt.
 
 **het kortstondige media teken**. Zodra de gebruiker wordt toegelaten, produceert de Authentificatie van Adobe Pass een authZ teken, en gebruikt dat teken om een enig-gebruik, kortstondig media teken te produceren dat door Adobe wordt ondertekend en wordt gecodeerd om het knoeien tijdens uitwisseling te vermijden. Omdat het token van korte duur via de API voor toegangsbeheer of de webservices zonder client aan de insluitingssite wordt blootgesteld, moet de mediaserver van de programmeur een Adobe Pass-verificatiecomponent, de Media Token Verifier, gebruiken om het token te valideren.
 
-## Levenscyclus voor MVPD-integratie {#lifecycle}
+## MVPD Integration Levenscyclus {#lifecycle}
 
-In de volgende afbeelding ziet u de levenscyclus van de integratie tussen Adobe Pass-verificatie en een MVPD.
+In de volgende afbeelding ziet u de levenscyclus van de integratie tussen Adobe Pass Authentication en een MVPD.
 
 ![](../assets/mvpd-int-lifecycle.png)
 
-*Cijfer: MVPD integratielevenscyclus*
+*Cijfer: De integratielevenscyclus van MVPD*
 
 ## Entitlement FlowChart {#chart}
 
@@ -164,15 +164,15 @@ In het volgende stroomdiagram wordt het algemene proces beschreven voor het beve
 
 ## Verificatiestappen {#authn-steps}
 
-In de volgende stappen wordt een voorbeeld gegeven van de verificatiestroom van Adobe Pass.  Dit is het deel van het machtigingsproces waarin een Programmer bepaalt als de gebruiker een geldige klant van MVPD is.  In dit scenario, is de gebruiker een geldige abonnee aan MVPD.  De gebruiker probeert beveiligde inhoud weer te geven met behulp van de toepassing Flash van de programmeur:
+In de volgende stappen wordt een voorbeeld gegeven van de verificatiestroom van Adobe Pass.  Dit is het gedeelte van het machtigingsproces waarin een programmeur bepaalt of de gebruiker een geldige klant van een MVPD is.  In dit scenario is de gebruiker een geldige abonnee op een MVPD.  De gebruiker probeert beveiligde inhoud weer te geven met behulp van de toepassing Flash van de programmeur:
 
-1. De gebruiker bladert naar de Web-pagina van de Programmer, die de toepassing van de Flash van de Programmer en de componenten van de Toegang van de Authentificatie van Adobe Pass op de machine van de gebruiker laadt. De toepassing van de Flash gebruikt Toegang Enabler om het herkennen van de programmeur met de Authentificatie van Adobe Pass te plaatsen, en de Authentificatie van Adobe Pass stelt de Toegangsmanager met configuratie en staatsgegevens voor die programmeur (de &quot;aanvrager&quot;) voor. De Toegangsfunctie moet deze gegevens van de server ontvangen voordat andere API-aanroepen kunnen worden uitgevoerd.  Technische nota: De programmeur plaatst zijn identiteit met de methode van Enabler van de Toegang `setRequestor()`; voor details, zie de [ Gids van de Integratie van de Programmer ](/help/authentication/integration-guide-programmers/programmer-integration-guide-overview.md).
+1. De gebruiker bladert naar de Web-pagina van de Programmer, die de toepassing van de Flash van de Programmer en de componenten van de Toegang van de Authentificatie van Adobe Pass op de machine van de gebruiker laadt. De toepassing van de Flash gebruikt Toegang Enabler om het herkennen van de programmeur met de Authentificatie van Adobe Pass te plaatsen, en de Authentificatie van Adobe Pass stelt de Toegangsmanager met configuratie en staatsgegevens voor die programmeur (de &quot;aanvrager&quot;) voor. De Toegangsfunctie moet deze gegevens van de server ontvangen voordat andere API-aanroepen kunnen worden uitgevoerd.  Technische opmerking: de programmeur stelt zijn identiteit in met de methode van Access Enabler `setRequestor()` .
 1. Wanneer de gebruiker probeert om de beschermde inhoud van de Programmer te bekijken, stelt de toepassing van de Programmer de gebruiker met een lijst van MVPDs voor, waarvan de gebruiker een leverancier selecteert.
-1. De gebruiker wordt opnieuw gericht aan een server van de Authentificatie van Adobe Pass, waar een gecodeerd verzoek van SAML voor gebruiker-geselecteerde MVPD wordt gecreeerd. Dit verzoek wordt verzonden als authentificatieverzoek namens de programmeur aan MVPD. Afhankelijk van het systeem van MVPD, wordt browser van de gebruiker dan of opnieuw gericht aan de plaats van MVPD aan login, of een login iFrame wordt gecreeerd in app van de Programmer.
+1. De gebruiker wordt omgeleid aan een server van de Authentificatie van Adobe Pass, waar een gecodeerd verzoek van SAML voor de user-selected MVPD wordt gecreeerd. Dit verzoek wordt als een verificatieverzoek namens de programmeur verzonden naar de MVPD. Afhankelijk van het MVPD-systeem wordt de browser van de gebruiker vervolgens omgeleid naar de MVPD-site om u aan te melden of wordt een aanmeldings-iFrame gemaakt in de app van de programmeur.
 1. In beide gevallen (omleiding of iFrame) accepteert de MVPD de aanvraag en geeft de aanmeldingspagina weer.
-1. De gebruiker login met MVPD, MVPD bevestigt de status van de gebruiker als betalende klant, en dan leidt MVPD zijn eigen zitting van HTTP.
-1. Wanneer de gebruiker wordt bevestigd, leidt MVPD tot een reactie (SAML &amp; gecodeerd), die MVPD terug naar de Authentificatie van Adobe Pass verzendt.
-1. De Authentificatie van Adobe Pass ontvangt de reactie MVPD, ziet dat er een open zitting van HTTP van de Authentificatie van Adobe Pass is, bevestigt de [ SAML ](https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language) reactie van MVPD, en richt terug naar de plaats van de Programmer.
+1. De gebruiker die zich aanmeldt bij de MVPD, de MVPD valideert de status van de gebruiker als betalende klant en vervolgens maakt de MVPD een eigen HTTP-sessie.
+1. Wanneer de gebruiker wordt gevalideerd, maakt de MVPD een reactie (SAML en gecodeerd) die de MVPD terugstuurt naar de Adobe Pass-verificatie.
+1. De Authentificatie van Adobe Pass ontvangt de reactie van MVPD, ziet dat er een open zitting van HTTP van de Authentificatie van Adobe Pass is, bevestigt de [ SAML ](https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language) reactie van MVPD, en richt terug naar de plaats van de Programmer.
 1. De site van de programmeur wordt opnieuw geladen, de Access Enabler wordt opnieuw geladen en de programmeur roept setRequestor() opnieuw aan.  De tweede vraag aan setRequestor () is noodzakelijk omdat de huidige configuratie is veranderd-er nu een vlag aanwezig is die toelaat van de Toegang meedeelt dat een teken AuthN op de server wacht te worden geproduceerd.
 1. Toegangsbeheer ziet dat er een verificatie in behandeling is en vraagt het token aan bij de Adobe Pass-verificatieserver. Het token wordt opgehaald van de server door de DRM-mogelijkheden van de Flash Player aan te roepen.
 1. Het teken AuthN wordt opgeslagen in het geheime voorgeheugen van de Flash Player LSO van de Programmer; de authentificatie is nu volledig, en de zitting wordt vernietigd op de server van de Authentificatie van Adobe Pass.
@@ -182,8 +182,8 @@ In de volgende stappen wordt een voorbeeld gegeven van de verificatiestroom van 
 De volgende stappen gaan op van de vorige sectie ([ Stappen van de Authentificatie ](#authn-steps)) voort:
 
 1. Wanneer de gebruiker probeert om tot de beschermde inhoud van de Programmer toegang te hebben, controleert de toepassing van de Programmer eerst op een teken AuthN op de lokale machine of het apparaat van de gebruiker.  Als dat teken daar niet is, dan worden de [ Stappen van de Authentificatie ](#authn-steps) hierboven gevolgd.  Als het token AuthN aanwezig is, gaat de machtigingsstroom verder met de toepassing van de programmeur die een aanroep van Access Enabler initieert met een verzoek om de weergaverechten van de gebruiker voor een specifiek item van beveiligde inhoud op te halen.
-1. Het specifieke item van de beveiligde inhoud wordt vertegenwoordigd door een &quot;resource identifier&quot;.  Dit kan een eenvoudige tekenreeks of een complexere structuur zijn, maar in elk geval wordt de aard van de resource identifier vooraf overeengekomen tussen de programmeur en de MVPD.  De toepassing van de Programmer gaat het middelherkenningsteken tot Toegangstoegelaten over.  De Toegangsfunctie controleert op een AuthZ-token op de lokale computer of het lokale apparaat van de gebruiker.  Als het token AuthZ niet aanwezig is, geeft de Access Enabler het verzoek door aan de backend Adobe Pass Authentication-server.
-1. De server van de Authentificatie van Adobe Pass communiceert met het MVPDs vergunningseindpunt gebruikend gestandaardiseerde protocollen.  Als de reactie van MVPD erop wijst dat de gebruiker de beschermde inhoud mag bekijken, leidt de server van de Authentificatie van Adobe Pass tot een teken AuthZ en geeft het terug naar Enabler van de Toegang, die het teken AuthZ op de machine van de gebruiker opslaat.
+1. Het specifieke item van de beveiligde inhoud wordt vertegenwoordigd door een &quot;resource identifier&quot;.  Dit kan een eenvoudige tekenreeks of een complexere structuur zijn, maar in elk geval wordt de aard van de resource-id vooraf overeengekomen tussen de programmeur en de MVPD.  De toepassing van de Programmer gaat het middelherkenningsteken tot Toegangstoegelaten over.  De Toegangsfunctie controleert op een AuthZ-token op de lokale computer of het lokale apparaat van de gebruiker.  Als het token AuthZ niet aanwezig is, geeft de Access Enabler het verzoek door aan de backend Adobe Pass Authentication-server.
+1. De server van de Authentificatie van Adobe Pass communiceert met het MVPDs vergunningseindpunt gebruikend gestandaardiseerde protocollen.  Als de MVPD-reactie aangeeft dat de gebruiker het recht heeft om de beveiligde inhoud te bekijken, maakt de Adobe Pass-verificatieserver een AuthZ-token en geeft deze terug aan Access Enabler, die het AuthZ-token opslaat op de computer van de gebruiker.
 1. Met een token AuthZ dat op de computer of het apparaat van de gebruiker is opgeslagen, roept de toepassing van de programmeur de Access Enabler op om een token van de Adobe Pass-verificatieserver te verkrijgen en verstrekt deze token aan de toepassing van de programmeur.
 1. Tot slot gebruikt de toepassing van de Programmeur de component van de Verificator van het Boek van Media om te bevestigen dat de juiste gebruiker de juiste inhoud bekijkt, en met het Symbolische teken op zijn plaats, wordt de gebruiker toegestaan om de beschermde inhoud te bekijken.
 

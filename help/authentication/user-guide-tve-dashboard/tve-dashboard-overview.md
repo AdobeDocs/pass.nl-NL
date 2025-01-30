@@ -2,9 +2,9 @@
 title: Overzicht van TVE-dashboard
 description: Meer informatie over het TVE-dashboard en de bronnen.
 exl-id: 91baeb34-a32a-4dc3-94d8-f6cfca59dc4e
-source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
+source-git-commit: 9dc25b66d12b05a8afe16d1a866707880b5d6a51
 workflow-type: tm+mt
-source-wordcount: '303'
+source-wordcount: '305'
 ht-degree: 0%
 
 ---
@@ -52,6 +52,6 @@ Adobe stelt voor de volgende bronnen te gebruiken om de stromen en functies gron
 
 * [TVE - Technisch document](/help/authentication/kickstart/technical-paper.md)
 * [Programmer Kickstart Guide](/help/authentication/kickstart/programmer-kickstart-guide.md)
-* [Entitlement Flow](/help/authentication/integration-guide-programmers/entitlement-flow.md)
+* [Overzicht van de handleiding voor integratie van programmeerprogramma&#39;s](/help/authentication/integration-guide-programmers/programmer-integration-guide-overview.md)
 * [Woordenlijst Dynamische clientregistratie (DCR)](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-glossary.md)
 * [Woordenlijst REST API v2](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md)

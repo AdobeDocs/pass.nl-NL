@@ -2,9 +2,9 @@
 title: Kickstart-handleiding voor programmeurs
 description: Kickstart-handleiding voor programmeurs
 exl-id: 0aecdb81-9b97-4475-b0b0-654d916b2374
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 9dc25b66d12b05a8afe16d1a866707880b5d6a51
 workflow-type: tm+mt
-source-wordcount: '972'
+source-wordcount: '969'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Welkom bij Adobe Pass Authentication for TV Anywhere. Wij kijken ernaar uit met 
 
 >[!NOTE]
 >
->Dit is de Kickstart Guide voor programmeurs (inhoudsproviders). Als u met een Multichannel Video Programming Distributor (MVPD) bent, te zien gelieve zeker de [ MVPD kickstart gids ](/help/authentication/kickstart/mvpd-kickstart-guide.md).
+>Dit is de Kickstart Guide voor programmeurs (inhoudsproviders). Als u met een Multichannel Video Programmerende Distributeur (MVPD) bent, gelieve zeker te zijn om de [ kickstart gids van MVPD ](/help/authentication/kickstart/mvpd-kickstart-guide.md) te zien.
 
 
 Contactpersonen voor Adobe Pass-verificatie:
@@ -31,7 +31,7 @@ Contactpersonen voor Adobe Pass-verificatie:
 
 In de volgende informatie worden enkele belangrijke eerste stappen beschreven om een solide en efficiënt begin te maken. Het doel is om uitleg te geven en te verwachten over de manier waarop we met partners zullen samenwerken om integratie te bereiken. Houd voor elk object rekening met de onderstaande secties &#39;&#39;Je geeft&#39;&#39; / &#39;&#39;Adobe geeft&#39;&#39;. Deze worden vermeld als controlelijst, of gids aangezien wij door het project werken.
 
-In dit document wordt ervan uitgegaan dat programmeurs zijn aangemeld om met een gekozen MVPD-partner te werken.
+In dit document wordt ervan uitgegaan dat programmeurs zich hebben aangemeld voor samenwerking met een gekozen MVPD-partner.
 
 ## Releaseplanning {#release-schedule}
 
@@ -51,12 +51,11 @@ De Adobe zal voorzien in:
 
 * Implementatiehandleiding: **`https://tve.zendesk.com/entries/498741-tve-deployment-guide`**
 * Toegang tot ons Zendesk-systeem voor klantenondersteuning. Dit is ook waar u steekproeven, informatie en videoleerprogramma&#39;s over sommige processen kunt vinden. Als u dit document op Zendesk wilt openen, samen met andere documenten die daar zijn gepost, moet u zich registreren en een account maken op `https://tve.zendesk.com/home` . Er is geen limiet voor het aantal gebruikers dat u kunt registreren.  U kunt opmerkingen bekijken en delen op elk gearchiveerd ticket. Alle ondersteuningsvragen moeten worden gericht aan `tve-support@adobe.com` .
-* [Programmeringsintegratiehandleiding](/help/authentication/integration-guide-programmers/programmer-integration-guide-overview.md)
 * Media Token Verifier Library: `https://tve.zendesk.com/entries/471323-media-token-validator-library` .
 
 ## Setup testomgeving {#test-env-setup}
 
-De Adobe zal u eerst opstelling met de de testplaats van de Adobe, waar de Adobe als MVPD voor testdoeleinden handelt. Uw team kan vervolgens een testwebsite instellen die de Adobe-API aanroept. Gebruik de standaardMVPD selecteur, en selecteer &quot;Adobe&quot;als idP.
+Adobe stelt u eerst in met de testsite voor Adoben, waar Adobe als MVPD voor testdoeleinden fungeert. Uw team kan vervolgens een testwebsite instellen die de Adobe-API aanroept. Gebruik de standaard MVPD-kiezer en selecteer &quot;Adobe&quot; als idP.
 
 U geeft het volgende op:
 
@@ -70,26 +69,26 @@ De Adobe stelt de rekening in en de Adobe verstrekt:
 
 ## Instellen met MVPD {#setup-mvpd}
 
-Deze sectie beschrijft wat u nodig hebt wanneer u van de de testplaats van de Adobe aan het werk met MVPD migreert.
+In deze sectie wordt beschreven wat u nodig hebt wanneer u van de testsite voor Adoben naar een MVPD migreert.
 
-U zult (via MVPD) verstrekken:
+Je geeft (via MVPD) het volgende op:
 
 * **Twee reeksen geloofsbrieven**:
    * AuthN + AuthZ: login/wachtwoord voor een gebruiker die voor authentiek en gemachtigd is
    * AuthN + Non-AuthZ: login/wachtwoord voor een gebruiker die voor authentiek maar niet gemachtigd is
-* **identiteitskaart van het Middel**. Dit is een specifieke inhoudsidentificatie die met een MVPD over het protocol AuthZ zal worden bevestigd. Dit kan op het kanaal, toon, episode, of activa niveau zijn; het zou met uw MVPD moeten worden overeengekomen.
+* **identiteitskaart van het Middel**. Dit is een specifieke inhoudsidentificatie die wordt gevalideerd met een MVPD via het AuthZ-protocol. Dit kan op kanaal, toon, episode, of activa niveau zijn; het zou met uw MVPD moeten worden overeengekomen.
 
-De Authentificatie van Adobe Pass steunt een op MRSS-Gebaseerd meta-gegevensschema wat betekent dat identiteitskaarts van het Middel zo specifiek als nodig kan zijn, en herkenningstekens kan omvatten die aan specifieke MVPD uniek kunnen zijn.
+De Authentificatie van Adobe Pass steunt een op MRSS-Gebaseerd meta-gegevensschema wat betekent dat Middel IDs zo specifiek als nodig kan zijn, en herkenningstekens kan omvatten die aan een specifieke MVPD uniek kunnen zijn.
 
-**NIEUWE integratie MVPD**: Het is belangrijk om te herinneren dat uw gekozen MVPD een integraal deel in de voltooiing van om het even welke integratie speelt. De Adobe moet code voor elke MVPD volgens hun specificaties schrijven. Totdat deze stappen zijn voltooid, kunt u die MVPD niet selecteren in het dialoogvenster of de producttests voltooien. De Adobe moet dit werk vooraf plannen om met de volgende beschikbare sprint te passen. (Raadpleeg de releasekalender voor actuele informatie over de planning.)
+**NIEUWE integratie van MVPD**: Het is belangrijk om te herinneren dat uw gekozen MVPD een integraal deel in de voltooiing van om het even welke integratie speelt. Adobe moet code schrijven voor elke MVPD volgens hun specificaties. Totdat deze stappen zijn voltooid, kunt u die MVPD niet selecteren in het dialoogvenster of de producttests voltooien. De Adobe moet dit werk vooraf plannen om met de volgende beschikbare sprint te passen. (Raadpleeg de releasekalender voor actuele informatie over de planning.)
 
-**Bestaande integratie MVPD**: Als uw gekozen MVPD reeds opstelling met Adobe is dan zouden de connectiviteitsstappen veel eenvoudiger (sneller) moeten zijn, en vaak connectiviteit kan door configuratieveranderingen worden bereikt.
+**Bestaande integratie van MVPD**: Als uw gekozen MVPD reeds opstelling met Adobe is dan zouden de connectiviteitsstappen veel eenvoudiger (sneller) moeten zijn, en vaak connectiviteit kan door configuratieveranderingen worden bereikt.
 
 >[!NOTE]
 >
->Het MVPD zal de programmeur nog steeds moeten toelaten en zich moeten aftekenen bij alle relevante zakelijke transacties.
+>De MVPD zal de programmeur nog steeds in staat moeten stellen en zich bij alle relevante zakelijke transacties moeten aanmelden.
 
-**QE met MVPDs**: Alle integraties zullen gezamenlijke QE impliceren, en aangezien de eindgebruiker uiteindelijk een klant van MVPD is, hebben velen testcycli voorafgaand aan het duwen &quot;levend&quot;geplaatst. Aangezien dit het plannen van middelen MVPD impliceert, is dit een potentieel gebied voor vertraging.
+**QE met MVPDs**: Alle integraties zullen gezamenlijke QE impliceren, en aangezien de eindgebruiker uiteindelijk een klant van MVPD is, hebben velen testcycli voorafgaand aan het duwen &quot;levend&quot;geplaatst. Aangezien dit het plannen van de middelen van MVPD impliceert, is dit een potentieel gebied voor vertraging.
 
 <!--
 >[RELATEDINFORMATION]

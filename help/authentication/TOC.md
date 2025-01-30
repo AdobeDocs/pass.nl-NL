@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass-verificatie
 user-guide-description: Adobe Pass-verificatie is een machtigingsoplossing voor TV Everywhere, die een modulair kader verstrekt om te bepalen of iemand die toegang tot een bron vraagt, daar rechten voor heeft.
-source-git-commit: ffedb5db269644c8d9c81480d27dff43bd4eb5d6
+source-git-commit: 9dc25b66d12b05a8afe16d1a866707880b5d6a51
 workflow-type: tm+mt
-source-wordcount: '1240'
+source-wordcount: '1231'
 ht-degree: 2%
 
 ---
@@ -46,12 +46,14 @@ ht-degree: 2%
       + [Opmerkingen bij de release Adobe Pass Authentication iOS / tvOS 3.7.0](notes-releases/authn-rn-ios-tvos-370.md)
 + Kickstart {#kickstart}
    + [Technisch document](kickstart/technical-paper.md)
-   + [Overzicht van programmeerprogramma](kickstart/programmer-overview.md)
-   + [MVPD-overzicht](kickstart/mvpd-overview.md)
    + [Kickstart-handleiding voor programmeurs](kickstart/programmer-kickstart-guide.md)
    + [MVPD-gids voor kickstart](kickstart/mvpd-kickstart-guide.md)
+   + [MVPD-overzicht](kickstart/mvpd-overview.md)
    + [Veelgestelde vragen over ondersteuningsprocedures](kickstart/support-procedures-faqs.md)
 + Integratiehandleiding voor programmeurs {#integration-guide-programmers}
+   + [Programmeringsintegratiegids](integration-guide-programmers/programmer-integration-guide-overview.md)
+   + [Minimale systeemvereisten](integration-guide-programmers/minimum-system-requirements.md)
+   + [Draaimechanisme](integration-guide-programmers/throttling-mechanism.md)
    + REST API&#39;s {#rest-apis}
       + REST API DCR {#rest-api-dcr}
          + [Overzicht van dynamische clientregistratie](integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)
@@ -120,9 +122,9 @@ ht-degree: 2%
                + [Koptekst - AP-TempPass-Identity](integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-temppass-identity.md)
    + Standaardfuncties {#standard-features}
       + Entitlements {#entitlements}
+         + [Metagegevens gebruiker](integration-guide-programmers/features-standard/entitlements/user-metadata.md)
          + [Besluiten](integration-guide-programmers/features-standard/entitlements/decisions.md)
          + [Media-tokens](integration-guide-programmers/features-standard/entitlements/media-tokens.md)
-         + [Metagegevens gebruiker](integration-guide-programmers/features-standard/entitlements/user-metadata.md)
       + Fout bij rapporteren {#error-reporting}
          + [Verbeterde foutcodes](integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md)
       + Single Sign-On Access {#sso-access}
@@ -257,11 +259,6 @@ ht-degree: 2%
             + [(Verouderd) Charles Proxy gebruiken](integration-guide-programmers/legacy/notes-technical/using-charles-proxy.md)
             + [(Verouderd) Controle van Adobe Pass Adobe PayTV-controle](integration-guide-programmers/legacy/notes-technical/monitoring-adobe-pay-tv-pass.md)
             + [(Verouderd) Procedure voor het testen van verificatie- en autorisatiestromen met de testsite voor de Adobe-API](integration-guide-programmers/legacy/notes-technical/test-authn-authz-flows-using-adobes-api-test-site.md)
-   + [Overzicht van de integratiegids voor programmeerprogramma&#39;s](integration-guide-programmers/programmer-integration-guide-overview.md)
-   + [Machtigingsstroom voor programmeerprogramma&#39;s](integration-guide-programmers/entitlement-flow.md)
-   + [Gebruiksgevallen voor programmeerprogramma&#39;s](integration-guide-programmers/programmer-use-cases.md)
-   + [Draaimechanisme](integration-guide-programmers/throttling-mechanism.md)
-   + [Minimale systeemvereisten](integration-guide-programmers/minimum-system-requirements.md)
 + Integratiehandleiding voor MVPD&#39;s {#integration-guide-mvpds}
    + [Integratiefuncties](integration-guide-mvpds/mvpd-integr-features.md)
    + [Verificatie](integration-guide-mvpds/authn-usecase.md)

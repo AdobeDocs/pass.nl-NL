@@ -2,9 +2,9 @@
 title: Media Tokens
 description: Media Tokens
 exl-id: 7e486d2c-e078-464d-90b1-14e2cfb4d20a
-source-git-commit: e448427ae4a36c4c6cb9f9c1cb4d0cc5c6d564ed
+source-git-commit: 9dc25b66d12b05a8afe16d1a866707880b5d6a51
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '667'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,9 @@ ht-degree: 0%
 >
 > De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
-Het media teken is een teken dat door de Authentificatie van Adobe Pass [ wordt geproduceerd REST API V2 ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md) als resultaat van een vergunningsbesluit dat wordt bedoeld om het bekijken toegang tot beschermde inhoud (middel) te verlenen. Het media-token is geldig gedurende een beperkte en korte tijdsperiode (enkele minuten) die op het moment van uitgifte is opgegeven. Deze tijdsduur moet worden gecontroleerd en gebruikt door de clienttoepassing.
+Het media teken is een teken dat door de Authentificatie van Adobe Pass [ wordt geproduceerd REST API V2 ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md) als resultaat van een vergunningsbesluit dat wordt bedoeld om het bekijken toegang tot beschermde inhoud (middel) te verlenen.
+
+Het mediatoken is geldig gedurende een beperkte en korte periode (standaard 7 minuten) die op het moment van uitgifte is opgegeven. Deze tijd geeft de tijdslimiet aan voordat deze moet worden geverifieerd en gebruikt door de clienttoepassing. Het mediatoken is beperkt tot eenmalig gebruik en mag nooit in de cache worden opgeslagen.
 
 Het media-token bestaat uit een ondertekende tekenreeks op basis van PKI (Public Key Infrastructure) die in duidelijke tekst wordt verzonden. Met de op PKI-Gebaseerde bescherming, wordt het teken ondertekend gebruikend een asymmetrische sleutel die aan Adobe door een CertificatieInstantie (CA) wordt uitgegeven.
 
@@ -25,7 +27,7 @@ De Media Token Verifier is een bibliotheek die door de Authentificatie van Adobe
 
 ## Verificator mediatokens {#media-token-verifier}
 
-Adobe Pass Authentication raadt programmeurs aan het mediatoken naar een back-endservice te verzenden, waarbij de bibliotheek Media Token Verifier wordt geïntegreerd om een veilige toegang te garanderen voordat de videostream wordt gestart. De time-to-live (TTL) van het media token is ontworpen om rekening te houden met mogelijke problemen met kloksynchronisatie tussen de token-genererende server en de validerende server.
+Adobe Pass Authentication raadt programmeurs aan het mediatoken naar hun eigen back-endservice te verzenden, waarbij de bibliotheek Media Token Verifier wordt geïntegreerd om een veilige toegang te garanderen voordat de videostream wordt gestart. De time-to-live (TTL) van het media token is ontworpen om rekening te houden met mogelijke problemen met kloksynchronisatie tussen de token-genererende server en de validerende server.
 
 De Authentificatie van Adobe Pass adviseert sterk tegen het ontleden van het media teken en het direct halen van zijn gegevens, aangezien het symbolische formaat niet gewaarborgd is en in de toekomst kan veranderen. De bibliotheek Media Token Verifier moet het enige hulpmiddel zijn dat wordt gebruikt om de inhoud van het token te analyseren.
 

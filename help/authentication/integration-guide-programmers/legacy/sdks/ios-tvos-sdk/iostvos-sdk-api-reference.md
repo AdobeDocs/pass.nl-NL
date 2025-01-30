@@ -2,9 +2,9 @@
 title: iOS/tvOS API-naslaggids
 description: iOS/tvOS API-naslaggids
 exl-id: 017a55a8-0855-4c52-aad0-d3d597996fcb
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: 9dc25b66d12b05a8afe16d1a866707880b5d6a51
 workflow-type: tm+mt
-source-wordcount: '6956'
+source-wordcount: '6942'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,6 @@ Op deze pagina worden de methoden en callback-functies beschreven die door de na
 
 Bijbehorende documentatie:
 
-* Voor een beschrijving van de basis de machtigingsstroom van de Authentificatie van Adobe Pass, zie [ de Stroom van de Entitlement ](/help/authentication/integration-guide-programmers/entitlement-flow.md).
 * Voor een geleidelijke analyse van hoe te om Adobe Pass uit te voeren
 de stroom van de authentificatierechten die deze API gebruiken, zie [ Cookbook van de Integratie van iOS ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-cookbook.md).
 * Voor recentste iOS AccessEnabler SDK, zie [ de Inheemse Bibliotheek van Inschakelen van de Toegang van iOS ](https://tve.zendesk.com/hc/en-us/articles/204963209-iOS-Native-AccessEnabler-Library).
