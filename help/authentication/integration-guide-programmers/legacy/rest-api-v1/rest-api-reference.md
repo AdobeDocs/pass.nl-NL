@@ -2,7 +2,7 @@
 title: REST API Reference
 description: Referentie van rustapi
 exl-id: 67e4639e-db0b-4400-bb81-e214263e8395
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: e448427ae4a36c4c6cb9f9c1cb4d0cc5c6d564ed
 workflow-type: tm+mt
 source-wordcount: '669'
 ht-degree: 2%
@@ -57,7 +57,7 @@ In de onderstaande tabel staan de beschikbare webservices voor de clientless-aan
 
 
 | Sr | Eindpunt webservice | Beschrijving | <!--[Diag.  </br>Ref](http://tve.helpdocsonline.com/api-reference-v2-test#illustration)-->. | Gehost op | Geroepen door |
-|-----|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|-----------------------------------------------------------|-----------------------------|
+|-----|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|-----------------------------------------------------------|-----------------------------|
 | 1. | [&lt;REGGIE_FQDN>/reggie/v1/ </br> {requestorId} /regcode ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md) | Retourneert willekeurig gegenereerde registratiecode en inlogpagina-URI | 2 | Adobe </br> Reg de Dienst van de Code | Slim apparaat |
 | 2. | [&lt;REGGIE_FQDN>/reggie/v1/ </br> {requestorId} /regcode/ </br> {registrationCode} ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/return-registration-record.md) | Hiermee wordt de registratie-code met de registratiecode UUID, de registratiecode en de hashcomponent-id geretourneerd | 8 | Adobe </br> Reg de Dienst van de Code | Adobe Pass-verificatie |
 | 3. | [&lt;SP_FQDN>/api/v1/config/ </br> {requestorId} ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/provide-mvpd-list.md) | Keert lijst van gevormde MVPDs voor de aanvrager terug | 5 | Adobe </br> de authentificatie </br> Dienst van Adobe Pass </br> | Aanmeldings </br> Web </br> App |

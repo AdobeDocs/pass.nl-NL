@@ -2,7 +2,7 @@
 title: Woordenlijst REST API V2
 description: Woordenlijst REST API V2
 exl-id: 8b3bd2de-1ff8-4c57-b18d-27ecdf2b0de2
-source-git-commit: 49a6a75944549dbfb062b1be8a053e6c99c90dc9
+source-git-commit: e448427ae4a36c4c6cb9f9c1cb4d0cc5c6d564ed
 workflow-type: tm+mt
 source-wordcount: '1742'
 ht-degree: 0%
@@ -183,7 +183,7 @@ Het middel is een beschermde inhoud die een gebruiker probeert om tot van a [ de
 
 De bron wordt geïdentificeerd door een unieke waarde die is overeengekomen tussen de programmeur en de MVPD.
 
-Voor meer informatie, verwijs naar de [ Beschermde documentatie van Middelen ](/help/authentication/integration-guide-programmers/features-standard/entitlements/protected-resources.md#identifiers).
+Voor meer informatie, verwijs naar de [ Beschermde documentatie van Middelen ](/help/authentication/integration-guide-programmers/features-standard/entitlements/decisions.md#protected-resources).
 
 ### S {#s}
 

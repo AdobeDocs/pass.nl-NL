@@ -1,9 +1,10 @@
 ---
 title: Media Tokens
 description: Media Tokens
-source-git-commit: dbca6c630fcbfcc5b50ccb34f6193a35888490a3
+exl-id: 7e486d2c-e078-464d-90b1-14e2cfb4d20a
+source-git-commit: e448427ae4a36c4c6cb9f9c1cb4d0cc5c6d564ed
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '653'
 ht-degree: 0%
 
 ---
@@ -12,9 +13,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
+> De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
-Het mediatoken is een token dat wordt gegenereerd door Adobe Pass Authentication als gevolg van een autorisatiebesluit dat bedoeld is om toegang te verlenen tot beveiligde inhoud (resource). Het media-token is geldig gedurende een beperkt en kort tijdsbestek (een paar minuten) dat op het moment van uitgifte is opgegeven. Dit geeft aan hoeveel tijd de clienttoepassing moet gebruiken voordat een nieuwe token moet worden opgehaald.
+Het media teken is een teken dat door de Authentificatie van Adobe Pass [ wordt geproduceerd REST API V2 ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md) als resultaat van een vergunningsbesluit dat wordt bedoeld om het bekijken toegang tot beschermde inhoud (middel) te verlenen. Het media-token is geldig gedurende een beperkte en korte tijdsperiode (enkele minuten) die op het moment van uitgifte is opgegeven. Deze tijdsduur moet worden gecontroleerd en gebruikt door de clienttoepassing.
 
 Het media-token bestaat uit een ondertekende tekenreeks op basis van PKI (Public Key Infrastructure) die in duidelijke tekst wordt verzonden. Met de op PKI-Gebaseerde bescherming, wordt het teken ondertekend gebruikend een asymmetrische sleutel die aan Adobe door een CertificatieInstantie (CA) wordt uitgegeven.
 
@@ -49,7 +50,7 @@ De bibliotheek Media Token Verifier die wordt vertegenwoordigd door het Java-arc
 
 De klasse `ITokenVerifier` definieert de volgende methoden:
 
-* De methode `isValid()` die wordt gebruikt om het media-token te valideren. Het keurt één enkel argument, het [ middelherkenningsteken ](/help/authentication/integration-guide-programmers/features-standard/entitlements/protected-resources.md) goed. Als de opgegeven resource-id `null` is, valideert de methode alleen de authenticiteit en geldigheidsperiode van het media-token.
+* De methode `isValid()` die wordt gebruikt om het media-token te valideren. Het keurt één enkel argument, het [ middelherkenningsteken ](/help/authentication/integration-guide-programmers/features-standard/entitlements/decisions.md#resource-identifier) goed. Als de opgegeven resource-id `null` is, valideert de methode alleen de authenticiteit en geldigheidsperiode van het media-token.
 
   De methode `isValid()` retourneert een van de volgende statuswaarden:
 
@@ -193,7 +194,7 @@ Het mediatoken kan worden opgehaald met de volgende API:
 
 * [Autorisatiebesluiten ophalen met specifieke mvpd](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md)
 
-Verwijs naar de **secties van de Reactie** en **Steekproeven** van bovengenoemde API om het vergunningsbesluit en media symbolische modellen te begrijpen.
+Verwijs naar de **secties van de Reactie** en **Steekproeven** van bovengenoemde API om de structuur van vergunningsbesluiten en media tokens te begrijpen.
 
 Raadpleeg het volgende document voor meer informatie over hoe en wanneer u de bovenstaande API wilt integreren:
 

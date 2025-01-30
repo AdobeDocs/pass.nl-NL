@@ -2,9 +2,9 @@
 title: iOS/tvOS Cookbook
 description: iOS/tvOS Cookbook
 exl-id: 4743521e-d323-4d1d-ad24-773127cfbe42
-source-git-commit: dbca6c630fcbfcc5b50ccb34f6193a35888490a3
+source-git-commit: e448427ae4a36c4c6cb9f9c1cb4d0cc5c6d564ed
 workflow-type: tm+mt
-source-wordcount: '2425'
+source-wordcount: '2424'
 ht-degree: 0%
 
 ---
@@ -229,7 +229,7 @@ geverifieerd.
 1. Vraag [ getAuthorization () ](#$getAuthZ) om de vergunningsstroom in werking te stellen.
 
    * **Afhankelijkheid:** Geldige ResourceID(s) overeengekomen met MVPD(s).
-   * Middel IDs zou het zelfde moeten zijn als die gebruikt op andere apparaten of platforms, en zal het zelfde over MVPDs zijn. Voor informatie over Middel IDs, zie [ het identificeren van Beschermde Middelen ](/help/authentication/integration-guide-programmers/features-standard/entitlements/protected-resources.md#identifiers)
+   * Middel IDs zou het zelfde moeten zijn als die gebruikt op andere apparaten of platforms, en zal het zelfde over MVPDs zijn. Voor informatie over Middel IDs, zie [ Herkenningsteken van het Middel ](/help/authentication/integration-guide-programmers/features-standard/entitlements/decisions.md#resource-identifier)
 
 1. Verificatie en autorisatie valideren.
 

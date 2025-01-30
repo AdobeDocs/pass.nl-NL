@@ -2,7 +2,7 @@
 title: Metagegevens gebruiker
 description: Metagegevens gebruiker
 exl-id: 9fd68885-7b3a-4af0-a090-6f1f16efd2a1
-source-git-commit: ae2e61152695b738b0bb08d1dcd81417f3bbdfb5
+source-git-commit: e448427ae4a36c4c6cb9f9c1cb4d0cc5c6d564ed
 workflow-type: tm+mt
 source-wordcount: '1793'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
+> De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
 De meta-gegevens van de gebruiker verwijzen naar gebruiker-specifieke [ attributen ](#attributes) (b.v., zip codes, ouderlijke classificaties, gebruiker IDs, enz.) die door MVPDs worden gehandhaafd en aan Programmers door de Authentificatie van Adobe Pass [ worden verstrekt REST API V2 ](#apis).
 
@@ -35,7 +35,7 @@ De volgende lijst maakt een lijst van enkele attributen van gebruikersmeta-gegev
 | `primaryOID` | String | &quot;uuidd1e19ec9-012c-124f-b520-acaf118d16a0&quot; | Nee | Account-id. | Het kenmerk is specifiek voor AT&amp;T. De `primaryOID` -waarde is gelijk aan de `userID` -waarde wanneer de `typeID` -waarde wordt ingesteld op &quot;Primair&quot;. |
 | `typeID` | String | &quot;Primair&quot; | Nee | Kenmerk dat aangeeft of de huidige gebruiker een primaire of secundaire rekeninghouder is. | Het kenmerk is specifiek voor AT&amp;T. De `primaryOID` -waarde is gelijk aan de `userID` -waarde wanneer de `typeID` -waarde wordt ingesteld op &quot;Primair&quot;. |
 | `is_hoh` | String | &quot;1&quot; | Nee | Kenmerk dat aangeeft of de huidige gebruiker al dan niet het hoofd van het huishouden is. | Het kenmerk is specifiek voor Synacor. |
-| `hba_status` | Boolean | &quot;true&quot; | Nee | Kenmerk dat aangeeft of de huidige gebruiker door HBA is geverifieerd of niet. |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `hba_status` | Boolean | &quot;true&quot; | Nee | Kenmerk dat aangeeft of de huidige gebruiker al dan niet is geverifieerd via HBA. |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | `allowMirroring` | Boolean | &quot;true&quot; | Nee | Kenmerk dat aangeeft of het huidige apparaat het scherm kan spiegelen. | Het kenmerk is specifiek voor Spectrum. |
 | `zip` | Array | \[&quot;77754&quot;, &quot;12345&quot;\] | Ja | Postcode van gebruiker. | De kenmerkwaarde kan worden gebruikt om gelokaliseerd nieuws, weerupdates of sportevenementen te leveren. De waarde `zip` vertegenwoordigt gevoelige gegevens die juridische overeenkomsten met de MVPD vereisen. Wanneer de code is gecodeerd, is de representatie van de `zip` -toets een `String` in plaats van een `Array` -toets. |
 | `encryptedZip` | String | &quot;&quot; | Ja | Gecodeerde postcode van de gebruiker. | Het kenmerk is specifiek voor Comcast. |

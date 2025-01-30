@@ -1,15 +1,15 @@
 ---
-title: Preflight-machtiging voor MVPD
-description: Preflight-machtiging voor MVPD
+title: MVPD Preflight-autorisatie
+description: MVPD Preflight-autorisatie
 exl-id: da2e7150-b6a8-42f3-9930-4bc846c7eee9
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: e448427ae4a36c4c6cb9f9c1cb4d0cc5c6d564ed
 workflow-type: tm+mt
 source-wordcount: '750'
 ht-degree: 0%
 
 ---
 
-# Preflight-machtiging voor MVPD
+# MVPD Preflight-autorisatie
 
 >[!NOTE]
 >
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 De Authentificatie van Adobe Pass kan Preflight Authorization momenteel op twee manieren voor MVPDs, of via AuthN reactiekenmerken of via een multichannel verzoek AuthZ steunen.  In de volgende scenario&#39;s worden de kosten/baten beschreven van de verschillende manieren waarop u Preflight-autorisatie kunt implementeren:
 
-* **het Hoogste scenario van het Geval** - MVPD verstrekt de lijst van vooraf gemachtigde middelen tijdens de vergunningsfase (Multikanaal AuthZ).
+* **het Hoogste scenario van het Geval** - MVPD verstrekt de lijst van vooraf erkende middelen tijdens de vergunningsfase (Multikanaal AuthZ).
 * **het slechtste scenario van het Geval** - als een MVPD geen vorm van veelvoudige middelenvergunning steunt, voert de server van de Authentificatie van Adobe Pass een vergunningsvraag aan MVPD voor elk middel in de middelenlijst uit. Dit scenario heeft een effect (in verhouding tot het aantal middelen) op de reactietijd voor het Preflight vergunningsverzoek. Hierdoor kan de belasting van zowel Adobe- als MVPD-servers toenemen, wat prestatieproblemen veroorzaakt. Ook zal het vergunningsverzoeken/reactiegebeurtenissen zonder de daadwerkelijke behoefte aan een spel produceren.
 * **Vervangen** - MVPD verstrekt de lijst van vooraf gemachtigde middelen tijdens de authentificatiefase, zodat zal er geen netwerkvraag nodig zijn, zelfs niet de preflight verzoek, aangezien de lijst op de cliënt in het voorgeheugen ondergebracht is.
 
@@ -33,7 +33,7 @@ Dit Preflight-scenario is compatibel met OLCA (Cableabs). De authentificatie en 
 
 ### Lijst met aangepaste bronnen in SAML-kenmerkinstructie {#custom-res-saml-attr}
 
-De de authentificatiereactie van SAML van IdP omvat een AttributeStatement die middelnamen bevat die AdobePass zou moeten machtigen.  Sommige MVPD&#39;s verstrekken dit in het volgende formaat:
+De de authentificatiereactie van SAML van IdP omvat een AttributeStatement die middelnamen bevat die AdobePass zou moeten machtigen.  Dit wordt door sommige MVPD in de volgende indeling verstrekt:
 
 ```XML
 <saml:AttributeStatement>
@@ -50,13 +50,13 @@ Dit bereikt effectief het beste casescenario, en geen netwerkvraag zal worden ui
 
 ## Preflight van meerdere kanalen in AuthZ {#preflight-multich-authz}
 
-Deze Preflight-implementatie is ook compatibel met OLCA (Cablelabs).  De Authentificatie en van de Authorization Interface 1.0 Specificatie (secties 7.5.3 en 7.5.4) beschrijft methodes om de informatie van de Vergunning van een MVPD te verzoeken gebruikend of SAML Assertions of XACML. Dit is de geadviseerde manier om vergunningsstatus voor MVPDs te vragen die dit als deel van de stroom van de Authentificatie niet steunen. De Authentificatie van Adobe Pass geeft één enkele netwerkvraag aan MVPD uit om de lijst van erkende middelen terug te winnen.
+Deze Preflight-implementatie is ook compatibel met OLCA (Cablelabs).  De specificatie van Interface 1.0 van de Authentificatie en van de Vergunning (secties 7.5.3 en 7.5.4) beschrijft methodes om de informatie van de Vergunning van MVPD te vragen gebruikend of SAML Assertions of XACML. Dit is de geadviseerde manier om vergunningsstatus voor MVPDs te vragen die dit als deel van de stroom van de Authentificatie niet steunen. De Authentificatie van Adobe Pass geeft één enkele netwerkvraag aan MVPD uit om de lijst van erkende middelen terug te winnen.
 
 
 De Authentificatie van Adobe Pass ontvangt de lijst van middelen van de toepassing van de Programmer. De integratie van MVPD van de Authentificatie van Adobe Pass kan één vraag AuthZ met al die middelen dan maken, en dan de reactie ontleden en de veelvoudige vergunning/ontkennen besluiten halen.  De stroom voor de preflight met multi-channel scenario AuthZ werkt als volgt:
 
 1. De app van de programmeur verzendt een komma gescheiden lijst van middelen door de Preflight cliënt API, bijvoorbeeld: &quot;TestChannel1,TestChannel2,TestChannel3&quot;.
-1. De Preflight AuthZ- verzoekvraag MVPD bevat de veelvoudige middelen, en heeft de volgende structuur:
+1. De MVPD preflight AuthZ- verzoekvraag bevat de veelvoudige middelen, en heeft de volgende structuur:
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?><soap11:Envelope xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/"> 
@@ -117,7 +117,7 @@ De Authentificatie van Adobe Pass ontvangt de lijst van middelen van de toepassi
 
 Sommige MVPDs hebben toestemmingseindpunten die vergunning voor veelvoudige middelen in één verzoek steunen, maar zij vallen niet onder het scenario dat in Multikanaal AuthZ wordt beschreven. Deze specifieke MVPDs vereist douanewerk.
 
-De Adobe kan veelvoudige kanaalvergunning zonder veranderingen in de bestaande implementatie ook steunen.  Deze aanpak moet tussen Adobe en het technische team van de MVPD worden herzien om ervoor te zorgen dat het naar behoren functioneert.
+De Adobe kan veelvoudige kanaalvergunning zonder veranderingen in de bestaande implementatie ook steunen.  Deze aanpak moet worden herzien tussen Adobe en het technische team van MVPD om ervoor te zorgen dat het naar behoren functioneert.
 
 ## MVPD&#39;s die Preflight-autorisatie ondersteunen {#mvpds-supp-preflight-authz}
 
@@ -129,12 +129,3 @@ De volgende lijst maakt een lijst van MVPDs die Preflight Vergunning, samen met 
 | Kanaalverbinding in gebruikersmetagegevens | Suddenlink HTC | Alle directe integraties van de Synacor kunnen deze benadering eveneens steunen. |
 | Vork en verbinding | Alle andere niet hierboven vermelde | Het standaard maximum aantal gecontroleerde middelen = 5. |
 
-<!--
-![RelatedInformation]
->* [Logout](/help/authentication/usecase-mvpd-logout.md)
->* [Authorization](/help/authentication/authz-usecase.md)
->* [MVPD Integration Features](/help/authentication/mvpd-integr-features.md)
->* [MVPD User Metadata Exchange](/help/authentication/mvpd-user-metadata-exchng.md)
->* [Preflight Authorization - Programmer Integration Guide](/help/authentication/preflight-authz.md)
->* [AuthN and AuthZ Interface 1.0 Specification](https://www.cablelabs.com/specifications/CL-SP-AUTH1.0-I04-120621.pdf){target=_blank} 
--->
