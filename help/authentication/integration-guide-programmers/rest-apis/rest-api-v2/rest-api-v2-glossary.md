@@ -2,9 +2,9 @@
 title: Woordenlijst REST API V2
 description: Woordenlijst REST API V2
 exl-id: 8b3bd2de-1ff8-4c57-b18d-27ecdf2b0de2
-source-git-commit: c1f891fabd47954dc6cf76a575c3376ed0f5cd3d
+source-git-commit: 49a6a75944549dbfb062b1be8a053e6c99c90dc9
 workflow-type: tm+mt
-source-wordcount: '1743'
+source-wordcount: '1742'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ Het besluit is een concept van de Authentificatie van Adobe Pass dat informatie 
 
 De degradatie is een eigenschap van de Authentificatie van Adobe Pass die een gebruiker toestaat om tot beschermde inhoud zelfs toegang te hebben wanneer zijn [ MVPD ](#mvpd) een de dienstverstoring ervaart.
 
-Voor meer informatie, verwijs naar het [ Verslechterings API Overzicht ](/help/authentication/integration-guide-programmers/features-premium/degraded-access/degradation-api-overview.md) documentatie.
+Voor meer informatie, verwijs naar de ](/help/authentication/integration-guide-programmers/features-premium/degraded-access/degradation-feature.md) documentatie van de Eigenschap van 0} Afbraak.[
 
 #### Apparaat-id {#device-id}
 

@@ -2,7 +2,7 @@
 title: Overzicht van Entitlement Service-controle
 description: Overzicht van Entitlement Service-controle
 exl-id: ebd5d650-0a32-4583-9045-5156356494e2
-source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
+source-git-commit: 49a6a75944549dbfb062b1be8a053e6c99c90dc9
 workflow-type: tm+mt
 source-wordcount: '1303'
 ht-degree: 0%
@@ -129,11 +129,3 @@ U kunt de ESM-gegevens gebruiken voor de volgende gebruiksgevallen:
 - **het Zuiveren/het Testen van de Kwaliteit** - omdat het gegeven ook door platform, apparaat, browser, en OS wordt gebroken, kan het analyseren van gebruikspatronen problemen op specifieke combinaties (b.v., Safari op OSX) identificeren.
 
 - **Analytics** - de verstrekte gegevens kunnen worden gebruikt om de gegevens van de cliëntkant aan te vullen/te controleren die door Adobe Analytics of een ander analysehulpmiddel worden verzameld.
-
-<!--
-## Related Information {#related-information}
-
-- [ESM API](/help/authentication/entitlement-service-monitoring-api.md)
-- [Degradation API Overview](/help/authentication/degradation-api-overview.md)
-- [Server-side Metrics](/help/authentication/understanding-serverside-metrics.md)
--->

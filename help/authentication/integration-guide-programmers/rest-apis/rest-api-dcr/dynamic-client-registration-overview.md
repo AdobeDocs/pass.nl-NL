@@ -2,7 +2,7 @@
 title: Overzicht van dynamische clientregistratie
 description: Overzicht van dynamische clientregistratie
 exl-id: 9f98dfcd-4375-48c3-beff-259dfb1d3a26
-source-git-commit: c1f891fabd47954dc6cf76a575c3376ed0f5cd3d
+source-git-commit: 49a6a75944549dbfb062b1be8a053e6c99c90dc9
 workflow-type: tm+mt
 source-wordcount: '813'
 ht-degree: 0%
@@ -20,8 +20,8 @@ De dynamische cliëntregistratie vertegenwoordigt een vergunningsmechanisme dat 
 Adobe Pass biedt een dynamische service voor clientregistratie die toegang biedt tot de volgende beveiligde API&#39;s:
 
 * Adobe Pass Authentication Management API&#39;s:
-   * [Tijdcontrole-API opnieuw instellen](../../features-premium/temporary-access/temp-pass-feature.md)
-   * [Verslechterings-API](../../features-premium/degraded-access/degradation-api-overview.md)
+   * [Tijdcontrole-API opnieuw instellen](../../features-premium/temporary-access/temp-pass-feature.md#reset-tempass-api-access)
+   * [Verslechterings-API](../../features-premium/degraded-access/degradation-feature.md#degradation-api-access)
    * [Proxy MVPD API](../../../integration-guide-mvpds/proxy-mvpd-webserv.md)
    * [Entitlement Service Monitoring API](../../features-premium/esm/entitlement-service-monitoring-api.md)
 * Adobe Pass-verificatie REST-API&#39;s:
@@ -102,7 +102,7 @@ De softwareverklaring is een Token van het Web JSON (`JWT`) dat informatie over 
 
 Voor meer gedetailleerde verklaring over welke softwareverklaringen zijn en hoe zij werken, verwijs naar [ RFC 7591 ](https://tools.ietf.org/html/rfc7591) documentatie.
 
-## Dynamic Client Registration Flow  {#dynamic-client-registration-flow}
+## Dynamic Client Registration Flow {#dynamic-client-registration-flow}
 
 Samengevat omvat het dynamische mechanisme voor clientregistratie verschillende stappen:
 

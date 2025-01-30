@@ -2,7 +2,7 @@
 title: Verminderde toegangsstromen
 description: REST API V2 - Verminderde toegangsstromen
 exl-id: 9276f5d9-8b1a-4282-8458-0c1e1e06bcf5
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 49a6a75944549dbfb062b1be8a053e6c99c90dc9
 workflow-type: tm+mt
 source-wordcount: '1605'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Degradatie zorgt ervoor dat bepaalde eindpunten voor MVPD-verificatie en -autorisatie tijdelijk worden overgeslagen. Meestal initieert de programmeur deze actie, maar ongeacht wie een degradatiegebeurtenis teweegbrengt, hangt de actie van vroegere regelingen af die met betrokken MVPDs worden gemaakt.
 
-Voor meer details over de eigenschap van de Afbraak, verwijs naar de [ documentatie van de Afbraak ](../../../../features-premium/degraded-access/degradation-api-overview.md).
+Voor meer details over de eigenschap van de Afbraak, verwijs naar de [ documentatie van de Afbraak ](../../../../features-premium/degraded-access/degradation-feature.md).
 
 De degraded toegangsstromen staan u toe om voor de volgende scenario&#39;s te vragen:
 
@@ -44,7 +44,7 @@ Voordat u de verificatiestroom uitvoert terwijl de degradatie wordt toegepast, m
 > 
 > <br/>
 > 
-> * De streamingtoepassing heeft geen geldig profiel voor die specifieke MVPD die in Adobe Pass-back-end is opgeslagen.
+> * De streamingtoepassing beschikt niet over een geldig profiel voor die specifieke MVPD die is opgeslagen in de Adobe Pass-backend.
 > * Er is een AuthNAll degradatieregel toegepast op de integratie tussen verstrekte `serviceProvider` en `mvpd`.
 
 ### Workflow {#workflow-perform-authentication-while-degradation-is-applied}
@@ -242,9 +242,9 @@ Volg de gegeven stappen om de stroom van de voorafgaande toestemming uit te voer
 
 ### Vereisten {#prerequisites-retrieve-profile-while-degradation-is-applied}
 
-Alvorens het profiel voor een specifieke MVPD terug te winnen terwijl de degradatie wordt toegepast, zorg ervoor de volgende voorwaarden worden voldaan aan:
+Voordat u het profiel voor een specifieke MVPD ophaalt terwijl de degradatie wordt toegepast, moet u controleren of aan de volgende voorwaarden is voldaan:
 
-* De streamingtoepassing, die een geselecteerde of in cache geplaatste `mvpd` id heeft, wil het profiel voor een specifieke MVPD ophalen.
+* De streamingtoepassing, die een geselecteerde of in cache opgeslagen `mvpd` id heeft, wil het profiel voor een specifieke MVPD ophalen.
 
 >[!IMPORTANT]
 >
@@ -257,13 +257,13 @@ Alvorens het profiel voor een specifieke MVPD terug te winnen terwijl de degrada
 
 ### Workflow {#workflow-retrieve-profile-while-degradation-is-applied}
 
-Volg de gegeven stappen om de stroom van de profielherwinning voor een specifieke MVPD uit te voeren terwijl de degradatie zoals aangetoond in het volgende diagram wordt toegepast.
+Volg de gegeven stappen om de stroom van de profielherwinning voor een specifieke MVPD uit te voeren terwijl de degradatie wordt toegepast zoals aangetoond in het volgende diagram.
 
 ![ wint profiel terug terwijl de degradatie wordt toegepast ](../../../../../assets/rest-api-v2/flows/degraded-access-flows/rest-api-v2-retrieve-profile-while-degradation-is-applied-flow.png)
 
 *wint profiel terug terwijl de degradatie wordt toegepast*
 
-1. **wint profiel voor specifieke mvpd terug:** de het stromen toepassing verzamelt alle noodzakelijke gegevens om profielinformatie voor dat specifieke MVPD terug te winnen door een verzoek naar het eindpunt van Profielen te verzenden.
+1. **wint profiel voor specifieke mvpd terug:** de het stromen toepassing verzamelt alle noodzakelijke gegevens om profielinformatie voor die specifieke MVPD terug te winnen door een verzoek naar het eindpunt van Profielen te verzenden.
 
    >[!IMPORTANT]
    >
