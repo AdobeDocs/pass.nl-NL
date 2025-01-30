@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass-verificatie
 user-guide-description: Adobe Pass-verificatie is een machtigingsoplossing voor TV Everywhere, die een modulair kader verstrekt om te bepalen of iemand die toegang tot een bron vraagt, daar rechten voor heeft.
-source-git-commit: 1b9847d8dcb078755fd68a6363972f8973290e52
+source-git-commit: ffedb5db269644c8d9c81480d27dff43bd4eb5d6
 workflow-type: tm+mt
-source-wordcount: '1250'
+source-wordcount: '1240'
 ht-degree: 2%
 
 ---
@@ -120,8 +120,7 @@ ht-degree: 2%
                + [Koptekst - AP-TempPass-Identity](integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-temppass-identity.md)
    + Standaardfuncties {#standard-features}
       + Entitlements {#entitlements}
-         + [Preflight-autorisatie](integration-guide-programmers/features-standard/entitlements/preflight-authz.md)
-         + [Beveiligde bron](integration-guide-programmers/features-standard/entitlements/protected-resources.md)
+         + [Besluiten](integration-guide-programmers/features-standard/entitlements/decisions.md)
          + [Media-tokens](integration-guide-programmers/features-standard/entitlements/media-tokens.md)
          + [Metagegevens gebruiker](integration-guide-programmers/features-standard/entitlements/user-metadata.md)
       + Fout bij rapporteren {#error-reporting}
@@ -137,8 +136,7 @@ ht-degree: 2%
             + Single Sign-On {#roku-sso}
                + [Overzicht van Roku SSO](integration-guide-programmers/features-standard/sso-access/platform-sso/roku-single-sign-on/roku-sso-overview.md)
       + Toegang tot verificatie op thuisbasis {#hba-access}
-         + [Thuisgebaseerde verificatie voor tv overal](integration-guide-programmers/features-standard/hba-access/home-based-authn-tve.md)
-         + [HBA-status voor MVPD&#39;s](integration-guide-programmers/features-standard/hba-access/hba-status-mvpds.md)
+         + [Home-based authentication (HBA)](integration-guide-programmers/features-standard/hba-access/home-based-authentication.md)
       + Privacy-ondersteuning {#privacy-support}
          + [Overzicht van privé-ondersteuning](integration-guide-programmers/features-premium/privacy-support/privacy-supp-overview.md)
          + [Een privacyverzoek indienen](integration-guide-programmers/features-premium/privacy-support/make-privacy-req.md)

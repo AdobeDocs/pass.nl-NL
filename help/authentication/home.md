@@ -2,7 +2,7 @@
 title: Welkom bij Adobe&reg; Verificatie doorgeven!
 description: Welkom bij Adobe&reg; controle van verificatie doorgeven
 exl-id: a8b01469-3d5f-4a44-9ae8-06a68c29d56d
-source-git-commit: 1b9847d8dcb078755fd68a6363972f8973290e52
+source-git-commit: ffedb5db269644c8d9c81480d27dff43bd4eb5d6
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 0%
@@ -20,8 +20,8 @@ De Authentificatie van Adobe Pass is een gerechtigheidsoplossing voor TV overal,
 ## Populaire Help en veelgestelde vragen {#help-faqs}
 
 | **Aanbevolen Punten** |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <ul><li>[ Enige Sign-On voor iOS ](/help/authentication/integration-guide-programmers/features-standard/sso-access/partner-sso/apple-sso/apple-sso-overview.md)</li><li>[ huis-Gebaseerde Authentificatie (HBA) ](/help/authentication/integration-guide-programmers/features-standard/hba-access/home-based-authn-tve.md)</li><li>[ HBA Infographic ](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/AdobeNewsletterHBA.pdf)</li><li>[ de Gids van de Gebruiker van het Dashboard van Adobe Pass TVE ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-overview.md)</li></ul> |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <ul><li>[ Enige Sign-On voor iOS ](/help/authentication/integration-guide-programmers/features-standard/sso-access/partner-sso/apple-sso/apple-sso-overview.md)</li><li>[ huis-Gebaseerde Authentificatie (HBA) ](/help/authentication/integration-guide-programmers/features-standard/hba-access/home-based-authentication.md)</li><li>[ HBA Infographic ](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/AdobeNewsletterHBA.pdf)</li><li>[ de Gids van de Gebruiker van het Dashboard van Adobe Pass TVE ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-overview.md)</li></ul> |
 
 | **voor Programmeurs** | **voor MVPDs** |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
