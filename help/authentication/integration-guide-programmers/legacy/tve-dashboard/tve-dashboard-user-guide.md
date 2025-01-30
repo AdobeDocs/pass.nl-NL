@@ -2,9 +2,9 @@
 title: Gebruikershandleiding voor Primetime TVE-dashboard
 description: Gebruikershandleiding voor Primetime TVE-dashboard
 exl-id: 6f7f7901-db3a-4c68-ac6a-27082db9240a
-source-git-commit: 9dc25b66d12b05a8afe16d1a866707880b5d6a51
+source-git-commit: 2b9a8ce374f7a73cd815e9735d672e5c9ba285cc
 workflow-type: tm+mt
-source-wordcount: '5524'
+source-wordcount: '5517'
 ht-degree: 0%
 
 ---
@@ -287,7 +287,7 @@ Volg onderstaande stappen om een nieuwe integratie tot stand te brengen:
 
 Als u een bestaande integratie wilt bijwerken, klikt u op de tabelvermelding voor die specifieke integratie vanuit de sectie Integraties of de sectie Kanalen, die een tabblad Integraties bevat.
 
-Wanneer het gebruiken van de BasisWorkspace wijze, zal deze sectie het zien van en het uitgeven van de meest algemeen bijgewerkte montages, zoals authentificatie en toestemmingstoken TTLs (tijd-aan-levende), evenals iFrame montages toestaan. Gelieve te letten op dat de montages van TTL voor de integratie met MVPDs kunnen ontbreken die dynamisch Gedefinieerde Symbolische Persistentie TTL (zie ingang 1.19 van [ de Vereisten van de Integratie van MVPD ](/help/authentication/integration-guide-mvpds/mvpd-integr-features.md)) steunen.
+Wanneer het gebruiken van de BasisWorkspace wijze, zal deze sectie het zien van en het uitgeven van de meest algemeen bijgewerkte montages, zoals authentificatie en toestemmingstoken TTLs (tijd-aan-levende), evenals iFrame montages toestaan. Houd er rekening mee dat er TTL-instellingen kunnen ontbreken voor de integratie met MVPD&#39;s die dynamisch gedefinieerde Token Persistence TTL ondersteunen.
 
 
 

@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass-verificatie
 user-guide-description: Adobe Pass-verificatie is een machtigingsoplossing voor TV Everywhere, die een modulair kader verstrekt om te bepalen of iemand die toegang tot een bron vraagt, daar rechten voor heeft.
-source-git-commit: 9dc25b66d12b05a8afe16d1a866707880b5d6a51
+source-git-commit: 2b9a8ce374f7a73cd815e9735d672e5c9ba285cc
 workflow-type: tm+mt
-source-wordcount: '1231'
+source-wordcount: '1230'
 ht-degree: 2%
 
 ---
@@ -48,7 +48,6 @@ ht-degree: 2%
    + [Technisch document](kickstart/technical-paper.md)
    + [Kickstart-handleiding voor programmeurs](kickstart/programmer-kickstart-guide.md)
    + [MVPD-gids voor kickstart](kickstart/mvpd-kickstart-guide.md)
-   + [MVPD-overzicht](kickstart/mvpd-overview.md)
    + [Veelgestelde vragen over ondersteuningsprocedures](kickstart/support-procedures-faqs.md)
 + Integratiehandleiding voor programmeurs {#integration-guide-programmers}
    + [Programmeringsintegratiegids](integration-guide-programmers/programmer-integration-guide-overview.md)
@@ -260,7 +259,7 @@ ht-degree: 2%
             + [(Verouderd) Controle van Adobe Pass Adobe PayTV-controle](integration-guide-programmers/legacy/notes-technical/monitoring-adobe-pay-tv-pass.md)
             + [(Verouderd) Procedure voor het testen van verificatie- en autorisatiestromen met de testsite voor de Adobe-API](integration-guide-programmers/legacy/notes-technical/test-authn-authz-flows-using-adobes-api-test-site.md)
 + Integratiehandleiding voor MVPD&#39;s {#integration-guide-mvpds}
-   + [Integratiefuncties](integration-guide-mvpds/mvpd-integr-features.md)
+   + [MVPD-integratiegids](integration-guide-mvpds/mvpd-integration-guide-overview.md)
    + [Verificatie](integration-guide-mvpds/authn-usecase.md)
    + [Verificatie met het OAuth 2.0-protocol](integration-guide-mvpds/authn-oauth2-protocol.md)
    + [Toestemming](integration-guide-mvpds/authz-usecase.md)

@@ -2,7 +2,7 @@
 title: MVPD-gids voor kickstart
 description: MVPD-gids voor kickstart
 exl-id: 6423cc9a-a45a-4cde-b562-4cb72c98e505
-source-git-commit: 936c1cda465dd3a9fc3f16381edb24a2b3e41779
+source-git-commit: 2b9a8ce374f7a73cd815e9735d672e5c9ba285cc
 workflow-type: tm+mt
 source-wordcount: '934'
 ht-degree: 0%
@@ -137,7 +137,7 @@ Het Adobe Pass-verificatieteam is beschikbaar voor alle vragen of technische pro
 
 **de Adobe zal** toegang tot onze openbare documentatie via [ Adobe Experience League ](https://experienceleague.adobe.com/en/docs/pass/authentication/home) verlenen.
 
-Het team van de Authentificatie van Adobe Pass verstrekt uitvoerige documentatie voor de beschikbare eigenschappen en werkschema&#39;s onder de [ Gids van de Integratie voor MVPDs ](/help/authentication/kickstart/mvpd-overview.md) sectie. Verwijs naar de inhoudstafel onder deze sectie voor verbindingen aan gedetailleerde informatie over elk onderwerp.
+Het team van de Authentificatie van Adobe Pass verstrekt uitvoerige documentatie voor de beschikbare eigenschappen en werkschema&#39;s onder de [ Gids van de Integratie voor MVPDs ](/help/authentication/integration-guide-mvpds/mvpd-integration-guide-overview.md) sectie. Verwijs naar de inhoudstafel onder deze sectie voor verbindingen aan gedetailleerde informatie over elk onderwerp.
 
 ## Toegang tot het testgereedschap {#access-testing-tool}
 
