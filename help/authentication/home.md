@@ -2,9 +2,9 @@
 title: Welkom bij Adobe&reg; Verificatie doorgeven!
 description: Welkom bij Adobe&reg; controle van verificatie doorgeven
 exl-id: a8b01469-3d5f-4a44-9ae8-06a68c29d56d
-source-git-commit: c1f891fabd47954dc6cf76a575c3376ed0f5cd3d
+source-git-commit: 1b9847d8dcb078755fd68a6363972f8973290e52
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '293'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ De Authentificatie van Adobe Pass is een gerechtigheidsoplossing voor TV overal,
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <ul><li>[ Gids van Kickstart van de Programmer ](/help/authentication/kickstart/programmer-kickstart-guide.md)</li><li>[ Metagegevens van de Gebruiker ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/user-metadata.md)</li></ul> | <ul><li>[ MVPD Kickstart Guide ](/help/authentication/kickstart/mvpd-kickstart-guide.md)</li><li>[ Authentificatie ](/help/authentication/integration-guide-mvpds/authn-usecase.md)</li><li>[ Vergunning ](/help/authentication/integration-guide-mvpds/authz-usecase.md)</li><li>[ Logout ](/help/authentication/integration-guide-mvpds/usecase-mvpd-logout.md)</li></ul> |
 | **voor inheemse cliënten van de Toepassing** | **voor iedereen** |
-| <ul><li>[ iOS Technisch Overzicht ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-overview.md)</li><li>[ Android Technisch Overzicht ](/help/authentication/integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-overview.md)</li></ul> | <ul><li>[ Technisch Document ](/help/authentication/kickstart/technical-paper.md)</li><li>[ Escalation Procedures ](/help/authentication/kickstart/escalation-procedures.md)</li></ul> |
+| <ul><li>[ iOS Technisch Overzicht ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-overview.md)</li><li>[ Android Technisch Overzicht ](/help/authentication/integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-overview.md)</li></ul> | <ul><li>[ Technisch Document ](/help/authentication/kickstart/technical-paper.md)</li><li>[ procedures FAQs van de Steun ](/help/authentication/kickstart/support-procedures-faqs.md)</li></ul> |
 | **voor Slimme Apparaten** |                                                                                                                                                                                                                                                                                                                                                                       |
 | <ul><li>[ Klantloos Technisch Overzicht ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/rest-api-overview.md)</li><li>[ Clientless API ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/rest-api-reference.md)</li></ul> |                                                                                                                                                                                                                                                                                                                                                                       |
 
@@ -37,7 +37,7 @@ De Authentificatie van Adobe Pass is een gerechtigheidsoplossing voor TV overal,
 >
 > [ het Emailen van ons steunteam ](mailto:tve-support@adobe.com) is ook de eerste stap voor om het even welk kwestie of inherente rapport.
 >
-> Als u a [ SEVERITY 1 LIVE ](/help/authentication/kickstart/escalation-procedures.md) kwestie hebt, en u ons hebt gemaild en 30 minuten zonder een reactie zijn verstreken, dan zie het [ document van de Procedures van de Escalatie ](/help/authentication/kickstart/escalation-procedures.md) voor telefoonaantallen om te roepen.
+> Als u a [ SEVERITY 1 LIVE ](/help/authentication/kickstart/support-procedures-faqs.md) kwestie hebt, en u ons hebt gemaild en 30 minuten zonder een reactie zijn verstreken, dan zie het [ document van de Procedures van de Escalatie ](/help/authentication/kickstart/support-procedures-faqs.md) voor telefoonaantallen om te roepen.
 
 ## Om te vinden wat u nodig hebt {#how-to-search}
 
