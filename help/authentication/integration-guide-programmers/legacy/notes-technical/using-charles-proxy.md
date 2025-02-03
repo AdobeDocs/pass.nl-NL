@@ -2,9 +2,9 @@
 title: Charles Proxy gebruiken
 description: Charles Proxy gebruiken
 exl-id: bb38543f-f6bc-4b5a-91b8-41bc51ee4c56
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: 175755aa7463257487b29c5f4da989cf34e91bfd
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '376'
 ht-degree: 0%
 
 ---
@@ -43,10 +43,9 @@ SSL-proxy inschakelen `\[ *Proxy -\> Proxy Settings... -\> SSL* \]`
 
 Schakel het selectievakje SSL-proxy inschakelen in en voeg alle HTTPS-locaties toe.
 
-
+<!-- NOTE TO WRITER - THESE IMAGES LINKS ARE BROKEN
 ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/ProxySettings.PNG) ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/SSLSettings.PNG) ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/AddHttpsLocations.PNG)
-
-
+-->
 
 - SSL Proxying - <http://www.charlesproxy.com/documentation/proxying/ssl-proxying/>
 - SSL-certificaten - <http://www.charlesproxy.com/documentation/using-charles/ssl-certificates/>
@@ -69,7 +68,9 @@ Als de uitvoer te onoverzichtelijk wordt, kunt u kiezen om locaties te negeren o
 
 DNS spoofing is zeer nuttig wanneer het proberen om een verzoek aan verschillende IP, vooral opnieuw te richten wanneer het werken met mobiele apparaten:
 
+<!-- NOTE TO WRITER - THESE IMAGES LINKS ARE BROKEN
 ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/DNSSpoofing.PNG)
+-->
 
 <http://www.charlesproxy.com/documentation/tools/dns-spoofing/>
 
@@ -82,7 +83,9 @@ DNS spoofing is zeer nuttig wanneer het proberen om een verzoek aan verschillend
 
 Met kaart ver kunt u een &quot;inkomend&quot;verzoek aan een verschillend eindpunt opnieuw richten. Het meest gebruikte hoofdlettergebruik voor deze functie is &quot;Map&quot; `AccessEnabler.swf` naar `AccessEnablerDebug.swf:`
 
+<!-- NOTE TO WRITER - THESE IMAGES LINKS ARE BROKEN
 ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/MapRemote.PNG) ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/MapRemoteAdd.PNG)
+-->
 
 <http://www.charlesproxy.com/documentation/tools/map-remote/>
 
@@ -100,7 +103,9 @@ Met kaart ver kunt u een &quot;inkomend&quot;verzoek aan een verschillend eindpu
 
 Blader naar <http://charlesproxy.com/charles.crt> op uw iOS-apparaat.  Hiermee wordt het dialoogvenster voor certificaatinstallatie gestart:
 
+<!-- NOTE TO WRITER - THESE IMAGES LINKS ARE BROKEN
 ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/iOSDeviceSSLCertificate1\(1\).PNG)![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/iOSDeviceSSLCertificate2\(1\).PNG)![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/iOSDeviceSSLCertificate3.PNG)
+-->
 
 </br>
 
@@ -117,15 +122,18 @@ Selecteer op uw iOS-apparaat `\[ *Settings* -\> *Wi-FI* -\> (*YOUR\_WIFI\_NETWOR
 
 </br>
 
+<!-- NOTE TO WRITER - THESE IMAGES LINKS ARE BROKEN
 ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/iOSDeviceManualProxy1.png)![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/iOSDeviceManualProxy2.PNG)
-
+-->
 
 </br>
 Hier moet u IP en haven van de machine specificeren waar u Charles in werking stelt. <span style="line-height: 1.6em;"> als u nu Safari op uw apparaat van iOS opent en probeert om een Web-pagina te openen, zou u het volgende popup op de machine moeten krijgen die Charles in werking stelt:
 
 </br>
 
+<!-- NOTE TO WRITER - THESE IMAGES LINKS ARE BROKEN
 ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/iOSDeviceManualProxy3.PNG)
+-->
 
 </br>
 Klik op Toestaan om toe te staan dat het apparaat Charles gebruikt om al zijn
