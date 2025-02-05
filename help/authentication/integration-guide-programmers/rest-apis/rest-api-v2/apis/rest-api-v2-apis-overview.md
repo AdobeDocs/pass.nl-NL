@@ -2,7 +2,7 @@
 title: REST API V2 API's - Overzicht
 description: REST API V2 API's - Overzicht
 exl-id: 62b48bf0-d200-4949-b268-8f8ea2daabfa
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 9dcc649b4216cccc9be35cd6553308bfc345b5f4
 workflow-type: tm+mt
 source-wordcount: '149'
 ht-degree: 0%
@@ -13,7 +13,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+
+<a href="https://experienceleague.adobe.com/en/docs/pass/authentication/product-announcements">![ Levende Webinar Reeksen ](/help/authentication/assets/rest-api-v2/live-webinar-series-banner.png)</a>
 
 Ga om aan de slag te gaan naar de openbare documentatie van de API&#39;s die u interesseert voor de onderstaande lijst.
 

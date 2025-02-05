@@ -2,9 +2,9 @@
 title: Welkom bij Adobe&reg; Verificatie doorgeven
 description: Welkom bij Adobe&reg; Verificatie doorgeven
 exl-id: a8b01469-3d5f-4a44-9ae8-06a68c29d56d
-source-git-commit: c9e31a036a0300fabd9f75dd85d472c390d9053e
+source-git-commit: 9dcc649b4216cccc9be35cd6553308bfc345b5f4
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '423'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,8 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 > Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+
+<a href="https://experienceleague.adobe.com/en/docs/pass/authentication/product-announcements">![ Levende Webinar Reeksen ](/help/authentication/assets/rest-api-v2/live-webinar-series-banner.png)</a>
 
 Adobe Pass Authentication is een krachtige TVE-oplossing (TVE) voor iedereen, die is ontworpen om het proces te stroomlijnen en te beveiligen waarbij wordt gecontroleerd of gebruikers recht hebben op toegang tot beveiligde inhoud. Dit modulaire kader verbindt de Leveranciers van de Inhoud (Programmers) met de Dienstverleners van TV van de Betaal (MVPDs), die machtigingstransacties met snelheid, consistentie, en betrouwbaarheid vergemakkelijken.
 

@@ -2,7 +2,7 @@
 title: Overzicht van REST API V2
 description: Overzicht van REST API V2
 exl-id: a5595193-82c4-4033-bd98-596b4908b401
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 9dcc649b4216cccc9be35cd6553308bfc345b5f4
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 0%
@@ -13,7 +13,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+
+<a href="https://experienceleague.adobe.com/en/docs/pass/authentication/product-announcements">![ Levende Webinar Reeksen ](/help/authentication/assets/rest-api-v2/live-webinar-series-banner.png)</a>
 
 Wilt u de kostenefficiëntie van uw TVE-toepassingen verbeteren?
 
@@ -41,7 +43,7 @@ Met REST API V2 kan een verificatiesessie veilig worden doorgegeven tussen versc
 
 ### Meerdere actieve verificatiesessies
 
-De verschillende actieve zittingen MVPD zijn nu mogelijk, en de klanten kunnen verkiezen om tussen TempPass en regelmatige integratie te schakelen MVPD wanneer nodig.
+Er zijn nu verschillende actieve MVPD-sessies mogelijk en klanten kunnen desgewenst schakelen tussen TempPass en de reguliere MVPD-integratie.
 
 ### Verbeterd beveiligingsmechanisme
 
