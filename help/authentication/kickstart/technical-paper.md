@@ -2,9 +2,9 @@
 title: Informatie over Adobe Pass-verificatie en tv overal
 description: Informatie over Adobe Pass-verificatie en tv overal
 exl-id: 5edeaccb-f9fa-4395-83b4-706c518d5a03
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 95e750b5c0efe5850a3ff8130f5b4bb6c5b35f57
 workflow-type: tm+mt
-source-wordcount: '6288'
+source-wordcount: '6287'
 ht-degree: 0%
 
 ---
@@ -112,7 +112,11 @@ De rest van dit artikel biedt een technische inleiding op Adobe Pass Authenticat
 
 ## Bouwstenen voor architectuur {#arch-building-blocks}
 
-![ ](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/import-pc7mz3dfnv/check.gif) het volgende bespreekt de centrale machtigingstransacties van authentificatie en vergunning. Verificatie is het proces waarbij met een Pay TV provider wordt bevestigd dat een bepaalde gebruiker een bekende klant is. Autorisatie is het proces waarbij een betaaltelevisieprovider bevestigt dat een geverifieerde gebruiker een geldig abonnement heeft op een bepaalde resource.
+<!-- BROKEN LINK
+![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/import-pc7mz3dfnv/check.gif) 
+-->
+
+In het volgende gedeelte worden de centrale machtigingstransacties van authenticatie en autorisatie besproken. Verificatie is het proces waarbij met een Pay TV provider wordt bevestigd dat een bepaalde gebruiker een bekende klant is. Autorisatie is het proces waarbij een betaaltelevisieprovider bevestigt dat een geverifieerde gebruiker een geldig abonnement heeft op een bepaalde resource.
 Adobe Pass-verificatie bestaat uit de volgende basiscomponenten:
 
 * Client-component (een van de volgende):
@@ -352,7 +356,7 @@ De basismachtigingsstromen zijn opstarten, Authentificatie, Toestemming, en Logo
 
 * **Metagegevens van de Gebruiker** - Afhankelijk van overeenkomsten tussen MVPDs en Programmers, kan MVPDs meta-gegevens zoals Zipcode, maximumclassificatie, kanaalidentiteitskaart, en meer veilig ruilen. Metagegevens maken verschillende gebruiksgevallen mogelijk, zoals ouderlijk toezicht, regionale stilleggingsperioden voor sportevenementen, enz.
 * **Tijdelijke Vrije Toegang** - laat Programmeurs tijdelijke vrije toegang tot hun beschermde inhoud (bijvoorbeeld, korte steekproeven van dagelijkse programmering, of vrije presentatie van een grote gebeurtenis) aanbieden.
-* **Volmacht MVPD** - MVPD kan zijn eigen integratie met de Authentificatie van Adobe Pass beheren, en ook het machtigingsproces namens een groep van bijbehorende &quot;ProxiedMVPDs&quot;beheren.
+* **Volmacht MVPD** - een MVPD kan zijn eigen integratie met de Authentificatie van Adobe Pass beheren, en ook het machtigingsproces namens een groep van bijbehorende &quot;ProxiedMVPDs&quot;beheren.
 
 ## Beveiliging {#security}
 
