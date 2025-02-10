@@ -1,9 +1,10 @@
 ---
 title: Veelgestelde vragen over dynamische clientregistratie
 description: Veelgestelde vragen over dynamische clientregistratie
-source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
+exl-id: 12268163-632e-4884-b35d-a29cc8ef45bf
+source-git-commit: 747c3d9b6de537be5e7e0a0244b2b301603d9b18
 workflow-type: tm+mt
-source-wordcount: '836'
+source-wordcount: '1135'
 ht-degree: 0%
 
 ---
@@ -18,19 +19,19 @@ Dit document biedt een uitgebreid overzicht van veelgestelde vragen over de toep
 
 Voor meer informatie over de Dynamische Registratie van de Cliënt (DCR) algemeen, zie het [ Dynamische Overzicht van de Registratie van de Cliënt ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) documentatie.
 
->[!MORELIKETHIS]
->
-> * [ REST API v2 FAQs ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md)
-
 ## Algemene veelgestelde vragen {#general-faqs}
 
 Begin met deze sectie als u aan een toepassing werkt die de Dynamische Registratie van de Cliënt (DCR) moet integreren, of het een nieuwe of bestaande toepassing is die van één van de vorige mechanismen migreert.
 
-### Veelgestelde vragen over de registratiefase {#registration-phase-faqs-general}
+>[!MORELIKETHIS]
+>
+> * [ REST API v2 FAQs ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#general-faqs)
 
-+++Veelgestelde vragen over de registratiefase
+### Veelgestelde vragen over REST API V2 Access {#rest-api-v2-access-faqs}
 
-#### 1. Wat is het doel van de registratiefase? {#registration-phase-faq1}
++++Veelgestelde vragen over toegang tot API V2 REST
+
+#### 1. Wat is het doel van de registratiefase? {#rest-api-v2-access-faq1}
 
 Het doel van de Fase van de Registratie is de cliënttoepassing tegen de Authentificatie van Adobe Pass door het [ Dynamische Registratie van de Cliënt (DCR) te registreren ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#dcr) proces.
 
@@ -38,11 +39,11 @@ Het dynamische proces van de Registratie van de Cliënt (DCR) vereist de cliënt
 
 Voor meer informatie, verwijs naar het [ Dynamische Overzicht van de Registratie van de Cliënt ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) documentatie.
 
-#### 2. Is de registratiefase verplicht? {#registration-phase-faq2}
+#### 2. Is de registratiefase verplicht? {#rest-api-v2-access-faq2}
 
 De fase van de Registratie is verplicht, maar de cliënttoepassing kan deze fase overslaan als het een caching paar cliëntgeloofsbrieven en een toegangstoken heeft die nog geldig zijn.
 
-#### 3. Wat is een softwarestatement en hoe lang is het geldig? {#registration-phase-faq3}
+#### 3. Wat is een softwarestatement en hoe lang is het geldig? {#rest-api-v2-access-faq3}
 
 De softwareverklaring is een termijn die in de [ verklarende woordenlijst ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#software-statement) documentatie wordt bepaald.
 
@@ -54,19 +55,19 @@ De clienttoepassing moet de softwareinstructie opslaan en gebruiken wanneer deze
 
 Voor meer details, verwijs naar het [ Dynamische Overzicht van de Registratie van de Cliënt ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) documentatie.
 
-#### 4. Hoe een softwareinstructie te genereren en te downloaden? {#registration-phase-faq4}
+#### 4. Hoe een softwareinstructie te genereren en te downloaden? {#rest-api-v2-access-faq4}
 
 Deze verrichting kan door het Dashboard van Adobe Pass [ worden voltooid TVE ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#tve-dashboard) door één van uw organisatiebeheerders of door een vertegenwoordiger van de Authentificatie van Adobe Pass handelend namens u.
 
 Voor meer details, verwijs naar de [ Gids van de Gebruiker van de Kanalen van het Dashboard van TVE ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-channels.md#registered-applications) of [ de Gids van de Gebruiker van de Programmering van het Dashboard van TVE ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-programmers.md#registered-applications) documentatie.
 
-#### 5. Wat gebeurt er als een softwareinstructie wordt ingetrokken? {#registration-phase-faq5}
+#### 5. Wat gebeurt er als een softwareinstructie wordt ingetrokken? {#rest-api-v2-access-faq5}
 
 Wanneer de softwareverklaring wordt ingetrokken, is er één belangrijk gevolg om te overwegen:
 
 * De cliënttoepassingen die de ingetrokken softwareverklaring gebruiken zullen niet meer door de [ betitelingsstromen ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#entitlement) kunnen gaan, betekenend dat de gebruikers zullen worden geblokkeerd van het spelen van inhoud.
 
-#### 6. Wat zijn clientreferenties en hoe lang zijn deze geldig? {#registration-phase-faq6}
+#### 6. Wat zijn clientreferenties en hoe lang zijn deze geldig? {#rest-api-v2-access-faq6}
 
 De cliëntgeloofsbrieven zijn een termijn die in de [ verklarende woordenlijst ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#client-credentials) documentatie wordt bepaald.
 
@@ -74,17 +75,19 @@ De cliëntgeloofsbrieven bestaan uit een cliënt herkenningsteken en cliënt geh
 
 De clientgegevens zijn geldig voor een onbeperkt tijdsbestek.
 
-De cliënttoepassing moet de cliëntgeloofsbrieven voor onbepaalde tijd opslaan en hen gebruiken wanneer het moeten een toegangstoken terugwinnen.
+De cliënttoepassing moet de cliëntgeloofsbrieven opslaan en hen voor onbepaalde tijd gebruiken wanneer het moeten een toegangstoken terugwinnen.
 
 Voor meer informatie, verwijs naar [ terugwinnen cliëntgeloofsbrieven ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-client-credentials.md) documentatie.
 
-#### 7. Hoe te om cliëntgeloofsbrieven te beheren? {#registration-phase-faq7}
+#### 7. Hoe te om cliëntgeloofsbrieven te beheren? {#rest-api-v2-access-faq7}
 
 Wij adviseren de cliënttoepassing om een uniek paar cliëntgeloofsbrieven voor elke instantie van de gebruikerstoepassing in het geval van zowel cliënt-aan-server als server-aan-server integratie met de Authentificatie van Adobe Pass te beheren.
 
-De cliënttoepassing moet de cliëntgeloofsbrieven voor onbepaalde tijd opslaan en hen gebruiken wanneer het moeten een toegangstoken terugwinnen.
+#### 8. Moet de clienttoepassing de clientgegevens in een permanente opslag in cache plaatsen? {#rest-api-v2-access-faq8}
 
-#### 8. Wat gebeurt er als clientgegevens in de cache verloren gaan? {#registration-phase-faq8}
+De cliënttoepassing moet de cliëntgeloofsbrieven opslaan en hen voor onbepaalde tijd gebruiken wanneer het moeten een toegangstoken terugwinnen.
+
+#### 9. Wat gebeurt er als de clientgegevens in de cache verloren gaan? {#rest-api-v2-access-faq9}
 
 Wanneer de caching cliëntgeloofsbrieven worden verloren, zijn er drie belangrijke te overwegen gevolgen:
 
@@ -92,7 +95,7 @@ Wanneer de caching cliëntgeloofsbrieven worden verloren, zijn er drie belangrij
 * De cliënttoepassing moet een nieuw toegangstoken verkrijgen gebruikend het nieuwe paar cliëntgeloofsbrieven.
 * De clienttoepassing moet de gebruiker vragen opnieuw te verifiëren, omdat de clienttoepassing de toegang tot de eerder verkregen geverifieerde profielen verliest.
 
-#### 9. Wat is een toegangstoken en hoe lang is het geldig? {#registration-phase-faq9}
+#### 10. Wat is een toegangstoken en hoe lang is het geldig? {#rest-api-v2-access-faq10}
 
 Het toegangstoken is een termijn die in de [ verklarende woordenlijst ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#access-token) documentatie wordt bepaald.
 
@@ -106,10 +109,48 @@ De cliënttoepassing moet een nieuw toegangstoken verkrijgen alvorens huidige ve
 
 Voor meer informatie, verwijs naar [ ontvang toegangstoken ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md) documentatie.
 
-#### 10. Hoe kan de cliënttoepassing een toegangstoken verfrissen? {#registration-phase-faq10}
+#### 11. Moet het toegangstoken door de clienttoepassing in cache worden opgeslagen in een permanente opslagruimte? {#rest-api-v2-access-faq11}
+
+De cliënttoepassing moet het toegangstoken opslaan en gebruiken tot het verloopt, dan het verwerpen en nieuwe verkrijgen.
+
+#### 12. Hoe kan de cliënttoepassing een toegangstoken verfrissen? {#rest-api-v2-access-faq12}
 
 De cliënttoepassing moet een toegangstoken de zelfde manier verfrissen zoals het terugwinnen van een nieuw toegangstoken, maar het gebruiken van caching cliëntgeloofsbrieven.
 
 De cliënttoepassing moet niet opnieuw registreren om een toegangstoken te verfrissen, in plaats daarvan moet het de opgeslagen cliëntgeloofsbrieven gebruiken, anders zouden de gebruikers moeten opnieuw voor authentiek verklaren.
 
 Voor meer informatie, verwijs naar [ ontvang toegangstoken ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md) documentatie.
+
++++
+
+## Veelgestelde vragen over migratie {#migration-faqs}
+
+Ga verder met deze sectie als u aan een toepassing werkt die een bestaande toepassing moet migreren om Dynamische Registratie van de Cliënt (DCR) te gebruiken.
+
+>[!MORELIKETHIS]
+>
+> * [ REST API v2 FAQs ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#migration-faqs)
+
+### Veelgestelde vragen over REST API V2-migratie {#rest-api-v2-migration-faqs}
+
++++Veelgestelde vragen over migratie naar REST API V2
+
+#### 1. Kan de clienttoepassing de bestaande geregistreerde toepassingen (softwareinstructies) opnieuw gebruiken? {#rest-api-v2-migration-faq1}
+
+De clienttoepassing kan de bestaande geregistreerde toepassingen (softwareinstructies) niet opnieuw gebruiken. Daarom moet de toepassing een nieuwe geregistreerde toepassing (softwareinstructies) genereren en downloaden die speciaal is bedoeld voor het gebruik van REST API V2.
+
+Deze verrichting kan door het Dashboard van Adobe Pass [ worden voltooid TVE ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#tve-dashboard) door één van uw organisatiebeheerders of door een vertegenwoordiger van de Authentificatie van Adobe Pass handelend namens u.
+
+Voor meer details, verwijs naar de [ Gids van de Gebruiker van de Kanalen van het Dashboard van TVE ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-channels.md#registered-applications) of [ de Gids van de Gebruiker van de Programmering van het Dashboard van TVE ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-programmers.md#registered-applications) documentatie.
+
+Voor het ogenblik zult u een vertegenwoordiger van de Authentificatie van Adobe Pass moeten vragen om het gebruik van REST API V2 voor uw nieuwe geregistreerde toepassingen (softwareverklaringen) toe te laten, tot het Dashboard van Adobe Pass [ TVE ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#tve-dashboard) zal worden bijgewerkt om het zelf-beheer van deze verrichting toe te staan.
+
+Als u onderscheid wilt maken tussen de geregistreerde toepassingen (softwareinstructies) die worden gebruikt in clienttoepassingen die REST API V2 gebruiken, moet u een specifiek achtervoegsel toevoegen aan de geregistreerde toepassingsnaam, zoals &quot;RESTV2&quot;.
+
+#### 2. Kan de clienttoepassing de bestaande aangepaste schema&#39;s opnieuw gebruiken? {#rest-api-v2-migration-faq2}
+
+De cliënttoepassing kan de bestaande douaneregelingen opnieuw gebruiken die door het Dashboard van Adobe Pass [ worden geproduceerd TVE ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#tve-dashboard).
+
+Voor meer details, verwijs naar de [ Gids van de Gebruiker van de Kanalen van het Dashboard van TVE ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-channels.md#custom-schemes) of [ de Gids van de Gebruiker van de Programmering van het Dashboard van TVE ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-programmers.md#custom-schemes) documentatie.
+
++++
