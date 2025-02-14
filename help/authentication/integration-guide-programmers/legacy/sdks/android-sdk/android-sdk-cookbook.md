@@ -2,9 +2,9 @@
 title: Android SDK Cookbook
 description: Android SDK Cookbook
 exl-id: 7f66ab92-f52c-4dae-8016-c93464dd5254
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: 79b3856e3ab2755cc95c3fcd34121171912a5273
 workflow-type: tm+mt
-source-wordcount: '1704'
+source-wordcount: '1703'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ De Adobe Pass-verificatieoplossing voor Android is uiteindelijk verdeeld in twee
 
 - Het domein UI - dit is de bovenste toepassingslaag die UI uitvoert en de diensten gebruikt die door de bibliotheek AccessEnabler worden verleend om toegang tot beperkte inhoud te verlenen.
 - Het domein AccessEnabler - dit is waar de machtigingswerkschema&#39;s in de vorm van worden uitgevoerd:
-   - De vraag van het netwerk die aan de backendservers van de Adobe wordt gemaakt
+   - Netwerkaanroepen naar Adobe-backendservers
    - Zakelijke en logische regels met betrekking tot de workflows voor verificatie en autorisatie
    - Beheer van diverse bronnen en verwerking van workflowstatus (zoals de tokencache)
 
@@ -135,7 +135,9 @@ Android Library (AccessEnabler)
 
    | OPMERKING |     |
    | --- | --- |  
-   | ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/icons/1313859077_lightbulb.png) | Er kunnen geen aanvragen voor een machtiging worden ingevuld totdat de identiteit van de aanvrager volledig is vastgesteld. Dit betekent in feite dat setRequestor() nog steeds wordt uitgevoerd, alle volgende aanvragen voor machtigingen (bijvoorbeeld `checkAuthentication()` ) worden geblokkeerd.<br><br> u hebt twee implementatieopties: Zodra de informatie van de verzoeksidentificatie wordt verzonden naar de achterste server, kan de toepassingslaag UI één van de twee volgende benaderingen kiezen:<br><br> 1.  Wacht op het teweegbrengen van `setRequestorComplete()` callback (deel van de afgevaardigde AccessEnabler).  Deze optie biedt de meeste zekerheid dat `setRequestor()` is voltooid en wordt daarom aangeraden voor de meeste implementaties.<br> 2.  Ga verder zonder te wachten op het activeren van de callback van `setRequestorComplete()` en geef aanvragen voor machtigingen af. Deze vraag (checkAuthentication, checkAuthorization, getAuthentication, getAuthorization, checkPreauthorisedResource, getMetadata, logout) wordt een rij gevormd door de bibliotheek AccessEnabler, die de daadwerkelijke netwerkvraag na `setRequestor(). ` zal maken Deze optie kan nu en dan worden onderbroken als bijvoorbeeld, de netwerkverbinding instabiel is. |
+   |  | Er kunnen geen aanvragen voor een machtiging worden ingevuld totdat de identiteit van de aanvrager volledig is vastgesteld. Dit betekent in feite dat setRequestor() nog steeds wordt uitgevoerd, alle volgende aanvragen voor machtigingen (bijvoorbeeld `checkAuthentication()` ) worden geblokkeerd.<br><br> u hebt twee implementatieopties: Zodra de informatie van de verzoeksidentificatie wordt verzonden naar de achterste server, kan de toepassingslaag UI één van de twee volgende benaderingen kiezen:<br><br> 1.  Wacht op het teweegbrengen van `setRequestorComplete()` callback (deel van de afgevaardigde AccessEnabler).  Deze optie biedt de meeste zekerheid dat `setRequestor()` is voltooid en wordt daarom aangeraden voor de meeste implementaties.<br> 2.  Ga verder zonder te wachten op het activeren van de callback van `setRequestorComplete()` en geef aanvragen voor machtigingen af. Deze vraag (checkAuthentication, checkAuthorization, getAuthentication, getAuthorization, checkPreauthorisedResource, getMetadata, logout) wordt een rij gevormd door de bibliotheek AccessEnabler, die de daadwerkelijke netwerkvraag na `setRequestor(). ` zal maken Deze optie kan nu en dan worden onderbroken als bijvoorbeeld, de netwerkverbinding instabiel is. |
+
+   <!--Removed bad image link from first note cell above. ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/icons/1313859077_lightbulb.png) -->
 
 1. Vraag [ checkAuthentication () ](#$checkAuthN) om een bestaande authentificatie te controleren zonder de volledige stroom van de Authentificatie in werking te stellen.   Als deze vraag slaagt, kunt u aan de stroom van de Vergunning direct te werk gaan.  Zo niet, ga dan door naar de verificatiestroom.
 
