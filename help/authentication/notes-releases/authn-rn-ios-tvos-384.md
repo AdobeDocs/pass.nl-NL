@@ -2,14 +2,14 @@
 title: Opmerkingen bij de release Adobe Pass Authentication iOS / tvOS 3.8.4
 description: Opmerkingen bij de release Adobe Pass Authentication iOS / tvOS 3.8.4
 exl-id: 51d38e2a-b500-402b-9583-f7b5ad6648fd
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 134a9a13373717ff7772a9d765bbd7b3b4943a85
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
 
 ---
 
-# Opmerkingen bij de release Adobe Pass Authentication iOS / tvOS 3.8.4 {#ios-tvos-sdk-384-release-notes}
+# Opmerkingen bij de release Adobe Pass Authentication iOS / tvOS 3.8.4 {#ios-tvos-sdk-384-rn}
 
 >[!NOTE]
 >
@@ -17,19 +17,16 @@ ht-degree: 0%
 
 Op deze pagina worden nieuwe functies, wijzigingen en bekende problemen met deze release beschreven:
 
-## Buildnummer {#build-no-ios-tvos-sdk-384}
+## Buildnummer {#build-number-384}
 
 Adobe Pass-verificatie: iOS / tvOS 3.8.4
 
-Releasedatum: 26-01-2024
+Datum van de versie: **01/26/2024**
 
+## Overzicht van release {#release-overview-384}
 
+* SDK Privacy Manifest toegevoegd conform de privacyvereisten van iOS 17.
 
-## Overzicht van release {#overview-ios-tvos-sdk-384}
-
-* Toegevoegd SDK Privacy Manifest conform iOS 17 privacyvereisten.
-
-
-## Geen pakket {#rel-pkg-iostvos384}
+## Geen pakket {#release-package-384}
 
 U kunt iOS/tvOS SDK v3.8.4 van [ hier ](https://tve.zendesk.com/hc/en-us/articles/204963209-iOS-tvOS-Native-AccessEnabler-Library) downloaden.

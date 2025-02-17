@@ -2,14 +2,14 @@
 title: Opmerkingen bij de release Adobe Pass Authentication JavaScript 3.5.0
 description: Opmerkingen bij de release Adobe Pass Authentication JavaScript 3.5.0
 exl-id: 580839ef-4265-422f-8508-339bb8cdd636
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 134a9a13373717ff7772a9d765bbd7b3b4943a85
 workflow-type: tm+mt
 source-wordcount: '105'
 ht-degree: 0%
 
 ---
 
-# Opmerkingen bij de release Adobe Pass Authentication JavaScript 3.5.0 {#javascript-sdk-350-release-notes}
+# Opmerkingen bij de release Adobe Pass Authentication JavaScript 3.5.0 {#javascript-sdk-350-rn}
 
 >[!NOTE]
 >
@@ -17,19 +17,17 @@ ht-degree: 0%
 
 Op deze pagina worden nieuwe functies, wijzigingen en bekende problemen met deze release beschreven:
 
-## Buildnummer {#build-no-javascript-sdk-350}
+## Buildnummer {#build-number-350}
 
 Adobe Pass-verificatie: JavaScript 3.5.0
 
 Datum van de versie: **02/14/2020**
 
-
-## Overzicht van release {#overview-javascript-sdk-350}
+## Overzicht van release {#release-overview-350}
 
 * Updates om het nieuwe beleid voor koekjes te steunen SameSite (gedetailleerd [ hier ](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-same-site-00)).
 
-
-## Geen pakket {#rel-pkg-javascript-sdk-350}
+## Geen pakket {#release-package-350}
 
 De productie-URL is: https://entitlement.auth.adobe.com/entitlement/js/AccessEnabler.js
 

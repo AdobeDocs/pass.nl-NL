@@ -2,14 +2,14 @@
 title: Opmerkingen bij de release Adobe Pass Authentication 3.0
 description: Opmerkingen bij de release Adobe Pass Authentication 3.0
 exl-id: 9284151a-8458-44a3-937b-35f379ca0e4e
-source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
+source-git-commit: 134a9a13373717ff7772a9d765bbd7b3b4943a85
 workflow-type: tm+mt
 source-wordcount: '199'
 ht-degree: 0%
 
 ---
 
-# Opmerkingen bij de release Adobe Pass Authentication 3.0 {#pt-authn-300-rn}
+# Opmerkingen bij de release Adobe Pass Authentication 3.0 {#authn-300-rn}
 
 >[!NOTE]
 >
@@ -22,14 +22,15 @@ Op deze pagina worden nieuwe functies, wijzigingen en bekende problemen met deze
 * [Buildnummer](#build-number-300)
 * [Overzicht van release](#release-overview-300)
 
-### Buildnummer {#build-number-2651}
+### Buildnummer {#build-number-300}
 
 De Authentificatie van Adobe Pass: adobe-pas **3.0**
+
 Datum van de versie: **09/10/2024 - 09/12/2024**
 
-### Nieuwe functies {#new-features-300}
+### Overzicht van release {#release-overview-300}
 
-#### REST API v2 {#rest-apis}
+#### REST API v2
 
 ##### Code
 
@@ -48,6 +49,6 @@ Datum van de versie: **09/10/2024 - 09/12/2024**
 
 * Om nieuwe REST API v2 te proberen, verwijs naar de nieuwe pagina van de Authentificatie van Adobe Pass van [ Adobe Developer ](https://developer.adobe.com/adobe-pass) website.
 
-### Opgeloste problemen {#bug-fixes-300}
+#### Opgeloste problemen
 
 * Probleem verholpen waarbij URL-parameter omleiden niet werd gebruikt wanneer deze aanwezig was in de logout-aanvraag.

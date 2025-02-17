@@ -2,7 +2,7 @@
 title: Opmerkingen bij de release Adobe Pass Authentication 2.64.1
 description: Opmerkingen bij de release Adobe Pass Authentication 2.64.1
 exl-id: b0edbd90-ebb5-40a7-9034-1699dccfadb5
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 134a9a13373717ff7772a9d765bbd7b3b4943a85
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 0%
@@ -25,6 +25,7 @@ Op deze pagina worden nieuwe functies, wijzigingen en bekende problemen met deze
 ### Buildnummer {#build-number-2641}
 
 De Authentificatie van Adobe Pass: adobe-pas **2.64.1**
+
 Datum van de versie: **01/31/2023 - 02/02/2023**
 
 ### Overzicht van release {#release-overview-2641}
