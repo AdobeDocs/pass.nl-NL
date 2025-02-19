@@ -2,18 +2,18 @@
 title: Opmerkingen bij de release Adobe Pass Authentication JavaScript 3.5.0
 description: Opmerkingen bij de release Adobe Pass Authentication JavaScript 3.5.0
 exl-id: 580839ef-4265-422f-8508-339bb8cdd636
-source-git-commit: 134a9a13373717ff7772a9d765bbd7b3b4943a85
+source-git-commit: ecafc3a92f691203d8113a741f0b6cd00a134e80
 workflow-type: tm+mt
-source-wordcount: '105'
+source-wordcount: '101'
 ht-degree: 0%
 
 ---
 
 # Opmerkingen bij de release Adobe Pass Authentication JavaScript 3.5.0 {#javascript-sdk-350-rn}
 
->[!NOTE]
+>[!IMPORTANT]
 >
->De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 Op deze pagina worden nieuwe functies, wijzigingen en bekende problemen met deze release beschreven:
 

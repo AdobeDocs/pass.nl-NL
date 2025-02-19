@@ -1,18 +1,18 @@
 ---
 title: Opmerkingen bij de release Adobe Pass Authentication JavaScript 4.7.1
 description: Opmerkingen bij de release Adobe Pass Authentication JavaScript 4.7.1
-source-git-commit: 4ad5ea619f64a78a72f69228c9ae3c83a7b66f24
+source-git-commit: ecafc3a92f691203d8113a741f0b6cd00a134e80
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '109'
 ht-degree: 0%
 
 ---
 
 # Opmerkingen bij de release Adobe Pass Authentication JavaScript 4.7.1 {#javascript-sdk-471-rn}
 
->[!NOTE]
+>[!IMPORTANT]
 >
->De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 Op deze pagina worden nieuwe functies, wijzigingen en bekende problemen met deze release beschreven:
 

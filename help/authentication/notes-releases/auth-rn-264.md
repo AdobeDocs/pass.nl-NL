@@ -2,18 +2,18 @@
 title: Opmerkingen bij de release Adobe Pass Authentication 2.64
 description: Opmerkingen bij de release Adobe Pass Authentication 2.64
 exl-id: 4db21026-a0c2-4e33-b01f-4ccae824a110
-source-git-commit: 134a9a13373717ff7772a9d765bbd7b3b4943a85
+source-git-commit: ecafc3a92f691203d8113a741f0b6cd00a134e80
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '130'
 ht-degree: 0%
 
 ---
 
 # Opmerkingen bij de release Adobe Pass Authentication 2.64 {#authn-264-rn}
 
->[!NOTE]
+>[!IMPORTANT]
 >
->De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 Op deze pagina worden nieuwe functies, wijzigingen en bekende problemen met deze release beschreven:
 

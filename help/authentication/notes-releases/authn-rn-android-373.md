@@ -2,18 +2,18 @@
 title: Opmerkingen bij de release Adobe Pass Authentication Android 3.7.3
 description: Opmerkingen bij de release Adobe Pass Authentication Android 3.7.3
 exl-id: f335357e-c209-428d-af2a-2181551447d4
-source-git-commit: 134a9a13373717ff7772a9d765bbd7b3b4943a85
+source-git-commit: ecafc3a92f691203d8113a741f0b6cd00a134e80
 workflow-type: tm+mt
-source-wordcount: '146'
+source-wordcount: '142'
 ht-degree: 0%
 
 ---
 
 # Opmerkingen bij de release Adobe Pass Authentication Android 3.7.3 {#android-sdk-373-rn}
 
->[!NOTE]
+>[!IMPORTANT]
 >
->De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 Op deze pagina worden nieuwe functies, wijzigingen en bekende problemen met deze release beschreven:
 

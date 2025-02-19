@@ -2,18 +2,18 @@
 title: Opmerkingen bij de release Adobe Pass Authentication 2.66
 description: Opmerkingen bij de release Adobe Pass Authentication 2.66
 exl-id: 7c3cd007-ed2b-455f-8f70-6ec5d0a6552a
-source-git-commit: 134a9a13373717ff7772a9d765bbd7b3b4943a85
+source-git-commit: ecafc3a92f691203d8113a741f0b6cd00a134e80
 workflow-type: tm+mt
-source-wordcount: '155'
+source-wordcount: '150'
 ht-degree: 0%
 
 ---
 
 # Opmerkingen bij de release Adobe Pass Authentication 2.66 {#authn-266-rn}
 
->[!NOTE]
+>[!IMPORTANT]
 >
->De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 Op deze pagina worden nieuwe functies, wijzigingen en bekende problemen met deze release beschreven:
 
@@ -24,7 +24,7 @@ Op deze pagina worden nieuwe functies, wijzigingen en bekende problemen met deze
 
 ### Buildnummer {#build-number-266}
 
-De Authentificatie van Adobe Pass: adobe-pas **2.66.0.1**
+Adobe Pass-verificatie: adobe-pass-**2.66.0.1**
 
 Datum van de versie: **07/11/2023 - 07/13/2023**
 
