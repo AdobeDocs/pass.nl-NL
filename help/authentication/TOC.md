@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass-verificatie
 user-guide-description: Adobe Pass-verificatie is een machtigingsoplossing voor TV Everywhere, die een modulair kader verstrekt om te bepalen of iemand die toegang tot een bron vraagt, daar rechten voor heeft.
-source-git-commit: 2b9a8ce374f7a73cd815e9735d672e5c9ba285cc
+source-git-commit: 4ad5ea619f64a78a72f69228c9ae3c83a7b66f24
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1246'
 ht-degree: 2%
 
 ---
@@ -17,6 +17,9 @@ ht-degree: 2%
 + [Adobe Pass-verificatie](home.md)
 + [Aankondigingen van producten](product-announcements.md)
 + Productreleases {#product-releases}
+   + 2025 {#2025}
+      + [Opmerkingen bij de release Adobe Pass Authentication 3.1.0](notes-releases/auth-rn-310.md)
+      + [Opmerkingen bij de release Adobe Pass Authentication JavaScript 4.7.1](notes-releases/authn-rn-javascript-471.md)
    + 2024 {#2024}
       + [Opmerkingen bij de release Adobe Pass Authentication 3.0.3](notes-releases/auth-rn-303.md)
       + [Opmerkingen bij de release Adobe Pass Authentication 3.0](notes-releases/auth-rn-300.md)
@@ -116,7 +119,7 @@ ht-degree: 2%
                + [Koptekst - AP-apparaat-id](integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-device-identifier.md)
                + [Koptekst - X-Apparaat-Info](integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-device-info.md)
                + [Koptekst - AD-Service-token](integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md)
-               + [Koptekst - Onderwerptoken voor Adobe](integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md)
+               + [Header - Adobe-Subject-token](integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md)
                + [Koptekst - AP-Partner-Framework-Status](integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md)
                + [Koptekst - AP-TempPass-Identity](integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-temppass-identity.md)
    + Standaardfuncties {#standard-features}
@@ -256,8 +259,8 @@ ht-degree: 2%
             + [(Verouderd) Voorkomen dat MVPD&#39;s het dialoogvenster Selectie weergeven](integration-guide-programmers/legacy/notes-technical/prevent-mvpd-selectn-dialog.md)
          + (Verouderd) Problemen oplossen {#troubleshooting}
             + [(Verouderd) Charles Proxy gebruiken](integration-guide-programmers/legacy/notes-technical/using-charles-proxy.md)
-            + [(Verouderd) Controle van Adobe Pass Adobe PayTV-controle](integration-guide-programmers/legacy/notes-technical/monitoring-adobe-pay-tv-pass.md)
-            + [(Verouderd) Procedure voor het testen van verificatie- en autorisatiestromen met de testsite voor de Adobe-API](integration-guide-programmers/legacy/notes-technical/test-authn-authz-flows-using-adobes-api-test-site.md)
+            + [(Verouderd) Adobe Pass Adobe PayTV-controle](integration-guide-programmers/legacy/notes-technical/monitoring-adobe-pay-tv-pass.md)
+            + [(Verouderd) Verificatie- en autorisatiestromen testen met de testsite van de Adobe API](integration-guide-programmers/legacy/notes-technical/test-authn-authz-flows-using-adobes-api-test-site.md)
 + Integratiehandleiding voor MVPD&#39;s {#integration-guide-mvpds}
    + [MVPD-integratiegids](integration-guide-mvpds/mvpd-integration-guide-overview.md)
    + [Verificatie](integration-guide-mvpds/authn-usecase.md)
@@ -284,5 +287,5 @@ ht-degree: 2%
    + [Wijzigingenlogboek](/help/authentication/user-guide-tve-dashboard/tve-dashboard-changes-log.md)
 + Technische opmerkingen {#tech-notes}
    + Omgevingen {#environments}
-      + [De Adobe omgevingen begrijpen](notes-technical/environments/understanding-the-adobe-environments.md)
+      + [De Adobe-omgevingen begrijpen](notes-technical/environments/understanding-the-adobe-environments.md)
       + [Uw omgeving instellen en testen in een proefversie](notes-technical/environments/setting-up-your-environment-and-testing-in-prequal.md)
