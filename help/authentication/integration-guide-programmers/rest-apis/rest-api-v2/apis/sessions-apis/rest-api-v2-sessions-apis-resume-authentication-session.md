@@ -2,9 +2,9 @@
 title: Verificatiesessie hervatten
 description: REST API V2 - Verificatiesessie hervatten
 exl-id: 66c33546-2be0-473f-9623-90499d1c13eb
-source-git-commit: 5cb14959d6e9af91252316fbdd14ff33d813089b
+source-git-commit: 5e5bb6a52a4629056fd52c7e79a11dba2b9a45db
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '876'
 ht-degree: 0%
 
 ---
@@ -233,17 +233,14 @@ ht-degree: 0%
             <tr>
                <td style="background-color: #DEEBFF;">reasonType</td>
                <td>
-                  Het type reden dat wordt gebruikt om de 'actionName' uit te leggen.
+                  Het type reden dat de 'actionName' aangeeft.
                   <br/><br/>
                   De mogelijke waarden zijn:
                   <ul>
-                    <li><b>none</b></li>
-                    <li><b>geverifieerd</b></li>
-                    <li><b>tijdelijk</b></li>
-                    <li><b>aangetast</b></li>
-                    <li><b>authenticatedSSO</b></li>
-                    <li><b>pfs_fallback</b></li>
-                    <li><b>configuration_fallback</b></li>
+                    <li><b> niets </b><br/> De cliënttoepassing wordt vereist om te blijven voor authentiek verklaren.</li>
+                    <li><b> voor authentiek verklaarde </b><br/> de cliënttoepassing wordt reeds voor authentiek verklaard door basistoegangsstromen.</li>
+                    <li><b> tijdelijk </b><br/> de cliënttoepassing wordt reeds voor authentiek verklaard door tijdelijke toegangsstromen.</li>
+                    <li><b> degraded </b><br/> de cliënttoepassing wordt reeds voor authentiek verklaard door degraded toegangsstromen.</li>
                   </ul>
                <td><i>vereist</i></td>
             </tr>
@@ -353,6 +350,7 @@ Content-Type: application/json;charset=UTF-8
 {
     "actionName": "authenticate",
     "actionType": "interactive",
+    "reasonType": "none",
     "url": "/api/v2/authenticate/REF30/8ER640M",
     "code": "8ER640M",
     "sessionId": "1b614390-6610-4d14-9421-6565f6e75958",
@@ -444,6 +442,8 @@ Content-Type: application/json;charset=UTF-8
     "serviceProvider": "REF30"
 }
 ```
+
+>[!ENDTABS]
 
 ### 4. Verificatiesessie hervatten met basis- of promotionele TempPass (niet vereist)
 

@@ -2,9 +2,9 @@
 title: Verificatiesessie maken
 description: REST API V2 - Verificatiesessie maken
 exl-id: bb2a6bb4-0778-4748-a674-df9d0e8242c8
-source-git-commit: 5cb14959d6e9af91252316fbdd14ff33d813089b
+source-git-commit: 5e5bb6a52a4629056fd52c7e79a11dba2b9a45db
 workflow-type: tm+mt
-source-wordcount: '1000'
+source-wordcount: '1047'
 ht-degree: 0%
 
 ---
@@ -130,7 +130,7 @@ ht-degree: 0%
       <td>optioneel</td>
    </tr>
    <tr>
-      <td style="background-color: #DEEBFF;">Adobe-Onderwerptoken</td>
+      <td style="background-color: #DEEBFF;">Adobe-Subject-Token</td>
       <td>
         De generatie van enige sign-on lading voor de methode van de Identiteit van het Platform wordt beschreven in <a href="../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md"> Adobe-Onderwerp-Symbolische </a> kopbaldocumentatie.
         <br/><br/>
@@ -268,17 +268,15 @@ ht-degree: 0%
             <tr>
                <td style="background-color: #DEEBFF;">reasonType</td>
                <td>
-                  Het type reden dat wordt gebruikt om de 'actionName' uit te leggen.
+                  Het type reden dat de 'actionName' aangeeft.
                   <br/><br/>
                   De mogelijke waarden zijn:
                   <ul>
-                    <li><b>none</b></li>
-                    <li><b>geverifieerd</b></li>
-                    <li><b>tijdelijk</b></li>
-                    <li><b>aangetast</b></li>
-                    <li><b>authenticatedSSO</b></li>
-                    <li><b>pfs_fallback</b></li>
-                    <li><b>configuration_fallback</b></li>
+                    <li><b> niets </b><br/> De cliënttoepassing wordt vereist om te blijven voor authentiek verklaren.</li>
+                    <li><b> voor authentiek verklaarde </b><br/> de cliënttoepassing wordt reeds voor authentiek verklaard door basistoegangsstromen.</li>
+                    <li><b> tijdelijk </b><br/> de cliënttoepassing wordt reeds voor authentiek verklaard door tijdelijke toegangsstromen.</li>
+                    <li><b> degraded </b><br/> de cliënttoepassing wordt reeds voor authentiek verklaard door degraded toegangsstromen.</li>
+                    <li><b> authenticatedSSO </b><br/> De cliënttoepassing wordt reeds voor authentiek verklaard door enige sign-on toegangsstromen.</li>
                   </ul>
                <td><i>vereist</i></td>
             </tr>
@@ -483,6 +481,8 @@ Content-Type: application/json;charset=UTF-8
     "serviceProvider": "REF30"
 }
 ```
+
+>[!ENDTABS]
 
 ### 4. Maak een verificatiesessie met basis- of promotionele TempPass (niet vereist)
 
