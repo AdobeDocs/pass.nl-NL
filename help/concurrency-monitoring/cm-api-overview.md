@@ -2,9 +2,9 @@
 title: API-overzicht
 description: API-overzicht van Gelijktijdige bewaking
 exl-id: eb232926-9c68-4874-b76d-4c458d059f0d
-source-git-commit: b30d9217e70f48bf8b8d8b5eaaa98fea257f3fc5
+source-git-commit: 0cabb090e3c0282f9bcd097719d52374f2d991dd
 workflow-type: tm+mt
-source-wordcount: '2102'
+source-wordcount: '2155'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Dit document helpt toepassingsontwikkelaars om onze Swagger API-specificatie te 
 
 Tijdens het ontwikkelingsproces vormt de openbare documentatie van Swagger de referentierichtlijn voor het begrijpen en testen van de API-stromen. Dit is een grote plaats om te beginnen om een hands-on benadering te hebben en vertrouwd te worden met de manier de echte toepassingen zich in verschillende scenario&#39;s van gebruikersinteractie zouden gedragen.
 
-Verzend een kaartje in [ Zendesk ](mailto:tve-support@adobe.com) om uw bedrijf en toepassingen in de Controle van de Valuta te registreren. Adobe wijst een toepassings-id toe aan elke entiteit. In deze gids zullen wij twee verwijzingstoepassingen met ids **demo-app** en **demo-app-2** gebruiken die onder de huurdersAdobe zullen zijn.
+Verzend een kaartje in [ Zendesk ](mailto:tve-support@adobe.com) om uw bedrijf en toepassingen in de Controle van de Valuta te registreren. Adobe wijst een toepassings-id toe aan elke entiteit. In deze gids zullen wij twee verwijzingstoepassingen met ids **demo-app** en **demo-app-2** gebruiken die onder de huurder Adobe zullen zijn.
 
 
 ## Gebruik hoofdletters {#api-use-case}
@@ -36,7 +36,7 @@ Na dit persen wij **ontdekken** om identiteitskaart te plaatsen die in de kopbal
 
 ### Eerste toepassing {#first-app-use-cases}
 
-De toepassing met identiteitskaart **demo-app** is toegewezen door het team van de Adobe een beleid met één regel die het aantal gezamenlijke stromen tot 3 beperkt. Een beleid wordt toegewezen aan een specifieke toepassing op basis van het in Zendesk ingediende verzoek.
+De toepassing met identiteitskaart **demo-app** is toegewezen door het team van Adobe een beleid met één regel die het aantal gezamenlijke stromen tot 3 beperkt. Een beleid wordt toegewezen aan een specifieke toepassing op basis van het in Zendesk ingediende verzoek.
 
 
 #### Metagegevens ophalen {#retrieve-metadata-use-case}
@@ -107,7 +107,7 @@ U kunt de optie &quot;De stream in leven houden&quot; gebruiken in de gebruikers
 
 #### Sessiebeëindiging {#session-termination}
 
-De bedrijfscase van uw bedrijf zou Gelijktijdige Controle kunnen vereisen om een specifieke zitting te beëindigen wanneer, bijvoorbeeld, een gebruiker ophoudt bekijkend een video. Dit kan worden gedaan door een vraag van de DELETE op het middel van Zittingen te maken.
+De bedrijfscase van uw bedrijf zou Gelijktijdige Controle kunnen vereisen om een specifieke zitting te beëindigen wanneer, bijvoorbeeld, een gebruiker ophoudt bekijkend een video. Dit kan worden gedaan door een DELETE te maken vraag op het middel van Sessies.
 
 ![](assets/delete-session.png)
 
@@ -136,6 +136,10 @@ Als er geen lopende zittingen voor een specifieke gebruiker zijn wanneer u de vr
 ![](assets/get-all-running-streams-empty.png)
 
 Merk ook op dat in dit geval **** kopbal niet aanwezig is.
+
+In het geval dat een zitting werd gecreeerd dodend een andere, gebruikend **x-beëindigt** kopbal, onder meta-gegevens u gebied **vervangen** zult vinden. De waarde is een indicator van de gedode sessie om ruimte te maken voor de huidige sessie.
+
+![](assets/get-all-running-streams-superseded.png)
 
 #### Het beleid doorbreken {#breaking-policy-app-first}
 
@@ -175,7 +179,7 @@ Voor alle API-aanroepen van de sessielevenscyclus is de responsinstantie (indien
 **Advies**
 **EvaluationResult** zal een serie van de voorwerpen van het Advies onder **associatedAdvice** omvatten. De adviezen zijn bedoeld voor de toepassing om een uitgebreid foutbericht voor de gebruiker weer te geven en (mogelijk) de gebruiker in staat te stellen actie te ondernemen.
 
-Momenteel, zijn er twee soorten diensten (die door hun **worden gespecificeerd type** attributenwaarde): **regel-schending** en **ver-beëindiging**. De eerste bevat details met betrekking tot een regel die is afgebroken en de sessies die conflicteren met de huidige (inclusief het kenmerk terminate die kan worden gebruikt om die sessie extern te beëindigen). De tweede is enkel verklaren dat de huidige zitting opzettelijk door verre werd geëindigd, zodat zullen de gebruikers weten wie hen uit schopte toen de grenzen werden bereikt.
+Momenteel, zijn er twee soorten diensten (die door hun **worden gespecificeerd type** attributenwaarde): **regel-schending** en **ver-beëindiging**. De eerste bevat details met betrekking tot een regel die is afgebroken en de sessies die conflicteren met de huidige (inclusief het kenmerk terminate die kan worden gebruikt om die sessie extern te beëindigen). De tweede is enkel verklaren dat de huidige zitting opzettelijk door verre werd geëindigd, zodat zullen de gebruikers weten wie hen uit schopte toen de grenzen werden bereikt. In het geval dat **vervangen** in de meta-gegevens toen inbegrepen is werd de zitting in kwestie gecreeerd gebruikend **x-beëindigt** kopbal.
 
 ![](assets/advices.png)
 
