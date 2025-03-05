@@ -4,7 +4,7 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass-verificatie
 user-guide-description: Adobe Pass-verificatie is een machtigingsoplossing voor TV Everywhere, die een modulair kader verstrekt om te bepalen of iemand die toegang tot een bron vraagt, daar rechten voor heeft.
-source-git-commit: d8097b8419aa36140e6ff550714730059555fd14
+source-git-commit: 7e56c0a3651290376a72752638f463cf9415ec0e
 workflow-type: tm+mt
 source-wordcount: '1248'
 ht-degree: 2%
@@ -142,7 +142,7 @@ ht-degree: 2%
       + Toegang tot verificatie op thuisbasis {#hba-access}
          + [Home-based authentication (HBA)](integration-guide-programmers/features-standard/hba-access/home-based-authentication.md)
       + Privacy-ondersteuning {#privacy-support}
-         + [Overzicht van privé-ondersteuning](integration-guide-programmers/features-premium/privacy-support/privacy-supp-overview.md)
+         + [Overzicht van privacyondersteuning](integration-guide-programmers/features-premium/privacy-support/privacy-supp-overview.md)
          + [Een privacyverzoek indienen](integration-guide-programmers/features-premium/privacy-support/make-privacy-req.md)
    + Premiumfuncties {#features-premium}
       + Tijdelijke toegang {#temporary-access}
