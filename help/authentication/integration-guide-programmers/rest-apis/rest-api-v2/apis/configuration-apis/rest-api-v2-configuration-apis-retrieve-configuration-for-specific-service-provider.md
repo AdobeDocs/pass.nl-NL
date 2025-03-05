@@ -2,10 +2,10 @@
 title: Win configuratie voor specifieke dienstverlener terug
 description: REST API V2 - Configuratie ophalen voor specifieke serviceprovider
 exl-id: ad7e4c6d-ed96-4ae7-82a9-3c24e5fc9302
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 871afc4e7ec04d62590dd574bf4e28122afc01b6
 workflow-type: tm+mt
-source-wordcount: '515'
-ht-degree: 1%
+source-wordcount: '725'
+ht-degree: 0%
 
 ---
 
@@ -18,6 +18,10 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 > De implementatie van REST API V2 wordt begrensd door de [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
+
+>[!MORELIKETHIS]
+>
+> Zorg ervoor om [ REST API V2 FAQs ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#configuration-phase-faqs-general) ook te bezoeken.
 
 ## Verzoek {#request}
 
@@ -210,9 +214,9 @@ ht-degree: 1%
                 <td>
                     JSON-object met de volgende kenmerken:
                     <ul>
-                        <li><b>id</b></li>
-                        <li><b>name</b></li>
-                        <li><b>domeinen</b></li>
+                        <li><b> identiteitskaart </b><br/> het interne unieke herkenningsteken verbonden aan de Dienstverlener tijdens onboarding proces.</li>
+                        <li><b> naam </b><br/> de commerciële (merk) naam verbonden aan de Dienstverlener tijdens aan boord gaan proces.</li>
+                        <li><b> domeinen </b><br/> de lijst van domeinnamen die aan de Authentificatie van Adobe Pass worden vermeld om de Dienstverlener te vertegenwoordigen.</li>
                     </ul>
                 </td>
                 <td><i>vereist</i></td>
@@ -222,16 +226,16 @@ ht-degree: 1%
                 <td>
                     JSON-object met de volgende kenmerken:
                     <ul>
-                        <li><b>id</b></li>
-                        <li><b>displayName</b></li>
-                        <li><b>logoUrl</b></li>
-                        <li><b>isTempPass</b></li>
-                        <li><b>isProxy</b></li>
-                        <li><b>boardingStatus</b></li>
-                        <li><b>platformMappingId</b></li>
-                        <li><b>enablePlatformServices</b></li>
-                        <li><b>displayInPlatformPicker</b></li>
-                        <li><b>enfordPlatformPermissions</b></li>
+                        <li><b> identiteitskaart </b><br/> het interne unieke herkenningsteken verbonden aan de Leverancier van de Identiteit tijdens onboarding proces.</li>
+                        <li><b> displayName </b><br/> de commerciële (merk) naam verbonden aan de Leverancier van de Identiteit tijdens het instapproces.</li>
+                        <li><b> logoUrl </b><br> URL van waar te om het embleem te downloaden verbonden aan de Leverancier van de Identiteit.</li>
+                        <li><b> isTempPass </b><br/> De vlag die specificeert als MVPD wordt ontworpen om <a href="../../../../features-premium/temporary-access/temp-pass-feature.md"> TempPass </a> eigenschapfunctionaliteit te verstrekken.</li>
+                        <li><b> isProxy </b><br/> De vlag die specificeert als MVPD een proxied MVPD is.</li>
+                        <li><b> boardingStatus </b><br/> de status die specificeert als de Leverancier van de Identiteit door het het stromen apparatenplatform voor enige sign-on stromen wordt bezet.</li>
+                        <li><b> platformMappingId </b><br/> het interne unieke herkenningsteken verbonden aan de Leverancier van de Identiteit door het het stromen apparatenplatform voor enige sign-on stromen.</li>
+                        <li><b> enablePlatformServices </b><br/> De vlag die specificeert als de configuratie van de Leverancier van de Identiteit voor het stromen apparatenplatform voor enige sign-on stromen wordt toegelaten.</li>
+                        <li><b> displayInPlatformPicker </b><br/> De vlag die specificeert als de Leverancier van de Identiteit in de het stromen apparatenplatformkiezer voor enige sign-on stromen kan worden getoond.</li>
+                        <li><b> enforplatformPermissions </b><br/> De vlag die specificeert als het het stromen apparaat de gebruikerstoestemmingen moet afdwingen die door het platform voor enige sign-on stromen worden verstrekt.</li>
                     </ul>
                 </td>
                 <td><i>vereist</i></td>
