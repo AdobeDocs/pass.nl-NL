@@ -1,9 +1,10 @@
 ---
 title: Besluiten
 description: Besluiten
-source-git-commit: e448427ae4a36c4c6cb9f9c1cb4d0cc5c6d564ed
+exl-id: 1efd70af-8c1d-43c4-87fc-14488d42b23d
+source-git-commit: a19f4fd40c9cd851a00f05f82adbabb85edd8422
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '988'
 ht-degree: 0%
 
 ---
@@ -69,6 +70,17 @@ Het is belangrijk om op te merken dat vergunningsbesluiten slechts voor een bepe
 >
 > Het maximumaantal middelen kan pas worden verhoogd nadat overeenstemming is bereikt met de vertegenwoordigers van de MVPD en de Adobe Pass Authentication.
 
+## Autorisatietijd-aan-Levend (TTL) Beheer {#authorization-ttl-management}
+
+De Tijd-aan-Levende van de vergunning (TTL) bepaalt hoe lang een middel alvorens het moet opnieuw machtigen wordt toegelaten. Deze termijn is beperkt en moet worden overeengekomen met vertegenwoordigers van MVPD. De waarden van TTL kunnen variëren gebaseerd op:
+
+* Platformcategorie (bijvoorbeeld desktop, mobiel, met tv verbonden apparaten)
+* Specifiek platform (bijvoorbeeld iOS, Android, tvOS, Roku, FireTV)
+
+De vergunning (authZ) TTL kan door het Dashboard van Adobe Pass [ worden bekeken en worden veranderd TVE ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#tve-dashboard) door één van uw organisatiebeheerders of door een vertegenwoordiger van de Authentificatie van Adobe Pass handelend namens u.
+
+Voor meer details, verwijs naar de ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#most-used-flows) documentatie van de Gebruiker van de Gids van de Integratie van het Dashboard van 0} TVE.[
+
 ## Beveiligde bronnen {#protected-resources}
 
 De beschermde middelen verwijzen naar stroombare inhoud, die door unieke waarden wordt geïdentificeerd die door overeenkomsten tussen MVPDs en deelnemende Programmers worden bepaald.
@@ -133,3 +145,8 @@ Raadpleeg de volgende documenten voor meer informatie over hoe en wanneer u de b
 
 * [Basis preautorisatiestroom uitgevoerd binnen primaire toepassing](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-preauthorization-primary-application-flow.md)
 * [Basisvergunningsstroom uitgevoerd binnen primaire toepassing](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authorization-primary-application-flow.md)
+
+>[!MORELIKETHIS]
+>
+> [ Veelgestelde vragen van de Fase van de Voorkeur ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#preauthorization-phase-faqs-general)
+> [Veelgestelde vragen over de autorisatiefase ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authorization-phase-faqs-general)

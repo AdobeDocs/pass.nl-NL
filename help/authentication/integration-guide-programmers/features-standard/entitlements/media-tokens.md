@@ -2,9 +2,9 @@
 title: Media Tokens
 description: Media Tokens
 exl-id: 7e486d2c-e078-464d-90b1-14e2cfb4d20a
-source-git-commit: 9dc25b66d12b05a8afe16d1a866707880b5d6a51
+source-git-commit: a19f4fd40c9cd851a00f05f82adbabb85edd8422
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '682'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ De bibliotheek van de Verificateur van de Token van Media vereist versie JDK 1.5
 
 De bibliotheek Media Token Verifier die wordt vertegenwoordigd door het Java-archief van `mediatoken-verifier-VERSION.jar` bevat:
 
-* Adobe openbare sleutel.
+* Adobe public key.
 * Symbolische verificatie-API (`ITokenVerifier.java`).
 * Referentie-implementatie (`com.adobe.entitlement.test.EntitlementVerifierTest.java`).
 * Afhankelijkheden en certificaatsleutelarchieven.
@@ -198,10 +198,14 @@ Het mediatoken kan worden opgehaald met de volgende API:
 
 Verwijs naar de **secties van de Reactie** en **Steekproeven** van bovengenoemde API om de structuur van vergunningsbesluiten en media tokens te begrijpen.
 
+>[!IMPORTANT]
+>
+> De cliënttoepassing moet geen afzonderlijk eindpunt vragen om de [ media tokens ](/help/authentication/integration-guide-programmers/features-standard/entitlements/media-tokens.md) terug te winnen, aangezien zij reeds inbegrepen in de vergunningsbesluiten zijn die gebruikerstoegang toestaan.
+
 Raadpleeg het volgende document voor meer informatie over hoe en wanneer u de bovenstaande API wilt integreren:
 
 * [Basisvergunningsstroom uitgevoerd binnen primaire toepassing](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authorization-primary-application-flow.md)
 
->[!IMPORTANT]
+>[!MORELIKETHIS]
 >
-> De cliënttoepassing moet de `serializedToken` waarde van teruggekeerde `token` tot de [ Symbolische Verifier van Media ](#media-token-verifier) voor bevestiging overgaan.
+> [ FAQs van de Fase van de Toestemming ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authorization-phase-faqs-general)
