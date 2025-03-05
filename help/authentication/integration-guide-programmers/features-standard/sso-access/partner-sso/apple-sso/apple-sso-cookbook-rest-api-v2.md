@@ -2,9 +2,9 @@
 title: Apple SSO Cookbook (REST API V2)
 description: Apple SSO Cookbook (REST API V2)
 exl-id: 81476312-9ba4-47a0-a4f7-9a557608cfd6
-source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
+source-git-commit: d8097b8419aa36140e6ff550714730059555fd14
 workflow-type: tm+mt
-source-wordcount: '3443'
+source-wordcount: '3615'
 ht-degree: 0%
 
 ---
@@ -284,7 +284,7 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
    * [Verificatie uitvoeren binnen secundaire toepassing met vooraf geselecteerde mvpd](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authentication-secondary-application-flow.md)
    * [Verificatie uitvoeren binnen secundaire toepassing zonder vooraf geselecteerde mvpd](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authentication-secondary-application-flow.md)
 
-1. **ga met terug profiel gebruikend de stroom van de partnerauthentificatiereactie:** De het eindpuntreactie van de Partner van Sessies bevat de volgende gegevens:
+1. **ga met tot stand brengen en wint profiel terug gebruikend de stroom van de partnerauthentificatiereactie:** De het eindpuntreactie van de Partner van Sessies bevat de volgende gegevens:
    * Het attribuut `actionName` wordt ingesteld op &quot;partner_profile&quot;.
    * Het attribuut `actionType` wordt ingesteld op &quot;direct&quot;.
    * Het attribuut `authenticationRequest - type` omvat het veiligheidsprotocol dat door het partnerkader voor login van MVPD wordt gebruikt (momenteel geplaatst aan SAML slechts).
@@ -316,11 +316,11 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
    * De vervaldatum (indien beschikbaar) van het gebruikersprovider-profiel is geldig.
    * De reactie van de partnerauthentificatie (de reactie van SAML) is aanwezig en geldig.
 
-1. **wint profiel terug gebruikend de reactie van de partnerauthentificatie:** de het stromen toepassing verzamelt alle noodzakelijke gegevens om een profiel tot stand te brengen en terug te winnen door het eindpunt van de Partner van Profielen te roepen.
+1. **creeer en wint profiel terug gebruikend de reactie van de partnerauthentificatie:** de het stromen toepassing verzamelt alle noodzakelijke gegevens om een profiel tot stand te brengen en terug te winnen door het eindpunt van de Partner van Profielen te roepen.
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [ terug wint profiel gebruikend de reactie van de partnerauthentificatie ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md#Request) API documentatie voor details op:
+   > Verwijs naar [ creeer en wint profiel terug gebruikend de reactie van de partnerauthentificatie ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md#Request) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `serviceProvider`, `partner`, en `SAMLResponse`
    > * Alle _vereiste_ kopballen, als `Authorization`, `AP-Device-Identifier`, `Content-Type`, `X-Device-Info`, en `AP-Partner-Framework-Status`
@@ -338,7 +338,7 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [ terugwinnen profiel gebruikend de reactie van de partnerauthentificatie ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md#Response) API documentatie voor details op de informatie die in een profielreactie wordt verstrekt.
+   > Verwijs naar [ creeer en wint profiel terug gebruikend de reactie van de partnerauthentificatie ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md#Response) API documentatie voor details op de informatie die in een profielreactie wordt verstrekt.
    >
    > <br/>
    >
@@ -371,6 +371,10 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
 1. **wint de status van het partnerkader terug:** de het stromen toepassing roept het [ Video Kader van de Rekening van de Abonnee ](https://developer.apple.com/documentation/videosubscriberaccount) dat door Apple wordt ontwikkeld, om gebruikerstoestemming en leveranciersinformatie te verkrijgen.
 
    >[!IMPORTANT]
+   > 
+   > De streamingtoepassing kan deze stap overslaan als het geselecteerde gebruikersprofieltype niet &quot;appleSSO&quot; is.
+
+   >[!IMPORTANT]
    >
    > Verwijs naar de ](https://developer.apple.com/documentation/videosubscriberaccount) documentatie van het Kader van de Rekening van de Abonnee van 0} Video voor details op:[
    >
@@ -386,13 +390,17 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
    > De streamingtoepassing moet ervoor zorgen dat deze een Booleaanse waarde opgeeft die gelijk is aan `false` voor de eigenschap [`isInterruptionAllowed` ](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest/1771708-isinterruptionallowed) in het `VSAccountMetadataRequest` -object, om aan te geven dat de gebruiker in deze fase niet kan worden onderbroken.
 
    >[!TIP]
-   > 
-   > Suggestie: de streamingtoepassing kan een in cache opgeslagen waarde gebruiken voor de statusinformatie van het partnerframework. We raden u aan deze waarde te vernieuwen wanneer de toepassing van achtergrond naar voorgrondstatus overgaat.
+   >
+   > Suggestie: de streamingtoepassing kan in plaats daarvan een in cache opgeslagen waarde gebruiken voor de statusinformatie van het partnerframework. We raden u aan deze waarde te vernieuwen wanneer de toepassing van de achtergrond naar de voorgrondstatus overgaat. In dat geval, moet de het stromen toepassing ervoor zorgen het caches en gebruikt slechts geldige waarden voor de status van het partnerkader zoals die door de &quot;de statusinformatie van het partnerkader van de Terugkeer&quot;stap wordt beschreven.
 
 1. **de statusinformatie van het partnerkader van de Terugkeer:** De het stromen toepassing bevestigt de reactiegegevens om ervoor te zorgen dat de basisvoorwaarden worden voldaan aan:
    * De toegangsstatus van de gebruikerstoestemming wordt verleend.
    * De toewijzingsaanduiding van de gebruikersprovider is aanwezig en geldig.
-   * De vervaldatum (indien beschikbaar) van het gebruikersprovider-profiel is geldig.
+   * De vervaldatum van het gebruikersleveranciersprofiel is geldig.
+
+   >[!IMPORTANT]
+   >
+   > De streamingtoepassing kan deze stap overslaan als het geselecteerde gebruikersprofieltype niet &quot;appleSSO&quot; is.
 
 1. **wint pre-vergunningsbesluiten terug:** De het stromen toepassing verzamelt alle noodzakelijke gegevens om pre-vergunningsbesluiten voor een lijst van middelen te verkrijgen door de Besluiten te roepen preauthorize eindpunt.
 
@@ -406,7 +414,7 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
    >
    > <br/>
    >
-   > De streamingtoepassing moet ervoor zorgen dat deze een geldige waarde voor de partnerframestatus bevat voordat u een aanvraag verder indient, wanneer het gekozen profiel een &quot;appleSSO&quot;-typeprofiel is.
+   > De streamingtoepassing moet ervoor zorgen dat deze een geldige waarde voor de partnerframestatus bevat voordat u een aanvraag verder indient, wanneer het gekozen profiel een &quot;appleSSO&quot;-typeprofiel is. Deze stap kan echter worden overgeslagen als het geselecteerde gebruikersprofieltype niet &quot;appleSSO&quot; is.
    >
    > <br/>
    >
@@ -435,6 +443,10 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
 
    >[!IMPORTANT]
    >
+   > De streamingtoepassing kan deze stap overslaan als het geselecteerde gebruikersprofieltype niet &quot;appleSSO&quot; is.
+
+   >[!IMPORTANT]
+   >
    > Verwijs naar de ](https://developer.apple.com/documentation/videosubscriberaccount) documentatie van het Kader van de Rekening van de Abonnee van 0} Video voor details op:[
    >
    > <br/>
@@ -450,12 +462,16 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
 
    >[!TIP]
    >
-   > Suggestie: de streamingtoepassing kan een in cache opgeslagen waarde gebruiken voor de statusinformatie van het partnerframework. We raden u aan deze waarde te vernieuwen wanneer de toepassing van achtergrond naar voorgrondstatus overgaat.
+   > Suggestie: de streamingtoepassing kan in plaats daarvan een in cache opgeslagen waarde gebruiken voor de statusinformatie van het partnerframework. We raden u aan deze waarde te vernieuwen wanneer de toepassing van de achtergrond naar de voorgrondstatus overgaat. In dat geval, moet de het stromen toepassing ervoor zorgen het caches en gebruikt slechts geldige waarden voor de status van het partnerkader zoals die door de &quot;de statusinformatie van het partnerkader van de Terugkeer&quot;stap wordt beschreven.
 
 1. **de statusinformatie van het partnerkader van de Terugkeer:** De het stromen toepassing bevestigt de reactiegegevens om ervoor te zorgen dat de basisvoorwaarden worden voldaan aan:
    * De toegangsstatus van de gebruikerstoestemming wordt verleend.
    * De toewijzingsaanduiding van de gebruikersprovider is aanwezig en geldig.
-   * De vervaldatum (indien beschikbaar) van het gebruikersprovider-profiel is geldig.
+   * De vervaldatum van het gebruikersleveranciersprofiel is geldig.
+
+   >[!IMPORTANT]
+   >
+   > De streamingtoepassing kan deze stap overslaan als het geselecteerde gebruikersprofieltype niet &quot;appleSSO&quot; is.
 
 1. **wint vergunningsbesluit terug:** De het stromen toepassing verzamelt alle noodzakelijke gegevens om een vergunningsbesluit voor een specifiek middel te verkrijgen door Besluiten te roepen machtigt eindpunt.
 
@@ -469,7 +485,7 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
    >
    > <br/>
    >
-   > De streamingtoepassing moet ervoor zorgen dat deze een geldige waarde voor de partnerframestatus bevat voordat u een aanvraag verder indient, wanneer het gekozen profiel een &quot;appleSSO&quot;-typeprofiel is.
+   > De streamingtoepassing moet ervoor zorgen dat deze een geldige waarde voor de partnerframestatus bevat voordat u een aanvraag verder indient, wanneer het gekozen profiel een &quot;appleSSO&quot;-typeprofiel is. Deze stap kan echter worden overgeslagen als het geselecteerde gebruikersprofieltype niet &quot;appleSSO&quot; is.
    >
    > <br/>
    >
@@ -515,6 +531,10 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
 
    >[!IMPORTANT]
    >
+   > De streamingtoepassing moet de gebruiker vragen het logoutproces op partnerniveau, zoals opgegeven door de kenmerken `actionName` en `actionType` , te voltooien wanneer het verwijderde gebruikersprofieltype &quot;appleSSO&quot; is.
+
+   >[!IMPORTANT]
+   >
    > Verwijs naar [ Logout van het Begin voor specifieke mvpd ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md#response) API documentatie voor details op de informatie die in een logout reactie wordt verstrekt.
    >
    > <br/>
@@ -527,9 +547,5 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
    > <br/>
    >
    > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) volgt.
-
-   >[!IMPORTANT]
-   > 
-   > De het stromen toepassing moet ervoor zorgen het op de gebruiker wijst om zich van partnerniveau verder uit te melden.
 
 +++

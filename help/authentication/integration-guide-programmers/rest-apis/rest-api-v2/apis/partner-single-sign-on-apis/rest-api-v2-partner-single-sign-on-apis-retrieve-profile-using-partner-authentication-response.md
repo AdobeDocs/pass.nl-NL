@@ -1,15 +1,15 @@
 ---
-title: Profiel ophalen met verificatierespons van partner
-description: REST API V2 - profiel ophalen met partnerverificatierespons
+title: Profiel maken en ophalen met de verificatiereactie van de partner
+description: REST API V2 - Profiel maken en ophalen met partnerverificatierespons
 exl-id: cae260ff-a229-4df7-bbf9-4cdf300c0f9a
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: d8097b8419aa36140e6ff550714730059555fd14
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '734'
 ht-degree: 0%
 
 ---
 
-# Profiel ophalen met verificatierespons van partner {#retrieve-profile-using-partner-authentication-response}
+# Profiel maken en ophalen met de verificatiereactie van de partner {#create-and-retrieve-profile-using-partner-authentication-response}
 
 >[!IMPORTANT]
 >
@@ -321,7 +321,7 @@ ht-degree: 0%
 
 ## Voorbeelden {#samples}
 
-### 1. Haal profiel terug gebruikend de reactie van de partnerauthentificatie
+### 1. Creeer en wik profiel terug gebruikend de reactie van de partnerauthentificatie
 
 >[!BEGINTABS]
 
@@ -378,7 +378,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 2. Haal profiel terug gebruikend de reactie van de partnerauthentificatie, maar de degradatie wordt toegepast
+### 2. Creeer en wint profiel terug gebruikend de reactie van de partnerauthentificatie, maar de degradatie wordt toegepast
 
 >[!BEGINTABS]
 

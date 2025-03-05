@@ -2,9 +2,9 @@
 title: Single Sign-On - Partner - Stromen
 description: REST API V2 - Single Sign-On - Partner - Flows
 exl-id: 5735d67f-a311-4d03-ad48-93c0fcbcace5
-source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
+source-git-commit: d8097b8419aa36140e6ff550714730059555fd14
 workflow-type: tm+mt
-source-wordcount: '1454'
+source-wordcount: '1468'
 ht-degree: 0%
 
 ---
@@ -125,7 +125,7 @@ Voer de bepaalde stappen uit om het verzoek van de partnerauthentificatie zoals 
 
    Als de Adobe Pass backend geen geldig profiel identificeert en de partner enige sign-on bevestiging overgaat, ontvangt de het stromen toepassing een reactie met acties en gegevens om tot het partnerkader over te gaan voor het beginnen van de authentificatiestroom met MVPD.
 
-   Voor meer details over de stroom van de profielterugwinning die een reactie van de partnerauthentificatie gebruiken, verwijs naar [ profiel terugwinnen gebruikend de sectie van de de authentificatiereactie van de partner ](#retrieve-profile-using-partner-authentication-response).
+   Voor meer details over de stroom van de profielherwinning die een reactie van de partnerauthentificatie gebruiken, verwijs naar [ creeer en wint profiel terug gebruikend de sectie van de partnerauthentificatie de reactie ](#create-and-retrieve-profile-using-partner-authentication-response).
 
 1. **ga met basisauthentificatiestroom te werk:** De het eindpuntreactie van de Partner van Sessies bevat de volgende gegevens:
    * Het kenmerk `actionName` wordt ingesteld op &quot;authenticate&quot; of &quot;resume&quot;.
@@ -152,9 +152,9 @@ Voer de bepaalde stappen uit om het verzoek van de partnerauthentificatie zoals 
    > 
    > Voor meer details over `AP-Partner-Framework-Status` kopbal, verwijs naar [ AP-partner-kader-status ](../../appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md) documentatie.
 
-## Profiel ophalen met verificatierespons van partner {#retrieve-profile-using-partner-authentication-response}
+## Profiel maken en ophalen met de verificatiereactie van de partner {#create-and-retrieve-profile-using-partner-authentication-response}
 
-### Vereisten {#prerequisites-retrieve-profile-using-partner-authentication-response}
+### Vereisten {#prerequisites-create-and-retrieve-profile-using-partner-authentication-response}
 
 Alvorens het profiel terug te winnen gebruikend een reactie van de partnerauthentificatie, zorg ervoor de volgende eerste vereisten worden voldaan:
 
@@ -169,13 +169,13 @@ Alvorens het profiel terug te winnen gebruikend een reactie van de partnerauthen
 > * Het partnerframework ondersteunt gebruikersinteractie voor verificatie met de geselecteerde MVPD.
 > * Het partnerkader verstrekt gebruikerstoestemming en leveranciersinformatie.
 
-### Workflow {#workflow-retrieve-profile-using-partner-authentication-response}
+### Workflow {#workflow-create-and-retrieve-profile-using-partner-authentication-response}
 
 Voer de bepaalde stappen uit om de stroom van de profielherwinning uit te voeren gebruikend een reactie van de partnerauthentificatie zoals aangetoond in het volgende diagram.
 
-![ wint profiel terug gebruikend de reactie van de partnerauthentificatie ](../../../../../assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-retrieve-profile-using-partner-authentication-response-flow.png)
+![ creeer en wint profiel terug gebruikend de reactie van de partnerauthentificatie ](../../../../../assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-retrieve-profile-using-partner-authentication-response-flow.png)
 
-*wint voor authentiek verklaard profiel terug gebruikend de reactie van de partnerauthentificatie*
+*creeer en wint voor authentiek verklaard profiel terug gebruikend de reactie van de partnerauthentificatie*
 
 1. **Volledige authentificatie van MVPD met partnerkader:** als de authentificatiestroom succesvol is, veroorzaakt de interactie van het partnerkader met MVPD een reactie van de partnerauthentificatie (reactie van SAML) die samen met de de statusinformatie van het partnerkader is teruggekeerd.
 
@@ -184,11 +184,11 @@ Voer de bepaalde stappen uit om de stroom van de profielherwinning uit te voeren
    * De toewijzingsaanduiding van de gebruikersprovider is aanwezig en geldig.
    * De vervaldatum (indien beschikbaar) van het gebruikersprovider-profiel is geldig.
 
-1. **wint profiel terug gebruikend de reactie van de partnerauthentificatie:** de het stromen toepassing verzamelt alle noodzakelijke gegevens om een profiel tot stand te brengen en terug te winnen door het eindpunt van de Partner van Profielen te roepen.
+1. **creeer en wint profiel terug gebruikend de reactie van de partnerauthentificatie:** de het stromen toepassing verzamelt alle noodzakelijke gegevens om een profiel tot stand te brengen en terug te winnen door het eindpunt van de Partner van Profielen te roepen.
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [ terug wint profiel gebruikend de reactie van de partnerauthentificatie ](../../apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md) API documentatie voor details op:
+   > Verwijs naar [ creeer en wint profiel terug gebruikend de reactie van de partnerauthentificatie ](../../apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `serviceProvider`, `partner`, en `SAMLResponse`
    > * Alle _vereiste_ kopballen, als `Authorization`, `AP-Device-Identifier`, `Content-Type`, `X-Device-Info`, en `AP-Partner-Framework-Status`
@@ -208,7 +208,7 @@ Voer de bepaalde stappen uit om de stroom van de profielherwinning uit te voeren
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [ terugwinnen profiel gebruikend de reactie van de partnerauthentificatie ](../../apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md) API documentatie voor details op de informatie die in een profielreactie wordt verstrekt.
+   > Verwijs naar [ creeer en wint profiel terug gebruikend de reactie van de partnerauthentificatie ](../../apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md) API documentatie voor details op de informatie die in een profielreactie wordt verstrekt.
    > 
    > <br/>
    > 

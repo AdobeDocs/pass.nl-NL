@@ -2,9 +2,9 @@
 title: Veelgestelde vragen over REST API V2
 description: Veelgestelde vragen over REST API V2
 exl-id: 2dd74b47-126e-487b-b467-c16fa8cc14c1
-source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
+source-git-commit: d8097b8419aa36140e6ff550714730059555fd14
 workflow-type: tm+mt
-source-wordcount: '8198'
+source-wordcount: '9072'
 ht-degree: 0%
 
 ---
@@ -224,7 +224,7 @@ Nochtans, voor MVPDs die [ op huis-gebaseerde authentificatie ](/help/authentica
 
 #### 9. Wat zijn de gebruiksgevallen voor elk beschikbaar eindpunt van Profielen? {#authentication-phase-faq9}
 
-De eindpunten van Profielen worden ontworpen om cliënttoepassing het vermogen te verstrekken om de de authentificatiestatus van de gebruiker te kennen, tot de informatie van gebruikersmeta-gegevens toegang te hebben, de methode te vinden die wordt gebruikt om voor authentiek te verklaren of de entiteit die wordt gebruikt om identiteit te verstrekken.
+De eindpunten van de Profielen van de basis worden ontworpen om cliënttoepassing het vermogen te verstrekken om de de authentificatiestatus van de gebruiker te kennen, tot de informatie van gebruikersmeta-gegevens toegang te hebben, de methode te vinden die wordt gebruikt om voor authentiek te verklaren of de entiteit die wordt gebruikt om identiteit te verstrekken.
 
 Elk eindpunt past als volgt bij een specifiek geval van gebruik:
 
@@ -233,6 +233,18 @@ Elk eindpunt past als volgt bij een specifiek geval van gebruik:
 | [ het eindpunt van Profielen API ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md) | Alle gebruikersprofielen ophalen. | **Gebruiker opent de cliënttoepassing voor het eerst**<br/><br/> In dit scenario, heeft de cliënttoepassing niet het geselecteerde herkenningsteken van MVPD van de gebruiker in het voorgeheugen onder wordt gebracht in blijvende opslag.<br/><br/> dientengevolge, zal het één enkel verzoek verzenden om alle beschikbare gebruikersprofielen terug te winnen. |
 | [ eindpunt van Profielen voor specifieke MVPD API ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) | Hiermee wordt het gebruikersprofiel opgehaald dat is gekoppeld aan een specifieke MVPD. | **de terugkeer van de Gebruiker aan de cliënttoepassing na het voor authentiek verklaren in een vorig bezoek**<br/><br/> In dit geval, moet de cliënttoepassing het eerder geselecteerde herkenningsteken van MVPD van de gebruiker hebben in blijvende opslag in het voorgeheugen onder wordt gebracht.<br/><br/> dientengevolge, zal het één enkel verzoek verzenden om het profiel van de gebruiker voor die specifieke MVPD terug te winnen. |
 | [ eindpunt van Profielen voor specifieke (authentificatie) code API ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) | Haal het gebruikersprofiel op dat is gekoppeld aan een specifieke verificatiecode. | **Gebruiker stelt het authentificatieproces**<br/><br/> in dit scenario in werking, moet de cliënttoepassing bepalen of de gebruiker met succes authentificatie heeft voltooid en hun profielinformatie terugwinnen.<br/><br/> dientengevolge, zal het een opiniepeilingsmechanisme beginnen om het profiel van de gebruiker terug te winnen verbonden aan de authentificatiecode. |
+
+Voor meer details, verwijs naar de [ Basisprofielstroom die binnen primaire toepassing ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-primary-application-flow.md) wordt uitgevoerd en [ Basisprofielstroom die binnen secundaire toepassing ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-secondary-application-flow.md) documenten wordt uitgevoerd.
+
+Het eindpunt van Profielen SSO dient een verschillend doel, het verstrekt de cliënttoepassing het vermogen om een gebruikersprofiel tot stand te brengen gebruikend de reactie van de partnerauthentificatie en het terug te winnen in één enkele, éénmalige verrichting.
+
+| API | Beschrijving | Hoofdletters gebruiken |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [ Profielen SSO eindpunt API ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md) | Creeer en wik gebruikersprofiel gebruikend de reactie van de partnerauthentificatie. | **Gebruiker laat de toepassing toe om partner enig-sign-on te gebruiken om**<br/><br/> in dit scenario voor authentiek te verklaren, moet de cliënttoepassing een gebruikersprofiel tot stand brengen na het ontvangen van de reactie van de partnerauthentificatie en het in één enkele, eenmalige verrichting terugwinnen. |
+
+Voor om het even welke verdere vragen, moeten de basis eindpunten van Profielen worden gebruikt om de de authentificatiestatus van de gebruiker te bepalen, tot de informatie van gebruikersmeta-gegevens toegang te hebben, de methode te vinden die wordt gebruikt om voor authentiek te verklaren of de entiteit die wordt gebruikt om identiteit te verstrekken.
+
+Voor meer details, verwijs naar [ Enige sign-on gebruikend partnerstromen ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-partner-flows.md) en [ Apple SSO Cookbook (REST API V2) ](/help/authentication/integration-guide-programmers/features-standard/sso-access/partner-sso/apple-sso/apple-sso-cookbook-rest-api-v2.md) documenten.
 
 #### 10. Wat moet de clienttoepassing doen als de gebruiker meerdere MVPD-profielen heeft? {#authentication-phase-faq10}
 
@@ -351,11 +363,29 @@ Raadpleeg de volgende documenten voor meer informatie:
 * [API voor beslissingen vóór autorisatie ophalen](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md)
 * [Basis preautorisatiestroom uitgevoerd binnen primaire toepassing](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-preauthorization-primary-application-flow.md)
 
-#### 4. Waarom ontbreekt het aan een media-token in het besluit tot voorafgaande toestemming? {#preauthorization-phase-faq4}
+#### 4. Moet de clienttoepassing de voorafgaande beslissingen in een permanente opslag in cache plaatsen? {#preauthorization-phase-faq4}
+
+De clienttoepassing is niet verplicht om beslissingen vóór autorisatie op te slaan in permanente opslag. Nochtans, wordt het geadviseerd om vergunningsbesluiten in het voorgeheugen op te slaan om de gebruikerservaring te verbeteren. Dit helpt onnodige vraag aan de Besluiten te vermijden vooraf goedkeurt eindpunt voor middelen die reeds zijn toegestaan, verminderend latentie en verbeterend prestaties.
+
+#### 5. Hoe kan de clienttoepassing bepalen waarom een besluit tot voorafgaande toestemming is geweigerd? {#preauthorization-phase-faq5}
+
+De cliënttoepassing kan de reden voor een ontkend pre-vergunningsbesluit bepalen door de [ foutencode en het bericht ](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) te inspecteren inbegrepen in de reactie van het Besluiten pre-goedkeurt eindpunt. Deze details geven inzicht in de specifieke reden waarom de aanvraag voor voorafgaande toestemming is afgewezen, waardoor de gebruikerservaring kan worden geïnformeerd of de benodigde afhandeling in de toepassing kan worden geactiveerd.
+
+Ervoor zorgen dat elk nieuw mechanisme dat wordt toegepast voor het ophalen van beslissingen vóór toelating, niet in een eindeloze lus resulteert als het besluit vóór toelating wordt geweigerd.
+
+U kunt overwegen om pogingen tot een redelijk aantal te beperken en weigeringen netjes af te handelen door duidelijke feedback aan de gebruiker te bekijken.
+
+#### 6. Waarom ontbreekt het aan een media-token in het besluit tot voorafgaande toestemming? {#preauthorization-phase-faq6}
 
 In het besluit tot voorafgaande toestemming ontbreekt een media-token omdat de fase van voorafgaande toestemming niet mag worden gebruikt om bronnen af te spelen, aangezien dat het doel is van de fase van autorisatie.
 
-#### 5. Wat is een bron en welke indelingen worden ondersteund? {#preauthorization-phase-faq5}
+#### 7. Kan de machtigingsfase worden overgeslagen als er al een besluit tot voorafgaande goedkeuring bestaat? {#preauthorization-phase-faq7}
+
+Nee.
+
+De machtigingsfase kan niet worden overgeslagen, zelfs niet als er een besluit tot voorafgaande toestemming beschikbaar is. Voorafgaande beslissingen zijn alleen ter informatie en geven geen daadwerkelijke afspeelrechten. De fase voorafgaand aan de autorisatie is bedoeld als vroegtijdig advies, maar de fase van autorisatie is nog steeds vereist voordat inhoud wordt afgespeeld.
+
+#### 8. Wat is een bron en welke indelingen worden ondersteund? {#preauthorization-phase-faq8}
 
 Het middel is een termijn die in de [ verklarende woordenlijst ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#resource) documentatie wordt bepaald.
 
@@ -368,7 +398,7 @@ De unieke resource-id kan twee indelingen hebben:
 
 Voor meer details, verwijs naar de [ Beschermde documentatie van Middelen ](/help/authentication/integration-guide-programmers/features-standard/entitlements/decisions.md#protected-resources).
 
-#### 6. Voor hoeveel middelen kan de clienttoepassing tegelijkertijd een besluit tot voorafgaande toestemming verkrijgen? {#preauthorization-phase-faq6}
+#### 9. Voor hoeveel middelen kan de clienttoepassing tegelijkertijd een besluit tot voorafgaande toestemming verkrijgen? {#preauthorization-phase-faq9}
 
 De clienttoepassing kan een voorafgaande autorisatiebeslissing voor een beperkt aantal bronnen verkrijgen in één API-aanvraag, meestal maximaal 5, als gevolg van voorwaarden die door de MVPD&#39;s worden opgelegd.
 
@@ -409,7 +439,19 @@ Dit beperkte die tijdkader als vergunning (authZ) [ wordt bekend TTL ](/help/aut
 
 Voor meer details, verwijs naar de ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#most-used-flows) documentatie van de Gebruiker van de Gids van de Integratie van het Dashboard van 0} TVE.[
 
-#### 4. Wat is een media-token en hoe lang is het geldig? {#authorization-phase-faq4}
+#### 4. Moet de clienttoepassing de vergunningsbesluiten in een permanente opslag in cache plaatsen? {#authorization-phase-faq4}
+
+De clienttoepassing is niet verplicht om machtigingsbesluiten op te slaan in permanente opslag.
+
+#### 5. Hoe kan de clienttoepassing bepalen waarom een vergunningsbesluit is geweigerd? {#authorization-phase-faq5}
+
+De cliënttoepassing kan de reden voor een ontkend vergunningsbesluit bepalen door de [ foutencode en het bericht ](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) te inspecteren inbegrepen in de reactie van Besluiten machtigt eindpunt. Deze details geven inzicht in de specifieke reden waarom de aanvraag voor een vergunning is afgewezen, waardoor de gebruikerservaring kan worden geïnformeerd of een noodzakelijke afhandeling in de toepassing kan worden gestart.
+
+Ervoor zorgen dat een nieuw mechanisme dat wordt toegepast voor het ophalen van vergunningsbesluiten niet in een eindeloze lus resulteert als het vergunningsbesluit wordt geweigerd.
+
+U kunt overwegen om pogingen tot een redelijk aantal te beperken en weigeringen netjes af te handelen door duidelijke feedback aan de gebruiker te bekijken.
+
+#### 6. Wat is een media-token en hoe lang is het geldig? {#authorization-phase-faq6}
 
 Het media teken is een termijn die in de [ verklarende woordenlijst ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#media-token) documentatie wordt bepaald.
 
@@ -417,7 +459,7 @@ Het media token bestaat uit een ondertekende tekenreeks die in duidelijke tekst 
 
 Voor meer informatie, verwijs naar de [ Symbolische documentatie van de Verificateur van Media ](/help/authentication/integration-guide-programmers/features-standard/entitlements/media-tokens.md#media-token-verifier).
 
-Het media teken is geldig voor een beperkte en korte tijd die op het ogenblik van kwestie wordt gespecificeerd, die op de hoeveelheid tijd wijst het door de cliënttoepassing moet worden gebruikt alvorens te vereisen om Besluiten te vragen geef opnieuw eindpunt toe.
+De mediatoken is geldig gedurende een beperkte en korte periode die op het moment van uitgifte is opgegeven. Deze periode geeft de tijdslimiet aan voordat deze door de clienttoepassing moet worden geverifieerd en gebruikt.
 
 De clienttoepassing kan het media-token gebruiken om een bronstream af te spelen voor het geval dat de gebruiker toegang zou krijgen tot de stream als de beslissing van de tv-provider (gezaghebbend).
 
@@ -426,7 +468,41 @@ Raadpleeg de volgende documenten voor meer informatie:
 * [API voor goedkeuringsbeslissingen ophalen](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md)
 * [Basisvergunningsstroom uitgevoerd binnen primaire toepassing](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authorization-primary-application-flow.md)
 
-#### 5. Wat is een bron en welke indelingen worden ondersteund? {#authorization-phase-faq5}
+#### 7. Moet de clienttoepassing het media-token valideren voordat de bronstream wordt afgespeeld? {#authorization-phase-faq7}
+
+Ja.
+
+De clienttoepassing moet het mediatoken valideren voordat de bronstream wordt afgespeeld. Deze bevestiging zou moeten worden uitgevoerd gebruikend de [ Symbolische Verifier van Media ](/help/authentication/integration-guide-programmers/features-standard/entitlements/media-tokens.md#media-token-verifier). Door `serializedToken` van de geretourneerde `token` te controleren, helpt de clienttoepassing onbevoegde toegang te voorkomen, zoals het rippen van streams, en zorgt deze ervoor dat alleen correct geautoriseerde gebruikers de inhoud kunnen afspelen.
+
+#### 8. Moet de clienttoepassing een verlopen mediatken vernieuwen tijdens het afspelen? {#authorization-phase-faq8}
+
+Nee.
+
+De clienttoepassing is niet verplicht een verlopen mediatoken te vernieuwen terwijl de stream actief wordt afgespeeld. Als het media-token tijdens het afspelen verloopt, moet het zijn toegestaan dat de stream zonder onderbreking wordt voortgezet. Nochtans, moet de cliënt om een nieuw vergunningsbesluit — en een nieuw media teken verkrijgen — de volgende keer de gebruiker probeert om het zelfde middel te spelen.
+
+#### 9. Wat is het doel van elk tijdstempelkenmerk in het vergunningsbesluit? {#authorization-phase-faq9}
+
+Het vergunningsbesluit bevat verschillende tijdstempelkenmerken die een essentiële context bieden voor de geldigheidsperiode van de vergunning zelf en de bijbehorende media-token. Deze tijdstempels hebben verschillende doeleinden, afhankelijk van het feit of ze betrekking hebben op het vergunningsbesluit of het media-token.
+
+**besluit-Niveau Tijdstempels**
+
+Deze tijdstempels beschrijven de geldigheidsperiode van het algemene vergunningsbesluit:
+
+| Kenmerk | Beschrijving | Notities |
+|-------------|------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `notBefore` | Het tijdstip waarop het vergunningsbesluit is gegeven. | Dit is het begin van het geldigheidvenster van de autorisatie. |
+| `notAfter` | Het tijdstip waarop het vergunningsbesluit verstrijkt. | De [ toestemmingstijd-aan-Levende (TTL) ](/help/authentication/integration-guide-programmers/features-standard/entitlements/decisions.md#authorization-ttl-management) bepaalt hoe lang de vergunning geldig blijft alvorens re-vergunning te vereisen. Over deze GVTO wordt onderhandeld met vertegenwoordigers van MVPD. |
+
+**symbolisch-Niveau Tijdstempels**
+
+Deze tijdstempels beschrijven de geldigheidsperiode van het media-token dat aan het vergunningsbesluit is gekoppeld:
+
+| Kenmerk | Beschrijving | Notities |
+|-------------|-------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `notBefore` | Het tijdstip waarop het media-token werd uitgegeven. | Dit geeft aan wanneer het token geldig wordt voor afspelen. |
+| `notAfter` | De tijd waarop het media-token verloopt. | De tokens van media hebben een opzettelijk korte levensduur (typisch 7 minuten) om misgebruikrisico&#39;s te minimaliseren en voor potentiële klokverschillen tussen de symbolisch-genererende server en de symbolisch-controlerende server rekening te houden. |
+
+#### 10. Wat is een bron en welke indelingen worden ondersteund? {#authorization-phase-faq10}
 
 Het middel is een termijn die in de [ verklarende woordenlijst ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#resource) documentatie wordt bepaald.
 
@@ -439,7 +515,7 @@ De unieke resource-id kan twee indelingen hebben:
 
 Voor meer details, verwijs naar de [ Beschermde documentatie van Middelen ](/help/authentication/integration-guide-programmers/features-standard/entitlements/decisions.md#protected-resources).
 
-#### 6. Voor hoeveel middelen kan de clienttoepassing tegelijkertijd een vergunningsbesluit verkrijgen? {#authorization-phase-faq6}
+#### 11. Voor hoeveel middelen kan de clienttoepassing tegelijkertijd een vergunningsbesluit verkrijgen? {#authorization-phase-faq11}
 
 De cliënttoepassing kan een vergunningsbesluit voor een beperkt aantal middelen in één enkel API verzoek, gewoonlijk tot 1, wegens voorwaarden verkrijgen die door MVPDs worden opgelegd.
 
@@ -452,6 +528,10 @@ De cliënttoepassing kan een vergunningsbesluit voor een beperkt aantal middelen
 #### 1. Wat is het doel van de afmeldingsfase? {#logout-phase-faq1}
 
 Het doel van de afmeldingsfase is om de clienttoepassing de mogelijkheid te bieden het geverifieerde profiel van de gebruiker binnen de Adobe Pass-verificatie op verzoek te beëindigen.
+
+#### 2. Is de afmeldingsfase verplicht? {#logout-phase-faq2}
+
+De afmeldingsfase is verplicht. De clienttoepassing moet de gebruiker de mogelijkheid bieden zich af te melden.
 
 +++
 

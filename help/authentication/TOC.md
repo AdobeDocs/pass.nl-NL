@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass-verificatie
 user-guide-description: Adobe Pass-verificatie is een machtigingsoplossing voor TV Everywhere, die een modulair kader verstrekt om te bepalen of iemand die toegang tot een bron vraagt, daar rechten voor heeft.
-source-git-commit: 4ad5ea619f64a78a72f69228c9ae3c83a7b66f24
+source-git-commit: d8097b8419aa36140e6ff550714730059555fd14
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1248'
 ht-degree: 2%
 
 ---
@@ -90,7 +90,7 @@ ht-degree: 2%
                + [Afmelden starten voor specifieke mvpd](integration-guide-programmers/rest-apis/rest-api-v2/apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md)
             + Single Sign-On voor partners {#rest-api-v2-partner-single-sign-on-apis}
                + [Vraag van partnerverificatie ophalen](integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-partner-authentication-request.md)
-               + [Profiel ophalen met verificatierespons van partner](integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md)
+               + [Profiel maken en ophalen met de verificatiereactie van de partner](integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md)
          + Stromen {#rest-api-v2-flows}
             + [Overzicht van REST API V2-stromen](integration-guide-programmers/rest-apis/rest-api-v2/flows/rest-api-v2-flows-overview.md)
             + Basistoegangsstromen {#rest-api-v2-basic-access-flows}
