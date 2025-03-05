@@ -2,9 +2,9 @@
 title: Single Sign On - Platform Identity - Flows
 description: REST API V2 - Single Sign On - Platform Identity - Flows
 exl-id: 5200e851-84e8-4cb4-b068-63b91a2a8945
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
 workflow-type: tm+mt
-source-wordcount: '1830'
+source-wordcount: '1846'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,10 @@ ht-degree: 0%
 >
 > De implementatie van REST API V2 wordt begrensd door de [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
 
+>[!MORELIKETHIS]
+>
+> Zorg ervoor om [ REST API V2 FAQs ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general) ook te bezoeken.
+
 De methode van de Identiteit van het Platform laat veelvoudige toepassingen toe om een unieke platform herkenningsteken te gebruiken om enig sign-on (SSO) op het apparaat of platformniveau te bereiken wanneer het gebruiken van de diensten van Adobe Pass.
 
 De toepassingen zijn verantwoordelijk voor het ophalen van de unieke lading van de platform-id met behulp van apparaatspecifieke identiteitsservices of bibliotheken buiten Adobe Pass-systemen.
@@ -26,6 +30,11 @@ De toepassingen zijn verantwoordelijk voor het ophalen van de unieke lading van 
 De toepassingen zijn verantwoordelijk voor het opnemen van deze unieke lading van de platform-id als onderdeel van de header `Adobe-Subject-Token` voor alle aanvragen die deze aangeven.
 
 Voor meer details over `Adobe-Subject-Token` kopbal, verwijs naar [ Adobe-Onderwerp-Symbolische ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) documentatie.
+
+>[!MORELIKETHIS]
+> 
+> * [ Amazon SSO Cookbook ](/help/authentication/integration-guide-programmers/features-standard/sso-access/platform-sso/amazon-single-sign-on/amazon-sso-cookbook-rest-api-v2.md)
+> * [ Roku SSO Cookbook ](/help/authentication/integration-guide-programmers/features-standard/sso-access/platform-sso/roku-single-sign-on/roku-sso-overview.md)
 
 ## Verificatie uitvoeren via Single Sign-On met behulp van platformidentiteit {#perform-authentication-through-single-sign-on-using-platform-identity}
 
@@ -35,9 +44,9 @@ Voordat u de verificatiestroom via Single Sign-On uitvoert met behulp van een pl
 
 * Het platform moet een identiteitsservice of een bibliotheek bieden die consistente informatie als `JWS` of `JWE` payload retourneert voor alle toepassingen op hetzelfde apparaat of platform.
 * De eerste het stromen toepassing moet het unieke platformherkenningsteken terugwinnen en `JWS` of `JWE` nuttige lading als deel van [ Adobe-Onderwerp-Symbolische ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) kopbal voor alle verzoeken omvatten die het specificeren.
-* De eerste het stromen toepassing moet een MVPD selecteren.
+* De eerste streamingtoepassing moet een MVPD selecteren.
 * De eerste streamingtoepassing moet een verificatiesessie starten om u aan te melden bij de geselecteerde MVPD.
-* De eerste het stromen toepassing moet met geselecteerde MVPD in een gebruikersagent voor authentiek verklaren.
+* De eerste streamingtoepassing moet worden geverifieerd met de geselecteerde MVPD in een gebruikersagent.
 * De tweede het stromen toepassing moet het unieke platformherkenningsteken terugwinnen en `JWS` of `JWE` nuttige lading als deel van [ Adobe-Onderwerp-Symbolische ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) kopbal voor alle verzoeken omvatten die het specificeren.
 
 >[!IMPORTANT]
@@ -46,8 +55,8 @@ Voordat u de verificatiestroom via Single Sign-On uitvoert met behulp van een pl
 >
 > <br/>
 > 
-> * De eerste het stromen toepassing steunt gebruikersinteractie om een MVPD te selecteren.
-> * De eerste het stromen toepassing steunt gebruikersinteractie om met geselecteerde MVPD in een gebruikersagent voor authentiek te verklaren.
+> * De eerste streamingtoepassing ondersteunt gebruikersinteractie bij het selecteren van een MVPD.
+> * De eerste streamingtoepassing ondersteunt gebruikersinteractie voor verificatie met de geselecteerde MVPD in een gebruikersagent.
 
 ### Workflow {#workflow-perform-authentication-through-single-sign-on-using-platform-identity}
 
@@ -99,13 +108,13 @@ Voer de gegeven stappen uit om de authentificatiestroom door enig teken-op uit t
    > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
 1. **Open URL in gebruikersagent:** De reactie van het eindpunt van zittingen bevat de volgende gegevens:
-   * `url` die kan worden gebruikt om de interactieve authentificatie binnen de MVPD login pagina in werking te stellen.
+   * De `url` die kan worden gebruikt om de interactieve verificatie te starten op de MVPD-aanmeldingspagina.
    * Het kenmerk `actionName` is ingesteld op &quot;authenticate&quot;.
    * Het attribuut `actionType` wordt ingesteld op &quot;interactive&quot;.
 
-   Als de Adobe Pass-backend geen geldig profiel identificeert, opent de eerste streamingtoepassing een gebruikersagent om de opgegeven `url` te laden, die een aanvraag doet voor het verificateurseindpunt. Deze stroom kan verscheidene omleidingen omvatten, die uiteindelijk de gebruiker aan de MVPD login pagina leiden en geldige geloofsbrieven verstrekken.
+   Als de Adobe Pass-backend geen geldig profiel identificeert, opent de eerste streamingtoepassing een gebruikersagent om de opgegeven `url` te laden, die een aanvraag doet voor het verificateurseindpunt. Deze stroom kan verschillende omleidingen bevatten, die de gebruiker uiteindelijk naar de MVPD-aanmeldingspagina leiden en geldige gegevens bieden.
 
-1. **Volledige authentificatie MVPD:** als de authentificatiestroom succesvol is, slaat de gebruikersagent interactie een regelmatig profiel in de Adobe Pass achterkant op en bereikt verstrekte `redirectUrl`.
+1. **Volledige authentificatie van MVPD:** als de authentificatiestroom succesvol is, slaat de gebruikersagent interactie een regelmatig profiel in de achtergrond van Adobe Pass op en bereikt verstrekte `redirectUrl`.
 
 1. **wint profiel voor specifieke code terug:** de eerste het stromen toepassing verzamelt alle noodzakelijke gegevens om profielinformatie terug te winnen door een verzoek naar het eindpunt van Profielen te verzenden.
 
@@ -217,7 +226,7 @@ Voordat u de autorisatiestroom via Single Sign-On uitvoert met behulp van een pl
 > 
 > <br/>
 > 
-> * De eerste het stromen toepassing heeft authentificatie uitgevoerd en heeft een geldige waarde voor [ Adobe-Onderwerp-Symbolische ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) verzoekkopbal opgenomen.
+> * De eerste het stromen toepassing heeft authentificatie uitgevoerd en een geldige waarde voor [ Adobe-Onderwerp-Symbolische ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) verzoekkopbal omvat.
 
 ### Workflow {#workflow-scenario-performing-authorization-flow-using-platform-identity-single-sign-on-method}
 
@@ -253,7 +262,7 @@ Voer de gegeven stappen uit om de vergunningsstroom door enig teken-op uit te vo
 
 1. **vind enig sign-on profiel:** de server van Adobe Pass identificeert een geldig enig sign-on profiel dat op de ontvangen parameters en kopballen wordt gebaseerd.
 
-1. **wint MVPD besluit voor gevraagd middel terug:** de server van Adobe Pass roept het MVPD vergunningseindpunt om een `Permit` of `Deny` besluit voor het specifieke middel te verkrijgen dat van de het stromen toepassing wordt ontvangen.
+1. **wint het besluit van MVPD voor gevraagde middel terug:** de server van Adobe Pass roept het de vergunningseindpunt van MVPD om een `Permit` of `Deny` besluit voor het specifieke middel te verkrijgen dat van de het stromen toepassing wordt ontvangen.
 
 1. **Terugkeer `Permit` besluit met media teken:** de Besluiten staan eindpuntreactie toe bevat een `Permit` besluit en een media teken.
 

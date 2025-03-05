@@ -2,9 +2,9 @@
 title: Single Sign-On - Partner - Stromen
 description: REST API V2 - Single Sign-On - Partner - Flows
 exl-id: 5735d67f-a311-4d03-ad48-93c0fcbcace5
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
 workflow-type: tm+mt
-source-wordcount: '1444'
+source-wordcount: '1454'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,10 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 > De implementatie van REST API V2 wordt begrensd door de [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
+
+>[!MORELIKETHIS]
+>
+> Zorg ervoor om [ REST API V2 FAQs ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general) ook te bezoeken.
 
 De methode van de Partner laat veelvoudige toepassingen toe om een de statuslading van het partnerkader te gebruiken om enige sign-on (SSO) op het apparatenniveau te bereiken wanneer het gebruiken van de diensten van Adobe Pass.
 
@@ -47,8 +51,8 @@ Alvorens het verzoek van de partnerauthentificatie terug te winnen, zorg ervoor 
 > 
 > <br/>
 > 
-> * Het partnerkader steunt gebruikersinteractie om een MVPD te selecteren.
-> * Het partnerkader steunt gebruikersinteractie om met geselecteerde MVPD voor authentiek te verklaren.
+> * Het partnerframework ondersteunt gebruikersinteractie bij het selecteren van een MVPD.
+> * Het partnerframework ondersteunt gebruikersinteractie voor verificatie met de geselecteerde MVPD.
 > * Het partnerkader verstrekt gebruikerstoestemming en leveranciersinformatie.
 
 ### Workflow {#workflow-retrieve-partner-authentication-request}
@@ -115,11 +119,11 @@ Voer de bepaalde stappen uit om het verzoek van de partnerauthentificatie zoals 
 1. **ga met de stroom van de profielherwinning verder gebruikend de reactie van de partnerauthentificatie:** De het eindpuntreactie van de Partner van Sessies bevat de volgende gegevens:
    * Het attribuut `actionName` wordt ingesteld op &quot;partner_profile&quot;.
    * Het attribuut `actionType` wordt ingesteld op &quot;direct&quot;.
-   * Het attribuut `authenticationRequest - type` omvat het veiligheidsprotocol dat door het partnerkader voor MVPD login wordt gebruikt (momenteel geplaatst aan SAML slechts).
+   * Het attribuut `authenticationRequest - type` omvat het veiligheidsprotocol dat door het partnerkader voor login van MVPD wordt gebruikt (momenteel geplaatst aan SAML slechts).
    * Het attribuut `authenticationRequest - request` omvat het SAML- verzoek dat tot het partnerkader wordt overgegaan.
    * Het attribuut `authenticationRequest - attributesNames` omvat de attributen SAML die tot het partnerkader worden overgegaan.
 
-   Als de Adobe Pass backend geen geldig profiel identificeert en de partner enige sign-on bevestiging overgaat, ontvangt de het stromen toepassing een reactie met acties en gegevens om tot het partnerkader over te gaan om de authentificatiestroom met MVPD te beginnen.
+   Als de Adobe Pass backend geen geldig profiel identificeert en de partner enige sign-on bevestiging overgaat, ontvangt de het stromen toepassing een reactie met acties en gegevens om tot het partnerkader over te gaan voor het beginnen van de authentificatiestroom met MVPD.
 
    Voor meer details over de stroom van de profielterugwinning die een reactie van de partnerauthentificatie gebruiken, verwijs naar [ profiel terugwinnen gebruikend de sectie van de de authentificatiereactie van de partner ](#retrieve-profile-using-partner-authentication-response).
 
@@ -161,8 +165,8 @@ Alvorens het profiel terug te winnen gebruikend een reactie van de partnerauthen
 >
 > Veronderstelling
 >
-> * Het partnerkader steunt gebruikersinteractie om een MVPD te selecteren.
-> * Het partnerkader steunt gebruikersinteractie om met geselecteerde MVPD voor authentiek te verklaren.
+> * Het partnerframework ondersteunt gebruikersinteractie bij het selecteren van een MVPD.
+> * Het partnerframework ondersteunt gebruikersinteractie voor verificatie met de geselecteerde MVPD.
 > * Het partnerkader verstrekt gebruikerstoestemming en leveranciersinformatie.
 
 ### Workflow {#workflow-retrieve-profile-using-partner-authentication-response}
@@ -173,7 +177,7 @@ Voer de bepaalde stappen uit om de stroom van de profielherwinning uit te voeren
 
 *wint voor authentiek verklaard profiel terug gebruikend de reactie van de partnerauthentificatie*
 
-1. **Volledige authentificatie MVPD met partnerkader:** als de authentificatiestroom succesvol is, veroorzaakt de interactie van het partnerkader met MVPD een reactie van de partnerauthentificatie (reactie van SAML) die samen met de de statusinformatie van het partnerkader is teruggekeerd.
+1. **Volledige authentificatie van MVPD met partnerkader:** als de authentificatiestroom succesvol is, veroorzaakt de interactie van het partnerkader met MVPD een reactie van de partnerauthentificatie (reactie van SAML) die samen met de de statusinformatie van het partnerkader is teruggekeerd.
 
 1. **de reactie van de partnerauthentificatie van de Terugkeer:** De het stromen toepassing bevestigt de reactiegegevens om ervoor te zorgen dat de basisvoorwaarden worden voldaan aan:
    * De toegangsstatus van de gebruikerstoestemming wordt verleend.

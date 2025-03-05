@@ -2,7 +2,7 @@
 title: Draaimechanisme
 description: Ken het Throttling mechanisme dat in de Authentificatie van Adobe Pass wordt gebruikt. Bekijk een overzicht van dit mechanisme op deze pagina.
 exl-id: f00f6c8e-2281-45f3-b592-5bbc004897f7
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
 workflow-type: tm+mt
 source-wordcount: '1141'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Dit mechanisme is om een paar redenen belangrijk:
 
 ### Clientimplementaties
 
-De Authentificatie van de pas verstrekt richtlijnen en SDK voor het in wisselwerking staan met API maar controleert niet hoe de klant het gebruikt. Sommige implementaties kunnen een rudimentaire implementatie hebben en kunnen de service overspoelen met onnodige API-verzoeken, of dit nu per ongeluk gebeurt of niet, kan ertoe leiden dat andere gebruikers trager worden of problemen met de capaciteit ondervinden.
+De Authentificatie van de pas verstrekt richtlijnen en SDK voor interactie met API maar controleert niet hoe de klant het gebruikt. Sommige implementaties kunnen een rudimentaire implementatie hebben en kunnen de service overspoelen met onnodige API-verzoeken, of dit nu per ongeluk gebeurt of niet, kan ertoe leiden dat andere gebruikers trager worden of problemen met de capaciteit ondervinden.
 
 De dienst zelf moet elke redelijke capaciteit kunnen afhandelen. Maar hoe schaalbaar of uitvoerbaar een service ook is, er zijn altijd grenzen. Als dusdanig, moet de dienst grenzen hebben die voor het aantal toegelaten vraag binnen een specifiek tijdinterval worden gevormd.
 
@@ -42,7 +42,7 @@ Server-aan-server implementaties moeten de IP van hun cliënt adressen door:stur
 
 U kunt meer details op vinden hoe te om x-door:sturen-voor kopbal [ hier ](legacy/rest-api-v1/cookbooks/rest-api-cookbook-servertoserver.md) over te gaan.
 
-### Werkelijke grenswaarden en eindpunten
+### Werkelijke grenswaarden en eindpunten {#throttling-mechanism-limits}
 
 Momenteel, staat de standaardgrens een maximum van 1 verzoek per seconde toe, met een aanvankelijke uitbarsting van 10 verzoeken (eenmalig toelage op de eerste interactie van de geïdentificeerde cliënt, die initialisering zou moeten toestaan om met succes te beëindigen). Dit zou geen regelmatige bedrijfsgeval over al onze klanten moeten beïnvloeden.
 
@@ -77,27 +77,27 @@ Aangezien de cliënten die de Authentificatie gebruiken van Adobe Pass verstrekt
 
 #### setRequestor
 
-Wanneer de snelheidslimiet is bereikt met behulp van de functie `setRequestor` van de SDK, retourneert de SDK een CFG429-foutcode via `errorHandler` callback.
+Wanneer de snelheidslimiet is bereikt met behulp van de `setRequestor` -functie van de SDK, retourneert de SDK een CFG429-foutcode via `errorHandler` callback.
 
 #### getAuthorization
 
-Wanneer de vertragingslimiet is bereikt met behulp van de functie `getAuthorization` van de SDK, retourneert de SDK een Z100-foutcode via `errorHandler` callback.
+Wanneer de snelheidslimiet is bereikt met behulp van de `getAuthorization` -functie van de SDK, retourneert de SDK een Z100-foutcode via `errorHandler` callback.
 
 #### checkPreauthorisedResources
 
-Wanneer de snelheidslimiet is bereikt met behulp van de functie `checkPreauthorizedResources` van de SDK, retourneert de SDK een P100-foutcode via de `errorHandler` callback.
+Wanneer de snelheidslimiet is bereikt met behulp van de `checkPreauthorizedResources` -functie van de SDK, retourneert de SDK een P100-foutcode via `errorHandler` callback.
 
 #### getMetadata
 
-Wanneer de snelheidslimiet is bereikt met behulp van de functie `getMetadata` van de SDK, retourneert de SDK een lege reactie via `setMetadataStatus` callback.
+Wanneer de snelheidslimiet is bereikt met behulp van de `getMetadata` -functie van de SDK, retourneert de SDK een lege reactie via `setMetadataStatus` callback.
 
-Raadpleeg de specifieke SDK-documentatie voor elke specifieke implementatiedetails.
+Raadpleeg de specifieke documentatie van SDK voor elke specifieke implementatiedetails.
 
 - [JavaScript SDK API-naslag](legacy/sdks/javascript-sdk/javascript-sdk-api-reference.md)
 - [Android SDK API-naslag](legacy/sdks/android-sdk/android-sdk-api-reference.md)
 - [iOS/tvOS API-naslaggids](legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md)
 
-### Wijzigingen in API-reactie en reactie
+### Wijzigingen in API-reactie en reactie {#throttling-mechanism-response}
 
 Wanneer wij identificeren dat de grens wordt geschonden, zullen wij dit verzoek met een specifieke reactiestatus (HTTP 429 Te Vele Verzoeken) merken, die dat u alle tokens hebt verbruikt die aan het gebruikersapparaat (IP adres) voor het tijdinterval worden toegewezen.
 

@@ -2,9 +2,9 @@
 title: Basisprofielen - primaire toepassing - Stroom
 description: REST API V2 - Basisprofielen - Primaire toepassing - Stroom
 exl-id: 19ddf382-9a32-4b94-aa84-7611c0e1780e
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '974'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,10 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 > De implementatie van REST API V2 wordt begrensd door de [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
+
+>[!MORELIKETHIS]
+>
+> Zorg ervoor om [ REST API V2 FAQs ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general) ook te bezoeken.
 
 De **stroom van Profielen** binnen de rechten van de Authentificatie van Adobe Pass staat de het stromen toepassing toe om tot informatie over actieve gebruikerslogins toegang te hebben.
 
@@ -81,17 +85,17 @@ Volg de gegeven stappen om de basisprofielen uit te voeren terugwinningsstroom d
 
 Voordat u het profiel voor een specifieke MVPD ophaalt, moet u controleren of aan de volgende voorwaarden is voldaan:
 
-* De streamingtoepassing, die een geselecteerde of in cache geplaatste `mvpd` id heeft, wil het reguliere profiel voor een specifieke MVPD ophalen.
+* De streamingtoepassing, die een geselecteerde of in cache opgeslagen `mvpd` -id heeft, wil het standaardprofiel voor een specifieke MVPD ophalen.
 
 ### Workflow {#workflow-retrieve-profile-for-specific-mvpd}
 
-Volg de gegeven stappen om de basisstroom van de profielterugwinning voor een specifieke MVPD uit te voeren die binnen een primaire toepassing zoals aangetoond in het volgende diagram wordt uitgevoerd.
+Volg de gegeven stappen om de basisstroom van de profielherwinning voor een specifieke MVPD uit te voeren die binnen een primaire toepassing zoals aangetoond in het volgende diagram wordt uitgevoerd.
 
 ![ wint profiel voor specifieke mvpd terug ](../../../../../assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-retrieve-profile-within-primary-application-for-specific-mvpd.png)
 
 *wint profiel voor specifieke mvpd terug*
 
-1. **wint profiel voor specifieke mvpd terug:** de het stromen toepassing verzamelt alle noodzakelijke gegevens om profielinformatie voor dat specifieke MVPD terug te winnen door een verzoek naar het eindpunt van Profielen te verzenden.
+1. **wint profiel voor specifieke mvpd terug:** de het stromen toepassing verzamelt alle noodzakelijke gegevens om profielinformatie voor die specifieke MVPD terug te winnen door een verzoek naar het eindpunt van Profielen te verzenden.
 
    >[!IMPORTANT]
    >

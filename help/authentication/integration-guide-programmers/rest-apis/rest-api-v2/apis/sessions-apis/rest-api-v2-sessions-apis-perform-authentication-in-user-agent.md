@@ -2,9 +2,9 @@
 title: Verificatie uitvoeren in gebruikersagent
 description: REST API V2 - Verificatie uitvoeren in gebruikersagent
 exl-id: d615dde0-71a8-4b6c-a12e-1e3b5e20728c
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '240'
 ht-degree: 1%
 
 ---
@@ -18,6 +18,10 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 > De implementatie van REST API V2 wordt begrensd door de [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
+
+>[!MORELIKETHIS]
+>
+> Zorg ervoor om [ REST API V2 FAQs ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general) ook te bezoeken.
 
 ## Verzoek {#request}
 
@@ -76,7 +80,7 @@ ht-degree: 1%
       <td>302</td>
       <td>Gevonden</td>
       <td>
-        Het reactielichaam bevat een plaats die wordt omgeleid om de stroom tot het bereiken van de MVPD login pagina voort te zetten
+        De hoofdtekst van de reactie bevat een locatie die wordt omgeleid om door te gaan met de stroom tot de MVPD-aanmeldingspagina is bereikt
       </td>
    </tr>
    <tr>

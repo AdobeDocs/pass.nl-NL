@@ -2,9 +2,9 @@
 title: Basisprofielen - secundaire toepassing - Stroom
 description: REST API V2 - Basisprofielen - Secundaire toepassing - Stroom
 exl-id: 1fcefcfa-7534-4b85-b3b5-df513685d66b
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '418'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,10 @@ ht-degree: 0%
 >
 > De implementatie van REST API V2 wordt begrensd door de [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
 
+>[!MORELIKETHIS]
+>
+> Zorg ervoor om [ REST API V2 FAQs ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general) ook te bezoeken.
+
 De **stroom van Profielen** binnen de rechten van de Authentificatie van Adobe Pass staat de secundaire toepassing toe om tot informatie over actieve gebruikerslogins toegang te hebben.
 
 De basis profielstroom staat u toe om voor de volgende scenario&#39;s te vragen:
@@ -31,7 +35,7 @@ De basis profielstroom staat u toe om voor de volgende scenario&#39;s te vragen:
 
 Voordat u het profiel voor een specifieke verificatiecode ophaalt, moet u controleren of aan de volgende voorwaarden is voldaan:
 
-* De secundaire toepassing, die een `code` heeft die wordt gebruikt om de interactieve authentificatie met MVPD uit te voeren, wil het profiel voor een specifieke authentificatiecode terugwinnen.
+* De secundaire toepassing, die een `code` heeft waarmee de interactieve verificatie met de MVPD wordt uitgevoerd, wil het profiel voor een specifieke verificatiecode ophalen.
 
 ### Workflow {#workflow-retrieve-profile-for-specific-code}
 

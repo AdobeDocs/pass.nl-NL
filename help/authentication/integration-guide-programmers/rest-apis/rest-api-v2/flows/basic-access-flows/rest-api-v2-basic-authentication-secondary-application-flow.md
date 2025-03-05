@@ -2,9 +2,9 @@
 title: Basisverificatie - Secundaire toepassing - Stroom
 description: REST API V2 - Basisverificatie - Secundaire toepassing - Stroom
 exl-id: 83bf592e-c679-4cfe-984d-710a9598c620
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
 workflow-type: tm+mt
-source-wordcount: '2000'
+source-wordcount: '2010'
 ht-degree: 0%
 
 ---
@@ -19,20 +19,24 @@ ht-degree: 0%
 >
 > De implementatie van REST API V2 wordt begrensd door de [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
 
-De **stroom van de Authentificatie** binnen de rechten van de Authentificatie van Adobe Pass staat de het stromen toepassing toe om te verifiëren dat een gebruiker een geldige rekening MVPD heeft. Dit proces vereist de gebruiker om een actieve rekening te hebben MVPD en geldige login geloofsbrieven op de MVPD login pagina in te gaan.
+>[!MORELIKETHIS]
+>
+> Zorg ervoor om [ REST API V2 FAQs ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general) ook te bezoeken.
+
+De **stroom van de Authentificatie** binnen de rechten van de Authentificatie van Adobe Pass staat de het stromen toepassing toe om te verifiëren dat een gebruiker een geldige rekening van MVPD heeft. Voor dit proces moet de gebruiker een actieve MVPD-account hebben en geldige aanmeldingsgegevens invoeren op de MVPD-aanmeldingspagina.
 
 Verificatiestroom is vereist in de volgende gevallen:
 
 * Wanneer de gebruiker een toepassing voor de eerste keer opent.
 * Wanneer de vorige verificatie van de gebruiker is verlopen.
 * Wanneer de gebruiker zich afmeldt bij de MVPD-account.
-* Wanneer de gebruiker met een verschillende MVPD wil voor authentiek verklaren.
+* Wanneer de gebruiker wil verifiëren met een andere MVPD.
 
 In al deze gevallen ontvangt de toepassing die een van de eindpunten van Profielen aanroept, een lege reactie of een of meer profielen, maar voor verschillende MVPD&#39;s.
 
-De **stroom van de Authentificatie** vereist een gebruikersagent (browser) om een reeks vraag van de toepassing aan Adobe Pass achterste, toen aan MVPD login pagina, en definitief terug naar de toepassing te voltooien. Deze stroom kan verscheidene omleidingen aan systemen omvatten MVPD en het beheren van koekjes of zittingen die voor elk domein worden opgeslagen, die kunnen zijn moeilijk te bereiken en zonder een gebruikersagent te beveiligen.
+De **stroom van de Authentificatie** vereist een gebruikersagent (browser) om een reeks vraag van de toepassing aan Adobe Pass achterste, toen aan de login van MVPD pagina, en definitief terug naar de toepassing te voltooien. Deze stroom kan verscheidene omleidingen aan de systemen van MVPD omvatten en het beheren van koekjes of zittingen die voor elk domein worden opgeslagen, die kunnen zijn moeilijk te bereiken en zonder een gebruikersagent te beveiligen.
 
-Gebaseerd op de primaire toepassings (het stromen toepassing) mogelijkheden om gebruikersinteractie te steunen om een MVPD te selecteren en met geselecteerde MVPD in een gebruikersagent voor authentiek te verklaren, zijn de authentificatiescenario&#39;s:
+Gebaseerd op de primaire toepassingsmogelijkheden (het stromen toepassing) om gebruikersinteractie te steunen om een MVPD te selecteren en met de geselecteerde MVPD in een gebruikersagent voor authentiek te verklaren, zijn de authentificatiescenario&#39;s:
 
 * [Verificatie uitvoeren binnen primaire toepassing](rest-api-v2-basic-authentication-primary-application-flow.md)
 * [Verificatie uitvoeren binnen secundaire toepassing met vooraf geselecteerde mvpd](./rest-api-v2-basic-authentication-secondary-application-flow.md)
@@ -46,7 +50,7 @@ Alvorens de authentificatiestroom binnen een primaire toepassing te beginnen en 
 
 * De streamingtoepassing moet een MVPD selecteren.
 * De streamingtoepassing moet een verificatiesessie starten om u aan te melden bij de geselecteerde MVPD.
-* De secundaire toepassing moet met geselecteerde MVPD in een gebruikersagent voor authentiek verklaren.
+* De secundaire toepassing moet met de geselecteerde MVPD in een gebruikersagent voor authentiek verklaren.
 
 >[!IMPORTANT]
 >
@@ -54,12 +58,12 @@ Alvorens de authentificatiestroom binnen een primaire toepassing te beginnen en 
 >
 > <br/>
 > 
-> * De streamingtoepassing ondersteunt gebruikersinteractie om een MVPD te selecteren.
+> * De streamingtoepassing ondersteunt gebruikersinteractie bij het selecteren van een MVPD.
 > * De secundaire toepassing (gewoonlijk op een secundair apparaat) steunt gebruikersinteractie om met geselecteerde MVPD in een gebruikersagent voor authentiek te verklaren.
 
 ### Workflow {#workflow-perform-authentication-within-secondary-application-with-preselected-mvpd}
 
-Volg de gegeven stappen om de basisauthentificatiestroom uit te voeren die binnen een secundaire toepassing met vooraf verkozen MVPD zoals aangetoond in het volgende diagram wordt uitgevoerd.
+Volg de gegeven stappen om de basisauthentificatiestroom uit te voeren die binnen een secundaire toepassing met vooraf geselecteerde MVPD zoals aangetoond in het volgende diagram wordt uitgevoerd.
 
 ![ voer authentificatie binnen secundaire toepassing met vooraf geselecteerde mvpd uit ](../../../../../assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-perform-authentication-within-secondary-application-with-preselected-mvpd.png)
 
@@ -109,7 +113,7 @@ Volg de gegeven stappen om de basisauthentificatiestroom uit te voeren die binne
 
    Als de Adobe Pass-backend geen geldig profiel herkent, wordt in de streamingtoepassing de `code` weergegeven die kan worden gebruikt om de verificatiesessie in een secundaire toepassing te hervatten.
 
-1. **bevestigt authentificatiecode:** de secundaire toepassing bevestigt de verstrekte gebruiker `code` om ervoor te zorgen het met authentificatie MVPD in gebruikersagent kan te werk gaan.
+1. **bevestigt authentificatiecode:** de secundaire toepassing bevestigt de verstrekte gebruiker `code` om ervoor te zorgen het met de authentificatie van MVPD in gebruikersagent kan te werk gaan.
 
    >[!IMPORTANT]
    >
@@ -141,7 +145,7 @@ Volg de gegeven stappen om de basisauthentificatiestroom uit te voeren die binne
    >
    > Suggestie: de secundaire toepassing kan gebruikers informeren dat de gebruikte `code` ongeldig is in het geval van een foutreactie die een ontbrekende verificatiesessie aangeeft, en hen adviseren opnieuw te proberen met een nieuwe.
 
-1. **Open URL in gebruikersagent:** De secundaire toepassing opent een gebruikersagent om het zelf gegevens verwerkte `url` te laden, die een verzoek aan het Authenticate eindpunt doet. Deze stroom kan verscheidene omleidingen omvatten, die uiteindelijk de gebruiker aan de MVPD login pagina leiden en geldige geloofsbrieven verstrekken.
+1. **Open URL in gebruikersagent:** De secundaire toepassing opent een gebruikersagent om het zelf gegevens verwerkte `url` te laden, die een verzoek aan het Authenticate eindpunt doet. Deze stroom kan verschillende omleidingen bevatten, die de gebruiker uiteindelijk naar de MVPD-aanmeldingspagina leiden en geldige gegevens bieden.
 
    >[!IMPORTANT]
    >
@@ -150,7 +154,7 @@ Volg de gegeven stappen om de basisauthentificatiestroom uit te voeren die binne
    > * Alle _vereiste_ parameters, als `serviceProvider` en `code`
    > * Alle _facultatieve_ parameters en kopballen
 
-1. **Volledige authentificatie MVPD:** als de authentificatiestroom succesvol is, slaat de gebruikersagent interactie een regelmatig profiel in Adobe Pass achterkant op en bereikt verstrekte `redirectUrl`.
+1. **Volledige authentificatie van MVPD:** als de authentificatiestroom succesvol is, slaat de gebruikersagent interactie een regelmatig profiel in Adobe Pass achterste op en bereikt verstrekte `redirectUrl`.
 
 1. **wint profiel voor specifieke code terug:** de het stromen toepassing verzamelt alle noodzakelijke gegevens om profielinformatie terug te winnen door een verzoek naar het eindpunt van Profielen te verzenden.
 
@@ -190,7 +194,7 @@ Alvorens de authentificatiestroom binnen een primaire toepassing te beginnen en 
 
 * De streamingtoepassing moet een verificatiesessie starten wanneer deze zich moet aanmelden.
 * De secundaire toepassing moet een MVPD selecteren.
-* De secundaire toepassing moet met geselecteerde MVPD in een gebruikersagent voor authentiek verklaren.
+* De secundaire toepassing moet met de geselecteerde MVPD in een gebruikersagent voor authentiek verklaren.
 
 >[!IMPORTANT]
 >
@@ -203,7 +207,7 @@ Alvorens de authentificatiestroom binnen een primaire toepassing te beginnen en 
 
 ### Workflow {#workflow-perform-authentication-within-secondary-application-without-preselected-mvpd}
 
-Volg de gegeven stappen om de basisauthentificatiestroom uit te voeren die binnen een secundaire toepassing zonder vooraf verkozen MVPD zoals aangetoond in het volgende diagram wordt uitgevoerd.
+Volg de gegeven stappen om de basisauthentificatiestroom uit te voeren die binnen een secundaire toepassing zonder vooraf geselecteerde MVPD zoals aangetoond in het volgende diagram wordt uitgevoerd.
 
 ![ voer authentificatie binnen secundaire toepassing zonder vooraf geselecteerde mvpd uit ](../../../../../assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-perform-authentication-within-secondary-application-without-preselected-mvpd.png)
 
@@ -282,13 +286,13 @@ Volg de gegeven stappen om de basisauthentificatiestroom uit te voeren die binne
    Als de Adobe Pass-backend een geldig profiel identificeert, hoeft de streamingtoepassing niet opnieuw te worden geverifieerd met de geselecteerde MVPD, omdat er al een profiel is dat kan worden gebruikt voor volgende beslissingsstromen.
 
 1. **Open URL in gebruikersagent:** De reactie van het eindpunt van zittingen bevat de volgende gegevens:
-   * `url` die kan worden gebruikt om de interactieve authentificatie binnen de MVPD login pagina in werking te stellen.
+   * De `url` die kan worden gebruikt om de interactieve verificatie te starten op de MVPD-aanmeldingspagina.
    * Het kenmerk `actionName` is ingesteld op &quot;authenticate&quot;.
    * Het attribuut `actionType` wordt ingesteld op &quot;interactive&quot;.
 
-   Als de Adobe Pass backend geen geldig profiel identificeert, opent de secundaire toepassing een gebruikersagent om verstrekte `url` te laden, die een verzoek aan het Authenticate eindpunt doet. Deze stroom kan verscheidene omleidingen omvatten, die uiteindelijk de gebruiker aan de MVPD login pagina leiden en geldige geloofsbrieven verstrekken.
+   Als de Adobe Pass backend geen geldig profiel identificeert, opent de secundaire toepassing een gebruikersagent om verstrekte `url` te laden, die een verzoek aan het Authenticate eindpunt doet. Deze stroom kan verschillende omleidingen bevatten, die de gebruiker uiteindelijk naar de MVPD-aanmeldingspagina leiden en geldige gegevens bieden.
 
-1. **Volledige authentificatie MVPD:** als de authentificatiestroom succesvol is, slaat de gebruikersagent interactie een regelmatig profiel in de Adobe Pass achterkant op en bereikt verstrekte `redirectUrl`.
+1. **Volledige authentificatie van MVPD:** als de authentificatiestroom succesvol is, slaat de gebruikersagent interactie een regelmatig profiel in de achtergrond van Adobe Pass op en bereikt verstrekte `redirectUrl`.
 
 1. **wint profiel voor specifieke code terug:** de het stromen toepassing verzamelt alle noodzakelijke gegevens om profielinformatie terug te winnen door een verzoek naar het eindpunt van Profielen te verzenden.
 

@@ -2,9 +2,9 @@
 title: Single Logout, Flow
 description: REST API V2 - Single Logout - Flow
 exl-id: d7092ca7-ea7b-4e92-b45f-e373a6d673d6
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '587'
 ht-degree: 0%
 
 ---
@@ -19,16 +19,20 @@ ht-degree: 0%
 >
 > De implementatie van REST API V2 wordt begrensd door de [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
 
+>[!MORELIKETHIS]
+>
+> Zorg ervoor om [ REST API V2 FAQs ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general) ook te bezoeken.
+
 ## Eén aanmelding voor specifieke mvpd starten {#initiate-single-logout-for-specific-mvpd}
 
 ### Vereisten {#prerequisites-initiate-single-logout-for-specific-mvpd}
 
-Alvorens enige logout voor een specifieke MVPD in werking te stellen, zorg ervoor dat aan de volgende voorwaarden wordt voldaan:
+Voordat u een eenmalige aanmelding voor een specifieke MVPD start, moet u controleren of aan de volgende voorwaarden is voldaan:
 
-* De tweede streamingtoepassing moet een geldig Single Sign-On-profiel hebben dat is gemaakt voor de MVPD met één van de Single Sign-On verificatiestromen:
+* De tweede streamingtoepassing moet een geldig Single Sign-On-profiel hebben dat is gemaakt voor de MVPD met behulp van een van de Single Sign-On verificatiestromen:
    * [Verificatie uitvoeren via Single Sign-On met behulp van platformidentiteit](rest-api-v2-single-sign-on-platform-identity-flows.md)
    * [Verificatie uitvoeren via Single Sign-On met gebruik van servicetoken](rest-api-v2-single-sign-on-service-token-flows.md)
-* De tweede het stromen toepassing moet de enige logout stroom in werking stellen wanneer het uit MVPD moet ondertekenen.
+* De tweede streamingtoepassing moet de enige logout-flow starten wanneer deze zich moet afmelden bij de MVPD.
 
 >[!IMPORTANT]
 > 
@@ -89,9 +93,9 @@ Voer de gegeven stappen uit om de enige logout stroom voor een specifieke MVPD z
    > 
    > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
-1. **wijs logout volledig op:** als MVPD niet de logout stroom steunt, verwerkt de het stromen toepassing de reactie en kan het naar keuze gebruiken om een specifiek bericht op het gebruikersinterface te tonen.
+1. **wijs logout volledig op:** als MVPD niet de logout stroom steunt, verwerkt de het stromen toepassing de reactie en kan het gebruiken om naar keuze een specifiek bericht op het gebruikersinterface te tonen.
 
-1. **initieert MVPD logout:** als MVPD de logout stroom steunt, verwerkt de het stromen toepassing de reactie en gebruikt een gebruikersagent om de logout stroom met MVPD in werking te stellen. De stroom kan verscheidene omleidingen aan systemen omvatten MVPD. Toch is het resultaat dat de MVPD zijn interne schoonmaak uitvoert en de definitieve logout bevestiging terug naar de Adobe Pass backend verzendt.
+1. **initieert MVPD logout:** als MVPD de logout stroom steunt, verwerkt de het stromen toepassing de reactie en gebruikt een gebruikersagent om de logout stroom met MVPD in werking te stellen. De stroom kan verschillende omleidingen naar MVPD-systemen bevatten. Toch is het resultaat dat de MVPD zijn interne schoonmaak uitvoert en de laatste logout bevestiging terugstuurt naar de Adobe Pass backend.
 
 1. **wijs logout volledig op:** de het stromen toepassing kan op de gebruikersagent wachten om verstrekte `redirectUrl` te bereiken en kan het als signaal gebruiken om naar keuze een specifiek bericht op het gebruikersinterface te tonen.
 

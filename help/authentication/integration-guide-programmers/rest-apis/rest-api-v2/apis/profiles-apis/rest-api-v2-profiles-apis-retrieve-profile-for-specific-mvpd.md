@@ -2,9 +2,9 @@
 title: Profiel ophalen voor specifieke mvpd
 description: REST API V2 - Profiel ophalen voor specifieke mvpd
 exl-id: ed1abc33-c279-4465-b5a0-b4e5b892076e
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1016'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,10 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 > De implementatie van REST API V2 wordt begrensd door de [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
+
+>[!MORELIKETHIS]
+>
+> Zorg ervoor om [ REST API V2 FAQs ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general) ook te bezoeken.
 
 ## Verzoek {#request}
 
@@ -92,7 +96,7 @@ ht-degree: 0%
       <td>optioneel</td>
    </tr>
    <tr>
-      <td style="background-color: #DEEBFF;">Adobe-Onderwerptoken</td>
+      <td style="background-color: #DEEBFF;">Adobe-Subject-Token</td>
       <td>
         De generatie van enige sign-on lading voor de methode van de Identiteit van het Platform wordt beschreven in <a href="../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md"> Adobe-Onderwerp-Symbolische </a> kopbaldocumentatie.
         <br/><br/>
@@ -171,7 +175,7 @@ ht-degree: 0%
       <td>403</td>
       <td>Verboden</td>
       <td>
-        De tijdelijke toegangstijd-aan-levende (TTL) is verlopen of het maximumaantal middelen wordt overschreden, moet de cliënt op de gebruiker wijzen om een basisauthentificatiestroom in werking te stellen gebruikend een regelmatige MVPD. Het reactielichaam kan fouteninformatie bevatten die aan de <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md"> Verbeterde documentatie van de Codes van de Fout </a> volgt.
+        De tijdelijke toegangstijd-aan-levende (TTL) is verlopen of het maximumaantal middelen wordt overschreden, moet de cliënt de gebruiker aangeven om een basisauthentificatiestroom in werking te stellen gebruikend een regelmatige MVPD. Het reactielichaam kan fouteninformatie bevatten die aan de <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md"> Verbeterde documentatie van de Codes van de Fout </a> volgt.
       </td>
    </tr>
    <tr>

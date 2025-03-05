@@ -2,9 +2,9 @@
 title: Single Sign On - Service Token - Flows
 description: REST API V2 - Single Sign On - Service Token - Flows
 exl-id: b0082d2a-e491-4cb5-bb40-35ba10db6b1a
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
 workflow-type: tm+mt
-source-wordcount: '1848'
+source-wordcount: '1858'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,10 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 > De implementatie van REST API V2 wordt begrensd door de [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
+
+>[!MORELIKETHIS]
+>
+> Zorg ervoor om [ REST API V2 FAQs ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general) ook te bezoeken.
 
 Met de methode Servicetokken kunnen meerdere toepassingen een unieke gebruikersnaam gebruiken om SSO (Single Sign-On) op meerdere apparaten en platforms te bereiken bij het gebruik van Adobe Pass-services.
 
@@ -38,9 +42,9 @@ Alvorens de authentificatiestroom door enig teken-binnen uit te voeren gebruiken
 
 * De externe identiteitsservice moet consistente informatie retourneren als `JWS` lading in alle toepassingen op meerdere apparaten en platforms.
 * De eerste het stromen toepassing moet het unieke gebruikersidentificatie terugwinnen en `JWS` nuttige lading als deel van [ a.u.b.-dienst-Symbolische ](../../appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md) kopbal voor alle verzoeken omvatten die het specificeren.
-* De eerste het stromen toepassing moet een MVPD selecteren.
+* De eerste streamingtoepassing moet een MVPD selecteren.
 * De eerste streamingtoepassing moet een verificatiesessie starten om u aan te melden bij de geselecteerde MVPD.
-* De eerste het stromen toepassing moet met geselecteerde MVPD in een gebruikersagent voor authentiek verklaren.
+* De eerste streamingtoepassing moet worden geverifieerd met de geselecteerde MVPD in een gebruikersagent.
 * De tweede het stromen toepassing moet het unieke gebruikersidentificatie terugwinnen en `JWS` nuttige lading als deel van [ a.u.b.-dienst-Symbolische ](../../appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md) kopbal voor alle verzoeken omvatten die het specificeren.
 
 >[!IMPORTANT]
@@ -49,8 +53,8 @@ Alvorens de authentificatiestroom door enig teken-binnen uit te voeren gebruiken
 > 
 > <br/>
 > 
-> * De eerste het stromen toepassing steunt gebruikersinteractie om een MVPD te selecteren.
-> * De eerste het stromen toepassing steunt gebruikersinteractie om met geselecteerde MVPD in een gebruikersagent voor authentiek te verklaren.
+> * De eerste streamingtoepassing ondersteunt gebruikersinteractie bij het selecteren van een MVPD.
+> * De eerste streamingtoepassing ondersteunt gebruikersinteractie voor verificatie met de geselecteerde MVPD in een gebruikersagent.
 
 ### Workflow {#workflow-steps-scenario-performing-authentication-flow-using-service-token-single-sign-on-method}
 
@@ -102,13 +106,13 @@ Voer de bepaalde stappen uit om de authentificatiestroom door enige sign-on uit 
    > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
 1. **Open URL in gebruikersagent:** De reactie van het eindpunt van zittingen bevat de volgende gegevens:
-   * `url` die kan worden gebruikt om de interactieve authentificatie binnen de MVPD login pagina in werking te stellen.
+   * De `url` die kan worden gebruikt om de interactieve verificatie te starten op de MVPD-aanmeldingspagina.
    * Het kenmerk `actionName` is ingesteld op &quot;authenticate&quot;.
    * Het attribuut `actionType` wordt ingesteld op &quot;interactive&quot;.
 
-   Als de Adobe Pass-backend geen geldig profiel identificeert, opent de eerste streamingtoepassing een gebruikersagent om de opgegeven `url` te laden, die een aanvraag doet voor het verificateurseindpunt. Deze stroom kan verscheidene omleidingen omvatten, die uiteindelijk de gebruiker aan de MVPD login pagina leiden en geldige geloofsbrieven verstrekken.
+   Als de Adobe Pass-backend geen geldig profiel identificeert, opent de eerste streamingtoepassing een gebruikersagent om de opgegeven `url` te laden, die een aanvraag doet voor het verificateurseindpunt. Deze stroom kan verschillende omleidingen bevatten, die de gebruiker uiteindelijk naar de MVPD-aanmeldingspagina leiden en geldige gegevens bieden.
 
-1. **Volledige authentificatie MVPD:** als de authentificatiestroom succesvol is, slaat de gebruikersagent interactie een regelmatig profiel in de Adobe Pass achterkant op en bereikt verstrekte `redirectUrl`.
+1. **Volledige authentificatie van MVPD:** als de authentificatiestroom succesvol is, slaat de gebruikersagent interactie een regelmatig profiel in de achtergrond van Adobe Pass op en bereikt verstrekte `redirectUrl`.
 
 1. **wint profiel voor specifieke code terug:** de eerste het stromen toepassing verzamelt alle noodzakelijke gegevens om profielinformatie terug te winnen door een verzoek naar het eindpunt van Profielen te verzenden.
 
@@ -256,7 +260,7 @@ Voer de gegeven stappen uit om de vergunningsstroom door enige sign-on uit te vo
 
 1. **vind enig sign-on profiel:** de server van Adobe Pass identificeert een geldig enig sign-on profiel dat op de ontvangen parameters en kopballen wordt gebaseerd.
 
-1. **wint MVPD besluit voor gevraagd middel terug:** de server van Adobe Pass roept het MVPD vergunningseindpunt om een `Permit` of `Deny` besluit voor het specifieke middel te verkrijgen dat van de het stromen toepassing wordt ontvangen.
+1. **wint het besluit van MVPD voor gevraagde middel terug:** de server van Adobe Pass roept het de vergunningseindpunt van MVPD om een `Permit` of `Deny` besluit voor het specifieke middel te verkrijgen dat van de het stromen toepassing wordt ontvangen.
 
 1. **Terugkeer `Permit` besluit met media teken:** de Besluiten staan eindpuntreactie toe bevat een `Permit` besluit en een media teken.
 
