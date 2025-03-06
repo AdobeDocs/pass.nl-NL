@@ -2,7 +2,7 @@
 title: Koptekst - AD-Service-token
 description: REST API V2 - Koptekst - AD-service-token
 exl-id: 856f76fc-cde6-4b3f-81f7-deaa0df015dc
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 81d3c3835d2e97e28c2ddb9c72d1a048a25ad433
 workflow-type: tm+mt
 source-wordcount: '252'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Voor meer details over enige sign-on (SSO) toegelaten stromen leveraging de Symb
 
 ## Syntaxis {#syntax}
 
-<table>
+<table style="table-layout:auto">
    <tr>
       <td style="background-color: #DEEBFF;" colspan="2"><b> AD-dienst-Symbolisch </b>: &lt;unique_user_identifier&gt;</td>
    </tr>
@@ -47,7 +47,7 @@ De handtekening van JSON-web (`JWS`) die een ondertekend JSON-webtoken (`JWT` ) 
 
 De `JWT` heeft de volgende kenmerken:
 
-<table>
+<table style="table-layout:auto">
    <tr>
       <th style="background-color: #EFF2F7; width: 15%;">Kenmerk</th>
       <th style="background-color: #EFF2F7;">Beschrijving</th>

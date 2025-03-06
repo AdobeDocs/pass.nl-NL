@@ -1,15 +1,15 @@
 ---
-title: Koptekst - Onderwerptoken voor Adobe
-description: REST API V2 - Koptekst - Onderwerptoken voor Adobe
+title: Header - Adobe-Subject-token
+description: REST API V2 - Koptekst - Adobe-Onderwerptoken
 exl-id: 906d88f4-3b8f-491a-ab58-8e63d3b958d8
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 81d3c3835d2e97e28c2ddb9c72d1a048a25ad433
 workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 0%
 
 ---
 
-# Koptekst - Onderwerptoken voor Adobe {#header-adobe-subject-token}
+# Header - Adobe-Subject-token {#header-adobe-subject-token}
 
 >[!NOTE]
 >
@@ -25,9 +25,9 @@ Voor meer details over enige sign-on (SSO) toegelaten stromen leveraging de meth
 
 ## Syntaxis {#syntax}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <td style="background-color: #DEEBFF;" colspan="2"><b> Adobe-Onderwerp-Token </b>: &lt;unique_platform_identifier&gt;</td>
+      <td style="background-color: #DEEBFF;" colspan="2"><b> Adobe-Subject-Token </b>: &lt;unique_platform_identifier&gt;</td>
    </tr>
    <tr>
       <td>Type koptekst</td>

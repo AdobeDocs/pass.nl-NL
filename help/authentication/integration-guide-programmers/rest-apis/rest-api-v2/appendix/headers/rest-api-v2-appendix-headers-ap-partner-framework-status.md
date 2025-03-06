@@ -2,7 +2,7 @@
 title: Koptekst - AP-Partner-Framework-Status
 description: REST API V2 - Koptekst - AP-Partner-Kader-Status
 exl-id: f589d948-e23e-43d4-81c2-8db0e7a40e93
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 81d3c3835d2e97e28c2ddb9c72d1a048a25ad433
 workflow-type: tm+mt
 source-wordcount: '388'
 ht-degree: 0%
@@ -21,7 +21,7 @@ De <b> AP-partner-kader-status </b> verzoekkopbal bevat statusinformatie die van
 
 ## Syntaxis {#syntax}
 
-<table>
+<table style="table-layout:auto">
    <tr>
       <td style="background-color: #DEEBFF;" colspan="2"><b> AP-Partner-Kader-Status </b>: &lt;partner_framework_status_information&gt;</td>
    </tr>
@@ -41,7 +41,7 @@ De <b> AP-partner-kader-status </b> verzoekkopbal bevat statusinformatie die van
 
 De `Base64-encoded` -waarde van het JSON-element dat de volgende kenmerken bevat:
 
-<table>
+<table style="table-layout:auto">
    <tr>
       <th style="background-color: #EFF2F7; width: 15%;">Kenmerk</th>
       <th style="background-color: #EFF2F7;"></th>
@@ -68,10 +68,10 @@ De `Base64-encoded` -waarde van het JSON-element dat de volgende kenmerken bevat
                   Dit is een opsomming met de volgende mogelijke waarden:
                   <br/>
                   <ul>
-                     <li>toegekend - De gebruiker heeft de toepassing toegang verleend tot abonnementsgegevens.</li>
-                     <li>afgewezen - De gebruiker heeft de toepassing de toegang tot abonnementsgegevens geweigerd.</li>
-                     <li>in behandeling - De gebruiker heeft er nog niet voor gekozen de toepassing toegang te verlenen tot abonnementsgegevens.</li>
-                     <li>notDetermined - De toepassing heeft geen toegang tot abonnementsgegevens.</li>
+                     <li><b> verleend </b><br/> de gebruiker stond de toepassing toe om tot abonnementinformatie toegang te hebben.</li>
+                     <li><b> ontkende </b><br/> de gebruiker de toepassing ontkende om tot abonnementinformatie toegang te hebben.</li>
+                     <li><b> hangende </b><br/> de gebruiker verkoos nog niet om de toepassing toe te staan om tot abonnementsinformatie toegang te hebben.</li>
+                     <li><b> nietDetermined </b><br/> de toepassing wordt niet toegestaan om tot abonnementsinformatie toegang te hebben.</li>
                   </ul>
                </td>
             </tr>

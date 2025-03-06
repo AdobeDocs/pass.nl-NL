@@ -2,9 +2,9 @@
 title: Koptekst - X-Apparaat-Info
 description: REST API V2 - Koptekst - X-apparaatinfo
 exl-id: 0ef25e06-86de-427a-a938-7ba3817f0d5e
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 81d3c3835d2e97e28c2ddb9c72d1a048a25ad433
 workflow-type: tm+mt
-source-wordcount: '1085'
+source-wordcount: '1122'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ De <b> x-apparaat-Info </b> verzoekkopbal bevat de cliëntinformatie (apparaat, 
 
 ## Syntaxis {#syntax}
 
-<table>
+<table style="table-layout:auto">
    <tr>
       <td style="background-color: #DEEBFF;" colspan="2"><b> x-apparaat-Info </b>: &lt;device_information&gt;</td>
    </tr>
@@ -41,7 +41,7 @@ De <b> x-apparaat-Info </b> verzoekkopbal bevat de cliëntinformatie (apparaat, 
 
 De `Base64-encoded` -waarde van het JSON-element dat ten minste de kenmerken bevat die zijn gemarkeerd als vereist door de volgende tabel.
 
-<table>
+<table style="table-layout:auto">
     <tr>
         <th style="background-color: #EFF2F7; width: 15%;">Aanwezigheid</th>
         <th style="background-color: #EFF2F7; width: 15%;">Sleutel</th>
@@ -721,3 +721,7 @@ De toepassingsinformatie kan als volgt worden samengesteld:
 | Sleutel | Source | Waarde (voorbeeld) |
 |---------------|-----------|-----------------|
 | applicationId | hardgecodeerd | REF30 |
+
+### Overige {#others}
+
+Voor apparaatplatforms die niet in de documentatie worden besproken, moet de clientinformatie (apparaat, verbinding en toepassing) worden gekoppeld aan alle beschikbare hardware- en besturingssysteemkenmerken (OS), die doorgaans in de hardware- en besturingssysteemhandleidingen van het apparaat worden vermeld.
