@@ -2,7 +2,7 @@
 title: Profiel ophalen voor specifieke code
 description: REST API V2 - Profiel ophalen voor specifieke code
 exl-id: d6ead7d5-de5f-4033-8115-980953a370c0
-source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
+source-git-commit: 7fdfd28e2aba0d201f19dc25757bbe37cebd8ffe
 workflow-type: tm+mt
 source-wordcount: '711'
 ht-degree: 0%
@@ -240,8 +240,8 @@ ht-degree: 0%
                     <br/><br/>
                     Deze kenmerken kunnen zijn:
                     <ul>
-                        <li>Verplicht, zoals 'userId'</li>
-                        <li>Niet-verplicht, zoals 'zip', 'familyId', 'maxRating', enz.</li>
+                        <li>Verplicht, zoals 'userID'</li>
+                        <li>Niet-verplicht, zoals 'zip', 'familyID', 'maxRating', enz.</li>
                     </ul>
                     De waarden voor de kenmerken kunnen zijn:
                     <ul>
@@ -318,21 +318,17 @@ Content-Type: application/json;charset=UTF-8
             "issuer": "Cablevision",
             "type": "regular",
             "attributes": {
-                "userId": {
+                "userID": {
                     "value": "BASE64_value_userId",
                     "state": "plain"
                 },
-                "householdId" : {
+                "householdID": {
                     "value": "BASE64_value_householdId",
                     "state": "plain"
                 },
-                "zip" : {
+                "zip": {
                     "value": "BASE64_value_zip",
                     "state": "enc"
-                },
-                "parental-controls" : {
-                    "value": BASE64_value_parental-controls,
-                    "state": "plain"
                 }
             }
         }
