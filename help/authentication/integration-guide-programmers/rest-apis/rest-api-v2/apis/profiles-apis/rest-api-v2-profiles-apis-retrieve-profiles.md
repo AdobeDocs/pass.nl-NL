@@ -2,7 +2,7 @@
 title: Profielen ophalen
 description: REST API V2 - Profielen ophalen
 exl-id: 72922aa8-95ca-48dc-8523-e335802fc366
-source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
+source-git-commit: 751ebec3372145dda318c8415be5676adb3f13b5
 workflow-type: tm+mt
 source-wordcount: '824'
 ht-degree: 0%
@@ -269,8 +269,8 @@ ht-degree: 0%
                     <br/><br/>
                     Deze kenmerken kunnen zijn:
                     <ul>
-                        <li>Verplicht, zoals 'userId'</li>
-                        <li>Niet-verplicht, zoals 'zip', 'familyId', 'maxRating', enz.</li>
+                        <li>Verplicht, zoals 'userID'</li>
+                        <li>Niet-verplicht, zoals 'zip', 'familyID', 'maxRating', enz.</li>
                     </ul>
                     De waarden voor de kenmerken kunnen zijn:
                     <ul>
@@ -349,31 +349,27 @@ Content-Type: application/json;charset=UTF-8
             "issuer": "Cablevision",
             "type": "regular",
             "attributes": {
-                "userId": {
+                "userID": {
                     "value": "BASE64_value_userId",
                     "state": "plain"
                 },
-                "householdId" : {
+                "householdID": {
                     "value": "BASE64_value_householdId",
                     "state": "plain"
                 },
-                "zip" : {
+                "zip": {
                     "value": "BASE64_value_zip",
                     "state": "enc"
-                },
-                "parental-controls" : {
-                    "value": BASE64_value_parental-controls,
-                    "state": "plain"
-                }          
+                }       
             }
         },
-        "Spectrum" : {
+        "Spectrum": {
             "notBefore": 1623943955,
             "notAfter": 1623951155,
             "issuer": "Spectrum",
             "type": "regular",
             "attributes": {
-                "userId": {
+                "userID": {
                     "value": "BASE64_value_userId",
                     "state": "plain"
                 }
@@ -437,7 +433,7 @@ Content-Type: application/json;charset=UTF-8
          "issuer": "Spectrum",
          "type": "regular",
          "attributes": {
-            "userId": {
+            "userID": {
                "value": "BASE64_value_userId",
                "state": "plain"
             }
@@ -501,7 +497,7 @@ Content-Type: application/json;charset=UTF-8
          "issuer": "Spectrum",
          "type": "regular",
          "attributes": {
-            "userId": {
+            "userID": {
                "value": "BASE64_value_userId",
                "state": "plain"
             }
