@@ -2,9 +2,9 @@
 title: Programmeringsintegratiegids
 description: Programmeringsintegratiegids
 exl-id: 51461caf-08ef-459e-b284-8f317f45e7b1
-source-git-commit: d8097b8419aa36140e6ff550714730059555fd14
+source-git-commit: 07bb12f7983f39b58e1b9795fdaa1bec4f68e674
 workflow-type: tm+mt
-source-wordcount: '2073'
+source-wordcount: '2119'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,9 @@ Voor Programmeurs, verstrekt de Authentificatie van Adobe Pass APIs als deel van
 
 * Premium-API&#39;s voor Adobe Pass-verificatie:
    * [Tijdcontrole-API opnieuw instellen](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md#reset-tempass-api-access)
+      * [Functie TempPass](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md)
    * [Verslechterings-API](/help/authentication/integration-guide-programmers/features-premium/degraded-access/degradation-feature.md#degradation-api-access)
+      * [Afbraakkenmerk](/help/authentication/integration-guide-programmers/features-premium/degraded-access/degradation-feature.md)
    * [Entitlement Service Monitoring API](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-api.md)
 
 ### Gevallen gebruiken {#use-cases}
@@ -323,4 +325,6 @@ Raadpleeg de volgende documenten voor meer informatie over rechten:
 
 * **[Tokens van Media](/help/authentication/integration-guide-programmers/features-standard/entitlements/media-tokens.md)**
 
-  Na een geslaagde autorisatie maakt Adobe Pass Authentication een mediatoken (&quot;kortstondig&quot;) die aan een succesvol afspeelverzoek is gekoppeld.
+  Na een geslaagde autorisatie maakt Adobe Pass Authentication een mediatoken (&quot;kortstondig&quot;) die aan een succesvol afspeelverzoek is gekoppeld en die ondersteuning biedt voor best practices van de branche voor het beperken van fraude (bijvoorbeeld &#39;streaming ripping&#39;).
+
+De time-to-live (&quot;TTL&quot;) waarden voor profielen en besluiten worden vastgesteld op basis van overeenkomsten tussen programmeurs en betaaltelevisieproviders, die het eens zijn over een waarde die het best alle betrokkenen ten goede komt.

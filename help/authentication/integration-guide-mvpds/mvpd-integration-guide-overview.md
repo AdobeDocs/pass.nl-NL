@@ -2,9 +2,9 @@
 title: MVPD-integratiegids
 description: MVPD-integratiegids
 exl-id: b918550b-96a8-4e80-af28-0a2f63a02396
-source-git-commit: 2b9a8ce374f7a73cd815e9735d672e5c9ba285cc
+source-git-commit: 07bb12f7983f39b58e1b9795fdaa1bec4f68e674
 workflow-type: tm+mt
-source-wordcount: '1265'
+source-wordcount: '1307'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 0%
 >
 > De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
-Deze integratiehandleiding is bedoeld voor Multi-channel Video Programming Distributors (MVPD&#39;s) die willen integreren met Adobe® Pass Authentication.
+Deze integratiegids is bedoeld voor Multi-channel Video Programming Distributors (MVPD&#39;s) die van plan zijn te integreren met Adobe® Pass Authentication.
 
 TVE Overal is een transformatief initiatief in de betaaltelevisieindustrie, waardoor abonnees toegang hebben tot de inhoud die zij al voor meerdere apparaten betalen, zowel thuis als onderweg. Voor betaaltelevisieaanbieders biedt TVE aanzienlijke mogelijkheden, waaronder het versterken van bestaande klantenrelaties en het openen van deuren voor nieuwe klanten. Deze kansen komen echter met uitdagingen.
 
 In het ecosysteem van TVE, **leveren de Programmers** de inhoud, terwijl **MVPDs** (Multichannel Video Programmerende Distributeurs) de klantengegevens nodig beheren om te verifiëren als de kijkers in aanmerking komende abonnees zijn. Hoewel de coördinatie van authenticatie en autorisatie met één programmeur hanteerbaar kan zijn, leidt dit met tientallen of zelfs honderden programmeurs tot aanzienlijke complexiteit.
 
-Dit is waar **Adobe® de Authentificatie van de pas** het proces vereenvoudigt. MVPD&#39;s hoeven slechts één gestroomlijnde integratie met Adobe Pass te implementeren om toegang te krijgen tot het hele TVE-ecosysteem. Het meegeleverde integratieframework versnelt de &#39;time-to-market&#39;, biedt een veilige omgeving om fraude te beperken en verbetert de gebruikerservaring door meer tv-inhoud op meerdere platforms te leveren.
+Dit is waar **Adobe® de Authentificatie van de Voldoende** het proces vereenvoudigt. MVPD&#39;s hoeven slechts één gestroomlijnde integratie met Adobe Pass te implementeren om toegang te krijgen tot het hele TVE-ecosysteem. Het meegeleverde integratieframework versnelt de &#39;time-to-market&#39;, biedt een veilige omgeving om fraude te beperken en verbetert de gebruikerservaring door meer tv-inhoud op meerdere platforms te leveren.
 
 ## Adobe Pass-verificatie voor tv overal {#adobe-pass-authentication-for-tv-everywhere}
 
@@ -32,11 +32,11 @@ De Authentificatie van Adobe Pass werkt als oplossing SaaS (Software als Dienst)
 Adobe Pass Authentication is volledig in overeenstemming met de opkomende standaarden en protocollen voor TV Anywhere (TVE), die naadloze integratie en naleving in het ecosysteem ondersteunen.
 
 * **CableLabs OLCA (Online Toegang van de Inhoud) Specificatie**\
-  Adobe Pass Authentication volgt de CableLabs OLCA-specificatie, die de technische vereisten en architectuur definieert voor het leveren van video-inhoud van online bronnen aan betaaltelevisieklanten. Adobe nam actief deel aan het project voor het testen van de interoperabiliteit van CableLabs in juni 2011, dat met succes het testproces voor een implementatie van de Dienstverlener overging.
+  Adobe Pass Authentication volgt de CableLabs OLCA-specificatie, die de technische vereisten en architectuur definieert voor het leveren van video-inhoud van online bronnen aan betaaltelevisieklanten. Adobe heeft actief deelgenomen aan het project voor het testen van de interoperabiliteit van CableLabs in juni 2011, en heeft met succes het testproces voor een implementatie van de Dienstverlener goedgekeurd.
 
 De Authentificatie van Adobe Pass is ontworpen om veelvoudige protocollen (b.v., SAML, OAuth 2.0, enz.) te steunen, deze flexibiliteit die voor toekomstige uitbreidingen, met inbegrip van douaneprotocollen, op evoluerende behoeften wordt gebaseerd.
 
-De meeste integraties gebruiken het SAML (de Taal van de Prijsverhoging van de Bevestiging van de Veiligheid) protocol, een primaire norm voor authentificatie. De Authentificatie van Adobe Pass doet dienst als volmachtsdienstverlener binnen het kader van SAML, die de authentificatiereactie van SAML als veilig teken in het gemeenschappelijke domein van de Adobe voortduurt.
+De meeste integraties gebruiken het SAML (de Taal van de Prijsverhoging van de Bevestiging van de Veiligheid) protocol, een primaire norm voor authentificatie. De Authentificatie van Adobe Pass doet dienst als volmachtsdienstverlener binnen het kader van SAML, die de authentificatiereactie van SAML als veilig teken in het gemeenschappelijke domein van Adobe voortduurt.
 
 Op de onderste regel is Adobe Pass Authentication protocol-agnostic, ontworpen om nauw te worden afgestemd op OLCA-standaarden. Deze normen vestigen een gemeenschappelijk kader voor Programmers, MVPDs, en Dienstverleners, die een samenhangende benadering van het uitvoeren van de eigenschappen van TVE verzekeren.
 
@@ -53,10 +53,10 @@ Adobe Pass Authentication werkt als volgt samen met de technische teams van MVPD
 Adobe Pass Authentication biedt ondersteuning voor de efficiënte verwerking van MVPD-bedrijfslogica, als volgt:
 
 * **Zelfstandige BedrijfsLogica**\
-  Voor bedrijfslogica die volledig door MVPD tijdens vergunningsverzoeken wordt afgedwongen, verstrekt de Adobe de noodzakelijke gegevens. Deze gegevens kunnen, maar zijn niet beperkt tot, de unieke apparaat-id en het IP-adres voor het apparaat van de gebruiker dat de aanvraag doet.
+  Voor bedrijfslogica die volledig door de MVPD tijdens vergunningsverzoeken wordt afgedwongen, verstrekt Adobe de noodzakelijke gegevens. Deze gegevens kunnen, maar zijn niet beperkt tot, de unieke apparaat-id en het IP-adres voor het apparaat van de gebruiker dat de aanvraag doet.
 
 * **Steun van het Bezit van de Douane**\
-  Voor bedrijfslogica die gebruikersinterventie of Adobe-specifieke behandeling vereist, kan de Adobe douaneconfiguraties voor elke MVPD handhaven. Met dit beleid kunnen vooraf gedefinieerde workflows worden geactiveerd op specifieke punten in de machtigingsworkflow. Neem voor meer informatie contact op met uw Adobe.
+  Voor bedrijfslogica die tussenkomst van de gebruiker of Adobe-specifieke behandeling vereist, kan Adobe aangepaste configuraties voor elke MVPD handhaven. Met dit beleid kunnen vooraf gedefinieerde workflows worden geactiveerd op specifieke punten in de machtigingsworkflow. Neem voor meer informatie contact op met uw Adobe-vertegenwoordiger.
 
 ## Entitlement Flow {#entitlement-flow}
 
@@ -139,4 +139,6 @@ Raadpleeg de volgende documenten voor meer informatie over rechten:
 
 * **[Tokens van Media](/help/authentication/integration-guide-programmers/features-standard/entitlements/media-tokens.md)**
 
-  Na een geslaagde autorisatie maakt Adobe Pass Authentication een mediatoken (&quot;kortstondig&quot;) die aan een succesvol afspeelverzoek is gekoppeld.
+  Na een geslaagde autorisatie maakt Adobe Pass Authentication een mediatoken (&quot;kortstondig&quot;) die aan een succesvol afspeelverzoek is gekoppeld en die ondersteuning biedt voor best practices van de branche voor het beperken van fraude (bijvoorbeeld &#39;streaming ripping&#39;).
+
+De time-to-live (&quot;TTL&quot;) waarden voor profielen en besluiten worden vastgesteld op basis van overeenkomsten tussen programmeurs en betaaltelevisieproviders, die het eens zijn over een waarde die het best alle betrokkenen ten goede komt.
