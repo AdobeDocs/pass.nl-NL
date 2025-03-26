@@ -2,9 +2,9 @@
 title: Profiel maken en ophalen met de verificatiereactie van de partner
 description: REST API V2 - Profiel maken en ophalen met partnerverificatierespons
 exl-id: cae260ff-a229-4df7-bbf9-4cdf300c0f9a
-source-git-commit: 7fdfd28e2aba0d201f19dc25757bbe37cebd8ffe
+source-git-commit: edfde4b463dd8b93dd770bc47353ee8ceb6f39d2
 workflow-type: tm+mt
-source-wordcount: '734'
+source-wordcount: '775'
 ht-degree: 0%
 
 ---
@@ -268,9 +268,9 @@ ht-degree: 0%
             <tr>
                <td style="background-color: #DEEBFF;">attributes</td>
                <td>
-                    De lijst met metagegevenskenmerken van de gebruiker.
+                    JSON met een overzicht van sleutel-, waardeparen.
                     <br/><br/>
-                    Deze kenmerken kunnen zijn:
+                    Het hoofdelement wordt gedefinieerd door de metagegevenskenmerken van de gebruiker en kan als volgt zijn:
                     <ul>
                         <li>Verplicht, zoals 'userID'</li>
                         <li>Niet-verplicht, zoals 'zip', 'familyID', 'maxRating', enz.</li>
@@ -281,6 +281,7 @@ ht-degree: 0%
                         <li>list</li>
                         <li>map</li>
                     </ul>
+                    Metagegevens van gebruikers worden beschikbaar nadat de verificatiestroom is voltooid, maar bepaalde metagegevenskenmerken kunnen tijdens de autorisatiestroom worden bijgewerkt, afhankelijk van de MVPD en het specifieke metagegevenskenmerk in kwestie.
                </td>
                <td><i>vereist</i></td>
             </tr>

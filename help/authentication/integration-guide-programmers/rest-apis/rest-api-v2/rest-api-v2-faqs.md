@@ -2,9 +2,9 @@
 title: Veelgestelde vragen over REST API V2
 description: Veelgestelde vragen over REST API V2
 exl-id: 2dd74b47-126e-487b-b467-c16fa8cc14c1
-source-git-commit: 1795b4aba2940879f2dcb575048d553db4f0bf35
+source-git-commit: edfde4b463dd8b93dd770bc47353ee8ceb6f39d2
 workflow-type: tm+mt
-source-wordcount: '9072'
+source-wordcount: '9113'
 ht-degree: 0%
 
 ---
@@ -321,12 +321,14 @@ De cliënttoepassing kan één van de volgende eindpunten vragen geschikt om [ i
 * [Het eindpunt van profielen voor specifieke MVPD API](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md)
 * [Het eindpunt van profielen voor specifieke (authentificatie) code API](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md)
 
-De cliënttoepassing te hoeven niet om een afzonderlijk eindpunt te vragen om de de meta-gegevensinformatie van de gebruiker terug te winnen, aangezien het reeds in de profielinformatie inbegrepen is die wordt verkregen wanneer het verifiëren of de gebruiker voor authentiek wordt verklaard.
+De meta-gegevens van de gebruiker worden beschikbaar nadat de authentificatiestroom voltooit, daarom te hoeven de cliënttoepassing geen afzonderlijk eindpunt vragen om de [ informatie van gebruikersmeta-gegevens ](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata.md) terug te winnen, aangezien het reeds inbegrepen in de profielinformatie is.
 
 Raadpleeg de volgende documenten voor meer informatie:
 
 * [Stroom van basisprofielen uitgevoerd in primaire toepassing](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-primary-application-flow.md)
 * [De stroom van basisprofielen die binnen secundaire toepassing wordt uitgevoerd](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-secondary-application-flow.md)
+
+Afhankelijk van de MVPD en het specifieke metagegevenskenmerk kunnen bepaalde metagegevenskenmerken tijdens de autorisatiestroom worden bijgewerkt. Hierdoor moet de clienttoepassing mogelijk opnieuw een query uitvoeren op de bovenstaande API&#39;s om de meest recente metagegevens van de gebruiker op te halen.
 
 #### 18. Hoe moet de clienttoepassing onbeheerde toegang beheren? {#authentication-phase-faq18}
 

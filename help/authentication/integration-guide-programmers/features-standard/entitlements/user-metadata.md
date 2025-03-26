@@ -2,9 +2,9 @@
 title: Metagegevens gebruiker
 description: Metagegevens gebruiker
 exl-id: 9fd68885-7b3a-4af0-a090-6f1f16efd2a1
-source-git-commit: e448427ae4a36c4c6cb9f9c1cb4d0cc5c6d564ed
+source-git-commit: edfde4b463dd8b93dd770bc47353ee8ceb6f39d2
 workflow-type: tm+mt
-source-wordcount: '1793'
+source-wordcount: '1902'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,8 @@ ht-degree: 0%
 > De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
 De meta-gegevens van de gebruiker verwijzen naar gebruiker-specifieke [ attributen ](#attributes) (b.v., zip codes, ouderlijke classificaties, gebruiker IDs, enz.) die door MVPDs worden gehandhaafd en aan Programmers door de Authentificatie van Adobe Pass [ worden verstrekt REST API V2 ](#apis).
+
+Metagegevens van gebruikers worden beschikbaar nadat de verificatiestroom is voltooid, maar bepaalde metagegevenskenmerken kunnen tijdens de autorisatiestroom worden bijgewerkt, afhankelijk van de MVPD en het specifieke metagegevenskenmerk in kwestie.
 
 De meta-gegevens van de gebruiker kunnen worden gebruikt om verpersoonlijking voor gebruikers te verbeteren, maar zouden ook voor analyses kunnen worden gebruikt. Een programmeur kan bijvoorbeeld de ZIP-code van een gebruiker gebruiken om gelokaliseerde nieuws- of weerupdates te leveren of om ouderlijke controle af te dwingen.
 
@@ -50,7 +52,7 @@ De kenmerken van de gebruikersmetagegevens die beschikbaar worden gesteld aan ee
 | **Formele Naam** | nvt | `userID` | `upstreamUserID` | `householdID` | `primaryOID` | `typeID` | `is_hoh` | `hba_status` | `allowMirroring` | `zip` | `channelID` | `maxRating` | `language` | `onNet` | `inHome` |                                                                                                                                           |
 | **vereist Encryptie** | nvt | **Nr** | **Nr** | **Nr** | **Nr** | **Nr** | **Nr** | **Nr** | **Nr** | **ja** | **Nr** | **Nr** | **Nr** | **Nr** | **Nr** |                                                                                                                                           |
 | **Gevoelig** | nvt | **Nr** | **Nr** | **Nr** | **Nr** | **Nr** | **Nr** | **Nr** | **Nr** | **ja** | **Nr** | **Nr** | **Nr** | **Nr** | **Nr** |                                                                                                                                           |
-| Adobe-idP | **ja** | **ja** | **ja** | **ja (slechts AuthN)** | **ja** | **ja** | **ja** | **Nr** | **Nr** | **ja (slechts AuthN)** | **ja** | **ja (slechts AuthN)** | **Nr** | **Nr** | **Nr** | Juridische overeenkomst is niet nodig. |
+| Adobe IdP | **ja** | **ja** | **ja** | **ja (slechts AuthN)** | **ja** | **ja** | **ja** | **Nr** | **Nr** | **ja (slechts AuthN)** | **ja** | **ja (slechts AuthN)** | **Nr** | **Nr** | **Nr** | Juridische overeenkomst is niet nodig. |
 | Synacor | **ja** | **ja** | **ja** | **ja (slechts AuthN)** | **Nr** | **Nr** | **ja** | **Nr** | **Nr** | **ja (slechts AuthN)** | **ja** | **ja (slechts AuthN)** | **Nr** | **Nr** | **Nr** | Juridische overeenkomst die niet alle proxy-VPD&#39;s bestrijkt. Dit is algemene steun voor Synacor en misschien niet opgebouwd tot al hun MVPDs. |
 | Dish | **Nr** | **ja** | **ja** | **ja (slechts AuthN)** | **Nr** | **Nr** | **Nr** | **Nr** | **Nr** | **ja (slechts AuthN)** | **ja** | **ja (slechts AuthN)** | **Nr** | **Nr** | **Nr** | Deze deelt dezelfde lijst als alle Synacor MVPD&#39;s, plus `upstreamUserID` . |
 | Comcast | **Nr** | **ja** | **ja** | **ja (slechts AuthZ)** | **Nr** | **Nr** | **Nr** | **ja** | **Nr** | **Nr** | **Nr** | **ja (slechts AuthZ)** | **Nr** | **Nr** | **Nr** |                                                                                                                                           |
@@ -168,7 +170,17 @@ De attributen van gebruikersmeta-gegevens kunnen worden teruggewonnen gebruikend
 
 Verwijs naar de **secties van de Reactie** en **Steekproeven** van bovengenoemde APIs om de structuur van de attributen van gebruikersmeta-gegevens te begrijpen.
 
+>[!IMPORTANT]
+>
+> De meta-gegevens van de gebruiker worden beschikbaar nadat de authentificatiestroom voltooit, daarom te hoeven de cliënttoepassing geen afzonderlijk eindpunt vragen om de [ informatie van gebruikersmeta-gegevens ](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata.md) terug te winnen, aangezien het reeds inbegrepen in de profielinformatie is.
+
 Raadpleeg de volgende documenten voor meer informatie over hoe en wanneer u de bovenstaande API&#39;s wilt integreren:
 
 * [Stroom van basisprofielen uitgevoerd in primaire toepassing](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-primary-application-flow.md)
 * [De stroom van basisprofielen die binnen secundaire toepassing wordt uitgevoerd](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-secondary-application-flow.md)
+
+Afhankelijk van de MVPD en het specifieke metagegevenskenmerk kunnen bepaalde metagegevenskenmerken tijdens de autorisatiestroom worden bijgewerkt. Hierdoor moet de clienttoepassing mogelijk opnieuw een query uitvoeren op de bovenstaande API&#39;s om de meest recente metagegevens van de gebruiker op te halen.
+
+>[!MORELIKETHIS]
+>
+> [ FAQs van de Fase van de Authentificatie ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general)

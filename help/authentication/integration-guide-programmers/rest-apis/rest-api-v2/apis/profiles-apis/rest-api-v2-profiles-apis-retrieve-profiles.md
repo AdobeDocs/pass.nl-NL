@@ -2,9 +2,9 @@
 title: Profielen ophalen
 description: REST API V2 - Profielen ophalen
 exl-id: 72922aa8-95ca-48dc-8523-e335802fc366
-source-git-commit: 751ebec3372145dda318c8415be5676adb3f13b5
+source-git-commit: edfde4b463dd8b93dd770bc47353ee8ceb6f39d2
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '865'
 ht-degree: 0%
 
 ---
@@ -265,9 +265,9 @@ ht-degree: 0%
             <tr>
                <td style="background-color: #DEEBFF;">attributes</td>
                <td>
-                    De lijst met metagegevenskenmerken van de gebruiker.
+                    JSON met een overzicht van sleutel-, waardeparen.
                     <br/><br/>
-                    Deze kenmerken kunnen zijn:
+                    Het hoofdelement wordt gedefinieerd door de metagegevenskenmerken van de gebruiker en kan als volgt zijn:
                     <ul>
                         <li>Verplicht, zoals 'userID'</li>
                         <li>Niet-verplicht, zoals 'zip', 'familyID', 'maxRating', enz.</li>
@@ -278,6 +278,7 @@ ht-degree: 0%
                         <li>list</li>
                         <li>map</li>
                     </ul>
+                    Metagegevens van gebruikers worden beschikbaar nadat de verificatiestroom is voltooid, maar bepaalde metagegevenskenmerken kunnen tijdens de autorisatiestroom worden bijgewerkt, afhankelijk van de MVPD en het specifieke metagegevenskenmerk in kwestie.
                </td>
                <td><i>vereist</i></td>
             </tr>
