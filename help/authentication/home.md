@@ -2,9 +2,9 @@
 title: Welkom bij Adobe&reg; Verificatie doorgeven
 description: Welkom bij Adobe&reg; Verificatie doorgeven
 exl-id: a8b01469-3d5f-4a44-9ae8-06a68c29d56d
-source-git-commit: 9dcc649b4216cccc9be35cd6553308bfc345b5f4
+source-git-commit: fab5964aeb832d419702b41a6d3bc5676cb3354f
 workflow-type: tm+mt
-source-wordcount: '423'
+source-wordcount: '419'
 ht-degree: 0%
 
 ---
@@ -14,8 +14,6 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 > Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
-
-<a href="https://experienceleague.adobe.com/en/docs/pass/authentication/product-announcements">![ Levende Webinar Reeksen ](/help/authentication/assets/rest-api-v2/live-webinar-series-banner.png)</a>
 
 Adobe Pass Authentication is een krachtige TVE-oplossing (TVE) voor iedereen, die is ontworpen om het proces te stroomlijnen en te beveiligen waarbij wordt gecontroleerd of gebruikers recht hebben op toegang tot beveiligde inhoud. Dit modulaire kader verbindt de Leveranciers van de Inhoud (Programmers) met de Dienstverleners van TV van de Betaal (MVPDs), die machtigingstransacties met snelheid, consistentie, en betrouwbaarheid vergemakkelijken.
 
@@ -74,5 +72,5 @@ Veelgestelde vragen over procedures voor ondersteuning van Adobe Pass-verificati
 
 ## ?? Contact
 
-* [ Steun van de Adobe van het Contact ](mailto:tve-support@adobe.com)\
-  Voor extra hulp of bedrijfsvragen, e-mail het team van de Steun van de Adobe.
+* [ de Steun van Adobe van het Contact ](mailto:tve-support@adobe.com)\
+  Voor meer hulp of zakelijke vragen stuurt u een e-mail naar het Adobe-ondersteuningsteam.

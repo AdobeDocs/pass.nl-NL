@@ -2,9 +2,9 @@
 title: Overzicht van REST API V2
 description: Overzicht van REST API V2
 exl-id: a5595193-82c4-4033-bd98-596b4908b401
-source-git-commit: 9dcc649b4216cccc9be35cd6553308bfc345b5f4
+source-git-commit: fab5964aeb832d419702b41a6d3bc5676cb3354f
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '492'
 ht-degree: 0%
 
 ---
@@ -14,8 +14,6 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 > Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
-
-<a href="https://experienceleague.adobe.com/en/docs/pass/authentication/product-announcements">![ Levende Webinar Reeksen ](/help/authentication/assets/rest-api-v2/live-webinar-series-banner.png)</a>
 
 Wilt u de kostenefficiëntie van uw TVE-toepassingen verbeteren?
 

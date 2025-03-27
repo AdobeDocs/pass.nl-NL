@@ -2,39 +2,14 @@
 title: Aankondigingen van producten
 description: Aankondigingen van producten
 exl-id: 3c9c66e1-d31d-4af3-8ab2-eb32492f42ca
-source-git-commit: 6b309f66bfe1376bd62ad5e99b4f6383194af6c6
+source-git-commit: fab5964aeb832d419702b41a6d3bc5676cb3354f
 workflow-type: tm+mt
-source-wordcount: '973'
+source-wordcount: '784'
 ht-degree: 1%
 
 ---
 
 # Aankondigingen van producten {#product-announcements}
-
-<a href="https://experienceleague.adobe.com/en/docs/pass/authentication/product-announcements">![ Levende Webinar Reeksen ](/help/authentication/assets/rest-api-v2/live-webinar-series-banner.png)</a>
-
-Als gewaardeerde Adobe Pass Authentication-partner willen we u uitnodigen voor onze komende live webinar over de nieuwe REST API. De nieuwe API is vorig jaar gestart om de gebruikerservaring te verbeteren en de integratie met Adobe Pass-services te vereenvoudigen. 
-
-We zullen een reeks van twee webinars organiseren om een overzicht te geven van de nieuwe API, de voordelen en extra gebruiksgevallen die kunnen worden geactiveerd door te migreren naar de nieuwe API.
-
-Registreer u voor het webinar dat het beste werkt voor u en uw team.
-
-* [ Webinar 1 - 19 Februari, 2025 ](https://events.teams.microsoft.com/event/83c6ec1e-2522-4918-910f-c529b4fb0574@fa7b1b5a-7b34-4387-94ae-d2c178decee1)
-* [ Webinar 2 - 5th Maart, 2025 ](https://events.teams.microsoft.com/event/6f673689-e848-4c00-93d9-4f5d8f108977@fa7b1b5a-7b34-4387-94ae-d2c178decee1)
-
-Tijdens de sessie leert u meer over:
-
-* Overzicht en voordelen van REST API v2
-* Basis stroomanalyse
-* Tijdlijnen en volgende stappen
-
-Het webinar zou nuttig zijn als u bent:
-
-* Een nieuwe klant die een nieuwe TVE-app wil starten
-* Bestaande klanten die naar de nieuwe API&#39;s moeten migreren
-* Implementatiepartners die API&#39;s voor klanten implementeren
-
-U kunt technische documentatie op nieuwe API [ hier ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/rest-api-v2-apis-overview.md) vinden. Wij moedigen u en uw team aan om het even welke vragen te vullen u tijdens de zitting [ hier ](https://forms.office.com/r/sJea78tUy3) zou willen bespreken.
 
 ## Einde levenscyclus (EOL) {#eol}
 
