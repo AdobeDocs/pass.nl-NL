@@ -2,9 +2,9 @@
 title: Veelgestelde vragen over REST API V2
 description: Veelgestelde vragen over REST API V2
 exl-id: 2dd74b47-126e-487b-b467-c16fa8cc14c1
-source-git-commit: edfde4b463dd8b93dd770bc47353ee8ceb6f39d2
+source-git-commit: 42df16e34783807e1b5eb1a12ca9db92f4e4c161
 workflow-type: tm+mt
-source-wordcount: '9113'
+source-wordcount: '9537'
 ht-degree: 0%
 
 ---
@@ -248,9 +248,18 @@ Voor meer details, verwijs naar [ Enige sign-on gebruikend partnerstromen ](/hel
 
 #### 10. Wat moet de clienttoepassing doen als de gebruiker meerdere MVPD-profielen heeft? {#authentication-phase-faq10}
 
-Wanneer de gebruiker meerdere MVPD-profielen heeft, bepaalt de clienttoepassing de beste aanpak voor de afhandeling van dit scenario.
+Het besluit om meerdere profielen te ondersteunen hangt af van de zakelijke vereisten van de clienttoepassing.
+
+De meeste gebruikers hebben slechts één profiel. Als er echter meerdere profielen zijn (zoals hieronder wordt beschreven), bepaalt de clienttoepassing de beste gebruikerservaring bij het selecteren van profielen.
 
 De clienttoepassing kan de gebruiker vragen het gewenste MVPD-profiel te selecteren of de selectie automatisch te maken, bijvoorbeeld door het eerste gebruikersprofiel in het antwoord te kiezen of het profiel met de langste geldigheidsperiode.
+
+REST API v2 biedt ondersteuning voor meerdere profielen om:
+
+* Gebruikers die kunnen kiezen tussen een normaal MVPD-profiel en een profiel dat is verkregen via SSO (Single Sign-On).
+* Gebruikers die tijdelijke toegang krijgen zonder dat ze zich hoeven af te melden bij hun normale MVPD.
+* Gebruikers met een MVPD-abonnement in combinatie met DTC-services (Direct-to-Consumer).
+* Gebruikers met meerdere MVPD-abonnementen.
 
 #### 11. Wat gebeurt er als gebruikersprofielen verlopen? {#authentication-phase-faq11}
 
@@ -332,9 +341,35 @@ Afhankelijk van de MVPD en het specifieke metagegevenskenmerk kunnen bepaalde me
 
 #### 18. Hoe moet de clienttoepassing onbeheerde toegang beheren? {#authentication-phase-faq18}
 
-Gezien uw organisatie van plan is om de [ degradatie ](/help/authentication/integration-guide-programmers/features-premium/degraded-access/degradation-feature.md) eigenschap te gebruiken, moet de cliënttoepassing degraded toegangsstromen behandelen, die schetsen hoe REST API v2 eindpunten zich in dergelijke scenario&#39;s gedragen.
+De [ Eigenschap van de Vermindering ](/help/authentication/integration-guide-programmers/features-premium/degraded-access/degradation-feature.md) laat de cliënttoepassing toe om een naadloze het stromen ervaring voor gebruikers te handhaven, zelfs wanneer hun de authentificatie of toestemmingsdiensten van MVPD kwesties ontmoeten.
+
+Samenvattend kan dit zorgen voor ononderbroken toegang tot inhoud ondanks verstoringen van de tijdelijke service van MVPD.
+
+Aangezien uw organisatie van plan is om de functie van de premiedegradatie te gebruiken, moet de cliënttoepassing degraded toegangsstromen behandelen, die schetsen hoe REST API v2 eindpunten zich in dergelijke scenario&#39;s gedragen.
 
 Voor meer details, verwijs naar [ Verminderde toegangsstromen ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/degraded-access-flows/rest-api-v2-access-degraded-flows.md) documentatie.
+
+#### 19. Hoe moet de clienttoepassing tijdelijke toegang beheren? {#authentication-phase-faq19}
+
+De [ Eigenschap TempPass ](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md) laat de cliënttoepassing toe om tijdelijke toegang tot de gebruiker te verlenen.
+
+Samenvattend kan dit gebruikers in dienst nemen door gedurende een bepaalde periode beperkte toegang tot inhoud of een vooraf gedefinieerd aantal VOD-titels te bieden.
+
+Aangezien uw organisatie van plan is de premiumfunctie TempPass te gebruiken, moet de clienttoepassing tijdelijke toegangsstromen afhandelen, die beschrijven hoe REST API v2-eindpunten zich in dergelijke scenario&#39;s gedragen.
+
+In vorige API-versies moest de clienttoepassing zich afmelden bij een gebruiker die met zijn gewone MVPD was geverifieerd om tijdelijke toegang te bieden.
+
+Met REST API v2 kan de clienttoepassing bij het autoriseren van een stream naadloos schakelen tussen een gewone MVPD en een TempPass MVPD, zodat de gebruiker zich niet hoeft af te melden.
+
+Voor meer details, verwijs naar de [ Tijdelijke toegangsstromen ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/temporary-access-flows/rest-api-v2-access-temporary-flows.md) documentatie.
+
+#### 20. Hoe moet de clienttoepassing apparaatoverschrijdende Single Sign-On-toegang beheren? {#authentication-phase-faq20}
+
+REST API v2 kan Single Sign-On voor meerdere apparaten inschakelen als de clienttoepassing een consistente unieke gebruikersidentificatie voor alle apparaten biedt.
+
+Dit herkenningsteken, dat als dienstteken wordt bekend, moet door de cliënttoepassing door de implementatie of de integratie van een externe Dienst van de Identiteit van keus worden geproduceerd.
+
+Voor meer details, verwijs naar [ Enige sign-on gebruikend de stromen van het de dienstteken ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-service-token-flows.md) documentatie.
 
 +++
 
@@ -574,9 +609,15 @@ De [ AP-Apparaat-Herkenningsteken ](/help/authentication/integration-guide-progr
 >
 > Als de clienttoepassing migreert van REST API V1 naar REST API V2, kan de clienttoepassing dezelfde methode blijven gebruiken om de waarde van de apparaatinformatie te berekenen als voorheen.
 
-De [ x-apparaat-Info ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-device-info.md) verzoekkopbal bevat de cliëntinformatie (apparaat, verbinding en toepassing) met betrekking tot het daadwerkelijke het stromen apparaat.
+De [ x-apparaat-Info ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-device-info.md) verzoekkopbal bevat de cliëntinformatie (apparaat, verbinding en toepassing) met betrekking tot het daadwerkelijke het stromen apparaat en wordt gebruikt om platform-specifieke regels te bepalen die MVPDs kan afdwingen.
 
 De [ x-apparaat-Info ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-device-info.md) kopbaldocumentatie verstrekt voorbeelden voor belangrijke platforms van hoe te om de waarde gegevens te verwerken, maar de cliënttoepassing kan verkiezen om een verschillende methode te gebruiken die op zijn eigen bedrijfslogica en vereisten wordt gebaseerd.
+
+Als [ x-apparaat-Info ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-device-info.md) kopbal mist of onjuiste waarden bevat, kan het verzoek als voortkomend van een `unknown` platform worden geclassificeerd.
+
+Dit kan ertoe leiden dat het verzoek als onveilig wordt behandeld, en onderworpen aan meer beperkende regels, zoals kortere authentificatie TTLs. Bovendien, zijn sommige gebieden, zoals het stromen apparaat `connectionIp` en `connectionPort`, verplicht voor eigenschappen zoals de Authentificatie van de Basis van het Spectrum [ ](/help/authentication/integration-guide-programmers/features-standard/hba-access/home-based-authentication.md).
+
+Zelfs wanneer het verzoek uit een server namens een apparaat voortkomt, moet de [ x-apparaat-Info ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-device-info.md) kopbalwaarde op de daadwerkelijke het stromen apparateninformatie wijzen.
 
 +++
 
