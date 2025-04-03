@@ -2,9 +2,9 @@
 title: Autorisatiebesluiten ophalen met specifieke mvpd
 description: REST API V2 - beslissingen over machtigingen ophalen met specifieke mvpd
 exl-id: e8889395-4434-4bec-a212-a8341bb9c310
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 27aaa0d3351577e60970a4035b02d814f0a17e2f
 workflow-type: tm+mt
-source-wordcount: '907'
+source-wordcount: '924'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ ht-degree: 0%
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">bronnen</td>
-      <td>De lijst van middelen die een besluit MVPD vereisen alvorens zij kunnen worden gespeeld.</td>
+      <td>De lijst met bronnen die een MVPD-beslissing vereisen voordat ze kunnen worden afgespeeld.</td>
       <td><i>vereist</i></td>
    </tr>
    <tr>
@@ -111,7 +111,7 @@ ht-degree: 0%
       <td>optioneel</td>
    </tr>
    <tr>
-      <td style="background-color: #DEEBFF;">Adobe-Onderwerptoken</td>
+      <td style="background-color: #DEEBFF;">Adobe-Subject-Token</td>
       <td>
         De generatie van enige sign-on lading voor de methode van de Identiteit van het Platform wordt beschreven in <a href="../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md"> Adobe-Onderwerp-Symbolische </a> kopbaldocumentatie.
         <br/><br/>
@@ -262,7 +262,7 @@ ht-degree: 0%
                   <br/><br/>
                   De mogelijke waarden zijn:
                   <ul>
-                    <li><b> mvpd </b><br/> wordt het Besluit uitgegeven door het MVPD toestemmingseindpunt.</li>
+                    <li><b> mvpd </b><br/> wordt het Besluit uitgegeven door het de vergunningseindpunt van MVPD.</li>
                     <li><b> degradatie </b><br/> Besluit wordt uitgegeven als resultaat van gedegradeerde toegang.</li>
                     <li><b> temppass </b><br/> Besluit wordt uitgegeven als resultaat van tijdelijke toegang.</li>
                     <li><b> dummy </b><br/> Besluit wordt uitgegeven als resultaat van dummy vergunningseigenschap.</li>
@@ -334,7 +334,7 @@ ht-degree: 0%
 
 ## Voorbeelden {#samples}
 
-### 1. Vergunningsbesluiten met specifieke mvpd ophalen
+### 1. Beslissingen over toelatingen met behulp van specifieke mvpd worden opgehaald terwijl een besluit over een vergunning wordt genomen
 
 >[!BEGINTABS]
 
@@ -386,7 +386,63 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 2. Goedkeuringsbesluiten ophalen met behulp van een specifieke mvpd terwijl de afbraak plaatsvindt
+### 2. Beslissingen over toelatingen met behulp van specifieke mvpd worden opgehaald terwijl de beslissing wordt ontkend
+
+>[!BEGINTABS]
+
+>[!TAB  Verzoek ]
+
+```HTTPS
+POST /api/v2/REF30/decisions/authorize/Cablevision HTTP/1.1
+
+    Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJjNGZjM2U3ZS0xMmQ5LTQ5NWQtYjc0Mi02YWVhYzhhNDkwZTciLCJuYmYiOjE3MjQwODc4NjgsImlzcyI6ImF1dGguYWRvYmUuY29tIiwic2NvcGVzIjoiYXBpOmNsaWVudDp2MiIsImV4cCI6MTcyNDEwOTQ2OCwiaWF0IjoxNzI0MDg3ODY4fQ.DJ9GFl_yKAp2Qw-NVcBeRSnxIhqrwxhns5T5jU31N2tiHxCucKLSQ5guBygqkkJx6D0N_93f50meEEyfb7frbHhVHHwmRjHYjkfrWqHCpviwVjVZKKwl8Y3FEMb0bjKIB8p_E3txX9IbzeNGWRufZBRh2sxB5Q9B7XYINpVfh8s_sFvskrbDu5c01neCx5kEagEW5CtE0_EXTgEb5FSr_SfQG3UUu_iwlkOggOh_kOP_5GueElf9jn-bYBMnpObyN5s-FzuHDG5Rtac5rvcWqVW2reEqFTHqLI4rVC7UKQb6DSvPBPV4AgrutAvk30CYgDsOQILVyrjniincp7r9Ww
+    Content-Type: application/json
+    AP-Device-Identifier: fingerprint YmEyM2QxNDEtZDcxNS01NjFjLTk0ZjQtZTllNGM5NjZiMWVi
+    X-Device-Info: ewoJInByaW1hcnlIYXJkd2FyZVR5cGUiOiAiU2V0VG9wQm94IiwKCSJtb2RlbCI6ICJUViA1dGggR2VuIiwKCSJtYW51ZmFjdHVyZXIiOiAiQXBwbGUiLAoJIm9zTmFtZSI6ICJ0dk9TIgoJIm9zVmVuZG9yIjogIkFwcGxlIiwKCSJvc1ZlcnNpb24iOiAiMTEuMCIKfQ==
+    Accept: application/json
+    User-Agent: Mozilla/5.0 (Apple TV; U; CPU AppleTV5,3 OS 11.0 like Mac OS X; en_US)
+        
+Body:
+
+{
+    "resources": ["REF30"]
+}
+```
+
+>[!TAB  Reactie ]
+
+```HTTPS
+HTTP/1.1 200 OK
+
+Content-Type: application/json;charset=UTF-8
+
+{
+    "decisions": [
+        {
+            "resource": "REF30",
+            "serviceProvider": "REF30",
+            "mvpd": "Cablevision",
+            "source": "mvpd",
+            "authorized": false,
+            "error": {
+                "action": "none",
+                "status": 403,
+                "code": "authorization_denied_by_mvpd",
+                "message": "The MVPD has returned a "Deny" decision when requesting authorization for the specified resource",
+                "details": "Your subscription package does not include the "Live" channel",
+                "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
+                "trace": "12f6fef9-d2e0-422b-a9d7-60d799abe353"
+            },
+            "notBefore": 1697094207324,
+            "notAfter": 1697098802367
+        }
+    ]
+}
+```
+
+>[!ENDTABS]
+
+### 3. Goedkeuringsbesluiten ophalen met behulp van specifieke mvpd terwijl de afbraak plaatsvindt
 
 >[!BEGINTABS]
 
@@ -530,7 +586,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 3. Beslissingen over het verkrijgen van een vergunning met behulp van de basis TempPass
+### 4. Beslissingen over het verkrijgen van een vergunning met behulp van de TempPass
 
 >[!BEGINTABS]
 
@@ -636,7 +692,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 4. Goedkeuringsbesluiten ophalen met gebruikmaking van promotionele TempPass
+### 5. Goedkeuringsbesluiten ophalen met gebruikmaking van promotionele TempPass
 
 >[!BEGINTABS]
 
