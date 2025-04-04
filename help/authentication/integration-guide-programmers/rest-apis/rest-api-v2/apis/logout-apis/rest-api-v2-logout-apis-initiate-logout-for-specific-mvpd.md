@@ -2,9 +2,9 @@
 title: Afmelden starten voor specifieke mvpd
 description: REST API V2 - Afmelden starten voor specifieke mvpd
 exl-id: 2482de87-b3d4-4ea8-bd4a-25bf10017e01
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 32c3176fb4633acb60deb1db8fb5397bbf18e2d0
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1009'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ ht-degree: 0%
    <tr>
       <td style="background-color: #DEEBFF;">redirectUrl</td>
       <td>
-        De definitieve omleiding URL waaraan de gebruikersagent navigeert wanneer de logout stroom voor MVPD wordt voltooid.
+        De laatste omleidings-URL waarnaar de gebruikersagent navigeert wanneer de afmeldingsstroom voor de MVPD is voltooid.
         <br/><br/>
         De waarde moet URL-gecodeerd zijn.
       </td>
@@ -106,9 +106,9 @@ ht-degree: 0%
       <td>optioneel</td>
    </tr>
    <tr>
-      <td style="background-color: #DEEBFF;">Adobe-Onderwerptoken</td>
+      <td style="background-color: #DEEBFF;">Adobe-Onderwerp-Token <br/> of <br/> x-Roku-Gereserveerd-roku-verbindt-Token</td>
       <td>
-        De generatie van enige sign-on lading voor de methode van de Identiteit van het Platform wordt beschreven in <a href="../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md"> Adobe-Onderwerp-Symbolische </a> kopbaldocumentatie.
+        De generatie van enige sign-on lading voor de methode van de Identiteit van het Platform wordt beschreven in <a href="../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md"> Adobe-Subject-Token </a> / <a href="../../appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md"> x-Roku-Gereserveerd-roku-Connect-Token </a> kopbaldocumentatie.
         <br/><br/>
         Voor meer details over enige sign-on toegelaten stromen die een platformidentiteit gebruiken, verwijs naar <a href="../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-platform-identity-flows.md"> Enige sign-on gebruikend de stromen van de platformidentiteit </a> documentatie.
       </td>
@@ -238,10 +238,10 @@ ht-degree: 0%
                   <br/><br/>
                   De mogelijke waarden zijn:
                   <ul>
-                    <li><b> logout </b><br/> het stromen apparaat moet verstrekte URL in een gebruikersagent openen.<br/> Deze actie is voor de volgende scenario's van toepassing: logout van MVPD met een logout eindpunt.</li>
+                    <li><b> logout </b><br/> het stromen apparaat moet verstrekte URL in een gebruikersagent openen.<br/> Deze actie is op de volgende scenario's van toepassing: logout van MVPD met een logout eindpunt.</li>
                     <li><b> partner_logout </b><br/> het stromen apparaat moet de gebruiker informeren om uit het niveau van de partner (systeem) eveneens te logout.<br/> Deze actie is voor de volgende scenario's van toepassing: logout van MVPD wanneer het profieltype "appleSSO"is.</li>
                     <li><b> volledig </b><br/> het stromen apparaat te hoeven niet om het even welke verdere acties uit te voeren.<br/> Deze actie is voor de volgende scenario's van toepassing: logout van MVPD zonder een logout eindpunt (dummy logout eigenschap), logout tijdens degraded toegang, logout tijdens tijdelijke toegang.</li>
-                    <li><b> ongeldig </b><br/> het stromen apparaat te hoeven niet om het even welke verdere acties uit te voeren.<br/> Deze actie is voor de volgende scenario's van toepassing: logout van MVPD wanneer geen geldig profiel wordt gevonden.</li>
+                    <li><b> ongeldig </b><br/> het stromen apparaat te hoeven niet om het even welke verdere acties uit te voeren.<br/> Deze actie is op de volgende scenario's van toepassing: logout van MVPD wanneer geen geldig profiel wordt gevonden.</li>
                   </ul>  
                <td><i>vereist</i></td>
             </tr>
@@ -266,7 +266,7 @@ ht-degree: 0%
             <tr>
                <td style="background-color: #DEEBFF;">url</td>
                <td>
-                  URL die wordt gebruikt om de logout stroom met het MVPD eindpunt uit te voeren.
+                  De URL die wordt gebruikt om de logout-flow uit te voeren met het MVPD-eindpunt.
                   <br/><br/>
                   Dit is niet aanwezig voor de volgende waarden van het attribuut "actionName":
                   <ul>

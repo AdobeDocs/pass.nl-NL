@@ -2,9 +2,9 @@
 title: Profiel ophalen voor specifieke mvpd
 description: REST API V2 - Profiel ophalen voor specifieke mvpd
 exl-id: ed1abc33-c279-4465-b5a0-b4e5b892076e
-source-git-commit: edfde4b463dd8b93dd770bc47353ee8ceb6f39d2
+source-git-commit: 32c3176fb4633acb60deb1db8fb5397bbf18e2d0
 workflow-type: tm+mt
-source-wordcount: '1057'
+source-wordcount: '1060'
 ht-degree: 0%
 
 ---
@@ -96,9 +96,9 @@ ht-degree: 0%
       <td>optioneel</td>
    </tr>
    <tr>
-      <td style="background-color: #DEEBFF;">Adobe-Subject-Token</td>
+      <td style="background-color: #DEEBFF;">Adobe-Onderwerp-Token <br/> of <br/> x-Roku-Gereserveerd-roku-verbindt-Token</td>
       <td>
-        De generatie van enige sign-on lading voor de methode van de Identiteit van het Platform wordt beschreven in <a href="../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md"> Adobe-Onderwerp-Symbolische </a> kopbaldocumentatie.
+        De generatie van enige sign-on lading voor de methode van de Identiteit van het Platform wordt beschreven in <a href="../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md"> Adobe-Subject-Token </a> / <a href="../../appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md"> x-Roku-Gereserveerd-roku-Connect-Token </a> kopbaldocumentatie.
         <br/><br/>
         Voor meer details over enige sign-on toegelaten stromen die een platformidentiteit gebruiken, verwijs naar <a href="../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-platform-identity-flows.md"> Enige sign-on gebruikend de stromen van de platformidentiteit </a> documentatie.
       </td>

@@ -2,9 +2,9 @@
 title: Besluiten vóór toelating met specifieke mvpd ophalen
 description: REST API V2 - beslissingen vóór toelating ophalen met specifieke mvpd
 exl-id: 8647e4fb-00b6-45cd-b81b-d00618b2e08b
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 32c3176fb4633acb60deb1db8fb5397bbf18e2d0
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '792'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ ht-degree: 0%
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">bronnen</td>
-      <td>De lijst van middelen die een besluit MVPD vereisen alvorens zij konden worden getoond.</td>
+      <td>De lijst met bronnen waarvoor een MVPD-besluit vereist is voordat deze kunnen worden weergegeven.</td>
       <td><i>vereist</i></td>
    </tr>
    <tr>
@@ -111,9 +111,9 @@ ht-degree: 0%
       <td>optioneel</td>
    </tr>
    <tr>
-      <td style="background-color: #DEEBFF;">Adobe-Onderwerptoken</td>
+      <td style="background-color: #DEEBFF;">Adobe-Onderwerp-Token <br/> of <br/> x-Roku-Gereserveerd-roku-verbindt-Token</td>
       <td>
-        De generatie van enige sign-on lading voor de methode van de Identiteit van het Platform wordt beschreven in <a href="../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md"> Adobe-Onderwerp-Symbolische </a> kopbaldocumentatie.
+        De generatie van enige sign-on lading voor de methode van de Identiteit van het Platform wordt beschreven in <a href="../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md"> Adobe-Subject-Token </a> / <a href="../../appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md"> x-Roku-Gereserveerd-roku-Connect-Token </a> kopbaldocumentatie.
         <br/><br/>
         Voor meer details over enige sign-on toegelaten stromen die een platformidentiteit gebruiken, verwijs naar <a href="../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-platform-identity-flows.md"> Enige sign-on gebruikend de stromen van de platformidentiteit </a> documentatie.
       </td>
@@ -257,7 +257,7 @@ ht-degree: 0%
                   <br/><br/>
                   De mogelijke waarden zijn:
                   <ul>
-                    <li><b> mvpd </b><br/> wordt het Besluit uitgegeven door het MVPD voortoelatingseindpunt.</li>
+                    <li><b> mvpd </b><br/> wordt het Besluit uitgegeven door het voortoelatingseindpunt van MVPD.</li>
                     <li><b> degradatie </b><br/> Besluit wordt uitgegeven als resultaat van gedegradeerde toegang.</li>
                     <li><b> temppass </b><br/> Besluit wordt uitgegeven als resultaat van tijdelijke toegang.</li>
                     <li><b> dummy </b><br/> Besluit wordt uitgegeven als resultaat van dummy preAuthorisation eigenschap.</li>
