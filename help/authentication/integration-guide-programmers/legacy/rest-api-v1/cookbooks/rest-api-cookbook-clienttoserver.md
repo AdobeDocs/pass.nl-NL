@@ -2,9 +2,9 @@
 title: REST API Cookbook (client-naar-server)
 description: Testen van API-cookboekclient naar server.
 exl-id: f54a1eda-47d5-4f02-b343-8cdbc99a73c0
-source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
+source-git-commit: 640ba7073f7f4639f980f17f1a59c4468bfebcf4
 workflow-type: tm+mt
-source-wordcount: '888'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ Adobe Pass gebruikt DCR om clientcommunicatie tussen een programmeertoepassing o
 
 1. U krijgt een registratiecode en URL waarmee uw gebruiker toegang krijgt tot de tweede toepassing voor schermaanmelding en u kunt deze aan de gebruiker presenteren:
 
-   a. Verzend een verzoek van de POST naar de Dienst van de Code van de Registratie van de Adobe, die een gehakt apparatenidentiteitskaart en een &quot;Registratie URL&quot;overgaat.  Bijvoorbeeld: [`<REGGIE_FQDN>/reggie/v1/[requestorId]/regcode [device ID]`](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md)
+   a. Verzend een POST-aanvraag naar de Adobe Registration Code Service, waarbij u een hashed device ID en een &quot;Registration URL&quot; doorgeeft.  Bijvoorbeeld: [`<REGGIE_FQDN>/reggie/v1/[requestorId]/regcode [device ID]`](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md)
 
    b. De geretourneerde registratiecode en URL aan de gebruiker presenteren.
 
@@ -84,7 +84,7 @@ Adobe Pass gebruikt DCR om clientcommunicatie tussen een programmeertoepassing o
 
 1. De gebruiker keert van het tweede scherm terug app en drukt op de &quot;Doorgaan&quot; knoop op uw apparaat. U kunt ook een opiniepeilingsmechanisme implementeren om de verificatiestatus te controleren, maar de Adobe Pass-verificatie raadt de methode voor de knop Doorgaan aan tijdens de opiniepeiling. <!--(For information on employing a "Continue" button versus polling the Adobe Pass Authentication backend server, see the Clientless Technical Overview: Managing 2nd-Screen Workflow Transition.)--> Bijvoorbeeld: [\&lt;SP\_FQDN\>/api/v1/tokens/authn](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-authentication-token.md)
 
-2. Verzend een verzoek van de GET naar de de vergunningsdienst van de Authentificatie van Adobe Pass om vergunning in werking te stellen. Bijvoorbeeld: `<SP_FQDN>/api/v1/authorize [device ID, Requestor ID, Resource ID]`
+2. Verzend een GET-verzoek naar de Adobe Pass Authentication-verificatieservice om een autorisatie te starten. Bijvoorbeeld: `<SP_FQDN>/api/v1/authorize [device ID, Requestor ID, Resource ID]`
 
 <!-- end list -->
 
@@ -140,7 +140,6 @@ Sommige apparaten verstrekken specifieke steun voor Partner Enige Sign-On (SSO):
 Sommige apparaten bieden specifieke ondersteuning voor Platform Single Sign-On (SSO):
 
 * [AMAZON SSO](../../sso-access/amazon-sso-cookbook-rest-api-v1.md)
-* [Roku SSO](../../../features-standard/sso-access/platform-sso/roku-single-sign-on/roku-sso-overview.md)
 
 ## TempPass en Promotional TempPass voor REST API {#temppass}
 

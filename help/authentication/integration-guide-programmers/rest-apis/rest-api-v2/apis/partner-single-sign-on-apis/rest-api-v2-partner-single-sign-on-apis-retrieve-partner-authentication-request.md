@@ -2,9 +2,9 @@
 title: Vraag van partnerverificatie ophalen
 description: REST API V2 - verzoek voor partnerverificatie ophalen
 exl-id: 52d8a8e9-c176-410f-92bc-e83449278943
-source-git-commit: 5e5bb6a52a4629056fd52c7e79a11dba2b9a45db
+source-git-commit: 640ba7073f7f4639f980f17f1a59c4468bfebcf4
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1219'
 ht-degree: 0%
 
 ---
@@ -266,7 +266,6 @@ ht-degree: 0%
                   <ul>
                     <li><b> niets </b><br/> De cliënttoepassing wordt vereist om te blijven voor authentiek verklaren.</li>
                     <li><b> voor authentiek verklaarde </b><br/> de cliënttoepassing wordt reeds voor authentiek verklaard door basistoegangsstromen.</li>
-                    <li><b> tijdelijk </b><br/> de cliënttoepassing wordt reeds voor authentiek verklaard door tijdelijke toegangsstromen.</li>
                     <li><b> degraded </b><br/> de cliënttoepassing wordt reeds voor authentiek verklaard door degraded toegangsstromen.</li>
                     <li><b> authenticatedSSO </b><br/> De cliënttoepassing wordt reeds voor authentiek verklaard door enige sign-on toegangsstromen.</li>
                     <li><b> pfs_fallback </b><br/> De cliënttoepassing wordt vereist om terug naar basisauthentificatiestroom te vallen toe te schrijven aan het missen of ongeldige <a href="../../appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md"> AP-partner-kader-status </a> kopbalwaarde.</li>

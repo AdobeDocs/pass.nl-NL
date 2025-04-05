@@ -2,9 +2,9 @@
 title: Single Sign On - Platform Identity - Flows
 description: REST API V2 - Single Sign On - Platform Identity - Flows
 exl-id: 5200e851-84e8-4cb4-b068-63b91a2a8945
-source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
+source-git-commit: 640ba7073f7f4639f980f17f1a59c4468bfebcf4
 workflow-type: tm+mt
-source-wordcount: '1846'
+source-wordcount: '1856'
 ht-degree: 0%
 
 ---
@@ -27,14 +27,14 @@ De methode van de Identiteit van het Platform laat veelvoudige toepassingen toe 
 
 De toepassingen zijn verantwoordelijk voor het ophalen van de unieke lading van de platform-id met behulp van apparaatspecifieke identiteitsservices of bibliotheken buiten Adobe Pass-systemen.
 
-De toepassingen zijn verantwoordelijk voor het opnemen van deze unieke lading van de platform-id als onderdeel van de header `Adobe-Subject-Token` voor alle aanvragen die deze aangeven.
+De toepassingen zijn verantwoordelijk voor het opnemen van deze unieke lading van de platform-id als onderdeel van de header `Adobe-Subject-Token` / `X-Roku-Reserved-Roku-Connect-Token` voor alle aanvragen die deze aangeven.
 
-Voor meer details over `Adobe-Subject-Token` kopbal, verwijs naar [ Adobe-Onderwerp-Symbolische ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) documentatie.
+Voor meer details over `Adobe-Subject-Token` / `X-Roku-Reserved-Roku-Connect-Token` kopbal, verwijs naar [ Adobe-Subject-Token ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) / [ x-Roku-Gereserveerd-roku-Connect-Token ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) documentatie.
 
 >[!MORELIKETHIS]
 > 
 > * [ Amazon SSO Cookbook ](/help/authentication/integration-guide-programmers/features-standard/sso-access/platform-sso/amazon-single-sign-on/amazon-sso-cookbook-rest-api-v2.md)
-> * [ Roku SSO Cookbook ](/help/authentication/integration-guide-programmers/features-standard/sso-access/platform-sso/roku-single-sign-on/roku-sso-overview.md)
+> * [ Roku SSO Cookbook ](/help/authentication/integration-guide-programmers/features-standard/sso-access/platform-sso/roku-single-sign-on/roku-sso-cookbook-rest-api-v2.md)
 
 ## Verificatie uitvoeren via Single Sign-On met behulp van platformidentiteit {#perform-authentication-through-single-sign-on-using-platform-identity}
 
@@ -43,11 +43,11 @@ Voor meer details over `Adobe-Subject-Token` kopbal, verwijs naar [ Adobe-Onderw
 Voordat u de verificatiestroom via Single Sign-On uitvoert met behulp van een platformidentiteit, moet u controleren of aan de volgende voorwaarden is voldaan:
 
 * Het platform moet een identiteitsservice of een bibliotheek bieden die consistente informatie als `JWS` of `JWE` payload retourneert voor alle toepassingen op hetzelfde apparaat of platform.
-* De eerste het stromen toepassing moet het unieke platformherkenningsteken terugwinnen en `JWS` of `JWE` nuttige lading als deel van [ Adobe-Onderwerp-Symbolische ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) kopbal voor alle verzoeken omvatten die het specificeren.
+* De eerste het stromen toepassing moet het unieke platformherkenningsteken terugwinnen en `JWS` of `JWE` nuttige lading als deel van [ Adobe-Onderwerp-Symbolisch ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) / [ x-Roku-Gereserveerd-Roku-Connect-Token ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) kopbal voor alle verzoeken omvatten die het specificeren.
 * De eerste streamingtoepassing moet een MVPD selecteren.
 * De eerste streamingtoepassing moet een verificatiesessie starten om u aan te melden bij de geselecteerde MVPD.
 * De eerste streamingtoepassing moet worden geverifieerd met de geselecteerde MVPD in een gebruikersagent.
-* De tweede het stromen toepassing moet het unieke platformherkenningsteken terugwinnen en `JWS` of `JWE` nuttige lading als deel van [ Adobe-Onderwerp-Symbolische ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) kopbal voor alle verzoeken omvatten die het specificeren.
+* De tweede het stromen toepassing moet het unieke platformherkenningsteken terugwinnen en `JWS` of `JWE` nuttige lading als deel van [ Adobe-Onderwerp-Symbolisch ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) / [ x-Roku-Gereserveerd-Roku-Connect-Token ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) kopbal voor alle verzoeken omvatten die het specificeren.
 
 >[!IMPORTANT]
 >
@@ -88,7 +88,7 @@ Voer de gegeven stappen uit om de authentificatiestroom door enig teken-op uit t
    >
    > <br/>
    > 
-   > Voor meer details over `Adobe-Subject-Token` kopbal, verwijs naar [ Adobe-Onderwerp-Symbolische ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) documentatie.
+   > Voor meer details over `Adobe-Subject-Token` / `X-Roku-Reserved-Roku-Connect-Token` kopbal, verwijs naar [ Adobe-Subject-Token ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) / [ x-Roku-Gereserveerd-roku-Connect-Token ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) documentatie.
 
 1. **wijs op de volgende actie:** De het eindpuntreactie van Sessies bevat de noodzakelijke gegevens om de eerste het stromen toepassing betreffende de volgende actie te begeleiden.
 
@@ -156,7 +156,7 @@ Voer de gegeven stappen uit om de authentificatiestroom door enig teken-op uit t
    >
    > <br/>
    > 
-   > Voor meer details over `Adobe-Subject-Token` kopbal, verwijs naar [ Adobe-Onderwerp-Symbolische ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) documentatie.
+   > Voor meer details over `Adobe-Subject-Token` / `X-Roku-Reserved-Roku-Connect-Token` kopbal, verwijs naar [ Adobe-Subject-Token ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) / [ x-Roku-Gereserveerd-roku-Connect-Token ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) documentatie.
 
 1. **wint platformherkenningsteken terug:** de tweede het stromen toepassing roept de identiteitsdienst of de bibliotheek, buiten de systemen van Adobe Pass, om `JWS` of `JWE` lading te verkrijgen verbonden aan het unieke platformherkenningsteken.
 
@@ -180,7 +180,7 @@ Voer de gegeven stappen uit om de authentificatiestroom door enig teken-op uit t
    >
    > <br/>
    > 
-   > Voor meer details over `Adobe-Subject-Token` kopbal, verwijs naar [ Adobe-Onderwerp-Symbolische ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) documentatie.
+   > Voor meer details over `Adobe-Subject-Token` / `X-Roku-Reserved-Roku-Connect-Token` kopbal, verwijs naar [ Adobe-Subject-Token ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) / [ x-Roku-Gereserveerd-roku-Connect-Token ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) documentatie.
 
 1. **vind enig sign-on profiel:** de server van Adobe Pass identificeert een geldig enig sign-on profiel dat op de ontvangen parameters en kopballen wordt gebaseerd.
 
@@ -208,7 +208,7 @@ Voer de gegeven stappen uit om de authentificatiestroom door enig teken-op uit t
    >
    > <br/>
    > 
-   > Voor meer details over `Adobe-Subject-Token` kopbal, verwijs naar [ Adobe-Onderwerp-Symbolische ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) documentatie.
+   > Voor meer details over `Adobe-Subject-Token` / `X-Roku-Reserved-Roku-Connect-Token` kopbal, verwijs naar [ Adobe-Subject-Token ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) / [ x-Roku-Gereserveerd-roku-Connect-Token ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) documentatie.
 
 ## Autorisatiebeslissingen ophalen via Single Sign-On met behulp van platformidentiteit{#performing-authorization-flow-using-platform-identity-single-sign-on-method}
 
@@ -217,7 +217,7 @@ Voer de gegeven stappen uit om de authentificatiestroom door enig teken-op uit t
 Voordat u de autorisatiestroom via Single Sign-On uitvoert met behulp van een platformidentiteit, moet u controleren of aan de volgende voorwaarden is voldaan:
 
 * Het platform moet een identiteitsservice of een bibliotheek bieden die consistente informatie als `JWS` of `JWE` payload retourneert voor alle toepassingen op hetzelfde apparaat of platform.
-* De tweede het stromen toepassing moet het unieke platformherkenningsteken terugwinnen en `JWS` of `JWE` nuttige lading als deel van [ Adobe-Onderwerp-Symbolische ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) kopbal voor alle verzoeken omvatten die het specificeren.
+* De tweede het stromen toepassing moet het unieke platformherkenningsteken terugwinnen en `JWS` of `JWE` nuttige lading als deel van [ Adobe-Onderwerp-Symbolisch ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) / [ x-Roku-Gereserveerd-Roku-Connect-Token ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) kopbal voor alle verzoeken omvatten die het specificeren.
 * De tweede streamingtoepassing moet een autorisatiebesluit ophalen voordat een door de gebruiker geselecteerde resource wordt afgespeeld.
 
 >[!IMPORTANT]
@@ -226,7 +226,7 @@ Voordat u de autorisatiestroom via Single Sign-On uitvoert met behulp van een pl
 > 
 > <br/>
 > 
-> * De eerste het stromen toepassing heeft authentificatie uitgevoerd en een geldige waarde voor [ Adobe-Onderwerp-Symbolische ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) verzoekkopbal omvat.
+> * De eerste het stromen toepassing heeft authentificatie uitgevoerd en heeft een geldige waarde voor [ Adobe-Onderwerp-Symbolische ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) / [ x-Roku-Gereserveerd-Roku-Connect-Token ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) verzoekkopbal opgenomen.
 
 ### Workflow {#workflow-scenario-performing-authorization-flow-using-platform-identity-single-sign-on-method}
 
@@ -258,7 +258,7 @@ Voer de gegeven stappen uit om de vergunningsstroom door enig teken-op uit te vo
    >
    > <br/>
    > 
-   > Voor meer details over `Adobe-Subject-Token` kopbal, verwijs naar [ Adobe-Onderwerp-Symbolische ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) documentatie.
+   > Voor meer details over `Adobe-Subject-Token` / `X-Roku-Reserved-Roku-Connect-Token` kopbal, verwijs naar [ Adobe-Subject-Token ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) / [ x-Roku-Gereserveerd-roku-Connect-Token ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) documentatie.
 
 1. **vind enig sign-on profiel:** de server van Adobe Pass identificeert een geldig enig sign-on profiel dat op de ontvangen parameters en kopballen wordt gebaseerd.
 

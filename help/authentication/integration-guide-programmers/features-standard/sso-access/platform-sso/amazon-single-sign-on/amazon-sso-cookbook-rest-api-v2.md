@@ -2,9 +2,9 @@
 title: Amazon SSO Cookbook (REST API V2)
 description: Amazon SSO Cookbook (REST API V2)
 exl-id: 63e4fa63-8ca3-40eb-b49a-84dd75c2ca1d
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 640ba7073f7f4639f980f17f1a59c4468bfebcf4
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '567'
 ht-degree: 0%
 
 ---
@@ -21,17 +21,19 @@ Dit document doet dienst als uitbreiding aan het bestaande [ REST API V2 Overzic
 
 ## Amazon Single Sign-On met identiteitsstromen van platforms {#cookbook}
 
+Adobe Pass-verificatie werkt samen met Amazon om de gebruikerservaring bij aanmelding te verbeteren en Single Sign-On (SSO) te vereenvoudigen voor tv-abonnees op overal waar de toepassingen zich bevinden.
+
 ### Vereisten {#prerequisites}
 
 Voordat u verdergaat met de Amazon Single Sign-On met behulp van platformidentiteitsstromen, moet u controleren of aan de volgende voorwaarden is voldaan.
 
 #### Amazon SSO SDK integreren {#integrate-amazon-sso-sdk}
 
-De het stromen toepassing moet de ](https://tve.zendesk.com/hc/en-us/article_attachments/360064368131/ottSSOTokenLib_v1.jar) bibliotheek van 0} Amazon SSO SDK {voor Enige Sign-On (SSO) in zijn bouwstijl integreren.[
+De het stromen toepassing moet de [ Amazon SSO SDK ](https://tve.zendesk.com/hc/en-us/article_attachments/360064368131/ottSSOTokenLib_v1.jar) bibliotheek voor Enige Sign-On (SSO) in zijn bouwstijl integreren.
 
-* Download en kopieer de nieuwste Amazon SSO SDK-bibliotheek naar een `/SSOEnabler` -map die parallel loopt met de map van de toepassing.
+* Download en kopieer de nieuwste Amazon SSO SDK-bibliotheek naar een `/SSOEnabler` -map parallel aan de map van de toepassing.
 
-* Werk de manifest en de Gradle dossiers bij om de bibliotheek van SDK van Amazon te gebruiken SSO.
+* Werk de manifest- en verloopbestanden bij voor gebruik van de Amazon SSO SDK-bibliotheek.
 
   **Manifest:**
 
@@ -57,9 +59,9 @@ De het stromen toepassing moet de ](https://tve.zendesk.com/hc/en-us/article_att
 
 #### Amazon SSO SDK gebruiken {#use-amazon-sso-sdk}
 
-De streamingtoepassing moet de Amazon SSO SDK gebruiken om de SSO-token (platformidentiteit) te verkrijgen.
+De streamingtoepassing moet de Amazon SSO SDK gebruiken om de payload van het SSO-token (platform identity) te verkrijgen.
 
-De SDK van Amazon SSO biedt zowel synchrone als asynchrone API&#39;s om de payload van het SSO-token (platform identity) te verkrijgen.
+De Amazon SSO SDK biedt zowel synchrone als asynchrone API&#39;s om de payload van het SSO-token (platform identity) te verkrijgen.
 
 De streamingtoepassing kan op basis van de architectuur een van de twee opties kiezen.
 
@@ -135,7 +137,7 @@ Zorg ervoor dat de streamingtoepassing de volgende handelingen uitvoert:
    * De streamingtoepassing kan een `ClassNotFoundException` bij uitvoering tegenkomen voor de volgende klasse `com.amazon.ottssotokenlib.SSOEnabler` .
 
 * Het ontbreken van de SSO-token (platform identity) lading die door de bovenstaande API&#39;s moet worden geretourneerd.
-   * De streamingtoepassing kan contact opnemen met de vertegenwoordigers van Amazon en de Adobe om dit te onderzoeken.
+   * De streamingtoepassing kan contact opnemen met de Amazon- en Adobe-vertegenwoordigers om dit te onderzoeken.
 
 ### Workflow {#workflow}
 

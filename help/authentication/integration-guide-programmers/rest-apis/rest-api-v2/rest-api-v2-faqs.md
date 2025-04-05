@@ -2,9 +2,9 @@
 title: Veelgestelde vragen over REST API V2
 description: Veelgestelde vragen over REST API V2
 exl-id: 2dd74b47-126e-487b-b467-c16fa8cc14c1
-source-git-commit: 42df16e34783807e1b5eb1a12ca9db92f4e4c161
+source-git-commit: 640ba7073f7f4639f980f17f1a59c4468bfebcf4
 workflow-type: tm+mt
-source-wordcount: '9537'
+source-wordcount: '9697'
 ht-degree: 0%
 
 ---
@@ -123,7 +123,18 @@ Het doel van de authentificatiefase is de cliënttoepassing de capaciteit te ver
 
 De verificatiefase fungeert als een noodzakelijke stap voor de fase voorafgaand aan autorisatie of de machtigingsfase wanneer de clienttoepassing inhoud moet afspelen.
 
-#### 2. Wat is een verificatiesessie en hoe lang is deze geldig? {#authentication-phase-faq2}
+#### 2. Is de authenticatiefase verplicht? {#authentication-phase-faq2}
+
+De verificatiefase is verplicht. De clienttoepassing moet de gebruiker verifiëren wanneer deze geen geldig profiel heeft binnen de Adobe Pass-verificatie.
+
+De cliënttoepassing kan deze fase in de volgende scenario&#39;s overslaan:
+
+* De gebruiker is al geverifieerd en het profiel is nog steeds geldig.
+* De gebruiker wordt aangeboden tijdelijke toegang door basis of promotionele [ ](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md) eigenschap TempPass.
+
+De fout behandeling van de cliënttoepassing vereist om de [ fout ](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md#enhanced-error-codes-lists-rest-api-v2) codes (b.v., `authenticated_profile_missing`, `authenticated_profile_expired`, `authenticated_profile_invalidated`, enz.) te behandelen, die erop wijzen dat de cliënttoepassing de gebruiker om vereist voor authentiek te verklaren.
+
+#### 3. Wat is een verificatiesessie en hoe lang is deze geldig? {#authentication-phase-faq3}
 
 De authentificatiesessie is een termijn die in de [ verklarende woordenlijst ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#session) documentatie wordt bepaald.
 
@@ -140,7 +151,7 @@ Raadpleeg de volgende documenten voor meer informatie:
 * [Standaardverificatiestroom uitgevoerd binnen primaire toepassing](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authentication-primary-application-flow.md)
 * [Basisverificatiestroom uitgevoerd binnen secundaire toepassing](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authentication-secondary-application-flow.md)
 
-#### 3. Wat is een verificatiecode en hoe lang is deze geldig? {#authentication-phase-faq3}
+#### 4. Wat is een verificatiecode en hoe lang is deze geldig? {#authentication-phase-faq4}
 
 De authentificatiecode is een termijn die in de [ verklarende woordenlijst ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#code) documentatie wordt bepaald.
 
@@ -159,7 +170,7 @@ Raadpleeg de volgende documenten voor meer informatie:
 * [Standaardverificatiestroom uitgevoerd binnen primaire toepassing](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authentication-primary-application-flow.md)
 * [Basisverificatiestroom uitgevoerd binnen secundaire toepassing](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authentication-secondary-application-flow.md)
 
-#### 4. Hoe kan de clienttoepassing weten of de gebruiker een geldige verificatiecode heeft getypt en of de verificatiesessie nog niet is verlopen? {#authentication-phase-faq4}
+#### 5. Hoe kan de cliënttoepassing weten als de gebruiker een geldige authentificatiecode typte en dat de authentificatiesessie nog niet verliep? {#authentication-phase-faq5}
 
 De cliënttoepassing kan de authentificatiecode bevestigen die door de gebruiker in een secundaire (scherm) toepassing wordt getypt door een verzoek naar één van het eindpunt van Zittingen te verzenden verantwoordelijk om authentificatiesessie te hervatten of de informatie van de authentificatiesessie terug te winnen verbonden aan de authentificatiecode.
 
@@ -167,7 +178,7 @@ De cliënttoepassing zou een [ fout ](/help/authentication/integration-guide-pro
 
 Voor meer informatie, verwijs naar [ hervat authentificatiesessie ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-resume-authentication-session.md) en [ ontvang authentificatiesessie ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-retrieve-authentication-session-information-using-code.md) documenten.
 
-#### 5. Hoe kan de clienttoepassing weten of de gebruiker al is geverifieerd? {#authentication-phase-faq5}
+#### 6. Hoe kan de clienttoepassing weten of de gebruiker al is geverifieerd? {#authentication-phase-faq6}
 
 De cliënttoepassing kan één van de volgende eindpunten vragen geschikt om te verifiëren of een gebruiker reeds voor authentiek wordt verklaard en de informatie van het terugkeerprofiel terugkeert:
 
@@ -180,7 +191,7 @@ Raadpleeg de volgende documenten voor meer informatie:
 * [Stroom van basisprofielen uitgevoerd in primaire toepassing](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-primary-application-flow.md)
 * [De stroom van basisprofielen die binnen secundaire toepassing wordt uitgevoerd](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-secondary-application-flow.md)
 
-#### 6. Wat is een profiel en hoe lang is het geldig? {#authentication-phase-faq6}
+#### 7. Wat is een profiel en hoe lang is het geldig? {#authentication-phase-faq7}
 
 Het profiel is een termijn die in de [ verklarende woordenlijst ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#profile) documentatie wordt bepaald.
 
@@ -202,17 +213,17 @@ Dit beperkte die tijdkader als authentificatie (authN) [ wordt bekend TTL ](/hel
 
 Voor meer details, verwijs naar de ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#most-used-flows) documentatie van de Gebruiker van de Gids van de Integratie van het Dashboard van 0} TVE.[
 
-#### 7. Moet de clienttoepassing de profielgegevens van de gebruiker in cache plaatsen in een permanente opslag? {#authentication-phase-faq7}
+#### 8. Moet de clienttoepassing de profielgegevens van de gebruiker in cache plaatsen in een permanente opslag? {#authentication-phase-faq8}
 
-De clienttoepassing moet de profielgegevens van de gebruiker in een permanente opslag in cache plaatsen om onnodige verzoeken te voorkomen en de gebruikerservaring te verbeteren, rekening houdend met de volgende aspecten:
+De clienttoepassing moet delen van de profielgegevens van de gebruiker in een permanente opslag in cache plaatsen om onnodige verzoeken te voorkomen en de gebruikerservaring te verbeteren, rekening houdend met de volgende aspecten:
 
 | Kenmerk | Gebruikerservaring |
-|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `attributes` | De cliënttoepassing kan dit gebruiken om de gebruikerservaring te personaliseren die op verschillende [ wordt gebaseerd gebruikersmeta-gegevens ](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata.md) sleutels (b.v., `zip`, `maxRating`, enz.). |
-| `mvpd` | De clienttoepassing kan dit gebruiken om de geselecteerde tv-provider van de gebruiker bij te houden.<br/><br/> wanneer het huidige gebruikersprofiel verloopt, kan de cliënttoepassing de onthouden selectie van MVPD gebruiken en enkel de gebruiker vragen om te bevestigen. |
-| `notAfter` | De clienttoepassing kan dit gebruiken om de vervaldatum van het gebruikersprofiel bij te houden en het herverificatieproces te activeren wanneer dit verloopt, waarbij fouten tijdens de fasen voor voorafgaande toestemming of autorisatie worden vermeden.<br/><br/> de fout behandeling van de cliënttoepassing moet [ kunnen behandelen authenticated_profile_expired ](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md#enhanced-error-codes-lists-rest-api-v2) foutencode, die erop wijst dat de cliënttoepassing de gebruiker vereist om opnieuw voor authentiek te verklaren. |
+|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `mvpd` | De clienttoepassing kan dit gebruiken om de geselecteerde tv-provider van de gebruiker bij te houden en deze verder te blijven gebruiken tijdens de fase voorafgaand aan autorisatie of autorisatie.<br/><br/> wanneer het huidige gebruikersprofiel verloopt, kan de cliënttoepassing de onthouden selectie van MVPD gebruiken en enkel de gebruiker vragen om te bevestigen. |
+| `attributes` | De cliënttoepassing kan dit gebruiken om de gebruikerservaring te personaliseren die op verschillende [ wordt gebaseerd gebruikersmeta-gegevens ](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata.md) sleutels (b.v., `zip`, `maxRating`, enz.).<br/><br/> de meta-gegevens van de Gebruiker wordt beschikbaar nadat de authentificatiestroom voltooit, daarom te hoeven de cliënttoepassing niet om een afzonderlijk eindpunt te vragen om de [ gebruiker meta-gegevens ](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata.md) informatie terug te winnen, aangezien het reeds inbegrepen in de profielinformatie is.<br/><br/> bepaalde meta-gegevensattributen kunnen tijdens de vergunningsstroom worden bijgewerkt, afhankelijk van MVPD en de specifieke meta-gegevensattributen. Hierdoor moet de clienttoepassing mogelijk opnieuw een query uitvoeren op de API&#39;s voor profielen om de meest recente metagegevens van gebruikers op te halen. |
+| `notAfter` | De clienttoepassing kan dit gebruiken om de vervaldatum van het gebruikersprofiel bij te houden.<br/><br/> de fout behandeling van de cliënttoepassing vereist om de [ fout ](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md#enhanced-error-codes-lists-rest-api-v2) codes (b.v., `authenticated_profile_missing`, `authenticated_profile_expired`, `authenticated_profile_invalidated`, enz.) te behandelen, die erop wijst dat de cliënttoepassing de gebruiker om vereist voor authentiek te verklaren. |
 
-#### 8. Kan de clienttoepassing het profiel van de gebruiker uitbreiden zonder dat opnieuw verificatie vereist is? {#authentication-phase-faq8}
+#### 9. Kan de clienttoepassing het profiel van de gebruiker uitbreiden zonder dat opnieuw verificatie vereist is? {#authentication-phase-faq9}
 
 Nee.
 
@@ -222,7 +233,7 @@ Daarom moet de clienttoepassing de gebruiker vragen opnieuw te verifiëren en te
 
 Nochtans, voor MVPDs die [ op huis-gebaseerde authentificatie ](/help/authentication/integration-guide-programmers/features-standard/hba-access/home-based-authentication.md) (HBA) steunt, zal de gebruiker niet worden vereist om geloofsbrieven in te gaan.
 
-#### 9. Wat zijn de gebruiksgevallen voor elk beschikbaar eindpunt van Profielen? {#authentication-phase-faq9}
+#### 10. Wat zijn de gebruiksgevallen voor elk beschikbaar eindpunt van Profielen? {#authentication-phase-faq10}
 
 De eindpunten van de Profielen van de basis worden ontworpen om cliënttoepassing het vermogen te verstrekken om de de authentificatiestatus van de gebruiker te kennen, tot de informatie van gebruikersmeta-gegevens toegang te hebben, de methode te vinden die wordt gebruikt om voor authentiek te verklaren of de entiteit die wordt gebruikt om identiteit te verstrekken.
 
@@ -246,7 +257,7 @@ Voor om het even welke verdere vragen, moeten de basis eindpunten van Profielen 
 
 Voor meer details, verwijs naar [ Enige sign-on gebruikend partnerstromen ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-partner-flows.md) en [ Apple SSO Cookbook (REST API V2) ](/help/authentication/integration-guide-programmers/features-standard/sso-access/partner-sso/apple-sso/apple-sso-cookbook-rest-api-v2.md) documenten.
 
-#### 10. Wat moet de clienttoepassing doen als de gebruiker meerdere MVPD-profielen heeft? {#authentication-phase-faq10}
+#### 11. Wat moet de clienttoepassing doen als de gebruiker meerdere MVPD-profielen heeft? {#authentication-phase-faq11}
 
 Het besluit om meerdere profielen te ondersteunen hangt af van de zakelijke vereisten van de clienttoepassing.
 
@@ -261,7 +272,7 @@ REST API v2 biedt ondersteuning voor meerdere profielen om:
 * Gebruikers met een MVPD-abonnement in combinatie met DTC-services (Direct-to-Consumer).
 * Gebruikers met meerdere MVPD-abonnementen.
 
-#### 11. Wat gebeurt er als gebruikersprofielen verlopen? {#authentication-phase-faq11}
+#### 12. Wat gebeurt er als gebruikersprofielen verlopen? {#authentication-phase-faq12}
 
 Wanneer gebruikersprofielen verlopen, worden ze niet meer opgenomen in de reactie van het eindpunt van Profielen.
 
@@ -269,7 +280,7 @@ Als het eindpunt van Profielen een lege reactie van de profielkaart terugkeert, 
 
 Voor meer informatie, verwijs naar [ creeer authentificatiesessie API ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) documentatie.
 
-#### 12. Wanneer worden gebruikersprofielen ongeldig? {#authentication-phase-faq12}
+#### 13. Wanneer worden gebruikersprofielen ongeldig? {#authentication-phase-faq13}
 
 Gebruikersprofielen worden in de volgende gevallen ongeldig:
 
@@ -278,7 +289,7 @@ Gebruikersprofielen worden in de volgende gevallen ongeldig:
 * Wanneer de cliënttoepassing de cliëntgeloofsbrieven bijwerkt die worden gebruikt om de [ kopbalwaarde van de Vergunning ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-authorization.md) terug te winnen.
 * Wanneer de clienttoepassing de softwarefunctie die wordt gebruikt om clientreferenties op te halen of bijwerkt.
 
-#### 13. Wanneer moet de clienttoepassing het opiniepeilingsmechanisme starten? {#authentication-phase-faq13}
+#### 14. Wanneer moet de clienttoepassing het opiniepeilingsmechanisme starten? {#authentication-phase-faq14}
 
 Om de efficiëntie te waarborgen en onnodige verzoeken te vermijden, moet de clienttoepassing onder de volgende omstandigheden beginnen met het opiniepeilingsmechanisme:
 
@@ -290,7 +301,7 @@ De primaire (het stromen) toepassing zou moeten beginnen opiniepeilend wanneer d
 
 De primaire (het stromen) toepassing zou moeten beginnen opiniepeilend zodra de gebruiker het authentificatieproces-recht na het ontvangen van de ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) eindpuntreactie van de Zittingen [ in werking stelt en de authentificatiecode aan de gebruiker toont.
 
-#### 14. Wanneer moet de clienttoepassing het opiniepeilingsmechanisme stoppen? {#authentication-phase-faq14}
+#### 15. Wanneer moet de clienttoepassing het opiniepeilingsmechanisme stoppen? {#authentication-phase-faq15}
 
 Om de efficiëntie te waarborgen en onnodige verzoeken te vermijden, moet de clienttoepassing het opiniepeilingsmechanisme stopzetten onder de volgende omstandigheden:
 
@@ -306,7 +317,7 @@ De authentificatiesessie en de code verlopen, zoals die door `notAfter` wordt ve
 
 Als de gebruiker om een nieuwe authentificatiecode op het primaire (scherm) apparaat verzoekt, is de bestaande zitting niet meer geldig, en de opiniepeiling die de vorige authentificatiecode gebruikt zou onmiddellijk moeten worden tegengehouden.
 
-#### 15. Welk interval tussen vraag zou de cliënttoepassing voor het opiniepeilingsmechanisme moeten gebruiken? {#authentication-phase-faq15}
+#### 16. Welk interval tussen vraag zou de cliënttoepassing voor het opiniepeilingsmechanisme moeten gebruiken? {#authentication-phase-faq16}
 
 Om efficiëntie te garanderen en onnodige verzoeken te voorkomen, moet de clienttoepassing de frequentie van het opiniepeilingsmechanisme onder de volgende omstandigheden configureren:
 
@@ -314,7 +325,7 @@ Om efficiëntie te garanderen en onnodige verzoeken te voorkomen, moet de client
 |----------------------------------------------------------------------|----------------------------------------------------------------------|
 | De primaire (het stromen) toepassing zou om de 3-5 seconden moeten opiniepeilen. | De primaire (het stromen) toepassing zou om de 3-5 seconden moeten opiniepeilen. |
 
-#### 16. Wat is het maximumaantal opiniepeilingsverzoeken dat de clienttoepassing kan verzenden? {#authentication-phase-faq16}
+#### 17. Wat is het maximumaantal opiniepeilingsverzoeken dat de clienttoepassing kan verzenden? {#authentication-phase-faq17}
 
 De cliënttoepassing moet de huidige grenzen naleven die door de Authentificatie van Adobe Pass [ worden bepaald die Mechanisme van de Omwenteling ](/help/authentication/integration-guide-programmers/throttling-mechanism.md#throttling-mechanism-limits).
 
@@ -322,7 +333,7 @@ De fout behandeling van de cliënttoepassing moet [ 429 Te Vele de foutencode va
 
 Voor meer details, verwijs naar het [ Throttling Mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
 
-#### 17. Hoe kan de clienttoepassing de metagegevens van de gebruiker ophalen? {#authentication-phase-faq17}
+#### 18. Hoe kan de clienttoepassing de metagegevens van de gebruiker ophalen? {#authentication-phase-faq18}
 
 De cliënttoepassing kan één van de volgende eindpunten vragen geschikt om [ informatie van gebruikersmeta-gegevens ](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata.md) als deel van de profielinformatie terug te keren:
 
@@ -339,7 +350,7 @@ Raadpleeg de volgende documenten voor meer informatie:
 
 Afhankelijk van de MVPD en het specifieke metagegevenskenmerk kunnen bepaalde metagegevenskenmerken tijdens de autorisatiestroom worden bijgewerkt. Hierdoor moet de clienttoepassing mogelijk opnieuw een query uitvoeren op de bovenstaande API&#39;s om de meest recente metagegevens van de gebruiker op te halen.
 
-#### 18. Hoe moet de clienttoepassing onbeheerde toegang beheren? {#authentication-phase-faq18}
+#### 19. Hoe moet de clienttoepassing onbeheerde toegang beheren? {#authentication-phase-faq19}
 
 De [ Eigenschap van de Vermindering ](/help/authentication/integration-guide-programmers/features-premium/degraded-access/degradation-feature.md) laat de cliënttoepassing toe om een naadloze het stromen ervaring voor gebruikers te handhaven, zelfs wanneer hun de authentificatie of toestemmingsdiensten van MVPD kwesties ontmoeten.
 
@@ -349,7 +360,7 @@ Aangezien uw organisatie van plan is om de functie van de premiedegradatie te ge
 
 Voor meer details, verwijs naar [ Verminderde toegangsstromen ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/degraded-access-flows/rest-api-v2-access-degraded-flows.md) documentatie.
 
-#### 19. Hoe moet de clienttoepassing tijdelijke toegang beheren? {#authentication-phase-faq19}
+#### 20. Hoe moet de clienttoepassing tijdelijke toegang beheren? {#authentication-phase-faq20}
 
 De [ Eigenschap TempPass ](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md) laat de cliënttoepassing toe om tijdelijke toegang tot de gebruiker te verlenen.
 
@@ -363,7 +374,7 @@ Met REST API v2 kan de clienttoepassing bij het autoriseren van een stream naadl
 
 Voor meer details, verwijs naar de [ Tijdelijke toegangsstromen ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/temporary-access-flows/rest-api-v2-access-temporary-flows.md) documentatie.
 
-#### 20. Hoe moet de clienttoepassing apparaatoverschrijdende Single Sign-On-toegang beheren? {#authentication-phase-faq20}
+#### 21. Hoe moet de clienttoepassing apparaatoverschrijdende Single Sign-On-toegang beheren? {#authentication-phase-faq21}
 
 REST API v2 kan Single Sign-On voor meerdere apparaten inschakelen als de clienttoepassing een consistente unieke gebruikersidentificatie voor alle apparaten biedt.
 
