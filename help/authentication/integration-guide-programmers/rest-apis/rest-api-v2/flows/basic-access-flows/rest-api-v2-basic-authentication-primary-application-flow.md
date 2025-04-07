@@ -2,9 +2,9 @@
 title: Basisverificatie - Primaire toepassing - Stroom
 description: REST API V2 - Basisverificatie - Primaire toepassing - Stroom
 exl-id: 8122108d-e9da-43c5-9abb-ab177cb21eb6
-source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
+source-git-commit: b753c6a6bdfd8767e86cbe27327752620158cdbb
 workflow-type: tm+mt
-source-wordcount: '904'
+source-wordcount: '903'
 ht-degree: 0%
 
 ---
@@ -127,7 +127,7 @@ Volg de gegeven stappen om de basisauthentificatiestroom uit te voeren die binne
 
    >[!TIP]
    >
-   > Suggestie: de streamingtoepassing kan wachten tot de gebruikersagent de opgegeven `redirectUrl` heeft bereikt om te controleren of het standaardprofiel is gegenereerd en opgeslagen.
+   > De streamingtoepassing moet wachten totdat de gebruikersagent de opgegeven `redirectUrl` heeft bereikt om te controleren of het standaardprofiel is gegenereerd en opgeslagen.
 
 1. **de informatie van de Terugkeer over regelmatig profiel:** de het eindpuntreactie van Profielen bevat informatie over het regelmatige profiel verbonden aan de ontvangen parameters en kopballen.
 

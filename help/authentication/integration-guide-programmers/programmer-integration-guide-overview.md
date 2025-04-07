@@ -2,7 +2,7 @@
 title: Programmeringsintegratiegids
 description: Programmeringsintegratiegids
 exl-id: 51461caf-08ef-459e-b284-8f317f45e7b1
-source-git-commit: 07bb12f7983f39b58e1b9795fdaa1bec4f68e674
+source-git-commit: b753c6a6bdfd8767e86cbe27327752620158cdbb
 workflow-type: tm+mt
 source-wordcount: '2119'
 ht-degree: 0%
@@ -201,7 +201,7 @@ De volgende stappen schetsen de stappen op hoog niveau in het geval van een inte
 
 **FAQs**
 
-* [ de fase FAQs van de Authentificatie ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general).
+* [Veelgestelde vragen over de verificatiefase](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general)
 
 >[!TIP]
 >
@@ -236,7 +236,7 @@ De fase voorafgaand aan autorisatie kan de gebruikerservaring verbeteren wanneer
 
 **FAQs**
 
-* [ Veelgestelde vragen van de pre-vergunningsfase ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#preauthorization-phase-faqs-general).
+* [Veelgestelde vragen over de preautorisatiefase](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#preauthorization-phase-faqs-general)
 
 >[!TIP]
 >
@@ -277,7 +277,7 @@ In de volgende stappen worden de stappen op hoog niveau beschreven:
 
 **FAQs**
 
-* [ de fase FAQs van de Vergunning van de Vergunning ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authorization-phase-faqs-general).
+* [Veelgestelde vragen over de machtigingsfase](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authorization-phase-faqs-general)
 
 >[!TIP]
 >
@@ -297,7 +297,7 @@ Het doel van de afmeldingsfase is om de clienttoepassing de mogelijkheid te bied
 
 **FAQs**
 
-* [ Logout fase FAQs ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#logout-phase-faqs-general).
+* [Veelgestelde vragen over de afmeldingsfase](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#logout-phase-faqs-general)
 
 #### Single Logout (SLO) {#single-logout}
 

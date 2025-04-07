@@ -2,9 +2,9 @@
 title: Veelgestelde vragen over REST API V2
 description: Veelgestelde vragen over REST API V2
 exl-id: 2dd74b47-126e-487b-b467-c16fa8cc14c1
-source-git-commit: 640ba7073f7f4639f980f17f1a59c4468bfebcf4
+source-git-commit: b753c6a6bdfd8767e86cbe27327752620158cdbb
 workflow-type: tm+mt
-source-wordcount: '9697'
+source-wordcount: '9703'
 ht-degree: 0%
 
 ---
@@ -311,7 +311,7 @@ De profielgegevens van de gebruiker worden opgehaald en hun verificatiestatus wo
 
 **de zitting van de Authentificatie en coderepering**
 
-De authentificatiesessie en de code verlopen, zoals die door `notAfter` wordt vermeld timestamp in de [ 2} eindpuntreactie van Zittingen {. ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) Als dit gebeurt, moet de gebruiker het authentificatieproces opnieuw beginnen, en de opiniepeiling die de vorige authentificatiecode gebruikt zou onmiddellijk moeten worden tegengehouden.
+De authentificatiesessie en de code verlopen, zoals die door `notAfter` wordt vermeld timestamp (b.v., 30 minuten) in de [ 2} eindpuntreactie van Zittingen {. ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) Als dit gebeurt, moet de gebruiker het authentificatieproces opnieuw beginnen, en de opiniepeiling die de vorige authentificatiecode gebruikt zou onmiddellijk moeten worden tegengehouden.
 
 **Nieuwe geproduceerde authentificatiecode**
 
@@ -322,8 +322,8 @@ Als de gebruiker om een nieuwe authentificatiecode op het primaire (scherm) appa
 Om efficiëntie te garanderen en onnodige verzoeken te voorkomen, moet de clienttoepassing de frequentie van het opiniepeilingsmechanisme onder de volgende omstandigheden configureren:
 
 | **Authentificatie die binnen de primaire (scherm) toepassing wordt uitgevoerd** | **Authentificatie die binnen een secundaire (scherm) toepassing wordt uitgevoerd** |
-|----------------------------------------------------------------------|----------------------------------------------------------------------|
-| De primaire (het stromen) toepassing zou om de 3-5 seconden moeten opiniepeilen. | De primaire (het stromen) toepassing zou om de 3-5 seconden moeten opiniepeilen. |
+|----------------------------------------------------------------------------|----------------------------------------------------------------------------|
+| De primaire (het stromen) toepassing zou om de 3-5 seconden of meer moeten opiniepeilen. | De primaire (het stromen) toepassing zou om de 3-5 seconden of meer moeten opiniepeilen. |
 
 #### 17. Wat is het maximumaantal opiniepeilingsverzoeken dat de clienttoepassing kan verzenden? {#authentication-phase-faq17}
 
@@ -526,7 +526,7 @@ De clienttoepassing moet het mediatoken valideren voordat de bronstream wordt af
 
 Nee.
 
-De clienttoepassing is niet verplicht een verlopen mediatoken te vernieuwen terwijl de stream actief wordt afgespeeld. Als het media-token tijdens het afspelen verloopt, moet het zijn toegestaan dat de stream zonder onderbreking wordt voortgezet. Nochtans, moet de cliënt om een nieuw vergunningsbesluit — en een nieuw media teken verkrijgen — de volgende keer de gebruiker probeert om het zelfde middel te spelen.
+De clienttoepassing is niet verplicht een verlopen mediatoken te vernieuwen terwijl de stream actief wordt afgespeeld. Als het media-token tijdens het afspelen verloopt, moet het zijn toegestaan dat de stream zonder onderbreking wordt voortgezet. Nochtans, moet de cliënt om een nieuw vergunningsbesluit verzoeken — en een nieuw media teken verkrijgen — de volgende tijd de gebruiker probeert om een middel te spelen.
 
 #### 9. Wat is het doel van elk tijdstempelkenmerk in het vergunningsbesluit? {#authorization-phase-faq9}
 

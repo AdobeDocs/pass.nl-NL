@@ -2,9 +2,9 @@
 title: Tijdelijke toegangsstromen
 description: REST API V2 - Tijdelijke toegangsstromen
 exl-id: 387fcdb0-3a42-4893-ba83-e809426f92be
-source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
+source-git-commit: b753c6a6bdfd8767e86cbe27327752620158cdbb
 workflow-type: tm+mt
-source-wordcount: '3225'
+source-wordcount: '3223'
 ht-degree: 0%
 
 ---
@@ -355,7 +355,7 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren wanneer het verbru
 
    >[!TIP]
    >
-   > Suggestie: de streamingtoepassing kan gebruikers informeren dat het maximumaantal bronnen is overschreden en hen adviseren een basisverificatiestroom te starten met een gewone MVPD om te blijven kijken.
+   > De streamingtoepassing kan gebruikers informeren dat het maximumaantal bronnen is overschreden en hen adviseren een basisverificatiestroom te starten met een gewone MVPD om te blijven kijken.
 
 ## Autorisatiebesluiten ophalen wanneer basis- of promotionele TempPass verloopt {#retrieve-authorization-decisions-when-basic-or-promotional-temppass-expires}
 
@@ -435,7 +435,7 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren wanneer basis of p
 
    >[!TIP]
    >
-   > Suggestie: de streamingtoepassing kan gebruikers informeren dat de tijdelijke toegang is verlopen en hen adviseren een basisverificatiestroom te starten met een gewone MVPD om te blijven kijken.
+   > De streamingtoepassing kan gebruikers informeren dat de tijdelijke toegang is verlopen en hen adviseren om een basisauthentificatiestroom in werking te stellen gebruikend een regelmatige MVPD om het letten voort te zetten.
 
 ## Profiel ophalen voor standaard TempPass {#retrieve-profile-for-basic-temppass}
 

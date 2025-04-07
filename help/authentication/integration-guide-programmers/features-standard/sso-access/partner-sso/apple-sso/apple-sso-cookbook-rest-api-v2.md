@@ -2,9 +2,9 @@
 title: Apple SSO Cookbook (REST API V2)
 description: Apple SSO Cookbook (REST API V2)
 exl-id: 81476312-9ba4-47a0-a4f7-9a557608cfd6
-source-git-commit: d8097b8419aa36140e6ff550714730059555fd14
+source-git-commit: b753c6a6bdfd8767e86cbe27327752620158cdbb
 workflow-type: tm+mt
-source-wordcount: '3615'
+source-wordcount: '3609'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
 
    >[!TIP]
    >
-   > Suggestie: de clientgegevens moeten in de cache worden opgeslagen en kunnen voor onbepaalde tijd worden gebruikt.
+   > De clientreferenties moeten in de cache worden opgeslagen en voor onbepaalde tijd worden gebruikt.
 
 1. **wint toegangstoken terug:** de het stromen toepassing verzamelt alle noodzakelijke gegevens om toegangstoken terug te winnen door het Symbolische eindpunt van de Cliënt te roepen.
 
@@ -109,7 +109,7 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
 
    >[!TIP]
    >
-   > Suggestie: het toegangstoken moet in de cache worden opgeslagen en alleen binnen de opgegeven tijdsduur worden gebruikt (bijvoorbeeld 24-uurs time-to-live). Nadat deze is verlopen, moet de streamingtoepassing een nieuw toegangstoken aanvragen.
+   > Het toegangstoken moet in de cache worden geplaatst en alleen binnen de opgegeven tijdsduur worden gebruikt (bijvoorbeeld 24-uurs time-to-live). Nadat deze is verlopen, moet de streamingtoepassing een nieuw toegangstoken aanvragen.
 
 +++
 
@@ -391,7 +391,7 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
 
    >[!TIP]
    >
-   > Suggestie: de streamingtoepassing kan in plaats daarvan een in cache opgeslagen waarde gebruiken voor de statusinformatie van het partnerframework. We raden u aan deze waarde te vernieuwen wanneer de toepassing van de achtergrond naar de voorgrondstatus overgaat. In dat geval, moet de het stromen toepassing ervoor zorgen het caches en gebruikt slechts geldige waarden voor de status van het partnerkader zoals die door de &quot;de statusinformatie van het partnerkader van de Terugkeer&quot;stap wordt beschreven.
+   > De het stromen toepassing kan in plaats daarvan een caching waarde voor de de statusinformatie van het partnerkader gebruiken, die wij het verfrissen adviseren wanneer de toepassingsovergangen van achtergrond aan voorgrondstaat. In dat geval, moet de het stromen toepassing ervoor zorgen het caches en gebruikt slechts geldige waarden voor de status van het partnerkader zoals die door de &quot;de statusinformatie van het partnerkader van de Terugkeer&quot;stap wordt beschreven.
 
 1. **de statusinformatie van het partnerkader van de Terugkeer:** De het stromen toepassing bevestigt de reactiegegevens om ervoor te zorgen dat de basisvoorwaarden worden voldaan aan:
    * De toegangsstatus van de gebruikerstoestemming wordt verleend.
@@ -462,7 +462,7 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
 
    >[!TIP]
    >
-   > Suggestie: de streamingtoepassing kan in plaats daarvan een in cache opgeslagen waarde gebruiken voor de statusinformatie van het partnerframework. We raden u aan deze waarde te vernieuwen wanneer de toepassing van de achtergrond naar de voorgrondstatus overgaat. In dat geval, moet de het stromen toepassing ervoor zorgen het caches en gebruikt slechts geldige waarden voor de status van het partnerkader zoals die door de &quot;de statusinformatie van het partnerkader van de Terugkeer&quot;stap wordt beschreven.
+   > De het stromen toepassing kan in plaats daarvan een caching waarde voor de de statusinformatie van het partnerkader gebruiken, die wij het verfrissen adviseren wanneer de toepassingsovergangen van achtergrond aan voorgrondstaat. In dat geval, moet de het stromen toepassing ervoor zorgen het caches en gebruikt slechts geldige waarden voor de status van het partnerkader zoals die door de &quot;de statusinformatie van het partnerkader van de Terugkeer&quot;stap wordt beschreven.
 
 1. **de statusinformatie van het partnerkader van de Terugkeer:** De het stromen toepassing bevestigt de reactiegegevens om ervoor te zorgen dat de basisvoorwaarden worden voldaan aan:
    * De toegangsstatus van de gebruikerstoestemming wordt verleend.

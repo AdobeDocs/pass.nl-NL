@@ -2,9 +2,9 @@
 title: Single Sign On - Platform Identity - Flows
 description: REST API V2 - Single Sign On - Platform Identity - Flows
 exl-id: 5200e851-84e8-4cb4-b068-63b91a2a8945
-source-git-commit: 640ba7073f7f4639f980f17f1a59c4468bfebcf4
+source-git-commit: b753c6a6bdfd8767e86cbe27327752620158cdbb
 workflow-type: tm+mt
-source-wordcount: '1856'
+source-wordcount: '1855'
 ht-degree: 0%
 
 ---
@@ -128,7 +128,7 @@ Voer de gegeven stappen uit om de authentificatiestroom door enig teken-op uit t
 
    >[!TIP]
    >
-   > Suggestie: de streamingtoepassing kan wachten tot de gebruikersagent de opgegeven `redirectUrl` heeft bereikt om te controleren of het standaardprofiel is gegenereerd en opgeslagen.
+   > De streamingtoepassing moet wachten totdat de gebruikersagent de opgegeven `redirectUrl` heeft bereikt om te controleren of het standaardprofiel is gegenereerd en opgeslagen.
 
 1. **vind regelmatig profiel:** de server van Adobe Pass identificeert een geldig profiel dat op de ontvangen parameters en kopballen wordt gebaseerd.
 

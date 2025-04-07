@@ -2,9 +2,9 @@
 title: Dynamic Client Registration Flow
 description: Dynamic Client Registration Flow
 exl-id: d881cf0a-de09-4b1d-a094-d5490f944796
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b753c6a6bdfd8767e86cbe27327752620158cdbb
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '564'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,7 @@ Voer de opgegeven stappen uit om toegang te krijgen tot API&#39;s die met Adobe 
 
    >[!TIP]
    >
-   > Suggestie: de clientgegevens moeten in de cache worden opgeslagen en kunnen voor onbepaalde tijd worden gebruikt.
+   > De clientreferenties moeten in de cache worden opgeslagen en voor onbepaalde tijd worden gebruikt.
 
 1. **wint toegangstoken terug:** de cliënttoepassing verzamelt alle noodzakelijke gegevens om toegangstoken terug te winnen door het Symbolische eindpunt van de Cliënt te roepen.
 
@@ -100,7 +100,7 @@ Voer de opgegeven stappen uit om toegang te krijgen tot API&#39;s die met Adobe 
 
    >[!TIP]
    >
-   > Suggestie: het toegangstoken moet in de cache worden opgeslagen en alleen binnen de opgegeven tijdsduur worden gebruikt (bijvoorbeeld 24-uurs time-to-live). Nadat deze is verlopen, moet de clienttoepassing een nieuw toegangstoken aanvragen.
+   > Het toegangstoken moet in de cache worden geplaatst en alleen binnen de opgegeven tijdsduur worden gebruikt (bijvoorbeeld 24-uurs time-to-live). Nadat deze is verlopen, moet de clienttoepassing een nieuw toegangstoken aanvragen.
 
 1. **ga met de toegang tot van beschermde APIs te werk:** de cliënttoepassing gebruikt het toegangstoken om tot andere Adobe Pass beschermde APIs toegang te hebben. De clienttoepassing moet het toegangstoken opnemen in de aanvraagheader van `Authorization` met behulp van het `Bearer` verificatieschema (d.w.z. `Authorization: Bearer <access_token>` ).
 

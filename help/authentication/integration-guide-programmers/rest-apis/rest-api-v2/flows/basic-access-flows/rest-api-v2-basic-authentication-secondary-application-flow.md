@@ -2,9 +2,9 @@
 title: Basisverificatie - Secundaire toepassing - Stroom
 description: REST API V2 - Basisverificatie - Secundaire toepassing - Stroom
 exl-id: 83bf592e-c679-4cfe-984d-710a9598c620
-source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
+source-git-commit: b753c6a6bdfd8767e86cbe27327752620158cdbb
 workflow-type: tm+mt
-source-wordcount: '2010'
+source-wordcount: '2006'
 ht-degree: 0%
 
 ---
@@ -143,7 +143,7 @@ Volg de gegeven stappen om de basisauthentificatiestroom uit te voeren die binne
 
    >[!TIP]
    >
-   > Suggestie: de secundaire toepassing kan gebruikers informeren dat de gebruikte `code` ongeldig is in het geval van een foutreactie die een ontbrekende verificatiesessie aangeeft, en hen adviseren opnieuw te proberen met een nieuwe.
+   > De secundaire toepassing kan gebruikers informeren dat de gebruikte `code` ongeldig is in het geval van een foutreactie die een ontbrekende verificatiesessie aangeeft, en hen adviseren opnieuw te proberen met een nieuwe sessie.
 
 1. **Open URL in gebruikersagent:** De secundaire toepassing opent een gebruikersagent om het zelf gegevens verwerkte `url` te laden, die een verzoek aan het Authenticate eindpunt doet. Deze stroom kan verschillende omleidingen bevatten, die de gebruiker uiteindelijk naar de MVPD-aanmeldingspagina leiden en geldige gegevens bieden.
 
@@ -168,7 +168,7 @@ Volg de gegeven stappen om de basisauthentificatiestroom uit te voeren die binne
 
    >[!TIP]
    >
-   > Suggestie: de streamingtoepassing kan een opiniepeilingsmechanisme implementeren met behulp van `code` om te controleren of het standaardprofiel is gegenereerd en opgeslagen.
+   > De streamingtoepassing moet een opiniepeilingsmechanisme implementeren met behulp van `code` om te controleren of het standaardprofiel is gegenereerd en opgeslagen.
 
 1. **de informatie van de Terugkeer over regelmatig profiel:** de het eindpuntreactie van Profielen bevat informatie over het regelmatige profiel verbonden aan de ontvangen parameters en kopballen.
 
@@ -277,7 +277,7 @@ Volg de gegeven stappen om de basisauthentificatiestroom uit te voeren die binne
 
    >[!TIP]
    >
-   > Suggestie: de secundaire toepassing kan gebruikers informeren dat de gebruikte `code` ongeldig is in het geval van een foutreactie die een ontbrekende verificatiesessie aangeeft, en hen adviseren opnieuw te proberen met een nieuwe.
+   > De secundaire toepassing kan gebruikers informeren dat de gebruikte `code` ongeldig is in het geval van een foutreactie die een ontbrekende verificatiesessie aangeeft, en hen adviseren opnieuw te proberen met een nieuwe sessie.
 
 1. **wijs bestaand profiel op:** De reactie van het eindpunt van Zegelingen bevat de volgende gegevens:
    * Het attribuut `actionName` wordt ingesteld op &quot;authorize&quot;.
@@ -306,7 +306,7 @@ Volg de gegeven stappen om de basisauthentificatiestroom uit te voeren die binne
 
    >[!TIP]
    >
-   > Suggestie: de streamingtoepassing kan een opiniepeilingsmechanisme implementeren met behulp van `code` om te controleren of het standaardprofiel is gegenereerd en opgeslagen.
+   > De streamingtoepassing moet een opiniepeilingsmechanisme implementeren met behulp van `code` om te controleren of het standaardprofiel is gegenereerd en opgeslagen.
 
 1. **de informatie van de Terugkeer over regelmatig profiel:** de het eindpuntreactie van Profielen bevat informatie over het regelmatige profiel verbonden aan de ontvangen parameters en kopballen.
 

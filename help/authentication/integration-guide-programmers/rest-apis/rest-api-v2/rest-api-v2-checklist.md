@@ -1,9 +1,10 @@
 ---
 title: REST API V2 Checklist
 description: REST API V2 Checklist
-source-git-commit: f0001d86f595040f4be74f357c95bd2919dadf15
+exl-id: 9095d1dd-a90c-4431-9c58-9a900bfba1cf
+source-git-commit: b753c6a6bdfd8767e86cbe27327752620158cdbb
 workflow-type: tm+mt
-source-wordcount: '2535'
+source-wordcount: '2545'
 ht-degree: 0%
 
 ---
@@ -40,7 +41,7 @@ Het volgende document moet als onderdeel van uw acceptatiecriteria worden bescho
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;"><i>Tokens in cache plaatsen</i></td>
-      <td>Sla de toegangstokens op in permanente opslag en gebruik ze opnieuw tot ze verlopen. Vraag niet om een nieuw token voor elke REST API v2-aanroep.</td>
+      <td>Sla de toegangstokens op in permanente opslag en gebruik ze opnieuw tot ze verlopen.<br/><br/> verzoek geen nieuw teken voor elke REST API v2 vraag, vernieuw de toegangstokens slechts wanneer zij verlopen.</td>
       <td>Risico's bij het overladen van systeembronnen, het verhogen van de latentie en het mogelijk activeren van de foutreacties van HTTP 429 "Te veel verzoeken".</td>
    </tr>
 </table>
@@ -85,7 +86,7 @@ Het volgende document moet als onderdeel van uw acceptatiecriteria worden bescho
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;"><i>Opiniepeilingsmechanisme configureren</i></td>
-      <td>Vorm de frequentie van het opiniepeilingsmechanisme onder de volgende voorwaarden:<br/><br/><b><a href="/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authentication-primary-application-flow.md"> Authentificatie die binnen de primaire (scherm) toepassing </a></b> wordt uitgevoerd<ul><li>De primaire (het stromen) toepassing zou om de 3-5 seconden moeten opiniepeilen.</li></ul><br/><b><a href="/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authentication-secondary-application-flow.md"> Authentificatie die binnen een secundaire (scherm) toepassing wordt uitgevoerd </a></b><ul><li>De primaire (het stromen) toepassing zou om de 3-5 seconden moeten opiniepeilen.</li></ul></td>
+      <td>Vorm de frequentie van het opiniepeilingsmechanisme onder de volgende voorwaarden:<br/><br/><b><a href="/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authentication-primary-application-flow.md"> Authentificatie die binnen de primaire (scherm) toepassing </a></b> wordt uitgevoerd<ul><li>De primaire (het stromen) toepassing zou om de 3-5 seconden of meer moeten opiniepeilen.</li></ul><br/><b><a href="/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authentication-secondary-application-flow.md"> Authentificatie die binnen een secundaire (scherm) toepassing wordt uitgevoerd </a></b><ul><li>De primaire (het stromen) toepassing zou om de 3-5 seconden moeten opiniepeilen.</li></ul></td>
       <td>Risico's bij het overladen van systeembronnen, het verhogen van de latentie en het mogelijk activeren van de foutreacties van HTTP 429 "Te veel verzoeken".</td>
    </tr>
    <tr>
@@ -237,7 +238,7 @@ Het volgende document moet als onderdeel van uw acceptatiecriteria worden bescho
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;"><i>Validatie voor toegangstokens</i></td>
-      <td>Controleer proactief de geldigheid van het toegangstoken en vernieuw het wanneer verlopen.<br/><br/> zorg ervoor dat om het even welk hertry mechanisme voor de behandeling van HTTP 401 "Onbevoegde"fouten eerst het toegangstoken alvorens het originele verzoek opnieuw te proberen verfrist.</td>
+      <td>Controleer proactief de geldigheid van het toegangstoken om het te verfrissen wanneer verlopen.<br/><br/> zorg ervoor dat om het even welk hertry mechanisme voor de behandeling van HTTP 401 "Onbevoegde"fouten eerst het toegangstoken alvorens het originele verzoek opnieuw te proberen verfrist.</td>
       <td>Risico's die HTTP 401 "Onbevoegde"foutenreacties teweegbrengen, systeemmiddelen overbelasten en latentie verhogen.</td>
    </tr>
 </table>
