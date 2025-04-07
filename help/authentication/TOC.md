@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass-verificatie
 user-guide-description: Adobe Pass-verificatie is een machtigingsoplossing voor TV Everywhere, die een modulair kader verstrekt om te bepalen of iemand die toegang tot een bron vraagt, daar rechten voor heeft.
-source-git-commit: 640ba7073f7f4639f980f17f1a59c4468bfebcf4
+source-git-commit: f054da9a4c35fa0715039e8e06e2d10737b91b57
 workflow-type: tm+mt
-source-wordcount: '1257'
+source-wordcount: '1251'
 ht-degree: 2%
 
 ---
@@ -251,7 +251,6 @@ ht-degree: 2%
                + [(Verouderd) SFSafariViewController-ondersteuning op iOS SDK 3.2+](integration-guide-programmers/legacy/notes-technical/sfsafariviewcontroller-support-on-ios-sdk-32.md)
                + [(Verouderd) SSO op iOS bij gebruik van de Adobe Pass Authentication Access Enabler](integration-guide-programmers/legacy/notes-technical/sso-on-ios-when-using-the-primetime-authentication-access-enabler.md)
                + [(Verouderd) iOS-verificatiefout - adobepass.ios.app is niet gevonden](integration-guide-programmers/legacy/notes-technical/ios-authentication-error-adobepassiosapp-cannot-be-found.md)
-               + [(Verouderd) Tijdelijke controle opnieuw instellen op iOS](integration-guide-programmers/legacy/notes-technical/reset-temp-pass-on-ios.md)
                + [(Verouderd) Foutopsporing in de AccessEnabler iOS/tvOS SDK met behulp van console-app-logbestanden](integration-guide-programmers/legacy/notes-technical/debugging-the-accessenabler-iostvos-sdk-using-console-app-logs.md)
                + [(Verouderd) AccessEnabler iOS/tvOS 3.7.0 Upgradepad](integration-guide-programmers/legacy/notes-technical/accessenabler-iostvos-370-upgrade-path.md)
          + (Verouderd) Ervaring voor gebruikers {#user-experience}
