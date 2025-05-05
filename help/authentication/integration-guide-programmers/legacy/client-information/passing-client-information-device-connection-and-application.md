@@ -110,7 +110,7 @@ AccessEnabler iOS/tvOS SDK steunt **het met voeten treden van de volledige** cli
 >
 >De *device_info* parameterwaarde moet a **Base64 gecodeerde** ** waarde zijn NSString.
 >
->In het geval dat de toepassing van de Programmer besluit om *device_info* over te gaan, dan zullen alle sleutels van cliëntinformatie die door AccessEnabler iOS/tvOS SDK worden gegevens verwerkt worden met voeten getreden. Daarom is het zeer belangrijk om de waarden voor zoveel mogelijk sleutels te berekenen en over te gaan. Voor meer details betreffende de implementatie, zie de ](#pass-client-info-overview) lijst van het 0} Overzicht {en [ het koekjesboek van iOS/tvOS ](#ios-tvos).[
+>In het geval dat de toepassing van de Programmer besluit om *device_info* over te gaan, dan zullen alle sleutels van cliëntinformatie die door AccessEnabler iOS/tvOS SDK worden gegevens verwerkt worden met voeten getreden. Daarom is het zeer belangrijk om de waarden voor zoveel mogelijk sleutels te berekenen en over te gaan. Voor meer details betreffende de implementatie, zie de [&#128279;](#pass-client-info-overview) lijst van het 0&rbrace; Overzicht &lbrace;en [ het koekjesboek van iOS/tvOS ](#ios-tvos).
 
 #### Android/FireOS SDK {#and-fire-os-sdk}
 
@@ -124,7 +124,7 @@ De `AccessEnabler` Android/FireOS SDK steunt **met voeten tredend de volledige**
 
 >[!IMPORTANT]
 >
->Als de programmeertoepassing besluit om `device_info` door te geven, worden alle sleutels voor clientinformatie die door de `AccessEnabler` Android/FireOS SDK zijn berekend, overschreven. Daarom is het zeer belangrijk om de waarden voor zoveel mogelijk sleutels te berekenen en over te gaan. Voor meer details betreffende de implementatie, zie de ](#pass-client-info-overview) lijst van het 0} Overzicht {en [ Android ](#android) en [ FireOS ](#fire-tv) kookboek.[
+>Als de programmeertoepassing besluit om `device_info` door te geven, worden alle sleutels voor clientinformatie die door de `AccessEnabler` Android/FireOS SDK zijn berekend, overschreven. Daarom is het zeer belangrijk om de waarden voor zoveel mogelijk sleutels te berekenen en over te gaan. Voor meer details betreffende de implementatie, zie de [&#128279;](#pass-client-info-overview) lijst van het 0&rbrace; Overzicht &lbrace;en [ Android ](#android) en [ FireOS ](#fire-tv) kookboek.
 
 ## Cookbooks {#cookbooks}
 
@@ -164,7 +164,7 @@ De toepassingsinformatie kan als volgt worden samengesteld:
 
 >[!IMPORTANT]
 >
-Het apparaat, de verbinding en de toepassingsinformatie moeten aan hetzelfde JSON-object worden toegevoegd. Daarna, moet het resulterende voorwerp **Base64 gecodeerd** zijn. Ook, in het geval van de VERTONING APIs van de Authentificatie van Adobe Pass, moet de waarde **gecodeerde URL** zijn.
+>Het apparaat, de verbinding en de toepassingsinformatie moeten aan hetzelfde JSON-object worden toegevoegd. Daarna, moet het resulterende voorwerp **Base64 gecodeerd** zijn. Ook, in het geval van de VERTONING APIs van de Authentificatie van Adobe Pass, moet de waarde **gecodeerde URL** zijn.
 
 **code van de Steekproef**
 
@@ -243,8 +243,8 @@ private JSONObject computeClientInformation() {
 
 >[!NOTE]
 >
-**Middelen:**
-* de openbare klasse [ bouwt ](https://developer.android.com/reference/android/os/Build.html) {target=_blank} in de documentatie van ontwikkelaars van Java.
+>**Middelen:**
+>* de openbare klasse [ bouwt ](https://developer.android.com/reference/android/os/Build.html){target=_blank}  in de documentatie van ontwikkelaars van Java.
 
 ### FireTV {#fire-tv}
 
@@ -276,13 +276,13 @@ De toepassingsinformatie kan als volgt worden samengesteld:
 
 >[!IMPORTANT]
 >
-Het apparaat, de verbinding en de toepassingsinformatie moeten aan hetzelfde JSON-object worden toegevoegd. Daarna, moet het resulterende voorwerp **Base64 gecodeerd** zijn. Ook, in het geval van de VERTONING APIs van de Authentificatie van Adobe Pass, moet de waarde **gecodeerde URL** zijn.
+>Het apparaat, de verbinding en de toepassingsinformatie moeten aan hetzelfde JSON-object worden toegevoegd. Daarna, moet het resulterende voorwerp **Base64 gecodeerd** zijn. Ook, in het geval van de VERTONING APIs van de Authentificatie van Adobe Pass, moet de waarde **gecodeerde URL** zijn.
 
 >[!NOTE]
 >
-**Middelen:**
-* openbare klasse [ bouwt ](https://developer.android.com/reference/android/os/Build.html) {target=_blank} in de documentatie van de ontwikkelaars van Android.
-* [ identificerend apparaten FireTV ](https://developer.amazon.com/docs/fire-tv/identify-amazon-fire-tv-devices.html) {target=_blank}
+>**Middelen:**
+>* openbare klasse [ bouwt ](https://developer.android.com/reference/android/os/Build.html){target=_blank}  in de documentatie van de ontwikkelaars van Android.
+>* [ identificerend apparaten FireTV ](https://developer.amazon.com/docs/fire-tv/identify-amazon-fire-tv-devices.html){target=_blank} 
 
 ### iOS/tvOS {#ios-tvos}
 
@@ -315,7 +315,7 @@ De toepassingsinformatie kan als volgt worden samengesteld:
 
 >[!IMPORTANT]
 >
-Het apparaat, de verbinding en de toepassingsinformatie moeten aan hetzelfde JSON-object worden toegevoegd. Daarna, moet het resulterende voorwerp Base64 gecodeerd zijn. In het geval van Adobe Pass Authentication REST API&#39;s moet de waarde ook URL-gecodeerd zijn.
+>Het apparaat, de verbinding en de toepassingsinformatie moeten aan hetzelfde JSON-object worden toegevoegd. Daarna, moet het resulterende voorwerp Base64 gecodeerd zijn. In het geval van Adobe Pass Authentication REST API&#39;s moet de waarde ook URL-gecodeerd zijn.
 
 **code van de Steekproef**
 
@@ -387,10 +387,10 @@ Het apparaat, de verbinding en de toepassingsinformatie moeten aan hetzelfde JSO
 
 >[!NOTE]
 >
-**Middelen:**
-* [ UIDevice ](https://developer.apple.com/documentation/uikit/uidevice#//apple_ref/occ/cl/UIDevice) {target=_blank}
-* [ uname ](https://man7.org/linux/man-pages/man2/uname.2.html) {target=_blank}
-* [ Ongeveer Reachability ](https://developer.apple.com/library/archive/samplecode/Reachability/Introduction/Intro.html) {target=_blank}
+>**Middelen:**
+>* [ UIDevice ](https://developer.apple.com/documentation/uikit/uidevice#//apple_ref/occ/cl/UIDevice){target=_blank} 
+>* [ uname ](https://man7.org/linux/man-pages/man2/uname.2.html){target=_blank} 
+>* [ Ongeveer Reachability ](https://developer.apple.com/library/archive/samplecode/Reachability/Introduction/Intro.html){target=_blank} 
 
 ### Roku {#roku}
 
@@ -422,11 +422,11 @@ De toepassingsinformatie kan als volgt worden samengesteld:
 
 >[!IMPORTANT]
 >
-Het apparaat, de verbinding en de toepassingsinformatie moeten aan hetzelfde JSON-object worden toegevoegd. Daarna, moet het resulterende voorwerp **Base64 gecodeerd** zijn. In het geval van Adobe Pass Authentication REST API&#39;s moet de waarde ook URL-gecodeerd zijn.
+>Het apparaat, de verbinding en de toepassingsinformatie moeten aan hetzelfde JSON-object worden toegevoegd. Daarna, moet het resulterende voorwerp **Base64 gecodeerd** zijn. In het geval van Adobe Pass Authentication REST API&#39;s moet de waarde ook URL-gecodeerd zijn.
 
 >[!NOTE]
 >
-Voor meer informatie, zie [ ifDeviceInfo ](https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md)
+>Voor meer informatie, zie [ ifDeviceInfo ](https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md)
 
 ### XBOX 1/360 {#xbox}
 
@@ -458,7 +458,7 @@ De toepassingsinformatie kan als volgt worden samengesteld:
 
 >[!IMPORTANT]
 >
-Het apparaat, de verbinding en de toepassingsinformatie moeten aan hetzelfde JSON-object worden toegevoegd. Daarna, moet het resulterende voorwerp **Base64 gecodeerd** zijn. Ook, in het geval van de VERTONING APIs van de Authentificatie van Adobe Pass, moet de waarde **gecodeerde URL** zijn.
+>Het apparaat, de verbinding en de toepassingsinformatie moeten aan hetzelfde JSON-object worden toegevoegd. Daarna, moet het resulterende voorwerp **Base64 gecodeerd** zijn. Ook, in het geval van de VERTONING APIs van de Authentificatie van Adobe Pass, moet de waarde **gecodeerde URL** zijn.
 
 **Middelen**
 

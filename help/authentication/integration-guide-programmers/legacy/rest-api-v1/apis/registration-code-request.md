@@ -81,7 +81,7 @@ Retourneert willekeurig gegenereerde registratie- en aanmeldingspagina-URI.
 >POST /reggie/v1/{req_id}/regcode HTTP/1.1<br>X-Forwarded-For:203.45.101.20
 >```
 >
-<br>
+><br>
 
 ### Response JSON
 

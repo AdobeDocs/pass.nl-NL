@@ -43,7 +43,7 @@ Hiermee wordt een Platform SSO-profiel &quot;uitgewisseld&quot; voor een Adobe-t
 
 | Endpoint | Geroepen </br> door | Invoer   </br> Params | HTTP </br> Methode | Antwoord | HTTP-respons </br> |
 | --- | --- | --- | --- | --- | --- |
-| &lt;SP_FQDN>/api/v1/tokens/authn | Streaming App </br></br> of </br></br> de Dienst van de Programmer | 1. aanvrager (Verplicht) </br>    </br> 2.  deviceId (Verplicht) </br>    </br> 3.  mvpd (Verplicht) </br>    </br> 4.  deviceType (Verplicht) </br>    </br> 5.  SAMLResponse (Verplicht) </br>    </br> 6.  deviceUser (Afgekeurd) </br>    </br> 7.  appId (afgekeurd) | POST | De succesvolle reactie zal 204 Geen Inhoud zijn, erop wijzend dat het teken met succes werd gecreeerd en klaar voor gebruik voor de auteurstromen is. | 204 - Geen inhoud   </br> {400 - Onjuist verzoek |
+| &lt;SP_FQDN>/api/v1/tokens/authn | Streaming App </br></br> of </br></br> de Dienst van de Programmer | 1. aanvrager (Verplicht) </br>    </br> 2.  deviceId (Verplicht) </br>    </br> 3.  mvpd (Verplicht) </br>    </br> 4.  deviceType (Verplicht) </br>    </br> 5.  SAMLResponse (Verplicht) </br>    </br> 6.  deviceUser (Afgekeurd) </br>    </br> 7.  appId (afgekeurd) | POST | De succesvolle reactie zal 204 Geen Inhoud zijn, erop wijzend dat het teken met succes werd gecreeerd en klaar voor gebruik voor de auteurstromen is. | 204 - Geen inhoud   </br> &lbrace;400 - Onjuist verzoek |
 
 
 | Invoerparameter | Beschrijving |

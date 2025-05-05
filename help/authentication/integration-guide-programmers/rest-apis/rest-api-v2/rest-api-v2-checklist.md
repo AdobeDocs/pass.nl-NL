@@ -308,7 +308,7 @@ Het volgende document moet als onderdeel van uw acceptatiecriteria worden bescho
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;"><i>Validatie van mediatokens</i></td>
-      <td>Valideer media tokens gebruikend de </a> bibliotheek van de Verificateur van het Symbolische van 0} Media.<a href="/help/authentication/integration-guide-programmers/features-standard/entitlements/media-tokens.md#media-token-verifier"></td>
+      <td>Valideer media tokens gebruikend de </a> bibliotheek van de Verificateur van het Symbolische van 0&rbrace; Media.<a href="/help/authentication/integration-guide-programmers/features-standard/entitlements/media-tokens.md#media-token-verifier"></td>
       <td>Risico's van frauduleuze regelingen zoals stroom ripping.</td>
    </tr>
    <tr>
@@ -389,11 +389,11 @@ Het volgende document moet als onderdeel van uw acceptatiecriteria worden bescho
    <tr>
       <td style="background-color: #DEEBFF;"><i>Verificatie</i></td>
       <td>Het opiniepeilingsmechanisme bepaalt het stemmen <br/><br/> Geheime voorgeheugen delen van profielen</td>
-      <td>De steun veelvoudige profielen {de Eigenschap van de Verslechtering van de Steun (als bedrijfsvereiste) <br/><br/> de Eigenschap van de Steun TempPass (als bedrijfsvereiste) <br/><br/> Steun Enige Sign-On Eigenschap (als bedrijfsvereiste)<br/><br/></td>
+      <td>De steun veelvoudige profielen &lbrace;de Eigenschap van de Verslechtering van de Steun (als bedrijfsvereiste) <br/><br/> de Eigenschap van de Steun TempPass (als bedrijfsvereiste) <br/><br/> Steun Enige Sign-On Eigenschap (als bedrijfsvereiste)<br/><br/></td>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;"><i>Voorafgaande goedkeuring</i></td>
-      <td>De vergunningsbesluiten van het geheime voorgeheugen {<br/><br/> proberen mechanisme fijn het stemmen</td>
+      <td>De vergunningsbesluiten van het geheime voorgeheugen &lbrace;<br/><br/> proberen mechanisme fijn het stemmen</td>
       <td>De gebruikerservaring verbeteren door foutcodes te gebruiken voor beslissingen waarbij voorafgaande toestemming is geweigerd</td>
    </tr>
    <tr>

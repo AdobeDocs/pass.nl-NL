@@ -68,7 +68,7 @@ Raadpleeg de volgende secties voor hulp bij het ontwikkelen van uw zelfbeoordeli
 
 ### Controle van het gebruik van cookies
 
-Beginnend met Chrome 118, benadrukt het ](https://developer.chrome.com/docs/devtools/issues/) lusje van de Kwesties DevTools potentieel beïnvloede koekjes met het volgende bericht: `Cookie sent in cross-site context will be blocked in future Chrome versions`.[
+Beginnend met Chrome 118, benadrukt het [&#128279;](https://developer.chrome.com/docs/devtools/issues/) lusje van de Kwesties DevTools potentieel beïnvloede koekjes met het volgende bericht: `Cookie sent in cross-site context will be blocked in future Chrome versions`.
 
 Cookies die zijn gemarkeerd voor gebruik door derden, kunnen worden geïdentificeerd aan de hand van hun kenmerkwaarde `SameSite=None` .
 

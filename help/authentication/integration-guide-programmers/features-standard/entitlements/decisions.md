@@ -40,11 +40,11 @@ Als de clienttoepassing van plan is deze functie te gebruiken, is het belangrijk
 > 
 > Het maximumaantal middelen kan pas worden verhoogd nadat overeenstemming is bereikt met de vertegenwoordigers van de MVPD en de Adobe Pass Authentication. Zodra u hiermee akkoord bent gegaan, kunnen de wijzigingen worden geïmplementeerd via het Adobe Pass TVE-dashboard door een beheerder in uw organisatie of een Adobe Pass-verificatievertegenwoordiger die namens u optreedt.
 > 
-> Voor meer details, verwijs naar de ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#add-more-properties) documentatie van de Gebruiker van de Gids van de Integratie van het Dashboard van 0} TVE.[
+> Voor meer details, verwijs naar de [&#128279;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#add-more-properties) documentatie van de Gebruiker van de Gids van de Integratie van het Dashboard van 0&rbrace; TVE.
 
 MVPD&#39;s kunnen preautorisatie door diverse mechanismen steunen, elk met duidelijke implicaties voor prestaties en het maximumaantal middelen dat in één enkele API verzoek kan worden behandeld.
 
-Voor meer details over de bestaande mechanismen ondersteunend prepermission, verwijs naar de [ Preflight 1} documentatie van MVPD.](/help/authentication/integration-guide-mvpds/mvpd-preflight-authz.md)
+Voor meer details over de bestaande mechanismen ondersteunend prepermission, verwijs naar de [ Preflight 1&rbrace; documentatie van MVPD.](/help/authentication/integration-guide-mvpds/mvpd-preflight-authz.md)
 
 >[!IMPORTANT]
 >
@@ -79,7 +79,7 @@ De Tijd-aan-Levende van de vergunning (TTL) bepaalt hoe lang een middel alvorens
 
 De vergunning (authZ) TTL kan door het Dashboard van Adobe Pass [ worden bekeken en worden veranderd TVE ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#tve-dashboard) door één van uw organisatiebeheerders of door een vertegenwoordiger van de Authentificatie van Adobe Pass handelend namens u.
 
-Voor meer details, verwijs naar de ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#most-used-flows) documentatie van de Gebruiker van de Gids van de Integratie van het Dashboard van 0} TVE.[
+Voor meer details, verwijs naar de [&#128279;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#most-used-flows) documentatie van de Gebruiker van de Gids van de Integratie van het Dashboard van 0&rbrace; TVE.
 
 ## Beveiligde bronnen {#protected-resources}
 

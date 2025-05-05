@@ -56,7 +56,7 @@ Voer de stappen uit om verschillende instellingen van een specifiek kanaal te be
 
 ### Algemene instellingen {#general-settings}
 
-Dit lusje stelt **en** Configuratie van Analytics **voor de Informatie van het Kanaal van 0}.**
+Dit lusje stelt **en** Configuratie van Analytics **voor de Informatie van het Kanaal van 0&rbrace;.**
 
 #### Kanaalgegevens {#channel-information}
 
@@ -248,7 +248,7 @@ Ga als volgt te werk om een nieuwe geregistreerde toepassing toe te voegen.
    >
    > Het wordt aanbevolen een nieuwe geregistreerde toepassing te maken voor elke belangrijke update van uw clienttoepassing om de levenscyclus en het gebruik ervan te beheren. Indien noodzakelijk, creeer een kaartje door onze [ Zendesk ](https://adobeprimetime.zendesk.com) en vraag uw Technische Manager van de Rekening (TAM) om een geregistreerde toepassing te herroepen om de functionaliteit van een specifieke versie van de cliënttoepassing te blokkeren.
 
-1. Selecteer **waarde &quot;DIRECT van het Type 0} {van het drop-down menu.**
+1. Selecteer **waarde &quot;DIRECT van het Type 0&rbrace; &lbrace;van het drop-down menu.**
 
 1. Selecteer **toepassing** toevoegen.
 

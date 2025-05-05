@@ -344,7 +344,7 @@ Volg de onderstaande stappen om Single Sign On in-/uit te schakelen voor een spe
   >[!IMPORTANT]
   >Het is belangrijk om op te merken dat **toelaten Enig Teken** vlag slechts voor iOS, tvOS, Roku en platforms FireTV en slechts voor integratie met MVPDs beschikbaar is die Enig Teken voor die platforms steunen.
 
-* knevel de **1} vlag van de Toestemming van het Platform van de Afdwingen {aan de gewenste waarde (ja/Nr)**
+* knevel de **1&rbrace; vlag van de Toestemming van het Platform van de Afdwingen &lbrace;aan de gewenste waarde (ja/Nr)**
 
   >[!IMPORTANT]
   >Het is belangrijk om op te merken dat **de vlagcontroles van de Toestemming van het Platform van de Afdwingen** als het besluit van de gebruiker om platformtoegang tot zijn/haar abonnement van TV-leverancier toe te staan of te ontkennen al dan niet zal worden afgedwongen. Gezien het scenario wanneer **Enig Teken** toelaten vlag aan &quot;ja&quot;wordt geplaatst, **wordt de vlag van de Toestemming van het Platform van de Afdwingen** ook geplaatst aan &quot;ja&quot;en de gebruiker verkiest om platformtoegang tot zijn/haar abonnement van de Leverancier van TV te ontkennen, dan zal de respectieve toepassing (kanaal) niet het teken van de Authentificatie van Adobe Pass kunnen gebruiken dat door een andere toepassing (kanaal) wordt verkregen.

@@ -48,12 +48,12 @@ Afhankelijk van de kwesties die worden onderzocht kunt u de het registreren beri
 
 #### Inclusief {#including}
 
-Eerst van alles om om het even welke registrerenberichten te kunnen zien die door het kader AccessEnabler worden uitgegeven moet u **** &quot;omvatten de Berichten van Info&quot;en &quot;omvatten Debug Berichten&quot;in de sectie van de Actie van de Console selecteren app, zoals voorgesteld in het beeld hieronder.
+Eerst van alles om om het even welke registrerenberichten te kunnen zien die door het kader AccessEnabler worden uitgegeven moet u **&#x200B;**&#x200B;&quot;omvatten de Berichten van Info&quot;en &quot;omvatten Debug Berichten&quot;in de sectie van de Actie van de Console selecteren app, zoals voorgesteld in het beeld hieronder.
 
 ![](../../../assets/include-info-debug-msg.png)
 
 
-Om de functionaliteit van AccessEnabler iOS/tvOS SDK te kunnen zuiveren en **** ziet het kader AccessEnabler registreert u:
+Om de functionaliteit van AccessEnabler iOS/tvOS SDK te kunnen zuiveren en **&#x200B;**&#x200B;ziet het kader AccessEnabler registreert u:
 
 * Onderzoek in Console app die **gebruikt Subsystem** optie die de waarde com.adobe.pass.AccessEnabler zoals in het hieronder beeld evenaart.
 
@@ -68,7 +68,7 @@ Naast de bovengenoemde twee criteria kunt u de **optie van de Categorie** in sam
 
 #### Exclusief
 
-Om de functionaliteit van andere componenten beter te kunnen zuiveren en **** uitsluiten de AccessEnabler kaderlogboeken u kunt:
+Om de functionaliteit van andere componenten beter te kunnen zuiveren en **&#x200B;**&#x200B;uitsluiten de AccessEnabler kaderlogboeken u kunt:
 
 * Onderzoek in Console app die **gebruikt Subsystem** optie die niet de waarde com.adobe.pass.AccessEnabler evenaart.
 * Onderzoek in Console app die **gebruiken om het even welke** optie die niet de [ AccessEnabler ] waarde bevat.

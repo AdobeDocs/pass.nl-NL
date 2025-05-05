@@ -152,7 +152,7 @@ Vervangen:
    - aanmelden geannuleerd: MVPD-selectie opnieuw instellen
    - Het URL-schema is ingesteld als &quot;adobepass://android.app&quot; om vast te leggen wanneer de verificatie is voltooid
 
-- e. get/checkAuthorization: SDK zal **access\_token **in kopbal als Vergunning omvatten: Drager **toegang \_token**
+- e. get/checkAuthorization: SDK zal **access\_token &#x200B;** in kopbal als Vergunning omvatten: Drager **toegang \_token**
 
 - als de toestemming succesvol is , zal een oproep worden gedaan om het media token te verkrijgen
 

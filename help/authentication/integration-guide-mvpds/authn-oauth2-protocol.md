@@ -39,7 +39,7 @@ Het protocol biedt ook meer flexibiliteit in termen van gegevens die worden bloo
 
 Om authentificatie met OAuth 2.0 te steunen, moet een MVPD aan de volgende eerste vereisten voldoen:
 
-Eerst en vooral, moet MVPD ervoor zorgen dat het de ](https://oauthlib.readthedocs.io/en/latest/oauth2/grants/authcode.html) stroom van de Verlening van de Code van de 0} Vergunning {steunt.[
+Eerst en vooral, moet MVPD ervoor zorgen dat het de [&#128279;](https://oauthlib.readthedocs.io/en/latest/oauth2/grants/authcode.html) stroom van de Verlening van de Code van de 0&rbrace; Vergunning &lbrace;steunt.
 
 Nadat het bevestigd heeft dat het de stroom steunt, moet MVPD ons de volgende informatie verstrekken:
 

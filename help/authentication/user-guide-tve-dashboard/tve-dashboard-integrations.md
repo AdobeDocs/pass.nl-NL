@@ -153,7 +153,7 @@ Voer de volgende stappen uit om SSO voor een specifieke integratie en een specif
 
 1. Selecteer **ja** om of **Nr** toe te laten om van **de Toestemming van het Platform van de Afdwingen** dropdown menu onbruikbaar te maken.
 
-   **het bezitscontroles van de Toestemming van het Platform van 0} afdwingen {als het besluit van de gebruiker om** **toe te staan of** ontken **platformtoegang tot hun abonnement van TV-provider wordt gerespecteerd.**
+   **het bezitscontroles van de Toestemming van het Platform van 0&rbrace; afdwingen &lbrace;als het besluit van de gebruiker om** **toe te staan of** ontken **platformtoegang tot hun abonnement van TV-provider wordt gerespecteerd.**
 
    Bijvoorbeeld, als zowel **toelaten Enig Teken** en **de Toestemming van het Platform van de Afdwingen** wordt toegelaten, en de gebruiker verkiest om platformtoegang tot hun abonnement van de Leverancier van TV te ontkennen, dan zal de respectieve toepassing (kanaal) het teken van de Authentificatie van Adobe Pass niet kunnen gebruiken dat door een andere toepassing (kanaal) wordt verkregen.
 
@@ -260,7 +260,7 @@ In de sectie met gebruikersmetagegevens worden de volgende kolommen weergegeven:
 
 **Beschrijving**: Verstrekt een korte beschrijving van elke parameter van gebruikersmeta-gegevens.
 
-**Gecodeerde**: Deze kolom staat u toe om parameters in API toe te laten of onbruikbaar te maken door **ja** of **Nr** van het dropdown menu respectievelijk te selecteren. Het kiezen voor **ja** wijst erop dat de parameterwaarde in API zal worden gecodeerd. De encryptie wordt uitgevoerd gebruikend een certificaat dat door het 1} werkingsgebied van meta-gegevens van de a **Gebruiker wordt bepaald.**
+**Gecodeerde**: Deze kolom staat u toe om parameters in API toe te laten of onbruikbaar te maken door **ja** of **Nr** van het dropdown menu respectievelijk te selecteren. Het kiezen voor **ja** wijst erop dat de parameterwaarde in API zal worden gecodeerd. De encryptie wordt uitgevoerd gebruikend een certificaat dat door het 1&rbrace; werkingsgebied van meta-gegevens van de a **Gebruiker wordt bepaald.**
 
 >[!TIP]
 >

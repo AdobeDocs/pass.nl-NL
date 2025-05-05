@@ -37,7 +37,7 @@ Voor Android beperkt het gebruik van aangepaste Chrome-tabbladen de toegang tot 
 
 ## Dynamische clientregistratie {#DCR}
 
-Android SDK v3.0+ zal de Dynamische procedure van de Registratie van de Cliënt zoals bepaald in [ Dynamische het Overzicht van de Registratie van de Cliënt 1} gebruiken.](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)
+Android SDK v3.0+ zal de Dynamische procedure van de Registratie van de Cliënt zoals bepaald in [ Dynamische het Overzicht van de Registratie van de Cliënt 1&rbrace; gebruiken.](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)
 
 
 ## Functiedemo {#Demo}

@@ -27,7 +27,7 @@ Single Sign-On (SSO) tussen apps met Adobe Pass-verificatie werkt op verschillen
 
 Dit document richt **SSO op iOS**, wanneer het gebruiken van de Authentificatie van Adobe Pass **Toegelaten Toegang**.
 
-**** 1.10 **van Toegangsactivering van 0} {is de recentste versie van de Authentificatie iOS van Adobe Pass inheemse SDK.** Adobe raadt u ten zeerste aan naar deze versie te gaan in plaats van bij een oudere versie te blijven. Als u een oudere versie van Toegankelijkheid gebruikt, kunt u de recentste versie [ hier ](https://tve.zendesk.com/hc/en-us/articles/204963209-iOS-Native-AccessEnabler-Library) downloaden.
+**&#x200B;**&#x200B;1.10 **van Toegangsactivering van 0&rbrace; &lbrace;is de recentste versie van de Authentificatie iOS van Adobe Pass inheemse SDK.** Adobe raadt u ten zeerste aan naar deze versie te gaan in plaats van bij een oudere versie te blijven. Als u een oudere versie van Toegankelijkheid gebruikt, kunt u de recentste versie [ hier ](https://tve.zendesk.com/hc/en-us/articles/204963209-iOS-Native-AccessEnabler-Library) downloaden.
 
 De SSO voor iOS wordt gedicteerd door de volgende omstandigheden:
 

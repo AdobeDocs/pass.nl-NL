@@ -73,7 +73,7 @@ ht-degree: 0%
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Toestemming</td>
-      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="../../appendix/headers/rest-api-v2-appendix-headers-authorization.md"> 1} kopbaldocumentatie van de Toestemming {.</a></td>
+      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="../../appendix/headers/rest-api-v2-appendix-headers-authorization.md"> 1&rbrace; kopbaldocumentatie van de Toestemming &lbrace;.</a></td>
       <td><i>vereist</i></td>
    </tr>
    <tr>
@@ -172,7 +172,7 @@ ht-degree: 0%
       <td>405</td>
       <td>Methode niet toegestaan</td>
       <td>
-        De HTTP-methode is ongeldig, de client moet een HTTP-methode gebruiken die is toegestaan voor de aangevraagde resource en het opnieuw proberen. Voor meer details verwijs naar de <a href="#request"> 1} sectie van het Verzoek {.</a>
+        De HTTP-methode is ongeldig, de client moet een HTTP-methode gebruiken die is toegestaan voor de aangevraagde resource en het opnieuw proberen. Voor meer details verwijs naar de <a href="#request"> 1&rbrace; sectie van het Verzoek &lbrace;.</a>
       </td>
    </tr>
    <tr>
@@ -252,9 +252,9 @@ ht-degree: 0%
                   <br/><br/>
                   De mogelijke waarden zijn:
                   <ul>
-                    <li><b> interactief </b><br/> Dit type is op de volgende waarden van het ` actionName attribuut van toepassing: <b> logout </b>.</li>
-                    <li><b> partner_interactive </b><br/> Dit type is op de volgende waarden van het ` actionName attribuut van toepassing: <b> partner_logout </b>.</li>
-                    <li><b> niets </b><br/> Dit type is op de volgende waarden van het ` actionName attribuut van toepassing: <b> volledig </b>, <b> ongeldig </b>.</li>
+                    <li><b> interactief </b><br/> Dit type is op de volgende waarden van het &grave; actionName attribuut van toepassing: <b> logout </b>.</li>
+                    <li><b> partner_interactive </b><br/> Dit type is op de volgende waarden van het &grave; actionName attribuut van toepassing: <b> partner_logout </b>.</li>
+                    <li><b> niets </b><br/> Dit type is op de volgende waarden van het &grave; actionName attribuut van toepassing: <b> volledig </b>, <b> ongeldig </b>.</li>
                   </ul>
                <td><i>vereist</i></td>
             </tr>

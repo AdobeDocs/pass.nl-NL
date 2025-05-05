@@ -43,7 +43,7 @@ Geeft aan of het apparaat een niet-verlopen verificatietoken heeft.
 
 | Endpoint | Geroepen </br> door | Invoer   </br> Params | HTTP </br> Methode | Antwoord | HTTP-respons </br> |
 | --- | --- | --- | --- | --- | --- |
-| &lt;SP_FQDN>/api/v1/checkauthoring | Streaming App </br></br> of </br></br> de Dienst van de Programmer | 1. (Verplicht) aanvrager </br> .  deviceId (Verplicht) </br> .  device_info/x-apparaat-Info (Verplicht) </br> 4.  _deviceType_ </br> 5.  _deviceUser_ (Afgekeurd) </br> 6.  _appId_ (Vervangen) | GET | XML of JSON met foutdetails als dit mislukt. | 200 - Succes   </br> {403 - Geen succes |
+| &lt;SP_FQDN>/api/v1/checkauthoring | Streaming App </br></br> of </br></br> de Dienst van de Programmer | 1. (Verplicht) aanvrager </br> .  deviceId (Verplicht) </br> .  device_info/x-apparaat-Info (Verplicht) </br> 4.  _deviceType_ </br> 5.  _deviceUser_ (Afgekeurd) </br> 6.  _appId_ (Vervangen) | GET | XML of JSON met foutdetails als dit mislukt. | 200 - Succes   </br> &lbrace;403 - Geen succes |
 
 {style="table-layout:auto"}
 

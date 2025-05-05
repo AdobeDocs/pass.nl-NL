@@ -31,7 +31,7 @@ De authentificatie is een proces dat een gebruiker toestaat om hun identiteit aa
 
 #### Verificatiecode {#code}
 
-De authentificatiecode is een concept van de Authentificatie van Adobe Pass dat een unieke waarde opslaat die wordt geproduceerd wanneer een gebruiker het [ authentificatie ](#authentication) proces in werking stelt, en uniek de 2} authentificatiesessie ](#session) van een gebruiker identificeert tot het authentificatieproces volledig is.[
+De authentificatiecode is een concept van de Authentificatie van Adobe Pass dat een unieke waarde opslaat die wordt geproduceerd wanneer een gebruiker het [ authentificatie ](#authentication) proces in werking stelt, en uniek de 2&rbrace; authentificatiesessie [&#128279;](#session) van een gebruiker identificeert tot het authentificatieproces volledig is.
 
 De authentificatiecode kan door zowel a [ Primaire (Programmer) Toepassing ](#primary-application) of de Secundaire (Programmer) Toepassing van de a [ worden gebruikt ](#secondary-application) om het [ authentificatie ](#authentication) proces te voltooien, informatie over de [ authentificatiesessie ](#session) terug te winnen, of tot het gebruiker [ profiel ](#profile) toegang te hebben.
 
@@ -41,7 +41,7 @@ Gelijk aan de voormalige term gebruikte registratiecode.
 
 De authentificatiesessie is een concept van de Authentificatie van Adobe Pass dat informatie over het begonnen (of voortgezette) authentificatieproces van de gebruiker van de toepassing van de a [ Programmer ](#programmer) opslaat, en uniek geïdentificeerd door een [ authentificatiecode ](#code).
 
-De authentificatiesessie kan op de ](#programmer) toepassing van de 0} Programmer {ook wijzen om met het [ toestemmings ](#authorization) proces als volgende fase van de [ recht ](#entitlement) stroom te werk te gaan voor het geval de gebruiker reeds voor authentiek verklaard wordt.[
+De authentificatiesessie kan op de [&#128279;](#programmer) toepassing van de 0&rbrace; Programmer &lbrace;ook wijzen om met het [ toestemmings ](#authorization) proces als volgende fase van de [ recht ](#entitlement) stroom te werk te gaan voor het geval de gebruiker reeds voor authentiek verklaard wordt.
 
 #### Toestemming {#authorization}
 
@@ -57,17 +57,17 @@ De configuratie is een concept van de Authentificatie van Adobe Pass dat informa
 
 #### Besluit {#decision}
 
-Het besluit is een concept van de Authentificatie van Adobe Pass dat informatie over de ](#mvpd) [ vergunning ](#authorization) of [ prepermission ](#preauthorization) procesonderzoek opslaat om gebruikerstoegang tot a [ te verlenen of te ontkennen programmeur ](#programmer) beschermde inhoud.[
+Het besluit is een concept van de Authentificatie van Adobe Pass dat informatie over de [&#128279;](#mvpd) [ vergunning ](#authorization) of [ prepermission ](#preauthorization) procesonderzoek opslaat om gebruikerstoegang tot a [ te verlenen of te ontkennen programmeur ](#programmer) beschermde inhoud.
 
 #### Afbraak {#degradation}
 
 De degradatie is een eigenschap van de Authentificatie van Adobe Pass die een gebruiker toestaat om tot beschermde inhoud zelfs toegang te hebben wanneer zijn [ MVPD ](#mvpd) een de dienstverstoring ervaart.
 
-Voor meer informatie, verwijs naar de ](/help/authentication/integration-guide-programmers/features-premium/degraded-access/degradation-feature.md) documentatie van de Eigenschap van 0} Afbraak.[
+Voor meer informatie, verwijs naar de [&#128279;](/help/authentication/integration-guide-programmers/features-premium/degraded-access/degradation-feature.md) documentatie van de Eigenschap van 0&rbrace; Afbraak.
 
 #### Apparaat-id {#device-id}
 
-Apparaatidentiteitskaart is een uniek herkenningsteken gebonden aan het apparaat van de gebruiker en moet door de [ 1} toepassing van de Programmer {op alle fasen van de [ betitelings ](#entitlement) stroom worden verstrekt.](#programmer)
+Apparaatidentiteitskaart is een uniek herkenningsteken gebonden aan het apparaat van de gebruiker en moet door de [&#128279;](#programmer) 1&rbrace; toepassing van de Programmer &lbrace;op alle fasen van de [ betitelings ](#entitlement) stroom worden verstrekt.
 
 ### E {#e}
 
@@ -221,7 +221,7 @@ De dienstverlener (SP) verwijst naar de rol die door de Authentificatie van Adob
 
 #### SSO {#sso}
 
-Enige sign-on (SSO) is een proces dat een gebruiker toestaat om eens voor authentiek te verklaren en toegang te krijgen tot veelvoudige ](#programmer) toepassingen van de Programmer [ zonder de behoefte om voor elk van hen voor authentiek te verklaren.
+Enige sign-on (SSO) is een proces dat een gebruiker toestaat om eens voor authentiek te verklaren en toegang te krijgen tot veelvoudige [&#128279;](#programmer) toepassingen van de Programmer  zonder de behoefte om voor elk van hen voor authentiek te verklaren.
 
 ### T {#t}
 
@@ -251,7 +251,7 @@ De TVE (TV Anywhere) is een industriesecche die consumenten toegang biedt tot hu
 
 Het dashboard van TV overal (TVE) is een hulpmiddel van de Authentificatie van Adobe Pass dat aan [ wordt verstrekt Programmeurs ](#programmer) om hun configuratie en gegevens te beheren.
 
-Voor meer informatie, verwijs naar de ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-overview.md) documentatie van de Gids van de Gebruiker van het Dashboard van 0} TVE.[
+Voor meer informatie, verwijs naar de [&#128279;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-overview.md) documentatie van de Gids van de Gebruiker van het Dashboard van 0&rbrace; TVE.
 
 #### TV-provider {#tv-provider}
 
@@ -275,7 +275,7 @@ De gebruiker - identiteitskaart is een uniek herkenningsteken verbindend aan de 
 
 De gebruikersmeta-gegevens verwijst naar gebruiker-specifieke attributen (b.v., postcodes, ouderlijke classificaties, gebruiker IDs, enz.) die door [ MVPD ](#mvpd) worden gehandhaafd en door de Authentificatie van Adobe Pass als deel van a [ profiel ](#profile) worden verstrekt.
 
-Voor meer informatie, verwijs naar de ](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata.md) documentatie van Meta-gegevens van de Gebruiker 0}.[
+Voor meer informatie, verwijs naar de [&#128279;](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata.md) documentatie van Meta-gegevens van de Gebruiker 0&rbrace;.
 
 ### V {#v}
 

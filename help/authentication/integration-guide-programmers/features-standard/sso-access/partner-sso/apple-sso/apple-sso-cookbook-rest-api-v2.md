@@ -119,7 +119,7 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
 
    >[!IMPORTANT]
    >
-   > Verwijs naar de ](https://developer.apple.com/documentation/videosubscriberaccount) documentatie van het Kader van de Rekening van de Abonnee van 0} Video voor details op:[
+   > Verwijs naar de [&#128279;](https://developer.apple.com/documentation/videosubscriberaccount) documentatie van het Kader van de Rekening van de Abonnee van 0&rbrace; Video voor details op:
    >
    > <br/>
    >
@@ -203,7 +203,7 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
 
    >[!IMPORTANT]
    >
-   > Verwijs naar de ](https://developer.apple.com/documentation/videosubscriberaccount) documentatie van het Kader van de Rekening van de Abonnee van 0} Video voor details op:[
+   > Verwijs naar de [&#128279;](https://developer.apple.com/documentation/videosubscriberaccount) documentatie van het Kader van de Rekening van de Abonnee van 0&rbrace; Video voor details op:
    >
    > <br/>
    >
@@ -293,11 +293,11 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
 
    Als de Adobe Pass backend geen geldig profiel identificeert en de partner enige sign-on bevestiging overgaat, ontvangt de het stromen toepassing een reactie met acties en gegevens om tot het partnerkader over te gaan voor het beginnen van de authentificatiestroom met MVPD.
 
-1. **Volledige authentificatie van MVPD met partnerkader:** door:sturen het verzoek van de partnerauthentificatie (SAML verzoek) in vorige stap aan het [ Video Kader van de Rekening van de Abonnee ](https://developer.apple.com/documentation/videosubscriberaccount) wordt verkregen. Als de authentificatiestroom succesvol is, veroorzaakt de ](https://developer.apple.com/documentation/videosubscriberaccount) interactie van het Kader van de Rekening van de Abonnee 0} Video met MVPD een reactie van de partnerauthentificatie (reactie van SAML) die samen met de informatie van de de statusstatus van het partnerkader is teruggekeerd.[
+1. **Volledige authentificatie van MVPD met partnerkader:** door:sturen het verzoek van de partnerauthentificatie (SAML verzoek) in vorige stap aan het [ Video Kader van de Rekening van de Abonnee ](https://developer.apple.com/documentation/videosubscriberaccount) wordt verkregen. Als de authentificatiestroom succesvol is, veroorzaakt de [&#128279;](https://developer.apple.com/documentation/videosubscriberaccount) interactie van het Kader van de Rekening van de Abonnee 0&rbrace; Video met MVPD een reactie van de partnerauthentificatie (reactie van SAML) die samen met de informatie van de de statusstatus van het partnerkader is teruggekeerd.
 
    >[!IMPORTANT]
    >
-   > Verwijs naar de ](https://developer.apple.com/documentation/videosubscriberaccount) documentatie van het Kader van de Rekening van de Abonnee van 0} Video voor details op:[
+   > Verwijs naar de [&#128279;](https://developer.apple.com/documentation/videosubscriberaccount) documentatie van het Kader van de Rekening van de Abonnee van 0&rbrace; Video voor details op:
    >
    > <br/>
    >
@@ -376,7 +376,7 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
 
    >[!IMPORTANT]
    >
-   > Verwijs naar de ](https://developer.apple.com/documentation/videosubscriberaccount) documentatie van het Kader van de Rekening van de Abonnee van 0} Video voor details op:[
+   > Verwijs naar de [&#128279;](https://developer.apple.com/documentation/videosubscriberaccount) documentatie van het Kader van de Rekening van de Abonnee van 0&rbrace; Video voor details op:
    >
    > <br/>
    >
@@ -447,7 +447,7 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
 
    >[!IMPORTANT]
    >
-   > Verwijs naar de ](https://developer.apple.com/documentation/videosubscriberaccount) documentatie van het Kader van de Rekening van de Abonnee van 0} Video voor details op:[
+   > Verwijs naar de [&#128279;](https://developer.apple.com/documentation/videosubscriberaccount) documentatie van het Kader van de Rekening van de Abonnee van 0&rbrace; Video voor details op:
    >
    > <br/>
    >

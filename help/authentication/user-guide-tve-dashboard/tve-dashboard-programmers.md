@@ -165,7 +165,7 @@ Ga als volgt te werk om een nieuwe geregistreerde toepassing toe te voegen.
    >
    > Het wordt aanbevolen een nieuwe geregistreerde toepassing te maken voor elke belangrijke update van uw clienttoepassing om de levenscyclus en het gebruik ervan te beheren. Indien noodzakelijk, creeer een kaartje door onze [ Zendesk ](https://adobeprimetime.zendesk.com) en vraag uw Technische Manager van de Rekening (TAM) om een geregistreerde toepassing te herroepen om de functionaliteit van een specifieke versie van de cliënttoepassing te blokkeren.
 
-1. Selecteer **waarde &quot;DIRECT van het Type 0} {van het drop-down menu.**
+1. Selecteer **waarde &quot;DIRECT van het Type 0&rbrace; &lbrace;van het drop-down menu.**
 
 1. Selecteer **toepassing** toevoegen.
 
@@ -222,4 +222,4 @@ Ga als volgt te werk om een nieuwe programmeerentiteit toe te voegen.
 
 1. Selecteer **programmer** toevoegen.
 
-Er is een nieuwe configuratiewijziging gemaakt en deze is gereed voor serverupdate. Om de nieuwe programmeur te gebruiken die in de **sectie wordt vermeld van 0} Programmers {, ga met de [ overzicht te werk en druk veranderingen ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) stroom.**
+Er is een nieuwe configuratiewijziging gemaakt en deze is gereed voor serverupdate. Om de nieuwe programmeur te gebruiken die in de **sectie wordt vermeld van 0&rbrace; Programmers &lbrace;, ga met de [ overzicht te werk en druk veranderingen ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) stroom.**

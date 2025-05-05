@@ -25,14 +25,14 @@ Single Sign-On (SSO) tussen Adobe Pass Authentication-aangedreven apps is beschi
 
 Google in de nieuwste Android 10-release heeft echter enkele wijzigingen aangebracht &quot;om gebruikers meer controle over hun bestanden te geven en het bestand overzichtelijker te maken, zodat toepassingen die gericht zijn op Android 10 (API-niveau 29) en hoger, bereikbare toegang krijgen tot een extern opslagapparaat, of standaard opslagruimte binnen bereik. Dergelijke apps kunnen alleen hun toepassingsspecifieke map `\[...\]` zien.&quot; Meer details met betrekking tot deze Android 10 opslagveranderingen worden voorgesteld in [ Gegevens en de documentatie van de dossieropslag voor Android ](https://developer.android.com/training/data-storage/files/external-scoped).
 
-Als gevolg van deze veranderingen kan Enige Sign-On (SSO) die door de versie van Android van de Toegang wordt aangeboden 3.2.1 (recentste) SDK worden aangeboden en de vorige versies kunnen op Android 10 apparaten worden beïnvloed zoals die in de volgende sectie wordt verklaard.****
+Als gevolg van deze veranderingen kan Enige Sign-On (SSO) die door de versie van Android van de Toegang wordt aangeboden 3.2.1 (recentste) SDK worden aangeboden en de vorige versies kunnen op Android 10 apparaten worden beïnvloed zoals die in de volgende sectie wordt verklaard.**&#x200B;**
 
 ## Gedrag
 
 Afhankelijk van het gebruik van uw app **[!UICONTROL target SDK level]** of het gebruik van **android:requestLegacyExternalStorage** manifest attributen Single Sign-On (SSO) die door Android versie 3.2.1 SDK van de Toegang worden aangeboden (recentste) en vorige versies zullen momenteel als volgt gedragen:
 
 - Uw app richt **Android 9 (API niveau 28)** of lager **- \>** Enige Sign-On (SSO) **zal** werken
-- Uw app richt **Android 10** **(API niveau 29)** en plaatst **** de waarde van **requestLegacyExternalStorage aan waar** in duidelijk dossier van uw app **- \>** Enige Sign-On (SSO) **zal** werken
+- Uw app richt **Android 10** **(API niveau 29)** en plaatst **&#x200B;**&#x200B;de waarde van **requestLegacyExternalStorage aan waar** in duidelijk dossier van uw app **- \>** Enige Sign-On (SSO) **zal** werken
 - Uw app richt **Android 10** **(API niveau 29)** en plaatst **niet** de waarde van **requestLegacyExternalStorage aan waar** in duidelijk dossier van uw app **- \>** Enige Sign-On (SSO) **zal niet** werken
 
 >[!TIP]

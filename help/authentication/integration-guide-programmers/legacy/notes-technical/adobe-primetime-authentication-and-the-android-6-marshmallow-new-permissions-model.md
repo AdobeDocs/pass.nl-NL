@@ -68,8 +68,8 @@ if (ContextCompat.checkSelfPermission(thisActivity,
 
 **Van het perspectief van de gebruikers**, op installatie, worden de gebruikers begroet door een venster die hen ertoe aanzetten om lees/schrijftoestemmingen voor dossiers (zie hieronder figuur 2) te bevestigen. Dit leidt tot één van de volgende twee resultaten:
 
-1. Als de gebruiker **** bevestigt de toestemmingen, zal de regelmatige authentificatiestroom worden gehouden en de tekenen zullen in de globale opslag worden opgeslagen. Gebruikers blijven geautoriseerd in de app en in verschillende apps met Adobe Pass-verificatie zolang de tokens geldig zijn.
-1. Als de gebruiker **** ontkent de toestemmingen, schrijf acties in de opslag zullen ontbreken en de gebruikers zullen slechts voor authentiek worden verklaard tot zij app weggaan. Houd er rekening mee dat sommige toepassingen opnieuw worden geïnitialiseerd wanneer wordt geschakeld tussen de voor- en achtergrond, zodat de gebruikers worden afgemeld wanneer zij deze handeling uitvoeren. Tokens worden NIET opgeslagen en de gebruikers moeten elke keer dat zij de app gebruiken, worden geverifieerd.
+1. Als de gebruiker **&#x200B;**&#x200B;bevestigt de toestemmingen, zal de regelmatige authentificatiestroom worden gehouden en de tekenen zullen in de globale opslag worden opgeslagen. Gebruikers blijven geautoriseerd in de app en in verschillende apps met Adobe Pass-verificatie zolang de tokens geldig zijn.
+1. Als de gebruiker **&#x200B;**&#x200B;ontkent de toestemmingen, schrijf acties in de opslag zullen ontbreken en de gebruikers zullen slechts voor authentiek worden verklaard tot zij app weggaan. Houd er rekening mee dat sommige toepassingen opnieuw worden geïnitialiseerd wanneer wordt geschakeld tussen de voor- en achtergrond, zodat de gebruikers worden afgemeld wanneer zij deze handeling uitvoeren. Tokens worden NIET opgeslagen en de gebruikers moeten elke keer dat zij de app gebruiken, worden geverifieerd.
 
 
 >[!TIP]

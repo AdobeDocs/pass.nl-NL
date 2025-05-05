@@ -47,7 +47,7 @@ de stroom van de authentificatierechten die deze API gebruiken, zie [ Cookbook v
 
 * [`setOptions:options:`](#setOptions) - Hiermee configureert u algemene SDK-opties, zoals profiel of bezoeker-id.
 
-* [`setRequestor:`](#setReqV3)[`requestorID`](#setReqV3), [`setRequestor:requestorID:serviceProviders:`](#setReqV3) - vestigt de identiteit van de programmeur.
+* [`setRequestor:`](#setReqV3) [`requestorID`](#setReqV3), [`setRequestor:requestorID:serviceProviders:`](#setReqV3) - vestigt de identiteit van de programmeur.
 
 * **[VERVANGEN]** [`setRequestor:signedRequestorId:`](#setReq), [`setRequestor:signedRequestorId:serviceProviders:`](#setReq) - Vestigt de identiteit van de Programmer.
 
@@ -59,7 +59,7 @@ de stroom van de authentificatierechten die deze API gebruiken, zie [ Cookbook v
 
 * [`getAuthentication`](#getAuthN) , [`getAuthentication:withData:`](#getAuthN) - De volledige verificatieworkflow wordt gestart.
 
-* [`getAuthentication:filter`](#getAuthN_filter), [`getAuthentication:withData:`](#getAuthN)[ andFilter ](#getAuthN_filter) - begint het volledige authentificatiewerkschema.
+* [`getAuthentication:filter`](#getAuthN_filter), [`getAuthentication:withData:`](#getAuthN) [ andFilter ](#getAuthN_filter) - begint het volledige authentificatiewerkschema.
 
 * [`displayProviderDialog:`](#dispProvDialog) - Informeert uw toepassing om de juiste UI-elementen te instantiëren waarmee de gebruiker een MVPD kan selecteren.
 
@@ -168,7 +168,7 @@ de stroom van de authentificatierechten die deze API gebruiken, zie [ Cookbook v
    * **bezoekorID** - de Dienst van identiteitskaart van het Experience Cloud. Deze waarde kan later worden gebruikt voor geavanceerde analyserapporten.
    * **handleSVC** - Van Boole die als de programmeur SFSafariViewControllers zal behandelen. Gelieve te zien [ SFSafariViewController steun op iOS SDK 3.2+ ](/help/authentication/integration-guide-programmers/legacy/notes-technical/sfsafariviewcontroller-support-on-ios-sdk-32.md) voor meer details.
       * Als de reeks aan **vals,** SDK automatisch de eindgebruiker met een SFSafariViewController zal voorstellen. De SDK navigeert verder naar de URL van de MVPD-aanmeldingspagina.
-      * Als de reeks aan **waar,** SDK **** automatisch niet {de eindgebruiker met een SFSafariViewController zal voorstellen. SDK zal verder **navigeren (toUrl:{url}, useSVC:JA)**.
+      * Als de reeks aan **waar,** SDK **&#x200B;**&#x200B;automatisch niet &lbrace;de eindgebruiker met een SFSafariViewController zal voorstellen. SDK zal verder **navigeren (toUrl:{url}, useSVC:JA)**.
 * **apparaat\_info** - de informatie van de Cliënt zoals die in [ wordt beschreven het overgaan cliëntinformatie ](/help/authentication/integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md).
 
 [Terug naar boven...](#apis)
@@ -414,7 +414,7 @@ de [`setAuthenticationStatus:errorCode:`](#setAuthNStatus) callback.
 * als de laatste verificatiepoging succesvol was, de MVPD   de selectiefase wordt overgeslagen en   de callback van [`navigateToUrl:`](#nav2url) wordt geactiveerd. De   de toepassing gebruikt deze callback om de controle te concretiseren WebView die de gebruiker met de MVPD login pagina voorstelt. **[NOTA: Vanaf Toegang toelaten 1.5, is deze functionaliteit niet beschikbaar wegens een beperking in SDK ].**
 * als de laatste verificatiepoging is mislukt of als de gebruiker zich expliciet heeft afgemeld, wordt de [`displayProviderDialog:`](#dispProvDialog) callback   geactiveerd. Deze callback wordt door uw toepassing gebruikt om de gebruikersinterface van de MVPD-selectie weer te geven. Uw app is ook vereist om de verificatiestroom te hervatten door de AccessEnabler-bibliotheek via de [`setSelectedProvider:`](#setSelProv) -methode te informeren over de MVPD-selectie van de gebruiker.
 
-Aangezien de gebruikersgegevens op de MVPD-aanmeldingspagina worden gecontroleerd, moet uw toepassing de meervoudige omleidingsbewerkingen controleren die plaatsvinden terwijl de gebruiker op de MVPD-aanmeldingspagina wordt geverifieerd. Wanneer de correcte geloofsbrieven zijn ingegaan, wordt de controle WebView opnieuw gericht aan een douane URL die door de `ADOBEPASS_REDIRECT_URL` constante wordt bepaald. Deze URL is niet bedoeld om door WebView te worden geladen. De toepassing moet deze URL onderscheppen en deze gebeurtenis interpreteren als een signaal dat de aanmeldingsfase is voltooid. Het zou dan controle aan AccessEnabler moeten overdragen om de authentificatiestroom (door de ](#handleExternalURL) methode te roepen 0} handleExternalURL) te voltooien.[
+Aangezien de gebruikersgegevens op de MVPD-aanmeldingspagina worden gecontroleerd, moet uw toepassing de meervoudige omleidingsbewerkingen controleren die plaatsvinden terwijl de gebruiker op de MVPD-aanmeldingspagina wordt geverifieerd. Wanneer de correcte geloofsbrieven zijn ingegaan, wordt de controle WebView opnieuw gericht aan een douane URL die door de `ADOBEPASS_REDIRECT_URL` constante wordt bepaald. Deze URL is niet bedoeld om door WebView te worden geladen. De toepassing moet deze URL onderscheppen en deze gebeurtenis interpreteren als een signaal dat de aanmeldingsfase is voltooid. Het zou dan controle aan AccessEnabler moeten overdragen om de authentificatiestroom (door de [&#128279;](#handleExternalURL) methode te roepen 0&rbrace; handleExternalURL) te voltooien.
 
 Tot slot wordt de authentificatiestatus meegedeeld aan de toepassing via [`setAuthenticationStatus:errorCode:`](#setAuthNStatus) callback.
 
@@ -672,9 +672,9 @@ Wanneer het overgaan van *ongeldig* als parameter, veronderstelt de Toegang dat 
 
 **Dossier:** AccessEnabler/headers/EntitlementDelegate.h
 
-**Beschrijving:** Callback die door AccessEnabler wordt teweeggebracht om uw toepassing te verzoeken om een controlemechanisme UIWebView/WKWebView te concretiseren en URL te laden die in de 2} parameter van callback wordt verstrekt. **`url`** De callback gaat de **`url`** parameter over die URL van het authentificatieeindpunt of URL van het logout eindpunt vertegenwoordigt.
+**Beschrijving:** Callback die door AccessEnabler wordt teweeggebracht om uw toepassing te verzoeken om een controlemechanisme UIWebView/WKWebView te concretiseren en URL te laden die in de 2&rbrace; parameter van callback wordt verstrekt. **`url`** De callback gaat de **`url`** parameter over die URL van het authentificatieeindpunt of URL van het logout eindpunt vertegenwoordigt.
 
-Aangezien het UIWebView/WKWebView ` ` controlemechanisme door verscheidene redirects gaat, moet uw toepassing de activiteit van het controlemechanisme controleren en het moment ontdekken wanneer het een specifieke douane URL laadt die door de `ADOBEPASS_REDIRECT_URL ` constante (d.w.z. `adobepass://ios.app` wordt bepaald). Deze specifieke aangepaste URL is in feite ongeldig en is niet bestemd voor de controller om deze daadwerkelijk te laden. Het moet slechts door uw toepassing als signaal worden geïnterpreteerd dat de authentificatie of logout stroom heeft voltooid en dat het veilig is om het controlemechanisme te sluiten. Wanneer het controlemechanisme deze specifieke douane URL laadt moet uw toepassing UIWebView/WKWebView sluiten en de 20} API methode roepen van AccessEnabler {.`handleExternalURL:url `
+Aangezien het UIWebView/WKWebView ` ` controlemechanisme door verscheidene redirects gaat, moet uw toepassing de activiteit van het controlemechanisme controleren en het moment ontdekken wanneer het een specifieke douane URL laadt die door de `ADOBEPASS_REDIRECT_URL ` constante (d.w.z. `adobepass://ios.app` wordt bepaald). Deze specifieke aangepaste URL is in feite ongeldig en is niet bestemd voor de controller om deze daadwerkelijk te laden. Het moet slechts door uw toepassing als signaal worden geïnterpreteerd dat de authentificatie of logout stroom heeft voltooid en dat het veilig is om het controlemechanisme te sluiten. Wanneer het controlemechanisme deze specifieke douane URL laadt moet uw toepassing UIWebView/WKWebView sluiten en de 20&rbrace; API methode roepen van AccessEnabler &lbrace;.`handleExternalURL:url `
 
 **Nota:** Gelieve te merken op dat in het geval van de authentificatiestroom dit een punt is waar de gebruiker de capaciteit heeft om de &quot;Achterknoop&quot;te drukken, die aan het aborteren van de authentificatiestroom gelijkwaardig is. In zulk een scenario, wordt uw toepassing vereist om [ setSelectedProvider te roepen:](#setSelProv) methode die **`nil`** als parameter overgaat en een kans geeft aan AccessEnabler om zijn authentificatiestatus-machine terug te stellen.
 
@@ -712,11 +712,11 @@ Aangezien het UIWebView/WKWebView ` ` controlemechanisme door verscheidene redir
 
 **Dossier:** AccessEnabler/headers/EntitlementDelegate.h
 
-**Beschrijving:** Callback die door AccessEnabler in plaats van `navigateToUrl:` callback in werking wordt gesteld voor het geval dat uw toepassing eerder handmatige behandeling van het Controlemechanisme van de Mening Safari (SVC) via [ setOptions (\ [&quot;handleSVC&quot;:waar&quot;\]) ](#setOptions), en slechts in het geval van MVPDs die Controlemechanisme van de Mening vereisen (SVC). Voor alle andere MVPD&#39;s wordt de callback `navigateToUrl:` aangeroepen. Gelieve te zien {de steun SFSafariViewController op iOS SDK 3.2+ ](/help/authentication/integration-guide-programmers/legacy/notes-technical/sfsafariviewcontroller-support-on-ios-sdk-32.md) voor details op hoe het Controlemechanisme van de Mening Safari (SVC) zou moeten worden beheerd.[
+**Beschrijving:** Callback die door AccessEnabler in plaats van `navigateToUrl:` callback in werking wordt gesteld voor het geval dat uw toepassing eerder handmatige behandeling van het Controlemechanisme van de Mening Safari (SVC) via [ setOptions (\ [&quot;handleSVC&quot;:waar&quot;\]) ](#setOptions), en slechts in het geval van MVPDs die Controlemechanisme van de Mening vereisen (SVC). Voor alle andere MVPD&#39;s wordt de callback `navigateToUrl:` aangeroepen. Gelieve te zien &lbrace;de steun SFSafariViewController op iOS SDK 3.2+ [&#128279;](/help/authentication/integration-guide-programmers/legacy/notes-technical/sfsafariviewcontroller-support-on-ios-sdk-32.md) voor details op hoe het Controlemechanisme van de Mening Safari (SVC) zou moeten worden beheerd.
 
 Net als bij de `navigateToUrl:` callback wordt `navigateToUrl:useSVC:` door de AccessEnabler geactiveerd om uw toepassing te vragen een `SFSafariViewController` -controller te instantiëren en de URL te laden die in de **`url`** -parameter van de callback is opgegeven. De callback geeft de parameter **`url`** door die de URL van het verificatieeindpunt of de URL van het logout-eindpunt vertegenwoordigt, en de parameter **`useSVC`** die aangeeft dat de toepassing een `SFSafariViewController` moet gebruiken.
 
-Aangezien het `SFSafariViewController` controlemechanisme door verscheidene omleidingen gaat, moet uw toepassing de activiteit van het controlemechanisme controleren en het ogenblik ontdekken wanneer het een specifieke douane URL laadt die door uw `application's custom scheme` wordt bepaald (b.v.** ** `adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com`). Deze specifieke aangepaste URL is in feite ongeldig en is niet bestemd voor de controller om deze daadwerkelijk te laden. Het moet slechts door uw toepassing als signaal worden geïnterpreteerd dat de authentificatie of logout stroom heeft voltooid en dat het veilig is om het controlemechanisme te sluiten. Wanneer het controlemechanisme deze specifieke douane URL laadt moet uw toepassing `SFSafariViewController` sluiten en de 1} API methode van AccessEnabler roepen {.`handleExternalURL:url `
+Aangezien het `SFSafariViewController` controlemechanisme door verscheidene omleidingen gaat, moet uw toepassing de activiteit van het controlemechanisme controleren en het ogenblik ontdekken wanneer het een specifieke douane URL laadt die door uw `application's custom scheme` wordt bepaald (b.v.**&#x200B; ** `adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com`). Deze specifieke aangepaste URL is in feite ongeldig en is niet bestemd voor de controller om deze daadwerkelijk te laden. Het moet slechts door uw toepassing als signaal worden geïnterpreteerd dat de authentificatie of logout stroom heeft voltooid en dat het veilig is om het controlemechanisme te sluiten. Wanneer het controlemechanisme deze specifieke douane URL laadt moet uw toepassing `SFSafariViewController` sluiten en de 1&rbrace; API methode van AccessEnabler roepen &lbrace;.`handleExternalURL:url `
 
 **Nota:** Gelieve te merken op dat in het geval van de authentificatiestroom dit een punt is waar de gebruiker de capaciteit heeft om de &quot;Achterknoop&quot;te drukken, die aan het aborteren van de authentificatiestroom gelijkwaardig is. In zulk een scenario, wordt uw toepassing vereist om [ setSelectedProvider te roepen:](#setSelProv) methode die **`nil`** als parameter overgaat en een kans geeft aan AccessEnabler om zijn authentificatiestatus-machine terug te stellen.
 
@@ -732,19 +732,19 @@ Aangezien het `SFSafariViewController` controlemechanisme door verscheidene omle
 <tbody>
 <tr class="odd">
 <td><pre><code>@optional
-- (void) navigateToUrl:(NSString *)url useSVC:(BOOL)useSVC; </code></pre></td>
+&#x200B;- (void) navigateToUrl:(NSString *)url useSVC:(BOOL)useSVC; </code></pre></td>
 </tr>
 </tbody>
 </table>
 
-**Beschikbaarheid:**v 3.2+
+**Beschikbaarheid:**&#x200B;v 3.2+
 
 **Parameters**:
 
 * *url:* URL die aan de MVPD aanmeldingspagina richt
 * *useSVC:* of url in SFSafariViewController zou moeten worden geladen.
 
-**teweeggebracht door:**[ setOptions:](#setOptions) vóór [ setSelectedProvider:](#setSelProv)
+**teweeggebracht door:**&#x200B;[ setOptions:](#setOptions) vóór [ setSelectedProvider:](#setSelProv)
 
 [Terug naar boven...](#apis)
 
@@ -1438,7 +1438,7 @@ indeling:
 
 **Parameters**:
 
-* *meta-gegevens*: De gevraagde meta-gegevens. Deze waarde is een `NSString` in het geval van statische metagegevens (TTL voor verificatie, TTL voor autorisatie, apparaat-id).  Het is een complex object wanneer u gebruikersspecifieke metagegevens aanvraagt. Dit complexe object is doorgaans de Objectief-C-representatie van een JSON-payload (bijvoorbeeld &#39;{&quot;street&quot;: &quot;Main Avenue&quot;, &quot;building&quot;: [ &quot;150&quot;, &quot;320&quot;]&#39; wordt in doelstelling-C vertaald als NSDictionary(&quot;street&quot; -> &quot;Main Avenue&quot;, &quot;building&quot; -> NSArray(&quot;15 0&quot;, &quot;320&quot;).   Voorbeeld van JSON-object voor metagegevens:
+* *meta-gegevens*: De gevraagde meta-gegevens. Deze waarde is een `NSString` in het geval van statische metagegevens (TTL voor verificatie, TTL voor autorisatie, apparaat-id).  Het is een complex object wanneer u gebruikersspecifieke metagegevens aanvraagt. Dit complexe object is doorgaans de Objectief-C-representatie van een JSON-payload (bijvoorbeeld &#39;&lbrace;&quot;street&quot;: &quot;Main Avenue&quot;, &quot;building&quot;: [ &quot;150&quot;, &quot;320&quot;]&#39; wordt in doelstelling-C vertaald als NSDictionary(&quot;street&quot; -> &quot;Main Avenue&quot;, &quot;building&quot; -> NSArray(&quot;15 0&quot;, &quot;320&quot;).   Voorbeeld van JSON-object voor metagegevens:
 
 ```JSON
         {

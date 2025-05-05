@@ -135,7 +135,7 @@ Als er geen lopende zittingen voor een specifieke gebruiker zijn wanneer u de vr
 
 ![](assets/get-all-running-streams-empty.png)
 
-Merk ook op dat in dit geval **** kopbal niet aanwezig is.
+Merk ook op dat in dit geval **&#x200B;**&#x200B;kopbal niet aanwezig is.
 
 In het geval dat een zitting werd gecreeerd dodend een andere, gebruikend **x-beëindigt** kopbal, onder meta-gegevens u gebied **vervangen** zult vinden. De waarde is een indicator van de gedode sessie om ruimte te maken voor de huidige sessie.
 
@@ -156,7 +156,7 @@ Deze informatie is bedoeld voor geavanceerde opmaak van foutberichten en voor he
 
 Elke conflicterende zitting zal a **terminateCode** dragen die voor **kan worden gebruikt het doden** die stroom. Op deze manier kan de toepassing de gebruiker toestaan om te kiezen welke sessie(s) worden beëindigd om toegang te krijgen tot de huidige sessie.
 
-De toepassing kan de informatie van het evaluatieresultaat gebruiken om een bepaald bericht aan de gebruiker te tonen wanneer het tegenhouden van de video en verdere acties te nemen indien nodig. U kunt andere bestaande streams stoppen om een nieuwe te starten. Dit wordt gedaan door de **waarde te gebruiken 0} terminateCode die op het** **gebied voor een specifiek conflicterend attribuut aanwezig is.** De waarde zal als X-beëindig HTTP- kopbal in de vraag naar een nieuwe zittingsinitialisering worden verstrekt.
+De toepassing kan de informatie van het evaluatieresultaat gebruiken om een bepaald bericht aan de gebruiker te tonen wanneer het tegenhouden van de video en verdere acties te nemen indien nodig. U kunt andere bestaande streams stoppen om een nieuwe te starten. Dit wordt gedaan door de **waarde te gebruiken 0&rbrace; terminateCode die op het** **gebied voor een specifiek conflicterend attribuut aanwezig is.** De waarde zal als X-beëindig HTTP- kopbal in de vraag naar een nieuwe zittingsinitialisering worden verstrekt.
 
 ![](assets/session-init-termination-code.png)
 

@@ -52,7 +52,7 @@ De Tijd-aan-Levende van de authentificatie (TTL) bepaalt hoe lang een gebruiker 
 
 De authentificatie (authN) TTL kan door het Dashboard van Adobe Pass [ worden bekeken en worden veranderd TVE ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#tve-dashboard) door één van uw organisatiebeheerders of door een vertegenwoordiger van de Authentificatie van Adobe Pass handelend namens u.
 
-Voor meer details, verwijs naar de ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#most-used-flows) documentatie van de Gebruiker van de Gids van de Integratie van het Dashboard van 0} TVE.[
+Voor meer details, verwijs naar de [&#128279;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#most-used-flows) documentatie van de Gebruiker van de Gids van de Integratie van het Dashboard van 0&rbrace; TVE.
 
 ## REST API V2 {#rest-api-v2}
 

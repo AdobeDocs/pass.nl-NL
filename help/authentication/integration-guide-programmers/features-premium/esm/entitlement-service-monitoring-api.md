@@ -26,7 +26,7 @@ ht-degree: 0%
 
 ## API-overzicht {#api-overview}
 
-De Controle van de Dienst van het recht (ESM) wordt uitgevoerd als WOLAP (Web-based [ Online Analytische Verwerking ](https://en.wikipedia.org/wiki/Online_analytical_processing) {target=_blank}) project. ESM is een generisch zaken-meldend Web API die door een gegevenspakhuis wordt gesteund. Het doet dienst als de vraagtaal van HTTP die typische verrichtingen toelaat OLAP om RESTfully worden uitgevoerd.
+De Controle van de Dienst van het recht (ESM) wordt uitgevoerd als WOLAP (Web-based [ Online Analytische Verwerking ](https://en.wikipedia.org/wiki/Online_analytical_processing){target=_blank} ) project. ESM is een generisch zaken-meldend Web API die door een gegevenspakhuis wordt gesteund. Het doet dienst als de vraagtaal van HTTP die typische verrichtingen toelaat OLAP om RESTfully worden uitgevoerd.
 
 >[!NOTE]
 >

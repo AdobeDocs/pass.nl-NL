@@ -260,7 +260,7 @@ Zodra de gebruiker gewenste MVPD heeft geselecteerd, wordt de upper-layer toepas
 | ```public void setSelectedProvider(String mvpdId)``` |
 
 
-**Beschikbaarheid:**v 1.0+
+**Beschikbaarheid:**&#x200B;v 1.0+
 
 **Parameters:** niets
 
@@ -355,7 +355,7 @@ Deze callback signaleert ook wanneer de logout stroom volledig is.
 | --- |
 | ```public void checkPreauthorizedResources(ArrayList<String> resources)``` |
 
-**Beschikbaarheid:**v 1.0+
+**Beschikbaarheid:**&#x200B;v 1.0+
 
 **Parameters:** de `resources` parameter is een serie van middelen waarvoor de gebruiker reeds gemachtigd is om te bekijken.
 
@@ -427,7 +427,7 @@ Deze callback signaleert ook wanneer de logout stroom volledig is.
 | --- |
 | ```public void setToken(String token, String resourceId)``` |
 
-**Beschikbaarheid:**v 1.0+
+**Beschikbaarheid:**&#x200B;v 1.0+
 
 **Parameters:**
 

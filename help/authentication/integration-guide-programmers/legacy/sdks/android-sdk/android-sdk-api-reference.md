@@ -172,7 +172,7 @@ De waarden worden doorgegeven aan de server, onafhankelijk van de huidige flow (
 
 **Beschrijving:** controleert de authentificatiestatus. Het doet dit door naar een geldig authentificatietoken in de lokale symbolische opslagruimte te zoeken. Deze methode voert geen netwerkvraag uit en wij adviseren roepend het op de belangrijkste draad. Deze wordt door de toepassing gebruikt om de verificatiestatus van de gebruiker te controleren en de gebruikersinterface dienovereenkomstig bij te werken (de gebruikersinterface voor aanmelding/aanmelding wordt dus bijgewerkt). De authentificatiestatus wordt meegedeeld aan de toepassing via [*setAuthenticationStatus ()*](#setAuthNStatus) callback.
 
-Als een MVPD de functie &#39;Verificatie per aanvrager&#39; ondersteunt, kunnen meerdere verificatietokens op een apparaat worden opgeslagen.  Voor details op deze eigenschap, zie de ](#$caching) sectie van de Richtlijnen van het 0} Caching {in het Technische Overzicht van Android.[
+Als een MVPD de functie &#39;Verificatie per aanvrager&#39; ondersteunt, kunnen meerdere verificatietokens op een apparaat worden opgeslagen.  Voor details op deze eigenschap, zie de [&#128279;](#$caching) sectie van de Richtlijnen van het 0&rbrace; Caching &lbrace;in het Technische Overzicht van Android.
 
 | API-aanroep: verificatiestatus controleren |
 | --- |
@@ -196,7 +196,7 @@ Als een MVPD de functie &#39;Verificatie per aanvrager&#39; ondersteunt, kunnen 
 
 Aangezien de gebruikersgegevens op de MVPD-aanmeldingspagina worden gecontroleerd, moet uw toepassing de meervoudige omleidingsbewerkingen controleren die plaatsvinden terwijl de gebruiker op de MVPD-aanmeldingspagina wordt geverifieerd. Wanneer de correcte geloofsbrieven zijn ingegaan, wordt de controle WebView opnieuw gericht aan een douane URL die door de {*constante wordt bepaald 0} AccessEnabler.ADOBEPASS\_REDIRECT\_URL.* Deze URL is niet bedoeld om door WebView te worden geladen. De toepassing moet deze URL onderscheppen en deze gebeurtenis interpreteren als een signaal dat de aanmeldingsfase is voltooid. Het zou dan controle aan Toegang moeten overhandigen Enabler om de authentificatiestroom te voltooien (door *te roepen getAuthenticationToken ()* methode).
 
-Als een MVPD de functie &#39;Verificatie per aanvrager&#39; ondersteunt, kunnen meerdere verificatietokens worden opgeslagen op een apparaat (één per programmeur).  Voor details op deze eigenschap, zie de ](#$caching) sectie van de Richtlijnen van het 0} Caching {in het Technische Overzicht van Android.[
+Als een MVPD de functie &#39;Verificatie per aanvrager&#39; ondersteunt, kunnen meerdere verificatietokens worden opgeslagen op een apparaat (één per programmeur).  Voor details op deze eigenschap, zie de [&#128279;](#$caching) sectie van de Richtlijnen van het 0&rbrace; Caching &lbrace;in het Technische Overzicht van Android.
 
 Tot slot wordt de authentificatiestatus meegedeeld aan de toepassing via *setAuthenticationStatus ()* callback.
 

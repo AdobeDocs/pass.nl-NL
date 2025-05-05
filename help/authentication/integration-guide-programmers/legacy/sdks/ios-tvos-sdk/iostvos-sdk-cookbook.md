@@ -48,7 +48,7 @@ De het netwerkactiviteit van AccessEnabler vindt plaats in zijn eigen draad, zod
 
 ## De service voor Experience Cloud-id configureren (bezoeker-id) {#visitorIDSetup}
 
-Het vormen van de ](https://experienceleague.adobe.com/docs/id-service/using/home.html) waarde van identiteitskaart van 0} Experience Cloud {is belangrijk van het [!DNL Analytics] standpunt. [ Wanneer een `visitorID` -waarde is ingesteld, verzendt de SDK deze informatie samen met elke netwerkaanroep en verzamelt de [!DNL Adobe Pass] -verificatieserver deze informatie. U kunt de analyses van de Adobe Pass Authentication-service koppelen aan andere analytische rapporten die u hebt van andere toepassingen of websites. De informatie over hoe te opstellings bezoekorID kan [ hier ](#setOptions) worden gevonden.
+Het vormen van de [&#128279;](https://experienceleague.adobe.com/docs/id-service/using/home.html) waarde van identiteitskaart van 0&rbrace; Experience Cloud &lbrace;is belangrijk van het [!DNL Analytics] standpunt.  Wanneer een `visitorID` -waarde is ingesteld, verzendt de SDK deze informatie samen met elke netwerkaanroep en verzamelt de [!DNL Adobe Pass] -verificatieserver deze informatie. U kunt de analyses van de Adobe Pass Authentication-service koppelen aan andere analytische rapporten die u hebt van andere toepassingen of websites. De informatie over hoe te opstellings bezoekorID kan [ hier ](#setOptions) worden gevonden.
 
 ## Machtigingsstromen {#entitlement}
 
@@ -136,6 +136,7 @@ is geautoriseerd om te bekijken.
 Manager om dit te rangschikken).
 
    * **Trekkers:**
+
      [ setRequestorComplete () ](#$setReqComplete) callback.
 
    >[!NOTE]
@@ -265,7 +266,7 @@ de gebruiker.
 
    a. Na het zelfde patroon als het authentificatiewerkschema, doet het domein AccessEnabler een verzoek aan de UI toepassingslaag, via `navigateToUrl:` of `navigateToUrl:useSVC:` callback, om een UIWebView/WKWebView of SFSafariViewController tot stand te brengen en die opdracht te geven om URL te laden die in de parameter van callback `url` wordt verstrekt. Dit is URL van het logout eindpunt op de achtergrondserver.
 
-   b. Uw toepassing moet toezicht houden op de activiteit van de `UIWebView/WKWebView or SFSafariViewController` -controller en het moment detecteren waarop een specifieke aangepaste URL wordt geladen, aangezien deze meerdere omleidingen doorloopt. Deze specifieke aangepaste URL is in feite ongeldig en is niet bestemd voor de controller om deze daadwerkelijk te laden. Deze moet alleen door uw toepassing worden geïnterpreteerd als een signaal dat de afmeldingsflow is voltooid en dat het veilig is om de `UIWebView/WKWebView` - of `SFSafariViewController` -controller te sluiten. Wanneer het controlemechanisme deze specifieke douane URL laadt moet uw toepassing het `UIWebView/WKWebView or SFSafariViewController` controlemechanisme sluiten en de 1} API methode van AccessEnabler roepen `handleExternalURL:url`. Als een `SFSafariViewController` controlemechanisme moet worden gebruikt wordt de specifieke douane URL bepaald door **`application's custom scheme`** (bijvoorbeeld, `adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com`), anders wordt deze specifieke douane URL bepaald door de **`ADOBEPASS_REDIRECT_URL`** constante (namelijk `adobepass://ios.app`).
+   b. Uw toepassing moet toezicht houden op de activiteit van de `UIWebView/WKWebView or SFSafariViewController` -controller en het moment detecteren waarop een specifieke aangepaste URL wordt geladen, aangezien deze meerdere omleidingen doorloopt. Deze specifieke aangepaste URL is in feite ongeldig en is niet bestemd voor de controller om deze daadwerkelijk te laden. Deze moet alleen door uw toepassing worden geïnterpreteerd als een signaal dat de afmeldingsflow is voltooid en dat het veilig is om de `UIWebView/WKWebView` - of `SFSafariViewController` -controller te sluiten. Wanneer het controlemechanisme deze specifieke douane URL laadt moet uw toepassing het `UIWebView/WKWebView or SFSafariViewController` controlemechanisme sluiten en de 1&rbrace; API methode van AccessEnabler roepen `handleExternalURL:url`. Als een `SFSafariViewController` controlemechanisme moet worden gebruikt wordt de specifieke douane URL bepaald door **`application's custom scheme`** (bijvoorbeeld, `adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com`), anders wordt deze specifieke douane URL bepaald door de **`ADOBEPASS_REDIRECT_URL`** constante (namelijk `adobepass://ios.app`).
 
    >[!NOTE]
    >

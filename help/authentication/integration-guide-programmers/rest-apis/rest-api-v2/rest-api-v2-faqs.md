@@ -50,14 +50,14 @@ De configuratiefase is niet verplicht. De clienttoepassing moet de configuratie 
 De cliënttoepassing kan deze fase in de volgende scenario&#39;s overslaan:
 
 * De gebruiker is al geverifieerd.
-* De gebruiker wordt aangeboden tijdelijke toegang door basis of promotionele [ ](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md) eigenschap TempPass.
+* De gebruiker wordt aangeboden tijdelijke toegang door basis of promotionele [&#128279;](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md) eigenschap TempPass.
 * De gebruikersverificatie is verlopen, maar de clienttoepassing heeft de eerder geselecteerde MVPD in de cache geplaatst als een gebruikerservaring die de keuze motiveert. De gebruiker wordt alleen gevraagd te bevestigen dat hij of zij nog steeds een abonnee van die MVPD is.
 
 #### 3. Wat is een configuratie en hoe lang is deze geldig? {#configuration-phase-faq3}
 
 De configuratie is een termijn die in de [ verklarende woordenlijst ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#configuration) documentatie wordt bepaald.
 
-De configuratie bevat een lijst van MVPDs die door de volgende attributen `id` wordt bepaald, `displayName`, `logoUrl`, enz., die van het [ 4} eindpunt van de Configuratie kan worden teruggewonnen.](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider.md)
+De configuratie bevat een lijst van MVPDs die door de volgende attributen `id` wordt bepaald, `displayName`, `logoUrl`, enz., die van het [ 4&rbrace; eindpunt van de Configuratie kan worden teruggewonnen.](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider.md)
 
 De clienttoepassing moet de configuratie alleen ophalen wanneer de gebruiker zijn MVPD moet selecteren om te worden geverifieerd of opnieuw te worden geverifieerd.
 
@@ -74,7 +74,7 @@ De clienttoepassing moet de configuratie alleen ophalen wanneer de gebruiker zij
 De cliënttoepassing zou de informatie van de configuratiereactie in een geheugenopslag in het voorgeheugen moeten opslaan om onnodige verzoeken te vermijden en de gebruikerservaring te verbeteren wanneer:
 
 * De gebruiker is al geverifieerd.
-* De gebruiker wordt aangeboden tijdelijke toegang door basis of promotionele [ ](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md) eigenschap TempPass.
+* De gebruiker wordt aangeboden tijdelijke toegang door basis of promotionele [&#128279;](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md) eigenschap TempPass.
 * De gebruikersverificatie is verlopen, maar de clienttoepassing heeft de eerder geselecteerde MVPD in de cache geplaatst als een gebruikerservaring die de keuze motiveert. De gebruiker wordt alleen gevraagd te bevestigen dat hij of zij nog steeds een abonnee van die MVPD is.
 
 #### 5. Kan de clienttoepassing zijn eigen lijst met MVPD&#39;s beheren? {#configuration-phase-faq5}
@@ -109,7 +109,7 @@ Wanneer de integratie met een MVPD terug en duidelijk als actief wordt toegelate
 
 Deze verrichting kan door het Dashboard van Adobe Pass [ worden voltooid TVE ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#tve-dashboard) door één van uw organisatiebeheerders of door een vertegenwoordiger van de Authentificatie van Adobe Pass handelend namens u.
 
-Voor meer details, verwijs naar de ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#disable-integration) documentatie van de Gebruiker van de Gids van de Integratie van het Dashboard van 0} TVE.[
+Voor meer details, verwijs naar de [&#128279;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#disable-integration) documentatie van de Gebruiker van de Gids van de Integratie van het Dashboard van 0&rbrace; TVE.
 
 +++
 
@@ -130,7 +130,7 @@ De verificatiefase is verplicht. De clienttoepassing moet de gebruiker verifiër
 De cliënttoepassing kan deze fase in de volgende scenario&#39;s overslaan:
 
 * De gebruiker is al geverifieerd en het profiel is nog steeds geldig.
-* De gebruiker wordt aangeboden tijdelijke toegang door basis of promotionele [ ](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md) eigenschap TempPass.
+* De gebruiker wordt aangeboden tijdelijke toegang door basis of promotionele [&#128279;](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md) eigenschap TempPass.
 
 De fout behandeling van de cliënttoepassing vereist om de [ fout ](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md#enhanced-error-codes-lists-rest-api-v2) codes (b.v., `authenticated_profile_missing`, `authenticated_profile_expired`, `authenticated_profile_invalidated`, enz.) te behandelen, die erop wijzen dat de cliënttoepassing de gebruiker om vereist voor authentiek te verklaren.
 
@@ -211,7 +211,7 @@ Het profiel is geldig gedurende een beperkt tijdsbestek dat is opgegeven wanneer
 
 Dit beperkte die tijdkader als authentificatie (authN) [ wordt bekend TTL ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#ttl) kan door het Dashboard van Adobe Pass [ worden bekeken en worden veranderd TVE ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#tve-dashboard) door één van uw organisatiebeheerders of door een vertegenwoordiger van de Authentificatie van Adobe Pass handelend namens u.
 
-Voor meer details, verwijs naar de ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#most-used-flows) documentatie van de Gebruiker van de Gids van de Integratie van het Dashboard van 0} TVE.[
+Voor meer details, verwijs naar de [&#128279;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#most-used-flows) documentatie van de Gebruiker van de Gids van de Integratie van het Dashboard van 0&rbrace; TVE.
 
 #### 8. Moet de clienttoepassing de profielgegevens van de gebruiker in cache plaatsen in een permanente opslag? {#authentication-phase-faq8}
 
@@ -295,11 +295,11 @@ Om de efficiëntie te waarborgen en onnodige verzoeken te vermijden, moet de cli
 
 **Authentificatie die binnen de primaire (scherm) toepassing wordt uitgevoerd**
 
-De primaire (het stromen) toepassing zou moeten beginnen opiniepeilend wanneer de gebruiker de definitieve bestemmingspagina bereikt, nadat de browser component URL laadt die voor de `redirectUrl` parameter in het [ 2} eindpuntverzoek van Sessies {wordt gespecificeerd.](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md)
+De primaire (het stromen) toepassing zou moeten beginnen opiniepeilend wanneer de gebruiker de definitieve bestemmingspagina bereikt, nadat de browser component URL laadt die voor de `redirectUrl` parameter in het [ 2&rbrace; eindpuntverzoek van Sessies &lbrace;wordt gespecificeerd.](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md)
 
 **Authentificatie die binnen een secundaire (scherm) toepassing wordt uitgevoerd**
 
-De primaire (het stromen) toepassing zou moeten beginnen opiniepeilend zodra de gebruiker het authentificatieproces-recht na het ontvangen van de ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) eindpuntreactie van de Zittingen [ in werking stelt en de authentificatiecode aan de gebruiker toont.
+De primaire (het stromen) toepassing zou moeten beginnen opiniepeilend zodra de gebruiker het authentificatieproces-recht na het ontvangen van de [&#128279;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) eindpuntreactie van de Zittingen  in werking stelt en de authentificatiecode aan de gebruiker toont.
 
 #### 15. Wanneer moet de clienttoepassing het opiniepeilingsmechanisme stoppen? {#authentication-phase-faq15}
 
@@ -311,7 +311,7 @@ De profielgegevens van de gebruiker worden opgehaald en hun verificatiestatus wo
 
 **de zitting van de Authentificatie en coderepering**
 
-De authentificatiesessie en de code verlopen, zoals die door `notAfter` wordt vermeld timestamp (b.v., 30 minuten) in de [ 2} eindpuntreactie van Zittingen {. ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) Als dit gebeurt, moet de gebruiker het authentificatieproces opnieuw beginnen, en de opiniepeiling die de vorige authentificatiecode gebruikt zou onmiddellijk moeten worden tegengehouden.
+De authentificatiesessie en de code verlopen, zoals die door `notAfter` wordt vermeld timestamp (b.v., 30 minuten) in de [ 2&rbrace; eindpuntreactie van Zittingen &lbrace;. ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) Als dit gebeurt, moet de gebruiker het authentificatieproces opnieuw beginnen, en de opiniepeiling die de vorige authentificatiecode gebruikt zou onmiddellijk moeten worden tegengehouden.
 
 **Nieuwe geproduceerde authentificatiecode**
 
@@ -400,7 +400,7 @@ De fase voorafgaand aan autorisatie is niet verplicht. De clienttoepassing kan d
 
 #### 3. Wat is een voorafgaande beslissing? {#preauthorization-phase-faq3}
 
-Voortoestemming is een termijn die in de [ 1} documentatie van de Verklarende woordenlijst {wordt bepaald, terwijl de besluitvormingstermijn ook in de [ Verklarende woordenlijst ](rest-api-v2-glossary.md#decision) kan worden gevonden.](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#preauthorization)
+Voortoestemming is een termijn die in de [&#128279;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#preauthorization) 1&rbrace; documentatie van de Verklarende woordenlijst &lbrace;wordt bepaald, terwijl de besluitvormingstermijn ook in de [ Verklarende woordenlijst ](rest-api-v2-glossary.md#decision) kan worden gevonden.
 
 In het voorafgaande goedkeuringsbesluit wordt informatie over het onderzoeksresultaat van het MVPD-proces voorafgaand aan de autorisatie opgeslagen die kan worden opgehaald uit het eindpunt van de Besluiten vooraf autoriseren.
 
@@ -452,7 +452,7 @@ De clienttoepassing kan een voorafgaande autorisatiebeslissing voor een beperkt 
 
 Dit maximumaantal middelen kan worden bekeken en veranderd na het akkoord gaan met MVPDs door het Dashboard van Adobe Pass [ TVE ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#tve-dashboard) door één van uw organisatiebeheerders of door een vertegenwoordiger van de Authentificatie van Adobe Pass handelend namens u.
 
-Voor meer details, verwijs naar de ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#add-more-properties) documentatie van de Gebruiker van de Gids van de Integratie van het Dashboard van 0} TVE.[
+Voor meer details, verwijs naar de [&#128279;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#add-more-properties) documentatie van de Gebruiker van de Gids van de Integratie van het Dashboard van 0&rbrace; TVE.
 
 +++
 
@@ -470,7 +470,7 @@ De autorisatiefase is verplicht, de clienttoepassing kan deze fase niet overslaa
 
 #### 3. Wat is een vergunningsbesluit en hoe lang is het geldig? {#authorization-phase-faq3}
 
-De vergunning is een termijn die in de [ 1} documentatie van de Verklarende woordenlijst {wordt bepaald, terwijl de besluitvormingstermijn ook in de [ Verklarende woordenlijst ](rest-api-v2-glossary.md#decision) kan worden gevonden.](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#authorization)
+De vergunning is een termijn die in de [&#128279;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#authorization) 1&rbrace; documentatie van de Verklarende woordenlijst &lbrace;wordt bepaald, terwijl de besluitvormingstermijn ook in de [ Verklarende woordenlijst ](rest-api-v2-glossary.md#decision) kan worden gevonden.
 
 In het vergunningsbesluit wordt informatie over het onderzoeksresultaat van het MVPD-autorisatieproces opgeslagen die kan worden opgehaald uit het eindpunt van de Besluiten Autoriseren.
 
@@ -485,7 +485,7 @@ Het vergunningsbesluit is geldig voor een beperkte en korte periode die op het o
 
 Dit beperkte die tijdkader als vergunning (authZ) [ wordt bekend TTL ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#ttl) kan door het Dashboard van Adobe Pass [ worden bekeken en worden veranderd TVE ](rest-api-v2-glossary.md#tve-dashboard) door één van uw organisatiebeheerders of door een vertegenwoordiger van de Authentificatie van Adobe Pass handelend namens u.
 
-Voor meer details, verwijs naar de ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#most-used-flows) documentatie van de Gebruiker van de Gids van de Integratie van het Dashboard van 0} TVE.[
+Voor meer details, verwijs naar de [&#128279;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#most-used-flows) documentatie van de Gebruiker van de Gids van de Integratie van het Dashboard van 0&rbrace; TVE.
 
 #### 4. Moet de clienttoepassing de vergunningsbesluiten in een permanente opslag in cache plaatsen? {#authorization-phase-faq4}
 
@@ -593,7 +593,7 @@ De afmeldingsfase is verplicht. De clienttoepassing moet de gebruiker de mogelij
 >
 > Als de clienttoepassing migreert van REST API V1 naar REST API V2, kan de clienttoepassing dezelfde methode blijven gebruiken om de waarde van het toegangstoken van `Bearer` te verkrijgen als voorheen.
 
-De ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-authorization.md) verzoekkopbal van de Vergunning 0} {bevat het `Bearer` toegangstoken dat door de cliënttoepassing wordt vereist om tot Adobe Pass beschermde APIs toegang te hebben.[
+De [&#128279;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-authorization.md) verzoekkopbal van de Vergunning 0&rbrace; &lbrace;bevat het `Bearer` toegangstoken dat door de cliënttoepassing wordt vereist om tot Adobe Pass beschermde APIs toegang te hebben.
 
 De headerwaarde voor autorisatie moet worden verkregen bij Adobe Pass-verificatie tijdens de registratiefase.
 
@@ -626,7 +626,7 @@ De [ x-apparaat-Info ](/help/authentication/integration-guide-programmers/rest-a
 
 Als [ x-apparaat-Info ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-device-info.md) kopbal mist of onjuiste waarden bevat, kan het verzoek als voortkomend van een `unknown` platform worden geclassificeerd.
 
-Dit kan ertoe leiden dat het verzoek als onveilig wordt behandeld, en onderworpen aan meer beperkende regels, zoals kortere authentificatie TTLs. Bovendien, zijn sommige gebieden, zoals het stromen apparaat `connectionIp` en `connectionPort`, verplicht voor eigenschappen zoals de Authentificatie van de Basis van het Spectrum [ ](/help/authentication/integration-guide-programmers/features-standard/hba-access/home-based-authentication.md).
+Dit kan ertoe leiden dat het verzoek als onveilig wordt behandeld, en onderworpen aan meer beperkende regels, zoals kortere authentificatie TTLs. Bovendien, zijn sommige gebieden, zoals het stromen apparaat `connectionIp` en `connectionPort`, verplicht voor eigenschappen zoals de Authentificatie van de Basis van het Spectrum [&#128279;](/help/authentication/integration-guide-programmers/features-standard/hba-access/home-based-authentication.md).
 
 Zelfs wanneer het verzoek uit een server namens een apparaat voortkomt, moet de [ x-apparaat-Info ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-device-info.md) kopbalwaarde op de daadwerkelijke het stromen apparateninformatie wijzen.
 
@@ -645,7 +645,7 @@ U kunt REST API V2 door onze specifieke [ Adobe Developer ](https://developer.ad
 * [ DCR API ](https://developer.adobe.com/adobe-pass/api/dcr_api/interactive/)
 * [ REST API V2 ](https://developer.adobe.com/adobe-pass/api/rest_api_v2/interactive/)
 
-Om met [ REST API V2 ](https://developer.adobe.com/adobe-pass/api/rest_api_v2/interactive/) in wisselwerking te staan, moet u de [ 3} kopbal van de Vergunning {met a `Bearer` toegangstoken omvatten dat via [ wordt verkregen DCR API ](https://developer.adobe.com/adobe-pass/api/dcr_api/interactive/).](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-authorization.md)
+Om met [ REST API V2 ](https://developer.adobe.com/adobe-pass/api/rest_api_v2/interactive/) in wisselwerking te staan, moet u de [&#128279;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-authorization.md) 3&rbrace; kopbal van de Vergunning &lbrace;met a `Bearer` toegangstoken omvatten dat via [ wordt verkregen DCR API ](https://developer.adobe.com/adobe-pass/api/dcr_api/interactive/).
 
 Voor het gebruiken van [ DCR API ](https://developer.adobe.com/adobe-pass/api/dcr_api/interactive/), wordt een softwareverklaring met REST API V2 werkingsgebied vereist. Voor meer details, verwijs naar het [ Dynamische document van Veelgestelde vragen van de Registratie van de Cliënt (DCR) ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-faqs.md).
 
@@ -671,7 +671,7 @@ De clienttoepassingen die migreren naar REST API V2 moeten het nieuwe testprogra
 * [ DCR API ](https://developer.adobe.com/adobe-pass/api/dcr_api/interactive/)
 * [ REST API V2 ](https://developer.adobe.com/adobe-pass/api/rest_api_v2/interactive/)
 
-Om met [ REST API V2 ](https://developer.adobe.com/adobe-pass/api/rest_api_v2/interactive/) in wisselwerking te staan, moet u de [ 3} kopbal van de Vergunning {met a `Bearer` toegangstoken omvatten dat via [ wordt verkregen DCR API ](https://developer.adobe.com/adobe-pass/api/dcr_api/interactive/).](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-authorization.md)
+Om met [ REST API V2 ](https://developer.adobe.com/adobe-pass/api/rest_api_v2/interactive/) in wisselwerking te staan, moet u de [&#128279;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-authorization.md) 3&rbrace; kopbal van de Vergunning &lbrace;met a `Bearer` toegangstoken omvatten dat via [ wordt verkregen DCR API ](https://developer.adobe.com/adobe-pass/api/dcr_api/interactive/).
 
 Voor het gebruiken van [ DCR API ](https://developer.adobe.com/adobe-pass/api/dcr_api/interactive/), wordt een softwareverklaring met REST API V2 werkingsgebied vereist. Voor meer details, verwijs naar het [ Dynamische document van Veelgestelde vragen van de Registratie van de Cliënt (DCR) ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-faqs.md).
 
@@ -687,7 +687,7 @@ Ga verder met deze sectie als u werkt aan een toepassing die een bestaande toepa
 
 ### Algemene veelgestelde vragen over migratie {#general-migration-faqs}
 
-++ Algemene veelgestelde vragen over migratie
++++ Algemene veelgestelde vragen over migratie
 
 #### 1. Moet ik een nieuwe clienttoepassing implementeren die naar REST API V2 is gemigreerd voor alle gebruikers tegelijk? {#migration-faq1}
 

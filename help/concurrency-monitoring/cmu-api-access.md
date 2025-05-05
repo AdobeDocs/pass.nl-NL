@@ -34,6 +34,7 @@ Voer de stappen in de onderstaande secties uit om toegang te krijgen.
    3. Ga naar *Geregistreerde Toepassingen* lusje
    4. Toepassing selecteren
    5. Klik op Downloaden op de geregistreerde toepassingsrij waarvoor u een softwareverklaring wilt krijgen en sparen het als dossier op uw lokale machine
+
       <figure>
           <img src="assets/programmer-download-software-statement-button.png"
                alt="Softwareinstructie downloaden">
@@ -46,6 +47,7 @@ Voer de stappen in de onderstaande secties uit om toegang te krijgen.
 
 3. Toegangstoken verkrijgen
    1. Krijg cliëntgeloofsbrieven door de hierboven verkregen softwareverklaring te gebruiken en de hieronder vraag uit te voeren. Op deze manier zal een client_id - client_geheime paar worden verkregen, die kan worden gebruikt om het toegangstoken te krijgen.
+
       *deze stap zou niet elke keer moeten worden uitgevoerd. Het zou opnieuw moeten worden gedaan slechts wanneer de geloofsbrieven verlopen.*
       <figure>
           <img src="assets/dcr_request_1_get_client_credentials.png"
@@ -53,6 +55,7 @@ Voer de stappen in de onderstaande secties uit om toegang te krijgen.
        </figure>
 
    2. Krijg toegangstoken door de lagere vraag te gebruiken. Gebruik dit toegangstoken om een CMU API aan te roepen tot het teken zal verlopen.
+
       *deze stap zou moeten worden uitgevoerd slechts als het laatste geproduceerde teken verliep.*
       <figure>
           <img src="assets/dcr_get_access_token_call.png"

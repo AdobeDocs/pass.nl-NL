@@ -44,7 +44,7 @@ Deze API moet worden gebruikt door de tweede schermaanmelding via de webapp om t
 
 | Endpoint | Geroepen </br> door | Invoer   </br> Params | HTTP </br> Methode | Antwoord | HTTP-respons </br> |
 | --- | --- | --- | --- | --- | --- |
-| SP_FQDN/api/v1/checkauther/{registration code} | Aanmeldingswebtoepassing | 1. registratiecode </br>    (De component van de Weg) </br> 2.  aanvrager </br>    (Verplicht) | GET | XML of JSON met foutdetails als dit mislukt. | 200 - Succes   </br> {403 - Verboden |
+| SP_FQDN/api/v1/checkauther/{registration code} | Aanmeldingswebtoepassing | 1. registratiecode </br>    (De component van de Weg) </br> 2.  aanvrager </br>    (Verplicht) | GET | XML of JSON met foutdetails als dit mislukt. | 200 - Succes   </br> &lbrace;403 - Verboden |
 
 </br>
 

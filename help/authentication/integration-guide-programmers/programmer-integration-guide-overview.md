@@ -28,9 +28,9 @@ Voordat u toegang tot beveiligde inhoud verleent, moet u bepalen of de viewer er
 
 Voor programmeurs is het bepalen van de aanspraak niet altijd eenvoudig. MVPD’s zijn de bewaarnemers van de identificatiegegevens en toegangsrechten van hun klanten. Bovendien kunnen programmeurs zich op een groot aantal verschillende MVPD&#39;s abonneren, elk met unieke systemen. Deze complexiteit maakt het controleren van het recht technisch lastig en hulpbronnenintensief.
 
-![ die} gebruikerstoestemming direct door programmeur wordt bepaald ](../assets/user-ent-by-progr.png){align="center"}
+![ die&rbrace; gebruikerstoestemming direct door programmeur wordt bepaald ](../assets/user-ent-by-progr.png){align="center"}
 
-*die} gebruikerstoestemming direct door programmeur wordt bepaald*
+*die&rbrace; gebruikerstoestemming direct door programmeur wordt bepaald*
 
 Adobe Pass-verificatie vergemakkelijkt op veilige wijze machtigingstransacties tussen programmeurs en MVPD&#39;s, waardoor het snel, gemakkelijk en veilig is om beveiligde inhoud aan in aanmerking komende viewers te leveren.
 

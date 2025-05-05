@@ -43,7 +43,7 @@ Hiermee wordt het verificatietoken (AuthN) opgehaald.
 
 | Endpoint | Geroepen </br> door | Invoer   </br> Params | HTTP </br> Methode | Antwoord | HTTP-respons </br> |
 | --- | --- | --- | --- | --- | --- |
-| &lt;SP_FQDN>/api/v1/tokens/authn </br></br> Bijvoorbeeld:</br></br> &lt;SP_FQDN>/api/v1/tokens/authn | Streaming App </br></br> of </br></br> de Dienst van de Programmer | 1. (Verplicht) aanvrager </br> .  deviceId (Verplicht) </br> .  device_info/x-apparaat-Info (Verplicht) </br> 4.  _deviceType_ (Afgekeurd) </br> 5.  _deviceUser_ (Afgekeurd) </br> 6.  _appId_ (Vervangen) | GET | XML of JSON met verificatiegegevens of foutdetails als dit mislukt. | 200 - Geslaagd.  </br> {404 - Symbolisch niet gevonden </br> 410 - Symbolisch verlopen |
+| &lt;SP_FQDN>/api/v1/tokens/authn </br></br> Bijvoorbeeld:</br></br> &lt;SP_FQDN>/api/v1/tokens/authn | Streaming App </br></br> of </br></br> de Dienst van de Programmer | 1. (Verplicht) aanvrager </br> .  deviceId (Verplicht) </br> .  device_info/x-apparaat-Info (Verplicht) </br> 4.  _deviceType_ (Afgekeurd) </br> 5.  _deviceUser_ (Afgekeurd) </br> 6.  _appId_ (Vervangen) | GET | XML of JSON met verificatiegegevens of foutdetails als dit mislukt. | 200 - Geslaagd.  </br> &lbrace;404 - Symbolisch niet gevonden </br> 410 - Symbolisch verlopen |
 
 {style="table-layout:auto"}
 

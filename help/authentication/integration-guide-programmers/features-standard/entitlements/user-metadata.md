@@ -80,7 +80,7 @@ De kenmerken van de gebruikersmetagegevens die beschikbaar worden gesteld aan ee
 
 ## Metagegevenscodering gebruiker {#encryption}
 
-Om gebruikersmeta-gegevensattributen te coderen en te decrypteren, moet de Programmer een certificaat (openbaar/privé zeer belangrijk paar) produceren en [ ](#management) het certificaat door [ Adobe Pass TVE Dashboard ](https://experience.adobe.com/#/pass/authentication) zelf-vormen of de openbare sleutel met de vertegenwoordigers van de Authentificatie van Adobe Pass te delen.
+Om gebruikersmeta-gegevensattributen te coderen en te decrypteren, moet de Programmer een certificaat (openbaar/privé zeer belangrijk paar) produceren en [&#128279;](#management) het certificaat door [ Adobe Pass TVE Dashboard ](https://experience.adobe.com/#/pass/authentication) zelf-vormen of de openbare sleutel met de vertegenwoordigers van de Authentificatie van Adobe Pass te delen.
 
 Voer de onderstaande stappen uit om ervoor te zorgen dat het certificaat op de juiste wijze wordt gegenereerd en geconfigureerd:
 
@@ -142,7 +142,7 @@ Voer de onderstaande stappen uit om ervoor te zorgen dat het certificaat op de j
      openssl x509 -in mycompany-license-temp.pem -inform PEM -out mycompany-license.pem -outform PEM
      ```
 
-1. Gebruik het PEM- dossier om [ ](#management) het certificaat door [ het Dashboard van Adobe Pass te vormen TVE ](https://experience.adobe.com/#/pass/authentication) of het Pvm- dossier naar de vertegenwoordigers van de Authentificatie van Adobe Pass te verzenden.
+1. Gebruik het PEM- dossier om [&#128279;](#management) het certificaat door [ het Dashboard van Adobe Pass te vormen TVE ](https://experience.adobe.com/#/pass/authentication) of het Pvm- dossier naar de vertegenwoordigers van de Authentificatie van Adobe Pass te verzenden.
 
    * Verwijs naar de volgende sectie voor meer details op hoe te om certificaten door het [ Dashboard van Adobe Pass te beheren TVE ](https://experience.adobe.com/#/pass/authentication).
 

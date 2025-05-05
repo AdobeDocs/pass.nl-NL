@@ -415,7 +415,7 @@ U moet deze callbacks uitvoeren om de reacties op uw asynchrone verzoekvraag te 
 
 **Beschrijving:** voer deze callback uit als de gebruiker een MVPD selecteerde die iFrame vereist waarin om zijn authentificatie login pagina UI te tonen.
 
-**teweeggebracht door:**[ setSelectedProvider () ](#setselectedproviderproviderid-setselectedprovider)
+**teweeggebracht door:**&#x200B;[ setSelectedProvider () ](#setselectedproviderproviderid-setselectedprovider)
 
 </br> [ Terug naar bovenkant ](#top)
 

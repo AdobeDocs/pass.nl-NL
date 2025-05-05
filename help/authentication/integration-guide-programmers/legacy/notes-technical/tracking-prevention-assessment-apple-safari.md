@@ -166,6 +166,6 @@ Wanneer [ N130 ](/help/authentication/integration-guide-programmers/legacy/error
 
   ![](../../../assets/prvnt-cross-site-tr-safari13.png)
 
-* In geval van Mac OS X Sierra en vroeger: Het controleren van </span> staat altijd **** optie voor de &quot;**Cookies en website- gegevens**&quot;ingang in het lusje van de Privacy van browser van Voorkeur, zoals die in hieronder beeld wordt getoond toe.
+* In geval van Mac OS X Sierra en vroeger: Het controleren van </span> staat altijd **&#x200B;**&#x200B;optie voor de &quot;**Cookies en website- gegevens**&quot;ingang in het lusje van de Privacy van browser van Voorkeur, zoals die in hieronder beeld wordt getoond toe.
 
   ![](../../../assets/always-allow-safari13.png)

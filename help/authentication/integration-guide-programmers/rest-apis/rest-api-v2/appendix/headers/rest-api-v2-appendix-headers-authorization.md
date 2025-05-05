@@ -18,9 +18,9 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-De </b> verzoekkopbal van de Vergunning 0} {bevat het `Bearer` toegangstoken dat door de cliënttoepassing wordt vereist om tot Adobe Pass beschermde APIs toegang te hebben.<b>
+De </b> verzoekkopbal van de Vergunning 0&rbrace; &lbrace;bevat het `Bearer` toegangstoken dat door de cliënttoepassing wordt vereist om tot Adobe Pass beschermde APIs toegang te hebben.<b>
 
-Voor meer details over het mechanisme om tot Adobe Pass beschermde APIs toegang te hebben, verwijs naar het [ Dynamische Overzicht van de Registratie van de Cliënt 1} documentatie.](../../../rest-api-dcr/dynamic-client-registration-overview.md)
+Voor meer details over het mechanisme om tot Adobe Pass beschermde APIs toegang te hebben, verwijs naar het [ Dynamische Overzicht van de Registratie van de Cliënt 1&rbrace; documentatie.](../../../rest-api-dcr/dynamic-client-registration-overview.md)
 
 ## Syntaxis {#syntax}
 

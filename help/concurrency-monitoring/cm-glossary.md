@@ -94,7 +94,7 @@ ht-degree: 0%
 
 ## Onderwerp {#subj-defn}
 
-* De consument van de (video)inhoud via internet. We vermijden bewust de term _**user**_, aangezien Gelijktijdige bewaking doorgaans betrekking heeft op de ID&#39;s van de MVPD-account (waarbij verschillende werkelijke gebruikers betrokken zijn die hetzelfde contract delen, bijvoorbeeld gezinsleden voor een huishouden).
+* De consument van de (video)inhoud via internet. We vermijden bewust de term _&#x200B;**user**&#x200B;_, aangezien Gelijktijdige bewaking doorgaans betrekking heeft op de ID&#39;s van de MVPD-account (waarbij verschillende werkelijke gebruikers betrokken zijn die hetzelfde contract delen, bijvoorbeeld gezinsleden voor een huishouden).
 
 * Voor elke stroom, kan het onderwerp met attributen met betrekking tot de daadwerkelijke persoon worden verbeterd die de dienst, hun netwerk aangesloten apparaat gebruikt etc.
 

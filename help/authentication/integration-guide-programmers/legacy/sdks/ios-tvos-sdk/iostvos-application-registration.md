@@ -24,7 +24,7 @@ ht-degree: 0%
 
 Vanaf versie 3.0 van iOS/tvOS AccessEnabler SDK veranderen we het verificatiemechanisme met de servers van de Adobe. In plaats van het gebruiken van een openbare sleutel en een geheim systeem om requestID te ondertekenen, introduceren wij het concept een koord van de softwareverklaring dat kan worden gebruikt om een toegangstoken te verkrijgen die later voor alle vraag wordt gebruikt die SDK aan onze servers maakt. Naast een software-instructie hebt u ook een aangepast URL-schema voor uw toepassing nodig.
 
-Voor meer informatie, zie [ Dynamisch Overzicht van de Registratie van de Cliënt 1}.](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)
+Voor meer informatie, zie [ Dynamisch Overzicht van de Registratie van de Cliënt 1&rbrace;.](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)
 
 ## Wat is een Software Statement? {#Soft_state}
 

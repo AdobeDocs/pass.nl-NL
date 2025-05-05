@@ -85,7 +85,7 @@ Het belangrijkste doel van dit verslag is om u te helpen begrijpen wat het effec
 | jaar | Jaar met 4 cijfers |
 | maand | De maand van het jaar (1-12) |
 | dag | Dag van de maand (1-31) |
-| gelijktijdig | Vertegenwoordigt om het even welke duidelijke **stroomactiviteit die bij de fase van de zittingsinitialisering** voor een gebruiker werd goedgekeurd om te kunnen waarnemen hoeveel gezamenlijke stromen **** door een gebruiker werden geopend en om het effect te begrijpen van het toepassen van een bepaalde gelijktijdig grens |
+| gelijktijdig | Vertegenwoordigt om het even welke duidelijke **stroomactiviteit die bij de fase van de zittingsinitialisering** voor een gebruiker werd goedgekeurd om te kunnen waarnemen hoeveel gezamenlijke stromen **&#x200B;**&#x200B;door een gebruiker werden geopend en om het effect te begrijpen van het toepassen van een bepaalde gelijktijdig grens |
 | activiteitsniveau | Vertegenwoordigt om het even welke duidelijke **stroomactiviteit (geen kwestie van zijn staat: begonnen, actief, tegengehouden, verworpen)** voor een gebruiker om te kunnen waarnemen hoeveel gezamenlijke stromen werden geprobeerd om door een gebruiker te worden geopend en het effect te begrijpen van het toepassen van een bepaalde gelijktijdig grens |
 | mvpd | MVPD verstrekt bij zittingsbeheer |
 

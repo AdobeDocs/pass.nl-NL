@@ -175,7 +175,7 @@ Voor Programmeurs, verstrekt de Authentificatie van Adobe Pass APIs als deel van
       * [Afbraakkenmerk](/help/authentication/integration-guide-programmers/features-premium/degraded-access/degradation-feature.md)
    * [Entitlement Service Monitoring API](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-api.md)
 
-Voor meer details op de machtigingsstroom, verwijs naar de ](/help/authentication/integration-guide-programmers/programmer-integration-guide-overview.md#entitlement-flow) documentatie van de Gids van de Integratie van de 0} Programmer.[
+Voor meer details op de machtigingsstroom, verwijs naar de [&#128279;](/help/authentication/integration-guide-programmers/programmer-integration-guide-overview.md#entitlement-flow) documentatie van de Gids van de Integratie van de 0&rbrace; Programmer.
 
 #### Entitlement {#understanding-entitlements}
 

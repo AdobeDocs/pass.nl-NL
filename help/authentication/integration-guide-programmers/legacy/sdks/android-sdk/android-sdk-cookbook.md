@@ -61,7 +61,7 @@ De het netwerkactiviteit van AccessEnabler vindt in een verschillende draad plaa
 ### A. Vereisten {#prereqs}
 
 1. Maak uw callback-functies:
-   - [setRequestorComplete()`](#$setRequestorComplete)
+   - [setRequestorComplete()&grave;](#$setRequestorComplete)
 
      Wordt geactiveerd door `setRequestor()` en retourneert een geslaagde of mislukte bewerking.\
      Het succes wijst erop u met machtigingsvraag kunt te werk gaan.
@@ -71,7 +71,7 @@ De het netwerkactiviteit van AccessEnabler vindt in een verschillende draad plaa
      Wordt alleen geactiveerd door `getAuthentication()` als de gebruiker geen provider (MVPD) heeft geselecteerd en nog niet is geverifieerd.\
      De parameter `mvpds` is een array van providers die beschikbaar zijn voor de gebruiker.
 
-   - [setAuthenticationStatus(status, errorCode)`](#$setAuthNStatus)
+   - [setAuthenticationStatus(status, errorCode)&grave;](#$setAuthNStatus)
 
      Wordt telkens geactiveerd door `checkAuthentication()` .\
      Wordt alleen geactiveerd door `getAuthentication()` als de gebruiker al is geverifieerd en een provider heeft geselecteerd.
@@ -87,7 +87,7 @@ De het netwerkactiviteit van AccessEnabler vindt in een verschillende draad plaa
      Wordt geactiveerd door `checkAuthentication(), getAuthentication(), checkAuthorization(), getAuthorization(), setSelectedProvider()` .\
      De parameter `event` geeft aan welke gebeurtenis entitlement heeft plaatsgevonden. De parameter `data` is een lijst met waarden die betrekking hebben op de gebeurtenis.
 
-   - [setToken(token, resource)`](#$setToken)
+   - [setToken(token, resource)&grave;](#$setToken)
 
      Wordt geactiveerd door `checkAuthorization()` en `getAuthorization()` nadat u een resource hebt bekeken.\
      De parameter `token` is het kortstondige media-token; de parameter `resource` is de inhoud die de gebruiker mag bekijken.
@@ -126,7 +126,7 @@ De het netwerkactiviteit van AccessEnabler vindt in een verschillende draad plaa
    - **Afhankelijkheid:** Eigen de Authentificatie van Adobe Pass
 Android Library (AccessEnabler)
 
-   b. Vraag ` setRequestor()` om de identificatie van de Programmer te vestigen; ga in de 1} van de Programmer en (facultatief) een serie van de eindpunten van de Authentificatie van Adobe Pass over.`requestorID`
+   b. Vraag ` setRequestor()` om de identificatie van de Programmer te vestigen; ga in de 1&rbrace; van de Programmer en (facultatief) een serie van de eindpunten van de Authentificatie van Adobe Pass over.`requestorID`
 
    - **Afhankelijkheid:** Geldige VraagID van de Authentificatie van Adobe Pass\
      (Gebruik hiervoor Adobe Pass Authentication Account Manager.)

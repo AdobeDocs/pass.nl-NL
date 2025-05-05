@@ -95,7 +95,7 @@ Om te kunnen profiteren van de Apple SSO-gebruikerservaring, moet de toepassing 
 >
 > **<u>Tip:</u>** volg de stappen hieronder voor iOS/iPadOS/tvOS implementatie/s.
 
-1. De toepassing zou ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#initsoftwarestatement-initwithsoftwarestatement) moeten initialiseren AccessEnabler iOS/tvOS SDK.[
+1. De toepassing zou [&#128279;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#initsoftwarestatement-initwithsoftwarestatement) moeten initialiseren AccessEnabler iOS/tvOS SDK.
 
 
 1. De toepassing zou [ het huidige vraagherkenningsteken ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#setrequestorrequestorid-setrequestorrequestoridserviceproviders-setreqv3) moeten plaatsen.
@@ -147,7 +147,7 @@ Er is een fout opgetreden.
    **Belangrijk:** Deze derde stap zal [*setAuthenticationStatus*](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#setauthenticationstatuserrorcode-setauthnstatus) callback met *status* gelijk aan 1 teweegbrengen, voor het geval **alle hierboven vals zijn.**
 
 
-1. De toepassing zou de authentificatie ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#getauthentication-getauthenticationwithdata-getauthn) moeten initialiseren in het geval dat de vorige controle van de authentificatiestatus [*setAuthenticationStatus*](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#setauthenticationstatuserrorcode-setauthnstatus) callback met *status* gelijk aan 0 teweegbracht.[
+1. De toepassing zou de authentificatie [&#128279;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#getauthentication-getauthenticationwithdata-getauthn) moeten initialiseren in het geval dat de vorige controle van de authentificatiestatus [*setAuthenticationStatus*](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#setauthenticationstatuserrorcode-setauthnstatus) callback met *status* gelijk aan 0 teweegbracht.
 
    **<u>ProUiteinde:</u>** voer één van volgende AccessEnabler iOS/tvOS SDK API [ getAuthentication ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#getAuthN) of [ getAuthentication uit:filter ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#getAuthN_filter).
 
@@ -200,12 +200,12 @@ Het [ Video Kader van de Rekening van de Abonnee van de Abonnee ](https://develo
 >
 > **<u>ProUiteinde:</u>** volg de stappen hieronder voor de implementatie/s tvOS.
 
-* De toepassing zou de logout ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#logout) van AccessEnabler iOS/tvOS SDK moeten in werking stellen [. Dit zou het opschonen van sessies aan MVPD-zijde niet vergemakkelijken.
+* De toepassing zou de logout [&#128279;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#logout) van AccessEnabler iOS/tvOS SDK moeten in werking stellen . Dit zou het opschonen van sessies aan MVPD-zijde niet vergemakkelijken.
 * De toepassing zou de gebruiker moeten instrueren/ertoe aanzetten om zich uitdrukkelijk uit *`Settings -> Accounts -> TV Provider`* op tvOS slechts in te tekenen voor het geval [*VSA203* statuscode ](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md) wordt teweeggebracht.
 
 >[!TIP]
 >
 > **<u>ProTip:</u>** volg de stappen hieronder voor de implementatie/s iOS/iPadOS.
 
-* De toepassing zou de logout ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#logout) van AccessEnabler iOS/tvOS SDK moeten in werking stellen [. Dit zou het opschonen van sessies aan MVPD-zijde vergemakkelijken.
+* De toepassing zou de logout [&#128279;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#logout) van AccessEnabler iOS/tvOS SDK moeten in werking stellen . Dit zou het opschonen van sessies aan MVPD-zijde vergemakkelijken.
 * De toepassing zou de gebruiker moeten instrueren/ertoe aanzetten om zich uitdrukkelijk uit *`Settings -> TV Provider`* op iOS/iPadOS slechts in het geval [*VSA203* statuscode wordt teweeggebracht ](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md) af te melden.

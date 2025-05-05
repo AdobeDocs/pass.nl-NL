@@ -186,7 +186,7 @@ AccessEnabler-bibliotheek)
 
 ## De bezoeker-id configureren {#visitorID}
 
-Het vormen a ](https://experienceleague.adobe.com/docs/id-service/using/home.html) waarde van bezoekerID van het Experience Cloud 0} {is zeer belangrijk van het analytische standpunt. [ Zodra een EC bezoekerID-waarde is ingesteld, zal de SDK deze informatie samen met elk netwerkgesprek verzenden en zal de Adobe Pass Authentication-service deze informatie verzamelen. Op deze manier kunt u de analysegegevens van de Adobe Pass Authentication-service correleren met andere analytische rapporten die u van andere toepassingen of websites hebt. De informatie over hoe te opstelling EC bezoekorID kan worden gevonden [ hier ](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=en).
+Het vormen a [&#128279;](https://experienceleague.adobe.com/docs/id-service/using/home.html) waarde van bezoekerID van het Experience Cloud 0&rbrace; &lbrace;is zeer belangrijk van het analytische standpunt.  Zodra een EC bezoekerID-waarde is ingesteld, zal de SDK deze informatie samen met elk netwerkgesprek verzenden en zal de Adobe Pass Authentication-service deze informatie verzamelen. Op deze manier kunt u de analysegegevens van de Adobe Pass Authentication-service correleren met andere analytische rapporten die u van andere toepassingen of websites hebt. De informatie over hoe te opstelling EC bezoekorID kan worden gevonden [ hier ](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=en).
 
 
 >[!NOTE]

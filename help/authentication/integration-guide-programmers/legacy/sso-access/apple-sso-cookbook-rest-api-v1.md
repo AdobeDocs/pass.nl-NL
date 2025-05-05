@@ -61,7 +61,7 @@ Om van de gebruikerservaring van Apple te profiteren SSO, moet de toepassing het
 
 >[!TIP]
 >
-> **<u>Uiteinde:</u>** voer dit door het middel van de 2} Symbolische dienst van de Authentificatie van de Controle van Adobe Pass uit ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/check-authentication-token.md) API.[
+> **<u>Uiteinde:</u>** voer dit door het middel van de 2&rbrace; Symbolische dienst van de Authentificatie van de Controle van Adobe Pass uit [&#128279;](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/check-authentication-token.md) API.
 
 #### Stap: &quot;Is de gebruiker het programma geopend via Partner SSO?&quot; {#step2}
 
@@ -261,7 +261,7 @@ videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.pr
 
 >[!TIP]
 >
-> **<u>Uiteinde:</u>** voer dit door het middel van de 2} het Verzoek van het Profiel van Adobe Pass Authentificatie ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-profilerequest.md) API dienst uit.[
+> **<u>Uiteinde:</u>** voer dit door het middel van de 2&rbrace; het Verzoek van het Profiel van Adobe Pass Authentificatie [&#128279;](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-profilerequest.md) API dienst uit.
 
 >[!TIP]
 >
@@ -348,7 +348,7 @@ videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.pr
 
 >[!TIP]
 >
-> **<u>Uiteinde:</u>** voer dit door het middel van de 2} Symbolische dienst van de Uitwisseling van de Authentificatie van Adobe Pass ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/token-exchange.md) API uit.[
+> **<u>Uiteinde:</u>** voer dit door het middel van de 2&rbrace; Symbolische dienst van de Uitwisseling van de Authentificatie van Adobe Pass [&#128279;](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/token-exchange.md) API uit.
 
 >[!TIP]
 >
@@ -364,7 +364,7 @@ videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.pr
 
 >[!TIP]
 >
-> **<u>Uiteinde:</u>** voer dit door het middel van het 2} Verzoek van de Code van de Authentificatie van Adobe Pass ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md) uit, [ initieer Authentificatie ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/initiate-authentication.md) en [ wint het Symbolische van de Authentificatie ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-authentication-token.md) of [ Symbolische van de Authentificatie van de Controle ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/check-authentication-token.md) API diensten terug.[
+> **<u>Uiteinde:</u>** voer dit door het middel van het 2&rbrace; Verzoek van de Code van de Authentificatie van Adobe Pass [&#128279;](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md) uit, [ initieer Authentificatie ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/initiate-authentication.md) en [ wint het Symbolische van de Authentificatie ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-authentication-token.md) of [ Symbolische van de Authentificatie van de Controle ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/check-authentication-token.md) API diensten terug.
 
 >[!TIP]
 >
@@ -372,15 +372,15 @@ videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.pr
 
 * De toepassing zou [ een registratiecode ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md) moeten verkrijgen en het aan het eind voorleggen - gebruiker op het 1ste apparaat (scherm).
 * De toepassing zou [ opiniepeiling moeten beginnen om de authentificatiestatus ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-authentication-token.md) op het 1ste apparaat (scherm) te erkennen nadat de registratiecode wordt verkregen.
-* Een andere toepassing zou authentificatie ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/initiate-authentication.md) op een 2de apparaat (scherm) moeten in werking stellen wanneer de registratiecode wordt gebruikt.[
+* Een andere toepassing zou authentificatie [&#128279;](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/initiate-authentication.md) op een 2de apparaat (scherm) moeten in werking stellen wanneer de registratiecode wordt gebruikt.
 * De toepassing zou [ opiniepeiling ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-authentication-token.md) op het eerste apparaat (scherm) moeten tegenhouden wanneer het authentificatietoken wordt geproduceerd.
 
 >[!TIP]
 >
 > **<u>ProTip:</u>** volg de stappen hieronder voor de implementatie/s iOS/iPadOS.
 
-* De toepassing zou een registratiecode ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md) moeten verkrijgen die niet aan het eind - gebruiker op het 1ste apparaat (scherm) zou moeten worden voorgesteld.[
-* De toepassing zou authentificatie ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/initiate-authentication.md) op het eerste apparaat (scherm) in werking moeten stellen gebruikend de registratiecode en a [ WKWebView ](https://developer.apple.com/documentation/webkit/wkwebview) of a [ SFSafariViewController ](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller) component.[
+* De toepassing zou een registratiecode [&#128279;](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md) moeten verkrijgen die niet aan het eind - gebruiker op het 1ste apparaat (scherm) zou moeten worden voorgesteld.
+* De toepassing zou authentificatie [&#128279;](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/initiate-authentication.md) op het eerste apparaat (scherm) in werking moeten stellen gebruikend de registratiecode en a [ WKWebView ](https://developer.apple.com/documentation/webkit/wkwebview) of a [ SFSafariViewController ](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller) component.
 * De toepassing zou [ het opiniepeilen moeten beginnen om de authentificatiestatus ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-authentication-token.md) op het 1ste apparaat (scherm) na [ WKWebView ](https://developer.apple.com/documentation/webkit/wkwebview) of [ SFSafariViewController ](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller) componentensluiten te kennen.
 * De toepassing zou [ opiniepeiling ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-authentication-token.md) op het eerste apparaat (scherm) moeten tegenhouden wanneer het authentificatietoken wordt geproduceerd.
 
@@ -404,7 +404,7 @@ Het [ Video Kader van de Rekening van de Abonnee van de Abonnee ](https://develo
 
 * De toepassing zou moeten bepalen als de authentificatie als resultaat van aanmelding door partner SSO of niet is gebeurd, gebruikend &quot;*tokenSource&quot;* [ gebruikersmeta-gegevens ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/user-metadata.md) van de dienst van de Authentificatie van Adobe Pass.
 * De toepassing zou de gebruiker moeten instrueren/ertoe aanzetten om uit *`Settings -> Accounts -> TV Provider`* op tvOS **slechts** uitdrukkelijk te ondertekenen in het geval dat de *&quot;tokenSource&quot;* waarde aan &quot;*Apple&quot; gelijk is.*
-* De toepassing zou de logout ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/initiate-logout.md) van de dienst van de Authentificatie van Adobe Pass moeten in werking stellen gebruikend een directe vraag van HTTP. [ Dit zou het opschonen van sessies aan MVPD-zijde niet vergemakkelijken.
+* De toepassing zou de logout [&#128279;](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/initiate-logout.md) van de dienst van de Authentificatie van Adobe Pass moeten in werking stellen gebruikend een directe vraag van HTTP.  Dit zou het opschonen van sessies aan MVPD-zijde niet vergemakkelijken.
 
 >[!TIP]
 >
@@ -412,4 +412,4 @@ Het [ Video Kader van de Rekening van de Abonnee van de Abonnee ](https://develo
 
 * De toepassing zou moeten bepalen als de authentificatie als resultaat van aanmelding door partner SSO of niet is gebeurd, gebruikend &quot;*tokenSource&quot;* [ gebruikersmeta-gegevens ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/user-metadata.md) van de dienst van de Authentificatie van Adobe Pass.
 * De toepassing zou de gebruiker moeten instrueren/ertoe aanzetten om uitdrukkelijk uit *`Settings -> TV Provider`* op iOS/iPadOS **slechts** te ondertekenen in het geval dat de *&quot;tokenSource&quot;* waarde aan *&quot;Apple&quot;* gelijk is.
-* De toepassing zou logout ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/initiate-logout.md) van de dienst van de Authentificatie van Adobe Pass moeten in werking stellen gebruikend a [ WKWebView ](https://developer.apple.com/documentation/webkit/wkwebview) of a [ SFSafariViewController ](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller) component. [ Dit zou het opschonen van sessies aan MVPD-zijde vergemakkelijken.
+* De toepassing zou logout [&#128279;](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/initiate-logout.md) van de dienst van de Authentificatie van Adobe Pass moeten in werking stellen gebruikend a [ WKWebView ](https://developer.apple.com/documentation/webkit/wkwebview) of a [ SFSafariViewController ](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller) component.  Dit zou het opschonen van sessies aan MVPD-zijde vergemakkelijken.

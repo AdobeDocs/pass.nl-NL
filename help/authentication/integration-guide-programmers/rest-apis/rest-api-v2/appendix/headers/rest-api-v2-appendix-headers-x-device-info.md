@@ -53,7 +53,7 @@ De `Base64-encoded` -waarde van het JSON-element dat ten minste de kenmerken bev
         <td></td>
         <td>primaryHardwareType</td>
         <td>Het primaire hardwaretype van het apparaat.</td>
-        <td>&amp;check;</td>
+        <td>&check;</td>
         <td>
             De waarden zijn beperkt:
             <ul>
@@ -110,7 +110,7 @@ De `Base64-encoded` -waarde van het JSON-element dat ten minste de kenmerken bev
         <td><i>vereist</i></td>
         <td>osName</td>
         <td>De naam van het besturingssysteem van het apparaat.</td>
-        <td>&amp;check;</td>
+        <td>&check;</td>
         <td>
             De waarden zijn beperkt:
             <ul>
@@ -132,7 +132,7 @@ De `Base64-encoded` -waarde van het JSON-element dat ten minste de kenmerken bev
         <td></td>
         <td>osFamily</td>
         <td>De groepsnaam van het besturingssysteem van het apparaat.</td>
-        <td>&amp;check;</td>
+        <td>&check;</td>
         <td>
             De waarden zijn beperkt:
             <ul>
@@ -155,7 +155,7 @@ De `Base64-encoded` -waarde van het JSON-element dat ten minste de kenmerken bev
         <td></td>
         <td>osVendor</td>
         <td>De leverancier van het besturingssysteem van het apparaat.</td>
-        <td>&amp;check;</td>
+        <td>&check;</td>
         <td>
             De waarden zijn beperkt:
             <ul>
@@ -185,7 +185,7 @@ De `Base64-encoded` -waarde van het JSON-element dat ten minste de kenmerken bev
         <td></td>
         <td>browserName</td>
         <td>De browsernaam.</td>
-        <td>&amp;check;</td>
+        <td>&check;</td>
         <td>
             De waarden zijn beperkt:
             <ul>
@@ -205,7 +205,7 @@ De `Base64-encoded` -waarde van het JSON-element dat ten minste de kenmerken bev
         <td></td>
         <td>browserVendor</td>
         <td>De bouwonderneming/organisatie van de browser.</td>
-        <td>&amp;check;</td>
+        <td>&check;</td>
         <td>
             De waarden zijn beperkt:
             <ul>
@@ -290,7 +290,7 @@ De `Base64-encoded` -waarde van het JSON-element dat ten minste de kenmerken bev
         <td></td>
         <td>connectionSecure</td>
         <td>De beveiligingsstatus van de netwerkverbinding.</td>
-        <td>&amp;check;</td>
+        <td>&check;</td>
         <td>
             De waarden zijn beperkt:
             <ul>

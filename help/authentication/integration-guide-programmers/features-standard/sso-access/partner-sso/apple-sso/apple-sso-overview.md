@@ -75,7 +75,7 @@ Om te profiteren van de Single Sign-On (SSO) gebruikerservaring, moet één MVPD
 
 * Als er iets mis gaat met de Apple SSO-workflow, kan de toepassing die gebruikmaakt van de Adobe Pass Authentication AccessEnabler iOS/tvOS SDK dan terugvallen op de normale verificatiestroom?
 
-  Dit is mogelijk maar vereist een configuratieverandering die door het [ Dashboard van Adobe Pass TVE ](https://experience.adobe.com/#/pass/authentication) wordt uitgevoerd om **toe te laten Enige Sign-On** op **** voor de gewenste integratie en het platform (iOS/tvOS). Ben zich ervan bewust dat de cliënttoepassing de configuratieverandering slechts na het roepen van [ setRequestor ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#setReqV3) API zal erkennen.
+  Dit is mogelijk maar vereist een configuratieverandering die door het [ Dashboard van Adobe Pass TVE ](https://experience.adobe.com/#/pass/authentication) wordt uitgevoerd om **toe te laten Enige Sign-On** op **&#x200B;**&#x200B;voor de gewenste integratie en het platform (iOS/tvOS). Ben zich ervan bewust dat de cliënttoepassing de configuratieverandering slechts na het roepen van [ setRequestor ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#setReqV3) API zal erkennen.
 
 
 * Weet de toepassing wanneer er een verificatie heeft plaatsgevonden als gevolg van een aanmelding via Apple SSO?
@@ -93,7 +93,7 @@ Om te profiteren van de Single Sign-On (SSO) gebruikerservaring, moet één MVPD
   Wanneer de gebruiker de toepassing start, wordt de gebruiker niet geverifieerd via de Apple SSO-workflow. Daarom moet de toepassing terugvallen op de normale verificatiestroom en een eigen MVPD-kiezer presenteren.
 
 
-* Wat gebeurt als een gebruiker binnen ondertekent door naar *`Settings -> TV Provider`* op iOS/iPadOS of *`Settings -> Accounts -> TV Provider`* op tvOS sectie te gaan die een MVPD heeft die **toelaten Enig Teken** geplaatst op **** door [ Adobe Pass TVE Dashboard ](https://experience.adobe.com/#/pass/authentication) voor iOS/tvOS platform heeft?
+* Wat gebeurt als een gebruiker binnen ondertekent door naar *`Settings -> TV Provider`* op iOS/iPadOS of *`Settings -> Accounts -> TV Provider`* op tvOS sectie te gaan die een MVPD heeft die **toelaten Enig Teken** geplaatst op **&#x200B;**&#x200B;door [ Adobe Pass TVE Dashboard ](https://experience.adobe.com/#/pass/authentication) voor iOS/tvOS platform heeft?
 
   Wanneer de gebruiker de toepassing start, wordt de gebruiker niet geverifieerd via de Apple SSO-workflow. Daarom moet de toepassing terugvallen op de normale verificatiestroom en een eigen MVPD-kiezer presenteren.
 

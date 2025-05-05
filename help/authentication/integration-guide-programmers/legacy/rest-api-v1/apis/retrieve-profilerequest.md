@@ -44,7 +44,7 @@ Met deze bron worden profielaanvragen voor een aanvraag-id en een MVPD-bestand g
 
 | Endpoint | Geroepen </br> door | Invoer   </br> Params | HTTP </br> Methode | Antwoord | HTTP-respons </br> |
 | --- | --- | --- | --- | --- | --- |
-| &lt;SP_FQDN>/api/v1/{requestor}/profile-Requests/{mvpd} | Streaming App </br></br> of </br></br> de Dienst van de Programmer | 1. aanvrager (wegparam) </br> 2. mvpd (wegparam) </br> 3. deviceType (verplicht) | GET | Het antwoord Content-Type is application/octet-stream, omdat de werkelijke lading ondoorzichtig is voor de clienttoepassing.</br></br> de reactie zou door:sturen door de toepassing aan de motor van Platform </br></br> SSO voor het verkrijgen van een Profiel SSO. | 200 - Succes   </br> {400 - Onjuist verzoek |
+| &lt;SP_FQDN>/api/v1/{requestor}/profile-Requests/{mvpd} | Streaming App </br></br> of </br></br> de Dienst van de Programmer | 1. aanvrager (wegparam) </br> 2. mvpd (wegparam) </br> 3. deviceType (verplicht) | GET | Het antwoord Content-Type is application/octet-stream, omdat de werkelijke lading ondoorzichtig is voor de clienttoepassing.</br></br> de reactie zou door:sturen door de toepassing aan de motor van Platform </br></br> SSO voor het verkrijgen van een Profiel SSO. | 200 - Succes   </br> &lbrace;400 - Onjuist verzoek |
 
 
 | Invoerparameter | Beschrijving |

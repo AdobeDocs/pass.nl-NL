@@ -58,7 +58,7 @@ De het netwerkactiviteit van `AccessEnabler` vindt in een verschillende draad pl
 ### A. Vereisten {#prereqs}
 
 1. Maak uw callback-functies:
-   - [setRequestorComplete()`](#$setRequestorComplete)
+   - [setRequestorComplete()&grave;](#$setRequestorComplete)
 
       - Wordt geactiveerd door `setRequestor()` en retourneert een geslaagde of mislukte bewerking.     Het succes wijst erop u met machtigingsvraag kunt te werk gaan.
 
@@ -66,7 +66,7 @@ De het netwerkactiviteit van `AccessEnabler` vindt in een verschillende draad pl
 
       - Wordt alleen geactiveerd door `getAuthentication()` als de gebruiker geen provider (MVPD) heeft geselecteerd en nog niet is geverifieerd. De parameter `mvpds` is een array van providers die beschikbaar zijn voor de gebruiker.
 
-   - [setAuthenticationStatus(status, reason)`](#$setAuthNStatus)
+   - [setAuthenticationStatus(status, reason)&grave;](#$setAuthNStatus)
 
       - Wordt telkens geactiveerd door `checkAuthentication()` . Wordt alleen geactiveerd door `getAuthentication()` als de gebruiker al is geverifieerd en een provider heeft geselecteerd.
 
@@ -81,7 +81,7 @@ De het netwerkactiviteit van `AccessEnabler` vindt in een verschillende draad pl
       - Wordt geactiveerd door `checkAuthentication(), getAuthentication(), checkAuthorization(), getAuthorization(), setSelectedProvider()` .
 De parameter `event` geeft aan welke machtigingsgebeurtenis heeft plaatsgevonden. De parameter `data` is een lijst met waarden die betrekking hebben op de gebeurtenis.
 
-   - [setToken(token, resource)`](#$setToken)
+   - [setToken(token, resource)&grave;](#$setToken)
 
       - Wordt geactiveerd door `checkAuthorization()` en `getAuthorization()` nadat u een resource hebt bekeken.
       - De parameter `token` is het kortstondige media-token; de parameter `resource` is de inhoud die de gebruiker mag bekijken.

@@ -37,7 +37,7 @@ Het dynamische proces van de Registratie van de Cliënt (DCR) vereist de het str
 
 De registratiefase is verplicht, maar de streamingtoepassing kan deze fase overslaan als deze een in cache geplaatst paar clientgegevens en een toegangstoken heeft die nog geldig zijn.
 
-++ + verwante artikelen
++++ verwante artikelen
 
 **APIs:**
 
@@ -71,7 +71,7 @@ Het doel van de authentificatiefase is de het stromen toepassing de capaciteit t
 
 De verificatiefase fungeert als een noodzakelijke stap voor de fase voorafgaand aan autorisatie of de machtigingsfase wanneer de streamingtoepassing inhoud moet afspelen.
 
-++ + verwante artikelen
++++ verwante artikelen
 
 **APIs**
 
@@ -138,13 +138,13 @@ De verificatiefase fungeert als een noodzakelijke stap voor de fase voorafgaand 
 
       * **Authentificatie die binnen de primaire (scherm) toepassing wordt uitgevoerd:** de primaire (het stromen) toepassing zou moeten beginnen opiniepeilend wanneer de gebruiker de definitieve bestemmingspagina bereikt, nadat de browser component URL laadt die voor de `redirectUrl` parameter in het [ wordt gespecificeerd Sessions ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) eindpuntverzoek.
 
-      * **Authentificatie die binnen een secundaire (scherm) toepassing wordt uitgevoerd:** de primaire (het stromen) toepassing zou moeten beginnen opiniepeilend zodra de gebruiker het authentificatieproces-recht na het ontvangen van de [ 3} eindpuntreactie van Zittingen {en het tonen van de authentificatiecode aan de gebruiker in werking stelt.](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md)
+      * **Authentificatie die binnen een secundaire (scherm) toepassing wordt uitgevoerd:** de primaire (het stromen) toepassing zou moeten beginnen opiniepeilend zodra de gebruiker het authentificatieproces-recht na het ontvangen van de [ 3&rbrace; eindpuntreactie van Zittingen &lbrace;en het tonen van de authentificatiecode aan de gebruiker in werking stelt.](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md)
 
    * De het stromen toepassing moet **het opiniepeilings** mechanisme onder de volgende voorwaarden tegenhouden:
 
       * **Succesvolle authentificatie:** de het profielinformatie van de gebruiker wordt met succes teruggewonnen, bevestigend hun authentificatiestatus. Op dit moment is opiniepeiling niet langer nodig.
 
-      * **de zitting van de Authentificatie en de codereduur:** de authentificatiesessie en de code verlopen, zoals die door `notAfter` wordt vermeld timestamp (b.v., 30 minuten) in de [ 4} eindpuntreactie van Zittingen {. ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) Als dit gebeurt, moet de gebruiker het authentificatieproces opnieuw beginnen, en de opiniepeiling die de vorige authentificatiecode gebruikt zou onmiddellijk moeten worden tegengehouden.
+      * **de zitting van de Authentificatie en de codereduur:** de authentificatiesessie en de code verlopen, zoals die door `notAfter` wordt vermeld timestamp (b.v., 30 minuten) in de [ 4&rbrace; eindpuntreactie van Zittingen &lbrace;. ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) Als dit gebeurt, moet de gebruiker het authentificatieproces opnieuw beginnen, en de opiniepeiling die de vorige authentificatiecode gebruikt zou onmiddellijk moeten worden tegengehouden.
 
       * **Nieuwe geproduceerde authentificatiecode:** als de gebruiker om een nieuwe authentificatiecode op het primaire (scherm) apparaat verzoekt, is de bestaande zitting niet meer geldig, en de opiniepeiling die de vorige authentificatiecode gebruikt zou onmiddellijk moeten worden tegengehouden.
 
@@ -164,7 +164,7 @@ De fase voorafgaand aan autorisatie kan de gebruikerservaring verbeteren wanneer
 
 De fase voorafgaand aan autorisatie is niet verplicht. De streamingtoepassing kan deze fase overslaan als deze een catalogus met bronnen wil presenteren zonder deze eerst te filteren op basis van de machtiging van de gebruiker.
 
-++ + verwante artikelen
++++ verwante artikelen
 
 **APIs**
 
@@ -197,7 +197,7 @@ Het doel van de machtigingsfase is om de streamingtoepassing de mogelijkheid te 
 
 De autorisatiefase is verplicht. De streamingtoepassing kan deze fase niet overslaan als deze bronnen wil afspelen die de gebruiker vraagt, omdat de gebruiker eerst met de MVPD moet controleren of de gebruiker gerechtigd is voordat de stream wordt vrijgegeven.
 
-++ + verwante artikelen
++++ verwante artikelen
 
 **APIs**
 
@@ -231,7 +231,7 @@ Het doel van de afmeldingsfase is om de streamingtoepassing de mogelijkheid te b
 
 De afmeldingsfase is verplicht. De streamingtoepassing moet de gebruiker de mogelijkheid bieden zich af te melden.
 
-++ + verwante artikelen
++++ verwante artikelen
 
 **APIs**
 
