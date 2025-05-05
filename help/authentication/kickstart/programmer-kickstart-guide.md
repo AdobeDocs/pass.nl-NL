@@ -75,7 +75,7 @@ Het Adobe Pass-verificatieteam is beschikbaar als hulp bij vragen of technische 
 
 ## Toegang tot documentatie {#access-documentation}
 
-**de Adobe zal** toegang tot onze openbare documentatie via [ Adobe Experience League ](https://experienceleague.adobe.com/en/docs/pass/authentication/home) verlenen.
+**de Adobe zal** toegang tot onze openbare documentatie via [ Adobe Experience League ](https://experienceleague.adobe.com/nl/docs/pass/authentication/home) verlenen.
 
 Het team van de Authentificatie van Adobe Pass verstrekt uitvoerige documentatie voor de beschikbare eigenschappen en APIs onder de [ Gids van de Integratie voor de sectie van Programmers ](/help/authentication/integration-guide-programmers/programmer-integration-guide-overview.md). Verwijs naar de inhoudstafel onder deze sectie voor verbindingen aan gedetailleerde informatie over elk onderwerp.
 

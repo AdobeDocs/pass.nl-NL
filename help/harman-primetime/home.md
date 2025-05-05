@@ -20,7 +20,7 @@ Harman handhaaft Primetime reclame en het publiceren van producten, terwijl Adob
 
 | Hulplijn | Beschrijving |
 |--- |--- |
-| [Primetime Dynamic Ad Insertion](https://experienceleague.adobe.com/docs/primetime/ad-insertion/home.html) | Adobe Pass Ad Insertion Help |
+| [Primetime Dynamic Ad Insertion](https://experienceleague.adobe.com/docs/primetime/ad-insertion/home.html?lang=nl-NL) | Adobe Pass Ad Insertion Help |
 
 ## Adobe Pass-hulplijnen
 

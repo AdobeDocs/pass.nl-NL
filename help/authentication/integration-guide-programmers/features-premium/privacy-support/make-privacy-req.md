@@ -226,7 +226,7 @@ Er zijn twee opties voor klanten om privacyverzoeken naar Adobe te verzenden:
 
 ### Door Privacy Service UI te gebruiken {#privacy-service-ui}
 
-A [ volledig leerprogramma ](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=en#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md) op hoe te om tot Privacy Service Gebruikersinterface toegang te hebben en te gebruiken is online door de diensten van de Adobe I/O beschikbaar. Bovendien kunnen klanten deze koppeling gebruiken om toegang te krijgen tot een bibliotheek met video&#39;s en artikelen over privacyregels. Klik op het menu Adobe Experience Cloud en GDPR. Hiermee wordt een aantal video&#39;s geopend - &quot;GDPR UI How-to&quot; legt uit hoe u deze kunt gebruiken.
+A [ volledig leerprogramma ](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=nl-NL#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md) op hoe te om tot Privacy Service Gebruikersinterface toegang te hebben en te gebruiken is online door de diensten van de Adobe I/O beschikbaar. Bovendien kunnen klanten deze koppeling gebruiken om toegang te krijgen tot een bibliotheek met video&#39;s en artikelen over privacyregels. Klik op het menu Adobe Experience Cloud en GDPR. Hiermee wordt een aantal video&#39;s geopend - &quot;GDPR UI How-to&quot; legt uit hoe u deze kunt gebruiken.
 
 In de gebruikersinterface moeten klanten hun eigen IMSOrgID laden en een JSON met GDPR-aanvraaggegevens voor elk product.
 
@@ -259,7 +259,7 @@ De **Privacy Service API documentatie** behandelt diepgaand hoe een Adobe klant 
 
 >[!RELATEDINFORMATION]
 >
->* [Privacy Services Overview](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=en#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md)
+>* [Privacy Services Overview](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=nl-NL#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md)
 >* Privacy Service API documentation
 
 -->
