@@ -2,9 +2,9 @@
 title: Vraag van partnerverificatie ophalen
 description: REST API V2 - verzoek voor partnerverificatie ophalen
 exl-id: 52d8a8e9-c176-410f-92bc-e83449278943
-source-git-commit: e8836c76aec10607717c0a67434b2ba5a78a8954
+source-git-commit: 9f872ad94e0aaa0546c8fcac9f88c50f47e10f6e
 workflow-type: tm+mt
-source-wordcount: '1219'
+source-wordcount: '1236'
 ht-degree: 0%
 
 ---
@@ -88,7 +88,7 @@ ht-degree: 0%
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Toestemming</td>
-      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="../../appendix/headers/rest-api-v2-appendix-headers-authorization.md"> 1&rbrace; kopbaldocumentatie van de Toestemming &lbrace;.</a></td>
+      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="../../appendix/headers/rest-api-v2-appendix-headers-authorization.md"> 1} kopbaldocumentatie van de Toestemming {.</a></td>
       <td><i>vereist</i></td>
    </tr>
    <tr>
@@ -186,7 +186,7 @@ ht-degree: 0%
       <td>405</td>
       <td>Methode niet toegestaan</td>
       <td>
-        De HTTP-methode is ongeldig, de client moet een HTTP-methode gebruiken die is toegestaan voor de aangevraagde resource en het opnieuw proberen. Voor meer details verwijs naar de <a href="#request"> 1&rbrace; sectie van het Verzoek &lbrace;.</a>
+        De HTTP-methode is ongeldig, de client moet een HTTP-methode gebruiken die is toegestaan voor de aangevraagde resource en het opnieuw proberen. Voor meer details verwijs naar de <a href="#request"> 1} sectie van het Verzoek {.</a>
       </td>
    </tr>
    <tr>
@@ -270,6 +270,7 @@ ht-degree: 0%
                     <li><b> authenticatedSSO </b><br/> De cliënttoepassing wordt reeds voor authentiek verklaard door enige sign-on toegangsstromen.</li>
                     <li><b> pfs_fallback </b><br/> De cliënttoepassing wordt vereist om terug naar basisauthentificatiestroom te vallen toe te schrijven aan het missen of ongeldige <a href="../../appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md"> AP-partner-kader-status </a> kopbalwaarde.</li>
                     <li><b> configuration_fallback </b><br/> De cliënttoepassing wordt vereist om terug naar basisauthentificatiestroom te vallen toe te schrijven aan partner enige sign-on configuratie op Adobe Pass achterste.</li>
+                    <li><b> missing_parameters_fallback </b><br /> De cliënttoepassing moet aan de hervattingsstroom wegens een ontbrekende of ongeldige parameter terugkeren.</li>
                   </ul>
                <td><i>vereist</i></td>
             </tr>
@@ -574,7 +575,7 @@ Content-Type: application/json;charset=UTF-8
 {
     "actionName": "resume",
     "actionType": "direct",
-    "reasonType": "none",
+    "reasonType": "missing_parameters_fallback",
     "missingParameters": [
           "redirectUrl"
     ],
