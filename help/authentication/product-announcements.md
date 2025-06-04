@@ -2,9 +2,9 @@
 title: Aankondigingen van producten
 description: Aankondigingen van producten
 exl-id: 3c9c66e1-d31d-4af3-8ab2-eb32492f42ca
-source-git-commit: fab5964aeb832d419702b41a6d3bc5676cb3354f
+source-git-commit: 13b0bb640aa599109e8c2f68d1e16fbdc3840951
 workflow-type: tm+mt
-source-wordcount: '784'
+source-wordcount: '793'
 ht-degree: 1%
 
 ---
@@ -33,6 +33,7 @@ In deze sectie worden verwijzingen naar de releasegeschiedenis en de bijbehorend
 
 | Aanvullende informatie | Datums |
 |-----------------------------------------------------------------------------------------------------------|-------------------------|
+| [ de versienota&#39;s van de Authentificatie 3.2.0 van Adobe Pass ](notes-releases/auth-rn-320.md) | 10-06-2025 - 12-06-2025 |
 | [ de versienota&#39;s van de Authentificatie 3.1.0 van Adobe Pass ](notes-releases/auth-rn-310.md) | 25-02-2025 - 27-02-2025 |
 | [ Adobe Pass Authentificatie JavaScript SDK 4.7.1 versienota&#39;s ](notes-releases/authn-rn-javascript-471.md) | 25-02-2025 - 27-02-2025 |
 

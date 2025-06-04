@@ -4,10 +4,10 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass-verificatie
 user-guide-description: Adobe Pass-verificatie is een machtigingsoplossing voor TV Everywhere, die een modulair kader verstrekt om te bepalen of iemand die toegang tot een bron vraagt, daar rechten voor heeft.
-source-git-commit: b753c6a6bdfd8767e86cbe27327752620158cdbb
+source-git-commit: 13b0bb640aa599109e8c2f68d1e16fbdc3840951
 workflow-type: tm+mt
-source-wordcount: '1251'
-ht-degree: 2%
+source-wordcount: '1258'
+ht-degree: 3%
 
 ---
 
@@ -18,6 +18,7 @@ ht-degree: 2%
 + [Aankondigingen van producten](product-announcements.md)
 + Productreleases {#product-releases}
    + 2025 {#2025}
+      + [Opmerkingen bij de release Adobe Pass Authentication 3.2.0](notes-releases/auth-rn-320.md)
       + [Opmerkingen bij de release Adobe Pass Authentication 3.1.0](notes-releases/auth-rn-310.md)
       + [Opmerkingen bij de release Adobe Pass Authentication JavaScript 4.7.1](notes-releases/authn-rn-javascript-471.md)
    + 2024 {#2024}
@@ -125,13 +126,13 @@ ht-degree: 2%
                + [Koptekst - AP-Partner-Framework-Status](integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md)
                + [Koptekst - AP-TempPass-Identity](integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-temppass-identity.md)
    + Standaardfuncties {#standard-features}
-      + Entitlements {#entitlements}
+      + Rechten {#entitlements}
          + [Metagegevens gebruiker](integration-guide-programmers/features-standard/entitlements/user-metadata.md)
          + [Besluiten](integration-guide-programmers/features-standard/entitlements/decisions.md)
          + [Media-tokens](integration-guide-programmers/features-standard/entitlements/media-tokens.md)
       + Fout bij rapporteren {#error-reporting}
          + [Verbeterde foutcodes](integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md)
-      + Single Sign-On Access {#sso-access}
+      + Single Sign-On toegang {#sso-access}
          + Single Sign-On voor partners {#partner-sso}
             + Apple Single Sign-On {#apple-sso}
                + [Apple SSO - Overzicht](integration-guide-programmers/features-standard/sso-access/partner-sso/apple-sso/apple-sso-overview.md)
@@ -139,14 +140,14 @@ ht-degree: 2%
          + Platform Single Sign-On {#platform-sso}
             + Amazon Single Sign-On {#amazon-sso}
                + [Amazon SSO Cookbook (REST API V2)](integration-guide-programmers/features-standard/sso-access/platform-sso/amazon-single-sign-on/amazon-sso-cookbook-rest-api-v2.md)
-            + Single Sign-On {#roku-sso}
+            + Roku Single Sign-On {#roku-sso}
                + [Roku SSO Cookbook (REST API V2)](integration-guide-programmers/features-standard/sso-access/platform-sso/roku-single-sign-on/roku-sso-cookbook-rest-api-v2.md)
       + Toegang tot verificatie op thuisbasis {#hba-access}
          + [Home-based authentication (HBA)](integration-guide-programmers/features-standard/hba-access/home-based-authentication.md)
       + Privacy-ondersteuning {#privacy-support}
          + [Overzicht van privacyondersteuning](integration-guide-programmers/features-premium/privacy-support/privacy-supp-overview.md)
          + [Een privacyverzoek indienen](integration-guide-programmers/features-premium/privacy-support/make-privacy-req.md)
-   + Premiumfuncties {#features-premium}
+   + Premium-functies {#features-premium}
       + Tijdelijke toegang {#temporary-access}
          + [Functie TempPass](integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md)
       + Verminderde toegang {#degraded-access}
@@ -155,7 +156,7 @@ ht-degree: 2%
          + [Overzicht van Entitlement service-controle](integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview.md)
          + [Entitlement service monitoring API](integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-api.md)
          + [Metriek aan de serverzijde](integration-guide-programmers/features-premium/esm/understanding-serverside-metrics.md)
-      + Analytics {#analytics}
+      + Analyse {#analytics}
          + [Gegevens van de Adobe Pass-verificatieserver integreren in Adobe Analytics](integration-guide-programmers/features-premium/analytics/integrate-authn-servr-data-analytics.md)
          + [Experience Cloud-id gebruiken in Adobe Pass-verificatie](integration-guide-programmers/features-premium/analytics/exp-cloud-id-authn.md)
    + Verouderd {#legacy}
@@ -220,7 +221,7 @@ ht-degree: 2%
          + [(Verouderd) clientgegevens doorgeven (apparaat, verbinding en toepassing)](integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md)
       + (Verouderd) Fout bij rapporteren {#error-reporting}
          + [(Verouderd) Foutmelding](integration-guide-programmers/legacy/error-reporting/error-reporting.md)
-      + (Verouderd) Single Sign-On Access {#sso-access}
+      + (Verouderd) Single Sign On Access {#sso-access}
          + [(Verouderd) Single Sign-On-ondersteuning](integration-guide-programmers/legacy/sso-access/sso-support.md)
          + [(Verouderd) SSO via passieve verificatie](integration-guide-programmers/legacy/sso-access/sso-passive-authn.md)
          + [(Verouderd) Amazon SSO Cookbook (REST API V1)](integration-guide-programmers/legacy/sso-access/amazon-sso-cookbook-rest-api-v1.md)
@@ -262,7 +263,7 @@ ht-degree: 2%
             + [(Verouderd) Charles Proxy gebruiken](integration-guide-programmers/legacy/notes-technical/using-charles-proxy.md)
             + [(Verouderd) Adobe Pass Adobe PayTV-controle](integration-guide-programmers/legacy/notes-technical/monitoring-adobe-pay-tv-pass.md)
             + [(Verouderd) Verificatie- en autorisatiestromen testen met de testsite van de Adobe API](integration-guide-programmers/legacy/notes-technical/test-authn-authz-flows-using-adobes-api-test-site.md)
-+ Integratiehandleiding voor MVPD&#39;s {#integration-guide-mvpds}
++ Integratiegids voor MVPDs {#integration-guide-mvpds}
    + [MVPD-integratiegids](integration-guide-mvpds/mvpd-integration-guide-overview.md)
    + [Verificatie](integration-guide-mvpds/authn-usecase.md)
    + [Verificatie met het OAuth 2.0-protocol](integration-guide-mvpds/authn-oauth2-protocol.md)
@@ -275,7 +276,7 @@ ht-degree: 2%
    + [Proxy MVPD SAML-integratie](integration-guide-mvpds/proxy-mvpd-saml-int.md)
    + [Serviceleverancier](integration-guide-mvpds/serv-provider-scoping.md)
    + [MVPD staat IP-adressen toe](integration-guide-mvpds/mvpd-listing-ip-addres.md)
-+ Handboek voor TVE-dashboard {#user-guide-tve-dashboard}
++ Gebruikershandleiding voor TVE-dashboard {#user-guide-tve-dashboard}
    + [Overzicht van TVE-dashboard](/help/authentication/user-guide-tve-dashboard/tve-dashboard-overview.md)
    + [Omgevingen](/help/authentication/user-guide-tve-dashboard/tve-dashboard-environments.md)
    + [Wijzigingen controleren en duwen](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md)
@@ -286,7 +287,7 @@ ht-degree: 2%
    + [Integraties](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md)
    + [Rapporten](/help/authentication/user-guide-tve-dashboard/tve-dashboard-reports.md)
    + [Wijzigingenlogboek](/help/authentication/user-guide-tve-dashboard/tve-dashboard-changes-log.md)
-+ Technische opmerkingen {#tech-notes}
++ Technische notities {#tech-notes}
    + Omgevingen {#environments}
       + [De Adobe-omgevingen begrijpen](notes-technical/environments/understanding-the-adobe-environments.md)
       + [Uw omgeving instellen en testen in een proefversie](notes-technical/environments/setting-up-your-environment-and-testing-in-prequal.md)
