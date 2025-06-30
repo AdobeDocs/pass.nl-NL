@@ -2,23 +2,26 @@
 title: MVPD-aanbieding van IP-adressen
 description: MVPD-aanbieding van IP-adressen
 exl-id: be18084c-22f5-47b5-b088-d9032681113d
-source-git-commit: 1f04f0c60d404d8ae1056a8610e76c07d0c6505e
+source-git-commit: 0fd11dbcc9072fd14fb06e76f60c15d7729c3876
 workflow-type: tm+mt
-source-wordcount: '127'
+source-wordcount: '139'
 ht-degree: 0%
 
 ---
 
+
 # MVPD-aanbieding van IP-adressen
 
->[!NOTE]
+> [!NOTE]
 >
->De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
+>De inhoud op deze pagina wordt alleen ter informatie verstrekt. Gebruik van deze API vereist een huidige licentie van
+>> Adobe. Ongeautoriseerd gebruik is niet toegestaan.
 
-Voor een integratie van MVPD/Adobe Pass-verificatie moeten bepaalde IP&#39;s zijn toegestaan in een MVPD-firewall. Dit zijn de uitgang IPs:
+Voor een integratie van MVPD/Adobe Pass-verificatie moeten bepaalde IP&#39;s zijn toegestaan in een MVPD-firewall. Dit zijn de
+IP&#39;s van uitgang:
 
 | IP | Omgeving | Regio |
-| :-------------: | :---------: | :-----: |
+|:---------------:|:-----------:|:-------:|
 | 34.233.60.171 | Productie | us-oost |
 | 34.233.163.243 | Productie | us-oost |
 | 34.206.195.149 | Productie | us-oost |
@@ -39,6 +42,12 @@ Voor een integratie van MVPD/Adobe Pass-verificatie moeten bepaalde IP&#39;s zij
 | 34.193.92.8 | Staging | us-oost |
 | 18.215.135.17 | Staging | us-oost |
 | 193.105.140.131 | VPN | eu-oost |
+| 130.248.80.10 | VPN | eu-oost |
+| 130.248.81.10 | VPN | eu-oost |
+| 130.248.80.11 | VPN | eu-oost |
+| 130.248.81.11 | VPN | eu-oost |
+| 130.248.80.12 | VPN | eu-oost |
+| 130.248.81.12 | VPN | eu-oost |
 | 192.150.10.0/24 | VPN | us-west |
 | 192.150.11.4 | VPN | us-west |
 | 192.150.19.4 | VPN | us-west |
