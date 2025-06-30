@@ -12,10 +12,10 @@ ht-degree: 0%
 
 # MVPD-aanbieding van IP-adressen
 
-> [!NOTE]
+&#x200B;> [!NOTE]
 >
 >De inhoud op deze pagina wordt alleen ter informatie verstrekt. Gebruik van deze API vereist een huidige licentie van
->> Adobe. Ongeautoriseerd gebruik is niet toegestaan.
+>&#x200B;> Adobe. Ongeautoriseerd gebruik is niet toegestaan.
 
 Voor een integratie van MVPD/Adobe Pass-verificatie moeten bepaalde IP&#39;s zijn toegestaan in een MVPD-firewall. Dit zijn de
 IP&#39;s van uitgang:
