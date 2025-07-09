@@ -47,7 +47,7 @@ ht-degree: 0%
       <td>
             De id-tekenreeks van de clienttoepassing.
             <br/><br/>
-            Voor meer informatie over hoe te om het koord van het cliëntherkenningsteken te verkrijgen, verwijs naar <a href="dynamic-client-registration-apis-retrieve-client-credentials.md"> de 2} API documentatie van de cliëntgeloofsbrieven {terugwinnen.</a>
+            Voor meer informatie over hoe te om het koord van het cliëntherkenningsteken te verkrijgen, verwijs naar <a href="dynamic-client-registration-apis-retrieve-client-credentials.md"> de 2&rbrace; API documentatie van de cliëntgeloofsbrieven &lbrace;terugwinnen.</a>
       </td>
       <td><i>vereist</i></td>
    </tr>
@@ -65,7 +65,7 @@ ht-degree: 0%
       <td>
             De tekenreeks met het giftetype (bijvoorbeeld "client_credentials") die de clienttoepassing kan gebruiken voor het client-tokeneindpunt.
             <br/><br/>
-            Voor meer informatie over hoe te om het subsidietype koord te verkrijgen, verwijs naar <a href="dynamic-client-registration-apis-retrieve-client-credentials.md"> de 2} API documentatie van de cliëntgeloofsbrieven {terugwinnen.</a>
+            Voor meer informatie over hoe te om het subsidietype koord te verkrijgen, verwijs naar <a href="dynamic-client-registration-apis-retrieve-client-credentials.md"> de 2&rbrace; API documentatie van de cliëntgeloofsbrieven &lbrace;terugwinnen.</a>
       </td>
       <td><i>vereist</i></td>
    </tr>
