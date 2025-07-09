@@ -2,9 +2,9 @@
 title: Verificatiesessie maken
 description: REST API V2 - Verificatiesessie maken
 exl-id: bb2a6bb4-0778-4748-a674-df9d0e8242c8
-source-git-commit: 32c3176fb4633acb60deb1db8fb5397bbf18e2d0
+source-git-commit: ebe0a53e3ba54c2effdef45c1143deea0e6e57d3
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1064'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ ht-degree: 0%
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Toestemming</td>
-      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="../../appendix/headers/rest-api-v2-appendix-headers-authorization.md"> 1&rbrace; kopbaldocumentatie van de Toestemming &lbrace;.</a></td>
+      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="../../appendix/headers/rest-api-v2-appendix-headers-authorization.md"> 1} kopbaldocumentatie van de Toestemming {.</a></td>
       <td><i>vereist</i></td>
    </tr>
    <tr>
@@ -199,7 +199,7 @@ ht-degree: 0%
       <td>405</td>
       <td>Methode niet toegestaan</td>
       <td>
-        De HTTP-methode is ongeldig, de client moet een HTTP-methode gebruiken die is toegestaan voor de aangevraagde resource en het opnieuw proberen. Voor meer details verwijs naar de <a href="#request"> 1&rbrace; sectie van het Verzoek &lbrace;.</a>
+        De HTTP-methode is ongeldig, de client moet een HTTP-methode gebruiken die is toegestaan voor de aangevraagde resource en het opnieuw proberen. Voor meer details verwijs naar de <a href="#request"> 1} sectie van het Verzoek {.</a>
       </td>
    </tr>
    <tr>
@@ -316,12 +316,12 @@ ht-degree: 0%
             </tr>
             <tr>
                <td style="background-color: #DEEBFF;">notBefore</td>
-               <td>Het tijdstempel waarvóór de verificatiecode niet geldig is.</td>
+               <td>De tijdstempel in milliseconden voordat de verificatiecode ongeldig is.</td>
                <td>optioneel</td>
             </tr>
             <tr>
                <td style="background-color: #DEEBFF;">notAfter</td>
-               <td>De tijdstempel waarna de verificatiecode niet geldig is.</td>
+               <td>De tijdstempel in milliseconden waarna de verificatiecode niet geldig is.</td>
                <td>optioneel</td>
             </tr>
 </table>
@@ -361,7 +361,7 @@ ht-degree: 0%
 
 ## Voorbeelden {#samples}
 
-### 1. Maak een verificatiesessie zonder ontbrekende parameters
+### &#x200B;1. Maak een verificatiesessie zonder ontbrekende parameters
 
 >[!BEGINTABS]
 
@@ -405,7 +405,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 2. Maak een verificatiesessie met ontbrekende parameters
+### &#x200B;2. Maak een verificatiesessie met ontbrekende parameters
 
 >[!BEGINTABS]
 
@@ -447,7 +447,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 3. Maak een verificatiesessie terwijl er al een geldig profiel bestaat
+### &#x200B;3. Maak een verificatiesessie terwijl er al een geldig profiel bestaat
 
 >[!BEGINTABS]
 
@@ -488,7 +488,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 4. Maak een verificatiesessie met basis- of promotionele TempPass (niet vereist)
+### &#x200B;4. Maak een verificatiesessie met basis- of promotionele TempPass (niet vereist)
 
 >[!BEGINTABS]
 
@@ -529,7 +529,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 5. Maak een verificatiesessie terwijl de degradatie wordt toegepast
+### &#x200B;5. Maak een verificatiesessie terwijl de degradatie wordt toegepast
 
 >[!BEGINTABS]
 

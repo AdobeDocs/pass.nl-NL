@@ -2,7 +2,7 @@
 title: MVPD-aanbieding van IP-adressen
 description: MVPD-aanbieding van IP-adressen
 exl-id: be18084c-22f5-47b5-b088-d9032681113d
-source-git-commit: 0fd11dbcc9072fd14fb06e76f60c15d7729c3876
+source-git-commit: ebe0a53e3ba54c2effdef45c1143deea0e6e57d3
 workflow-type: tm+mt
 source-wordcount: '139'
 ht-degree: 0%
@@ -12,10 +12,9 @@ ht-degree: 0%
 
 # MVPD-aanbieding van IP-adressen
 
-&#x200B;> [!NOTE]
+>[!IMPORTANT]
 >
->De inhoud op deze pagina wordt alleen ter informatie verstrekt. Gebruik van deze API vereist een huidige licentie van
->&#x200B;> Adobe. Ongeautoriseerd gebruik is niet toegestaan.
+> De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
 Voor een integratie van MVPD/Adobe Pass-verificatie moeten bepaalde IP&#39;s zijn toegestaan in een MVPD-firewall. Dit zijn de
 IP&#39;s van uitgang:
