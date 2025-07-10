@@ -2,7 +2,7 @@
 title: Toegangstoken ophalen
 description: Dynamische clientregistratie-API - Toegangstoken ophalen
 exl-id: 23287acf-5d56-46f0-b65e-79bf7d667708
-source-git-commit: ebe0a53e3ba54c2effdef45c1143deea0e6e57d3
+source-git-commit: be2b75d3dcde92c0b83700705892403291dcab2e
 workflow-type: tm+mt
 source-wordcount: '456'
 ht-degree: 0%
@@ -47,7 +47,7 @@ ht-degree: 0%
       <td>
             De id-tekenreeks van de clienttoepassing.
             <br/><br/>
-            Voor meer informatie over hoe te om het koord van het cliëntherkenningsteken te verkrijgen, verwijs naar <a href="dynamic-client-registration-apis-retrieve-client-credentials.md"> de 2&rbrace; API documentatie van de cliëntgeloofsbrieven &lbrace;terugwinnen.</a>
+            Voor meer informatie over hoe te om het koord van het cliëntherkenningsteken te verkrijgen, verwijs naar <a href="dynamic-client-registration-apis-retrieve-client-credentials.md"> de 2} API documentatie van de cliëntgeloofsbrieven {terugwinnen.</a>
       </td>
       <td><i>vereist</i></td>
    </tr>
@@ -65,7 +65,7 @@ ht-degree: 0%
       <td>
             De tekenreeks met het giftetype (bijvoorbeeld "client_credentials") die de clienttoepassing kan gebruiken voor het client-tokeneindpunt.
             <br/><br/>
-            Voor meer informatie over hoe te om het subsidietype koord te verkrijgen, verwijs naar <a href="dynamic-client-registration-apis-retrieve-client-credentials.md"> de 2&rbrace; API documentatie van de cliëntgeloofsbrieven &lbrace;terugwinnen.</a>
+            Voor meer informatie over hoe te om het subsidietype koord te verkrijgen, verwijs naar <a href="dynamic-client-registration-apis-retrieve-client-credentials.md"> de 2} API documentatie van de cliëntgeloofsbrieven {terugwinnen.</a>
       </td>
       <td><i>vereist</i></td>
    </tr>
@@ -269,8 +269,8 @@ Content-Type: application/json;charset=UTF-8
 {
   "id": "a932f8f0-210a-41a4-b2a8-377751f6b76f",  
   "access_token": "2YotnFZFEjr1zCsicMWpAA",
-  "created_at": 1723227212,
-  "expires_in": 86400,
+  "created_at": 1752148106221,
+  "expires_in": 21600,
   "token_type": "bearer"
 }
 ```
