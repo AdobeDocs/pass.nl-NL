@@ -2,9 +2,9 @@
 title: Verificatiesessie ophalen met gebruik van code
 description: REST API V2 - Verificatiesessie ophalen met code
 exl-id: 5cc209eb-ee6b-4bb9-9c04-3444408844b7
-source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
+source-git-commit: 26245e019afac2c0844ed64b222208cc821f9c6c
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '441'
 ht-degree: 1%
 
 ---
@@ -63,7 +63,7 @@ ht-degree: 1%
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Toestemming</td>
-      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="../../appendix/headers/rest-api-v2-appendix-headers-authorization.md"> 1&rbrace; kopbaldocumentatie van de Toestemming &lbrace;.</a></td>
+      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="../../appendix/headers/rest-api-v2-appendix-headers-authorization.md"> 1} kopbaldocumentatie van de Toestemming {.</a></td>
       <td><i>vereist</i></td>
    </tr>
    <tr>
@@ -75,6 +75,12 @@ ht-degree: 1%
          <br/><br/>
          Voor client-naar-server-implementaties wordt het IP-adres van het streamingapparaat impliciet verzonden.
       </td> 
+      <td>optioneel</td>
+   </tr>
+   <tr>
+      <td style="background-color: #DEEBFF;">AP-bezoeker-id</td>
+      <td>
+        De generatie van het bezoekersherkenningsteken nuttige lading wordt beschreven in <a href="../../appendix/headers/rest-api-v2-appendix-headers-ap-visitor-identifier.md"> AP-Bezoeker-Herkenningsteken </a> kopbaldocumentatie.
       <td>optioneel</td>
    </tr>
    <tr>
@@ -126,7 +132,7 @@ ht-degree: 1%
       <td>405</td>
       <td>Methode niet toegestaan</td>
       <td>
-        De HTTP-methode is ongeldig, de client moet een HTTP-methode gebruiken die is toegestaan voor de aangevraagde resource en het opnieuw proberen. Voor meer details verwijs naar de <a href="#request"> 1&rbrace; sectie van het Verzoek &lbrace;.</a>
+        De HTTP-methode is ongeldig, de client moet een HTTP-methode gebruiken die is toegestaan voor de aangevraagde resource en het opnieuw proberen. Voor meer details verwijs naar de <a href="#request"> 1} sectie van het Verzoek {.</a>
       </td>
    </tr>
    <tr>
@@ -200,7 +206,7 @@ ht-degree: 1%
 
 ## Voorbeelden {#samples}
 
-### 1. De verificatiesessie ophalen zonder ontbrekende parameters
+### &#x200B;1. De verificatiesessie ophalen zonder ontbrekende parameters
 
 >[!BEGINTABS]
 
@@ -233,7 +239,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 1. Ophalen van verificatiesessie met ontbrekende parameters
+### &#x200B;1. Ophalen van verificatiesessie met ontbrekende parameters
 
 >[!BEGINTABS]
 

@@ -2,9 +2,9 @@
 title: Besluiten vóór toelating met specifieke mvpd ophalen
 description: REST API V2 - beslissingen vóór toelating ophalen met specifieke mvpd
 exl-id: 8647e4fb-00b6-45cd-b81b-d00618b2e08b
-source-git-commit: 32c3176fb4633acb60deb1db8fb5397bbf18e2d0
+source-git-commit: 26245e019afac2c0844ed64b222208cc821f9c6c
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '808'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ ht-degree: 0%
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Toestemming</td>
-      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="../../appendix/headers/rest-api-v2-appendix-headers-authorization.md"> 1&rbrace; kopbaldocumentatie van de Toestemming &lbrace;.</a></td>
+      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="../../appendix/headers/rest-api-v2-appendix-headers-authorization.md"> 1} kopbaldocumentatie van de Toestemming {.</a></td>
       <td><i>vereist</i></td>
    </tr>
    <tr>
@@ -137,6 +137,12 @@ ht-degree: 0%
       <td>optioneel</td>
    </tr>
    <tr>
+      <td style="background-color: #DEEBFF;">AP-bezoeker-id</td>
+      <td>
+        De generatie van het bezoekersherkenningsteken nuttige lading wordt beschreven in <a href="../../appendix/headers/rest-api-v2-appendix-headers-ap-visitor-identifier.md"> AP-Bezoeker-Herkenningsteken </a> kopbaldocumentatie.
+      <td>optioneel</td>
+   </tr>
+   <tr>
       <td style="background-color: #DEEBFF;">Accepteren</td>
       <td>
          Het mediatype dat door de clienttoepassing wordt geaccepteerd.
@@ -185,7 +191,7 @@ ht-degree: 0%
       <td>405</td>
       <td>Methode niet toegestaan</td>
       <td>
-        De HTTP-methode is ongeldig, de client moet een HTTP-methode gebruiken die is toegestaan voor de aangevraagde resource en het opnieuw proberen. Voor meer details verwijs naar de <a href="#request"> 1&rbrace; sectie van het Verzoek &lbrace;.</a>
+        De HTTP-methode is ongeldig, de client moet een HTTP-methode gebruiken die is toegestaan voor de aangevraagde resource en het opnieuw proberen. Voor meer details verwijs naar de <a href="#request"> 1} sectie van het Verzoek {.</a>
       </td>
    </tr>
    <tr>
@@ -306,7 +312,7 @@ ht-degree: 0%
 
 ## Voorbeelden {#samples}
 
-### 1. Besluiten tot voorafgaande toestemming met specifieke mvpd intrekken
+### &#x200B;1. Besluiten tot voorafgaande toestemming met specifieke mvpd intrekken
 
 >[!BEGINTABS]
 
@@ -362,7 +368,7 @@ Content-Type: application/json;charset=UTF-8
             "status": 403,
             "code": "preauthorization_denied_by_mvpd",
             "message": "The MVPD has returned a \"Deny\" decision when requesting pre-authorization for the specified resource.",
-            "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=nl-NL",
+            "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
             "action": "none"
          }
       }
@@ -372,7 +378,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 2. Beslissingen vóór de toelating ophalen met behulp van een specifieke mvpd terwijl de afbraak wordt toegepast
+### &#x200B;2. Beslissingen vóór de toelating ophalen met behulp van een specifieke mvpd terwijl de afbraak wordt toegepast
 
 >[!BEGINTABS]
 
@@ -468,7 +474,7 @@ Content-Type: application/json;charset=UTF-8
                 "status": 403,
                 "code": "authorization_denied_by_degradation_rule",
                 "message": "The integration has an AuthZNone rule applied for the requested resources",
-                "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=nl-NL",
+                "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
                 "action": "none"
             }
         }
@@ -482,7 +488,7 @@ Content-Type: application/json;charset=UTF-8
                 "status": 403,
                 "code": "authorization_denied_by_degradation_rule",
                 "message": "The integration has an AuthZNone rule applied for the requested resources",
-                "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=nl-NL",
+                "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
                 "action": "none"
             }
         }

@@ -2,9 +2,9 @@
 title: Profiel maken en ophalen met de verificatiereactie van de partner
 description: REST API V2 - Profiel maken en ophalen met partnerverificatierespons
 exl-id: cae260ff-a229-4df7-bbf9-4cdf300c0f9a
-source-git-commit: be2b75d3dcde92c0b83700705892403291dcab2e
+source-git-commit: 26245e019afac2c0844ed64b222208cc821f9c6c
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '795'
 ht-degree: 0%
 
 ---
@@ -73,7 +73,7 @@ ht-degree: 0%
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Toestemming</td>
-      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="../../appendix/headers/rest-api-v2-appendix-headers-authorization.md"> 1&rbrace; kopbaldocumentatie van de Toestemming &lbrace;.</a></td>
+      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="../../appendix/headers/rest-api-v2-appendix-headers-authorization.md"> 1} kopbaldocumentatie van de Toestemming {.</a></td>
       <td><i>vereist</i></td>
    </tr>
    <tr>
@@ -120,6 +120,12 @@ ht-degree: 0%
          <br/><br/>
          Voor client-naar-server-implementaties wordt het IP-adres van het streamingapparaat impliciet verzonden.
       </td>
+      <td>optioneel</td>
+   </tr>
+   <tr>
+      <td style="background-color: #DEEBFF;">AP-bezoeker-id</td>
+      <td>
+        De generatie van het bezoekersherkenningsteken nuttige lading wordt beschreven in <a href="../../appendix/headers/rest-api-v2-appendix-headers-ap-visitor-identifier.md"> AP-Bezoeker-Herkenningsteken </a> kopbaldocumentatie.
       <td>optioneel</td>
    </tr>
    <tr>
@@ -171,7 +177,7 @@ ht-degree: 0%
       <td>405</td>
       <td>Methode niet toegestaan</td>
       <td>
-        De HTTP-methode is ongeldig, de client moet een HTTP-methode gebruiken die is toegestaan voor de aangevraagde resource en het opnieuw proberen. Voor meer details verwijs naar de <a href="#request"> 1&rbrace; sectie van het Verzoek &lbrace;.</a>
+        De HTTP-methode is ongeldig, de client moet een HTTP-methode gebruiken die is toegestaan voor de aangevraagde resource en het opnieuw proberen. Voor meer details verwijs naar de <a href="#request"> 1} sectie van het Verzoek {.</a>
       </td>
    </tr>
    <tr>

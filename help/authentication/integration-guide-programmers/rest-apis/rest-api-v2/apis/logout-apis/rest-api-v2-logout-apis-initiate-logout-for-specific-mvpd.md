@@ -2,9 +2,9 @@
 title: Afmelden starten voor specifieke mvpd
 description: REST API V2 - Afmelden starten voor specifieke mvpd
 exl-id: 2482de87-b3d4-4ea8-bd4a-25bf10017e01
-source-git-commit: 32c3176fb4633acb60deb1db8fb5397bbf18e2d0
+source-git-commit: 26245e019afac2c0844ed64b222208cc821f9c6c
 workflow-type: tm+mt
-source-wordcount: '1009'
+source-wordcount: '1025'
 ht-degree: 0%
 
 ---
@@ -73,7 +73,7 @@ ht-degree: 0%
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Toestemming</td>
-      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="../../appendix/headers/rest-api-v2-appendix-headers-authorization.md"> 1&rbrace; kopbaldocumentatie van de Toestemming &lbrace;.</a></td>
+      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="../../appendix/headers/rest-api-v2-appendix-headers-authorization.md"> 1} kopbaldocumentatie van de Toestemming {.</a></td>
       <td><i>vereist</i></td>
    </tr>
    <tr>
@@ -121,6 +121,12 @@ ht-degree: 0%
         <br/><br/>
         Voor meer details over enige sign-on toegelaten stromen gebruikend een de dienstteken, verwijs naar <a href="../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-service-token-flows.md"> Enige sign-on gebruikend de stromen van het de dienstteken </a> documentatie.
       </td>
+      <td>optioneel</td>
+   </tr>
+   <tr>
+      <td style="background-color: #DEEBFF;">AP-bezoeker-id</td>
+      <td>
+        De generatie van het bezoekersherkenningsteken nuttige lading wordt beschreven in <a href="../../appendix/headers/rest-api-v2-appendix-headers-ap-visitor-identifier.md"> AP-Bezoeker-Herkenningsteken </a> kopbaldocumentatie.
       <td>optioneel</td>
    </tr>
    <tr>
@@ -172,7 +178,7 @@ ht-degree: 0%
       <td>405</td>
       <td>Methode niet toegestaan</td>
       <td>
-        De HTTP-methode is ongeldig, de client moet een HTTP-methode gebruiken die is toegestaan voor de aangevraagde resource en het opnieuw proberen. Voor meer details verwijs naar de <a href="#request"> 1&rbrace; sectie van het Verzoek &lbrace;.</a>
+        De HTTP-methode is ongeldig, de client moet een HTTP-methode gebruiken die is toegestaan voor de aangevraagde resource en het opnieuw proberen. Voor meer details verwijs naar de <a href="#request"> 1} sectie van het Verzoek {.</a>
       </td>
    </tr>
    <tr>
@@ -252,9 +258,9 @@ ht-degree: 0%
                   <br/><br/>
                   De mogelijke waarden zijn:
                   <ul>
-                    <li><b> interactief </b><br/> Dit type is op de volgende waarden van het &grave; actionName attribuut van toepassing: <b> logout </b>.</li>
-                    <li><b> partner_interactive </b><br/> Dit type is op de volgende waarden van het &grave; actionName attribuut van toepassing: <b> partner_logout </b>.</li>
-                    <li><b> niets </b><br/> Dit type is op de volgende waarden van het &grave; actionName attribuut van toepassing: <b> volledig </b>, <b> ongeldig </b>.</li>
+                    <li><b> interactief </b><br/> Dit type is op de volgende waarden van het ` actionName attribuut van toepassing: <b> logout </b>.</li>
+                    <li><b> partner_interactive </b><br/> Dit type is op de volgende waarden van het ` actionName attribuut van toepassing: <b> partner_logout </b>.</li>
+                    <li><b> niets </b><br/> Dit type is op de volgende waarden van het ` actionName attribuut van toepassing: <b> volledig </b>, <b> ongeldig </b>.</li>
                   </ul>
                <td><i>vereist</i></td>
             </tr>
@@ -313,7 +319,7 @@ ht-degree: 0%
 
 ## Voorbeelden {#samples}
 
-### 1. Initialiseer logout voor specifieke mvpd die logout eindpunt hebben
+### &#x200B;1. Initialiseer logout voor specifieke mvpd die logout eindpunt hebben
 
 >[!BEGINTABS]
 
@@ -350,7 +356,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 2. Initialiseer logout voor specifieke mvpd zonder logout eindpunt
+### &#x200B;2. Initialiseer logout voor specifieke mvpd zonder logout eindpunt
 
 >[!BEGINTABS]
 
@@ -386,7 +392,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 3. Eén aanmelding voor specifieke mvpd starten, inclusief profielen die zijn verkregen via Single Sign-On met de methode Servicetokken
+### &#x200B;3. Eén aanmelding voor specifieke mvpd starten, inclusief profielen die zijn verkregen via Single Sign-On met de methode Servicetokken
 
 >[!IMPORTANT]
 >
@@ -432,7 +438,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 4. Eén aanmelding voor specifieke mvpd starten, inclusief profielen die zijn verkregen via een eenmalige aanmelding met de methode Platform Identity
+### &#x200B;4. Eén aanmelding voor specifieke mvpd starten, inclusief profielen die zijn verkregen via een eenmalige aanmelding met de methode Platform Identity
 
 >[!IMPORTANT]
 >
@@ -478,7 +484,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 5. Afmelden starten voor specifieke mvpd, inclusief profielen die zijn verkregen via Single Sign-On met Partner (Apple)
+### &#x200B;5. Afmelden starten voor specifieke mvpd, inclusief profielen die zijn verkregen via Single Sign-On met Partner (Apple)
 
 >[!BEGINTABS]
 
@@ -514,7 +520,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 6. Afmelden starten voor specifieke mvpd terwijl de afbraak wordt toegepast
+### &#x200B;6. Afmelden starten voor specifieke mvpd terwijl de afbraak wordt toegepast
 
 >[!BEGINTABS]
 
@@ -550,7 +556,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 7. Afmelden starten voor basis- of promotionele TempPass (niet vereist)
+### &#x200B;7. Afmelden starten voor basis- of promotionele TempPass (niet vereist)
 
 >[!BEGINTABS]
 
