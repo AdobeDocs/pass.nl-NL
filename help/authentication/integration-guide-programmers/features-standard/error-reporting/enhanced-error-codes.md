@@ -45,9 +45,9 @@ Enhanced Error Codes kunnen worden weergegeven in de `JSON` - of `XML` -indeling
 
 | Adobe Pass-verificAPI | JSON | XML |
 |-------------------------------|---------|---------|
-| REST API v2 | &amp;check; |         |
-| REST API v1 | &amp;check; | &amp;check; |
-| API voor voorafgaande autorisatie van SDK&#39;s | &amp;check; |         |
+| REST API v2 | &check; |         |
+| REST API v1 | &check; | &check; |
+| API voor voorafgaande autorisatie van SDK&#39;s | &check; |         |
 
 >[!IMPORTANT]
 >
@@ -202,9 +202,9 @@ Uitgebreide foutcodes bevatten de volgende `JSON` -velden of `XML` -kenmerken me
 
 | Naam | Type | Voorbeeld | Beperkt | Beschrijving |
 |-----------|-----------|---------------------------------------------------------------------------------------------------------------------|:----------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *actie* | *koord* | *niets* | &amp;check; | De Adobe Pass-verificatie raadt u aan een actie uit te voeren om de situatie zoals die in dit document is gedefinieerd, te verhelpen. <br/><br/> voor meer details, verwijs naar de [ sectie van de Actie ](#enhanced-error-codes-action). |
-| *status* | *geheel* | *403* | &amp;check; | De code van de de reactiestatus van HTTP zoals die in [ wordt bepaald RFC 7231 ](https://tools.ietf.org/html/rfc7231#section-6) document. <br/><br/> voor meer details, verwijs naar de [ 2} sectie van de Status {.](#enhanced-error-codes-status) |
-| *code* | *koord* | *authentication_deny_by_mvpd* | &amp;check; | De unieke identificatiecode van de Adobe Pass-verificatie die is gekoppeld aan de fout zoals gedefinieerd in dit document. <br/><br/> voor meer details, verwijs naar de [ sectie van de Code ](#enhanced-error-codes-code). |
+| *actie* | *koord* | *niets* | &check; | De Adobe Pass-verificatie raadt u aan een actie uit te voeren om de situatie zoals die in dit document is gedefinieerd, te verhelpen. <br/><br/> voor meer details, verwijs naar de [ sectie van de Actie ](#enhanced-error-codes-action). |
+| *status* | *geheel* | *403* | &check; | De code van de de reactiestatus van HTTP zoals die in [ wordt bepaald RFC 7231 ](https://tools.ietf.org/html/rfc7231#section-6) document. <br/><br/> voor meer details, verwijs naar de [ 2&rbrace; sectie van de Status &lbrace;.](#enhanced-error-codes-status) |
+| *code* | *koord* | *authentication_deny_by_mvpd* | &check; | De unieke identificatiecode van de Adobe Pass-verificatie die is gekoppeld aan de fout zoals gedefinieerd in dit document. <br/><br/> voor meer details, verwijs naar de [ sectie van de Code ](#enhanced-error-codes-code). |
 | *bericht* | *koord* | *MVPD is een &quot;Weigeren&quot;besluit teruggekeerd wanneer het verzoeken van vergunning voor het gespecificeerde middel* |            | Het leesbare bericht dat in sommige gevallen aan de eindgebruiker kan worden weergegeven. <br/><br/> voor meer details, verwijs naar de [ Behandeling van de Reactie ](#enhanced-error-codes-response-handling) sectie. |
 | *details* | *koord* | *Uw abonnementspakket omvat niet het &quot;Levende&quot;kanaal* |            | Het gedetailleerde bericht dat in sommige gevallen door een dienstenpartner kon worden verstrekt, <br/><br/> Dit gebied zou niet aanwezig kunnen zijn voor het geval de de dienstenpartner geen douanebericht verstrekt. |
 | *helpUrl* | *url* | *https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html* |            | De openbare documentatie URL van de Authentificatie van Adobe Pass die met meer informatie over verbindt waarom deze fout en mogelijke oplossingen voorkwam. <br/><br/> Dit veld bevat een absolute URL en mag niet worden afgeleid van foutcode, afhankelijk van de foutcontext kan een andere URL worden opgegeven. |
