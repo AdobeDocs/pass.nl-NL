@@ -2,9 +2,9 @@
 title: Verificatiesessie hervatten
 description: REST API V2 - Verificatiesessie hervatten
 exl-id: 66c33546-2be0-473f-9623-90499d1c13eb
-source-git-commit: 26245e019afac2c0844ed64b222208cc821f9c6c
+source-git-commit: 7ac04991289c95ebb803d1fd804e9b497f821cda
 workflow-type: tm+mt
-source-wordcount: '906'
+source-wordcount: '953'
 ht-degree: 0%
 
 ---
@@ -97,7 +97,7 @@ ht-degree: 0%
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Toestemming</td>
-      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="../../appendix/headers/rest-api-v2-appendix-headers-authorization.md"> 1&rbrace; kopbaldocumentatie van de Toestemming &lbrace;.</a></td>
+      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="../../appendix/headers/rest-api-v2-appendix-headers-authorization.md"> 1} kopbaldocumentatie van de Toestemming {.</a></td>
       <td><i>vereist</i></td>
    </tr>
    <tr>
@@ -175,7 +175,7 @@ ht-degree: 0%
       <td>405</td>
       <td>Methode niet toegestaan</td>
       <td>
-        De HTTP-methode is ongeldig, de client moet een HTTP-methode gebruiken die is toegestaan voor de aangevraagde resource en het opnieuw proberen. Voor meer details verwijs naar de <a href="#request"> 1&rbrace; sectie van het Verzoek &lbrace;.</a>
+        De HTTP-methode is ongeldig, de client moet een HTTP-methode gebruiken die is toegestaan voor de aangevraagde resource en het opnieuw proberen. Voor meer details verwijs naar de <a href="#request"> 1} sectie van het Verzoek {.</a>
       </td>
    </tr>
    <tr>
@@ -324,7 +324,17 @@ ht-degree: 0%
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;"></td>
-      <td>Het reactielichaam kan extra fouteninformatie verstrekken die aan de <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md"> Verbeterde documentatie van de Codes van de Fout </a> volgt.</td>
+      <td>
+            Het reactielichaam kan extra fouteninformatie verstrekken die aan de <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md"> Verbeterde documentatie van de Codes van de Fout </a> volgt.
+            <br/><br/>
+            De clienttoepassing moet een foutafhandelingsmechanisme implementeren waarmee de foutcodes die het meest worden geretourneerd door deze API correct kunnen worden verwerkt:
+            <ul>
+                <li>invalid_authentication_session</li>
+                <li>invalid_parameter_code</li>
+                <li>enz.</li>
+            </ul>
+            De bovenstaande lijst is niet-limitatief. De cliënttoepassing moet alle verbeterde die foutencodes kunnen behandelen in de <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md"> openbare documentatie </a> worden bepaald.
+      </td>
       <td><i>vereist</i></td>
    </tr>
 </table>

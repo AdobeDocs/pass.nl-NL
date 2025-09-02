@@ -2,9 +2,9 @@
 title: Verbeterde foutcodes
 description: Verbeterde foutcodes
 exl-id: 2b0a9095-206b-4dc7-ab9e-e34abf4d359c
-source-git-commit: 27aaa0d3351577e60970a4035b02d814f0a17e2f
+source-git-commit: 7ac04991289c95ebb803d1fd804e9b497f821cda
 workflow-type: tm+mt
-source-wordcount: '2649'
+source-wordcount: '2696'
 ht-degree: 2%
 
 ---
@@ -45,9 +45,9 @@ Enhanced Error Codes kunnen worden weergegeven in de `JSON` - of `XML` -indeling
 
 | Adobe Pass-verificAPI | JSON | XML |
 |-------------------------------|---------|---------|
-| REST API v2 | &check; |         |
-| REST API v1 | &check; | &check; |
-| API voor voorafgaande autorisatie van SDK&#39;s | &check; |         |
+| REST API v2 | &amp;check; |         |
+| REST API v1 | &amp;check; | &amp;check; |
+| API voor voorafgaande autorisatie van SDK&#39;s | &amp;check; |         |
 
 >[!IMPORTANT]
 >
@@ -101,7 +101,7 @@ Content-Type: application/json
         "code": "authorization_denied_by_mvpd",
         "message": "The MVPD has returned a \"Deny\" decision when requesting authorization for the specified resource",
         "details": "Your subscription package does not include the \"Live\" channel",
-        "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=nl-NL",
+        "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
         "trace": "12f6fef9-d2e0-422b-a9d7-60d799abe353"
       }
     }
@@ -120,7 +120,7 @@ Content-Type: application/json
   "status": 400,
   "code": "invalid_parameter_service_provider",
   "message": "The service provider parameter value is missing or invalid.",
-  "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=nl-NL",
+  "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
   "trace": "12f6fef9-d2e0-422b-a9d7-60d799abe353"
 }
 ```
@@ -154,7 +154,7 @@ Content-Type: application/json
         "code": "authorization_denied_by_mvpd",
         "message": "The MVPD has returned a \"Deny\" decision when requesting authorization for the specified resource",
         "details": "Your subscription package does not include the \"Live\" channel",
-        "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=nl-NL",
+        "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
         "trace": "12f6fef9-d2e0-422b-a9d7-60d799abe353"
       }
     }
@@ -173,7 +173,7 @@ Content-Type: application/json
   "status": 400,
   "code": "invalid_requestor",
   "message": "The requestor parameter is missing or invalid.",
-  "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=nl-NL",
+  "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
   "trace": "8bcb17f9-b172-47d2-86d9-3eb146eba85e"
 }
 ```
@@ -189,7 +189,7 @@ Content-Type: application/xml
   <status>400</status>
   <code>invalid_requestor</code>
   <message>The requestor parameter is missing or invalid.</message>
-  <helpUrl>https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=nl-NL</helpUrl>
+  <helpUrl>https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html</helpUrl>
   <trace>8bcb17f9-b172-47d2-86d9-3eb146eba85e</trace>
 </error>
 ```
@@ -202,12 +202,12 @@ Uitgebreide foutcodes bevatten de volgende `JSON` -velden of `XML` -kenmerken me
 
 | Naam | Type | Voorbeeld | Beperkt | Beschrijving |
 |-----------|-----------|---------------------------------------------------------------------------------------------------------------------|:----------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *actie* | *koord* | *niets* | &check; | De Adobe Pass-verificatie raadt u aan een actie uit te voeren om de situatie zoals die in dit document is gedefinieerd, te verhelpen. <br/><br/> voor meer details, verwijs naar de [ sectie van de Actie ](#enhanced-error-codes-action). |
-| *status* | *geheel* | *403* | &check; | De code van de de reactiestatus van HTTP zoals die in [ wordt bepaald RFC 7231 ](https://tools.ietf.org/html/rfc7231#section-6) document. <br/><br/> voor meer details, verwijs naar de [ 2&rbrace; sectie van de Status &lbrace;.](#enhanced-error-codes-status) |
-| *code* | *koord* | *authentication_deny_by_mvpd* | &check; | De unieke identificatiecode van de Adobe Pass-verificatie die is gekoppeld aan de fout zoals gedefinieerd in dit document. <br/><br/> voor meer details, verwijs naar de [ sectie van de Code ](#enhanced-error-codes-code). |
+| *actie* | *koord* | *niets* | &amp;check; | De Adobe Pass-verificatie raadt u aan een actie uit te voeren om de situatie zoals die in dit document is gedefinieerd, te verhelpen. <br/><br/> voor meer details, verwijs naar de [ sectie van de Actie ](#enhanced-error-codes-action). |
+| *status* | *geheel* | *403* | &amp;check; | De code van de de reactiestatus van HTTP zoals die in [ wordt bepaald RFC 7231 ](https://tools.ietf.org/html/rfc7231#section-6) document. <br/><br/> voor meer details, verwijs naar de [ 2} sectie van de Status {.](#enhanced-error-codes-status) |
+| *code* | *koord* | *authentication_deny_by_mvpd* | &amp;check; | De unieke identificatiecode van de Adobe Pass-verificatie die is gekoppeld aan de fout zoals gedefinieerd in dit document. <br/><br/> voor meer details, verwijs naar de [ sectie van de Code ](#enhanced-error-codes-code). |
 | *bericht* | *koord* | *MVPD is een &quot;Weigeren&quot;besluit teruggekeerd wanneer het verzoeken van vergunning voor het gespecificeerde middel* |            | Het leesbare bericht dat in sommige gevallen aan de eindgebruiker kan worden weergegeven. <br/><br/> voor meer details, verwijs naar de [ Behandeling van de Reactie ](#enhanced-error-codes-response-handling) sectie. |
 | *details* | *koord* | *Uw abonnementspakket omvat niet het &quot;Levende&quot;kanaal* |            | Het gedetailleerde bericht dat in sommige gevallen door een dienstenpartner kon worden verstrekt, <br/><br/> Dit gebied zou niet aanwezig kunnen zijn voor het geval de de dienstenpartner geen douanebericht verstrekt. |
-| *helpUrl* | *url* | *https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=nl-NL* |            | De openbare documentatie URL van de Authentificatie van Adobe Pass die met meer informatie over verbindt waarom deze fout en mogelijke oplossingen voorkwam. <br/><br/> Dit veld bevat een absolute URL en mag niet worden afgeleid van foutcode, afhankelijk van de foutcontext kan een andere URL worden opgegeven. |
+| *helpUrl* | *url* | *https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html* |            | De openbare documentatie URL van de Authentificatie van Adobe Pass die met meer informatie over verbindt waarom deze fout en mogelijke oplossingen voorkwam. <br/><br/> Dit veld bevat een absolute URL en mag niet worden afgeleid van foutcode, afhankelijk van de foutcontext kan een andere URL worden opgegeven. |
 | *spoor* | *koord* | *12f6fef9-d2e0-422b-a9d7-60d799abe353* |            | De unieke id voor de reactie die kan worden gebruikt wanneer contact wordt opgenomen met de ondersteuning van Adobe Pass-verificatie om specifieke problemen op te lossen. |
 
 >[!IMPORTANT]
@@ -322,7 +322,7 @@ In de onderstaande tabel worden mogelijke Enhanced Error Codes weergegeven die e
 |                              | *network_connection_timeout* | 403 | Er was een verbindingsonderbreking met de bijbehorende partnerdienst. Het opnieuw proberen van het verzoek zou de kwestie kunnen oplossen. |
 |                              | *maximum_executing_time_overtroffen* | 403 | De aanvraag is niet binnen de maximaal toegestane tijd voltooid. Het opnieuw proberen van het verzoek zou de kwestie kunnen oplossen. |
 
-### REST API v1 {#enhanced-error-codes-lists-rest-api-v1}
+### (Verouderd) REST API v1 {#enhanced-error-codes-lists-rest-api-v1}
 
 In de onderstaande tabel worden mogelijke Enhanced Error Codes weergegeven die een clienttoepassing kan tegenkomen bij integratie met Adobe Pass Authentication REST API v1.
 
@@ -354,7 +354,7 @@ In de onderstaande tabel worden mogelijke Enhanced Error Codes weergegeven die e
 |                    | *network_connection_timeout* | 403 | Er was een verbindingsonderbreking met de bijbehorende partnerdienst. Het opnieuw proberen van het verzoek zou de kwestie kunnen oplossen. |
 |                    | *maximum_executing_time_overtroffen* | 403 | De aanvraag is niet binnen de maximaal toegestane tijd voltooid. Het opnieuw proberen van het verzoek zou de kwestie kunnen oplossen. |
 
-### API voor voorafgaande autorisatie van SDK&#39;s {#enhanced-error-codes-lists-sdks-preauthorize-api}
+### (Verouderd) SDK&#39;s autoriseren API vooraf {#enhanced-error-codes-lists-sdks-preauthorize-api}
 
 Verwijs naar de vorige [ sectie ](#enhanced-error-codes-list-rest-api-v1) voor mogelijke Verbeterde Codes van de Fout een cliënttoepassing zou kunnen ontmoeten wanneer geïntegreerd met de Authentificatie SDKs van Adobe Pass preauthorize API.
 
@@ -370,11 +370,13 @@ Verwijs naar de vorige [ sectie ](#enhanced-error-codes-list-rest-api-v1) voor m
 
 Samenvattend, wanneer het behandelen van reacties die de Geavanceerde Codes van de Fout bevatten, zou u het volgende moeten overwegen:
 
-1. **Controle beide statuswaarden**: Controleer altijd zowel de code van de de reactiestatus van HTTP als het Verbeterde gebied van de Code van de Fout &quot;status&quot;. Ze kunnen verschillen en beide bieden waardevolle informatie.
+1. **Agnostic aan API die de fout** terugkeren: Voer een gecentraliseerde fout-behandelende logica uit die de volledige catalogus van verbeterde foutencodes steunt, ongeacht welke API hen veroorzaakt. Verschillende uitgebreide foutcode worden gedeeld door de API&#39;s en moeten consistent worden afgehandeld.
 
 1. **Agnostisch aan top-level versus punt-niveau fouteninformatie**: Behandel top-level en punt-vlakke fouteninformatie agnostisch aan de manier het wordt meegedeeld, zorg ervoor u beide vormen van het overbrengen van de Verbeterde Codes van de Fout kunt behandelen.
 
-1. **probeert logica** opnieuw: Voor fouten die een herpoging vereisen, zorg ervoor dat de pogingen met exponentiële backoff worden gedaan om het overweldigen van de server te vermijden. In het geval van Adobe Pass Authentication API&#39;s die meerdere items tegelijk verwerken (bijvoorbeeld API vooraf autoriseren), moet u in de herhaalde aanvraag ook alleen die items opnemen die zijn gemarkeerd met &quot;retry&quot; en niet de volledige lijst.
+1. **Controle beide statuswaarden**: Controleer altijd zowel de code van de de reactiestatus van HTTP als het Verbeterde gebied van de Code van de Fout &quot;status&quot;. Ze kunnen verschillen en beide bieden waardevolle informatie.
+
+1. **probeert logica** opnieuw: Voor fouten die een herpoging vereisen, zorg ervoor dat de pogingen (d.w.z. 2-3) beperkt zijn of met exponentiële steun worden gedaan om het overweldigen van de server te vermijden. In het geval van Adobe Pass Authentication API&#39;s die meerdere items tegelijk verwerken (bijvoorbeeld API vooraf autoriseren), moet u in de herhaalde aanvraag ook alleen die items opnemen die zijn gemarkeerd met &quot;retry&quot; en niet de volledige lijst.
 
 1. **de veranderingen van de Configuratie**: Voor fouten die configuratieveranderingen vereisen, zorg ervoor dat de noodzakelijke veranderingen worden aangebracht alvorens de nieuwe toepassing of de nieuwe eigenschap te lanceren.
 
