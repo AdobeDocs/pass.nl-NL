@@ -2,7 +2,7 @@
 title: Win configuratie voor specifieke dienstverlener terug
 description: REST API V2 - Configuratie ophalen voor specifieke serviceprovider
 exl-id: ad7e4c6d-ed96-4ae7-82a9-3c24e5fc9302
-source-git-commit: 871afc4e7ec04d62590dd574bf4e28122afc01b6
+source-git-commit: 8952283ccce38f70f4f504f07714c583fcb7e272
 workflow-type: tm+mt
 source-wordcount: '725'
 ht-degree: 0%
@@ -68,13 +68,13 @@ ht-degree: 0%
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Toestemming</td>
-      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="../../appendix/headers/rest-api-v2-appendix-headers-authorization.md"> 1&rbrace; kopbaldocumentatie van de Toestemming &lbrace;.</a></td>
+      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="../../appendix/headers/rest-api-v2-appendix-headers-authorization.md"> 1} kopbaldocumentatie van de Toestemming {.</a></td>
       <td><i>vereist</i></td>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">AP-apparaat-id</td>
       <td>De generatie van de apparatenherkenningstekenlading wordt beschreven in <a href="../../appendix/headers/rest-api-v2-appendix-headers-ap-device-identifier.md"> AP-apparaat-Identifier </a> kopbaldocumentatie.</td>
-      <td><i>vereist</i></td>
+      <td>optioneel</td>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">X-Apparaat-Info</td>
@@ -87,7 +87,7 @@ ht-degree: 0%
          <br/><br/>
          Als deze optie niet is opgegeven, gebruikt de Adobe Pass Authentication-backend impliciet geëxtraheerde waarden (standaard).
       </td>
-      <td><i>vereist</i></td>
+      <td>optioneel</td>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">X-Forwarded-For</td>
@@ -149,7 +149,7 @@ ht-degree: 0%
       <td>405</td>
       <td>Methode niet toegestaan</td>
       <td>
-        De HTTP-methode is ongeldig, de client moet een HTTP-methode gebruiken die is toegestaan voor de aangevraagde resource en het opnieuw proberen. Voor meer details verwijs naar de <a href="#request"> 1&rbrace; sectie van het Verzoek &lbrace;.</a>
+        De HTTP-methode is ongeldig, de client moet een HTTP-methode gebruiken die is toegestaan voor de aangevraagde resource en het opnieuw proberen. Voor meer details verwijs naar de <a href="#request"> 1} sectie van het Verzoek {.</a>
       </td>
    </tr>
    <tr>
@@ -282,7 +282,7 @@ ht-degree: 0%
 
 ## Voorbeelden {#samples}
 
-### 1. Win configuratie voor specifieke dienstverlener terug
+### &#x200B;1. Win configuratie voor specifieke dienstverlener terug
 
 >[!BEGINTABS]
 
