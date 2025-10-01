@@ -2,9 +2,9 @@
 title: Koptekst - AP-Partner-Framework-Status
 description: REST API V2 - Koptekst - AP-Partner-Kader-Status
 exl-id: f589d948-e23e-43d4-81c2-8db0e7a40e93
-source-git-commit: 81d3c3835d2e97e28c2ddb9c72d1a048a25ad433
+source-git-commit: 5c912bbbe97fff65d38dbade32cd4554ad8c2fac
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '404'
 ht-degree: 0%
 
 ---
@@ -131,6 +131,8 @@ De `Base64-encoded` -waarde van het JSON-element dat de volgende kenmerken bevat
                   Dit is een verplicht kenmerk.
                   <br/><br/>
                   Dit is de vervaldatum van het voor authentiek verklaarde gebruikersprofiel, voor het geval de gebruiker met succes het programma heeft geopend gebruikend gesteunde MVPD op het niveau van het partnerkader.
+                  <br/><br/>
+                  Dit moet een tijdstempel in milliseconden zijn sinds Unix tijdperk (bijvoorbeeld "1735689600000"), uitgedrukt als een tekenreeks.
                </td>
             </tr>
             <tr>
