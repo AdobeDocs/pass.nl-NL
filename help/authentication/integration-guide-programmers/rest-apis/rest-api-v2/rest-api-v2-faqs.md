@@ -2,9 +2,9 @@
 title: Veelgestelde vragen over REST API V2
 description: Veelgestelde vragen over REST API V2
 exl-id: 2dd74b47-126e-487b-b467-c16fa8cc14c1
-source-git-commit: ebe0a53e3ba54c2effdef45c1143deea0e6e57d3
+source-git-commit: 0b8ef6c6b326d1a9de52b24823886c708c2aad33
 workflow-type: tm+mt
-source-wordcount: '9566'
+source-wordcount: '9682'
 ht-degree: 0%
 
 ---
@@ -50,14 +50,14 @@ De configuratiefase is niet verplicht. De clienttoepassing moet de configuratie 
 De cliënttoepassing kan deze fase in de volgende scenario&#39;s overslaan:
 
 * De gebruiker is al geverifieerd.
-* De gebruiker wordt aangeboden tijdelijke toegang door basis of promotionele [&#128279;](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md) eigenschap TempPass.
+* De gebruiker wordt aangeboden tijdelijke toegang door basis of promotionele [ ](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md) eigenschap TempPass.
 * De gebruikersverificatie is verlopen, maar de clienttoepassing heeft de eerder geselecteerde MVPD in de cache geplaatst als een gebruikerservaring die de keuze motiveert. De gebruiker wordt alleen gevraagd te bevestigen dat hij of zij nog steeds een abonnee van die MVPD is.
 
 #### &#x200B;3. Wat is een configuratie en hoe lang is deze geldig? {#configuration-phase-faq3}
 
 De configuratie is een termijn die in de [ verklarende woordenlijst ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#configuration) documentatie wordt bepaald.
 
-De configuratie bevat een lijst van MVPDs die door de volgende attributen `id` wordt bepaald, `displayName`, `logoUrl`, enz., die van het [ 4&rbrace; eindpunt van de Configuratie kan worden teruggewonnen.](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider.md)
+De configuratie bevat een lijst van MVPDs die door de volgende attributen `id` wordt bepaald, `displayName`, `logoUrl`, enz., die van het [ 4} eindpunt van de Configuratie kan worden teruggewonnen.](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider.md)
 
 De clienttoepassing moet de configuratie alleen ophalen wanneer de gebruiker zijn MVPD moet selecteren om te worden geverifieerd of opnieuw te worden geverifieerd.
 
@@ -67,29 +67,43 @@ De clienttoepassing moet de door de gebruiker geselecteerde MVPD-id, zoals opgeg
 
 Voor meer informatie, verwijs naar [ terugwinnen configuratie ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider.md) documentatie.
 
-#### &#x200B;4. Moet de client-toepassing de informatie over de configuratiereactie in cache plaatsen in een permanente opslag? {#configuration-phase-faq4}
+#### &#x200B;4. Is de configuratie specifiek voor een dienstverlener, platform, of gebruiker? {#configuration-phase-faq4}
+
+De configuratie is specifiek voor a [ dienstverlener ](rest-api-v2-glossary.md#service-provider).
+
+De configuratie is specifiek voor een platformtype.
+
+De configuratie is niet specifiek voor een gebruiker.
+
+Voor cliënttoepassingen die een server-aan-server architectuur gebruiken, wordt het geadviseerd om de configuratiereactie (b.v., met 2 minieme TTL) voor elk platformtype in server-zijgeheugenopslag in het voorgeheugen onder te brengen. Dit vermindert onnodige verzoeken voor elke gebruiker en verbetert algemene gebruikerservaring.
+
+#### &#x200B;5. Moet de client-toepassing de informatie over de configuratiereactie in cache plaatsen in een permanente opslag? {#configuration-phase-faq5}
+
+>[!IMPORTANT]
+> 
+> Voor cliënttoepassingen die een server-aan-server architectuur gebruiken, wordt het geadviseerd om de configuratiereactie (b.v., met 2 minieme TTL) voor elk platformtype in server-zijgeheugenopslag in het voorgeheugen onder te brengen. Dit vermindert onnodige verzoeken voor elke gebruiker en verbetert algemene gebruikerservaring.
 
 De clienttoepassing moet de configuratie alleen ophalen wanneer de gebruiker zijn MVPD moet selecteren om te worden geverifieerd of opnieuw te worden geverifieerd.
 
 De cliënttoepassing zou de informatie van de configuratiereactie in een geheugenopslag in het voorgeheugen moeten opslaan om onnodige verzoeken te vermijden en de gebruikerservaring te verbeteren wanneer:
 
 * De gebruiker is al geverifieerd.
-* De gebruiker wordt aangeboden tijdelijke toegang door basis of promotionele [&#128279;](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md) eigenschap TempPass.
+* De gebruiker wordt aangeboden tijdelijke toegang door basis of promotionele [ ](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md) eigenschap TempPass.
 * De gebruikersverificatie is verlopen, maar de clienttoepassing heeft de eerder geselecteerde MVPD in de cache geplaatst als een gebruikerservaring die de keuze motiveert. De gebruiker wordt alleen gevraagd te bevestigen dat hij of zij nog steeds een abonnee van die MVPD is.
 
-#### &#x200B;5. Kan de clienttoepassing zijn eigen lijst met MVPD&#39;s beheren? {#configuration-phase-faq5}
+#### &#x200B;6. Kan de clienttoepassing zijn eigen lijst met MVPD&#39;s beheren? {#configuration-phase-faq6}
 
 De clienttoepassing kan een eigen lijst met MVPD&#39;s beheren, maar de MVPD-id&#39;s moeten synchroon blijven met de Adobe Pass-verificatie. Daarom wordt aangeraden de configuratie te gebruiken die door Adobe Pass Authentication wordt geleverd om ervoor te zorgen dat de lijst up-to-date en accuraat is.
 
 De cliënttoepassing zou een [ fout ](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md#enhanced-error-codes-lists-rest-api-v2) van de Authentificatie van Adobe Pass REST API V2 ontvangen als het verstrekte herkenningsteken van MVPD ongeldig is of in het geval heeft het geen actieve integratie met de gespecificeerde [ dienstverlener ](rest-api-v2-glossary.md#service-provider).
 
-#### &#x200B;6. Kan de clienttoepassing de lijst met MVPD&#39;s filteren? {#configuration-phase-faq6}
+#### &#x200B;7. Kan de clienttoepassing de lijst met MVPD&#39;s filteren? {#configuration-phase-faq7}
 
 De cliënttoepassing kan de lijst van MVPDs filtreren die in de configuratiereactie wordt verstrekt door een douanemechanisme uit te voeren dat op zijn eigen bedrijfslogica en vereisten zoals gebruikersplaats of gebruikersgeschiedenis van vorige selectie wordt gebaseerd.
 
 De cliënttoepassing kan de lijst van [ TempPass ](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md) MVPDs of MVPDs filtreren die hun integratie nog in ontwikkeling of het testen hebben.
 
-#### &#x200B;7. Wat gebeurt er als de integratie met een MVPD is uitgeschakeld en als inactief is gemarkeerd? {#configuration-phase-faq7}
+#### &#x200B;8. Wat gebeurt er als de integratie met een MVPD is uitgeschakeld en als inactief is gemarkeerd? {#configuration-phase-faq8}
 
 Wanneer de integratie met een MVPD is uitgeschakeld en als inactief is gemarkeerd, wordt de MVPD verwijderd uit de lijst met MVPD&#39;s die in verdere configuratieantwoorden wordt geleverd. Er zijn twee belangrijke gevolgen die in overweging moeten worden genomen:
 
@@ -98,18 +112,18 @@ Wanneer de integratie met een MVPD is uitgeschakeld en als inactief is gemarkeer
 
 De cliënttoepassing zou een [ fout ](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md#enhanced-error-codes-lists-rest-api-v2) van de Authentificatie van Adobe Pass REST API V2 ontvangen als de gebruiker selecteerde MVPD geen actieve integratie met de gespecificeerde [ dienstverlener ](rest-api-v2-glossary.md#service-provider) heeft.
 
-#### &#x200B;8. Wat gebeurt er als de integratie met een MVPD weer ingeschakeld en gemarkeerd wordt als actief? {#configuration-phase-faq8}
+#### &#x200B;9. Wat gebeurt er als de integratie met een MVPD weer ingeschakeld en gemarkeerd wordt als actief? {#configuration-phase-faq9}
 
 Wanneer de integratie met een MVPD terug en duidelijk als actief wordt toegelaten, dan is MVPD inbegrepen terug in de lijst van MVPDs die in verdere configuratiereacties wordt verstrekt, en er zijn twee belangrijke gevolgen om te overwegen:
 
 * De niet-geverifieerde gebruikers van die MVPD kunnen de verificatiefase opnieuw voltooien met behulp van die MVPD.
 * De geautoriseerde gebruikers van die MVPD kunnen de fase van voorafgaande toestemming, autorisatie of afmelding met die MVPD opnieuw voltooien.
 
-#### &#x200B;9. Hoe kan de integratie met een MVPD worden in- of uitgeschakeld? {#configuration-phase-faq9}
+#### &#x200B;10. Hoe kan de integratie met een MVPD worden in- of uitgeschakeld? {#configuration-phase-faq10}
 
 Deze verrichting kan door het Dashboard van Adobe Pass [ worden voltooid TVE ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#tve-dashboard) door één van uw organisatiebeheerders of door een vertegenwoordiger van de Authentificatie van Adobe Pass handelend namens u.
 
-Voor meer details, verwijs naar de [ documentatie van de Gebruiker van de Gids van de Integratie van het Dashboard van 0&rbrace; TVE.](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#disable-integration)
+Voor meer details, verwijs naar de [ documentatie van de Gebruiker van de Gids van de Integratie van het Dashboard van 0} TVE.](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#disable-integration)
 
 +++
 
@@ -130,7 +144,7 @@ De verificatiefase is verplicht. De clienttoepassing moet de gebruiker verifiër
 De cliënttoepassing kan deze fase in de volgende scenario&#39;s overslaan:
 
 * De gebruiker is al geverifieerd en het profiel is nog steeds geldig.
-* De gebruiker wordt aangeboden tijdelijke toegang door basis of promotionele [&#128279;](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md) eigenschap TempPass.
+* De gebruiker wordt aangeboden tijdelijke toegang door basis of promotionele [ ](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md) eigenschap TempPass.
 
 De fout behandeling van de cliënttoepassing vereist om de [ fout ](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md#enhanced-error-codes-lists-rest-api-v2) codes (b.v., `authenticated_profile_missing`, `authenticated_profile_expired`, `authenticated_profile_invalidated`, enz.) te behandelen, die erop wijzen dat de cliënttoepassing de gebruiker om vereist voor authentiek te verklaren.
 
@@ -211,7 +225,7 @@ Het profiel is geldig gedurende een beperkt tijdsbestek dat is opgegeven wanneer
 
 Dit beperkte die tijdkader als authentificatie (authN) [ wordt bekend TTL ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#ttl) kan door het Dashboard van Adobe Pass [ worden bekeken en worden veranderd TVE ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#tve-dashboard) door één van uw organisatiebeheerders of door een vertegenwoordiger van de Authentificatie van Adobe Pass handelend namens u.
 
-Voor meer details, verwijs naar de [ documentatie van de Gebruiker van de Gids van de Integratie van het Dashboard van 0&rbrace; TVE.](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#most-used-flows)
+Voor meer details, verwijs naar de [ documentatie van de Gebruiker van de Gids van de Integratie van het Dashboard van 0} TVE.](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#most-used-flows)
 
 #### &#x200B;8. Moet de clienttoepassing de profielgegevens van de gebruiker in cache plaatsen in een permanente opslag? {#authentication-phase-faq8}
 
@@ -295,7 +309,7 @@ Om de efficiëntie te waarborgen en onnodige verzoeken te vermijden, moet de cli
 
 **Authentificatie die binnen de primaire (scherm) toepassing wordt uitgevoerd**
 
-De primaire (het stromen) toepassing zou moeten beginnen opiniepeilend wanneer de gebruiker de definitieve bestemmingspagina bereikt, nadat de browser component URL laadt die voor de `redirectUrl` parameter in het [ 2&rbrace; eindpuntverzoek van Sessies &lbrace;wordt gespecificeerd.](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md)
+De primaire (het stromen) toepassing zou moeten beginnen opiniepeilend wanneer de gebruiker de definitieve bestemmingspagina bereikt, nadat de browser component URL laadt die voor de `redirectUrl` parameter in het [ 2} eindpuntverzoek van Sessies {wordt gespecificeerd.](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md)
 
 **Authentificatie die binnen een secundaire (scherm) toepassing wordt uitgevoerd**
 
@@ -311,7 +325,7 @@ De profielgegevens van de gebruiker worden opgehaald en hun verificatiestatus wo
 
 **de zitting van de Authentificatie en coderepering**
 
-De authentificatiesessie en de code verlopen, zoals die door `notAfter` wordt vermeld timestamp (b.v., 30 minuten) in de [ 2&rbrace; eindpuntreactie van Zittingen &lbrace;. ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) Als dit gebeurt, moet de gebruiker het authentificatieproces opnieuw beginnen, en de opiniepeiling die de vorige authentificatiecode gebruikt zou onmiddellijk moeten worden tegengehouden.
+De authentificatiesessie en de code verlopen, zoals die door `notAfter` wordt vermeld timestamp (b.v., 30 minuten) in de [ 2} eindpuntreactie van Zittingen {. ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) Als dit gebeurt, moet de gebruiker het authentificatieproces opnieuw beginnen, en de opiniepeiling die de vorige authentificatiecode gebruikt zou onmiddellijk moeten worden tegengehouden.
 
 **Nieuwe geproduceerde authentificatiecode**
 
@@ -386,7 +400,7 @@ Voor meer details, verwijs naar [ Enige sign-on gebruikend de stromen van het de
 
 ### Veelgestelde vragen over de preautorisatiefase {#preauthorization-phase-faqs-general}
 
-+++Veelgestelde vragen over voorafgaande goedkeuring
++++Veelgestelde vragen over de preautorisatiefase
 
 #### &#x200B;1. Wat is het doel van de fase van voorafgaande toestemming? {#preauthorization-phase-faq1}
 
@@ -400,7 +414,7 @@ De fase voorafgaand aan autorisatie is niet verplicht. De clienttoepassing kan d
 
 #### &#x200B;3. Wat is een voorafgaande beslissing? {#preauthorization-phase-faq3}
 
-Voortoestemming is een termijn die in de [ 1&rbrace; documentatie van de Verklarende woordenlijst &lbrace;wordt bepaald, terwijl de besluitvormingstermijn ook in de ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#preauthorization) Verklarende woordenlijst [ kan worden gevonden.](rest-api-v2-glossary.md#decision)
+Voortoestemming is een termijn die in de [ 1} documentatie van de Verklarende woordenlijst {wordt bepaald, terwijl de besluitvormingstermijn ook in de ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#preauthorization) Verklarende woordenlijst [ kan worden gevonden.](rest-api-v2-glossary.md#decision)
 
 In het voorafgaande goedkeuringsbesluit wordt informatie over het onderzoeksresultaat van het MVPD-proces voorafgaand aan de autorisatie opgeslagen die kan worden opgehaald uit het eindpunt van de Besluiten vooraf autoriseren.
 
@@ -452,7 +466,7 @@ De clienttoepassing kan een voorafgaande autorisatiebeslissing voor een beperkt 
 
 Dit maximumaantal middelen kan worden bekeken en veranderd na het akkoord gaan met MVPDs door het Dashboard van Adobe Pass [ TVE ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#tve-dashboard) door één van uw organisatiebeheerders of door een vertegenwoordiger van de Authentificatie van Adobe Pass handelend namens u.
 
-Voor meer details, verwijs naar de [ documentatie van de Gebruiker van de Gids van de Integratie van het Dashboard van 0&rbrace; TVE.](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#add-more-properties)
+Voor meer details, verwijs naar de [ documentatie van de Gebruiker van de Gids van de Integratie van het Dashboard van 0} TVE.](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#add-more-properties)
 
 +++
 
@@ -470,7 +484,7 @@ De autorisatiefase is verplicht, de clienttoepassing kan deze fase niet overslaa
 
 #### &#x200B;3. Wat is een vergunningsbesluit en hoe lang is het geldig? {#authorization-phase-faq3}
 
-De vergunning is een termijn die in de [ 1&rbrace; documentatie van de Verklarende woordenlijst &lbrace;wordt bepaald, terwijl de besluitvormingstermijn ook in de ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#authorization) Verklarende woordenlijst [ kan worden gevonden.](rest-api-v2-glossary.md#decision)
+De vergunning is een termijn die in de [ 1} documentatie van de Verklarende woordenlijst {wordt bepaald, terwijl de besluitvormingstermijn ook in de ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#authorization) Verklarende woordenlijst [ kan worden gevonden.](rest-api-v2-glossary.md#decision)
 
 In het vergunningsbesluit wordt informatie over het onderzoeksresultaat van het MVPD-autorisatieproces opgeslagen die kan worden opgehaald uit het eindpunt van de Besluiten Autoriseren.
 
@@ -485,7 +499,7 @@ Het vergunningsbesluit is geldig voor een beperkte en korte periode die op het o
 
 Dit beperkte die tijdkader als vergunning (authZ) [ wordt bekend TTL ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#ttl) kan door het Dashboard van Adobe Pass [ worden bekeken en worden veranderd TVE ](rest-api-v2-glossary.md#tve-dashboard) door één van uw organisatiebeheerders of door een vertegenwoordiger van de Authentificatie van Adobe Pass handelend namens u.
 
-Voor meer details, verwijs naar de [ documentatie van de Gebruiker van de Gids van de Integratie van het Dashboard van 0&rbrace; TVE.](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#most-used-flows)
+Voor meer details, verwijs naar de [ documentatie van de Gebruiker van de Gids van de Integratie van het Dashboard van 0} TVE.](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#most-used-flows)
 
 #### &#x200B;4. Moet de clienttoepassing de vergunningsbesluiten in een permanente opslag in cache plaatsen? {#authorization-phase-faq4}
 
@@ -593,7 +607,7 @@ De afmeldingsfase is verplicht. De clienttoepassing moet de gebruiker de mogelij
 >
 > Als de clienttoepassing migreert van REST API V1 naar REST API V2, kan de clienttoepassing dezelfde methode blijven gebruiken om de waarde van het toegangstoken van `Bearer` te verkrijgen als voorheen.
 
-De [ verzoekkopbal van de Vergunning 0&rbrace; &lbrace;bevat het ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-authorization.md) toegangstoken dat door de cliënttoepassing wordt vereist om tot Adobe Pass beschermde APIs toegang te hebben.`Bearer`
+De [ verzoekkopbal van de Vergunning 0} {bevat het ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-authorization.md) toegangstoken dat door de cliënttoepassing wordt vereist om tot Adobe Pass beschermde APIs toegang te hebben.`Bearer`
 
 De headerwaarde voor autorisatie moet worden verkregen bij Adobe Pass-verificatie tijdens de registratiefase.
 
@@ -626,7 +640,7 @@ De [ x-apparaat-Info ](/help/authentication/integration-guide-programmers/rest-a
 
 Als [ x-apparaat-Info ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-device-info.md) kopbal mist of onjuiste waarden bevat, kan het verzoek als voortkomend van een `unknown` platform worden geclassificeerd.
 
-Dit kan ertoe leiden dat het verzoek als onveilig wordt behandeld, en onderworpen aan meer beperkende regels, zoals kortere authentificatie TTLs. Bovendien, zijn sommige gebieden, zoals het stromen apparaat `connectionIp` en `connectionPort`, verplicht voor eigenschappen zoals de Authentificatie van de Basis van het Spectrum [&#128279;](/help/authentication/integration-guide-programmers/features-standard/hba-access/home-based-authentication.md).
+Dit kan ertoe leiden dat het verzoek als onveilig wordt behandeld, en onderworpen aan meer beperkende regels, zoals kortere authentificatie TTLs. Bovendien, zijn sommige gebieden, zoals het stromen apparaat `connectionIp` en `connectionPort`, verplicht voor eigenschappen zoals de Authentificatie van de Basis van het Spectrum [ ](/help/authentication/integration-guide-programmers/features-standard/hba-access/home-based-authentication.md).
 
 Zelfs wanneer het verzoek uit een server namens een apparaat voortkomt, moet de [ x-apparaat-Info ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-device-info.md) kopbalwaarde op de daadwerkelijke het stromen apparateninformatie wijzen.
 
@@ -634,7 +648,7 @@ Zelfs wanneer het verzoek uit een server namens een apparaat voortkomt, moet de 
 
 ### Diverse veelgestelde vragen {#misc-faqs-general}
 
-+++Veelgestelde vragen
++++Diverse veelgestelde vragen
 
 #### &#x200B;1. Kan ik de REST API V2-verzoeken en -antwoorden verkennen en de API testen? {#misc-faq1}
 
@@ -645,7 +659,7 @@ U kunt REST API V2 door onze specifieke [ Adobe Developer ](https://developer.ad
 * [ DCR API ](https://developer.adobe.com/adobe-pass/api/dcr_api/interactive/)
 * [ REST API V2 ](https://developer.adobe.com/adobe-pass/api/rest_api_v2/interactive/)
 
-Om met [ REST API V2 ](https://developer.adobe.com/adobe-pass/api/rest_api_v2/interactive/) in wisselwerking te staan, moet u de [ 3&rbrace; kopbal van de Vergunning &lbrace;met a ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-authorization.md) toegangstoken omvatten dat via `Bearer` wordt verkregen DCR API [.](https://developer.adobe.com/adobe-pass/api/dcr_api/interactive/)
+Om met [ REST API V2 ](https://developer.adobe.com/adobe-pass/api/rest_api_v2/interactive/) in wisselwerking te staan, moet u de [ 3} kopbal van de Vergunning {met a ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-authorization.md) toegangstoken omvatten dat via `Bearer` wordt verkregen DCR API [.](https://developer.adobe.com/adobe-pass/api/dcr_api/interactive/)
 
 Voor het gebruiken van [ DCR API ](https://developer.adobe.com/adobe-pass/api/dcr_api/interactive/), wordt een softwareverklaring met REST API V2 werkingsgebied vereist. Voor meer details, verwijs naar het [ Dynamische document van Veelgestelde vragen van de Registratie van de Cliënt (DCR) ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-faqs.md).
 
@@ -671,7 +685,7 @@ De clienttoepassingen die migreren naar REST API V2 moeten het nieuwe testprogra
 * [ DCR API ](https://developer.adobe.com/adobe-pass/api/dcr_api/interactive/)
 * [ REST API V2 ](https://developer.adobe.com/adobe-pass/api/rest_api_v2/interactive/)
 
-Om met [ REST API V2 ](https://developer.adobe.com/adobe-pass/api/rest_api_v2/interactive/) in wisselwerking te staan, moet u de [ 3&rbrace; kopbal van de Vergunning &lbrace;met a ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-authorization.md) toegangstoken omvatten dat via `Bearer` wordt verkregen DCR API [.](https://developer.adobe.com/adobe-pass/api/dcr_api/interactive/)
+Om met [ REST API V2 ](https://developer.adobe.com/adobe-pass/api/rest_api_v2/interactive/) in wisselwerking te staan, moet u de [ 3} kopbal van de Vergunning {met a ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-authorization.md) toegangstoken omvatten dat via `Bearer` wordt verkregen DCR API [.](https://developer.adobe.com/adobe-pass/api/dcr_api/interactive/)
 
 Voor het gebruiken van [ DCR API ](https://developer.adobe.com/adobe-pass/api/dcr_api/interactive/), wordt een softwareverklaring met REST API V2 werkingsgebied vereist. Voor meer details, verwijs naar het [ Dynamische document van Veelgestelde vragen van de Registratie van de Cliënt (DCR) ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-faqs.md).
 
@@ -687,7 +701,7 @@ Ga verder met deze sectie als u werkt aan een toepassing die een bestaande toepa
 
 ### Algemene veelgestelde vragen over migratie {#general-migration-faqs}
 
-+++ Algemene veelgestelde vragen over migratie
++++Algemene veelgestelde vragen over migratie
 
 #### &#x200B;1. Moet ik een nieuwe clienttoepassing implementeren die naar REST API V2 is gemigreerd voor alle gebruikers tegelijk? {#migration-faq1}
 
@@ -792,7 +806,7 @@ Bij de migratie van REST API V1 naar REST API V2 zijn er belangrijke wijzigingen
 
 #### Veelgestelde vragen over de preautorisatiefase {#preauthorization-phase-faqs-migration-rest-api-v1-to-rest-api-v2}
 
-+++Veelgestelde vragen over voorafgaande goedkeuring
++++Veelgestelde vragen over de preautorisatiefase
 
 ##### &#x200B;1. Welke API-migraties op hoog niveau zijn vereist voor de fase voorafgaand aan de autorisatie? {#preauthorization-phase-v1-to-v2-faq1}
 
@@ -964,7 +978,7 @@ Bij de migratie van SDK&#39;s naar REST API V2 zijn er belangrijke wijzigingen d
 
 #### Veelgestelde vragen over de preautorisatiefase {#preauthorization-phase-faqs-migration-sdk-to-rest-api-v2}
 
-+++Veelgestelde vragen over voorafgaande goedkeuring
++++Veelgestelde vragen over de preautorisatiefase
 
 ##### &#x200B;1. Welke API-migraties op hoog niveau zijn vereist voor de fase voorafgaand aan de autorisatie? {#preauthorization-phase-sdk-to-v2-faq1}
 
