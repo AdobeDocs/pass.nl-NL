@@ -339,7 +339,7 @@ X-Device-Info: ewogICJwcmltYXJ5SGFyZHdhcmVUeXBlIiA6ICJNb2JpbGVQaG9uZSIsCiAgIm1vZ
 > 
 > De codefragmenten zijn niet uitputtend en kunnen extra wijzigingen vereisen om in uw project te werken.
 >
-> Ongeacht uw daadwerkelijke implementatie, moet de `X-Device-Info` kopbal een waarde bevatten die zoals in de [ wordt beschreven Richtlijnen ](#directives) sectie.
+> Ongeacht uw daadwerkelijke implementatie, moet de `X-Device-Info` kopbal een waarde bevatten die zoals in de [&#x200B; wordt beschreven Richtlijnen &#x200B;](#directives) sectie.
 
 ### Browsers {#browsers}
 
@@ -351,11 +351,11 @@ U kunt de header van `X-Device-Info` nog steeds gebruiken om aanvullende informa
 
 #### iOS en iPadOS {#ios-ipados}
 
-Om de `X-Device-Info` kopbal voor apparaten te bouwen die [ iOS of iPadOS ](https://developer.apple.com/documentation/ios-ipados-release-notes) in werking stellen, kunt u naar de volgende documenten en onder codefragment verwijzen:
+Om de `X-Device-Info` kopbal voor apparaten te bouwen die [&#x200B; iOS of iPadOS &#x200B;](https://developer.apple.com/documentation/ios-ipados-release-notes) in werking stellen, kunt u naar de volgende documenten en onder codefragment verwijzen:
 
-* Apple ontwikkelaarsdocumentatie voor [ UIDevice ](https://developer.apple.com/documentation/uikit/uidevice#//apple_ref/occ/cl/UIDevice).
-* Apple ontwikkelaarsdocumentatie voor [ Reachability ](https://developer.apple.com/library/archive/samplecode/Reachability/Introduction/Intro.html).
-* De handdocumentatie van Linux voor [ uname ](https://man7.org/linux/man-pages/man2/uname.2.html).
+* Apple ontwikkelaarsdocumentatie voor [&#x200B; UIDevice &#x200B;](https://developer.apple.com/documentation/uikit/uidevice#//apple_ref/occ/cl/UIDevice).
+* Apple ontwikkelaarsdocumentatie voor [&#x200B; Reachability &#x200B;](https://developer.apple.com/library/archive/samplecode/Reachability/Introduction/Intro.html).
+* De handdocumentatie van Linux voor [&#x200B; uname &#x200B;](https://man7.org/linux/man-pages/man2/uname.2.html).
 
 ```C
 + (NSString *)computeClientInformation {        
@@ -452,9 +452,9 @@ De toepassingsinformatie kan als volgt worden samengesteld:
 
 #### Android {#android}
 
-Om de `X-Device-Info` kopbal voor apparaten te bouwen die [ Android ](https://developer.android.com/about/versions) in werking stellen, kunt u naar de volgende documenten en onder codefragment verwijzen:
+Om de `X-Device-Info` kopbal voor apparaten te bouwen die [&#x200B; Android &#x200B;](https://developer.android.com/about/versions) in werking stellen, kunt u naar de volgende documenten en onder codefragment verwijzen:
 
-* De ontwikkelaarsdocumentatie van Android voor [ bouwt ](https://developer.android.com/reference/android/os/Build.html) klasse.
+* De ontwikkelaarsdocumentatie van Android voor [&#x200B; bouwt &#x200B;](https://developer.android.com/reference/android/os/Build.html) klasse.
 
 ```JAVA
 private JSONObject computeClientInformation() {
@@ -559,11 +559,11 @@ De toepassingsinformatie kan als volgt worden samengesteld:
 
 #### tvOS {#tvos}
 
-Om de `X-Device-Info` kopbal voor apparaten te bouwen die [ tvOS ](https://developer.apple.com/documentation/tvos-release-notes) in werking stellen, kunt u naar de volgende documenten en onder codefragment verwijzen:
+Om de `X-Device-Info` kopbal voor apparaten te bouwen die [&#x200B; tvOS &#x200B;](https://developer.apple.com/documentation/tvos-release-notes) in werking stellen, kunt u naar de volgende documenten en onder codefragment verwijzen:
 
-* Apple ontwikkelaarsdocumentatie voor [ UIDevice ](https://developer.apple.com/documentation/uikit/uidevice#//apple_ref/occ/cl/UIDevice).
-* Apple ontwikkelaarsdocumentatie voor [ Reachability ](https://developer.apple.com/library/archive/samplecode/Reachability/Introduction/Intro.html).
-* De handdocumentatie van Linux voor [ uname ](https://man7.org/linux/man-pages/man2/uname.2.html).
+* Apple ontwikkelaarsdocumentatie voor [&#x200B; UIDevice &#x200B;](https://developer.apple.com/documentation/uikit/uidevice#//apple_ref/occ/cl/UIDevice).
+* Apple ontwikkelaarsdocumentatie voor [&#x200B; Reachability &#x200B;](https://developer.apple.com/library/archive/samplecode/Reachability/Introduction/Intro.html).
+* De handdocumentatie van Linux voor [&#x200B; uname &#x200B;](https://man7.org/linux/man-pages/man2/uname.2.html).
 
 ```C
 + (NSString *)computeClientInformation {        
@@ -659,10 +659,10 @@ De toepassingsinformatie kan als volgt worden samengesteld:
 
 #### Fire OS {#fireos}
 
-Om de `X-Device-Info` kopbal voor apparaten te bouwen die [ Vuur OS ](https://developer.amazon.com/docs/fire-tv/fire-os-overview.html) in werking stellen, kunt u naar de volgende documenten verwijzen:
+Om de `X-Device-Info` kopbal voor apparaten te bouwen die [&#x200B; Vuur OS &#x200B;](https://developer.amazon.com/docs/fire-tv/fire-os-overview.html) in werking stellen, kunt u naar de volgende documenten verwijzen:
 
-* De ontwikkelaarsdocumentatie van Android voor [ bouwt ](https://developer.android.com/reference/android/os/Build.html) klasse.
-* De ontwikkelaarsdocumentatie van Amazon voor [ het identificeren van de Apparaten van TV van het Vuur ](https://developer.amazon.com/docs/fire-tv/identify-amazon-fire-tv-devices.html).
+* De ontwikkelaarsdocumentatie van Android voor [&#x200B; bouwt &#x200B;](https://developer.android.com/reference/android/os/Build.html) klasse.
+* De ontwikkelaarsdocumentatie van Amazon voor [&#x200B; het identificeren van de Apparaten van TV van het Vuur &#x200B;](https://developer.amazon.com/docs/fire-tv/identify-amazon-fire-tv-devices.html).
 
 De informatie over de voorziening kan als volgt worden samengesteld:
 
@@ -692,9 +692,9 @@ De toepassingsinformatie kan als volgt worden samengesteld:
 
 #### Roku OS {#rokuos}
 
-Om de `X-Device-Info` kopbal voor apparaten te bouwen die [ Roku OS ](https://developer.roku.com/docs/developer-program/release-notes/roku-os-release-notes.md) in werking stellen, kunt u naar de volgende documenten verwijzen:
+Om de `X-Device-Info` kopbal voor apparaten te bouwen die [&#x200B; Roku OS &#x200B;](https://developer.roku.com/docs/developer-program/release-notes/roku-os-release-notes.md) in werking stellen, kunt u naar de volgende documenten verwijzen:
 
-* De ontwikkelaarsdocumentatie van Roku voor [ ifDeviceInfo ](https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md).
+* De ontwikkelaarsdocumentatie van Roku voor [&#x200B; ifDeviceInfo &#x200B;](https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md).
 
 De informatie over de voorziening kan als volgt worden samengesteld:
 

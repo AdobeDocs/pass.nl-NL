@@ -221,12 +221,12 @@ Voor een verwijderaanvraag:
 
 Er zijn twee opties voor klanten om privacyverzoeken naar Adobe te verzenden:
 
-* **manueel** - door [ Gebruikersinterface van de Privacy Service te gebruiken ](#privacy-service-ui)
-* **automatisch** - door [ Privacy Service API ](#privacy-service-api) te gebruiken
+* **manueel** - door [&#x200B; Gebruikersinterface van de Privacy Service te gebruiken &#x200B;](#privacy-service-ui)
+* **automatisch** - door [&#x200B; Privacy Service API &#x200B;](#privacy-service-api) te gebruiken
 
 ### Door Privacy Service UI te gebruiken {#privacy-service-ui}
 
-A [ volledig leerprogramma ](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=nl-NL#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md) op hoe te om tot Privacy Service Gebruikersinterface toegang te hebben en te gebruiken is online door de diensten van de Adobe I/O beschikbaar. Bovendien kunnen klanten deze koppeling gebruiken om toegang te krijgen tot een bibliotheek met video&#39;s en artikelen over privacyregels. Klik op het menu Adobe Experience Cloud en GDPR. Hiermee wordt een aantal video&#39;s geopend - &quot;GDPR UI How-to&quot; legt uit hoe u deze kunt gebruiken.
+A [&#x200B; volledig leerprogramma &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=nl-NL#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md) op hoe te om tot Privacy Service Gebruikersinterface toegang te hebben en te gebruiken is online door de diensten van de Adobe I/O beschikbaar. Bovendien kunnen klanten deze koppeling gebruiken om toegang te krijgen tot een bibliotheek met video&#39;s en artikelen over privacyregels. Klik op het menu Adobe Experience Cloud en GDPR. Hiermee wordt een aantal video&#39;s geopend - &quot;GDPR UI How-to&quot; legt uit hoe u deze kunt gebruiken.
 
 In de gebruikersinterface moeten klanten hun eigen IMSOrgID laden en een JSON met GDPR-aanvraaggegevens voor elk product.
 
@@ -238,9 +238,9 @@ De **Privacy Service API documentatie** behandelt diepgaand hoe een Adobe klant 
 
 **visualiseer API vraag met Postman (een vrije, derdesoftware):**
 
-* [ Privacy Service API Postman inzameling op GitHub ](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Privacy%20Service%20API.postman_collection.json)
-* [ de gids van de Video voor het creëren van het milieu van Postman ](https://video.tv.adobe.com/v/28832)
-* [ Stappen voor het invoeren van milieu&#39;s en inzamelingen in Postman ](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/)
+* [&#x200B; Privacy Service API Postman inzameling op GitHub &#x200B;](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Privacy%20Service%20API.postman_collection.json)
+* [&#x200B; de gids van de Video voor het creëren van het milieu van Postman &#x200B;](https://video.tv.adobe.com/v/28832)
+* [&#x200B; Stappen voor het invoeren van milieu&#39;s en inzamelingen in Postman &#x200B;](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/)
 
 
 **API wegen:**

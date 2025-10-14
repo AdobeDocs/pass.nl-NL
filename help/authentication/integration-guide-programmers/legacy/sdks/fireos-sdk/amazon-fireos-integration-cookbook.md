@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 </br>
 
@@ -132,7 +132,7 @@ De parameter `event` geeft aan welke machtigingsgebeurtenis heeft plaatsgevonden
    1. Wacht op het teweegbrengen van `setRequestorComplete()` callback (deel van `AccessEnabler` afgevaardigde).  Deze optie biedt de meeste zekerheid dat `setRequestor()` is voltooid en wordt daarom aangeraden voor de meeste implementaties.
    1. Ga verder zonder te wachten op het activeren van de callback van `setRequestorComplete()` en geef aanvragen voor machtigingen af. Deze vraag (checkAuthentication, checkAuthorization, getAuthentication, getAuthorization, checkPreauthorisedResource, getMetadata, logout) wordt een rij gevormd door de `AccessEnabler` bibliotheek, die de daadwerkelijke netwerkvraag na `setRequestor()` zal maken. Deze optie kan af en toe worden onderbroken als bijvoorbeeld de netwerkverbinding instabiel is.
 
-1. Vraag [ checkAuthentication () ](#$checkAuthN) om een bestaande authentificatie te controleren zonder de volledige stroom van de Authentificatie in werking te stellen.  Als deze vraag slaagt, kunt u aan de stroom van de Vergunning direct te werk gaan.  Zo niet, ga dan door naar de verificatiestroom.
+1. Vraag [&#x200B; checkAuthentication () &#x200B;](#$checkAuthN) om een bestaande authentificatie te controleren zonder de volledige stroom van de Authentificatie in werking te stellen.  Als deze vraag slaagt, kunt u aan de stroom van de Vergunning direct te werk gaan.  Zo niet, ga dan door naar de verificatiestroom.
 
 - **Afhankelijkheid:** Een succesvolle vraag aan `setRequestor()` (dit gebiedsdeel is eveneens op alle verdere vraag van toepassing).
 
@@ -144,7 +144,7 @@ De parameter `event` geeft aan welke machtigingsgebeurtenis heeft plaatsgevonden
 
    **Trekkers:**
 
-   - De callback setAuthenticationStatus(), als de gebruiker al is geverifieerd.  In dit geval, ga direct aan de [ Stroom van de Vergunning ](#authz_flow) te werk.
+   - De callback setAuthenticationStatus(), als de gebruiker al is geverifieerd.  In dit geval, ga direct aan de [&#x200B; Stroom van de Vergunning &#x200B;](#authz_flow) te werk.
    - De callback displayProviderDialog(), als de gebruiker nog niet is geverifieerd.
 
 1. Geef de gebruiker de lijst met providers weer die naar `displayProviderDialog()` is verzonden.
@@ -193,7 +193,7 @@ De parameter `event` geeft aan welke machtigingsgebeurtenis heeft plaatsgevonden
 
 1. De gebruiker selecteert de media die u wilt weergeven.
 1. Zijn de media beveiligd?  Uw toepassing controleert of het geselecteerde medium is beveiligd:
-   - Als de geselecteerde media beschermd is, begint uw toepassing de [ Stroom van de Vergunning ](#authz_flow) hierboven.
+   - Als de geselecteerde media beschermd is, begint uw toepassing de [&#x200B; Stroom van de Vergunning &#x200B;](#authz_flow) hierboven.
    - Als het geselecteerde medium niet is beveiligd, speelt u de media voor de gebruiker af.
 
 ### F. Afmeldingsstroom {#logout_flow}

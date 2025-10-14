@@ -12,7 +12,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 Op deze pagina worden nieuwe functies, wijzigingen en bekende problemen met deze release beschreven:
 
@@ -30,4 +30,4 @@ Er wordt echter geen kritieke informatie opgeslagen en de kans dat een gebruiker
 
 ## Geen pakket {#release-package-380}
 
-U kunt Android SDK v3.8.0 van [ hier downloaden ](https://tve.zendesk.com/hc/en-us/articles/204963219-Android-Native-AccessEnabler-Library).
+U kunt Android SDK v3.8.0 van [&#x200B; hier downloaden &#x200B;](https://tve.zendesk.com/hc/en-us/articles/204963219-Android-Native-AccessEnabler-Library).

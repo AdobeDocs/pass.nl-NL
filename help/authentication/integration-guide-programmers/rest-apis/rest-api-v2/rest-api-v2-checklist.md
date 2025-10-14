@@ -15,7 +15,7 @@ ht-degree: 0%
 >
 > De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
-Dit document voegt op één plaats de verplichte vereisten en geadviseerde praktijken voor Programmers samen die cliënttoepassingen uitvoeren die de Authentificatie van Adobe Pass [ VERTONEN API V2 ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md) verbruiken.
+Dit document voegt op één plaats de verplichte vereisten en geadviseerde praktijken voor Programmers samen die cliënttoepassingen uitvoeren die de Authentificatie van Adobe Pass [&#x200B; VERTONEN API V2 &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md) verbruiken.
 
 Het volgende document moet als onderdeel van uw acceptatiecriteria worden beschouwd bij de implementatie van REST API V2 en moet als controlelijst worden gebruikt om ervoor te zorgen dat alle noodzakelijke stappen zijn gezet om een succesvolle integratie te bereiken.
 

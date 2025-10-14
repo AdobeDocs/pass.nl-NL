@@ -20,7 +20,7 @@ ht-degree: 0%
 
 De </b> verzoekkopbal van de Vergunning 0&rbrace; &lbrace;bevat het `Bearer` toegangstoken dat door de cliënttoepassing wordt vereist om tot Adobe Pass beschermde APIs toegang te hebben.<b>
 
-Voor meer details over het mechanisme om tot Adobe Pass beschermde APIs toegang te hebben, verwijs naar het [ Dynamische Overzicht van de Registratie van de Cliënt 1&rbrace; documentatie.](../../../rest-api-dcr/dynamic-client-registration-overview.md)
+Voor meer details over het mechanisme om tot Adobe Pass beschermde APIs toegang te hebben, verwijs naar het [&#x200B; Dynamische Overzicht van de Registratie van de Cliënt 1&rbrace; documentatie.](../../../rest-api-dcr/dynamic-client-registration-overview.md)
 
 ## Syntaxis {#syntax}
 
@@ -42,7 +42,7 @@ Voor meer details over het mechanisme om tot Adobe Pass beschermde APIs toegang 
 
 <b> &lt;access_token></b>
 
-De waarde van het toegangstoken is een ondoorzichtige waarde die een beperkte tijd-aan-levende (b.v., 24 uur) heeft die van Adobe Pass moet worden verkregen zoals die in [ wordt beschreven terugwinnen toegangstoken ](../../../rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md) API documentatie.
+De waarde van het toegangstoken is een ondoorzichtige waarde die een beperkte tijd-aan-levende (b.v., 24 uur) heeft die van Adobe Pass moet worden verkregen zoals die in [&#x200B; wordt beschreven terugwinnen toegangstoken &#x200B;](../../../rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md) API documentatie.
 
 ## Voorbeelden {#examples}
 

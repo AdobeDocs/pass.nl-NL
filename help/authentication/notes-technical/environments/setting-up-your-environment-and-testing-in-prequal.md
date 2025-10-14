@@ -115,6 +115,6 @@ Addresses:  52.26.79.43
 
 ## STAP 6.  Testen met de API-testsite {#perform-testing-using-api-testing-site}
 
-* Als u dieper in het testen van de Authentificatie van Adobe Pass wilt gaan, adviseren wij u de [ API testplaats ](http://entitlement-prequal.auth.adobe.com/apitest/api.html) gebruiken.
+* Als u dieper in het testen van de Authentificatie van Adobe Pass wilt gaan, adviseren wij u de [&#x200B; API testplaats &#x200B;](http://entitlement-prequal.auth.adobe.com/apitest/api.html) gebruiken.
 
 Meer informatie over de API-testsite vindt u op [Verificatie- en autorisatiestromen testen met behulp van de API-testsite](/help/authentication/integration-guide-programmers/legacy/notes-technical/test-authn-authz-flows-using-adobes-api-test-site.md) van Adobe.

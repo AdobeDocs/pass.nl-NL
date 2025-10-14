@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 ## Overzicht
 
@@ -31,7 +31,7 @@ Het doel van het registratiemechanisme van AccessEnabler iOS/tvOS is het uitzend
 
 Vanaf de AccessEnabler iOS/tvOS 3.5.0-versie introduceert het registratiemechanisme de volgende verbeteringen als wijzigingen:
 
-* Het kader van AccessEnabler gebruikt Apple geadviseerde [ OSLog ](https://developer.apple.com/documentation/os/oslog) implementatie.
+* Het kader van AccessEnabler gebruikt Apple geadviseerde [&#x200B; OSLog &#x200B;](https://developer.apple.com/documentation/os/oslog) implementatie.
 
 * Het kader van AccessEnabler introduceert de capaciteit om de toepassingslogboeken van de Console te filtreren die op Subsystem worden gebaseerd: **com.adobe.pass.AccessEnabler**. Alle berichten die door de SDK worden verzonden, maken deel uit van com.adobe.pass.AccessEnabler.
 
@@ -80,4 +80,4 @@ Neem de volgende suggesties in overweging wanneer u een probleem meldt voor Adob
 * Geef de reproductiestappen op.
 * Geef de versie(s) van het besturingssysteem en het apparaatmodel of de apparaatmodellen op waarop het probleem zich voordoet.
 * Geef de versie op van AccessEnabler iOS/tvOS SDK die dit probleem ondervindt.
-* gelieve te proberen om alle het registrerenberichten vast te leggen AccessEnabler iOS/tvOS SDK gebruikend één van beide opties die in [ worden voorgesteld die ](#including) sectie omvatten.
+* gelieve te proberen om alle het registrerenberichten vast te leggen AccessEnabler iOS/tvOS SDK gebruikend één van beide opties die in [&#x200B; worden voorgesteld die &#x200B;](#including) sectie omvatten.

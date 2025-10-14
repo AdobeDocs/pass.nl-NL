@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> De dynamische implementatie van de Registratie API van de Cliënt wordt begrensd door de [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
+> De dynamische implementatie van de Registratie API van de Cliënt wordt begrensd door de [&#x200B; Throttling mechanisme &#x200B;](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
 
 ## Toegang tot API&#39;s die met Adobe Pass zijn beveiligd {#access-adobe-pass-protected-apis}
 
@@ -25,8 +25,8 @@ ht-degree: 0%
 
 Controleer voordat u API&#39;s die met Adobe Pass zijn beveiligd, opent of aan de volgende voorwaarden is voldaan:
 
-* Een cliëntvertegenwoordiger moet een geregistreerde toepassing tot stand brengen zoals die in [ wordt beschreven leidt geregistreerde toepassingen ](../dynamic-client-registration-overview.md#manage-registered-applications) sectie.
-* Een cliëntvertegenwoordiger moet een softwareverklaring downloaden en inbedden zoals die in [ wordt beschreven leidt softwareverklaringen ](../dynamic-client-registration-overview.md#manage-software-statements) sectie.
+* Een cliëntvertegenwoordiger moet een geregistreerde toepassing tot stand brengen zoals die in [&#x200B; wordt beschreven leidt geregistreerde toepassingen &#x200B;](../dynamic-client-registration-overview.md#manage-registered-applications) sectie.
+* Een cliëntvertegenwoordiger moet een softwareverklaring downloaden en inbedden zoals die in [&#x200B; wordt beschreven leidt softwareverklaringen &#x200B;](../dynamic-client-registration-overview.md#manage-software-statements) sectie.
 
 >[!IMPORTANT]
 >
@@ -38,7 +38,7 @@ Controleer voordat u API&#39;s die met Adobe Pass zijn beveiligd, opent of aan d
 
 Voer de opgegeven stappen uit om toegang te krijgen tot API&#39;s die met Adobe Pass zijn beveiligd, zoals in het volgende diagram wordt getoond.
 
-![ Toegang Adobe Pass beschermde APIs ](../../../../assets/dcr-api/dcr-api-access-adobe-pass-protected-apis.png)
+![&#x200B; Toegang Adobe Pass beschermde APIs &#x200B;](../../../../assets/dcr-api/dcr-api-access-adobe-pass-protected-apis.png)
 
 *Toegang Adobe Pass beschermde APIs*
 
@@ -46,7 +46,7 @@ Voer de opgegeven stappen uit om toegang te krijgen tot API&#39;s die met Adobe 
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [ terugwinnen cliëntgeloofsbrieven ](../apis/dynamic-client-registration-apis-retrieve-client-credentials.md#request) API documentatie voor details op:
+   > Verwijs naar [&#x200B; terugwinnen cliëntgeloofsbrieven &#x200B;](../apis/dynamic-client-registration-apis-retrieve-client-credentials.md#request) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `software_statement`
    > * Alle _vereiste_ kopballen, als `Content-Type`, `X-Device-Info`
@@ -56,7 +56,7 @@ Voer de opgegeven stappen uit om toegang te krijgen tot API&#39;s die met Adobe 
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [ terugwinnen cliëntgeloofsbrieven ](../apis/dynamic-client-registration-apis-retrieve-client-credentials.md#success) API documentatie voor details over de informatie die in een reactie van de cliëntgeloofsbrieven wordt verstrekt.
+   > Verwijs naar [&#x200B; terugwinnen cliëntgeloofsbrieven &#x200B;](../apis/dynamic-client-registration-apis-retrieve-client-credentials.md#success) API documentatie voor details over de informatie die in een reactie van de cliëntgeloofsbrieven wordt verstrekt.
    >
    > <br/>
    >
@@ -66,7 +66,7 @@ Voer de opgegeven stappen uit om toegang te krijgen tot API&#39;s die met Adobe 
    >
    > <br/>
    >
-   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, die extra informatie verstrekken die aan [ voldoet wint cliëntgeloofsbrieven ](../apis/dynamic-client-registration-apis-retrieve-client-credentials.md#error) API documentatie terug.
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, die extra informatie verstrekken die aan [&#x200B; voldoet wint cliëntgeloofsbrieven &#x200B;](../apis/dynamic-client-registration-apis-retrieve-client-credentials.md#error) API documentatie terug.
 
    >[!TIP]
    >
@@ -76,7 +76,7 @@ Voer de opgegeven stappen uit om toegang te krijgen tot API&#39;s die met Adobe 
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [ ophalen toegangstoken ](../apis/dynamic-client-registration-apis-retrieve-access-token.md#request) API documentatie voor details op:
+   > Verwijs naar [&#x200B; ophalen toegangstoken &#x200B;](../apis/dynamic-client-registration-apis-retrieve-access-token.md#request) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `client_id`, `client_secret`, en `grant_type`
    > * Alle _vereiste_ kopballen, als `Content-Type`, `X-Device-Info`
@@ -86,7 +86,7 @@ Voer de opgegeven stappen uit om toegang te krijgen tot API&#39;s die met Adobe 
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [ ophalen toegangstoken ](../apis/dynamic-client-registration-apis-retrieve-access-token.md#success) API documentatie voor details over de informatie die in een reactie van het toegangstoken wordt verstrekt.
+   > Verwijs naar [&#x200B; ophalen toegangstoken &#x200B;](../apis/dynamic-client-registration-apis-retrieve-access-token.md#success) API documentatie voor details over de informatie die in een reactie van het toegangstoken wordt verstrekt.
    >
    > <br/>
    >
@@ -96,7 +96,7 @@ Voer de opgegeven stappen uit om toegang te krijgen tot API&#39;s die met Adobe 
    >
    > <br/>
    >
-   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, die extra informatie verstrekken die aan [ voldoet verkrijgt toegangstoken ](../apis/dynamic-client-registration-apis-retrieve-access-token.md#error) API documentatie.
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, die extra informatie verstrekken die aan [&#x200B; voldoet verkrijgt toegangstoken &#x200B;](../apis/dynamic-client-registration-apis-retrieve-access-token.md#error) API documentatie.
 
    >[!TIP]
    >
@@ -114,4 +114,4 @@ Voer de opgegeven stappen uit om toegang te krijgen tot API&#39;s die met Adobe 
    >
    > <br/>
    >
-   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.

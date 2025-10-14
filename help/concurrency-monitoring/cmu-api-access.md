@@ -26,10 +26,10 @@ Voer de stappen in de onderstaande secties uit om toegang te krijgen.
 
 ## Toegangsprocedures {#access-procedure-steps}
 
-1. Een geregistreerde toepassing hebben op de Adobe Pass DCR-server. Voor deze stap gelieve ons [ Team van de Steun ](mailto:tve-support@adobe.com) te contacteren.
+1. Een geregistreerde toepassing hebben op de Adobe Pass DCR-server. Voor deze stap gelieve ons [&#x200B; Team van de Steun &#x200B;](mailto:tve-support@adobe.com) te contacteren.
 
 2. De software-instructie ophalen
-   1. Ga naar [ Adobe Pass TVE Dashboard ](https://experience.adobe.com/#/pass/authentication)
+   1. Ga naar [&#x200B; Adobe Pass TVE Dashboard &#x200B;](https://experience.adobe.com/#/pass/authentication)
    2. Programmeur selecteren
    3. Ga naar *Geregistreerde Toepassingen* lusje
    4. Toepassing selecteren

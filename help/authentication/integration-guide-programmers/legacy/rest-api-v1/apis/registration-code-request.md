@@ -19,21 +19,21 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 >[!NOTE]
 >
-> De implementatie van REST API wordt begrensd door [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md)
+> De implementatie van REST API wordt begrensd door [&#x200B; Throttling mechanisme &#x200B;](/help/authentication/integration-guide-programmers/throttling-mechanism.md)
 
 &lt;REGGIE_FQDN>:
 
-* Productie - [ api.auth.adobe.com ](http://api.auth.adobe.com/)
-* Het opvoeren - [ api.auth-staging.adobe.com ](http://api.auth-staging.adobe.com/)
+* Productie - [&#x200B; api.auth.adobe.com &#x200B;](http://api.auth.adobe.com/)
+* Het opvoeren - [&#x200B; api.auth-staging.adobe.com &#x200B;](http://api.auth-staging.adobe.com/)
 
 &lt;SP_FQDN>:
 
-* Productie - [ api.auth.adobe.com ](http://api.auth.adobe.com/)
-* Het opvoeren - [ api.auth-staging.adobe.com ](http://api.auth-staging.adobe.com/)
+* Productie - [&#x200B; api.auth.adobe.com &#x200B;](http://api.auth.adobe.com/)
+* Het opvoeren - [&#x200B; api.auth-staging.adobe.com &#x200B;](http://api.auth-staging.adobe.com/)
 
 <br>
 
@@ -53,7 +53,7 @@ Retourneert willekeurig gegenereerde registratie- en aanmeldingspagina-URI.
 | Accepteren | Koptekst <br> Waarde: toepassing/json | aangeven welk inhoudstype de client moet kunnen begrijpen |
 | aanvrager | Query-parameter | De programmeeraanvragerId waarvoor deze verrichting geldig is. |
 | deviceId | Query-parameter | Het apparaat-id bytes. |
-| device_info/<br> x-apparaat-Info | device_info: Body <br> X-Device-Info: Koptekst | Informatie over streaming apparaat.<br>**Nota**: Dit KAN device_info als parameter worden overgegaan URL, maar wegens de potentiële grootte van deze parameter en beperkingen op de lengte van een GET URL, ZOU het als x-Apparaat-Info in de kopbal van http moeten worden overgegaan. <br> zie de volledige details in [ het overgaan van Apparaat en de Informatie van de Verbinding ](/help/authentication/integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md). |
+| device_info/<br> x-apparaat-Info | device_info: Body <br> X-Device-Info: Koptekst | Informatie over streaming apparaat.<br>**Nota**: Dit KAN device_info als parameter worden overgegaan URL, maar wegens de potentiële grootte van deze parameter en beperkingen op de lengte van een GET URL, ZOU het als x-Apparaat-Info in de kopbal van http moeten worden overgegaan. <br> zie de volledige details in [&#x200B; het overgaan van Apparaat en de Informatie van de Verbinding &#x200B;](/help/authentication/integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md). |
 | mvpd | Query-parameter | De MVPD-id waarvoor deze bewerking geldig is. |
 | ttl | Query-parameter | Hoe lang deze regcode in seconden zou moeten leven.<br>**Nota**: De maximumwaarde die voor ttl wordt toegestaan is 36000 seconden (10 uren). Hogere waarden resulteren in een 400 HTTP-respons (onjuiste aanvraag). Als `ttl` leeg blijft, stelt Adobe Pass Authentication een standaardwaarde van 30 minuten in. |
 | _deviceType_ | Query-parameter | Vervangen, niet gebruiken. |

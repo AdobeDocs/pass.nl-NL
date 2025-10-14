@@ -18,7 +18,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 </br>
 
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 FireOS AccessEnabler SDK for FireTV is gewijzigd om verificatie in te schakelen zonder sessiecookies te gebruiken. Aangezien steeds meer browsers de toegang tot cookies beperken, was een andere methode nodig om verificatie toe te staan.
 
-**FireOS SDK 3.0.4** vervangt het huidige mechanisme van de toepassingsregistratie dat op ondertekende identiteitskaart van de aanvrager en de authentificatie van het zittingskoekje met [ Dynamisch Overzicht van de Registratie van de Cliënt ](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) wordt gebaseerd.
+**FireOS SDK 3.0.4** vervangt het huidige mechanisme van de toepassingsregistratie dat op ondertekende identiteitskaart van de aanvrager en de authentificatie van het zittingskoekje met [&#x200B; Dynamisch Overzicht van de Registratie van de Cliënt &#x200B;](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) wordt gebaseerd.
 
 
 ## API-wijzigingen {#API}

@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 Op deze pagina worden nieuwe functies, wijzigingen en bekende problemen met deze release beschreven:
 
@@ -25,7 +25,7 @@ Datum van de versie: **02/14/2020**
 
 ## Overzicht van release {#release-overview-420}
 
-* Updates om het nieuwe beleid voor koekjes te steunen SameSite (gedetailleerd [ hier ](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-same-site-00)).
+* Updates om het nieuwe beleid voor koekjes te steunen SameSite (gedetailleerd [&#x200B; hier &#x200B;](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-same-site-00)).
 
 ## Geen pakket {#release-package-420}
 

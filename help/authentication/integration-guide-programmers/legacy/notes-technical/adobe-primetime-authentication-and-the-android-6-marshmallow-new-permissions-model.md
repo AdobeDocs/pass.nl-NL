@@ -17,20 +17,20 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 </br>
 
 De nieuwe Android 6 Marshmallow-versie introduceert enkele updates van het machtigingenmodel, die het gedrag kunnen beïnvloeden van apps die de bestaande Adobe Pass Authentication SDK versie 1.8 en ouder gebruiken.
 
-Als nieuwe eigenschap, biedt nieuw Android OS [ korrelige controle over de toestemmingen aan die apps op het tijdstip van installatie en bij runtime ](https://developer.android.com/about/versions/marshmallow/android-6.0-changes.html) vereisen.
+Als nieuwe eigenschap, biedt nieuw Android OS [&#x200B; korrelige controle over de toestemmingen aan die apps op het tijdstip van installatie en bij runtime &#x200B;](https://developer.android.com/about/versions/marshmallow/android-6.0-changes.html) vereisen.
 
 >[!IMPORTANT]
 >
 >De hieronder beschreven veranderingen zullen **slechts toepassingen beïnvloeden die specifiek voor Android 6.0** worden ontwikkeld (targetSdkVersion=23). Ze zijn niet van invloed op oudere toepassingen die al op het apparaat van de gebruiker zijn geïnstalleerd tijdens de upgrade naar Android 6.0.
 
 
-Specifiek, voor apps die in de Studio van Android worden ontwikkeld gebruikend [ API niveau 23 ](http://developer.android.com/sdk/api_diff/23/changes.html) en die de Authentificatie SDK van Adobe Pass gebruiken, zal de ontwikkelaar douanecode (zie codefragment hieronder) [ moeten schrijven om toe te laten/ontkennen toestemmingendialoog ](https://developer.android.com/training/permissions/requesting.html) te teweegbrengen.
+Specifiek, voor apps die in de Studio van Android worden ontwikkeld gebruikend [&#x200B; API niveau 23 &#x200B;](http://developer.android.com/sdk/api_diff/23/changes.html) en die de Authentificatie SDK van Adobe Pass gebruiken, zal de ontwikkelaar douanecode (zie codefragment hieronder) [&#x200B; moeten schrijven om toe te laten/ontkennen toestemmingendialoog &#x200B;](https://developer.android.com/training/permissions/requesting.html) te teweegbrengen.
 
 Hier volgt het codefragment dat wordt gebruikt voor het aanvragen van schrijftoegang tot de externe opslag van het apparaat:
 

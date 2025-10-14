@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 Er is een wijziging opgetreden in de manier waarop Adobe Pass Authentication preAuthorizeResources berekent. De preAuthorization API heeft een nieuwe implementatie. Deze implementatie vervangt de oude oplossing, die inhoudt dat alleen meerdere toelatingseisen worden gesteld.
 De externe interface voor de preAuthorization API is onveranderd, worden geen updates vereist in de toepassing van de Programmer.

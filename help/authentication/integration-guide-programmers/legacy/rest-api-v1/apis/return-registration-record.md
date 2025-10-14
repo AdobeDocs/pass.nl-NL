@@ -17,23 +17,23 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 >[!NOTE]
 >
-> De implementatie van REST API wordt begrensd door [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md)
+> De implementatie van REST API wordt begrensd door [&#x200B; Throttling mechanisme &#x200B;](/help/authentication/integration-guide-programmers/throttling-mechanism.md)
 
 ## REST API-eindpunten {#clientless-endpoints}
 
 `<REGGIE_FQDN>`:
 
-* Productie - [ api.auth.adobe.com ](http://api.auth.adobe.com/)
-* Het opvoeren - [ api.auth-staging.adobe.com ](http://api.auth-staging.adobe.com/)
+* Productie - [&#x200B; api.auth.adobe.com &#x200B;](http://api.auth.adobe.com/)
+* Het opvoeren - [&#x200B; api.auth-staging.adobe.com &#x200B;](http://api.auth-staging.adobe.com/)
 
 `<SP_FQDN>`:
 
-* Productie - [ api.auth.adobe.com ](http://api.auth.adobe.com/)
-* Het opvoeren - [ api.auth-staging.adobe.com ](http://api.auth-staging.adobe.com/)
+* Productie - [&#x200B; api.auth.adobe.com &#x200B;](http://api.auth.adobe.com/)
+* Het opvoeren - [&#x200B; api.auth-staging.adobe.com &#x200B;](http://api.auth-staging.adobe.com/)
 
 
 

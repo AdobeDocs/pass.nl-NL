@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 ## Overzicht {#overview}
 
@@ -25,7 +25,7 @@ Het doel van dit kookboekdocument is om beste praktijken voor het uitvoeren van 
 
 ### Draaimechanisme
 
-De Adobe Pass Authentificatie REST API wordt geregeerd door a [ het Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md).
+De Adobe Pass Authentificatie REST API wordt geregeerd door a [&#x200B; het Throttling mechanisme &#x200B;](/help/authentication/integration-guide-programmers/throttling-mechanism.md).
 
 
 ## Componenten {#components}
@@ -48,7 +48,7 @@ In een werkende server-aan-server oplossing zijn de volgende componenten betrokk
 ### Dynamische clientregistratie (DCR)
 
 
-Adobe Pass gebruikt DCR om clientcommunicatie tussen een programmeertoepassing of server en de Adobe Pass-services te beveiligen. De stroom DCR is afzonderlijk en beschreven in het [ Dynamische Overzicht van de Registratie van de Cliënt ](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) documentatie.
+Adobe Pass gebruikt DCR om clientcommunicatie tussen een programmeertoepassing of server en de Adobe Pass-services te beveiligen. De stroom DCR is afzonderlijk en beschreven in het [&#x200B; Dynamische Overzicht van de Registratie van de Cliënt &#x200B;](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) documentatie.
 
 
 ### Verificatie (authN)

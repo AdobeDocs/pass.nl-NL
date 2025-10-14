@@ -17,23 +17,23 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 >[!NOTE]
 >
-> De implementatie van REST API wordt begrensd door [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md)
+> De implementatie van REST API wordt begrensd door [&#x200B; Throttling mechanisme &#x200B;](/help/authentication/integration-guide-programmers/throttling-mechanism.md)
 
 ## REST API-eindpunten {#clientless-endpoints}
 
 &lt;REGGIE_FQDN>:
 
-* Productie - [ api.auth.adobe.com ](http://api.auth.adobe.com/)
-* Het opvoeren - [ api.auth-staging.adobe.com ](http://api.auth-staging.adobe.com/)
+* Productie - [&#x200B; api.auth.adobe.com &#x200B;](http://api.auth.adobe.com/)
+* Het opvoeren - [&#x200B; api.auth-staging.adobe.com &#x200B;](http://api.auth-staging.adobe.com/)
 
 &lt;SP_FQDN>:
 
-* Productie - [ api.auth.adobe.com ](http://api.auth.adobe.com/)
-* Het opvoeren - [ api.auth-staging.adobe.com ](http://api.auth-staging.adobe.com/)
+* Productie - [&#x200B; api.auth.adobe.com &#x200B;](http://api.auth.adobe.com/)
+* Het opvoeren - [&#x200B; api.auth-staging.adobe.com &#x200B;](http://api.auth-staging.adobe.com/)
 
 </br>
 
@@ -55,11 +55,11 @@ Hiermee kunt u een verificatietoken maken voor Temperatuur-controle en Tijdelijk
 | deviceId | Het apparaat-id bytes. |
 | mso_id | De MVPD-id waarvoor deze bewerking geldig is. |
 | domain_name | De domeinnaam waarvoor een token wordt toegekend. Dit wordt vergeleken met de domeinen van de dienstverlener wanneer een toestemmingstoken wordt verleend. |
-| device_info/</br></br> x-apparaat-Info | Informatie over streaming apparaat.</br></br>**Nota**: Dit KAN device_info als parameter worden overgegaan URL, maar wegens de potentiële grootte van deze parameter en beperkingen op de lengte van een GET URL, ZOU het als x-Apparaat-Info in de kopbal van http moeten worden overgegaan. </br></br> zie de volledige details in [ het overgaan van Apparaat en de Informatie van de Verbinding ](/help/authentication/integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md). |
-| _deviceType_ | Het apparaattype (bijvoorbeeld Roku, PC).</br></br> als deze parameter correct wordt geplaatst, biedt ESM metriek aan die [ uitgesplitst per apparatentype ](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview.md#clientless_device_type) zijn wanneer het gebruiken van Clientless, zodat de verschillende soorten analyse voor bijvoorbeeld Roku, AppleTV, Xbox enz. kunnen worden uitgevoerd.</br></br> zie [ Voordelen om clientless parameters van het apparatentype ](/help/authentication/integration-guide-programmers/legacy/notes-technical/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**Nota** te gebruiken: device_info zal deze parameter vervangen. |
-| _deviceUser_ | De gebruikers-id van het apparaat.</br></br>**Nota**: Als gebruikt, zou deviceUser de zelfde waarden moeten hebben zoals in [ creeer de verzoek van de Code van de Registratie ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md). |
-| _appId_ | De toepassings-id/-naam. </br></br>**Nota**: device_info vervangt deze parameter. Indien gebruikt, `appId` zou de zelfde waarden moeten hebben zoals in [ creeer de verzoek van de Code van de Registratie ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md). |
+| device_info/</br></br> x-apparaat-Info | Informatie over streaming apparaat.</br></br>**Nota**: Dit KAN device_info als parameter worden overgegaan URL, maar wegens de potentiële grootte van deze parameter en beperkingen op de lengte van een GET URL, ZOU het als x-Apparaat-Info in de kopbal van http moeten worden overgegaan. </br></br> zie de volledige details in [&#x200B; het overgaan van Apparaat en de Informatie van de Verbinding &#x200B;](/help/authentication/integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md). |
+| _deviceType_ | Het apparaattype (bijvoorbeeld Roku, PC).</br></br> als deze parameter correct wordt geplaatst, biedt ESM metriek aan die [&#x200B; uitgesplitst per apparatentype &#x200B;](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview.md#clientless_device_type) zijn wanneer het gebruiken van Clientless, zodat de verschillende soorten analyse voor bijvoorbeeld Roku, AppleTV, Xbox enz. kunnen worden uitgevoerd.</br></br> zie [&#x200B; Voordelen om clientless parameters van het apparatentype &#x200B;](/help/authentication/integration-guide-programmers/legacy/notes-technical/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**Nota** te gebruiken: device_info zal deze parameter vervangen. |
+| _deviceUser_ | De gebruikers-id van het apparaat.</br></br>**Nota**: Als gebruikt, zou deviceUser de zelfde waarden moeten hebben zoals in [&#x200B; creeer de verzoek van de Code van de Registratie &#x200B;](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md). |
+| _appId_ | De toepassings-id/-naam. </br></br>**Nota**: device_info vervangt deze parameter. Indien gebruikt, `appId` zou de zelfde waarden moeten hebben zoals in [&#x200B; creeer de verzoek van de Code van de Registratie &#x200B;](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md). |
 | generic_data | Gebruikt om het werkingsgebied van het teken voor de Pass van de Bevorderingstemperatuur te beperken. |
 
 
-### [ Terug naar REST API Verwijzing ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/rest-api-reference.md)
+### [&#x200B; Terug naar REST API Verwijzing &#x200B;](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/rest-api-reference.md)

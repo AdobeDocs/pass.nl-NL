@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 Op deze pagina worden nieuwe functies, wijzigingen en bekende problemen met deze release beschreven:
 
@@ -26,10 +26,10 @@ Datum van de versie: **09/19/2023**
 ## Overzicht van release {#release-overview-373}
 
 * Wijzigingen voor ondersteuning voor Android 14 en toepassingen die gericht zijn op API-niveau 34
-   * Voeg vlag toe die door [ Android 14 runtime-geregistreerde uitzendingen ontvangers ](https://developer.android.com/about/versions/14/behavior-changes-14#runtime-receivers-exported) wordt vereist.
+   * Voeg vlag toe die door [&#x200B; Android 14 runtime-geregistreerde uitzendingen ontvangers &#x200B;](https://developer.android.com/about/versions/14/behavior-changes-14#runtime-receivers-exported) wordt vereist.
 * ChromeCustomTabs herstellen; wordt niet geopend voor MVPD-aanmelding op emulator API 32+
    * Opmerking: als oplossing voor dit probleem op SDK &lt;3.7.3 is het openen van de Chrome-app op de emulator en het voltooien van de instelling voordat wordt geprobeerd MVPD-aanmelding uit te voeren
 
 ## Geen pakket {#release-package-373}
 
-U kunt Android SDK v3.7.3 van [ hier downloaden ](https://tve.zendesk.com/hc/en-us/articles/204963219-Android-Native-AccessEnabler-Library).
+U kunt Android SDK v3.7.3 van [&#x200B; hier downloaden &#x200B;](https://tve.zendesk.com/hc/en-us/articles/204963219-Android-Native-AccessEnabler-Library).

@@ -17,11 +17,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 De Adobe Pass Authentication AccessEnabler iOS/tvOS SDK biedt ondersteuning voor Single Sign-On (SSO) voor eindgebruikers van clienttoepassingen die op iOS, iPadOS of tvOS worden uitgevoerd.
 
-Dit document doet dienst als uitbreiding aan de bestaande documentatie van iOS/tvOS SDK AccessEnabler, die [ hier ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md) kan worden gevonden.
+Dit document doet dienst als uitbreiding aan de bestaande documentatie van iOS/tvOS SDK AccessEnabler, die [&#x200B; hier &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md) kan worden gevonden.
 
 ## Cookbook {#apple-sso-cookbook-iostvos-sdk-cookbook}
 
@@ -33,7 +33,7 @@ Om te kunnen profiteren van de Apple SSO-gebruikerservaring, moet de toepassing 
 
 >[!TIP]
 >
-> **<u>ProUiteinde:</u>** de het stromen toepassing moet toegang tot de het abonnementinformatie van de gebruiker verzoeken die op apparatenniveau wordt bewaard, waarvoor de gebruiker de toepassingstoestemming moet geven te werk te gaan, gelijkend op het verlenen van toegang tot de camera of microfoon van het apparaat. Deze toestemming moet per toepassing worden gevraagd gebruikend het Kader van de Rekening van de Abonnee van Apple [ Video ](https://developer.apple.com/documentation/videosubscriberaccount) en het apparaat zal de selectie van de gebruiker bewaren.
+> **<u>ProUiteinde:</u>** de het stromen toepassing moet toegang tot de het abonnementinformatie van de gebruiker verzoeken die op apparatenniveau wordt bewaard, waarvoor de gebruiker de toepassingstoestemming moet geven te werk te gaan, gelijkend op het verlenen van toegang tot de camera of microfoon van het apparaat. Deze toestemming moet per toepassing worden gevraagd gebruikend het Kader van de Rekening van de Abonnee van Apple [&#x200B; Video &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount) en het apparaat zal de selectie van de gebruiker bewaren.
 
 >[!TIP]
 >
@@ -41,7 +41,7 @@ Om te kunnen profiteren van de Apple SSO-gebruikerservaring, moet de toepassing 
 
 >[!TIP]
 >
-> **<u>ProUiteinde:</u>** de het stromen toepassing kan om de toestemming van de gebruiker verzoeken wanneer de toepassing de voorgrondstaat ingaat, omdat de toepassing [ toestemming kan controleren om tot ](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus) de het abonnementsinformatie van de gebruiker op om het even welk punt toegang te hebben alvorens gebruikersauthentificatie te vereisen.
+> **<u>ProUiteinde:</u>** de het stromen toepassing kan om de toestemming van de gebruiker verzoeken wanneer de toepassing de voorgrondstaat ingaat, omdat de toepassing [&#x200B; toestemming kan controleren om tot &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus) de het abonnementsinformatie van de gebruiker op om het even welk punt toegang te hebben alvorens gebruikersauthentificatie te vereisen.
 
 >[!TIP]
 >
@@ -70,7 +70,7 @@ Om te kunnen profiteren van de Apple SSO-gebruikerservaring, moet de toepassing 
 
 >[!TIP]
 >
-> **<u>ProUiteinde:</u>** voer de volgende lijst van [ callbacks ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md) uit die voor het werkschema van Apple SSO specifiek zijn.
+> **<u>ProUiteinde:</u>** voer de volgende lijst van [&#x200B; callbacks &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md) uit die voor het werkschema van Apple SSO specifiek zijn.
 
 * [*presentTVProviderDialog*](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#presenttvproviderdialog-presenttvdialog) - Callback teweeggebracht wanneer de plukker van Apple MVPD gaat openen.
 * [*dismissTVProviderDialog*](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#dismisstvproviderdialog-dismisstvdialog) - Callback teweeggebracht wanneer de plukker van Apple MVPD gaat sluiten.
@@ -79,7 +79,7 @@ Om te kunnen profiteren van de Apple SSO-gebruikerservaring, moet de toepassing 
 
 >[!TIP]
 >
-> **<u>ProUiteinde:</u>** voer de volgende lijst van [ geavanceerde foutencodes ](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md) uit die voor het werkschema van Apple SSO specifiek zijn.
+> **<u>ProUiteinde:</u>** voer de volgende lijst van [&#x200B; geavanceerde foutencodes &#x200B;](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md) uit die voor het werkschema van Apple SSO specifiek zijn.
 
 * ***N003*** - de gebruiker selecteerde de &quot;Andere optie van de Leverancier van TV&quot;van de plukker van MVPD van Apple.
 * ***N004*** - de gebruiker selecteerde een Leverancier van TV van de plukker van Apple MVPD, die niet (integratie of Enige Sign-On gehandicapt) door de huidige aanvrager wordt gesteund.
@@ -98,9 +98,9 @@ Om te kunnen profiteren van de Apple SSO-gebruikerservaring, moet de toepassing 
 1. De toepassing zou [&#128279;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#initsoftwarestatement-initwithsoftwarestatement) moeten initialiseren AccessEnabler iOS/tvOS SDK.
 
 
-1. De toepassing zou [ het huidige vraagherkenningsteken ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#setrequestorrequestorid-setrequestorrequestoridserviceproviders-setreqv3) moeten plaatsen.
+1. De toepassing zou [&#x200B; het huidige vraagherkenningsteken &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#setrequestorrequestorid-setrequestorrequestoridserviceproviders-setreqv3) moeten plaatsen.
 
-   **Belangrijk:** Deze tweede stap kon een [ geavanceerde foutencode ](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md) teweegbrengen die voor het werkschema van Apple SSO specifiek is, in het geval **één van het volgende waar is**:
+   **Belangrijk:** Deze tweede stap kon een [&#x200B; geavanceerde foutencode &#x200B;](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md) teweegbrengen die voor het werkschema van Apple SSO specifiek is, in het geval **één van het volgende waar is**:
 
    * ***VSA403*** - de toestemming van TV van de gebruiker wordt van de Leverancier ontkend voor de toepassing.
    * ***VSA404*** - de toestemming van de leverancier van TV van de gebruiker is onbepaald voor de toepassing.
@@ -116,12 +116,12 @@ Om te kunnen profiteren van de Apple SSO-gebruikerservaring, moet de toepassing 
    * De tv-provider van de gebruiker wordt niet gedegradeerd via het Adobe Primetime TVE-dashboard.
    * De AccessEnabler iOS/tvOS SDK heeft de SAML-reactie van de tv-provider van de gebruiker ontvangen van het Video Subscriber Account Framework.
 
-   **<u>ProUiteinde:</u>** Deze tweede stap zal geen andere callbacks, behalve [ setRequestorComplete ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#setrequestorcomplete-setreqcomplete) callback teweegbrengen, aangezien de authentificatie niet uitdrukkelijk door de toepassing in werking werd gesteld.
+   **<u>ProUiteinde:</u>** Deze tweede stap zal geen andere callbacks, behalve [&#x200B; setRequestorComplete &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#setrequestorcomplete-setreqcomplete) callback teweegbrengen, aangezien de authentificatie niet uitdrukkelijk door de toepassing in werking werd gesteld.
 
 
-1. De toepassing zou [ de authentificatiestatus ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#checkauthentication-checkauthn) moeten controleren.
+1. De toepassing zou [&#x200B; de authentificatiestatus &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#checkauthentication-checkauthn) moeten controleren.
 
-   **Belangrijk:** Deze derde stap kon een [ geavanceerde foutencode ](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md) teweegbrengen die voor het werkschema van Apple SSO specifiek is, in het geval **één van het volgende waar is**:
+   **Belangrijk:** Deze derde stap kon een [&#x200B; geavanceerde foutencode &#x200B;](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md) teweegbrengen die voor het werkschema van Apple SSO specifiek is, in het geval **één van het volgende waar is**:
 
    * ***VSA403** - de gebruiker wordt binnen ondertekend aan zijn rekening van TV Provider bij
 het systeemniveau van het apparaat, maar de machtiging van de tv-provider van de gebruiker is
@@ -149,9 +149,9 @@ Er is een fout opgetreden.
 
 1. De toepassing zou de authentificatie [&#128279;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#getauthentication-getauthenticationwithdata-getauthn) moeten initialiseren in het geval dat de vorige controle van de authentificatiestatus [*setAuthenticationStatus*](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#setauthenticationstatuserrorcode-setauthnstatus) callback met *status* gelijk aan 0 teweegbracht.
 
-   **<u>ProUiteinde:</u>** voer één van volgende AccessEnabler iOS/tvOS SDK API [ getAuthentication ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#getAuthN) of [ getAuthentication uit:filter ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#getAuthN_filter).
+   **<u>ProUiteinde:</u>** voer één van volgende AccessEnabler iOS/tvOS SDK API [&#x200B; getAuthentication &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#getAuthN) of [&#x200B; getAuthentication uit:filter &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#getAuthN_filter).
 
-   **Belangrijk:** Deze vierde stap kon een [ geavanceerde foutencode ](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md) teweegbrengen die voor het werkschema van Apple SSO specifiek is, in het geval **één van het volgende waar is**:
+   **Belangrijk:** Deze vierde stap kon een [&#x200B; geavanceerde foutencode &#x200B;](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md) teweegbrengen die voor het werkschema van Apple SSO specifiek is, in het geval **één van het volgende waar is**:
 
    * ***VSA403*** - de toestemming van TV van de gebruiker wordt van de Leverancier ontkend voor de toepassing.
    * ***VSA404*** - de toestemming van de leverancier van TV van de gebruiker is onbepaald voor de toepassing.
@@ -160,11 +160,11 @@ Er is een fout opgetreden.
    * ***N004*** - de gebruiker selecteerde een Leverancier van TV van de plukker van Apple MVPD, die niet (integratie of Enige Sign-On gehandicapt) door de huidige aanvrager wordt gesteund.
    * ***N005*** - de gebruiker besloot om de regelmatige plukker van MVPD of van Apple MVPD te annuleren.
 
-   **Belangrijk:** Deze vierde stap zou terug naar de regelmatige authentificatiestroom vallen, door [ displayProviderDialog ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#dispProvDialog) callback en **één** van de bovengenoemde [ geavanceerde foutencodes ](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md) in werking te stellen, voor het geval **één van het bovengenoemde is waar**.
+   **Belangrijk:** Deze vierde stap zou terug naar de regelmatige authentificatiestroom vallen, door [&#x200B; displayProviderDialog &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#dispProvDialog) callback en **één** van de bovengenoemde [&#x200B; geavanceerde foutencodes &#x200B;](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md) in werking te stellen, voor het geval **één van het bovengenoemde is waar**.
 
-   **Belangrijk:** Deze vierde stap zou terug naar de regelmatige authentificatiestroom vallen, door [ navigateToUrl ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#nav2url) of [ navigateToUrl:useSVC ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#nav2urlSVC) callback en **niets** van de bovengenoemde [ geavanceerde foutencodes ](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md) te teweegbrengen, in het geval de gebruiker een leverancier van TV selecteerde, die geen Apple SSO steunt, maar aanwezig is in de Apple MVPD-kiezer.
+   **Belangrijk:** Deze vierde stap zou terug naar de regelmatige authentificatiestroom vallen, door [&#x200B; navigateToUrl &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#nav2url) of [&#x200B; navigateToUrl:useSVC &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#nav2urlSVC) callback en **niets** van de bovengenoemde [&#x200B; geavanceerde foutencodes &#x200B;](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md) te teweegbrengen, in het geval de gebruiker een leverancier van TV selecteerde, die geen Apple SSO steunt, maar aanwezig is in de Apple MVPD-kiezer.
 
-   **<u>ProUiteinde:</u>** AccessEnabler iOS/tvOS SDK roept stil [ setSelectedProvider ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#setSelProv) API, voor het geval de gebruiker een leverancier van TV selecteerde, die geen Apple SSO steunt, maar in de plukker van Apple MVPD aanwezig is.
+   **<u>ProUiteinde:</u>** AccessEnabler iOS/tvOS SDK roept stil [&#x200B; setSelectedProvider &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#setSelProv) API, voor het geval de gebruiker een leverancier van TV selecteerde, die geen Apple SSO steunt, maar in de plukker van Apple MVPD aanwezig is.
 
    **Belangrijk:** Deze vierde stap zou proberen om het profiel van Apple SSO voor een teken van de Adobe authentificatie stil te ruilen, voor het geval **alle hierboven vals** zijn en **elk van het volgende is waar**:
 
@@ -180,7 +180,7 @@ Er is een fout opgetreden.
 
 ### Metagegevens {#apple-sso-cookbook-iostvos-sdk-metadata}
 
-De toepassing heeft de optie om te bepalen als de authentificatie als resultaat van aanmelding door de Partner SSO of niet is gebeurd, gebruikend &quot;*tokenSource&quot;* [ gebruikersmeta-gegevens ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#getMeta) API van AccessEnabler iOS/tvOS SDK.
+De toepassing heeft de optie om te bepalen als de authentificatie als resultaat van aanmelding door de Partner SSO of niet is gebeurd, gebruikend &quot;*tokenSource&quot;* [&#x200B; gebruikersmeta-gegevens &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#getMeta) API van AccessEnabler iOS/tvOS SDK.
 
 ```swift
     ...
@@ -190,22 +190,22 @@ De toepassing heeft de optie om te bepalen als de authentificatie als resultaat 
 
 ### Afmelden {#apple-sso-cookbook-iostvos-sdk-logout}
 
-Het [ Video Kader van de Rekening van de Abonnee van de Abonnee ](https://developer.apple.com/documentation/videosubscriberaccount) verstrekt geen API aan programmatically logout mensen die binnen aan hun de leveranciersrekening van TV op het niveau van het apparatensysteem hebben ondertekend. Daarom moet de eindgebruiker zich expliciet afmelden bij *`Settings -> TV Provider`* op iOS/iPadOS of *`Settings -> Accounts -> TV Provider`* op tvOS, anders wordt de aanmelding niet volledig van kracht. De andere optie die de gebruiker zou hebben, is het intrekken van de machtiging om de abonnementsgegevens van de gebruiker te openen in het gedeelte met specifieke toepassingsinstellingen (toegang tot tv-provider-machtiging).
+Het [&#x200B; Video Kader van de Rekening van de Abonnee van de Abonnee &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount) verstrekt geen API aan programmatically logout mensen die binnen aan hun de leveranciersrekening van TV op het niveau van het apparatensysteem hebben ondertekend. Daarom moet de eindgebruiker zich expliciet afmelden bij *`Settings -> TV Provider`* op iOS/iPadOS of *`Settings -> Accounts -> TV Provider`* op tvOS, anders wordt de aanmelding niet volledig van kracht. De andere optie die de gebruiker zou hebben, is het intrekken van de machtiging om de abonnementsgegevens van de gebruiker te openen in het gedeelte met specifieke toepassingsinstellingen (toegang tot tv-provider-machtiging).
 
 >[!TIP]
 >
-> **<u>Uiteinde:</u>** voer dit door het middel van AccessEnabler iOS/tvOS SDK [ logout ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#logout) API uit.
+> **<u>Uiteinde:</u>** voer dit door het middel van AccessEnabler iOS/tvOS SDK [&#x200B; logout &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#logout) API uit.
 
 >[!TIP]
 >
 > **<u>ProUiteinde:</u>** volg de stappen hieronder voor de implementatie/s tvOS.
 
 * De toepassing zou de logout [&#128279;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#logout) van AccessEnabler iOS/tvOS SDK moeten in werking stellen . Dit zou het opschonen van sessies aan MVPD-zijde niet vergemakkelijken.
-* De toepassing zou de gebruiker moeten instrueren/ertoe aanzetten om zich uitdrukkelijk uit *`Settings -> Accounts -> TV Provider`* op tvOS slechts in te tekenen voor het geval [*VSA203* statuscode ](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md) wordt teweeggebracht.
+* De toepassing zou de gebruiker moeten instrueren/ertoe aanzetten om zich uitdrukkelijk uit *`Settings -> Accounts -> TV Provider`* op tvOS slechts in te tekenen voor het geval [*VSA203* statuscode &#x200B;](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md) wordt teweeggebracht.
 
 >[!TIP]
 >
 > **<u>ProTip:</u>** volg de stappen hieronder voor de implementatie/s iOS/iPadOS.
 
 * De toepassing zou de logout [&#128279;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#logout) van AccessEnabler iOS/tvOS SDK moeten in werking stellen . Dit zou het opschonen van sessies aan MVPD-zijde vergemakkelijken.
-* De toepassing zou de gebruiker moeten instrueren/ertoe aanzetten om zich uitdrukkelijk uit *`Settings -> TV Provider`* op iOS/iPadOS slechts in het geval [*VSA203* statuscode wordt teweeggebracht ](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md) af te melden.
+* De toepassing zou de gebruiker moeten instrueren/ertoe aanzetten om zich uitdrukkelijk uit *`Settings -> TV Provider`* op iOS/iPadOS slechts in het geval [*VSA203* statuscode wordt teweeggebracht &#x200B;](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md) af te melden.

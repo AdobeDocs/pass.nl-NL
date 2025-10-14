@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 ## Inleiding {#intro}
 
@@ -25,7 +25,7 @@ Android AccessEnabler is een Java Android-bibliotheek waarmee mobiele apps Adobe
 
 ## Android-vereisten {#reqs}
 
-Voor huidige technische vereisten met betrekking tot het platform van Android en de Authentificatie van Adobe Pass, zie [ de Vereisten van het Platform / van het Apparaat / van het Hulpmiddel ](#android), of raadpleeg de versienota&#39;s inbegrepen met de download van Android SDK.
+Voor huidige technische vereisten met betrekking tot het platform van Android en de Authentificatie van Adobe Pass, zie [&#x200B; de Vereisten van het Platform / van het Apparaat / van het Hulpmiddel &#x200B;](#android), of raadpleeg de versienota&#39;s inbegrepen met de download van Android SDK.
 
 ## Native clientworkflows begrijpen {#native_client_workflows}
 
@@ -56,7 +56,7 @@ Het doel van deze workflow is om een gebruiker aan te melden bij zijn MVPD.  Na 
 
 Hoewel de volgende native clientworkflow afwijkt van de typische browsergebaseerde verificatieworkflow, zijn de stappen 1-5 hetzelfde voor zowel native clients als op browsers gebaseerde clients:
 
-1. Uw pagina of speler stelt het authentificatiewerkschema met een vraag [ in werking getAuthentication () ](#getAuthN), die voor een geldig in de cache opgenomen authentificatietoken controleert. Deze methode heeft een optionele parameter `redirectURL` ; als u geen waarde opgeeft voor `redirectURL` , wordt de gebruiker na een geslaagde verificatie geretourneerd naar de URL vanwaar de verificatie is geïnitialiseerd.
+1. Uw pagina of speler stelt het authentificatiewerkschema met een vraag [&#x200B; in werking getAuthentication () &#x200B;](#getAuthN), die voor een geldig in de cache opgenomen authentificatietoken controleert. Deze methode heeft een optionele parameter `redirectURL` ; als u geen waarde opgeeft voor `redirectURL` , wordt de gebruiker na een geslaagde verificatie geretourneerd naar de URL vanwaar de verificatie is geïnitialiseerd.
 1. AccessEnabler bepaalt de huidige authentificatiestatus. Als de gebruiker momenteel voor authentiek wordt verklaard, roept AccessEnabler uw `setAuthenticationStatus()` callback functie, die een authentificatiestatus overgaat die op succes wijst (Stap 7 hieronder).
 1. Als de gebruiker niet voor authentiek wordt verklaard, gaat AccessEnabler de authentificatiestroom door te bepalen of de laatste authentificatiepoging van de gebruiker met bepaalde MVPD succesvol was. Als een MVPD-id in de cache wordt opgeslagen EN de markering `canAuthenticate` true is OF als een MVPD is geselecteerd met [`setSelectedProvider()`](#setSelectedProvider) , wordt de gebruiker niet gevraagd het dialoogvenster voor MVPD-selectie te openen. De verificatiestroom gaat verder met gebruik van de cachewaarde van de MVPD (hetzelfde MVPD dat tijdens de laatste geslaagde verificatie is gebruikt). Er wordt een netwerkaanroep naar de back-endserver gemaakt en de gebruiker wordt omgeleid naar de MVPD-aanmeldingspagina (stap 6 hieronder).
 1. Als er geen MVPD-id in de cache is opgeslagen EN er geen MVPD is geselecteerd met [`setSelectedProvider()`](#setSelectedProvider) OF als de markering `canAuthenticate` is ingesteld op false, wordt de callback [`displayProviderDialog()`](#displayProviderDialog) aangeroepen. Deze callback leidt uw pagina of speler om tot UI te leiden die de gebruiker met een lijst van MVPDs voorstelt om te kiezen van. Er is een array met MVPD-objecten beschikbaar, die de benodigde informatie bevat voor het maken van de MVPD-kiezer. Elk MVPD-object beschrijft een MVPD-entiteit en bevat informatie zoals de id van de MVPD (bijvoorbeeld XFINITY, AT\&amp;T, enzovoort) en de URL waar het MVPD-logo kan worden gevonden.
@@ -120,7 +120,7 @@ Bij geslaagde verificatie en autorisatie geeft Adobe Pass Authentication, Authen
 1. Als de &quot;Authentificatie per de eigenschap&quot;*gehandicapt* is, dan zal één enkel authentificatietoken plaatselijk in het globale plakbord worden opgeslagen. Dit token wordt gedeeld tussen alle toepassingen die zijn geïntegreerd met de huidige MVPD.
 1. Als de &quot;Authentificatie per de eigenschap van de Aanvrager&quot;** wordt toegelaten, dan zal een teken uitdrukkelijk met de Programmer worden geassocieerd die de authentificatiestroom (het teken zal niet in het globale plakbord worden opgeslagen, maar in een privé dossier dat slechts aan de toepassing van die Programmer zichtbaar is). Specifieker, Single Sign-On (SSO) tussen verschillende toepassingen zal worden onbruikbaar gemaakt; de gebruiker zal de authentificatiestroom uitdrukkelijk moeten uitvoeren wanneer het schakelen naar een nieuwe app (op voorwaarde dat Programmer van tweede app met huidige MVPD wordt geïntegreerd en dat geen authentificatietoken voor die Programmer in het lokale geheime voorgeheugen bestaat).
 
-   **Nota:** AE 1.6 Google GSON Tech Nota: [ hoe te om de gebiedsdelen van Gson op te lossen ](https://tve.zendesk.com/entries/22902516-Android-AccessEnabler-1-6-How-to-resolve-Gson-dependencies)
+   **Nota:** AE 1.6 Google GSON Tech Nota: [&#x200B; hoe te om de gebiedsdelen van Gson op te lossen &#x200B;](https://tve.zendesk.com/entries/22902516-Android-AccessEnabler-1-6-How-to-resolve-Gson-dependencies)
 
 - **AccessEnabler 1.7** - Deze SDK introduceert een nieuwe methode van symbolische opslag, toelatend veelvoudige emmers programmer-MVPD, en daarom, veelvoudige authentificatietokens. Vanaf AE 1.7 wordt dezelfde opslaglay-out gebruikt voor zowel het scenario &#39;Verificatie per aanvrager&#39; als voor de normale verificatiestroom. Het enige verschil tussen twee is in de manier de authentificatie wordt uitgevoerd: &quot;Authentificatie per Aanvrager&quot;bevat een nieuwe verbetering (passieve authentificatie) die het voor AccessEnabler mogelijk maakt om backchannel authentificatie uit te voeren, die op het bestaan van een authentificatietoken in de opslag (voor een verschillende Programmer) wordt gebaseerd. De gebruiker hoeft slechts eenmaal te autoriseren en deze sessie wordt gebruikt om verificatietokens te verkrijgen in volgende apps. Deze backchannel flow vindt plaats tijdens de [`setRequestor()`](#setRequestor) oproep en is meestal transparant voor de programmeur. Er is hier echter één belangrijke vereiste: de programmeur moet [`setRequestor()`](#setRequestor) vanuit de hoofdthread van de gebruikersinterface en vanuit een activiteit aanroepen.
 

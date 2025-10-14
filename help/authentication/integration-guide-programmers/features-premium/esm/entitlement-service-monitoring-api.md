@@ -19,20 +19,20 @@ ht-degree: 0%
 >
 > Controleer voordat u de afbraakAPI gebruikt of aan de volgende voorwaarden is voldaan:
 >
-> * Haal de cliëntgeloofsbrieven zoals die in [ worden beschreven terug cliëntgeloofsbrieven ](../../rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-client-credentials.md) API documentatie.
-> * Haal het toegangstoken zoals die in [ wordt beschreven terug toegangstoken ](../../rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md) API documentatie.
+> * Haal de cliëntgeloofsbrieven zoals die in [&#x200B; worden beschreven terug cliëntgeloofsbrieven &#x200B;](../../rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-client-credentials.md) API documentatie.
+> * Haal het toegangstoken zoals die in [&#x200B; wordt beschreven terug toegangstoken &#x200B;](../../rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md) API documentatie.
 >
-> Verwijs naar de [ Dynamische documentatie van het Overzicht van de Registratie van de Cliënt ](../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) voor meer informatie over hoe te om een geregistreerde toepassing tot stand te brengen en de softwareverklaring te downloaden.
+> Verwijs naar de [&#x200B; Dynamische documentatie van het Overzicht van de Registratie van de Cliënt &#x200B;](../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) voor meer informatie over hoe te om een geregistreerde toepassing tot stand te brengen en de softwareverklaring te downloaden.
 
 ## API-overzicht {#api-overview}
 
-De Controle van de Dienst van het recht (ESM) wordt uitgevoerd als WOLAP (Web-based [ Online Analytische Verwerking ](https://en.wikipedia.org/wiki/Online_analytical_processing){target=_blank} ) project. ESM is een generisch zaken-meldend Web API die door een gegevenspakhuis wordt gesteund. Het doet dienst als de vraagtaal van HTTP die typische verrichtingen toelaat OLAP om RESTfully worden uitgevoerd.
+De Controle van de Dienst van het recht (ESM) wordt uitgevoerd als WOLAP (Web-based [&#x200B; Online Analytische Verwerking &#x200B;](https://en.wikipedia.org/wiki/Online_analytical_processing){target=_blank} ) project. ESM is een generisch zaken-meldend Web API die door een gegevenspakhuis wordt gesteund. Het doet dienst als de vraagtaal van HTTP die typische verrichtingen toelaat OLAP om RESTfully worden uitgevoerd.
 
 >[!NOTE]
 >
 >De ESM API is niet algemeen beschikbaar. Neem contact op met uw Adobe voor vragen over beschikbaarheid.
 
-ESM API verstrekt een hiërarchische mening van de onderliggende kubussen OLAP. Elk middel ([ afmeting ](#esm_dimensions) in de afmetinghiërarchie, in kaart gebracht als segment van de weg URL) produceert rapporten met (bijeengevoegde) [ metriek ](#esm_metrics) voor de huidige selectie. Elke bron wijst naar de bovenliggende bron (voor roll-up) en de bijbehorende subbronnen (voor boor-down). Segmenteren en dicing worden bereikt via parameters van queryreeksen die de afmetingen vastzetten op specifieke waarden of bereiken.
+ESM API verstrekt een hiërarchische mening van de onderliggende kubussen OLAP. Elk middel ([&#x200B; afmeting &#x200B;](#esm_dimensions) in de afmetinghiërarchie, in kaart gebracht als segment van de weg URL) produceert rapporten met (bijeengevoegde) [&#x200B; metriek &#x200B;](#esm_metrics) voor de huidige selectie. Elke bron wijst naar de bovenliggende bron (voor roll-up) en de bijbehorende subbronnen (voor boor-down). Segmenteren en dicing worden bereikt via parameters van queryreeksen die de afmetingen vastzetten op specifieke waarden of bereiken.
 
 De REST API verstrekt de beschikbare gegevens binnen een tijdsinterval dat in het verzoek wordt gespecificeerd (die terug naar standaardwaarden als niets wordt verstrekt), volgens de afmetingspad, verstrekte filters, en geselecteerde metriek. Het tijdbereik wordt niet toegepast op rapporten die geen tijdafmetingen bevatten (jaar, maand, dag, uur, minuut, seconde).
 
@@ -42,7 +42,7 @@ De beschikbare URL-paden kunnen worden gevonden via koppelingen in het antwoord.
 
 ## Boor-down Boom {#drill-down-tree}
 
-De volgende boor-benedenbomen illustreren de afmetingen (middelen) beschikbaar in ESM 3.0 voor [ Programmers ](#progr-dimensions) en [ MVPDs ](#mvpd-dimensions).
+De volgende boor-benedenbomen illustreren de afmetingen (middelen) beschikbaar in ESM 3.0 voor [&#x200B; Programmers &#x200B;](#progr-dimensions) en [&#x200B; MVPDs &#x200B;](#mvpd-dimensions).
 
 
 ### Dimensionen beschikbaar voor programmeurs {#progr-dimensions}

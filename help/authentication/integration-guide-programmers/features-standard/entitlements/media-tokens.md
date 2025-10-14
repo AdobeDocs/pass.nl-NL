@@ -15,7 +15,7 @@ ht-degree: 0%
 >
 > De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
-Het media teken is een teken dat door de Authentificatie van Adobe Pass [ wordt geproduceerd REST API V2 ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md) als resultaat van een vergunningsbesluit dat wordt bedoeld om het bekijken toegang tot beschermde inhoud (middel) te verlenen.
+Het media teken is een teken dat door de Authentificatie van Adobe Pass [&#x200B; wordt geproduceerd REST API V2 &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md) als resultaat van een vergunningsbesluit dat wordt bedoeld om het bekijken toegang tot beschermde inhoud (middel) te verlenen.
 
 Het mediatoken is geldig gedurende een beperkte en korte periode (standaard 7 minuten) die op het moment van uitgifte is opgegeven. Deze tijd geeft de tijdslimiet aan voordat deze moet worden geverifieerd en gebruikt door de clienttoepassing. Het mediatoken is beperkt tot eenmalig gebruik en mag nooit in de cache worden opgeslagen.
 
@@ -52,7 +52,7 @@ De bibliotheek Media Token Verifier die wordt vertegenwoordigd door het Java-arc
 
 De klasse `ITokenVerifier` definieert de volgende methoden:
 
-* De methode `isValid()` die wordt gebruikt om het media-token te valideren. Het keurt één enkel argument, het [ middelherkenningsteken ](/help/authentication/integration-guide-programmers/features-standard/entitlements/decisions.md#resource-identifier) goed. Als de opgegeven resource-id `null` is, valideert de methode alleen de authenticiteit en geldigheidsperiode van het media-token.
+* De methode `isValid()` die wordt gebruikt om het media-token te valideren. Het keurt één enkel argument, het [&#x200B; middelherkenningsteken &#x200B;](/help/authentication/integration-guide-programmers/features-standard/entitlements/decisions.md#resource-identifier) goed. Als de opgegeven resource-id `null` is, valideert de methode alleen de authenticiteit en geldigheidsperiode van het media-token.
 
   De methode `isValid()` retourneert een van de volgende statuswaarden:
 
@@ -200,7 +200,7 @@ Verwijs naar de **secties van de Reactie** en **Steekproeven** van bovengenoemde
 
 >[!IMPORTANT]
 >
-> De cliënttoepassing moet geen afzonderlijk eindpunt vragen om de [ media tokens ](/help/authentication/integration-guide-programmers/features-standard/entitlements/media-tokens.md) terug te winnen, aangezien zij reeds inbegrepen in de vergunningsbesluiten zijn die gebruikerstoegang toestaan.
+> De cliënttoepassing moet geen afzonderlijk eindpunt vragen om de [&#x200B; media tokens &#x200B;](/help/authentication/integration-guide-programmers/features-standard/entitlements/media-tokens.md) terug te winnen, aangezien zij reeds inbegrepen in de vergunningsbesluiten zijn die gebruikerstoegang toestaan.
 
 Raadpleeg het volgende document voor meer informatie over hoe en wanneer u de bovenstaande API wilt integreren:
 
@@ -208,4 +208,4 @@ Raadpleeg het volgende document voor meer informatie over hoe en wanneer u de bo
 
 >[!MORELIKETHIS]
 >
-> [ FAQs van de Fase van de Toestemming ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authorization-phase-faqs-general)
+> [&#x200B; FAQs van de Fase van de Toestemming &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authorization-phase-faqs-general)

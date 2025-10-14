@@ -17,18 +17,18 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 ## Overzicht {#overview}
 
-Dit document bevat stapsgewijze instructies voor het engineeringteam van een programmeur om een &quot;slim apparaat&quot; (spelconsole, smart TV-app, set top box, enz.) te integreren met Adobe Pass-verificatie via REST API-services. Deze client-to-server-benadering, waarbij REST API&#39;s worden gebruikt in plaats van een client-SDK, maakt bredere ondersteuning mogelijk van verschillende platforms waarvoor het ontwikkelen van een aanzienlijk aantal unieke SDK&#39;s niet haalbaar is. Voor een breed technisch overzicht van hoe de Klantloze oplossing werkt, zie het [ Klantloze Technische Overzicht ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/rest-api-overview.md).
+Dit document bevat stapsgewijze instructies voor het engineeringteam van een programmeur om een &quot;slim apparaat&quot; (spelconsole, smart TV-app, set top box, enz.) te integreren met Adobe Pass-verificatie via REST API-services. Deze client-to-server-benadering, waarbij REST API&#39;s worden gebruikt in plaats van een client-SDK, maakt bredere ondersteuning mogelijk van verschillende platforms waarvoor het ontwikkelen van een aanzienlijk aantal unieke SDK&#39;s niet haalbaar is. Voor een breed technisch overzicht van hoe de Klantloze oplossing werkt, zie het [&#x200B; Klantloze Technische Overzicht &#x200B;](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/rest-api-overview.md).
 
 
 Deze aanpak vereist twee componenten (streaming app en AuthN app) om de vereiste stromen te voltooien: opstarten, registreren, autoriseren en weergavemedia in de streaming app en de verificatiestroom in uw AuthN-app.
 
 ### Draaimechanisme
 
-De Adobe Pass Authentificatie REST API wordt geregeerd door a [ het Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md).
+De Adobe Pass Authentificatie REST API wordt geregeerd door a [&#x200B; het Throttling mechanisme &#x200B;](/help/authentication/integration-guide-programmers/throttling-mechanism.md).
 
 ## Componenten {#components}
 
@@ -49,7 +49,7 @@ In een werkende cliënt-aan-server oplossing zijn de volgende componenten betrok
 
 ### Dynamische clientregistratie (DCR)
 
-Adobe Pass gebruikt DCR om clientcommunicatie tussen een programmeertoepassing of server en de Adobe Pass-services te beveiligen. De stroom DCR is afzonderlijk en wordt beschreven in het [ Dynamische Overzicht van de Registratie van de Cliënt ](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) documentatie.
+Adobe Pass gebruikt DCR om clientcommunicatie tussen een programmeertoepassing of server en de Adobe Pass-services te beveiligen. De stroom DCR is afzonderlijk en wordt beschreven in het [&#x200B; Dynamische Overzicht van de Registratie van de Cliënt &#x200B;](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) documentatie.
 
 
 ### Streaming (slim apparaat) App Flows

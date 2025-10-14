@@ -17,17 +17,17 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> De implementatie van REST API V2 wordt begrensd door de [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
+> De implementatie van REST API V2 wordt begrensd door de [&#x200B; Throttling mechanisme &#x200B;](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
 
-Het document is voorgenomen voor ontwikkelaars die [ de Authentificatie van Adobe Pass REST API V2 ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md) in hun het stromen toepassingen integreren die een Server-aan-Server (S2S) architectuur hebben.
+Het document is voorgenomen voor ontwikkelaars die [&#x200B; de Authentificatie van Adobe Pass REST API V2 &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md) in hun het stromen toepassingen integreren die een Server-aan-Server (S2S) architectuur hebben.
 
 ## Vereisten {#prerequisites}
 
-Voor termijnen en definities, verwijs naar de [ REST API V2 Verklarende woordenlijst ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md) documentatie.
+Voor termijnen en definities, verwijs naar de [&#x200B; REST API V2 Verklarende woordenlijst &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md) documentatie.
 
-Voor verplichte vereisten en geadviseerde praktijken, verwijs naar de [ REST API V2 Checklist ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-checklist.md) documentatie.
+Voor verplichte vereisten en geadviseerde praktijken, verwijs naar de [&#x200B; REST API V2 Checklist &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-checklist.md) documentatie.
 
-Voor vaak gestelde vragen, verwijs naar [ REST API V2 FAQs ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md) documentatie.
+Voor vaak gestelde vragen, verwijs naar [&#x200B; REST API V2 FAQs &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md) documentatie.
 
 ### Componenten {#components}
 
@@ -49,9 +49,9 @@ In Server-aan-Server (S2S) implementaties, moeten de Streaming App en de Dienst 
 
 * Communiceer met Adobe Pass Service namens de Streaming App.
 
-* Verzamel en ga een uniek apparatenherkenningsteken voor het Streamen Apparaat zoals die door [ wordt vereist AP-Apparaat-Herkenningsteken ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-device-identifier.md) kopbal over.
+* Verzamel en ga een uniek apparatenherkenningsteken voor het Streamen Apparaat zoals die door [&#x200B; wordt vereist AP-Apparaat-Herkenningsteken &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-device-identifier.md) kopbal over.
 
-* Verzamel en ga nauwkeurige het Stromen informatie van het Apparaat, met inbegrip van de bronhaven en apparaat-specifieke details, zoals die door [ x-apparaat-Info ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-device-info.md) kopbal worden vereist.
+* Verzamel en ga nauwkeurige het Stromen informatie van het Apparaat, met inbegrip van de bronhaven en apparaat-specifieke details, zoals die door [&#x200B; x-apparaat-Info &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-device-info.md) kopbal worden vereist.
 
 * Verzamel en geef het IP-adres van het Streaming apparaat door zoals vereist door de X-Forwarded-For header.
 
@@ -101,7 +101,7 @@ De het opvoeren omgeving kan minimaal zijn maar zou productie moeten weerspiegel
 
 Voer de onderstaande stappen uit zoals in het volgende diagram.
 
-![ REST API V2 Cookbook (server-aan-Server) ](/help/authentication/assets/rest-api-v2/cookbooks/rest-api-v2-cookbook-server-to-server-diagram.png)
+![&#x200B; REST API V2 Cookbook (server-aan-Server) &#x200B;](/help/authentication/assets/rest-api-v2/cookbooks/rest-api-v2-cookbook-server-to-server-diagram.png)
 
 *REST API V2 Cookbook (server-aan-Server)*
 
@@ -177,15 +177,15 @@ Veelgestelde vragen
 * **wint profielen terug:** de Controle van de Dienst van de Programmer namens Streaming App voor bestaande profielen door het [**/api/v2/ {serviceProvider} /profiles**](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md) eindpunt te roepen.
 
 
-* **Scenario 1:** Er zijn bestaande profielen, kan de Dienst van de Programmer aan de [ Voorbereidende Fase ](#preauthorization-phase) of [ Fase van de Toestemming ](#authorization-phase) te werk gaan.
+* **Scenario 1:** Er zijn bestaande profielen, kan de Dienst van de Programmer aan de [&#x200B; Voorbereidende Fase &#x200B;](#preauthorization-phase) of [&#x200B; Fase van de Toestemming &#x200B;](#authorization-phase) te werk gaan.
 
 
-* **Scenario 2:** Er zijn geen bestaande profielen, kan de Dienst van de Programmer aan de volgende stap te werk gaan [ de gebruiker ](#step-3-authenticate-the-user) voor authentiek verklaren.
+* **Scenario 2:** Er zijn geen bestaande profielen, kan de Dienst van de Programmer aan de volgende stap te werk gaan [&#x200B; de gebruiker &#x200B;](#step-3-authenticate-the-user) voor authentiek verklaren.
 
 
-* **Scenario 3:** Er zijn geen bestaande profielen, kan de Dienst van de Programmer te werk gaan om de gebruiker van tijdelijke toegang door de [ TempPass ](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md) eigenschap te voorzien.
+* **Scenario 3:** Er zijn geen bestaande profielen, kan de Dienst van de Programmer te werk gaan om de gebruiker van tijdelijke toegang door de [&#x200B; TempPass &#x200B;](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md) eigenschap te voorzien.
 
-   * Dit scenario is buiten het werkingsgebied van dit document, verwijs naar de [ Tijdelijke documentatie van de Stromen van de Toegang ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/temporary-access-flows/rest-api-v2-access-temporary-flows.md) voor meer informatie.
+   * Dit scenario is buiten het werkingsgebied van dit document, verwijs naar de [&#x200B; Tijdelijke documentatie van de Stromen van de Toegang &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/temporary-access-flows/rest-api-v2-access-temporary-flows.md) voor meer informatie.
 
 ### Stap 3: De gebruiker verifiëren {#step-3-authenticate-the-user}
 
@@ -214,15 +214,15 @@ Veelgestelde vragen
 
    * De dienst van de Programmer moet **het opiniepeilings** mechanisme onder de volgende voorwaarden beginnen:
 
-      * **Authentificatie die binnen de primaire (scherm) toepassing wordt uitgevoerd:** De Dienst van de Programmer zou moeten beginnen te pollen wanneer de gebruiker de definitieve bestemmingspagina bereikt, nadat de browser component URL laadt die voor de `redirectUrl` parameter in het [ wordt gespecificeerd Sessions ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) eindpuntverzoek.
+      * **Authentificatie die binnen de primaire (scherm) toepassing wordt uitgevoerd:** De Dienst van de Programmer zou moeten beginnen te pollen wanneer de gebruiker de definitieve bestemmingspagina bereikt, nadat de browser component URL laadt die voor de `redirectUrl` parameter in het [&#x200B; wordt gespecificeerd Sessions &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) eindpuntverzoek.
 
-      * **Authentificatie die binnen een secundaire (scherm) toepassing wordt uitgevoerd:** de toepassing van de Dienst van de Programmer zou moeten beginnen opiniepeilend zodra de gebruiker het authentificatieproces-recht na het ontvangen van de [ 3&rbrace; eindpuntreactie van Zittingen &lbrace;en het tonen van de authentificatiecode aan de gebruiker in werking stelt.](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md)
+      * **Authentificatie die binnen een secundaire (scherm) toepassing wordt uitgevoerd:** de toepassing van de Dienst van de Programmer zou moeten beginnen opiniepeilend zodra de gebruiker het authentificatieproces-recht na het ontvangen van de [&#x200B; 3&rbrace; eindpuntreactie van Zittingen &lbrace;en het tonen van de authentificatiecode aan de gebruiker in werking stelt.](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md)
 
    * De dienst van de Programmer moet **het opiniepeilings** mechanisme onder de volgende voorwaarden tegenhouden:
 
       * **Succesvolle authentificatie:** de het profielinformatie van de gebruiker wordt met succes teruggewonnen, bevestigend hun authentificatiestatus. Op dit moment is opiniepeiling niet langer nodig.
 
-      * **de zitting van de Authentificatie en de codereduur:** de authentificatiesessie en de code verlopen, zoals die door `notAfter` wordt vermeld timestamp (b.v., 30 minuten) in de [ 4&rbrace; eindpuntreactie van Zittingen &lbrace;. ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) Als dit gebeurt, moet de gebruiker het authentificatieproces opnieuw beginnen, en de opiniepeiling die de vorige authentificatiecode gebruikt zou onmiddellijk moeten worden tegengehouden.
+      * **de zitting van de Authentificatie en de codereduur:** de authentificatiesessie en de code verlopen, zoals die door `notAfter` wordt vermeld timestamp (b.v., 30 minuten) in de [&#x200B; 4&rbrace; eindpuntreactie van Zittingen &lbrace;. &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) Als dit gebeurt, moet de gebruiker het authentificatieproces opnieuw beginnen, en de opiniepeiling die de vorige authentificatiecode gebruikt zou onmiddellijk moeten worden tegengehouden.
 
       * **Nieuwe geproduceerde authentificatiecode:** als de gebruiker om een nieuwe authentificatiecode op het primaire (scherm) apparaat verzoekt, is de bestaande zitting niet meer geldig, en de opiniepeiling die de vorige authentificatiecode gebruikt zou onmiddellijk moeten worden tegengehouden.
 
@@ -266,9 +266,9 @@ Veelgestelde vragen
 
    * De Programmer Service is niet verplicht om beslissingen vóór de goedkeuring op te slaan in permanente opslag. Nochtans, wordt het geadviseerd om vergunningsbesluiten in het voorgeheugen op te slaan om de gebruikerservaring te verbeteren. Dit helpt onnodige vraag naar middelen vermijden die reeds vooraf zijn geautoriseerd, die latentie verminderen en prestaties verbeteren.
 
-   * De dienst van de Programmeur kan de reden voor een ontkend pre-vergunningsbesluit bepalen door de [ foutencode en het bericht ](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) te inspecteren inbegrepen in de reactie van Besluiten pre-goedkeurt eindpunt. Deze details geven inzicht in de specifieke reden waarom de aanvraag voor voorafgaande toestemming is afgewezen, waardoor de gebruikerservaring kan worden geïnformeerd of de benodigde afhandeling in de toepassing kan worden geactiveerd. Ervoor zorgen dat elk nieuw mechanisme dat wordt toegepast voor het ophalen van beslissingen vóór toelating, niet in een eindeloze lus resulteert als het besluit vóór toelating wordt geweigerd. U kunt overwegen om pogingen tot een redelijk aantal te beperken en weigeringen netjes af te handelen door duidelijke feedback aan de gebruiker te bekijken.
+   * De dienst van de Programmeur kan de reden voor een ontkend pre-vergunningsbesluit bepalen door de [&#x200B; foutencode en het bericht &#x200B;](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) te inspecteren inbegrepen in de reactie van Besluiten pre-goedkeurt eindpunt. Deze details geven inzicht in de specifieke reden waarom de aanvraag voor voorafgaande toestemming is afgewezen, waardoor de gebruikerservaring kan worden geïnformeerd of de benodigde afhandeling in de toepassing kan worden geactiveerd. Ervoor zorgen dat elk nieuw mechanisme dat wordt toegepast voor het ophalen van beslissingen vóór toelating, niet in een eindeloze lus resulteert als het besluit vóór toelating wordt geweigerd. U kunt overwegen om pogingen tot een redelijk aantal te beperken en weigeringen netjes af te handelen door duidelijke feedback aan de gebruiker te bekijken.
 
-   * De Programmeringsdienst kan een voorafgaande vergunningsbesluit voor een beperkt aantal middelen in één enkel API verzoek, gewoonlijk tot 5, wegens voorwaarden verkrijgen die door MVPDs worden opgelegd. Dit maximumaantal middelen kan worden bekeken en veranderd na het akkoord gaan met MVPDs door het Dashboard van Adobe Pass [ TVE ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#tve-dashboard) door één van uw organisatiebeheerders of door een vertegenwoordiger van de Authentificatie van Adobe Pass handelend namens u.
+   * De Programmeringsdienst kan een voorafgaande vergunningsbesluit voor een beperkt aantal middelen in één enkel API verzoek, gewoonlijk tot 5, wegens voorwaarden verkrijgen die door MVPDs worden opgelegd. Dit maximumaantal middelen kan worden bekeken en veranderd na het akkoord gaan met MVPDs door het Dashboard van Adobe Pass [&#x200B; TVE &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#tve-dashboard) door één van uw organisatiebeheerders of door een vertegenwoordiger van de Authentificatie van Adobe Pass handelend namens u.
 
 ## D. Vergunningsfase {#authorization-phase}
 
@@ -298,7 +298,7 @@ Veelgestelde vragen
 
    * De Programmer Service is niet verplicht om beslissingen over machtigingen in permanente opslag op te slaan.
 
-   * De dienst van de Programmer kan de reden voor een ontkend vergunningsbesluit bepalen door de [ foutencode en het bericht ](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) te inspecteren inbegrepen in de reactie van Besluiten machtigt eindpunt. Deze gegevens verschaffen insight de specifieke reden waarom de aanvraag voor een vergunning is afgewezen, zodat de gebruiker op de hoogte kan worden gebracht van de ervaring of de benodigde afhandeling in de Streaming App kan worden geactiveerd. Ervoor zorgen dat een nieuw mechanisme dat wordt toegepast voor het ophalen van vergunningsbesluiten niet in een eindeloze lus resulteert als het vergunningsbesluit wordt geweigerd. U kunt overwegen om pogingen tot een redelijk aantal te beperken en weigeringen netjes af te handelen door duidelijke feedback aan de gebruiker te bekijken.
+   * De dienst van de Programmer kan de reden voor een ontkend vergunningsbesluit bepalen door de [&#x200B; foutencode en het bericht &#x200B;](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) te inspecteren inbegrepen in de reactie van Besluiten machtigt eindpunt. Deze gegevens verschaffen insight de specifieke reden waarom de aanvraag voor een vergunning is afgewezen, zodat de gebruiker op de hoogte kan worden gebracht van de ervaring of de benodigde afhandeling in de Streaming App kan worden geactiveerd. Ervoor zorgen dat een nieuw mechanisme dat wordt toegepast voor het ophalen van vergunningsbesluiten niet in een eindeloze lus resulteert als het vergunningsbesluit wordt geweigerd. U kunt overwegen om pogingen tot een redelijk aantal te beperken en weigeringen netjes af te handelen door duidelijke feedback aan de gebruiker te bekijken.
 
    * De programmeerdienst kan andere bedrijfsregels evalueren en een passend vergunningsbesluit aan de Streaming App teruggeven.
 
@@ -330,7 +330,7 @@ Veelgestelde vragen
 
 ### Stap 7: Afmelden {#step-7-logout}
 
-* Initieer Adobe Pass logout: De Dienst van de Programmer stelt de logout stroom zoals gevraagd door de Streaming App in werking door het [/api/v2/ {serviceProvider}/logout/{mvpd} ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md) eindpunt te roepen.
+* Initieer Adobe Pass logout: De Dienst van de Programmer stelt de logout stroom zoals gevraagd door de Streaming App in werking door het [/api/v2/ {serviceProvider}/logout/{mvpd} &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md) eindpunt te roepen.
 
    * De Programmeringsservice kan alle informatie opruimen die deze over de geverifieerde gebruiker opslaat.
 

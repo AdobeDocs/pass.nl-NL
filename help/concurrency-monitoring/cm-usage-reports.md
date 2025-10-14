@@ -23,7 +23,7 @@ De **dienst van het Gebruik van de Controle van de Gelijktijdige** is beschikbaa
 
 ## Vereisten {#usage-rep-prerequisites}
 
-Om tot het product van de Rapporten van het Gebruik van de Controle van de Gelijktijdige toegang te hebben, moet een klant eerst het Gelijktijdige Controle [ Team van de Steun ](mailto:tve-support@adobe.com) contacteren en zij zullen de noodzakelijke stappen uitvoeren om u toegang tot het API product te verlenen. Meer details op [ CMU API Toegang ](/help/concurrency-monitoring/cmu-api-access.md).
+Om tot het product van de Rapporten van het Gebruik van de Controle van de Gelijktijdige toegang te hebben, moet een klant eerst het Gelijktijdige Controle [&#x200B; Team van de Steun &#x200B;](mailto:tve-support@adobe.com) contacteren en zij zullen de noodzakelijke stappen uitvoeren om u toegang tot het API product te verlenen. Meer details op [&#x200B; CMU API Toegang &#x200B;](/help/concurrency-monitoring/cmu-api-access.md).
 
 ## Algemene rapportcijfers en uitsplitsingen {#general-rep-metrics-breakdown}
 
@@ -91,6 +91,6 @@ Het belangrijkste doel van dit verslag is om u te helpen begrijpen wat het effec
 
 ### Voorbeelden van rapporten
 
-Voor beste gegevensnauwkeurigheid, adviseren wij de rapporten die op deze pagina [ worden voorgesteld CMU voorbeelden van rapporten ](/help/concurrency-monitoring/cm-usage-reports-examples.md)
+Voor beste gegevensnauwkeurigheid, adviseren wij de rapporten die op deze pagina [&#x200B; worden voorgesteld CMU voorbeelden van rapporten &#x200B;](/help/concurrency-monitoring/cm-usage-reports-examples.md)
 
-[^1 ]: Mindere rapporten zijn niet standaard beschikbaar. Gelieve te contacteren het Gelijktijdige Controle [ Team van de Steun ](mailto:tve-support@adobe.com) om hen te verzoeken.
+[^1 ]: Mindere rapporten zijn niet standaard beschikbaar. Gelieve te contacteren het Gelijktijdige Controle [&#x200B; Team van de Steun &#x200B;](mailto:tve-support@adobe.com) om hen te verzoeken.

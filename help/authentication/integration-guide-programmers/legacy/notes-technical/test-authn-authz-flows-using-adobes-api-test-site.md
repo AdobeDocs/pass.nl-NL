@@ -17,21 +17,21 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 Om de stromen te testen AuthN en AuthZ, hebben wij een **API testplaats** voorbereid die tot uw beschikking staat. Ons ondersteuningsteam zal u met alle plezier van uw aanmeldingsgegevens voorzien. U kunt ons in **tve-support@adobe.com** contacteren.
 
 
 ## Deel I {#part-I}
 
-Voor het testen tegen de RELEASE-omgeving gaat u rechtstreeks naar deel II.  Om in het pre-kwalificatiemilieu te testen, zie [ Vestiging Uw Milieu en het Testen in pre-Qual ](/help/authentication/notes-technical/environments/setting-up-your-environment-and-testing-in-prequal.md).
+Voor het testen tegen de RELEASE-omgeving gaat u rechtstreeks naar deel II.  Om in het pre-kwalificatiemilieu te testen, zie [&#x200B; Vestiging Uw Milieu en het Testen in pre-Qual &#x200B;](/help/authentication/notes-technical/environments/setting-up-your-environment-and-testing-in-prequal.md).
 
 ## Deel II
 
 Voer de volgende stappen uit nadat u deel I hebt voltooid:
 
 
-1. Open webpage: [ het Staging API test ](https://sp.auth-staging.adobe.com/apitest/api.html).
+1. Open webpage: [&#x200B; het Staging API test &#x200B;](https://sp.auth-staging.adobe.com/apitest/api.html).
 1. Toegangsfunctie laden via:
    * In het vervolgkeuzemenu kiezen waar u het wilt openen (opmaken of maken) en in de foutopsporingsmodus kiezen
    * Het ingaan van de softwareverklaring waarmee u wilt testen

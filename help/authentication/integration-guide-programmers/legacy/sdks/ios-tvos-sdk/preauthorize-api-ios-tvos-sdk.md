@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 De API voor vooraf autoriseren kan worden gebruikt om een voorafgaande beslissing voor een of meer bronnen te verkrijgen, op deze manier kan de toepassing UI-tips en/of inhoud filteren implementeren.
 
@@ -173,7 +173,7 @@ Deze sectie benadrukt de structuur JSON van sommige mogelijke voorwerpen Preauth
 
 >[!IMPORTANT]
 >
->De lijst van mogelijke extra fouten die door het middel van de verbeterde fout worden teruggewonnen meldend eigenschap wordt gedocumenteerd in [ Geavanceerde fout die ](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) meldt.
+>De lijst van mogelijke extra fouten die door het middel van de verbeterde fout worden teruggewonnen meldend eigenschap wordt gedocumenteerd in [&#x200B; Geavanceerde fout die &#x200B;](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) meldt.
 
 #### Voltooid
 

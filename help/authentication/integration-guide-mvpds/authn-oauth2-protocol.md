@@ -67,7 +67,7 @@ In de authentificatiestroom, zal de Authentificatie van Adobe Pass met MVPD op h
 
 
 
-![ Diagram om de stroom van de Authentificatie in de Authentificatie te tonen die met MVPD op het protocol communiceert dat in configuratie wordt geselecteerd.](../assets/authn-flow.png)
+![&#x200B; Diagram om de stroom van de Authentificatie in de Authentificatie te tonen die met MVPD op het protocol communiceert dat in configuratie wordt geselecteerd.](../assets/authn-flow.png)
 
 **Figuur 1: OAuth 2.0 authentificatiestroom**
 

@@ -15,15 +15,15 @@ ht-degree: 0%
 >
 > De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
-De meta-gegevens van de gebruiker verwijzen naar gebruiker-specifieke [ attributen ](#attributes) (b.v., zip codes, ouderlijke classificaties, gebruiker IDs, enz.) die door MVPDs worden gehandhaafd en aan Programmers door de Authentificatie van Adobe Pass [ worden verstrekt REST API V2 ](#apis).
+De meta-gegevens van de gebruiker verwijzen naar gebruiker-specifieke [&#x200B; attributen &#x200B;](#attributes) (b.v., zip codes, ouderlijke classificaties, gebruiker IDs, enz.) die door MVPDs worden gehandhaafd en aan Programmers door de Authentificatie van Adobe Pass [&#x200B; worden verstrekt REST API V2 &#x200B;](#apis).
 
 Metagegevens van gebruikers worden beschikbaar nadat de verificatiestroom is voltooid, maar bepaalde metagegevenskenmerken kunnen tijdens de autorisatiestroom worden bijgewerkt, afhankelijk van de MVPD en het specifieke metagegevenskenmerk in kwestie.
 
 De meta-gegevens van de gebruiker kunnen worden gebruikt om verpersoonlijking voor gebruikers te verbeteren, maar zouden ook voor analyses kunnen worden gebruikt. Een programmeur kan bijvoorbeeld de ZIP-code van een gebruiker gebruiken om gelokaliseerde nieuws- of weerupdates te leveren of om ouderlijke controle af te dwingen.
 
-Adobe Pass-verificatie normaliseert de waarden van gebruikersmetagegevens wanneer MVPD&#39;s gegevens in verschillende indelingen leveren. Ook, voor bepaalde attributen (b.v., postcode), kunnen de waarden [ worden gecodeerd ](#encryption) gebruikend het certificaat van een Programmer.
+Adobe Pass-verificatie normaliseert de waarden van gebruikersmetagegevens wanneer MVPD&#39;s gegevens in verschillende indelingen leveren. Ook, voor bepaalde attributen (b.v., postcode), kunnen de waarden [&#x200B; worden gecodeerd &#x200B;](#encryption) gebruikend het certificaat van een Programmer.
 
-De Authentificatie van Adobe Pass laat Programmeurs toe om de gebruikersmeta-gegevens te herzien die in hun integratie van MVPD beschikbaar worden gesteld en [ beheert ](#management) hen door het [ Dashboard van Adobe Pass TVE ](https://experience.adobe.com/#/pass/authentication).
+De Authentificatie van Adobe Pass laat Programmeurs toe om de gebruikersmeta-gegevens te herzien die in hun integratie van MVPD beschikbaar worden gesteld en [&#x200B; beheert &#x200B;](#management) hen door het [&#x200B; Dashboard van Adobe Pass TVE &#x200B;](https://experience.adobe.com/#/pass/authentication).
 
 ## Attributen van metagegevens van gebruiker {#attributes}
 
@@ -41,7 +41,7 @@ De volgende lijst maakt een lijst van enkele attributen van gebruikersmeta-gegev
 | `allowMirroring` | Boolean | &quot;true&quot; | Nee | Kenmerk dat aangeeft of het huidige apparaat het scherm kan spiegelen. | Het kenmerk is specifiek voor Spectrum. |
 | `zip` | Array | \[&quot;77754&quot;, &quot;12345&quot;\] | Ja | Postcode van gebruiker. | De kenmerkwaarde kan worden gebruikt om gelokaliseerd nieuws, weerupdates of sportevenementen te leveren. De waarde `zip` vertegenwoordigt gevoelige gegevens die juridische overeenkomsten met de MVPD vereisen. Wanneer de code is gecodeerd, is de representatie van de `zip` -toets een `String` in plaats van een `Array` -toets. |
 | `encryptedZip` | String | &quot;&quot; | Ja | Gecodeerde postcode van de gebruiker. | Het kenmerk is specifiek voor Comcast. |
-| `channelID` | Array | \[&quot;channel-1&quot;, &quot;channel-2&quot;\] | Nee | Lijst met kanalen die de gebruiker mag bekijken. | De attributenwaarde kan worden gebruikt om diverse kanalen van portals te filtreren die veelvoudige netwerken bijeenvoegen. Onze aanbeveling moet [ gebruiken preauthorize API ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md) in plaats van dit attribuut van gebruikersmeta-gegevens aan filter uit kanalen die niet beschikbaar aan de gebruiker zijn. |
+| `channelID` | Array | \[&quot;channel-1&quot;, &quot;channel-2&quot;\] | Nee | Lijst met kanalen die de gebruiker mag bekijken. | De attributenwaarde kan worden gebruikt om diverse kanalen van portals te filtreren die veelvoudige netwerken bijeenvoegen. Onze aanbeveling moet [&#x200B; gebruiken preauthorize API &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md) in plaats van dit attribuut van gebruikersmeta-gegevens aan filter uit kanalen die niet beschikbaar aan de gebruiker zijn. |
 | `maxRating` | Object | { MPAA: &quot;NR&quot;, VCHIP: &quot;X&quot;, URL: &quot;http://manage.my/parental&quot; } | Nee | Maximale ouderlijke classificatie voor de huidige gebruiker. | De kenmerkwaarde kan worden gebruikt om inhoud te filteren die niet geschikt is voor de huidige gebruiker op basis van de classificaties &quot;MPAA&quot; of &quot;VCHIP&quot;. |
 | `language` | String | &quot;English&quot; | Nee | Taalinstellingen. | De kenmerkwaarde kan worden gebruikt om berichten weer te geven in overeenstemming met de taalvoorkeuren van de gebruiker. |
 
@@ -80,7 +80,7 @@ De kenmerken van de gebruikersmetagegevens die beschikbaar worden gesteld aan ee
 
 ## Metagegevenscodering gebruiker {#encryption}
 
-Om gebruikersmeta-gegevensattributen te coderen en te decrypteren, moet de Programmer een certificaat (openbaar/privé zeer belangrijk paar) produceren en [&#128279;](#management) het certificaat door [ Adobe Pass TVE Dashboard ](https://experience.adobe.com/#/pass/authentication) zelf-vormen of de openbare sleutel met de vertegenwoordigers van de Authentificatie van Adobe Pass te delen.
+Om gebruikersmeta-gegevensattributen te coderen en te decrypteren, moet de Programmer een certificaat (openbaar/privé zeer belangrijk paar) produceren en [&#128279;](#management) het certificaat door [&#x200B; Adobe Pass TVE Dashboard &#x200B;](https://experience.adobe.com/#/pass/authentication) zelf-vormen of de openbare sleutel met de vertegenwoordigers van de Authentificatie van Adobe Pass te delen.
 
 Voer de onderstaande stappen uit om ervoor te zorgen dat het certificaat op de juiste wijze wordt gegenereerd en geconfigureerd:
 
@@ -142,9 +142,9 @@ Voer de onderstaande stappen uit om ervoor te zorgen dat het certificaat op de j
      openssl x509 -in mycompany-license-temp.pem -inform PEM -out mycompany-license.pem -outform PEM
      ```
 
-1. Gebruik het PEM- dossier om [&#128279;](#management) het certificaat door [ het Dashboard van Adobe Pass te vormen TVE ](https://experience.adobe.com/#/pass/authentication) of het Pvm- dossier naar de vertegenwoordigers van de Authentificatie van Adobe Pass te verzenden.
+1. Gebruik het PEM- dossier om [&#128279;](#management) het certificaat door [&#x200B; het Dashboard van Adobe Pass te vormen TVE &#x200B;](https://experience.adobe.com/#/pass/authentication) of het Pvm- dossier naar de vertegenwoordigers van de Authentificatie van Adobe Pass te verzenden.
 
-   * Verwijs naar de volgende sectie voor meer details op hoe te om certificaten door het [ Dashboard van Adobe Pass te beheren TVE ](https://experience.adobe.com/#/pass/authentication).
+   * Verwijs naar de volgende sectie voor meer details op hoe te om certificaten door het [&#x200B; Dashboard van Adobe Pass te beheren TVE &#x200B;](https://experience.adobe.com/#/pass/authentication).
 
    * Adobe Pass-verificatie ondersteunt zowel een primair certificaat als een back-upcertificaat. Als uw primaire certificaat op om het even welke manier gecompromitteerd wordt, kunt u het intrekken, en op het secundaire certificaat schakelen. Dit zal een vlotte overgang tussen certificaten met minimale klantengevolgen verzekeren.
 
@@ -152,13 +152,13 @@ Voer de onderstaande stappen uit om ervoor te zorgen dat het certificaat op de j
 
 >[!IMPORTANT]
 >
-> Als u geen toegang tot het Dashboard van Adobe Pass TVE hebt, creeer een kaartje door onze [ Zendesk ](https://adobeprimetime.zendesk.com) en vraag uw Technische Manager van de Rekening (TAM) om de aangewezen veranderingen voor u aan te brengen.
+> Als u geen toegang tot het Dashboard van Adobe Pass TVE hebt, creeer een kaartje door onze [&#x200B; Zendesk &#x200B;](https://adobeprimetime.zendesk.com) en vraag uw Technische Manager van de Rekening (TAM) om de aangewezen veranderingen voor u aan te brengen.
 
-Het Adobe Pass TVE-dashboard is een hulpmiddel voor Adobe Pass Authentication-klanten (Programmers) om hun configuratie en gegevens te beheren. Dit zelfbedienings dashboard laat een waaier van functionaliteit toe die in de [ documentatie van de Gids van de Gebruiker van het Dashboard van Adobe Pass TVE ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-overview.md) wordt beschreven.
+Het Adobe Pass TVE-dashboard is een hulpmiddel voor Adobe Pass Authentication-klanten (Programmers) om hun configuratie en gegevens te beheren. Dit zelfbedienings dashboard laat een waaier van functionaliteit toe die in de [&#x200B; documentatie van de Gids van de Gebruiker van het Dashboard van Adobe Pass TVE &#x200B;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-overview.md) wordt beschreven.
 
-Om de attributen van gebruikersmeta-gegevens te herzien en te beheren die door MVPD ter beschikking worden gesteld, volg de stappen in de [ Gids van de Gebruiker van het Dashboard van TVE voor de documentatie van de Integraties ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#user-metadata).
+Om de attributen van gebruikersmeta-gegevens te herzien en te beheren die door MVPD ter beschikking worden gesteld, volg de stappen in de [&#x200B; Gids van de Gebruiker van het Dashboard van TVE voor de documentatie van de Integraties &#x200B;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#user-metadata).
 
-Om de certificaten te herzien en te beheren die voor het coderen van de attributen van gebruikersmeta-gegevens worden gebruikt, volg de stappen in de [ Gids van de Gebruiker van het Dashboard van TVE voor Programmeurs ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-programmers.md#certificates) of de [ Gids van de Gebruiker van het Dashboard van TVE voor de documenten van Kanalen ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-channels.md#certificates).
+Om de certificaten te herzien en te beheren die voor het coderen van de attributen van gebruikersmeta-gegevens worden gebruikt, volg de stappen in de [&#x200B; Gids van de Gebruiker van het Dashboard van TVE voor Programmeurs &#x200B;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-programmers.md#certificates) of de [&#x200B; Gids van de Gebruiker van het Dashboard van TVE voor de documenten van Kanalen &#x200B;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-channels.md#certificates).
 
 ## REST API V2 {#rest-api-v2}
 
@@ -172,7 +172,7 @@ Verwijs naar de **secties van de Reactie** en **Steekproeven** van bovengenoemde
 
 >[!IMPORTANT]
 >
-> De meta-gegevens van de gebruiker worden beschikbaar nadat de authentificatiestroom voltooit, daarom te hoeven de cliënttoepassing geen afzonderlijk eindpunt vragen om de [ informatie van gebruikersmeta-gegevens ](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata.md) terug te winnen, aangezien het reeds inbegrepen in de profielinformatie is.
+> De meta-gegevens van de gebruiker worden beschikbaar nadat de authentificatiestroom voltooit, daarom te hoeven de cliënttoepassing geen afzonderlijk eindpunt vragen om de [&#x200B; informatie van gebruikersmeta-gegevens &#x200B;](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata.md) terug te winnen, aangezien het reeds inbegrepen in de profielinformatie is.
 
 Raadpleeg de volgende documenten voor meer informatie over hoe en wanneer u de bovenstaande API&#39;s wilt integreren:
 
@@ -183,4 +183,4 @@ Afhankelijk van de MVPD en het specifieke metagegevenskenmerk kunnen bepaalde me
 
 >[!MORELIKETHIS]
 >
-> [ FAQs van de Fase van de Authentificatie ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general)
+> [&#x200B; FAQs van de Fase van de Authentificatie &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general)

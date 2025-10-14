@@ -20,10 +20,10 @@ ht-degree: 0%
 >
 > Voordat u de Proxy MVPD-webservice gebruikt, moet u controleren of aan de volgende voorwaarden is voldaan:
 >
-> * Haal de cliëntgeloofsbrieven zoals die in [ worden beschreven terug cliëntgeloofsbrieven ](../integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-client-credentials.md) API documentatie.
-> * Haal het toegangstoken zoals die in [ wordt beschreven terug toegangstoken ](../integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md) API documentatie.
+> * Haal de cliëntgeloofsbrieven zoals die in [&#x200B; worden beschreven terug cliëntgeloofsbrieven &#x200B;](../integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-client-credentials.md) API documentatie.
+> * Haal het toegangstoken zoals die in [&#x200B; wordt beschreven terug toegangstoken &#x200B;](../integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md) API documentatie.
 >
-> Verwijs naar de [ Dynamische documentatie van het Overzicht van de Registratie van de Cliënt ](../integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) voor meer informatie over hoe te om een geregistreerde toepassing tot stand te brengen en de softwareverklaring te downloaden.
+> Verwijs naar de [&#x200B; Dynamische documentatie van het Overzicht van de Registratie van de Cliënt &#x200B;](../integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) voor meer informatie over hoe te om een geregistreerde toepassing tot stand te brengen en de softwareverklaring te downloaden.
 
 ## Overzicht {#overview-proxy-mvpd-webserv}
 
@@ -36,8 +36,8 @@ Om de eigenschap ProxyMVPD uit te voeren, verstrekt de Authentificatie van Adobe
 
 ## Proxy MVPD-services {#proxy-mvpd-services}
 
-&#x200B;- [ wint proxy MVPDs ](#retriev-proxied-mvpds) terug
-&#x200B;- [ voorlegt proxy MVPDs ](#submit-proxied-mvpds)
+&#x200B;- [&#x200B; wint proxy MVPDs &#x200B;](#retriev-proxied-mvpds) terug
+&#x200B;- [&#x200B; voorlegt proxy MVPDs &#x200B;](#submit-proxied-mvpds)
 
 ### Geavanceerde MVPD&#39;s ophalen {#retriev-proxied-mvpds}
 
@@ -231,7 +231,7 @@ De Adobe heeft het volgende toegelaten formaat voor het posten/het terugwinnen v
 
 Een verzoek kan alleen als geldig worden beschouwd als het aan de volgende regels voldoet:
 
-&#x200B;- De verzoekkopbal moet het veiligheids Oauth2 toegangstoken bevatten die zoals in [ wordt beschreven wordt verkregen terugwinnen toegangstoken ](../integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md) API documentatie.
+&#x200B;- De verzoekkopbal moet het veiligheids Oauth2 toegangstoken bevatten die zoals in [&#x200B; wordt beschreven wordt verkregen terugwinnen toegangstoken &#x200B;](../integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md) API documentatie.
 &#x200B;- Het verzoek moet van een specifiek IP adres komen dat is toegestaan.
 &#x200B;- De aanvraag moet via het SSL-protocol worden verzonden.
 

@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 ## Inleiding
 
@@ -35,7 +35,7 @@ De volgende secties verstrekken beschrijvingen en steekproeven specifiek voor de
 
 Een gebruiker kan zich alleen aanmelden bij de MVPD en vervolgens worden geverifieerd als de pagina of speler de gebruiker een manier biedt om zijn of haar MVPD te identificeren. Er is een standaardversie van een dialoogvenster voor MVPD-selectie beschikbaar voor ontwikkeling. Voor productiegebruik moet u uw eigen MVPD-kiezer implementeren.
 
-Als u reeds weet wie de leverancier van de klant is, kunt u [ MVPD programmatically plaatsen ](/help/authentication/home.md), zonder gebruikersinteractie. De techniek is hetzelfde, maar passeert de stap om het dialoogvenster Provider aan te roepen en de klant te vragen zijn of haar MVPD te selecteren.
+Als u reeds weet wie de leverancier van de klant is, kunt u [&#x200B; MVPD programmatically plaatsen &#x200B;](/help/authentication/home.md), zonder gebruikersinteractie. De techniek is hetzelfde, maar passeert de stap om het dialoogvenster Provider aan te roepen en de klant te vragen zijn of haar MVPD te selecteren.
 
 ## De serviceprovider weergeven {#displaying-the-service-provider}
 
