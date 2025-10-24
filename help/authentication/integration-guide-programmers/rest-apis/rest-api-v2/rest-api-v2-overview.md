@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 Wilt u de kostenefficiëntie van uw TVE-toepassingen verbeteren?
 
@@ -94,4 +94,4 @@ Bekijk het webinar over de nieuwe REST API V2, waar we een overzicht hebben gege
 
 ## Wilt u de REST API V2 proberen? {#rest-api-v2-want-to-try}
 
-U kunt REST API V2 door onze product-specifieke pagina van [ Adobe Developer ](https://developer.adobe.com/adobe-pass/) website nu onderzoeken.
+U kunt REST API V2 door onze product-specifieke pagina van [&#x200B; Adobe Developer &#x200B;](https://developer.adobe.com/adobe-pass/) website nu onderzoeken.
