@@ -2,9 +2,9 @@
 title: Overzicht van REST API V2
 description: Overzicht van REST API V2
 exl-id: a5595193-82c4-4033-bd98-596b4908b401
-source-git-commit: a02ba4ca1b6579781e40ecd0d12dbfdd23ea7398
+source-git-commit: 63dc9636f74f8eee1af6205c4d31a01df4503050
 workflow-type: tm+mt
-source-wordcount: '528'
+source-wordcount: '530'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 Wilt u de kostenefficiëntie van uw TVE-toepassingen verbeteren?
 
@@ -74,8 +74,9 @@ Alle toekomstige ontwikkelingen zullen echter gebaseerd zijn op de REST API V2. 
 Ga om te beginnen naar onze openbare documentatie:
 
 - [Webinar](#rest-api-v2-webinar)
-- [Glossarium](rest-api-v2-glossary.md)
+- [Verklarende woordenlijst](rest-api-v2-glossary.md)
 - [Checklist](rest-api-v2-checklist.md)
+- [AI-regels](rest-api-v2-ai-rules.md)
 - [Veelgestelde vragen](rest-api-v2-faqs.md)
 - [API&#39;s](apis/rest-api-v2-apis-overview.md)
 - [Stromen](flows/rest-api-v2-flows-overview.md)
@@ -93,4 +94,4 @@ Bekijk het webinar over de nieuwe REST API V2, waar we een overzicht hebben gege
 
 ## Wilt u de REST API V2 proberen? {#rest-api-v2-want-to-try}
 
-U kunt REST API V2 door onze product-specifieke pagina van [&#x200B; Adobe Developer &#x200B;](https://developer.adobe.com/adobe-pass/) website nu onderzoeken.
+U kunt REST API V2 door onze product-specifieke pagina van [ Adobe Developer ](https://developer.adobe.com/adobe-pass/) website nu onderzoeken.
