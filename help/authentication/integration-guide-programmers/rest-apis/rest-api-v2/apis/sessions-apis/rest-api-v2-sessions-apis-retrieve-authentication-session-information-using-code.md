@@ -2,9 +2,9 @@
 title: Verificatiesessie ophalen met gebruik van code
 description: REST API V2 - Verificatiesessie ophalen met code
 exl-id: 5cc209eb-ee6b-4bb9-9c04-3444408844b7
-source-git-commit: 7ac04991289c95ebb803d1fd804e9b497f821cda
+source-git-commit: 92d2befd154b21abf743075c78ad617cff79b7e9
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '529'
 ht-degree: 1%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
-> De implementatie van REST API V2 wordt begrensd door de [&#x200B; Throttling mechanisme &#x200B;](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
+> De implementatie van REST API V2 wordt begrensd door de [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
 
 >[!MORELIKETHIS]
 >
-> Zorg ervoor om [&#x200B; REST API V2 FAQs &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general) ook te bezoeken.
+> Zorg ervoor om [ REST API V2 FAQs ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general) ook te bezoeken.
 
 ## Verzoek {#request}
 
@@ -63,7 +63,7 @@ ht-degree: 1%
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Toestemming</td>
-      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="../../appendix/headers/rest-api-v2-appendix-headers-authorization.md"> 1&rbrace; kopbaldocumentatie van de Toestemming &lbrace;.</a></td>
+      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="../../appendix/headers/rest-api-v2-appendix-headers-authorization.md"> 1} kopbaldocumentatie van de Toestemming {.</a></td>
       <td><i>vereist</i></td>
    </tr>
    <tr>
@@ -132,7 +132,7 @@ ht-degree: 1%
       <td>405</td>
       <td>Methode niet toegestaan</td>
       <td>
-        De HTTP-methode is ongeldig, de client moet een HTTP-methode gebruiken die is toegestaan voor de aangevraagde resource en het opnieuw proberen. Voor meer details verwijs naar de <a href="#request"> 1&rbrace; sectie van het Verzoek &lbrace;.</a>
+        De HTTP-methode is ongeldig, de client moet een HTTP-methode gebruiken die is toegestaan voor de aangevraagde resource en het opnieuw proberen. Voor meer details verwijs naar de <a href="#request"> 1} sectie van het Verzoek {.</a>
       </td>
    </tr>
    <tr>
@@ -163,13 +163,41 @@ ht-degree: 1%
       <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
-      <td style="background-color: #DEEBFF;">parameters</td>
+      <td style="background-color: #DEEBFF;"></td>
       <td>
          JSON-object met de volgende kenmerken:
-         <ul>
-            <li><b> bestaand </b><br/> De bestaande parameters die reeds werden verstrekt.</li>
-            <li><b> het missen </b><br/> de ontbrekende parameters die moeten worden verstrekt om de authentificatiestroom te voltooien.</li>
-         </ul>
+         <table style="table-layout:auto">
+            <tr>
+               <th style="background-color: #EFF2F7;">Kenmerk</th>
+               <th style="background-color: #EFF2F7"></th>
+               <th style="background-color: #EFF2F7;"></th>
+            </tr>
+            <tr>
+               <td style="background-color: #DEEBFF;">existingParameters</td>
+               <td>De bestaande parameters die al werden verstrekt.</td>
+               <td><i>vereist</i></td>
+            </tr>
+            <tr>
+               <td style="background-color: #DEEBFF;">missingParameters</td>
+               <td>De ontbrekende parameters die moeten worden verstrekt om de authentificatiestroom te voltooien.</td>
+               <td>optioneel</td>
+            </tr>
+            <tr>
+               <td style="background-color: #DEEBFF;">apparaat</td>
+               <td>De apparaatinformatie over het werkelijke streamingapparaat.</td>
+               <td><i>vereist</i></td>
+            </tr>
+            <tr>
+               <td style="background-color: #DEEBFF;">notBefore</td>
+               <td>De tijdstempel in milliseconden voordat de verificatiecode ongeldig is.</td>
+               <td><i>vereist</i></td>
+            </tr>
+            <tr>
+               <td style="background-color: #DEEBFF;">notAfter</td>
+               <td>De tijdstempel in milliseconden waarna de verificatiecode niet geldig is.</td>
+               <td><i>vereist</i></td>
+            </tr>
+         </table>
       </td>
       <td><i>vereist</i></td>
 </table>
@@ -238,12 +266,74 @@ HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
 
 {        
-    "parameters": {
-        "existing": {
-            "mvpd": "Cablevision",
-            "domain": "adobe.com"
-            "redirectUrl": "https://www.adobe.com"        
-        }
+    "existingParameters": {
+        "mvpd": "apassidp",
+        "domain": "adobe.com"
+        "redirectUrl": "https://www.adobe.com",
+        "serviceProvider": "REF30"        
+    },
+    "device": {
+        "type": "Desktop",
+        "model": null,
+        "version": {
+            "major": 0,
+            "minor": 0,
+            "patch": 0,
+            "profile": ""
+        },
+    "hardware": {
+      "name": null,
+      "vendor": "Apple",
+      "version": {
+        "major": 0,
+        "minor": 0,
+        "patch": 0,
+        "profile": ""
+      },
+      "manufacturer": "Apple"
+    },
+    "operatingSystem": {
+      "name": "macOS",
+      "family": "macOS",
+      "vendor": "Apple",
+      "version": {
+        "major": 10,
+        "minor": 15,
+        "patch": 7,
+        "profile": ""
+      }
+    },
+    "browser": {
+      "name": "Chrome",
+      "vendor": "Google",
+      "version": {
+        "major": 140,
+        "minor": 0,
+        "patch": 0,
+        "profile": ""
+      },
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+      "originalUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+    },
+    "display": {
+      "width": 0,
+      "height": 0,
+      "ppi": 0,
+      "name": "DISPLAY",
+      "vendor": null,
+      "version": null,
+      "diagonalSize": null
+    },
+    "applicationId": null,
+    "connection": {
+      "ipAddress": "...",
+      "port": "55161",
+      "secure": false,
+      "type": null
+    }
+    }
+    "notBefore": "1733735289035",
+    "notAfter": "1733737089035"    
 }
 ```
 
@@ -270,13 +360,77 @@ HTTP/1.1 200 OK
 
 Content-Type: application/json;charset=UTF-8
 
-{        
-    "parameters": {
-        "existing": {
-            "mvpd": "Cablevision",
-            "domain": "adobe.com"
-        },
-        "missing": ["redirectUrl"]
+{
+  "missingParameters": [
+    "mvpd"
+  ],
+  "existingParameters": {
+    "redirectUrl": "https://adobe.com",
+    "domainName": "adobe.com",
+    "serviceProvider": "REF30"
+  },
+  "device": {
+    "type": "Desktop",
+    "model": null,
+    "version": {
+      "major": 0,
+      "minor": 0,
+      "patch": 0,
+      "profile": ""
+    },
+    "hardware": {
+      "name": null,
+      "vendor": "Apple",
+      "version": {
+        "major": 0,
+        "minor": 0,
+        "patch": 0,
+        "profile": ""
+      },
+      "manufacturer": "Apple"
+    },
+    "operatingSystem": {
+      "name": "macOS",
+      "family": "macOS",
+      "vendor": "Apple",
+      "version": {
+        "major": 10,
+        "minor": 15,
+        "patch": 7,
+        "profile": ""
+      }
+    },
+    "browser": {
+      "name": "Chrome",
+      "vendor": "Google",
+      "version": {
+        "major": 140,
+        "minor": 0,
+        "patch": 0,
+        "profile": ""
+      },
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+      "originalUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+    },
+    "display": {
+      "width": 0,
+      "height": 0,
+      "ppi": 0,
+      "name": "DISPLAY",
+      "vendor": null,
+      "version": null,
+      "diagonalSize": null
+    },
+    "applicationId": null,
+    "connection": {
+      "ipAddress": "...",
+      "port": "3061",
+      "secure": false,
+      "type": null
+    }
+  },
+  "notBefore": "1761299929958",
+  "notAfter": "1761301729958"
 }
 ```
 
