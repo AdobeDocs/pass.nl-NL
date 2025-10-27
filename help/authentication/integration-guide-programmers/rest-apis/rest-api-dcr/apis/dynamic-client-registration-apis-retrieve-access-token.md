@@ -2,9 +2,9 @@
 title: Toegangstoken ophalen
 description: Dynamische clientregistratie-API - Toegangstoken ophalen
 exl-id: 23287acf-5d56-46f0-b65e-79bf7d667708
-source-git-commit: be2b75d3dcde92c0b83700705892403291dcab2e
+source-git-commit: f0969a692380af3d20df37c49c37f7d1e85c7cfd
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '474'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> De dynamische implementatie van de Registratie API van de Cliënt wordt begrensd door de [&#x200B; Throttling mechanisme &#x200B;](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
+> De dynamische implementatie van de Registratie API van de Cliënt wordt begrensd door de [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
 
 ## Verzoek {#request}
 
@@ -47,7 +47,7 @@ ht-degree: 0%
       <td>
             De id-tekenreeks van de clienttoepassing.
             <br/><br/>
-            Voor meer informatie over hoe te om het koord van het cliëntherkenningsteken te verkrijgen, verwijs naar <a href="dynamic-client-registration-apis-retrieve-client-credentials.md"> de 2&rbrace; API documentatie van de cliëntgeloofsbrieven &lbrace;terugwinnen.</a>
+            Voor meer informatie over hoe te om het koord van het cliëntherkenningsteken te verkrijgen, verwijs naar <a href="dynamic-client-registration-apis-retrieve-client-credentials.md"> de 2} API documentatie van de cliëntgeloofsbrieven {terugwinnen.</a>
       </td>
       <td><i>vereist</i></td>
    </tr>
@@ -65,7 +65,7 @@ ht-degree: 0%
       <td>
             De tekenreeks met het giftetype (bijvoorbeeld "client_credentials") die de clienttoepassing kan gebruiken voor het client-tokeneindpunt.
             <br/><br/>
-            Voor meer informatie over hoe te om het subsidietype koord te verkrijgen, verwijs naar <a href="dynamic-client-registration-apis-retrieve-client-credentials.md"> de 2&rbrace; API documentatie van de cliëntgeloofsbrieven &lbrace;terugwinnen.</a>
+            Voor meer informatie over hoe te om het subsidietype koord te verkrijgen, verwijs naar <a href="dynamic-client-registration-apis-retrieve-client-credentials.md"> de 2} API documentatie van de cliëntgeloofsbrieven {terugwinnen.</a>
       </td>
       <td><i>vereist</i></td>
    </tr>
@@ -230,7 +230,11 @@ ht-degree: 0%
             </tr>
             <tr>
                <td style="background-color: #DEEBFF;">onbevoegd_client</td>
-               <td>Het gebruikte subsidietype is ongeldig.</td>
+               <td>De clienttoepassing is niet gemachtigd om dit type autorisatiesubsidie te gebruiken.</td>
+            </tr>
+            <tr>
+               <td style="background-color: #DEEBFF;">unsupported_subsidie_type</td>
+               <td>Het type autorisatiesubsidie wordt niet ondersteund door de autorisatieserver.</td>
             </tr>
          </table>
       </td>
