@@ -2,9 +2,9 @@
 title: Afmelden starten voor specifieke mvpd
 description: REST API V2 - Afmelden starten voor specifieke mvpd
 exl-id: 2482de87-b3d4-4ea8-bd4a-25bf10017e01
-source-git-commit: 26245e019afac2c0844ed64b222208cc821f9c6c
+source-git-commit: 110e8519d6c042cc38de3fbefcd34297b6edcfad
 workflow-type: tm+mt
-source-wordcount: '1025'
+source-wordcount: '1028'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> De implementatie van REST API V2 wordt begrensd door de [&#x200B; Throttling mechanisme &#x200B;](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
+> De implementatie van REST API V2 wordt begrensd door de [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
 
 ## Verzoek {#request}
 
@@ -73,7 +73,7 @@ ht-degree: 0%
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Toestemming</td>
-      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="../../appendix/headers/rest-api-v2-appendix-headers-authorization.md"> 1&rbrace; kopbaldocumentatie van de Toestemming &lbrace;.</a></td>
+      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="../../appendix/headers/rest-api-v2-appendix-headers-authorization.md"> 1} kopbaldocumentatie van de Toestemming {.</a></td>
       <td><i>vereist</i></td>
    </tr>
    <tr>
@@ -134,7 +134,7 @@ ht-degree: 0%
       <td>
          Het mediatype dat door de clienttoepassing wordt geaccepteerd.
          <br/><br/>
-         Indien gespecificeerd, moet het application/json zijn.
+         Indien opgegeven, moet dit application/json;charset=utf-8 zijn.
       </td>
       <td>optioneel</td>
    </tr>
@@ -178,7 +178,7 @@ ht-degree: 0%
       <td>405</td>
       <td>Methode niet toegestaan</td>
       <td>
-        De HTTP-methode is ongeldig, de client moet een HTTP-methode gebruiken die is toegestaan voor de aangevraagde resource en het opnieuw proberen. Voor meer details verwijs naar de <a href="#request"> 1&rbrace; sectie van het Verzoek &lbrace;.</a>
+        De HTTP-methode is ongeldig, de client moet een HTTP-methode gebruiken die is toegestaan voor de aangevraagde resource en het opnieuw proberen. Voor meer details verwijs naar de <a href="#request"> 1} sectie van het Verzoek {.</a>
       </td>
    </tr>
    <tr>
@@ -258,9 +258,9 @@ ht-degree: 0%
                   <br/><br/>
                   De mogelijke waarden zijn:
                   <ul>
-                    <li><b> interactief </b><br/> Dit type is op de volgende waarden van het &grave; actionName attribuut van toepassing: <b> logout </b>.</li>
-                    <li><b> partner_interactive </b><br/> Dit type is op de volgende waarden van het &grave; actionName attribuut van toepassing: <b> partner_logout </b>.</li>
-                    <li><b> niets </b><br/> Dit type is op de volgende waarden van het &grave; actionName attribuut van toepassing: <b> volledig </b>, <b> ongeldig </b>.</li>
+                    <li><b> interactief </b><br/> Dit type is op de volgende waarden van het ` actionName attribuut van toepassing: <b> logout </b>.</li>
+                    <li><b> partner_interactive </b><br/> Dit type is op de volgende waarden van het ` actionName attribuut van toepassing: <b> partner_logout </b>.</li>
+                    <li><b> niets </b><br/> Dit type is op de volgende waarden van het ` actionName attribuut van toepassing: <b> volledig </b>, <b> ongeldig </b>.</li>
                   </ul>
                <td><i>vereist</i></td>
             </tr>
