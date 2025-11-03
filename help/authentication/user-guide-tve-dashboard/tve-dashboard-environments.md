@@ -2,7 +2,7 @@
 title: TVE-dashboardomgevingen
 description: Begrijp het gebruik en het werk van verschillende milieu's in het Dashboard van TVE.
 exl-id: 591becb8-2f6c-46e0-b108-c64e6df69f89
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: d0f08314d7033aae93e4a0d9bc94af8773c5ba13
 workflow-type: tm+mt
 source-wordcount: '346'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Het TVE-dashboard biedt verschillende omgevingen die zijn aangepast voor specifi
 
 Binnen elke omgeving zijn er twee verschillende profielen:
 
-* **het Opvoeren**: Het het opvoeren profiel verbindt met de het opvoeren server van MVPD voor het testen en bevestiging van integraties alvorens levend te gaan.
+* **het Opvoeren**: Het het opvoeren profiel verbindt met de het opvoeren server van MVPD voor het testen en bevestiging van integratie alvorens live te gaan.
 
 * **Productie**: Het productieprofiel verbindt met het MVPD productieprofiel voor daadwerkelijke productieactiviteiten.
 
@@ -33,18 +33,18 @@ De omgevingen in het TVE-dashboard hebben gedurende de hele levenscyclus van de 
 
 ### Periodieke stapeling
 
-* Valideer nieuwe niet-vrijgegeven eigenschappen van de server van de Authentificatie van Adobe Pass gebruikend de het opvoeren eindpunten van MVPD.
-* Primair gebruikt door het productteam van de Authentificatie van Adobe Pass om nieuwe integratie toe te voegen en te bevestigen MVPD.
+* Valideer nieuwe, niet-vrijgegeven functies van de Adobe Pass-verificatieserver met behulp van de eindpunten van de MVPD-testfase.
+* Wordt voornamelijk gebruikt door het productteam voor Adobe Pass-verificatie om nieuwe MVPD-integratie toe te voegen en te valideren.
 
 ### Prequente productie
 
-* Valideer nieuwe niet-vrijgegeven eigenschappen of configuraties van de server van de Authentificatie van Adobe Pass gebruikend de productie eindpunten van MVPD.
-* Valideer nieuwe toepassingsversies voor elk kanaal gebruikend de productie eindpunten van MVPD.
+* Valideer nieuwe niet-vrijgegeven functies of configuraties van de Adobe Pass-verificatieserver met behulp van MVPD-eindpunten voor de productie.
+* Valideer nieuwe toepassingsversies voor elk kanaal gebruikend MVPD productieeindpunten.
 * Bevestig elke configuratieverandering alvorens het aan productie te duwen.
 
 ### Staging vrijgeven
 
-* Valideer nieuwe toepassingsversies voor elk kanaal gebruikend het opvoeren eindpunten van MVPD.
+* Valideer nieuwe toepassingsversies voor elk kanaal gebruikend MVPD het opvoeren eindpunten.
 * Voer prestatie- of capaciteitstests uit in deze omgeving.
 
 ### Geen productie
@@ -60,7 +60,7 @@ Voer de stappen uit om te schakelen tussen Adobe Pass Authentication TVE Dashboa
 
 1. Selecteer het vereiste het opvoeren of productiemilieu van het **milieu** dropdown menu bij de bovenkant van het linkerpaneel.
 
-   ![&#x200B; Dashboardmilieu&#39;s van TVE dropdown &#x200B;](../assets/tve-dashboard/new-tve-dashboard/dashboard/dashboard-environment-menu.png)
+   ![ Dashboardmilieu&#39;s van TVE dropdown ](/help/authentication/assets/tve-dashboard/new-tve-dashboard/dashboard/dashboard-environment-menu.png)
 
    *het milieu dropdown menu van het Dashboard van de Authentificatie van Adobe Pass TVE*
 

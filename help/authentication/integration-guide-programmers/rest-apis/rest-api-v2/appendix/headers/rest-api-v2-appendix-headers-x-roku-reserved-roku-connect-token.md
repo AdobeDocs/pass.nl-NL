@@ -1,7 +1,8 @@
 ---
 title: Koptekst - X-Roku-Reserved-Roku-Connect-Token
 description: REST API V2 - Koptekst - X-Roku-Reserved-Roku-Connect-Token
-source-git-commit: 640ba7073f7f4639f980f17f1a59c4468bfebcf4
+exl-id: 21016d5b-4d10-4018-a82c-f2797b2d9fb9
+source-git-commit: 2afe9ea2a814817757f1ab28484a84466da68d62
 workflow-type: tm+mt
 source-wordcount: '149'
 ht-degree: 0%
@@ -20,7 +21,7 @@ De <b> x-Roku-Gereserveerde-roku-Connect-Symbolische </b> verzoekkopbal bevat he
 
 Deze kopbal wordt ontworpen voor gebruik in enig sign-on (SSO) toegelaten stromen die de methode van de Identiteit van het Platform gebruiken.
 
-Voor meer details over enige sign-on (SSO) toegelaten stromen leveraging de methode van de Identiteit van het Platform, verwijs naar [&#x200B; Enige sign-on gebruikend de stromen van de platformidentiteit &#x200B;](../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-platform-identity-flows.md) documentatie.
+Voor meer details over enige sign-on (SSO) toegelaten stromen leveraging de methode van de Identiteit van het Platform, verwijs naar [ Enige sign-on gebruikend de stromen van de platformidentiteit ](../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-platform-identity-flows.md) documentatie.
 
 ## Syntaxis {#syntax}
 
@@ -46,4 +47,4 @@ De handtekening van JSON-web (`JWS`) of JSON-webcodering (`JWE` ) die een ondert
 
 Dit is beschikbaar voor de volgende platforms:
 
-* [Roku SSO Cookbook (REST API V2)](../../../../features-standard/sso-access/platform-sso/roku-single-sign-on/roku-sso-cookbook-rest-api-v2.md)
+* [Roku SSO Cookbook (REST API V2)](/help/premium-workflow/sso-access/platform-sso/roku-single-sign-on/roku-sso-cookbook-rest-api-v2.md)

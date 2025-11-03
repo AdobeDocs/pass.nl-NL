@@ -2,7 +2,7 @@
 title: Verificatie met het OAuth 2.0-protocol
 description: Verificatie met het OAuth 2.0-protocol
 exl-id: 0c1f04fe-51dc-4b4d-88e7-66e8f4609e02
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: d0f08314d7033aae93e4a0d9bc94af8773c5ba13
 workflow-type: tm+mt
 source-wordcount: '1088'
 ht-degree: 0%
@@ -37,23 +37,23 @@ Het protocol biedt ook meer flexibiliteit in termen van gegevens die worden bloo
 
 ## Voorschriften voor de overschakeling op OAuth 2.0 {#oauth-req}
 
-Om authentificatie met OAuth 2.0 te steunen, moet een MVPD aan de volgende eerste vereisten voldoen:
+Om authentificatie met OAuth 2.0 te steunen, moet een MVPD aan de volgende voorwaarden voldoen:
 
-Eerst en vooral, moet MVPD ervoor zorgen dat het de [&#128279;](https://oauthlib.readthedocs.io/en/latest/oauth2/grants/authcode.html) stroom van de Verlening van de Code van de 0&rbrace; Vergunning &lbrace;steunt.
+Eerst en vooral, moet MVPD ervoor zorgen dat het de [ stroom van de Verlening van de Code van de 0} Vergunning {steunt.](https://oauthlib.readthedocs.io/en/latest/oauth2/grants/authcode.html)
 
-Nadat het bevestigd heeft dat het de stroom steunt, moet MVPD ons de volgende informatie verstrekken:
+Na te hebben bevestigd dat het de stroom ondersteunt, moet de MVPD ons de volgende informatie verstrekken:
 
 * het eindpunt van de authentificatie
    * het eindpunt zal de vergunningscode verstrekken die later in ruil voor verfrist en toegangstoken zal worden gebruikt
 * het /token eindpunt
    * dit zal verfrissen teken en toegangstoken verstrekken
    * het vernieuwingstoken moet stabiel zijn (het moet niet veranderen telkens als wij om een nieuw toegangstoken verzoeken
-   * MVPD moet verscheidene actieve toegangstokens voor elk toestaan verfrist teken
+   * de MVPD moet verscheidene actieve toegangstokens voor elk toestaan vernieuwt teken
    * this end point will also exchange a refresh token for an access token
 * wij hebben een **eindpunt voor gebruiker-profiel** nodig
    * dit eindpunt zal userID verstrekken, die voor een rekening uniek moet zijn en geen Persoonlijk Identificeerbare Informatie zou moeten bevatten
 * het **/logout** eindpunt (facultatief)
-   * De Authentificatie van Adobe Pass zal aan dit eindpunt opnieuw richten, MVPD een omleiding terug URI verstrekken; op dit eindpunt, kan MVPD de koekjes op de cliëntmachine ontruimen of om het even welke gewenste logica voor logout toepassen
+   * Adobe Pass-verificatie wordt omgeleid naar dit eindpunt, biedt de MVPD een omleidings-URI. Op dit eindpunt kan de MVPD de cookies op de clientcomputer wissen of een logica voor afmelden toepassen
 * het wordt ten zeerste aanbevolen ondersteuning te bieden voor geautoriseerde clients (client-apps die geen gebruikerautorisatiepagina activeren)
 * wij zullen ook nodig hebben :
    * **clientID** en **cliëntgeheim** voor de integratieconfiguraties
@@ -63,11 +63,11 @@ Nadat het bevestigd heeft dat het de stroom steunt, moet MVPD ons de volgende in
 
 ## Verificatiestroom {#authn-flow}
 
-In de authentificatiestroom, zal de Authentificatie van Adobe Pass met MVPD op het protocol communiceren dat in de configuratie wordt geselecteerd. De OAuth 2.0-stroom wordt weergegeven in onderstaande afbeelding:
+In de authentificatiestroom, zal de Authentificatie van Adobe Pass met MVPD over het protocol communiceren dat in de configuratie wordt geselecteerd. De OAuth 2.0-stroom wordt weergegeven in onderstaande afbeelding:
 
 
 
-![&#x200B; Diagram om de stroom van de Authentificatie in de Authentificatie te tonen die met MVPD op het protocol communiceert dat in configuratie wordt geselecteerd.](../assets/authn-flow.png)
+![ Diagram om de stroom van de Authentificatie in de Authentificatie van Adobe te tonen die met MVPD op het protocol communiceert dat in configuratie wordt geselecteerd.](/help/authentication/assets/authn-flow.png)
 
 **Figuur 1: OAuth 2.0 authentificatiestroom**
 
@@ -77,9 +77,9 @@ In de authentificatiestroom, zal de Authentificatie van Adobe Pass met MVPD op h
 
 In een notendop, volgt de authentificatiestroom voor MVPDs ondersteunend het protocol OAuth 2.0 deze stappen:
 
-1. De eindgebruiker navigeert aan de plaats van de Programmer en selecteert om met zijn geloofsbrieven MVPD aan login aan te melden
-1. AccessEnabler die op de kant van de Programmer met wordt geïnstalleerd verzendt een verzoek van de Authentificatie in de vorm van een HTTP- verzoek naar het eindpunt van de Authentificatie van Adobe Pass, dat het eindpunt van de Authentificatie van Adobe Pass aan het MVPD toestemmingseindpunt opnieuw richt.
-1. Het MVPD autorisatieeindpunt verzendt een vergunningscode naar het eindpunt van de Authentificatie van Adobe Pass
+1. De eindgebruiker navigeert naar de site van de programmeur en selecteert om zich aan te melden met zijn MVPD-referenties
+1. AccessEnabler die op de kant van de Programmer met wordt geïnstalleerd verzendt een verzoek van de Authentificatie in de vorm van een HTTP- verzoek naar het eindpunt van de Authentificatie van Adobe Pass, dat het eindpunt van de Authentificatie van Adobe Pass aan het de vergunningseindpunt van MVPD opnieuw richt.
+1. Het MVPD-autorisatiepunt verzendt een autorisatiecode naar het Adobe Pass Authentication-eindpunt
 1. De Authentificatie van Adobe Pass gebruikt de ontvangen vergunningscode om te verzoeken verfrist token en een toegangstoken van het het symbolische eindpunt van MVPD
 1. Een vraag om gebruikersinformatie &amp; meta-gegevens te halen kan naar het eindpunt van het gebruikersprofiel worden verzonden voor het geval dat de gebruikersinformatie niet inbegrepen in het teken is
 1. Het verificatietoken wordt doorgegeven aan de eindgebruiker die nu met succes door de programmeersite kan bladeren
@@ -95,19 +95,19 @@ In een notendop, volgt de authentificatiestroom voor MVPDs ondersteunend het pro
 
 Deze beperking vloeit voort uit de cliëntstromen die de server niet toestaan om AuthNToken bij te werken die, voor het protocol OAuth 2.0, ook bevat verfrist teken.
 
-Een typische vergunningsstroom voert een uitwisseling van toe vernieuwt teken dat in AuthNToken voor een toegangstoken wordt bewaard die later wordt gebruikt om de vergunningsvraag in de naam van de gebruiker uit te voeren die in de eerste plaats voor authentiek werd verklaard. Als de Server van de Vergunning (MVPD) het vernieuwt teken moest veranderen en oude ongeldig maakte, zullen wij niet geldig AuthNToken kunnen bijwerken. Daarom moeten MVPD&#39;s stabiele vernieuwingstokens ondersteunen om OAuth 2.0-integratie voor hen in te stellen.
+Een typische vergunningsstroom voert een uitwisseling van toe vernieuwt teken dat in AuthNToken voor een toegangstoken wordt bewaard die later wordt gebruikt om de vergunningsvraag in de naam van de gebruiker uit te voeren die in de eerste plaats voor authentiek werd verklaard. Als de Server van de Vergunning (MVPD) het vernieuwt teken zou veranderen en oude ongeldig zou maken, zullen wij niet geldige AuthNToken kunnen bijwerken. Daarom moeten MVPD&#39;s stabiele vernieuwingstokens ondersteunen om OAuth 2.0-integratie voor hen in te stellen.
 
 
 ## Migreren van SAML naar OAuth 2.0 {#saml-auth2-migr}
 
-De migrerende integraties van SAML aan OAuth 2.0 zullen door Adobe en MVPD worden uitgevoerd. Er is geen behoefte aan enige technische verandering op de programmeerkant, hoewel de programmeur de cobranding op de MVPD login pagina zou kunnen willen controleren/testen. Vanuit het oogpunt van het MVPD zijn de eindpunten en andere informatie die in de eisen van Oauth 2.0 worden verlangd, vereist.
+Adobe en de MVPD zullen migrerende integraties van SAML naar OAuth 2.0 uitvoeren. Er is geen technische wijziging aan de programmeerkant nodig, hoewel de programmeur de cobranding op de MVPD-aanmeldingspagina mogelijk wil controleren of testen. Vanuit MVPD-oogpunt zijn de eindpunten en andere informatie die in de eisen van 2.0 van augustus wordt verlangd, vereist.
 
 Om **SSO** te bewaren, zullen de gebruikers die reeds een authentificatietoken hebben dat via SAML wordt verkregen nog als voor authentiek verklaard worden beschouwd en hun verzoeken zullen door de oude integratie van SAML worden verpletterd.
 
 Vanuit technisch oogpunt:
 
-1. De Adobe zal een integratie OAuth 2.0 tussen programmeur en MVPD toelaten, ZONDER de integratie van SAML te schrappen.
+1. Adobe zal een integratie OAuth 2.0 tussen programmeur en MVPD toelaten, ZONDER de integratie van SAML te schrappen.
 1. Na het inschakelen zullen alle nieuwe gebruikers OAuth 2.0-stromen gebruiken.
 1. De gebruikers reeds voor authentiek verklaard, die reeds een lokaal teken AuthN hebben dat onderwerpidentiteitskaart van SAML bevat, zullen automatisch door Adobe door de integratie van SAML worden verpletterd.
-1. Voor de gebruikers in stap 3, zodra hun SAML geproduceerde teken AuthN verloopt, zal de Adobe hen als nieuwe gebruikers behandelen en zich als de gebruikers in stap 2 gedragen.
-1. Adobe zal gebruikspatronen evalueren om te bepalen wanneer de integratie van SAML veilig kan worden gedeactiveerd.
+1. Voor de gebruikers in stap 3, zodra hun SAML geproduceerde teken AuthN verloopt, zal Adobe hen behandelen als nieuwe gebruikers en gedraagt zich zoals de gebruikers in stap 2.
+1. Adobe zal gebruikspatronen evalueren om te bepalen wanneer de integratie met SAML veilig kan worden gedeactiveerd.

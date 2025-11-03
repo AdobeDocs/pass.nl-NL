@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass-verificatie
 user-guide-description: Adobe Pass-verificatie is een machtigingsoplossing voor TV Everywhere, die een modulair kader verstrekt om te bepalen of iemand die toegang tot een bron vraagt, daar rechten voor heeft.
-source-git-commit: 63dc9636f74f8eee1af6205c4d31a01df4503050
+source-git-commit: 913b2127d2189bec1a7e6e197944f1512b764893
 workflow-type: tm+mt
-source-wordcount: '1279'
+source-wordcount: '1212'
 ht-degree: 3%
 
 ---
@@ -57,17 +57,17 @@ ht-degree: 3%
    - [MVPD-gids voor kickstart](kickstart/mvpd-kickstart-guide.md)
    - [Veelgestelde vragen over ondersteuningsprocedures](kickstart/support-procedures-faqs.md)
 - Integratiehandleiding voor programmeurs {#integration-guide-programmers}
-   - [Programmeringsintegratiegids](integration-guide-programmers/programmer-integration-guide-overview.md)
+   - [Programmeringsintegratiegids](/help/authentication/integration-guide-programmers/programmer-integration-guide-overview.md)
    - [Minimale systeemvereisten](integration-guide-programmers/minimum-system-requirements.md)
    - [Draaimechanisme](integration-guide-programmers/throttling-mechanism.md)
    - REST API&#39;s {#rest-apis}
       - REST API DCR {#rest-api-dcr}
-         - [Overzicht van dynamische clientregistratie](integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)
+         - [Overzicht van dynamische clientregistratie](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)
          - [Woordenlijst Dynamische clientregistratie](integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-glossary.md)
          - [Veelgestelde vragen over dynamische clientregistratie](integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-faqs.md)
          - API&#39;s {#rest-api-dcr-apis}
             - [Client-referenties ophalen](integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-client-credentials.md)
-            - [Toegangstoken ophalen](integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md)
+            - [Toegangstoken ophalen](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md)
          - Stromen {#rest-api-dcr-flows}
             - [Dynamic Client Registration Flow](integration-guide-programmers/rest-apis/rest-api-dcr/flows/dynamic-client-registration-flow.md)
       - REST API V2 {#rest-api-v2}
@@ -137,33 +137,12 @@ ht-degree: 3%
          - [Media-tokens](integration-guide-programmers/features-standard/entitlements/media-tokens.md)
       - Fout bij rapporteren {#error-reporting}
          - [Verbeterde foutcodes](integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md)
-      - Single Sign-On toegang {#sso-access}
-         - Single Sign-On voor partners {#partner-sso}
-            - Apple Single Sign-On {#apple-sso}
-               - [Apple SSO - Overzicht](integration-guide-programmers/features-standard/sso-access/partner-sso/apple-sso/apple-sso-overview.md)
-               - [Apple SSO Cookbook (REST API V2)](integration-guide-programmers/features-standard/sso-access/partner-sso/apple-sso/apple-sso-cookbook-rest-api-v2.md)
-         - Platform Single Sign-On {#platform-sso}
-            - Amazon Single Sign-On {#amazon-sso}
-               - [Amazon SSO Cookbook (REST API V2)](integration-guide-programmers/features-standard/sso-access/platform-sso/amazon-single-sign-on/amazon-sso-cookbook-rest-api-v2.md)
-            - Roku Single Sign-On {#roku-sso}
-               - [Roku SSO Cookbook (REST API V2)](integration-guide-programmers/features-standard/sso-access/platform-sso/roku-single-sign-on/roku-sso-cookbook-rest-api-v2.md)
-      - Toegang tot verificatie op thuisbasis {#hba-access}
-         - [Home-based authentication (HBA)](integration-guide-programmers/features-standard/hba-access/home-based-authentication.md)
       - Privacy-ondersteuning {#privacy-support}
-         - [Overzicht van privacyondersteuning](integration-guide-programmers/features-premium/privacy-support/privacy-supp-overview.md)
-         - [Een privacyverzoek indienen](integration-guide-programmers/features-premium/privacy-support/make-privacy-req.md)
-   - Premium-functies {#features-premium}
-      - Tijdelijke toegang {#temporary-access}
-         - [Functie TempPass](integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md)
-      - Verminderde toegang {#degraded-access}
-         - [Afbraakkenmerk](integration-guide-programmers/features-premium/degraded-access/degradation-feature.md)
-      - ESM {#esm}
-         - [Overzicht van Entitlement service-controle](integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview.md)
-         - [Entitlement service monitoring API](integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-api.md)
-         - [Metriek aan de serverzijde](integration-guide-programmers/features-premium/esm/understanding-serverside-metrics.md)
+         - [Overzicht van privacyondersteuning](integration-guide-programmers/features-standard/privacy-support/privacy-supp-overview.md)
+         - [Een privacyverzoek indienen](integration-guide-programmers/features-standard/privacy-support/make-privacy-req.md)
       - Analyse {#analytics}
-         - [Gegevens van de Adobe Pass-verificatieserver integreren in Adobe Analytics](integration-guide-programmers/features-premium/analytics/integrate-authn-servr-data-analytics.md)
-         - [Experience Cloud-id gebruiken in Adobe Pass-verificatie](integration-guide-programmers/features-premium/analytics/exp-cloud-id-authn.md)
+         - [Gegevens van de Adobe Pass-verificatieserver integreren in Adobe Analytics](integration-guide-programmers/features-standard/analytics/integrate-authn-servr-data-analytics.md)
+         - [Experience Cloud-id gebruiken in Adobe Pass-verificatie](/help/authentication/integration-guide-programmers/features-standard/analytics/exp-cloud-id-authn.md)
    - Verouderd {#legacy}
       - (Verouderd) REST API V1 {#rest-api-v1}
          - [(Verouderd) Overzicht REST API V1](integration-guide-programmers/legacy/rest-api-v1/rest-api-overview.md)

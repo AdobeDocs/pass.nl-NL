@@ -2,7 +2,7 @@
 title: Basisaanmelding - Primaire toepassing - Stroom
 description: REST API V2 - Basisaanmelding - Primaire toepassing - Stroom
 exl-id: 21dbff4a-0d69-4f81-b04f-e99d743c35b3
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 92417dd4161be8ba97535404e262fd26d67383e4
 workflow-type: tm+mt
 source-wordcount: '948'
 ht-degree: 0%
@@ -17,12 +17,12 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> De implementatie van REST API V2 wordt begrensd door de [&#x200B; Throttling mechanisme &#x200B;](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
+> De implementatie van REST API V2 wordt begrensd door de [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
 
 De **Logout stroom** binnen de rechten van de Authentificatie van Adobe Pass staat de het stromen toepassing toe om twee belangrijkste stappen uit te voeren:
 
 * Verwijder de gewone profielen die op de Adobe Pass-achtergrond zijn opgeslagen.
-* Gebruik een gebruikersagent (browser) om aan het MVPD logout eindpunt te navigeren, die een schoonmaakbeurt op de achtergrond MVPD teweegbrengt.
+* Gebruik een gebruikersagent (browser) om naar het MVPD logout-eindpunt te navigeren en een opschoonbewerking op de MVPD-achtergrond te starten.
 
 De basis logout stroom staat u toe om voor de volgende scenario&#39;s te vragen:
 
@@ -33,13 +33,13 @@ De basis logout stroom staat u toe om voor de volgende scenario&#39;s te vragen:
 
 ### Vereisten {#prerequisites-initiate-logout-for-specific-mvpd-with-logout-endpoint}
 
-Alvorens logout voor een specifiek MVPD met een logout eindpunt in werking te stellen, zorg ervoor de volgende eerste voorwaarden worden voldaan aan:
+Alvorens logout voor een specifieke MVPD met een logout eindpunt in werking te stellen, zorg ervoor de volgende eerste voorwaarden worden voldaan aan:
 
-* De streaming toepassing moet een geldig regelmatig profiel hebben dat met succes voor MVPD gebruikend één van de basisauthentificatiestromen is gecreeerd:
+* De streamingtoepassing moet een geldig regelmatig profiel hebben dat met succes is gemaakt voor de MVPD en dat een van de basisverificatiestromen gebruikt:
    * [Verificatie uitvoeren binnen primaire toepassing](rest-api-v2-basic-authentication-primary-application-flow.md)
    * [Verificatie uitvoeren binnen secundaire toepassing met vooraf geselecteerde mvpd](rest-api-v2-basic-authentication-secondary-application-flow.md)
    * [Verificatie uitvoeren binnen secundaire toepassing zonder vooraf geselecteerde mvpd](rest-api-v2-basic-authentication-secondary-application-flow.md)
-* De streamingtoepassing moet de logout-flow starten wanneer deze zich moet afmelden bij de MVPD.
+* De streamingtoepassing moet de afmeldingsstroom starten wanneer deze zich moet afmelden bij de MVPD.
 
 >[!IMPORTANT]
 >
@@ -53,7 +53,7 @@ Alvorens logout voor een specifiek MVPD met een logout eindpunt in werking te st
 
 Volg de gegeven stappen om de basislogout stroom voor een specifieke MVPD met een logout eindpunt uit te voeren dat binnen een primaire toepassing zoals aangetoond in het volgende diagram wordt uitgevoerd.
 
-![&#x200B; stelt logout voor specifiek mvpd met logout eindpunt &#x200B;](../../../../../assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-initiate-logout-within-primary-application-for-specific-mvpd-with-logout-endpoint.png) in werking
+![ stelt logout voor specifiek mvpd met logout eindpunt ](/help/authentication/assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-initiate-logout-within-primary-application-for-specific-mvpd-with-logout-endpoint.png) in werking
 
 *stelt logout voor specifiek mvpd met logout eindpunt* in werking
 
@@ -61,7 +61,7 @@ Volg de gegeven stappen om de basislogout stroom voor een specifieke MVPD met ee
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; Logout van het Begin voor specifieke mvpd &#x200B;](../../apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md) API documentatie voor details op:
+   > Verwijs naar [ Logout van het Begin voor specifieke mvpd ](../../apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `serviceProvider`, `mvpd`, en `redirectUrl`
    > * Alle _vereiste_ kopballen, als `Authorization`, `AP-Device-Identifier`
@@ -72,13 +72,13 @@ Volg de gegeven stappen om de basislogout stroom voor een specifieke MVPD met ee
 1. **Schrap regelmatig profiel:** de server van Adobe Pass schrapt het geïdentificeerde regelmatige profiel van de achtergrond van Adobe Pass.
 
 1. **wijs op de volgende actie:** De het eindpuntreactie van het Logout van Adobe Pass bevat de noodzakelijke gegevens om de het stromen toepassing betreffende de volgende actie te begeleiden:
-   * Het attribuut `url` is aanwezig aangezien MVPD de logout stroom steunt.
+   * Het kenmerk `url` is aanwezig omdat de MVPD de afmeldingsstroom ondersteunt.
    * Het attribuut `actionName` wordt ingesteld op &quot;logout&quot;.
    * Het attribuut `actionType` wordt ingesteld op &quot;interactive&quot;.
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; Logout van het Begin voor specifieke mvpd &#x200B;](../../apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md) API documentatie voor details op de informatie die in een logout reactie wordt verstrekt.
+   > Verwijs naar [ Logout van het Begin voor specifieke mvpd ](../../apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md) API documentatie voor details op de informatie die in een logout reactie wordt verstrekt.
    > 
    > <br/>
    > 
@@ -89,9 +89,9 @@ Volg de gegeven stappen om de basislogout stroom voor een specifieke MVPD met ee
    >
    > <br/>
    > 
-   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
-1. **initieert MVPD logout:** De het stromen toepassing leest `url` en gebruikt een gebruikersagent om de logout stroom met MVPD in werking te stellen. De stroom kan verscheidene omleidingen aan systemen omvatten MVPD. Toch is het resultaat dat de MVPD zijn interne schoonmaak uitvoert en de definitieve logout bevestiging terug naar de Adobe Pass backend verzendt.
+1. **stelt MVPD logout in werking:** de het stromen toepassing leest `url` en gebruikt een gebruikersagent om de logout stroom met MVPD in werking te stellen. De stroom kan verschillende omleidingen naar MVPD-systemen bevatten. Toch is het resultaat dat de MVPD zijn interne schoonmaak uitvoert en de laatste logout bevestiging terugstuurt naar de Adobe Pass backend.
 
 1. **wijs logout volledig op:** de het stromen toepassing kan op de gebruikersagent wachten om verstrekte `redirectUrl` te bereiken en kan het als signaal gebruiken om naar keuze een specifiek bericht op het gebruikersinterface te tonen.
 
@@ -99,13 +99,13 @@ Volg de gegeven stappen om de basislogout stroom voor een specifieke MVPD met ee
 
 ### Vereisten {#prerequisites-initiate-logout-for-specific-mvpd-without-logout-endpoint}
 
-Alvorens logout voor een specifiek MVPD zonder een logout eindpunt in werking te stellen, zorg ervoor de volgende eerste voorwaarden worden voldaan aan:
+Alvorens logout voor een specifieke MVPD zonder een logout eindpunt in werking te stellen, zorg ervoor de volgende eerste voorwaarden worden voldaan aan:
 
-* De streaming toepassing moet een geldig regelmatig profiel hebben dat met succes voor MVPD gebruikend één van de basisauthentificatiestromen is gecreeerd:
+* De streamingtoepassing moet een geldig regelmatig profiel hebben dat met succes is gemaakt voor de MVPD en dat een van de basisverificatiestromen gebruikt:
    * [Verificatie uitvoeren binnen primaire toepassing](rest-api-v2-basic-authentication-primary-application-flow.md)
    * [Verificatie uitvoeren binnen secundaire toepassing met vooraf geselecteerde mvpd](rest-api-v2-basic-authentication-secondary-application-flow.md)
    * [Verificatie uitvoeren binnen secundaire toepassing zonder vooraf geselecteerde mvpd](rest-api-v2-basic-authentication-secondary-application-flow.md)
-* De streamingtoepassing moet de logout-flow starten wanneer deze zich moet afmelden bij de MVPD.
+* De streamingtoepassing moet de afmeldingsstroom starten wanneer deze zich moet afmelden bij de MVPD.
 
 >[!IMPORTANT]
 >
@@ -117,9 +117,9 @@ Alvorens logout voor een specifiek MVPD zonder een logout eindpunt in werking te
 
 ### Workflow {#workflow-initiate-logout-for-specific-mvpd-without-logout-endpoint}
 
-Volg de gegeven stappen om de basislogout stroom voor een specifieke MVPD zonder een logout uit eindpunt uit te voeren dat binnen een primaire toepassing zoals aangetoond in het volgende diagram wordt uitgevoerd.
+Volg de gegeven stappen om de basislogout stroom voor een specifieke MVPD zonder een logout eindpunt uit te voeren dat binnen een primaire toepassing zoals aangetoond in het volgende diagram wordt uitgevoerd.
 
-![&#x200B; initieert logout voor specifiek mvpd zonder logout eindpunt &#x200B;](../../../../../assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-initiate-logout-within-primary-application-for-specific-mvpd-without-logout-endpoint.png)
+![ initieert logout voor specifiek mvpd zonder logout eindpunt ](/help/authentication/assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-initiate-logout-within-primary-application-for-specific-mvpd-without-logout-endpoint.png)
 
 *initieert logout voor specifiek mvpd zonder logout eindpunt*
 
@@ -127,7 +127,7 @@ Volg de gegeven stappen om de basislogout stroom voor een specifieke MVPD zonder
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; Logout van het Begin voor specifieke mvpd &#x200B;](../../apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md) API documentatie voor details op:
+   > Verwijs naar [ Logout van het Begin voor specifieke mvpd ](../../apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `serviceProvider`, `mvpd`, en `redirectUrl`
    > * Alle _vereiste_ kopballen, als `Authorization`, `AP-Device-Identifier`
@@ -138,13 +138,13 @@ Volg de gegeven stappen om de basislogout stroom voor een specifieke MVPD zonder
 1. **Schrap regelmatig profiel:** de server van Adobe Pass schrapt het geïdentificeerde regelmatige profiel.
 
 1. **wijs op de volgende actie:** De het eindpuntreactie van het Logout van Adobe Pass bevat de noodzakelijke gegevens om de het stromen toepassing betreffende de volgende actie te begeleiden:
-   * Het attribuut `url` ontbreekt aangezien MVPD niet de logout stroom steunt.
+   * Het kenmerk `url` ontbreekt omdat de MVPD de afmeldingsstroom niet ondersteunt.
    * Het kenmerk `actionName` wordt ingesteld op &quot;complete&quot;.
    * Het attribuut `actionType` wordt ingesteld op &quot;none&quot;.
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; Logout van het Begin voor specifieke mvpd &#x200B;](../../apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md) API documentatie voor details op de informatie die in een logout reactie wordt verstrekt.
+   > Verwijs naar [ Logout van het Begin voor specifieke mvpd ](../../apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md) API documentatie voor details op de informatie die in een logout reactie wordt verstrekt.
    > 
    > <br/>
    > 
@@ -155,6 +155,6 @@ Volg de gegeven stappen om de basislogout stroom voor een specifieke MVPD zonder
    >
    > <br/>
    > 
-   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
 1. **wijs logout volledig op:** de het stromen toepassing verwerkt de reactie en kan het naar keuze gebruiken om een specifiek bericht op het gebruikersinterface te tonen.

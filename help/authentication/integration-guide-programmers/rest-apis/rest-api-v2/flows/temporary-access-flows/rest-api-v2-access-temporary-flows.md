@@ -2,7 +2,7 @@
 title: Tijdelijke toegangsstromen
 description: REST API V2 - Tijdelijke toegangsstromen
 exl-id: 387fcdb0-3a42-4893-ba83-e809426f92be
-source-git-commit: b753c6a6bdfd8767e86cbe27327752620158cdbb
+source-git-commit: af867cb5e41843ffa297a31c2185d6e4b4ad1914
 workflow-type: tm+mt
 source-wordcount: '3223'
 ht-degree: 0%
@@ -17,15 +17,15 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> De implementatie van REST API V2 wordt begrensd door de [&#x200B; Throttling mechanisme &#x200B;](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
+> De implementatie van REST API V2 wordt begrensd door de [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
 
 >[!MORELIKETHIS]
 >
-> Zorg ervoor om [&#x200B; REST API V2 FAQs &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general) ook te bezoeken.
+> Zorg ervoor om [ REST API V2 FAQs ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general) ook te bezoeken.
 
 Met TempPass kunnen programmeurs tijdelijke toegang geven tot hun beveiligde inhoud zonder dat gebruikers wordt gevraagd zich te verifiëren met een geldig MVPD-account.
 
-Voor meer details over eigenschap TempPass, verwijs naar [&#x200B; TempPass &#x200B;](../../../../features-premium/temporary-access/temp-pass-feature.md) documentatie.
+Voor meer details over eigenschap TempPass, verwijs naar [ TempPass ](/help/premium-workflow/temporary-access/temp-pass-feature.md) documentatie.
 
 Met tijdelijke toegangsstromen kunt u zoeken naar de volgende scenario&#39;s:
 
@@ -58,7 +58,7 @@ Voordat u autorisatiebeslissingen ophaalt met behulp van basis TempPass, moet u 
 
 Volg de gegeven stappen om de vergunningsstroom uit te voeren gebruikend basis TempPass zoals aangetoond in het volgende diagram.
 
-![&#x200B; wint vergunningsbesluiten terug gebruikend basis TempPass &#x200B;](../../../../../assets/rest-api-v2/flows/temporary-access-flows/rest-api-v2-retrieve-authorization-decisions-using-basic-temppass-flow.png)
+![ wint vergunningsbesluiten terug gebruikend basis TempPass ](/help/authentication/assets/rest-api-v2/flows/temporary-access-flows/rest-api-v2-retrieve-authorization-decisions-using-basic-temppass-flow.png)
 
 *wint vergunningsbesluiten terug gebruikend basis TempPass*
 
@@ -66,7 +66,7 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren gebruikend basis T
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen vergunningsbesluiten gebruikend specifieke mvpd &#x200B;](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details op:
+   > Verwijs naar [ terugwinnen vergunningsbesluiten gebruikend specifieke mvpd ](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details op:
    > 
    > * Alle _vereiste_ parameters, als `serviceProvider`, `mvpd`, en `resources`
    > * Alle _vereiste_ kopballen, als `Authorization` en `AP-Device-Identifier`
@@ -78,7 +78,7 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren gebruikend basis T
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen vergunningsbesluiten gebruikend specifieke mvpd &#x200B;](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details over de informatie die in een besluitreactie wordt verstrekt.
+   > Verwijs naar [ terugwinnen vergunningsbesluiten gebruikend specifieke mvpd ](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details over de informatie die in een besluitreactie wordt verstrekt.
    >
    > <br/>
    > 
@@ -89,7 +89,7 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren gebruikend basis T
    >
    > <br/>
    > 
-   > Als de basisbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de basisbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
    >
    > <br/>
    > 
@@ -99,7 +99,7 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren gebruikend basis T
    >
    > <br/>
    > 
-   > Als de tijdelijke toegangsbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, die extra informatie verstrekt die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de tijdelijke toegangsbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, die extra informatie verstrekt die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
 1. **stroom van het Begin met media teken:** de het stromen toepassing gebruikt het media teken om de inhoud te spelen.
 
@@ -127,7 +127,7 @@ Voordat u autorisatiebesluiten ophaalt met gebruik van promotionele TempPass, mo
 
 Volg de gegeven stappen om de vergunningsstroom uit te voeren gebruikend promotionele TempPass zoals aangetoond in het volgende diagram.
 
-![&#x200B; wint vergunningsbesluiten terug gebruikend promotional TempPass &#x200B;](../../../../../assets/rest-api-v2/flows/temporary-access-flows/rest-api-v2-retrieve-authorization-decisions-using-promotional-temppass-flow.png)
+![ wint vergunningsbesluiten terug gebruikend promotional TempPass ](/help/authentication/assets/rest-api-v2/flows/temporary-access-flows/rest-api-v2-retrieve-authorization-decisions-using-promotional-temppass-flow.png)
 
 *wint vergunningsbesluiten terug gebruikend promotional TempPass*
 
@@ -135,7 +135,7 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren gebruikend promoti
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen vergunningsbesluiten gebruikend specifieke mvpd &#x200B;](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details op:
+   > Verwijs naar [ terugwinnen vergunningsbesluiten gebruikend specifieke mvpd ](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `serviceProvider`, `mvpd`, en `resources`
    > * Alle _vereiste_ kopballen, als `Authorization` en `AP-Device-Identifier`
@@ -147,7 +147,7 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren gebruikend promoti
    > 
    > <br/>
    > 
-   > Voor meer details over `AP-TempPass-Identity` kopbal, verwijs naar [&#x200B; AP-TempPass-Identity &#x200B;](../../appendix/headers/rest-api-v2-appendix-headers-ap-temppass-identity.md) documentatie.
+   > Voor meer details over `AP-TempPass-Identity` kopbal, verwijs naar [ AP-TempPass-Identity ](../../appendix/headers/rest-api-v2-appendix-headers-ap-temppass-identity.md) documentatie.
 
 1. **bevestigt promotionele TempPass:** de server van Adobe Pass verifieert als er een geldige configuratieconfiguratie van promotionele TempPass die op de integratie tussen verstrekte `serviceProvider` en `mvpd` wordt toegepast is.
 
@@ -155,7 +155,7 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren gebruikend promoti
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen vergunningsbesluiten gebruikend specifieke mvpd &#x200B;](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details over de informatie die in een besluitreactie wordt verstrekt.
+   > Verwijs naar [ terugwinnen vergunningsbesluiten gebruikend specifieke mvpd ](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details over de informatie die in een besluitreactie wordt verstrekt.
    > 
    > <br/>
    > 
@@ -166,7 +166,7 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren gebruikend promoti
    >
    > <br/>
    > 
-   > Als de basisbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de basisbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
    >
    > <br/>
    > 
@@ -177,7 +177,7 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren gebruikend promoti
    >
    > <br/>
    > 
-   > Als de tijdelijke toegangsbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, die extra informatie verstrekt die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de tijdelijke toegangsbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, die extra informatie verstrekt die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
 1. **stroom van het Begin met media teken:** de het stromen toepassing gebruikt het media teken om de inhoud te spelen.
 
@@ -205,7 +205,7 @@ Voordat u een maximaal aantal bronnen gebruikt met behulp van promotionele TempP
 
 Volg de gegeven stappen om de vergunningsstroom uit te voeren wanneer het verbruiken van een maximumaantal middelen gebruikend promotionele TempPass zoals aangetoond in het volgende diagram.
 
-![&#x200B; verbruikt maximum aantal middelen gebruikend promotionele TempPass &#x200B;](../../../../../assets/rest-api-v2/flows/temporary-access-flows/rest-api-v2-consume-maximum-number-of-resources-using-promotional-temppass-flow.png)
+![ verbruikt maximum aantal middelen gebruikend promotionele TempPass ](/help/authentication/assets/rest-api-v2/flows/temporary-access-flows/rest-api-v2-consume-maximum-number-of-resources-using-promotional-temppass-flow.png)
 
 *verbruikt maximum aantal middelen gebruikend promotionele TempPass*
 
@@ -213,7 +213,7 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren wanneer het verbru
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen profiel voor specifieke mvpd &#x200B;](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) API documentatie voor details op:
+   > Verwijs naar [ terugwinnen profiel voor specifieke mvpd ](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `serviceProvider`, en `mvpd`
    > * Alle _vereiste_ kopballen, als `Authorization` en `AP-Device-Identifier`
@@ -229,7 +229,7 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren wanneer het verbru
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen profiel voor specifieke mvpd &#x200B;](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) API documentatie voor details op de informatie die in een profielreactie wordt verstrekt.
+   > Verwijs naar [ terugwinnen profiel voor specifieke mvpd ](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) API documentatie voor details op de informatie die in een profielreactie wordt verstrekt.
    > 
    > <br/>
    > 
@@ -240,7 +240,7 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren wanneer het verbru
    > 
    > <br/>
    >
-   > Als de basisbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de basisbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
    >
    > <br/>
    > 
@@ -251,7 +251,7 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren wanneer het verbru
    >
    > <br/>
    > 
-   > Als de tijdelijke toegangsbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, die extra informatie verstrekt die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de tijdelijke toegangsbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, die extra informatie verstrekt die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
 1. **ga met besluitvormingsstromen te werk:** als de het eindpuntreactie van Profielen een profiel bevat, gebruikt de het stromen toepassing de tijdelijke profielinformatie om met verdere besluitvormingsstromen verder te gaan.
 
@@ -259,7 +259,7 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren wanneer het verbru
 
    >[!IMPORTANT]
    > 
-   > Verwijs naar [&#x200B; terugwinnen vergunningsbesluiten gebruikend specifieke mvpd &#x200B;](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details op:
+   > Verwijs naar [ terugwinnen vergunningsbesluiten gebruikend specifieke mvpd ](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `serviceProvider`, `mvpd`, en `resources`
    > * Alle _vereiste_ kopballen, als `Authorization` en `AP-Device-Identifier`
@@ -271,7 +271,7 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren wanneer het verbru
    > 
    > <br/>
    > 
-   > Voor meer details over `AP-TempPass-Identity` kopbal, verwijs naar [&#x200B; AP-TempPass-Identity &#x200B;](../../appendix/headers/rest-api-v2-appendix-headers-ap-temppass-identity.md) documentatie.
+   > Voor meer details over `AP-TempPass-Identity` kopbal, verwijs naar [ AP-TempPass-Identity ](../../appendix/headers/rest-api-v2-appendix-headers-ap-temppass-identity.md) documentatie.
 
 1. **bevestigt promotionele TempPass:** de server van Adobe Pass verifieert als er een geldige configuratieconfiguratie van promotionele TempPass die op de integratie tussen verstrekte `serviceProvider` en `mvpd` wordt toegepast is.
 
@@ -279,7 +279,7 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren wanneer het verbru
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen vergunningsbesluiten gebruikend specifieke mvpd &#x200B;](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details over de informatie die in een besluitreactie wordt verstrekt.
+   > Verwijs naar [ terugwinnen vergunningsbesluiten gebruikend specifieke mvpd ](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details over de informatie die in een besluitreactie wordt verstrekt.
    > 
    > <br/>
    > 
@@ -290,7 +290,7 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren wanneer het verbru
    >
    > <br/>
    > 
-   > Als de basisbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de basisbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
    > 
    > <br/>
    > 
@@ -301,13 +301,13 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren wanneer het verbru
    >
    > <br/>
    > 
-   > Als de tijdelijke toegangsbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, die extra informatie verstrekt die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de tijdelijke toegangsbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, die extra informatie verstrekt die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
 1. **wint vergunningsbesluit terug:** De het stromen toepassing verzamelt alle noodzakelijke gegevens om een vergunningsbesluit voor een specifiek middel te verkrijgen door Besluiten te roepen machtigt eindpunt.
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen vergunningsbesluiten gebruikend specifieke mvpd &#x200B;](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details op:
+   > Verwijs naar [ terugwinnen vergunningsbesluiten gebruikend specifieke mvpd ](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `serviceProvider`, `mvpd`, en `resources`
    > * Alle _vereiste_ kopballen, als `Authorization` en `AP-Device-Identifier`
@@ -319,15 +319,15 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren wanneer het verbru
    >
    > <br/>
    > 
-   > Voor meer details over `AP-TempPass-Identity` kopbal, verwijs naar [&#x200B; AP-TempPass-Identity &#x200B;](../../appendix/headers/rest-api-v2-appendix-headers-ap-temppass-identity.md) documentatie.
+   > Voor meer details over `AP-TempPass-Identity` kopbal, verwijs naar [ AP-TempPass-Identity ](../../appendix/headers/rest-api-v2-appendix-headers-ap-temppass-identity.md) documentatie.
 
 1. **bevestigt promotionele TempPass:** de server van Adobe Pass verifieert als er een geldige configuratieconfiguratie van promotionele TempPass die op de integratie tussen verstrekte `serviceProvider` en `mvpd` wordt toegepast is.
 
-1. **Terugkeer `Deny` besluit met details:** De Besluiten staan eindpuntreactie toe bevat a `Deny` besluit en een foutenlading die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+1. **Terugkeer `Deny` besluit met details:** De Besluiten staan eindpuntreactie toe bevat a `Deny` besluit en een foutenlading die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen vergunningsbesluiten gebruikend specifieke mvpd &#x200B;](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details over de informatie die in een besluitreactie wordt verstrekt.
+   > Verwijs naar [ terugwinnen vergunningsbesluiten gebruikend specifieke mvpd ](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details over de informatie die in een besluitreactie wordt verstrekt.
    > 
    > <br/>
    > 
@@ -338,7 +338,7 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren wanneer het verbru
    >
    > <br/>
    > 
-   > Als de basisbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de basisbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
    >
    > <br/>
    > 
@@ -349,7 +349,7 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren wanneer het verbru
    >
    > <br/>
    > 
-   > Als de tijdelijke toegangsbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, die extra informatie verstrekt die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de tijdelijke toegangsbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, die extra informatie verstrekt die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
 1. **handvat `Deny` besluitvormingsdetails:** de het stromen toepassing verwerkt de fouteninformatie van de reactie en kan het gebruiken om naar keuze een specifiek bericht op het gebruikersinterface te tonen.
 
@@ -363,8 +363,8 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren wanneer het verbru
 
 Voordat u autorisatiebesluiten ophaalt wanneer de basis- of promotionele TempPass verloopt, moet u ervoor zorgen dat aan de volgende voorwaarden wordt voldaan:
 
-* [&#x200B; Vereisten alvorens vergunningsbesluiten terug te winnen gebruikend basisTempPass &#x200B;](#prerequisites-retrieve-authorization-decisions-using-basic-temppass).
-* [&#x200B; Vereisten alvorens vergunningsbesluiten terug te winnen gebruikend promotionele TempPass &#x200B;](#prerequisites-retrieve-authorization-decisions-using-promotional-temppass).
+* [ Vereisten alvorens vergunningsbesluiten terug te winnen gebruikend basisTempPass ](#prerequisites-retrieve-authorization-decisions-using-basic-temppass).
+* [ Vereisten alvorens vergunningsbesluiten terug te winnen gebruikend promotionele TempPass ](#prerequisites-retrieve-authorization-decisions-using-promotional-temppass).
 
 >[!IMPORTANT]
 >
@@ -379,7 +379,7 @@ Voordat u autorisatiebesluiten ophaalt wanneer de basis- of promotionele TempPas
 
 Volg de gegeven stappen om de vergunningsstroom uit te voeren wanneer basis of promotionele TempPass verloopt zoals aangetoond in het volgende diagram.
 
-![&#x200B; wint vergunningsbesluiten terug wanneer basis of promotionele TempPass &#x200B;](../../../../../assets/rest-api-v2/flows/temporary-access-flows/rest-api-v2-retrieve-authorization-decisions-when-basic-or-promotional-temppass-expires-flow.png) verloopt
+![ wint vergunningsbesluiten terug wanneer basis of promotionele TempPass ](/help/authentication/assets/rest-api-v2/flows/temporary-access-flows/rest-api-v2-retrieve-authorization-decisions-when-basic-or-promotional-temppass-expires-flow.png) verloopt
 
 *wint vergunningsbesluiten terug wanneer basis of promotionele TempPass* verloopt
 
@@ -387,7 +387,7 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren wanneer basis of p
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen vergunningsbesluiten gebruikend specifieke mvpd &#x200B;](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details op:
+   > Verwijs naar [ terugwinnen vergunningsbesluiten gebruikend specifieke mvpd ](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details op:
    > 
    > * Alle _vereiste_ parameters, als `serviceProvider`, `mvpd`, en `resources`
    > * Alle _vereiste_ kopballen, als `Authorization` en `AP-Device-Identifier`
@@ -399,15 +399,15 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren wanneer basis of p
    > 
    > <br/>
    > 
-   > Voor meer details over `AP-TempPass-Identity` kopbal, verwijs naar [&#x200B; AP-TempPass-Identity &#x200B;](../../appendix/headers/rest-api-v2-appendix-headers-ap-temppass-identity.md) documentatie.
+   > Voor meer details over `AP-TempPass-Identity` kopbal, verwijs naar [ AP-TempPass-Identity ](../../appendix/headers/rest-api-v2-appendix-headers-ap-temppass-identity.md) documentatie.
 
 1. **bevestigt basis of promotionele TempPass:** de server van Adobe Pass verifieert als er een geldige configuratieopstelling van basis of promotionele TempPass die op de integratie tussen verstrekte `serviceProvider` en `mvpd` wordt toegepast is.
 
-1. **Terugkeer `Deny` besluit met details:** De Besluiten staan eindpuntreactie toe bevat a `Deny` besluit en een foutenlading die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+1. **Terugkeer `Deny` besluit met details:** De Besluiten staan eindpuntreactie toe bevat a `Deny` besluit en een foutenlading die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen vergunningsbesluiten gebruikend specifieke mvpd &#x200B;](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details over de informatie die in een besluitreactie wordt verstrekt.
+   > Verwijs naar [ terugwinnen vergunningsbesluiten gebruikend specifieke mvpd ](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details over de informatie die in een besluitreactie wordt verstrekt.
    > 
    > <br/>
    > 
@@ -418,7 +418,7 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren wanneer basis of p
    >
    > <br/>
    > 
-   > Als de basisbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de basisbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
    >
    > <br/>
    > 
@@ -429,7 +429,7 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren wanneer basis of p
    >
    > <br/>
    > 
-   > Als de tijdelijke toegangsbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, die extra informatie verstrekt die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de tijdelijke toegangsbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, die extra informatie verstrekt die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
 1. **handvat `Deny` besluitvormingsdetails:** de het stromen toepassing verwerkt de fouteninformatie van de reactie en kan het gebruiken om naar keuze een specifiek bericht op het gebruikersinterface te tonen.
 
@@ -462,7 +462,7 @@ Controleer voordat u het profiel voor eenvoudige TempPass ophaalt of aan de volg
 
 Volg de gegeven stappen om de stroom van de profielherwinning voor basisTempPass uit te voeren zoals aangetoond in het volgende diagram.
 
-![&#x200B; wint profiel voor basis TempPass &#x200B;](../../../../../assets/rest-api-v2/flows/temporary-access-flows/rest-api-v2-retrieve-profile-for-basic-temppass-flow.png) terug
+![ wint profiel voor basis TempPass ](/help/authentication/assets/rest-api-v2/flows/temporary-access-flows/rest-api-v2-retrieve-profile-for-basic-temppass-flow.png) terug
 
 *wint profiel voor basis TempPass* terug
 
@@ -470,7 +470,7 @@ Volg de gegeven stappen om de stroom van de profielherwinning voor basisTempPass
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen profiel voor specifieke mvpd &#x200B;](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) API documentatie voor details op:
+   > Verwijs naar [ terugwinnen profiel voor specifieke mvpd ](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) API documentatie voor details op:
    > 
    > * Alle _vereiste_ parameters, als `serviceProvider`, en `mvpd`
    > * Alle _vereiste_ kopballen, als `Authorization` en `AP-Device-Identifier`
@@ -482,7 +482,7 @@ Volg de gegeven stappen om de stroom van de profielherwinning voor basisTempPass
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen profiel voor specifieke mvpd &#x200B;](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) API documentatie voor details op de informatie die in een profielreactie wordt verstrekt.
+   > Verwijs naar [ terugwinnen profiel voor specifieke mvpd ](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) API documentatie voor details op de informatie die in een profielreactie wordt verstrekt.
    > 
    > <br/>
    > 
@@ -493,7 +493,7 @@ Volg de gegeven stappen om de stroom van de profielherwinning voor basisTempPass
    >
    > <br/>
    > 
-   > Als de basisbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de basisbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
    >
    > <br/>
    > 
@@ -503,7 +503,7 @@ Volg de gegeven stappen om de stroom van de profielherwinning voor basisTempPass
    >
    > <br/>
    > 
-   > Als de tijdelijke toegangsbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, die extra informatie verstrekt die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de tijdelijke toegangsbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, die extra informatie verstrekt die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
 1. **ga met besluitvormingsstromen te werk:** als de het eindpuntreactie van Profielen een profiel bevat, gebruikt de het stromen toepassing de tijdelijke profielinformatie om met verdere besluitvormingsstromen verder te gaan.
 
@@ -533,7 +533,7 @@ Voordat u het profiel voor promotionele TempPass ophaalt, moet u controleren of 
 
 Volg de gegeven stappen om de stroom van de profielherwinning voor promotionele TempPass uit te voeren zoals aangetoond in het volgende diagram.
 
-![&#x200B; wint profiel voor promotionele TempPass &#x200B;](../../../../../assets/rest-api-v2/flows/temporary-access-flows/rest-api-v2-retrieve-profile-for-promotional-temppass-flow.png) terug
+![ wint profiel voor promotionele TempPass ](/help/authentication/assets/rest-api-v2/flows/temporary-access-flows/rest-api-v2-retrieve-profile-for-promotional-temppass-flow.png) terug
 
 *wint profiel voor promotionele TempPass* terug
 
@@ -541,7 +541,7 @@ Volg de gegeven stappen om de stroom van de profielherwinning voor promotionele 
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen profiel voor specifieke mvpd &#x200B;](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) API documentatie voor details op:
+   > Verwijs naar [ terugwinnen profiel voor specifieke mvpd ](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) API documentatie voor details op:
    > 
    > * Alle _vereiste_ parameters, als `serviceProvider`, en `mvpd`
    > * Alle _vereiste_ kopballen, als `Authorization` en `AP-Device-Identifier`
@@ -553,7 +553,7 @@ Volg de gegeven stappen om de stroom van de profielherwinning voor promotionele 
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen profiel voor specifieke mvpd &#x200B;](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) API documentatie voor details op de informatie die in een profielreactie wordt verstrekt.
+   > Verwijs naar [ terugwinnen profiel voor specifieke mvpd ](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) API documentatie voor details op de informatie die in een profielreactie wordt verstrekt.
    > 
    > <br/>
    > 
@@ -564,7 +564,7 @@ Volg de gegeven stappen om de stroom van de profielherwinning voor promotionele 
    >
    > <br/>
    > 
-   > Als de basisbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de basisbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
    >
    > <br/>
    > 
@@ -575,6 +575,6 @@ Volg de gegeven stappen om de stroom van de profielherwinning voor promotionele 
    >
    > <br/>
    > 
-   > Als de tijdelijke toegangsbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, die extra informatie verstrekt die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de tijdelijke toegangsbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, die extra informatie verstrekt die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
 1. **ga met besluitvormingsstromen te werk:** als de het eindpuntreactie van Profielen een profiel bevat, gebruikt de het stromen toepassing de tijdelijke profielinformatie om met verdere besluitvormingsstromen verder te gaan.

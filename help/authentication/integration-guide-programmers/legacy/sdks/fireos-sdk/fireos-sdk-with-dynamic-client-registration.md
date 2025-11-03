@@ -2,7 +2,7 @@
 title: Amazon FireOS SDK met Dynamic Client-registratie
 description: Amazon FireOS SDK met Dynamic Client-registratie
 exl-id: 27acf3f5-8b7e-4299-b0f0-33dd6782aeda
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: 913b2127d2189bec1a7e6e197944f1512b764893
 workflow-type: tm+mt
 source-wordcount: '1169'
 ht-degree: 0%
@@ -18,15 +18,15 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 </br>
 
-## <span id=""></span> Inleiding {#Intro}
+## <span id=""></span> Inleiding  {#Intro}
 
 FireOS AccessEnabler SDK for FireTV is gewijzigd om verificatie in te schakelen zonder sessiecookies te gebruiken. Aangezien steeds meer browsers de toegang tot cookies beperken, was een andere methode nodig om verificatie toe te staan.
 
-**FireOS SDK 3.0.4** vervangt het huidige mechanisme van de toepassingsregistratie dat op ondertekende identiteitskaart van de aanvrager en de authentificatie van het zittingskoekje met [&#x200B; Dynamisch Overzicht van de Registratie van de Cliënt &#x200B;](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) wordt gebaseerd.
+**FireOS SDK 3.0.4** vervangt het huidige mechanisme van de toepassingsregistratie dat op ondertekende identiteitskaart van de aanvrager en de authentificatie van het zittingskoekje met [ Dynamisch Overzicht van de Registratie van de Cliënt ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) wordt gebaseerd.
 
 
 ## API-wijzigingen {#API}
@@ -54,11 +54,11 @@ FireOS AccessEnabler SDK for FireTV is gewijzigd om verificatie in te schakelen 
 
 ### setRequestor
 
-**Beschrijving:** vestigt de identiteit van het Kanaal. Aan elk kanaal wordt een unieke id toegewezen bij het registreren bij Adobe voor het Adobe Pass-verificatiesysteem. Wanneer het behandelen van SSO en verre tokens kan de authentificatiestatus veranderen wanneer de toepassing op de achtergrond is, kan setRequestor opnieuw worden geroepen wanneer de toepassing in voorgrond wordt gebracht om met de systeemstaat te synchroniseren (haal een verre teken als SSO wordt toegelaten of schrap het lokale teken als een logout in de tussentijd gebeurde).
+**Beschrijving:** vestigt de identiteit van het Kanaal. Aan elk kanaal wordt een unieke id toegewezen wanneer u zich registreert bij Adobe voor het Adobe Pass-verificatiesysteem. Wanneer het behandelen van SSO en verre tokens kan de authentificatiestatus veranderen wanneer de toepassing op de achtergrond is, kan setRequestor opnieuw worden geroepen wanneer de toepassing in voorgrond wordt gebracht om met de systeemstaat te synchroniseren (haal een verre teken als SSO wordt toegelaten of schrap het lokale teken als een logout in de tussentijd gebeurde).
 
 De serverreactie bevat een lijst van MVPDs samen met wat configuratieinformatie die aan de identiteit van het Kanaal in bijlage is. De serverreactie wordt intern gebruikt door de code van Toegangsbeheer. Alleen de status van de bewerking (SUCCESS/FAIL) wordt via de callback setRequestorComplete() aan uw toepassing gepresenteerd.
 
-Als de *urls* parameter niet wordt gebruikt, richt de resulterende netwerkvraag de standaarddienstverlener URL: het milieu van de Productie van de Versie van de Adobe.
+Als de *urls* parameter niet wordt gebruikt, richt de resulterende netwerkvraag de standaarddienstverlener URL: het milieu van de Productie van de Versie van Adobe.
 
 Als een waarde voor de *urls* parameter wordt verstrekt, richt de resulterende netwerkvraag alle URLs die in de *wordt verstrekt urls* parameter. Alle configuratieverzoeken worden teweeggebracht gelijktijdig in afzonderlijke draden. De eerste responder krijgt voorrang wanneer het compileren van de lijst van MVPDs. Voor elke MVPD in de lijst onthoudt de Access Enabler de URL van de bijbehorende serviceprovider. Alle volgende machtigingsaanvragen worden doorgestuurd naar de URL die is gekoppeld aan de serviceprovider die tijdens de configuratiefase aan de doel-MVPD is gekoppeld.
 
@@ -76,8 +76,8 @@ Als een waarde voor de *urls* parameter wordt verstrekt, richt de resulterende n
 
 **Parameters:**
 
-- *requestID*: Unieke identiteitskaart verbonden aan het Kanaal. Geef de unieke id die door Adobe aan uw site is toegewezen door wanneer u zich voor het eerst aanmeldt bij de Adobe Pass-verificatieservice.
-- *urls*: Facultatieve parameter; door gebrek, wordt de dienstverlener van Adobe gebruikt (http://sp.auth.adobe.com/). Deze serie staat u toe om eindpunten voor authentificatie en vergunningsdiensten te specificeren die door Adobe worden verleend (verschillende instanties zouden voor het zuiveren doeleinden kunnen worden gebruikt). U kunt dit gebruiken om meerdere instanties van Adobe Pass-verificatieproviders op te geven. Daarbij bestaat de MVPD-lijst uit de eindpunten van alle serviceproviders. Elke MVPD is gekoppeld aan de snelste serviceprovider, dat wil zeggen de provider die eerst heeft gereageerd en die die MVPD ondersteunt.
+- *requestID*: Unieke identiteitskaart verbonden aan het Kanaal. Geef de unieke id die Adobe aan uw site heeft toegewezen door aan wanneer u zich voor het eerst aanmeldt bij de Adobe Pass-verificatieservice.
+- *urls*: Facultatieve parameter; door gebrek, wordt de dienstverlener van Adobe gebruikt (http://sp.auth.adobe.com/). Met deze array kunt u eindpunten opgeven voor verificatie- en verificatieservices die door Adobe worden geleverd (verschillende instanties kunnen worden gebruikt voor foutopsporingsdoeleinden). U kunt dit gebruiken om meerdere instanties van Adobe Pass-verificatieproviders op te geven. Daarbij bestaat de MVPD-lijst uit de eindpunten van alle serviceproviders. Elke MVPD is gekoppeld aan de snelste serviceprovider, dat wil zeggen de provider die eerst heeft gereageerd en die die MVPD ondersteunt.
 
 Vervangen:
 
@@ -152,7 +152,7 @@ Vervangen:
    - aanmelden geannuleerd: MVPD-selectie opnieuw instellen
    - Het URL-schema is ingesteld als &quot;adobepass://android.app&quot; om vast te leggen wanneer de verificatie is voltooid
 
-- e. get/checkAuthorization: SDK zal **access\_token &#x200B;** in kopbal als Vergunning omvatten: Drager **toegang \_token**
+- e. get/checkAuthorization: SDK zal **access\_token **in kopbal als Vergunning omvatten: Drager **toegang \_token**
 
 - als de toestemming succesvol is , zal een oproep worden gedaan om het media token te verkrijgen
 

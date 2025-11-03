@@ -2,7 +2,7 @@
 title: JavaScript SDK Cookbook
 description: JavaScript SDK Cookbook
 exl-id: d57f7a4a-ac77-4f3c-8008-0cccf8839f7c
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: 92417dd4161be8ba97535404e262fd26d67383e4
 workflow-type: tm+mt
 source-wordcount: '957'
 ht-degree: 0%
@@ -17,13 +17,13 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 ## Inleiding {#intro}
 
 In dit document worden de workflows voor machtigingen beschreven die de toepassing op hoofdniveau van een programmeur implementeert voor JavaScript-integratie met de Adobe Pass-verificatieservice. Koppelingen naar de JavaScript API-naslaggids worden in de hele reeks weergegeven.
 
-Merk ook op dat de [&#x200B; Verwante sectie van de Informatie &#x200B;](#related) a omvat
+Merk ook op dat de [ Verwante sectie van de Informatie ](#related) a omvat
 een koppeling maken naar een set JavaScript-codevoorbeelden.
 
 ## Machtigingsstromen {#entitlement}
@@ -36,7 +36,7 @@ een koppeling maken naar een set JavaScript-codevoorbeelden.
 
 </br>
 
-![](../../../../assets/javascript-flows.png)
+![](/help//authentication/assets/javascript-flows.png)
 
 
 ## Vereisten {#prereq}
@@ -95,7 +95,7 @@ de gebruiker.
   De `metadata` parameter verstrekt de specifieke gegevens u vroeg; de belangrijkste parameter is de sleutel die in het `getMetadata()` verzoek wordt gebruikt; en de `arguments` parameter is het zelfde woordenboek dat tot `getMetadata()` werd overgegaan.
 
 
-## 2. Opstartstroom
+## &#x200B;2. Opstartstroom
 
 **I. Laad JavaScript AccessEnabler:**
 
@@ -136,7 +136,7 @@ identiteit van de programmeur; geef de programmeur `requestorID` door en
 
 </br>
 
-## 3. Verificatiestroom </span>
+## &#x200B;3. Verificatiestroom </span>
 
 
 **Afhankelijkheid:** Een succesvolle vraag aan `setRequestor()` (dit gebiedsdeel is eveneens op alle verdere vraag van toepassing).
@@ -151,7 +151,7 @@ Vraag `getAuthentication()` om de authentificatiestatus OF te krijgen om de stro
 
 De voltooiing van de authentificatiestroom wordt bereikt wanneer AccessEnabler `setAuthenticationStatus()` met `isAuthenticated == 1` roept.
 
-## 4. Vergunningsstroom {#authz}
+## &#x200B;4. Vergunningsstroom {#authz}
 
 **Afhankelijkheden:**
 
@@ -175,7 +175,7 @@ AccessEnabler-bibliotheek)
 - Als de validatie slaagt: geef de gewenste media voor de gebruiker weer/afspelen.
 - Als het ontbreekt: De token AuthZ was ongeldig, zou de mediaaanvraag moeten worden geweigerd en zou een foutbericht aan de gebruiker moeten worden getoond.
 
-## 5. Mediastroom weergeven {#logout}
+## &#x200B;5. Mediastroom weergeven {#logout}
 
 - De gebruiker selecteert de media die u wilt weergeven.
    - Is media beveiligd?
@@ -186,7 +186,7 @@ AccessEnabler-bibliotheek)
 
 ## De bezoeker-id configureren {#visitorID}
 
-Het vormen a [&#128279;](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=nl-NL) waarde van bezoekerID van het Experience Cloud 0&rbrace; &lbrace;is zeer belangrijk van het analytische standpunt.  Zodra een EC bezoekerID-waarde is ingesteld, zal de SDK deze informatie samen met elk netwerkgesprek verzenden en zal de Adobe Pass Authentication-service deze informatie verzamelen. Op deze manier kunt u de analysegegevens van de Adobe Pass Authentication-service correleren met andere analytische rapporten die u van andere toepassingen of websites hebt. De informatie over hoe te opstelling EC bezoekorID kan worden gevonden [&#x200B; hier &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=nl-NL).
+Het vormen a [ Experience Cloud bezoekorID ](https://experienceleague.adobe.com/docs/id-service/using/home.html) waarde is zeer belangrijk van het analytische standpunt. Zodra een EC bezoekerID-waarde is ingesteld, zal de SDK deze informatie samen met elk netwerkgesprek verzenden en zal de Adobe Pass Authentication-service deze informatie verzamelen. Op deze manier kunt u de analysegegevens van de Adobe Pass Authentication-service correleren met andere analytische rapporten die u van andere toepassingen of websites hebt. De informatie over hoe te opstelling EC bezoekorID kan worden gevonden [ hier ](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=en).
 
 
 >[!NOTE]

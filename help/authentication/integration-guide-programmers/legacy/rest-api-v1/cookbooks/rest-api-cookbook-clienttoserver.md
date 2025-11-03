@@ -2,7 +2,7 @@
 title: REST API Cookbook (client-naar-server)
 description: Testen van API-cookboekclient naar server.
 exl-id: f54a1eda-47d5-4f02-b343-8cdbc99a73c0
-source-git-commit: 640ba7073f7f4639f980f17f1a59c4468bfebcf4
+source-git-commit: 913b2127d2189bec1a7e6e197944f1512b764893
 workflow-type: tm+mt
 source-wordcount: '886'
 ht-degree: 0%
@@ -17,18 +17,18 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 ## Overzicht {#overview}
 
-Dit document bevat stapsgewijze instructies voor het engineeringteam van een programmeur om een &quot;slim apparaat&quot; (spelconsole, smart TV-app, set top box, enz.) te integreren met Adobe Pass-verificatie via REST API-services. Deze client-to-server-benadering, waarbij REST API&#39;s worden gebruikt in plaats van een client-SDK, maakt bredere ondersteuning mogelijk van verschillende platforms waarvoor het ontwikkelen van een aanzienlijk aantal unieke SDK&#39;s niet haalbaar is. Voor een breed technisch overzicht van hoe de Klantloze oplossing werkt, zie het [&#x200B; Klantloze Technische Overzicht &#x200B;](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/rest-api-overview.md).
+Dit document bevat stapsgewijze instructies voor het engineeringteam van een programmeur om een &quot;slim apparaat&quot; (spelconsole, smart TV-app, set top box, enz.) te integreren met Adobe Pass-verificatie via REST API-services. Deze client-to-server-benadering, waarbij REST API&#39;s worden gebruikt in plaats van een client-SDK, maakt bredere ondersteuning mogelijk van verschillende platforms waarvoor het ontwikkelen van een aanzienlijk aantal unieke SDK&#39;s niet haalbaar is. Voor een breed technisch overzicht van hoe de Klantloze oplossing werkt, zie het [ Klantloze Technische Overzicht ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/rest-api-overview.md).
 
 
 Deze aanpak vereist twee componenten (streaming app en AuthN app) om de vereiste stromen te voltooien: opstarten, registreren, autoriseren en weergavemedia in de streaming app en de verificatiestroom in uw AuthN-app.
 
 ### Draaimechanisme
 
-De Adobe Pass Authentificatie REST API wordt geregeerd door a [&#x200B; het Throttling mechanisme &#x200B;](/help/authentication/integration-guide-programmers/throttling-mechanism.md).
+De Adobe Pass Authentificatie REST API wordt geregeerd door a [ het Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md).
 
 ## Componenten {#components}
 
@@ -49,12 +49,12 @@ In een werkende cliënt-aan-server oplossing zijn de volgende componenten betrok
 
 ### Dynamische clientregistratie (DCR)
 
-Adobe Pass gebruikt DCR om clientcommunicatie tussen een programmeertoepassing of server en de Adobe Pass-services te beveiligen. De stroom DCR is afzonderlijk en wordt beschreven in het [&#x200B; Dynamische Overzicht van de Registratie van de Cliënt &#x200B;](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) documentatie.
+Adobe Pass gebruikt DCR om clientcommunicatie tussen een programmeertoepassing of server en de Adobe Pass-services te beveiligen. De stroom DCR is afzonderlijk en wordt beschreven in het [ Dynamische Overzicht van de Registratie van de Cliënt ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) documentatie.
 
 
 ### Streaming (slim apparaat) App Flows
 
-![](../../../../assets/smart-device-app-flow.png)
+![](/help//authentication/assets/smart-device-app-flow.png)
 
 #### Stroom opstarten
 
@@ -119,7 +119,7 @@ gebruiker.
 
 ### AuthN (tweede scherm) App Flow
 
-![](../../../../assets/secnd-screen-authn-flow.png)
+![](/help//authentication/assets/secnd-screen-authn-flow.png)
 
 1. Krijg een lijst van MVPDs voor deze gebruiker. Bijvoorbeeld: [`<SP_FQDN>/api/v1/config/[requestorID]`](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/provide-mvpd-list.md)
 
@@ -148,4 +148,4 @@ Voor TempPass- en Promotional TempPass-implementaties waarbij de gebruiker geen 
 **om deze API te gebruiken moet de Streaming App van de uniciteit van apparatenidentiteitskaart verzekeren aangezien dit voor het identificeren van het teken, samen met de facultatieve extra gegevens wordt gebruikt.**
 
 
-![](../../../../assets/temp-pass-promo-temppass.png)
+![](/help//authentication/assets/temp-pass-promo-temppass.png)

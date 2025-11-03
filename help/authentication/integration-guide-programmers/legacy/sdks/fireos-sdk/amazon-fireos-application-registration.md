@@ -2,7 +2,7 @@
 title: Amazon FireOS-toepassingsregistratie
 description: Amazon FireOS-toepassingsregistratie
 exl-id: 650fd4a2-dfc3-4c74-9b5b-6bea832a28ca
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: 913b2127d2189bec1a7e6e197944f1512b764893
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 0%
@@ -17,25 +17,25 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 </br>
 
 ## Inleiding {#intro}
 
-Vanaf versie 3.0 van de FireOS AccessEnabler SDK veranderen we het verificatiemechanisme met de servers van de Adobe. In plaats van het gebruiken van een openbare sleutel en een geheim systeem om requestorID te ondertekenen, introduceren wij het concept een koord van de Verklaring van de Software dat kan worden gebruikt om een toegangstoken te verkrijgen dat later voor alle vraag wordt gebruikt die SDK aan onze servers maakt. Naast een Software Statement zult u ook een diepe verbinding voor uw toepassing moeten tot stand brengen.
+Vanaf versie 3.0 van de FireOS AccessEnabler SDK veranderen we het verificatiemechanisme met Adobe-servers. In plaats van het gebruiken van een openbare sleutel en een geheim systeem om requestorID te ondertekenen, introduceren wij het concept een koord van de Verklaring van de Software dat kan worden gebruikt om een toegangstoken te verkrijgen dat later voor alle vraag wordt gebruikt die SDK aan onze servers maakt. Naast een Software Statement zult u ook een diepe verbinding voor uw toepassing moeten tot stand brengen.
 
-Meer informatie, zie [&#x200B; Dynamisch het Overzicht van de Registratie van de Cliënt &#x200B;](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md).
+Meer informatie, zie [ Dynamisch het Overzicht van de Registratie van de Cliënt ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md).
 
 ## Wat is een Software Statement? {#what}
 
-Een verklaring van de Software is een teken JWT dat informatie over uw toepassing bevat. Elke toepassing zou een unieke Verklaring van de Software moeten hebben die door onze servers wordt gebruikt om de toepassing in het systeem van de Adobe te identificeren. De verklaring van de Software moet worden overgegaan wanneer u AccessEnabler SDK initialiseert en het zal worden gebruikt om de toepassing met Adobe te registreren. Na registratie ontvangt de SDK een client-id en een clientgeheim die worden gebruikt om een toegangstoken te verkrijgen. Om het even welke vraag die de SDK aan onze servers maakt zal een geldig toegangstoken vereisen. De SDK is verantwoordelijk voor het registreren van de toepassing, het verkrijgen en vernieuwen van het toegangstoken.
+Een verklaring van de Software is een teken JWT dat informatie over uw toepassing bevat. Elke toepassing moet een unieke Software Statement hebben die door onze servers wordt gebruikt om de toepassing in het Adobe-systeem te identificeren. De verklaring van de Software moet worden overgegaan wanneer u AccessEnabler SDK initialiseert en het zal worden gebruikt om de toepassing bij Adobe te registreren. Na registratie ontvangt de SDK een client-id en een clientgeheim die worden gebruikt om een toegangstoken te verkrijgen. Om het even welke vraag die de SDK aan onze servers maakt zal een geldig toegangstoken vereisen. De SDK is verantwoordelijk voor het registreren van de toepassing, het verkrijgen en vernieuwen van het toegangstoken.
 
 **Nota:** de Verklaringen van de Software zijn app-specifiek en een individuele Verklaring van de Software kan niet voor meer dan één toepassing worden gebruikt. Dit geldt ook voor toepassingen die toegang bieden tot meerdere kanalen.
 
 ## Hoe te om een Verklaring van de Software te verkrijgen? {#how-to}
 
-### Als u toegang hebt tot het TVE-dashboard van de Adobe:
+### Als u toegang hebt tot het Adobe TVE-dashboard:
 
 1. Open uw browser en navigeer naar `https://experience.adobe.com/#/pass/authentication` .
 
@@ -59,11 +59,11 @@ Een verklaring van de Software is een teken JWT dat informatie over uw toepassin
 
    Een tekstbestand wordt gedownload. Gebruik de inhoud ervan als de Software Statement.
 
-Meer informatie, zie [&#x200B; Dynamisch Beheer van de Registratie van de Cliënt &#x200B;](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md#dynamic-client-registration-management).
+Meer informatie, zie [ Dynamisch Beheer van de Registratie van de Cliënt ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md#dynamic-client-registration-management).
 
-### Als u geen toegang hebt tot het TVE-dashboard van de Adobe:
+### Als u geen toegang hebt tot het Adobe TVE-dashboard:
 
-Verzend een kaartje naar [&#x200B; tve-support@adobe.com &#x200B;](mailto:tve-support@adobe.com). Neem alle benodigde informatie op, zoals het kanaal, de naam van de toepassing, de versie en de platforms. Iemand van ons ondersteuningsteam zal een softwareinstructie voor u maken.
+Verzend een kaartje naar [ tve-support@adobe.com ](mailto:tve-support@adobe.com). Neem alle benodigde informatie op, zoals het kanaal, de naam van de toepassing, de versie en de platforms. Iemand van ons ondersteuningsteam zal een softwareinstructie voor u maken.
 
 ## Hoe te om de Verklaring van de Software te gebruiken {#use}
 

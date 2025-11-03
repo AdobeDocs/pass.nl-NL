@@ -2,9 +2,9 @@
 title: Informatie over Adobe Pass-verificatie
 description: Informatie over Adobe Pass-verificatie
 exl-id: 5edeaccb-f9fa-4395-83b4-706c518d5a03
-source-git-commit: 07bb12f7983f39b58e1b9795fdaa1bec4f68e674
+source-git-commit: 7ca9d8996756086a6b963c0b6d5b0bb64608ecbc
 workflow-type: tm+mt
-source-wordcount: '1832'
+source-wordcount: '1828'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ Om deze obstakels te overwinnen, **vereenvoudigt de Authentificatie van de Voldo
 
 Met Adobe Pass Authentication worden machtigingstransacties tussen Programmers en Pay TV providers veilig door elkaar geleid, zodat de juiste klanten moeiteloos toegang hebben tot de juiste inhoud.
 
-![](../assets/programmers-connect-authn.png)
+![](/help/authentication/assets/programmers-connect-authn.png)
 
 *Sommige van de Programma&#39;s en betalen TV leveranciers die door de Authentificatie van Adobe Pass* verbinden
 
@@ -127,12 +127,12 @@ Er zijn aanvullende instructies beschikbaar zodra de integratie formeel is gesta
 
 **de Taken van de Integratie**
 
-* Integreer de Authentificatie van Adobe Pass [&#x200B; REST API DCR &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md).
-* Integreer de Authentificatie van Adobe Pass [&#x200B; REST API V2 &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/rest-api-v2-apis-overview.md).
+* Integreer de Authentificatie van Adobe Pass [ REST API DCR ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md).
+* Integreer de Authentificatie van Adobe Pass [ REST API V2 ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/rest-api-v2-apis-overview.md).
 * Integreer de Symbolische Verifier van de Authentificatie van Adobe Pass [.](/help/authentication/integration-guide-programmers/features-standard/entitlements/media-tokens.md#media-token-verifier)
 * Een gebruikersinterface ontwikkelen voor de workflow voor verificatie, autorisatie en afmelding.
 
-Voor meer details op het integratieproces van de Programmer, verwijs naar de [&#x200B; gids van de Kickstart van de Programmer &#x200B;](/help/authentication/kickstart/programmer-kickstart-guide.md) en [&#x200B; de integratiegids van de Programmer &#x200B;](/help/authentication/integration-guide-programmers/programmer-integration-guide-overview.md) documenten.
+Voor meer details op het integratieproces van de Programmer, verwijs naar de [ gids van de Kickstart van de Programmer ](/help/authentication/integration-guide-programmers/programmer-integration-guide-overview.md) documenten.
 
 #### Integratieproces van tv-aanbieders betalen {#pay-tv-provider-integration-process}
 
@@ -156,7 +156,7 @@ Adobe Pass-verificatie biedt op twee manieren efficiënt ondersteuning voor bedr
 * Voor bedrijfslogica die op zichzelf staand is en door de leverancier van de Tv van het Betaal wordt toegepast wanneer een vergunningsverzoek wordt ontvangen, verstrekt Adobe de noodzakelijke gegevens (b.v., unieke apparatenidentiteitskaart, IP adres) om handhaving te steunen.
 * Voor bedrijfslogica die gebruikersinterventie of specifieke behandeling door Adobe vereist, kunnen aangepaste eigenschappen voor elke leverancier van betaaltelevisie worden gehandhaafd. Deze configuraties kunnen vooraf gedefinieerde workflows bevatten die worden geactiveerd op specifieke punten in het verificatieproces.
 
-Voor meer details op het de leveranciersintegratieproces van de Tv van de Betaal, verwijs naar de [&#x200B; handleiding van de kickstart van MVPD &#x200B;](/help/authentication/kickstart/mvpd-kickstart-guide.md) en [&#x200B; de integratiegids van MVPD &#x200B;](/help/authentication/integration-guide-mvpds/mvpd-integration-guide-overview.md) documenten.
+Voor meer details op het de leveranciersintegratieproces van de Tv van de Betaal, verwijs naar de [ handleiding van de kickstart van MVPD ](/help/authentication/kickstart/mvpd-kickstart-guide.md) en [ de integratiegids van MVPD ](/help/authentication/integration-guide-mvpds/mvpd-integration-guide-overview.md) documenten.
 
 ### Entitlement Flow {#entitlement-flow}
 
@@ -169,13 +169,13 @@ Voor Programmeurs, verstrekt de Authentificatie van Adobe Pass APIs als deel van
    * [REST API V2](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/rest-api-v2-apis-overview.md)
 
 * Premium-API&#39;s voor Adobe Pass-verificatie:
-   * [Tijdcontrole-API opnieuw instellen](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md#reset-tempass-api-access)
-      * [Functie TempPass](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md)
-   * [Verslechterings-API](/help/authentication/integration-guide-programmers/features-premium/degraded-access/degradation-feature.md#degradation-api-access)
-      * [Afbraakkenmerk](/help/authentication/integration-guide-programmers/features-premium/degraded-access/degradation-feature.md)
-   * [Entitlement Service Monitoring API](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-api.md)
+   * [Tijdcontrole-API opnieuw instellen](/help/premium-workflow/temporary-access/temp-pass-feature.md#reset-tempass-api-access)
+      * [Functie TempPass](/help/premium-workflow/temporary-access/temp-pass-feature.md)
+   * [Verslechterings-API](/help/premium-workflow/degraded-access/degradation-feature.md#degradation-api-access)
+      * [Afbraakkenmerk](/help/premium-workflow/degraded-access/degradation-feature.md)
+   * [Entitlement Service Monitoring API](/help/premium-workflow/esm/entitlement-service-monitoring-api.md)
 
-Voor meer details op de machtigingsstroom, verwijs naar de [&#128279;](/help/authentication/integration-guide-programmers/programmer-integration-guide-overview.md#entitlement-flow) documentatie van de Gids van de Integratie van de 0&rbrace; Programmer.
+Voor meer details op de machtigingsstroom, verwijs naar de [ documentatie van de Gids van de Integratie van de 0} Programmer.](/help/authentication/integration-guide-programmers/programmer-integration-guide-overview.md#entitlement-flow)
 
 #### Entitlement {#understanding-entitlements}
 
@@ -241,7 +241,7 @@ Adobe Pass-verificatie biedt verschillende voordelen ten opzichte van alternatie
 
 * **naadloze Enige Sign-On (SSO)** - in tegenstelling tot directe integratie met individuele leveranciers, laat de Authentificatie van Adobe Pass een blijvende login ervaring toe aangezien de gebruikers zich tussen verschillende websites en apps bewegen.
 * **Brede Prijsverhoging van de Markt** - Zodra een Programmer met de Authentificatie van Adobe Pass integreert, krijgen zij onmiddellijk toegang tot de exploitanten van de Tv van de Betaling die meer dan 90% van de huishoudens van de V.S. bestrijken.
-* **Integratie met Ecosystem van Adobe** - werkt foutloos met andere oplossingen van Adobe voor inhoudslevering, bescherming, en monetisatie, met inbegrip van Adobe Analytics.
+* **Integratie met het Ecosysteem van Adobe** - werkt foutloos met andere oplossingen van Adobe voor inhoudslevering, bescherming, en monetisatie, met inbegrip van Adobe Analytics.
 
 **Hoe veilig is de Authentificatie van Adobe Pass?**
 

@@ -2,7 +2,7 @@
 title: Kickstart-handleiding voor programmeurs
 description: Kickstart-handleiding voor programmeurs
 exl-id: 0aecdb81-9b97-4475-b0b0-654d916b2374
-source-git-commit: 37858fa83aecbdf443a4a6058c78e4f9246eee42
+source-git-commit: d0f08314d7033aae93e4a0d9bc94af8773c5ba13
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 0%
@@ -15,25 +15,25 @@ ht-degree: 0%
 >
 > De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
-Deze kickstart-handleiding is bedoeld voor inhoudsproviders (programmeurs) die Adobe® Pass-verificatie willen integreren in hun websites of toepassingen.
+Deze kickstart-handleiding is bedoeld voor inhoudsproviders (programmeurs) die Adobe® Pass Authentication willen integreren in hun websites of toepassingen.
 
 In dit document worden de belangrijkste eerste stappen beschreven die moeten zorgen voor een soepele en efficiënte start van het integratieproces. Het is bedoeld om de verwachtingen te verduidelijken en richtsnoeren te geven over de manier waarop we met partners zullen samenwerken om succesvolle integratie te bereiken.
 
-Adobe biedt verschillende bronnen die u helpen bij het integreren van Adobe Pass-verificatie in uw website of toepassing. Gelieve te verwijzen naar **&quot;u&quot;** en **&quot;Adobe zal verstrekken&quot;** commentaren van elke hieronder sectie.
+Adobe beschikt over een aantal bronnen waarmee u Adobe Pass-verificatie kunt integreren in uw website of toepassing. Gelieve te verwijzen naar **&quot;u&quot;** en **&quot;Adobe zal verstrekken&quot;** commentaren van elke hieronder sectie.
 
 ## Installatieproces {#setup-process}
 
 Het installatieproces omvat onder andere de volgende stappen:
 
-![&#x200B; Adobe® het Proces van de Integratie van de Authentificatie van de pas &#x200B;](../assets/progr-flow-int-lifecycle.png)
+![ Adobe® het Proces van de Integratie van de Authentificatie van de Volwassing ](/help/authentication/assets/progr-flow-int-lifecycle.png)
 
-*Adobe® het Proces van de Integratie van de Authentificatie van de pas*
+*Adobe® het Proces van de Integratie van de Authentificatie van de Volwassing*
 
 **u** tijdens de kickoff fase zult verstrekken:
 
 * **dienstverlener (verzoekor herkenningsteken)**
 
-  Dit is een tekenreeks waarmee het merk van de website of de toepassing die aanvragen voor Adobe Pass-verificatie indient, op unieke wijze wordt geïdentificeerd. De tekenreeks zelf is willekeurig, maar moet worden overeengekomen tussen Adobe en programmeur
+  Dit is een tekenreeks waarmee het merk van de website of de toepassing die aanvragen voor Adobe Pass-verificatie indient, op unieke wijze wordt geïdentificeerd. De tekenreeks zelf is willekeurig, maar moet tussen Adobe en de programmeur worden overeengekomen
 
 * **informatie van het Kanaal**
 
@@ -41,7 +41,7 @@ Het installatieproces omvat onder andere de volgende stappen:
 
 * **namen van het Domein**
 
-  Deze lijst bevat de domeinnamen die daadwerkelijk aan de Adobe worden vermeld om de serviceprovider te vertegenwoordigen. Hiermee zorgt u ervoor dat alleen uw geautoriseerde domeinen via uw metagegevens toegang hebben tot Adobe Pass-verificatie. Zorg ervoor dat u domeinnamen opgeeft en duidelijk identificeert voor zowel productie- als testomgevingen, aangezien deze kunnen verschillen.
+  Deze lijst bevat de domeinnamen die daadwerkelijk aan Adobe worden vermeld om de serviceprovider te vertegenwoordigen. Hiermee zorgt u ervoor dat alleen uw geautoriseerde domeinen via uw metagegevens toegang hebben tot Adobe Pass-verificatie. Zorg ervoor dat u domeinnamen opgeeft en duidelijk identificeert voor zowel productie- als testomgevingen, aangezien deze kunnen verschillen.
 
 **u** via MVPD zult verstrekken:
 
@@ -69,22 +69,22 @@ Het installatieproces omvat onder andere de volgende stappen:
 
 ## Toegang tot klantenondersteuning {#access-customer-support}
 
-**de Adobe zal** toegang tot ons systeem van de klantensteun via [&#x200B; Zendesk &#x200B;](https://tve.zendesk.com/home) verlenen. Als u toegang wilt tot Zendesk, moet u zich registreren en een account maken op https://tve.zendesk.com/home. Er is geen limiet voor het aantal gebruikers dat u kunt registreren. Zodra geregistreerd, kunt u commentaren op om het even welk voorgelegd kaartje bekijken en delen.
+**Adobe zal** toegang tot ons systeem van de klantensteun via [ Zendesk ](https://tve.zendesk.com/home) verlenen. Als u toegang wilt tot Zendesk, moet u zich registreren en een account maken op https://tve.zendesk.com/home. Er is geen limiet voor het aantal gebruikers dat u kunt registreren. Zodra geregistreerd, kunt u commentaren op om het even welk voorgelegd kaartje bekijken en delen.
 
-Het Adobe Pass-verificatieteam is beschikbaar als hulp bij vragen of technische problemen die u tijdens het integratieproces kunt tegenkomen. Gelieve te contacteren ons in [&#x200B; tve-support@adobe.com &#x200B;](mailto:tve-support@adobe.com).
+Het Adobe Pass-verificatieteam is beschikbaar als hulp bij vragen of technische problemen die u tijdens het integratieproces kunt tegenkomen. Gelieve te contacteren ons in [ tve-support@adobe.com ](mailto:tve-support@adobe.com).
 
 ## Toegang tot documentatie {#access-documentation}
 
-**de Adobe zal** toegang tot onze openbare documentatie via [&#x200B; Adobe Experience League &#x200B;](https://experienceleague.adobe.com/nl/docs/pass/authentication/home) verlenen.
+**Adobe zal** toegang tot onze openbare documentatie via [ de Liga van de Ervaring van Adobe ](https://experienceleague.adobe.com/en/docs/pass/authentication/home) verlenen.
 
-Het team van de Authentificatie van Adobe Pass verstrekt uitvoerige documentatie voor de beschikbare eigenschappen en APIs onder de [&#x200B; Gids van de Integratie voor de sectie van Programmers &#x200B;](/help/authentication/integration-guide-programmers/programmer-integration-guide-overview.md). Verwijs naar de inhoudstafel onder deze sectie voor verbindingen aan gedetailleerde informatie over elk onderwerp.
+Het team van de Authentificatie van Adobe Pass verstrekt uitvoerige documentatie voor de beschikbare eigenschappen en APIs onder de [ Gids van de Integratie voor de sectie van Programmers ](/help/authentication/integration-guide-programmers/programmer-integration-guide-overview.md). Verwijs naar de inhoudstafel onder deze sectie voor verbindingen aan gedetailleerde informatie over elk onderwerp.
 
 ## Toegang tot het testgereedschap {#access-testing-tool}
 
-**Adobe zal** toegang tot ons APIs exploratiehulpmiddel via [&#x200B; Adobe Developer &#x200B;](https://developer.adobe.com/adobe-pass/) website verstrekken.
+**Adobe zal** toegang tot ons APIs exploratiehulpmiddel via [ Adobe Developer ](https://developer.adobe.com/adobe-pass/) website verstrekken.
 
 ## Toegang tot hulpprogramma voor configuratiebeheer {#access-configuration-management-tool}
 
-**de Adobe zal** toegang tot een zelfbedieningshulpmiddel verstrekken om uw configuratie en gegevens via [&#x200B; Dashboard van Adobe Pass te beheren TVE &#x200B;](https://experience.adobe.com/pass/authentication).
+**Adobe zal** toegang tot een zelfbedieningshulpmiddel verstrekken om uw configuratie en gegevens via [ Dashboard van Adobe Pass te beheren TVE ](https://experience.adobe.com/pass/authentication).
 
-Het team van de Authentificatie van Adobe Pass verstrekt uitvoerige documentatie voor het gebruik van het Dashboard van TVE onder de [&#x200B; Gids van de Gebruiker voor het Dashboard van TVE &#x200B;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-overview.md) sectie. Verwijs naar de inhoudstafel onder deze sectie voor verbindingen aan gedetailleerde informatie over elk onderwerp.
+Het team van de Authentificatie van Adobe Pass verstrekt uitvoerige documentatie voor het gebruik van het Dashboard van TVE onder de [ Gids van de Gebruiker voor het Dashboard van TVE ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-overview.md) sectie. Verwijs naar de inhoudstafel onder deze sectie voor verbindingen aan gedetailleerde informatie over elk onderwerp.
