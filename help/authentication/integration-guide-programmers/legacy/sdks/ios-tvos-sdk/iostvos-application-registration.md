@@ -18,13 +18,13 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 ## Inleiding {#Intro}
 
 Vanaf versie 3.0 van iOS/tvOS AccessEnabler SDK veranderen we het verificatiemechanisme met Adobe-servers. In plaats van het gebruiken van een openbare sleutel en een geheim systeem om requestID te ondertekenen, introduceren wij het concept een koord van de softwareverklaring dat kan worden gebruikt om een toegangstoken te verkrijgen die later voor alle vraag wordt gebruikt die SDK aan onze servers maakt. Naast een software-instructie hebt u ook een aangepast URL-schema voor uw toepassing nodig.
 
-Voor meer informatie, zie [ Dynamisch Overzicht van de Registratie van de Cliënt 1}.](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)
+Voor meer informatie, zie [&#x200B; Dynamisch Overzicht van de Registratie van de Cliënt 1&rbrace;.](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)
 
 ## Wat is een Software Statement? {#Soft_state}
 
@@ -45,7 +45,7 @@ Een verklaring van de Software is een teken JWT dat informatie over uw toepassin
 - Er moet een lijst met alle geregistreerde toepassingen worden weergegeven. Klik op de knop   `Download` op de toepassing die u net hebt gemaakt. Mogelijk moet u een paar minuten wachten voordat de Software Statement wordt weergegeven. U kunt deze instructie dan downloaden.
 - Er wordt een tekstbestand gedownload. Gebruik de inhoud ervan als de Software Statement.
 
-Voor meer informatie zie, [ Dynamisch Beheer van de Registratie van de Cliënt ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md#dynamic-client-registration-management).
+Voor meer informatie zie, [&#x200B; Dynamisch Beheer van de Registratie van de Cliënt &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md#dynamic-client-registration-management).
 
 ### Als u geen toegang hebt tot het Adobe TVE-dashboard:
 

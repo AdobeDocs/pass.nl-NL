@@ -21,7 +21,7 @@ Voer de volgende stappen uit om wijzigingen te bekijken en te drukken.
 
 1. Zoek het bericht voor revisie- en pushwijzigingen onder aan het scherm.
 
-   ![ Overzicht en duw veranderingsbericht ](/help/authentication/assets/tve-dashboard/new-tve-dashboard/review/review-and-push-changes-banner-view.png)
+   ![&#x200B; Overzicht en duw veranderingsbericht &#x200B;](/help/authentication/assets/tve-dashboard/new-tve-dashboard/review/review-and-push-changes-banner-view.png)
 
    *Overzicht en duw de berichtvakje van veranderingen*
 
@@ -29,7 +29,7 @@ Voer de volgende stappen uit om wijzigingen te bekijken en te drukken.
 
 1. Typ een korte beschrijving van de verandering in **Beschrijving van de Configuratie** om het doel van elke verandering effectief te volgen en te begrijpen.
 
-   ![ voeg een Beschrijving van de Configuratie toe ](/help/authentication/assets/tve-dashboard/new-tve-dashboard/review/review-and-push-configuration-details-panel-view.png)
+   ![&#x200B; voeg een Beschrijving van de Configuratie toe &#x200B;](/help/authentication/assets/tve-dashboard/new-tve-dashboard/review/review-and-push-configuration-details-panel-view.png)
 
    *voeg een Beschrijving van de Configuratie toe*
 
@@ -39,7 +39,7 @@ Voer de volgende stappen uit om wijzigingen te bekijken en te drukken.
 
 1. Selecteer **Mening** om de vorige en nieuwe waarden te herzien verbonden aan een configuratieverandering.
 
-   ![ de configuratieveranderingen van de Mening ](/help/authentication/assets/tve-dashboard/new-tve-dashboard/review/review-and-push-changes-view-button.png)
+   ![&#x200B; de configuratieveranderingen van de Mening &#x200B;](/help/authentication/assets/tve-dashboard/new-tve-dashboard/review/review-and-push-changes-view-button.png)
 
    *de configuratieveranderingen van de Mening*
 
@@ -49,7 +49,7 @@ Voer de volgende stappen uit om wijzigingen te bekijken en te drukken.
    >
    >De **Duw verandert** knoop wordt actief slechts na het toevoegen van de Beschrijving van de a **Configuratie**.
 
-   ![ de veranderingen van de Duw ](/help/authentication/assets/tve-dashboard/new-tve-dashboard/review/review-and-push-push-changes-button.png)
+   ![&#x200B; de veranderingen van de Duw &#x200B;](/help/authentication/assets/tve-dashboard/new-tve-dashboard/review/review-and-push-push-changes-button.png)
 
    *de veranderingen van de Duw*
 

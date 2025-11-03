@@ -17,11 +17,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> De implementatie van REST API V2 wordt begrensd door de [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
+> De implementatie van REST API V2 wordt begrensd door de [&#x200B; Throttling mechanisme &#x200B;](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
 
 >[!MORELIKETHIS]
 >
-> Zorg ervoor om [ REST API V2 FAQs ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general) ook te bezoeken.
+> Zorg ervoor om [&#x200B; REST API V2 FAQs &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general) ook te bezoeken.
 
 De methode van de Identiteit van het Platform laat veelvoudige toepassingen toe om een unieke platform herkenningsteken te gebruiken om enig sign-on (SSO) op het apparaat of platformniveau te bereiken wanneer het gebruiken van de diensten van Adobe Pass.
 
@@ -29,12 +29,12 @@ De toepassingen zijn verantwoordelijk voor het ophalen van de unieke lading van 
 
 De toepassingen zijn verantwoordelijk voor het opnemen van deze unieke lading van de platform-id als onderdeel van de header `Adobe-Subject-Token` / `X-Roku-Reserved-Roku-Connect-Token` voor alle aanvragen die deze aangeven.
 
-Voor meer details over `Adobe-Subject-Token` / `X-Roku-Reserved-Roku-Connect-Token` kopbal, verwijs naar [ Adobe-Subject-Token ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) / [ x-Roku-Gereserveerd-roku-Connect-Token ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) documentatie.
+Voor meer details over `Adobe-Subject-Token` / `X-Roku-Reserved-Roku-Connect-Token` kopbal, verwijs naar [&#x200B; Adobe-Subject-Token &#x200B;](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) / [&#x200B; x-Roku-Gereserveerd-roku-Connect-Token &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) documentatie.
 
 >[!MORELIKETHIS]
 > 
-> * [ Amazon SSO Cookbook ](/help/premium-workflow/sso-access/platform-sso/amazon-single-sign-on/amazon-sso-cookbook-rest-api-v2.md)
-> * [ Roku SSO Cookbook ](/help/premium-workflow/sso-access/platform-sso/roku-single-sign-on/roku-sso-cookbook-rest-api-v2.md)
+> * [&#x200B; Amazon SSO Cookbook &#x200B;](/help/premium-workflow/sso-access/platform-sso/amazon-single-sign-on/amazon-sso-cookbook-rest-api-v2.md)
+> * [&#x200B; Roku SSO Cookbook &#x200B;](/help/premium-workflow/sso-access/platform-sso/roku-single-sign-on/roku-sso-cookbook-rest-api-v2.md)
 
 ## Verificatie uitvoeren via Single Sign-On met behulp van platformidentiteit {#perform-authentication-through-single-sign-on-using-platform-identity}
 
@@ -43,11 +43,11 @@ Voor meer details over `Adobe-Subject-Token` / `X-Roku-Reserved-Roku-Connect-Tok
 Voordat u de verificatiestroom via Single Sign-On uitvoert met behulp van een platformidentiteit, moet u controleren of aan de volgende voorwaarden is voldaan:
 
 * Het platform moet een identiteitsservice of een bibliotheek bieden die consistente informatie als `JWS` of `JWE` payload retourneert voor alle toepassingen op hetzelfde apparaat of platform.
-* De eerste het stromen toepassing moet het unieke platformherkenningsteken terugwinnen en `JWS` of `JWE` nuttige lading als deel van [ Adobe-Onderwerp-Symbolisch ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) / [ x-Roku-Gereserveerd-Roku-Connect-Token ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) kopbal voor alle verzoeken omvatten die het specificeren.
+* De eerste het stromen toepassing moet het unieke platformherkenningsteken terugwinnen en `JWS` of `JWE` nuttige lading als deel van [&#x200B; Adobe-Onderwerp-Symbolisch &#x200B;](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) / [&#x200B; x-Roku-Gereserveerd-Roku-Connect-Token &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) kopbal voor alle verzoeken omvatten die het specificeren.
 * De eerste streamingtoepassing moet een MVPD selecteren.
 * De eerste streamingtoepassing moet een verificatiesessie starten om u aan te melden bij de geselecteerde MVPD.
 * De eerste streamingtoepassing moet worden geverifieerd met de geselecteerde MVPD in een gebruikersagent.
-* De tweede het stromen toepassing moet het unieke platformherkenningsteken terugwinnen en `JWS` of `JWE` nuttige lading als deel van [ Adobe-Onderwerp-Symbolisch ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) / [ x-Roku-Gereserveerd-Roku-Connect-Token ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) kopbal voor alle verzoeken omvatten die het specificeren.
+* De tweede het stromen toepassing moet het unieke platformherkenningsteken terugwinnen en `JWS` of `JWE` nuttige lading als deel van [&#x200B; Adobe-Onderwerp-Symbolisch &#x200B;](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) / [&#x200B; x-Roku-Gereserveerd-Roku-Connect-Token &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) kopbal voor alle verzoeken omvatten die het specificeren.
 
 >[!IMPORTANT]
 >
@@ -62,7 +62,7 @@ Voordat u de verificatiestroom via Single Sign-On uitvoert met behulp van een pl
 
 Voer de gegeven stappen uit om de authentificatiestroom door enig teken-op uit te voeren gebruikend een platformidentiteit zoals aangetoond in het volgende diagram.
 
-![ voer authentificatie door enige sign-on uit gebruikend platformidentiteit ](/help/authentication/assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-perform-authentication-through-single-sign-on-using-platform-identity-flow.png)
+![&#x200B; voer authentificatie door enige sign-on uit gebruikend platformidentiteit &#x200B;](/help/authentication/assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-perform-authentication-through-single-sign-on-using-platform-identity-flow.png)
 
 *voer authentificatie door enige sign-on uit gebruikend platformidentiteit*
 
@@ -76,7 +76,7 @@ Voer de gegeven stappen uit om de authentificatiestroom door enig teken-op uit t
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [ creeer authentificatiesessie ](../../apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) API documentatie voor details op:
+   > Verwijs naar [&#x200B; creeer authentificatiesessie &#x200B;](../../apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) API documentatie voor details op:
    > 
    > * Alle _vereiste_ parameters, als `serviceProvider`, `mvpd`, `domainName`, en `redirectUrl`
    > * Alle _vereiste_ kopballen, als `Authorization`, `AP-Device-Identifier`
@@ -88,13 +88,13 @@ Voer de gegeven stappen uit om de authentificatiestroom door enig teken-op uit t
    >
    > <br/>
    > 
-   > Voor meer details over `Adobe-Subject-Token` / `X-Roku-Reserved-Roku-Connect-Token` kopbal, verwijs naar [ Adobe-Subject-Token ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) / [ x-Roku-Gereserveerd-roku-Connect-Token ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) documentatie.
+   > Voor meer details over `Adobe-Subject-Token` / `X-Roku-Reserved-Roku-Connect-Token` kopbal, verwijs naar [&#x200B; Adobe-Subject-Token &#x200B;](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) / [&#x200B; x-Roku-Gereserveerd-roku-Connect-Token &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) documentatie.
 
 1. **wijs op de volgende actie:** De het eindpuntreactie van Sessies bevat de noodzakelijke gegevens om de eerste het stromen toepassing betreffende de volgende actie te begeleiden.
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [ creeer authentificatiesessie ](../../apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) API documentatie voor details over de informatie die in een zittingsreactie wordt verstrekt.
+   > Verwijs naar [&#x200B; creeer authentificatiesessie &#x200B;](../../apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) API documentatie voor details over de informatie die in een zittingsreactie wordt verstrekt.
    > 
    > <br/>
    > 
@@ -105,7 +105,7 @@ Voer de gegeven stappen uit om de authentificatiestroom door enig teken-op uit t
    >
    > <br/>
    > 
-   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
 1. **Open URL in gebruikersagent:** De reactie van het eindpunt van zittingen bevat de volgende gegevens:
    * De `url` die kan worden gebruikt om de interactieve verificatie te starten op de MVPD-aanmeldingspagina.
@@ -120,7 +120,7 @@ Voer de gegeven stappen uit om de authentificatiestroom door enig teken-op uit t
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [ terugwinnen profiel voor specifieke code ](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) API documentatie voor details op:
+   > Verwijs naar [&#x200B; terugwinnen profiel voor specifieke code &#x200B;](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) API documentatie voor details op:
    > 
    > * Alle _vereiste_ parameters, als `serviceProvider`, `code`
    > * Alle _vereiste_ kopballen, als `Authorization`, `AP-Device-Identifier`
@@ -136,7 +136,7 @@ Voer de gegeven stappen uit om de authentificatiestroom door enig teken-op uit t
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [ terugwinnen profiel voor specifieke code ](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) API documentatie voor details op de informatie die in een profielreactie wordt verstrekt.
+   > Verwijs naar [&#x200B; terugwinnen profiel voor specifieke code &#x200B;](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) API documentatie voor details op de informatie die in een profielreactie wordt verstrekt.
    > 
    > <br/>
    > 
@@ -146,7 +146,7 @@ Voer de gegeven stappen uit om de authentificatiestroom door enig teken-op uit t
    >
    > <br/>
    > 
-   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
 1. **ga met besluitvormingsstromen te werk:** de eerste het stromen toepassing kan met verdere besluitvormingsstromen verdergaan.
 
@@ -156,7 +156,7 @@ Voer de gegeven stappen uit om de authentificatiestroom door enig teken-op uit t
    >
    > <br/>
    > 
-   > Voor meer details over `Adobe-Subject-Token` / `X-Roku-Reserved-Roku-Connect-Token` kopbal, verwijs naar [ Adobe-Subject-Token ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) / [ x-Roku-Gereserveerd-roku-Connect-Token ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) documentatie.
+   > Voor meer details over `Adobe-Subject-Token` / `X-Roku-Reserved-Roku-Connect-Token` kopbal, verwijs naar [&#x200B; Adobe-Subject-Token &#x200B;](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) / [&#x200B; x-Roku-Gereserveerd-roku-Connect-Token &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) documentatie.
 
 1. **wint platformherkenningsteken terug:** de tweede het stromen toepassing roept de identiteitsdienst of de bibliotheek, buiten de systemen van Adobe Pass, om `JWS` of `JWE` lading te verkrijgen verbonden aan het unieke platformherkenningsteken.
 
@@ -168,7 +168,7 @@ Voer de gegeven stappen uit om de authentificatiestroom door enig teken-op uit t
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [ terugwinnen profielen ](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md) API documentatie voor details op:
+   > Verwijs naar [&#x200B; terugwinnen profielen &#x200B;](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md) API documentatie voor details op:
    > 
    > * Alle _vereiste_ parameters, als `serviceProvider`
    > * Alle _vereiste_ kopballen, als `Authorization`, `AP-Device-Identifier`
@@ -180,7 +180,7 @@ Voer de gegeven stappen uit om de authentificatiestroom door enig teken-op uit t
    >
    > <br/>
    > 
-   > Voor meer details over `Adobe-Subject-Token` / `X-Roku-Reserved-Roku-Connect-Token` kopbal, verwijs naar [ Adobe-Subject-Token ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) / [ x-Roku-Gereserveerd-roku-Connect-Token ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) documentatie.
+   > Voor meer details over `Adobe-Subject-Token` / `X-Roku-Reserved-Roku-Connect-Token` kopbal, verwijs naar [&#x200B; Adobe-Subject-Token &#x200B;](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) / [&#x200B; x-Roku-Gereserveerd-roku-Connect-Token &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) documentatie.
 
 1. **vind enig sign-on profiel:** de server van Adobe Pass identificeert een geldig enig sign-on profiel dat op de ontvangen parameters en kopballen wordt gebaseerd.
 
@@ -188,7 +188,7 @@ Voer de gegeven stappen uit om de authentificatiestroom door enig teken-op uit t
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [ terugwinnen profielen ](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md) API documentatie voor details over de informatie die in een profielreactie wordt verstrekt.
+   > Verwijs naar [&#x200B; terugwinnen profielen &#x200B;](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md) API documentatie voor details over de informatie die in een profielreactie wordt verstrekt.
    >
    > <br/>
    > 
@@ -198,7 +198,7 @@ Voer de gegeven stappen uit om de authentificatiestroom door enig teken-op uit t
    >
    > <br/>
    > 
-   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
 1. **ga met besluitvormingsstromen te werk:** De tweede het stromen toepassing kan met verdere besluitvormingsstromen verdergaan.
 
@@ -208,7 +208,7 @@ Voer de gegeven stappen uit om de authentificatiestroom door enig teken-op uit t
    >
    > <br/>
    > 
-   > Voor meer details over `Adobe-Subject-Token` / `X-Roku-Reserved-Roku-Connect-Token` kopbal, verwijs naar [ Adobe-Subject-Token ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) / [ x-Roku-Gereserveerd-roku-Connect-Token ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) documentatie.
+   > Voor meer details over `Adobe-Subject-Token` / `X-Roku-Reserved-Roku-Connect-Token` kopbal, verwijs naar [&#x200B; Adobe-Subject-Token &#x200B;](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) / [&#x200B; x-Roku-Gereserveerd-roku-Connect-Token &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) documentatie.
 
 ## Autorisatiebeslissingen ophalen via Single Sign-On met behulp van platformidentiteit{#performing-authorization-flow-using-platform-identity-single-sign-on-method}
 
@@ -217,7 +217,7 @@ Voer de gegeven stappen uit om de authentificatiestroom door enig teken-op uit t
 Voordat u de autorisatiestroom via Single Sign-On uitvoert met behulp van een platformidentiteit, moet u controleren of aan de volgende voorwaarden is voldaan:
 
 * Het platform moet een identiteitsservice of een bibliotheek bieden die consistente informatie als `JWS` of `JWE` payload retourneert voor alle toepassingen op hetzelfde apparaat of platform.
-* De tweede het stromen toepassing moet het unieke platformherkenningsteken terugwinnen en `JWS` of `JWE` nuttige lading als deel van [ Adobe-Onderwerp-Symbolisch ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) / [ x-Roku-Gereserveerd-Roku-Connect-Token ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) kopbal voor alle verzoeken omvatten die het specificeren.
+* De tweede het stromen toepassing moet het unieke platformherkenningsteken terugwinnen en `JWS` of `JWE` nuttige lading als deel van [&#x200B; Adobe-Onderwerp-Symbolisch &#x200B;](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) / [&#x200B; x-Roku-Gereserveerd-Roku-Connect-Token &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) kopbal voor alle verzoeken omvatten die het specificeren.
 * De tweede streamingtoepassing moet een autorisatiebesluit ophalen voordat een door de gebruiker geselecteerde resource wordt afgespeeld.
 
 >[!IMPORTANT]
@@ -226,13 +226,13 @@ Voordat u de autorisatiestroom via Single Sign-On uitvoert met behulp van een pl
 > 
 > <br/>
 > 
-> * De eerste het stromen toepassing heeft authentificatie uitgevoerd en heeft een geldige waarde voor [ Adobe-Onderwerp-Symbolische ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) / [ x-Roku-Gereserveerd-Roku-Connect-Token ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) verzoekkopbal opgenomen.
+> * De eerste het stromen toepassing heeft authentificatie uitgevoerd en heeft een geldige waarde voor [&#x200B; Adobe-Onderwerp-Symbolische &#x200B;](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) / [&#x200B; x-Roku-Gereserveerd-Roku-Connect-Token &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) verzoekkopbal opgenomen.
 
 ### Workflow {#workflow-scenario-performing-authorization-flow-using-platform-identity-single-sign-on-method}
 
 Voer de gegeven stappen uit om de vergunningsstroom door enig teken-op uit te voeren gebruikend een platformidentiteit zoals aangetoond in het volgende diagram.
 
-![ wint vergunningsbesluiten door enige sign-on gebruikend platformidentiteit ](/help/authentication/assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-retrieve-authorization-decisions-through-single-sign-on-using-platform-identity-flow.png) terug
+![&#x200B; wint vergunningsbesluiten door enige sign-on gebruikend platformidentiteit &#x200B;](/help/authentication/assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-retrieve-authorization-decisions-through-single-sign-on-using-platform-identity-flow.png) terug
 
 *wint vergunningsbesluiten door enige sign-on gebruikend platformidentiteit* terug
 
@@ -246,7 +246,7 @@ Voer de gegeven stappen uit om de vergunningsstroom door enig teken-op uit te vo
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [ terugwinnen vergunningsbesluiten gebruikend specifieke mvpd ](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details op:
+   > Verwijs naar [&#x200B; terugwinnen vergunningsbesluiten gebruikend specifieke mvpd &#x200B;](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `serviceProvider`, `mvpd`, en `resources`
    > * Alle _vereiste_ kopballen, als `Authorization` en `AP-Device-Identifier`
@@ -258,7 +258,7 @@ Voer de gegeven stappen uit om de vergunningsstroom door enig teken-op uit te vo
    >
    > <br/>
    > 
-   > Voor meer details over `Adobe-Subject-Token` / `X-Roku-Reserved-Roku-Connect-Token` kopbal, verwijs naar [ Adobe-Subject-Token ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) / [ x-Roku-Gereserveerd-roku-Connect-Token ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) documentatie.
+   > Voor meer details over `Adobe-Subject-Token` / `X-Roku-Reserved-Roku-Connect-Token` kopbal, verwijs naar [&#x200B; Adobe-Subject-Token &#x200B;](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) / [&#x200B; x-Roku-Gereserveerd-roku-Connect-Token &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) documentatie.
 
 1. **vind enig sign-on profiel:** de server van Adobe Pass identificeert een geldig enig sign-on profiel dat op de ontvangen parameters en kopballen wordt gebaseerd.
 
@@ -268,7 +268,7 @@ Voer de gegeven stappen uit om de vergunningsstroom door enig teken-op uit te vo
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [ terugwinnen vergunningsbesluiten gebruikend specifieke mvpd ](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details over de informatie die in een besluitreactie wordt verstrekt.
+   > Verwijs naar [&#x200B; terugwinnen vergunningsbesluiten gebruikend specifieke mvpd &#x200B;](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details over de informatie die in een besluitreactie wordt verstrekt.
    > 
    > <br/>
    > 
@@ -279,15 +279,15 @@ Voer de gegeven stappen uit om de vergunningsstroom door enig teken-op uit te vo
    >
    > <br/>
    > 
-   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
 1. **stroom van het Begin met media teken:** de tweede het stromen toepassing gebruikt het media teken om de inhoud te spelen.
 
-1. **Terugkeer `Deny` besluit met details:** De Besluiten staan eindpuntreactie toe bevat a `Deny` besluit en een foutenlading die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+1. **Terugkeer `Deny` besluit met details:** De Besluiten staan eindpuntreactie toe bevat a `Deny` besluit en een foutenlading die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [ terugwinnen vergunningsbesluiten gebruikend specifieke mvpd ](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details over de informatie die in een besluitreactie wordt verstrekt.
+   > Verwijs naar [&#x200B; terugwinnen vergunningsbesluiten gebruikend specifieke mvpd &#x200B;](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details over de informatie die in een besluitreactie wordt verstrekt.
    > 
    > <br/>
    > 
@@ -298,10 +298,10 @@ Voer de gegeven stappen uit om de vergunningsstroom door enig teken-op uit te vo
    >
    > <br/>
    > 
-   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
 1. **handvat `Deny` besluitvormingsdetails:** de tweede het stromen toepassing verwerkt de fouteninformatie van de reactie en kan het gebruiken om naar keuze een specifiek bericht op het gebruikersinterface te tonen.
 
 >[!NOTE]
 >
-> De stappen voor de pre-vergunningsstroom zijn het zelfde als die voor de vergunningsstroom, behalve dat is het gebruikte eindpunt in [ wordt beschreven terugwinnen pre-vergunningsbesluiten gebruikend specifieke mvpd ](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md) documentatie die.
+> De stappen voor de pre-vergunningsstroom zijn het zelfde als die voor de vergunningsstroom, behalve dat is het gebruikte eindpunt in [&#x200B; wordt beschreven terugwinnen pre-vergunningsbesluiten gebruikend specifieke mvpd &#x200B;](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md) documentatie die.

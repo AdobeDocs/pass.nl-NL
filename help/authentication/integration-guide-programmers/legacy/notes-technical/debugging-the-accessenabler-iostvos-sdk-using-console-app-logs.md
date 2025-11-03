@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 ## Overzicht
 
@@ -31,7 +31,7 @@ Het doel van het registratiemechanisme van AccessEnabler iOS/tvOS is het uitzend
 
 Vanaf de AccessEnabler iOS/tvOS 3.5.0-versie introduceert het registratiemechanisme de volgende verbeteringen als wijzigingen:
 
-* Het kader van AccessEnabler gebruikt Apple geadviseerde [ OSLog ](https://developer.apple.com/documentation/os/oslog) implementatie.
+* Het kader van AccessEnabler gebruikt Apple geadviseerde [&#x200B; OSLog &#x200B;](https://developer.apple.com/documentation/os/oslog) implementatie.
 
 * Het kader van AccessEnabler introduceert de capaciteit om de toepassingslogboeken van de Console te filtreren die op Subsystem worden gebaseerd: **com.adobe.pass.AccessEnabler**. Alle berichten die door de SDK worden verzonden, maken deel uit van com.adobe.pass.AccessEnabler.
 
@@ -48,12 +48,12 @@ Afhankelijk van de kwesties die worden onderzocht kunt u de het registreren beri
 
 #### Inclusief {#including}
 
-Eerst van alles om om het even welke registrerenberichten te kunnen zien die door het kader AccessEnabler worden uitgegeven moet u **** &quot;omvatten de Berichten van Info&quot;en &quot;omvatten Debug Berichten&quot;in de sectie van de Actie van de Console selecteren app, zoals voorgesteld in het beeld hieronder.
+Eerst van alles om om het even welke registrerenberichten te kunnen zien die door het kader AccessEnabler worden uitgegeven moet u **&#x200B;**&#x200B;&quot;omvatten de Berichten van Info&quot;en &quot;omvatten Debug Berichten&quot;in de sectie van de Actie van de Console selecteren app, zoals voorgesteld in het beeld hieronder.
 
 ![](/help/authentication/assets/include-info-debug-msg.png)
 
 
-Om de functionaliteit van AccessEnabler iOS/tvOS SDK te kunnen zuiveren en **** ziet het kader AccessEnabler registreert u:
+Om de functionaliteit van AccessEnabler iOS/tvOS SDK te kunnen zuiveren en **&#x200B;**&#x200B;ziet het kader AccessEnabler registreert u:
 
 * Onderzoek in Console app die **gebruikt Subsystem** optie die de waarde com.adobe.pass.AccessEnabler zoals in het hieronder beeld evenaart.
 
@@ -68,7 +68,7 @@ Naast de bovengenoemde twee criteria kunt u de **optie van de Categorie** in sam
 
 #### Exclusief
 
-Om de functionaliteit van andere componenten beter te kunnen zuiveren en **** uitsluiten de AccessEnabler kaderlogboeken u kunt:
+Om de functionaliteit van andere componenten beter te kunnen zuiveren en **&#x200B;**&#x200B;uitsluiten de AccessEnabler kaderlogboeken u kunt:
 
 * Onderzoek in Console app die **gebruikt Subsystem** optie die niet de waarde com.adobe.pass.AccessEnabler evenaart.
 * Onderzoek in Console app die **gebruiken om het even welke** optie die niet de [ AccessEnabler ] waarde bevat.
@@ -80,4 +80,4 @@ Neem de volgende suggesties in overweging wanneer u een probleem meldt voor Adob
 * Geef de reproductiestappen op.
 * Geef de versie(s) van het besturingssysteem en het apparaatmodel of de apparaatmodellen op waarop het probleem zich voordoet.
 * Geef de versie op van AccessEnabler iOS/tvOS SDK die dit probleem ondervindt.
-* gelieve te proberen om alle het registrerenberichten vast te leggen AccessEnabler iOS/tvOS SDK gebruikend één van beide opties die in [ worden voorgesteld die ](#including) sectie omvatten.
+* gelieve te proberen om alle het registrerenberichten vast te leggen AccessEnabler iOS/tvOS SDK gebruikend één van beide opties die in [&#x200B; worden voorgesteld die &#x200B;](#including) sectie omvatten.

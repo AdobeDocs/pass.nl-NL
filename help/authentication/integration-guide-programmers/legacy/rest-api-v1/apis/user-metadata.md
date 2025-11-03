@@ -17,23 +17,23 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 >[!NOTE]
 >
-> De implementatie van REST API wordt begrensd door [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md)
+> De implementatie van REST API wordt begrensd door [&#x200B; Throttling mechanisme &#x200B;](/help/authentication/integration-guide-programmers/throttling-mechanism.md)
 
 ## REST API-eindpunten {#clientless-endpoints}
 
 `<REGGIE_FQDN>`:
 
-* Productie - [ api.auth.adobe.com ](http://api.auth.adobe.com/)
-* Het opvoeren - [ api.auth-staging.adobe.com ](http://api.auth-staging.adobe.com/)
+* Productie - [&#x200B; api.auth.adobe.com &#x200B;](http://api.auth.adobe.com/)
+* Het opvoeren - [&#x200B; api.auth-staging.adobe.com &#x200B;](http://api.auth-staging.adobe.com/)
 
 `<SP_FQDN>`:
 
-* Productie - [ api.auth.adobe.com ](http://api.auth.adobe.com/)
-* Het opvoeren - [ api.auth-staging.adobe.com ](http://api.auth-staging.adobe.com/)
+* Productie - [&#x200B; api.auth.adobe.com &#x200B;](http://api.auth.adobe.com/)
+* Het opvoeren - [&#x200B; api.auth-staging.adobe.com &#x200B;](http://api.auth-staging.adobe.com/)
 
 </br>
 
@@ -51,10 +51,10 @@ Haal metagegevens op die MVPD over de geverifieerde gebruiker heeft gedeeld.
 |------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | aanvrager | De programmeeraanvragerId waarvoor deze verrichting geldig is. |
 | deviceId | Het apparaat-id bytes. |
-| device_info/<p>X-Apparaat-Info | Informatie over streaming apparaat.</br></br> **Nota:** Dit KAN device_info als parameter worden overgegaan URL, maar wegens de potentiële grootte van deze parameter en beperkingen op de lengte van GET URL, ZOU het als x-Apparaat-Info in de HTTP- kopbal moeten worden overgegaan. </br></br> zie de volledige details in [ het overgaan Apparaat en de Informatie van de Verbinding ](/help/authentication/integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md). |
-| _deviceType_ | Het apparaattype (bijvoorbeeld Roku, PC).</br></br> Als deze parameter correct wordt geplaatst, biedt ESM metriek aan die [ uitgesplitst per apparatentype ](/help/premium-workflow/esm/entitlement-service-monitoring-overview.md#progr-filter-metrics) wanneer het gebruiken van Clientless zijn, zodat de verschillende soorten analyse voor bijvoorbeeld Roku, AppleTV, Xbox enz. kunnen worden uitgevoerd.</br></br> Zie [ Voordelen om clientless apparatentype parameter in de metriek van de Pas te gebruiken ](/help/authentication/integration-guide-programmers/legacy/notes-technical/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md) </br></br> **Nota:** vervangt `device_info` deze parameter. |
-| _deviceUser_ | De herkenningsteken van de apparatengebruiker.</br></br> **Nota:** Indien gebruikt, `deviceUser` zou de zelfde waarden moeten hebben zoals in [ creeer de verzoek van de Code van de Registratie ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md). |
-| _appId_ | De toepassings-id/-naam. </br></br> **Nota:** vervangt `device_info` deze parameter. Indien gebruikt, `appId` zou de zelfde waarden moeten hebben zoals in [ creeer de verzoek van de Code van de Registratie ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md). |
+| device_info/<p>X-Apparaat-Info | Informatie over streaming apparaat.</br></br> **Nota:** Dit KAN device_info als parameter worden overgegaan URL, maar wegens de potentiële grootte van deze parameter en beperkingen op de lengte van GET URL, ZOU het als x-Apparaat-Info in de HTTP- kopbal moeten worden overgegaan. </br></br> zie de volledige details in [&#x200B; het overgaan Apparaat en de Informatie van de Verbinding &#x200B;](/help/authentication/integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md). |
+| _deviceType_ | Het apparaattype (bijvoorbeeld Roku, PC).</br></br> Als deze parameter correct wordt geplaatst, biedt ESM metriek aan die [&#x200B; uitgesplitst per apparatentype &#x200B;](/help/premium-workflow/esm/entitlement-service-monitoring-overview.md#progr-filter-metrics) wanneer het gebruiken van Clientless zijn, zodat de verschillende soorten analyse voor bijvoorbeeld Roku, AppleTV, Xbox enz. kunnen worden uitgevoerd.</br></br> Zie [&#x200B; Voordelen om clientless apparatentype parameter in de metriek van de Pas te gebruiken &#x200B;](/help/authentication/integration-guide-programmers/legacy/notes-technical/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md) </br></br> **Nota:** vervangt `device_info` deze parameter. |
+| _deviceUser_ | De herkenningsteken van de apparatengebruiker.</br></br> **Nota:** Indien gebruikt, `deviceUser` zou de zelfde waarden moeten hebben zoals in [&#x200B; creeer de verzoek van de Code van de Registratie &#x200B;](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md). |
+| _appId_ | De toepassings-id/-naam. </br></br> **Nota:** vervangt `device_info` deze parameter. Indien gebruikt, `appId` zou de zelfde waarden moeten hebben zoals in [&#x200B; creeer de verzoek van de Code van de Registratie &#x200B;](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md). |
 
 >[!NOTE]
 > 
@@ -94,6 +94,6 @@ Aan de basis van het object bevinden zich drie knooppunten:
 
 Bij een fout retourneert de server een XML- of JSON-object dat een gedetailleerd foutbericht opgeeft.
 
-Voor meer informatie, zie [ Metagegevens van de Gebruiker ](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata.md).
+Voor meer informatie, zie [&#x200B; Metagegevens van de Gebruiker &#x200B;](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata.md).
 
 [Terug naar REST API Reference](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/rest-api-reference.md)
