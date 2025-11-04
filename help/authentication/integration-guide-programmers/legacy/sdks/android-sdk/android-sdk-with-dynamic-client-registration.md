@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 ## Inleiding {#Intro}
 
@@ -37,12 +37,12 @@ Voor Android beperkt het gebruik van aangepaste Chrome-tabbladen de toegang tot 
 
 ## Dynamische clientregistratie {#DCR}
 
-Android SDK v3.0+ zal de Dynamische procedure van de Registratie van de Cliënt zoals bepaald in [ Dynamische het Overzicht van de Registratie van de Cliënt 1} gebruiken.](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)
+Android SDK v3.0+ zal de Dynamische procedure van de Registratie van de Cliënt zoals bepaald in [&#x200B; Dynamische het Overzicht van de Registratie van de Cliënt 1&rbrace; gebruiken.](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)
 
 
 ## Functiedemo {#Demo}
 
-Gelieve te letten op [ dit webinar ](https://my.adobeconnect.com/pzkp8ujrigg1/) dat meer context van de eigenschap geeft en een demo op bevat hoe te om de softwareverklaringen te beheren gebruikend het Dashboard van TVE en hoe te om de geproduceerde degenen te testen gebruikend een duotoepassing die door Adobe als deel van Android SDK wordt verstrekt.
+Gelieve te letten op [&#x200B; dit webinar &#x200B;](https://my.adobeconnect.com/pzkp8ujrigg1/) dat meer context van de eigenschap geeft en een demo op bevat hoe te om de softwareverklaringen te beheren gebruikend het Dashboard van TVE en hoe te om de geproduceerde degenen te testen gebruikend een duotoepassing die door Adobe als deel van Android SDK wordt verstrekt.
 
 ## API-wijzigingen {#API}
 
@@ -94,7 +94,7 @@ Als een waarde voor de *urls* parameter wordt verstrekt, richt de resulterende n
 **Parameters:**
 
 - *requestID*: Unieke identiteitskaart verbonden aan het Kanaal. Geef de unieke id die door Adobe is toegewezen door aan uw site wanneer u zich voor het eerst hebt geregistreerd bij de Adobe Pass-verificatieservice.
-- *urls*: Facultatieve parameter; door gebrek, wordt de dienstverlener van Adobe gebruikt [ http://sp.auth.adobe.com/ ](http://sp.auth.adobe.com/). Met deze array kunt u eindpunten opgeven voor verificatie- en verificatieservices die door Adobe worden geleverd (verschillende instanties kunnen worden gebruikt voor foutopsporingsdoeleinden). U kunt dit gebruiken om meerdere instanties van Adobe Pass-verificatieproviders op te geven. Daarbij bestaat de MVPD-lijst uit de eindpunten van alle serviceproviders. Elke MVPD is gekoppeld aan de snelste serviceprovider, dat wil zeggen de provider die eerst heeft gereageerd en die die MVPD ondersteunt.
+- *urls*: Facultatieve parameter; door gebrek, wordt de dienstverlener van Adobe gebruikt [&#x200B; http://sp.auth.adobe.com/ &#x200B;](http://sp.auth.adobe.com/). Met deze array kunt u eindpunten opgeven voor verificatie- en verificatieservices die door Adobe worden geleverd (verschillende instanties kunnen worden gebruikt voor foutopsporingsdoeleinden). U kunt dit gebruiken om meerdere instanties van Adobe Pass-verificatieproviders op te geven. Daarbij bestaat de MVPD-lijst uit de eindpunten van alle serviceproviders. Elke MVPD is gekoppeld aan de snelste serviceprovider, dat wil zeggen de provider die eerst heeft gereageerd en die die MVPD ondersteunt.
 
 Vervangen:
 

@@ -19,7 +19,7 @@ ht-degree: 0%
 
 De <b> AP-Bezoeker-Herkenningsteken </b> verzoekkopbal bevat `ECID` die door de cliënttoepassing wordt vereist om een bezoeker over de oplossingen van Adobe Experience Cloud uniek te identificeren.
 
-Voor meer details over het gebruik van ECID in de Authentificatie van Adobe Pass, verwijs naar [ Gebruikend identiteitskaart van Experience Cloud in de Authentificatie van Adobe Pass ](/help/authentication/integration-guide-programmers/features-standard/analytics/exp-cloud-id-authn.md) documentatie.
+Voor meer details over het gebruik van ECID in de Authentificatie van Adobe Pass, verwijs naar [&#x200B; Gebruikend identiteitskaart van Experience Cloud in de Authentificatie van Adobe Pass &#x200B;](/help/authentication/integration-guide-programmers/features-standard/analytics/exp-cloud-id-authn.md) documentatie.
 
 ## Syntaxis {#syntax}
 
