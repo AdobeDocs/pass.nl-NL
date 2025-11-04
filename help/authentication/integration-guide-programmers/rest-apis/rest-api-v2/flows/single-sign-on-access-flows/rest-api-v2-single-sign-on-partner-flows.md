@@ -17,11 +17,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> De implementatie van REST API V2 wordt begrensd door de [&#x200B; Throttling mechanisme &#x200B;](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
+> De implementatie van REST API V2 wordt begrensd door de [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
 
 >[!MORELIKETHIS]
 >
-> Zorg ervoor om [&#x200B; REST API V2 FAQs &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general) ook te bezoeken.
+> Zorg ervoor om [ REST API V2 FAQs ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general) ook te bezoeken.
 
 De methode van de Partner laat veelvoudige toepassingen toe om een de statuslading van het partnerkader te gebruiken om enige sign-on (SSO) op het apparatenniveau te bereiken wanneer het gebruiken van de diensten van Adobe Pass.
 
@@ -29,11 +29,11 @@ De toepassingen zijn verantwoordelijk voor het terugwinnen van de de statusladin
 
 De toepassingen zijn verantwoordelijk voor het opnemen van deze statuslading van het partnerframework als onderdeel van de header `AP-Partner-Framework-Status` voor alle aanvragen die deze opgeven.
 
-Voor meer details over `AP-Partner-Framework-Status` kopbal, verwijs naar [&#x200B; AP-partner-kader-status &#x200B;](../../appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md) documentatie.
+Voor meer details over `AP-Partner-Framework-Status` kopbal, verwijs naar [ AP-partner-kader-status ](../../appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md) documentatie.
 
 De Adobe Pass Authentication REST API V2 biedt ondersteuning voor Single Sign-On (SSO) voor eindgebruikers van clienttoepassingen die op iOS, iPadOS of tvOS worden uitgevoerd.
 
-Voor meer details over enig teken-binnen (SSO) voor het platform van Apple, verwijs naar [&#x200B; Apple SSO Cookbook (REST API V2) &#x200B;](/help/premium-workflow/sso-access/partner-sso/apple-sso/apple-sso-cookbook-rest-api-v2.md) documentatie.
+Voor meer details over enig teken-binnen (SSO) voor het platform van Apple, verwijs naar [ Apple SSO Cookbook (REST API V2) ](/help/premium-workflow/sso-access/partner-sso/apple-sso/apple-sso-cookbook-rest-api-v2.md) documentatie.
 
 ## Vraag van partnerverificatie ophalen {#retrieve-partner-authentication-request}
 
@@ -59,7 +59,7 @@ Alvorens het verzoek van de partnerauthentificatie terug te winnen, zorg ervoor 
 
 Voer de bepaalde stappen uit om het verzoek van de partnerauthentificatie zoals aangetoond in het volgende diagram terug te winnen.
 
-![&#x200B; wint verzoek van de partnerauthentificatie &#x200B;](/help/authentication/assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-retrieve-partner-authentication-request-flow.png) terug
+![ wint verzoek van de partnerauthentificatie ](/help/authentication/assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-retrieve-partner-authentication-request-flow.png) terug
 
 *wint verzoek van de partnerauthentificatie* terug
 
@@ -74,7 +74,7 @@ Voer de bepaalde stappen uit om het verzoek van de partnerauthentificatie zoals 
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; ophalen de verzoek van de partnerauthentificatie &#x200B;](../../apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-partner-authentication-request.md) API documentatie voor details op:
+   > Verwijs naar [ ophalen de verzoek van de partnerauthentificatie ](../../apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-partner-authentication-request.md) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `serviceProvider` en `partner`
    > * Alle _vereiste_ kopballen zoals `Authorization`, `AP-Device-Identifier`, `Content-Type`, `X-Device-Info`, en `AP-Partner-Framework-Status`
@@ -86,13 +86,13 @@ Voer de bepaalde stappen uit om het verzoek van de partnerauthentificatie zoals 
    >
    > <br/>
    > 
-   > Voor meer details over `AP-Partner-Framework-Status` kopbal, verwijs naar [&#x200B; AP-partner-kader-status &#x200B;](../../appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md) documentatie.
+   > Voor meer details over `AP-Partner-Framework-Status` kopbal, verwijs naar [ AP-partner-kader-status ](../../appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md) documentatie.
 
 1. **wijs op de volgende actie:** De het eindpuntreactie van de Partner van Sessies bevat de noodzakelijke gegevens om de het stromen toepassing betreffende de volgende actie te begeleiden.
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; ophalen de verzoek van de partnerauthentificatie &#x200B;](../../apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-partner-authentication-request.md) API documentatie voor details over de informatie die in een zittingsreactie wordt verstrekt.
+   > Verwijs naar [ ophalen de verzoek van de partnerauthentificatie ](../../apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-partner-authentication-request.md) API documentatie voor details over de informatie die in een zittingsreactie wordt verstrekt.
    > 
    > <br/>
    > 
@@ -103,14 +103,14 @@ Voer de bepaalde stappen uit om het verzoek van de partnerauthentificatie zoals 
    >
    > <br/>
    > 
-   > Als de basisbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de basisbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
    >
    > <br/>
    >
    > Het eindpunt van de Partner van Sessies bevestigt de verzoekgegevens om ervoor te zorgen dat de partner enige sign-on voorwaarden wordt voldaan aan:
    >
    >  * De partner enige sign-on configuratie in de server van Adobe Pass moet geldig en toegelaten zijn.
-   >  * De de statuslading van het partnerkader die via [&#x200B; wordt ontvangen AP-partner-kader-status &#x200B;](../../appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md) kopbal moet geldig zijn.
+   >  * De de statuslading van het partnerkader die via [ wordt ontvangen AP-partner-kader-status ](../../appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md) kopbal moet geldig zijn.
    >
    > <br/>
    >
@@ -125,7 +125,7 @@ Voer de bepaalde stappen uit om het verzoek van de partnerauthentificatie zoals 
 
    Als de Adobe Pass backend geen geldig profiel identificeert en de partner enige sign-on bevestiging overgaat, ontvangt de het stromen toepassing een reactie met acties en gegevens om tot het partnerkader over te gaan voor het beginnen van de authentificatiestroom met MVPD.
 
-   Voor meer details over de stroom van de profielherwinning die een reactie van de partnerauthentificatie gebruiken, verwijs naar [&#x200B; creeer en wint profiel terug gebruikend de sectie van de partnerauthentificatie de reactie &#x200B;](#create-and-retrieve-profile-using-partner-authentication-response).
+   Voor meer details over de stroom van de profielherwinning die een reactie van de partnerauthentificatie gebruiken, verwijs naar [ creeer en wint profiel terug gebruikend de sectie van de partnerauthentificatie de reactie ](#create-and-retrieve-profile-using-partner-authentication-response).
 
 1. **ga met basisauthentificatiestroom te werk:** De het eindpuntreactie van de Partner van Sessies bevat de volgende gegevens:
    * Het kenmerk `actionName` wordt ingesteld op &quot;authenticate&quot; of &quot;resume&quot;.
@@ -150,7 +150,7 @@ Voer de bepaalde stappen uit om het verzoek van de partnerauthentificatie zoals 
    >
    > <br/>
    > 
-   > Voor meer details over `AP-Partner-Framework-Status` kopbal, verwijs naar [&#x200B; AP-partner-kader-status &#x200B;](../../appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md) documentatie.
+   > Voor meer details over `AP-Partner-Framework-Status` kopbal, verwijs naar [ AP-partner-kader-status ](../../appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md) documentatie.
 
 ## Profiel maken en ophalen met de verificatiereactie van de partner {#create-and-retrieve-profile-using-partner-authentication-response}
 
@@ -173,7 +173,7 @@ Alvorens het profiel terug te winnen gebruikend een reactie van de partnerauthen
 
 Voer de bepaalde stappen uit om de stroom van de profielherwinning uit te voeren gebruikend een reactie van de partnerauthentificatie zoals aangetoond in het volgende diagram.
 
-![&#x200B; creeer en wint profiel terug gebruikend de reactie van de partnerauthentificatie &#x200B;](/help/authentication/assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-retrieve-profile-using-partner-authentication-response-flow.png)
+![ creeer en wint profiel terug gebruikend de reactie van de partnerauthentificatie ](/help/authentication/assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-retrieve-profile-using-partner-authentication-response-flow.png)
 
 *creeer en wint voor authentiek verklaard profiel terug gebruikend de reactie van de partnerauthentificatie*
 
@@ -188,7 +188,7 @@ Voer de bepaalde stappen uit om de stroom van de profielherwinning uit te voeren
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; creeer en wint profiel terug gebruikend de reactie van de partnerauthentificatie &#x200B;](../../apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md) API documentatie voor details op:
+   > Verwijs naar [ creeer en wint profiel terug gebruikend de reactie van de partnerauthentificatie ](../../apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `serviceProvider`, `partner`, en `SAMLResponse`
    > * Alle _vereiste_ kopballen, als `Authorization`, `AP-Device-Identifier`, `Content-Type`, `X-Device-Info`, en `AP-Partner-Framework-Status`
@@ -200,7 +200,7 @@ Voer de bepaalde stappen uit om de stroom van de profielherwinning uit te voeren
    >
    > <br/>
    > 
-   > Voor meer details over `AP-Partner-Framework-Status` kopbal, verwijs naar [&#x200B; AP-partner-kader-status &#x200B;](../../appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md) documentatie.
+   > Voor meer details over `AP-Partner-Framework-Status` kopbal, verwijs naar [ AP-partner-kader-status ](../../appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md) documentatie.
 
 1. **creeer en bewaar partnerprofiel:** de server van Adobe Pass leidt en bewaart een partnerprofiel na het verzekeren dat aan alle voorwaarden wordt voldaan.
 
@@ -208,7 +208,7 @@ Voer de bepaalde stappen uit om de stroom van de profielherwinning uit te voeren
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; creeer en wint profiel terug gebruikend de reactie van de partnerauthentificatie &#x200B;](../../apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md) API documentatie voor details op de informatie die in een profielreactie wordt verstrekt.
+   > Verwijs naar [ creeer en wint profiel terug gebruikend de reactie van de partnerauthentificatie ](../../apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md) API documentatie voor details op de informatie die in een profielreactie wordt verstrekt.
    > 
    > <br/>
    > 
@@ -219,14 +219,14 @@ Voer de bepaalde stappen uit om de stroom van de profielherwinning uit te voeren
    >
    > <br/>
    > 
-   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
    >
    > <br/>
    >
    > Het eindpunt van de Partner van Profielen bevestigt de verzoekgegevens om ervoor te zorgen dat de partner enige sign-on voorwaarden wordt voldaan aan:
    >
    >  * De partner enige sign-on configuratie in de server van Adobe Pass moet geldig en toegelaten zijn.
-   >  * De de statuslading van het partnerkader die via [&#x200B; wordt ontvangen AP-partner-kader-status &#x200B;](../../appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md) kopbal moet geldig zijn.
+   >  * De de statuslading van het partnerkader die via [ wordt ontvangen AP-partner-kader-status ](../../appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md) kopbal moet geldig zijn.
    >
    > <br/>
    >
@@ -240,4 +240,4 @@ Voer de bepaalde stappen uit om de stroom van de profielherwinning uit te voeren
    >
    > <br/>
    > 
-   > Voor meer details over `AP-Partner-Framework-Status` kopbal, verwijs naar [&#x200B; AP-partner-kader-status &#x200B;](../../appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md) documentatie.
+   > Voor meer details over `AP-Partner-Framework-Status` kopbal, verwijs naar [ AP-partner-kader-status ](../../appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md) documentatie.

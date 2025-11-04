@@ -17,11 +17,11 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 ## Draaimechanisme
 
-De Adobe Pass Authentificatie REST API wordt geregeerd door a [&#x200B; het Throttling mechanisme &#x200B;](/help/authentication/integration-guide-programmers/throttling-mechanism.md).
+De Adobe Pass Authentificatie REST API wordt geregeerd door a [ het Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md).
 
 ## Antwoordindelingen {#response-formats}
 
@@ -40,13 +40,13 @@ De Adobe Pass Authentificatie REST API wordt geregeerd door a [&#x200B; het Thro
 
 &lt;REGGIE_FQDN>:
 
-* Productie - [&#x200B; api.auth.adobe.com &#x200B;](http://api.auth.adobe.com/)
-* Het opvoeren - [&#x200B; api.auth-staging.adobe.com &#x200B;](http://api.auth-staging.adobe.com/)
+* Productie - [ api.auth.adobe.com ](http://api.auth.adobe.com/)
+* Het opvoeren - [ api.auth-staging.adobe.com ](http://api.auth-staging.adobe.com/)
 
 &lt;SP_FQDN>:
 
-* Productie - [&#x200B; api.auth.adobe.com &#x200B;](http://api.auth.adobe.com/)
-* Het opvoeren - [&#x200B; api.auth-staging.adobe.com &#x200B;](http://api.auth-staging.adobe.com/)
+* Productie - [ api.auth.adobe.com ](http://api.auth.adobe.com/)
+* Het opvoeren - [ api.auth-staging.adobe.com ](http://api.auth-staging.adobe.com/)
 
 </br>
 
@@ -58,7 +58,7 @@ In de onderstaande tabel staan de beschikbare webservices voor de clientless-aan
 
 | Sr | Eindpunt webservice | Beschrijving | <!--[Diag.  </br>Ref](http://tve.helpdocsonline.com/api-reference-v2-test#illustration)-->. | Gehost op | Geroepen door |
 |-----|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|-----------------------------------------------------------|-----------------------------|
-| 1. | [&lt;REGGIE_FQDN>/reggie/v1/ </br>  {requestorId}/regcode &#x200B;](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md) | Retourneert willekeurig gegenereerde registratiecode en inlogpagina-URI | 2 | Adobe </br> Reg Code-service | Slim apparaat |
+| 1. | [&lt;REGGIE_FQDN>/reggie/v1/ </br>  {requestorId}/regcode ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md) | Retourneert willekeurig gegenereerde registratiecode en inlogpagina-URI | 2 | Adobe </br> Reg Code-service | Slim apparaat |
 | 2. | [&lt;REGGIE_FQDN>/reggie/v1/ </br>  {requestorId}/regcode/ </br>{registrationCode}](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/return-registration-record.md) | Hiermee wordt de registratie-code met de registratiecode UUID, de registratiecode en de hashcomponent-id geretourneerd | 8 | Adobe </br> Reg Code-service | Adobe Pass-verificatie |
 | 3. | [&lt;SP_FQDN>/api/v1/config/ </br>{requestorId}](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/provide-mvpd-list.md) | Keert lijst van gevormde MVPDs voor de aanvrager terug | 5 | Adobe </br> Adobe Pass </br> authentificatie </br> de Dienst | Aanmeldings </br> Web </br> App |
 | 4. | [&lt;SP_FQDN>/api/v1/authenticate](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/initiate-authentication.md) | Hiermee wordt het AuthN-proces gestart door de MVPD-selectiegebeurtenis op de hoogte te stellen. Hiermee maakt u een record in een verificatiedatabase die wordt afgestemd wanneer een geslaagde reactie van MVPD wordt ontvangen (stap 13) | 7 | Adobe </br> Adobe Pass </br> authentificatie </br> de Dienst | Aanmeldings </br> Web </br> App |
@@ -66,19 +66,19 @@ In de onderstaande tabel staan de beschikbare webservices voor de clientless-aan
 | 6. | [&lt;SP_FQDN>/api/v1/checkauthn/ </br>{registrationCode}](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/check-authentication-flow-by-second-screen-web-app.md) | De Web App van de Login kan controleren of de poging login stroom succesvol was |                                                                                             | Adobe Pass </br> -verificatie   </br> Service | Aanmelden   </br> Web   </br> App |
 | 7. | [&lt;SP_FQDN>/api/v1/tokens/authn](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-authentication-token.md) | Hiermee worden metagegevens opgehaald die betrekking hebben op AuthN-token | 15 | Adobe Pass </br> authentificatie </br> de Dienst | Slim apparaat |
 | 8. | [&lt;REGGIE_FQDN>/reggie/v1/ </br>  {requestorId}/regcode/ </br>{registrationCode}](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/delete-registration-record.md) | Hiermee verwijdert u de reg-coderecord en geeft u de reg-code vrij voor hergebruik | 16 | Adobe </br> Reg Code-service | Adobe Pass-verificatie |
-| 9. | [&lt;SP_FQDN>/api/v1/authorize &#x200B;](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/initiate-authorization.md) | Verkrijgt de reactie van de vergunning. | 17 | Adobe Pass </br> authentificatie </br> de Dienst | Slim apparaat |
-| 10. | [&lt;SP_FQDN>/api/v1/checkauthn &#x200B;](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/check-authentication-token.md) | Geeft aan of het apparaat een niet-verlopen AuthN-token heeft. |                                                                                             | Adobe Pass </br> authentificatie </br> de Dienst | Slim apparaat |
+| 9. | [&lt;SP_FQDN>/api/v1/authorize ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/initiate-authorization.md) | Verkrijgt de reactie van de vergunning. | 17 | Adobe Pass </br> authentificatie </br> de Dienst | Slim apparaat |
+| 10. | [&lt;SP_FQDN>/api/v1/checkauthn ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/check-authentication-token.md) | Geeft aan of het apparaat een niet-verlopen AuthN-token heeft. |                                                                                             | Adobe Pass </br> authentificatie </br> de Dienst | Slim apparaat |
 | 11. | [&lt;SP_FQDN>/api/v1/tokens/authn](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-authentication-token.md) | Retourneert het token AuthN indien gevonden. |                                                                                             | Adobe Pass </br> authentificatie </br> de Dienst | Slim apparaat |
 | 12. | [&lt;SP_FQDN>/api/v1/tokens/authz](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-authorization-token.md) | Retourneert de token AuthZ indien gevonden. |                                                                                             | Adobe Pass </br> authentificatie </br> de Dienst | Slim apparaat |
 | 13. | [&lt;SP_FQDN>/api/v1/tokens/media](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/obtain-short-media-token.md) | Retourneert het token voor korte media indien gevonden - gelijk aan /api/v1/mediatoken |                                                                                             | Adobe Pass </br> authentificatie </br> de Dienst | Slim apparaat |
-| 14. | [&lt;SP_FQDN>/api/v1/mediatoken &#x200B;](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/obtain-short-media-token.md) | Verkrijgt de Korte Token van Media |                                                                                             | Adobe Pass </br> authentificatie </br> de Dienst | Slim apparaat |
-| 15. | [&lt;SP_FQDN>/api/v1/preauthorize &#x200B;](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-list-of-preauthorized-resources.md) | Hiermee wordt de lijst met vooraf geautoriseerde bronnen opgehaald |                                                                                             | Adobe Pass </br> authentificatie </br> de Dienst | Slim apparaat |
+| 14. | [&lt;SP_FQDN>/api/v1/mediatoken ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/obtain-short-media-token.md) | Verkrijgt de Korte Token van Media |                                                                                             | Adobe Pass </br> authentificatie </br> de Dienst | Slim apparaat |
+| 15. | [&lt;SP_FQDN>/api/v1/preauthorize ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-list-of-preauthorized-resources.md) | Hiermee wordt de lijst met vooraf geautoriseerde bronnen opgehaald |                                                                                             | Adobe Pass </br> authentificatie </br> de Dienst | Slim apparaat |
 | 16. | [&lt;SP_FQDN>/api/v1/preauthorize/{code}](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-list-of-preauthorized-resources-by-second-screen-web-app.md) | Hiermee wordt de lijst met vooraf gemachtigde bronnen opgehaald |                                                                                             | Adobe Pass </br> authentificatie </br> de Dienst | Aanmeldingswebtoepassing |
-| 17. | [&#x200B; &lt;SP_FQDN>/api/v1/logout &#x200B;](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/initiate-logout.md) | AuthN- en AuthZ-tokens verwijderen uit opslag |                                                                                             | Adobe Pass </br> -verificatie   </br> Service | Slim apparaat |
-| 18. | [&lt;SP_FQDN>/api/v1/tokens/usermetadata &#x200B;](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/user-metadata.md) | Hiermee worden gebruikersmetagegevens opgehaald nadat de verificatiestroom is voltooid | NVT | NVT | Slim apparaat |
+| 17. | [ &lt;SP_FQDN>/api/v1/logout ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/initiate-logout.md) | AuthN- en AuthZ-tokens verwijderen uit opslag |                                                                                             | Adobe Pass </br> -verificatie   </br> Service | Slim apparaat |
+| 18. | [&lt;SP_FQDN>/api/v1/tokens/usermetadata ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/user-metadata.md) | Hiermee worden gebruikersmetagegevens opgehaald nadat de verificatiestroom is voltooid | NVT | NVT | Slim apparaat |
 | 19. | [&lt;SP_FQDN>/api/v1/authenticate/freepreview](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/free-preview-for-temp-pass-and-promotional-temp-pass.md) | Een verificatietoken maken voor Temperatuur-controle of Promotie Temperatuur-controle | NVT | Adobe Pass </br> authentificatie </br> de Dienst | Slim apparaat |
 
 
 ## REST API-beveiliging {#security}
 
-Alle REST-API&#39;s voor Adobe Pass-verificatie moeten worden aangeroepen met behulp van het HTTPS-protocol voor veilige communicatie. Bovendien zouden de meeste geroepen APIs een toegangstoken moeten bevatten zoals die in [&#x200B; wordt beschreven terugwinnen toegangstoken &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md) API documentatie.
+Alle REST-API&#39;s voor Adobe Pass-verificatie moeten worden aangeroepen met behulp van het HTTPS-protocol voor veilige communicatie. Bovendien zouden de meeste geroepen APIs een toegangstoken moeten bevatten zoals die in [ wordt beschreven terugwinnen toegangstoken ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md) API documentatie.

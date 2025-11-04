@@ -40,7 +40,7 @@ MVPD)\
    * Een spelverzoek vereist zowel een verleende authentificatie als een verleende vergunning
 
 
-Het aantal unieke gebruikers wordt behandeld in detail in de [&#x200B; Unieke sectie van Gebruikers &#x200B;](#unique-users) hieronder. Als overzicht, aangezien de verleende authentificatie en de vergunningsreacties gewoonlijk in het voorgeheugen ondergebracht zijn, zijn de volgende formules gewoonlijk van toepassing:
+Het aantal unieke gebruikers wordt behandeld in detail in de [ Unieke sectie van Gebruikers ](#unique-users) hieronder. Als overzicht, aangezien de verleende authentificatie en de vergunningsreacties gewoonlijk in het voorgeheugen ondergebracht zijn, zijn de volgende formules gewoonlijk van toepassing:
 
 * Aantal pogingen AuthN \> Aantal toegekende AuthN
 * Aantal pogingen AuthZ \> Aantal toegekende AuthZ

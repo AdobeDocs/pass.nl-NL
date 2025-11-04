@@ -17,11 +17,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> De implementatie van REST API V2 wordt begrensd door de [&#x200B; Throttling mechanisme &#x200B;](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
+> De implementatie van REST API V2 wordt begrensd door de [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
 
 >[!MORELIKETHIS]
 >
-> Zorg ervoor om [&#x200B; REST API V2 FAQs &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general) ook te bezoeken.
+> Zorg ervoor om [ REST API V2 FAQs ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general) ook te bezoeken.
 
 De **stroom van de Authentificatie** binnen de rechten van de Authentificatie van Adobe Pass staat de het stromen toepassing toe om te verifiëren dat een gebruiker een geldige rekening van MVPD heeft. Voor dit proces moet de gebruiker een actieve MVPD-account hebben en geldige aanmeldingsgegevens invoeren op de MVPD-aanmeldingspagina.
 
@@ -65,7 +65,7 @@ Voordat u verificatie uitvoert via gebruikersinteractie binnen een primaire toep
 
 Volg de gegeven stappen om de basisauthentificatiestroom uit te voeren die binnen een primaire toepassing zoals aangetoond in het volgende diagram wordt uitgevoerd.
 
-![&#x200B; voer authentificatie binnen primaire toepassing uit &#x200B;](/help/authentication/assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-perform-authentication-within-primary-application.png)
+![ voer authentificatie binnen primaire toepassing uit ](/help/authentication/assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-perform-authentication-within-primary-application.png)
 
 *voer authentificatie binnen primaire toepassing uit*
 
@@ -73,7 +73,7 @@ Volg de gegeven stappen om de basisauthentificatiestroom uit te voeren die binne
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; creeer authentificatiesessie &#x200B;](../../apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) API documentatie voor details op:
+   > Verwijs naar [ creeer authentificatiesessie ](../../apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) API documentatie voor details op:
    > 
    > * Alle _vereiste_ parameters, als `serviceProvider`, `mvpd`, `domainName`, en `redirectUrl`
    > * Alle _vereiste_ kopballen, als `Authorization`, `AP-Device-Identifier`
@@ -87,7 +87,7 @@ Volg de gegeven stappen om de basisauthentificatiestroom uit te voeren die binne
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; creeer authentificatiesessie &#x200B;](../../apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) API documentatie voor details over de informatie die in een zittingsreactie wordt verstrekt.
+   > Verwijs naar [ creeer authentificatiesessie ](../../apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) API documentatie voor details over de informatie die in een zittingsreactie wordt verstrekt.
    > 
    > <br/>
    > 
@@ -98,7 +98,7 @@ Volg de gegeven stappen om de basisauthentificatiestroom uit te voeren die binne
    > 
    > <br/>
    > 
-   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
 1. **ga met besluitvormingsstromen te werk:** De reactie van het eindpunt van zittingen bevat de volgende gegevens:
    * Het attribuut `actionName` wordt ingesteld op &quot;authorize&quot;.
@@ -119,7 +119,7 @@ Volg de gegeven stappen om de basisauthentificatiestroom uit te voeren die binne
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen profiel voor specifieke code &#x200B;](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) API documentatie voor details op:
+   > Verwijs naar [ terugwinnen profiel voor specifieke code ](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `serviceProvider`, `code`
    > * Alle _vereiste_ kopballen, als `Authorization`, `AP-Device-Identifier`
@@ -133,7 +133,7 @@ Volg de gegeven stappen om de basisauthentificatiestroom uit te voeren die binne
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen profiel voor specifieke code &#x200B;](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) API documentatie voor details op de informatie die in een profielreactie wordt verstrekt.
+   > Verwijs naar [ terugwinnen profiel voor specifieke code ](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) API documentatie voor details op de informatie die in een profielreactie wordt verstrekt.
    > 
    > <br/>
    > 
@@ -143,4 +143,4 @@ Volg de gegeven stappen om de basisauthentificatiestroom uit te voeren die binne
    >
    > <br/>
    > 
-   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.

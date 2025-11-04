@@ -127,12 +127,12 @@ Er zijn aanvullende instructies beschikbaar zodra de integratie formeel is gesta
 
 **de Taken van de Integratie**
 
-* Integreer de Authentificatie van Adobe Pass [&#x200B; REST API DCR &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md).
-* Integreer de Authentificatie van Adobe Pass [&#x200B; REST API V2 &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/rest-api-v2-apis-overview.md).
+* Integreer de Authentificatie van Adobe Pass [ REST API DCR ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md).
+* Integreer de Authentificatie van Adobe Pass [ REST API V2 ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/rest-api-v2-apis-overview.md).
 * Integreer de Symbolische Verifier van de Authentificatie van Adobe Pass [.](/help/authentication/integration-guide-programmers/features-standard/entitlements/media-tokens.md#media-token-verifier)
 * Een gebruikersinterface ontwikkelen voor de workflow voor verificatie, autorisatie en afmelding.
 
-Voor meer details op het integratieproces van de Programmer, verwijs naar de [&#x200B; gids van de Kickstart van de Programmer &#x200B;](/help/authentication/integration-guide-programmers/programmer-integration-guide-overview.md) documenten.
+Voor meer details op het integratieproces van de Programmer, verwijs naar de [ gids van de Kickstart van de Programmer ](/help/authentication/integration-guide-programmers/programmer-integration-guide-overview.md) documenten.
 
 #### Integratieproces van tv-aanbieders betalen {#pay-tv-provider-integration-process}
 
@@ -156,7 +156,7 @@ Adobe Pass-verificatie biedt op twee manieren efficiënt ondersteuning voor bedr
 * Voor bedrijfslogica die op zichzelf staand is en door de leverancier van de Tv van het Betaal wordt toegepast wanneer een vergunningsverzoek wordt ontvangen, verstrekt Adobe de noodzakelijke gegevens (b.v., unieke apparatenidentiteitskaart, IP adres) om handhaving te steunen.
 * Voor bedrijfslogica die gebruikersinterventie of specifieke behandeling door Adobe vereist, kunnen aangepaste eigenschappen voor elke leverancier van betaaltelevisie worden gehandhaafd. Deze configuraties kunnen vooraf gedefinieerde workflows bevatten die worden geactiveerd op specifieke punten in het verificatieproces.
 
-Voor meer details op het de leveranciersintegratieproces van de Tv van de Betaal, verwijs naar de [&#x200B; handleiding van de kickstart van MVPD &#x200B;](/help/authentication/kickstart/mvpd-kickstart-guide.md) en [&#x200B; de integratiegids van MVPD &#x200B;](/help/authentication/integration-guide-mvpds/mvpd-integration-guide-overview.md) documenten.
+Voor meer details op het de leveranciersintegratieproces van de Tv van de Betaal, verwijs naar de [ handleiding van de kickstart van MVPD ](/help/authentication/kickstart/mvpd-kickstart-guide.md) en [ de integratiegids van MVPD ](/help/authentication/integration-guide-mvpds/mvpd-integration-guide-overview.md) documenten.
 
 ### Entitlement Flow {#entitlement-flow}
 
@@ -175,7 +175,7 @@ Voor Programmeurs, verstrekt de Authentificatie van Adobe Pass APIs als deel van
       * [Afbraakkenmerk](/help/premium-workflow/degraded-access/degradation-feature.md)
    * [Entitlement Service Monitoring API](/help/premium-workflow/esm/entitlement-service-monitoring-api.md)
 
-Voor meer details op de machtigingsstroom, verwijs naar de [&#x200B; documentatie van de Gids van de Integratie van de 0&rbrace; Programmer.](/help/authentication/integration-guide-programmers/programmer-integration-guide-overview.md#entitlement-flow)
+Voor meer details op de machtigingsstroom, verwijs naar de [ documentatie van de Gids van de Integratie van de 0} Programmer.](/help/authentication/integration-guide-programmers/programmer-integration-guide-overview.md#entitlement-flow)
 
 #### Entitlement {#understanding-entitlements}
 

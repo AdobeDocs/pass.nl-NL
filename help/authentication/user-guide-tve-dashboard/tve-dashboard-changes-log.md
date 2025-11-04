@@ -30,7 +30,7 @@ Voer de volgende stappen uit om wijzigingen te vergelijken:
 
 1. Selecteer twee configuratieveranderingen van de lijst die u wilt vergelijken.
 
-   ![&#x200B; vergelijk configuratieveranderingen &#x200B;](/help/authentication/assets/tve-dashboard/new-tve-dashboard/review/review-changes-compare-button.png)
+   ![ vergelijk configuratieveranderingen ](/help/authentication/assets/tve-dashboard/new-tve-dashboard/review/review-changes-compare-button.png)
 
    *vergelijk configuratieveranderingen*
 
@@ -42,12 +42,12 @@ Voer de volgende stappen uit om wijzigingen te vergelijken:
 
 1. Selecteer **Mening** om tot de veranderde waarden toegang te hebben.
 
-   ![&#x200B; de configuratieveranderingen van de Mening &#x200B;](/help/authentication/assets/tve-dashboard/new-tve-dashboard/review/review-changes-view-button.png)
+   ![ de configuratieveranderingen van de Mening ](/help/authentication/assets/tve-dashboard/new-tve-dashboard/review/review-changes-view-button.png)
 
    *de configuratieveranderingen van de Mening*
 
 Hieronder ziet u een voorbeeld van een wijziging die in de geselecteerde configuratie is aangebracht. U kunt het verschil tussen de oude en nieuwe waarden in de wijziging bekijken.
 
-![&#x200B; Oude en nieuwe waarde &#x200B;](/help/authentication/assets/tve-dashboard/new-tve-dashboard/review/review-change-modal-view.png)
+![ Oude en nieuwe waarde ](/help/authentication/assets/tve-dashboard/new-tve-dashboard/review/review-change-modal-view.png)
 
 *Oude en nieuwe waarde*

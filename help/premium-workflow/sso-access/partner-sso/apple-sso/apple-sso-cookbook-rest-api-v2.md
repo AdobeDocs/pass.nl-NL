@@ -17,7 +17,7 @@ ht-degree: 0%
 
 De Adobe Pass Authentication REST API V2 biedt ondersteuning voor Single Sign-On (SSO) voor eindgebruikers van clienttoepassingen die op iOS, iPadOS of tvOS worden uitgevoerd.
 
-Dit document doet dienst als uitbreiding aan het bestaande [&#x200B; REST API V2 Overzicht &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md) dat een mening op hoog niveau en het document verstrekt dat beschrijft hoe te om [&#x200B; Enige sign-on uit te voeren gebruikend partnerstromen &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-partner-flows.md).
+Dit document doet dienst als uitbreiding aan het bestaande [ REST API V2 Overzicht ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md) dat een mening op hoog niveau en het document verstrekt dat beschrijft hoe te om [ Enige sign-on uit te voeren gebruikend partnerstromen ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-partner-flows.md).
 
 ## Apple Single Sign-On met gebruik van partnerstromen {#cookbook}
 
@@ -25,13 +25,13 @@ Dit document doet dienst als uitbreiding aan het bestaande [&#x200B; REST API V2
 
 Voordat u verdergaat met de Apple Single Sign-On met behulp van partnerstromen, moet u ervoor zorgen dat aan de volgende voorwaarden wordt voldaan:
 
-* De streamingtoepassing moet alle vereiste gegevens voor de headers `X-Device-Info` en/of `User-Agent` verzamelen, zodat de Adobe Pass-verificatieachterkant het apparaatplatform en de mogelijkheden ervan kan identificeren. Voor meer details over `X-Device-Info` kopbal, verwijs naar [&#x200B; x-apparaat-Info &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-device-info.md) documentatie.
+* De streamingtoepassing moet alle vereiste gegevens voor de headers `X-Device-Info` en/of `User-Agent` verzamelen, zodat de Adobe Pass-verificatieachterkant het apparaatplatform en de mogelijkheden ervan kan identificeren. Voor meer details over `X-Device-Info` kopbal, verwijs naar [ x-apparaat-Info ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-device-info.md) documentatie.
 
-* De streamingtoepassing moet toegang aanvragen tot de abonnementsgegevens van de gebruiker die op apparaatniveau zijn opgeslagen, waarvoor de gebruiker de toepassing toestemming moet geven om door te gaan, net als het verlenen van toegang tot de camera of microfoon van het apparaat. Deze toestemming moet per toepassing worden gevraagd gebruikend het Kader van de Rekening van de Abonnee van Apple [&#x200B; Video &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount) en het apparaat zal de selectie van de gebruiker bewaren.
+* De streamingtoepassing moet toegang aanvragen tot de abonnementsgegevens van de gebruiker die op apparaatniveau zijn opgeslagen, waarvoor de gebruiker de toepassing toestemming moet geven om door te gaan, net als het verlenen van toegang tot de camera of microfoon van het apparaat. Deze toestemming moet per toepassing worden gevraagd gebruikend het Kader van de Rekening van de Abonnee van Apple [ Video ](https://developer.apple.com/documentation/videosubscriberaccount) en het apparaat zal de selectie van de gebruiker bewaren.
 
   We raden gebruikers aan die geen toestemming geven om abonnementsgegevens te openen, te stimuleren door de voordelen uit te leggen van de Apple Single Sign-On gebruikerservaring, maar we raden gebruikers aan hun beslissing te wijzigen door naar de toepassingsinstellingen (toegang tot tv-provider) of *`Settings -> TV Provider`* op iOS en iPadOS of *`Settings -> Accounts -> TV Provider`* op tvOS te gaan.
 
-  De het stromen toepassing kan om de toestemming van de gebruiker verzoeken wanneer de toepassing de voorgrondstaat ingaat, omdat de toepassing [&#x200B; toestemming kan controleren om tot &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus) de abonnementsinformatie van de gebruiker op om het even welk punt toegang te hebben alvorens gebruikersauthentificatie te vereisen.
+  De het stromen toepassing kan om de toestemming van de gebruiker verzoeken wanneer de toepassing de voorgrondstaat ingaat, omdat de toepassing [ toestemming kan controleren om tot ](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus) de abonnementsinformatie van de gebruiker op om het even welk punt toegang te hebben alvorens gebruikersauthentificatie te vereisen.
 
 >[!IMPORTANT]
 >
@@ -39,13 +39,13 @@ Voordat u verdergaat met de Apple Single Sign-On met behulp van partnerstromen, 
 >
 > <br/>
 >
-> * De het stromen toepassing heeft [&#x200B; op het instappen eerste vereisten &#x200B;](/help/premium-workflow/sso-access/partner-sso/apple-sso/apple-sso-overview.md#apple-sso-prerequisites-programmer) voltooid die op een Programmer van toepassing zijn en worden vereist om Apple enige sign-on gebruikerservaring toe te laten.
+> * De het stromen toepassing heeft [ op het instappen eerste vereisten ](/help/premium-workflow/sso-access/partner-sso/apple-sso/apple-sso-overview.md#apple-sso-prerequisites-programmer) voltooid die op een Programmer van toepassing zijn en worden vereist om Apple enige sign-on gebruikerservaring toe te laten.
 
 ### Workflow {#workflow}
 
 Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend partnerstromen zoals aangetoond in het volgende diagram.
 
-![&#x200B; Apple enig teken-op gebruikend partnerstromen &#x200B;](/help/authentication/assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-apple-single-sign-on-using-partner-flows.png)
+![ Apple enig teken-op gebruikend partnerstromen ](/help/authentication/assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-apple-single-sign-on-using-partner-flows.png)
 
 *Apple enig teken-op gebruikend partnerstromen*
 
@@ -55,7 +55,7 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen cliëntgeloofsbrieven &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-client-credentials.md#request) API documentatie voor details op:
+   > Verwijs naar [ terugwinnen cliëntgeloofsbrieven ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-client-credentials.md#request) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `software_statement`
    > * Alle _vereiste_ kopballen, als `Content-Type`, `X-Device-Info`
@@ -65,7 +65,7 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen cliëntgeloofsbrieven &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-client-credentials.md#success) API documentatie voor details over de informatie die in een reactie van de cliëntgeloofsbrieven wordt verstrekt.
+   > Verwijs naar [ terugwinnen cliëntgeloofsbrieven ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-client-credentials.md#success) API documentatie voor details over de informatie die in een reactie van de cliëntgeloofsbrieven wordt verstrekt.
    >
    > <br/>
    >
@@ -75,7 +75,7 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
    >
    > <br/>
    >
-   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, die extra informatie verstrekken die aan [&#x200B; voldoet wint cliëntgeloofsbrieven &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-client-credentials.md#error) API documentatie terug.
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, die extra informatie verstrekken die aan [ voldoet wint cliëntgeloofsbrieven ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-client-credentials.md#error) API documentatie terug.
 
    >[!TIP]
    >
@@ -85,7 +85,7 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; ophalen toegangstoken &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md#request) API documentatie voor details op:
+   > Verwijs naar [ ophalen toegangstoken ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md#request) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `client_id`, `client_secret`, en `grant_type`
    > * Alle _vereiste_ kopballen, als `Content-Type`, `X-Device-Info`
@@ -95,7 +95,7 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; ophalen toegangstoken &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md#success) API documentatie voor details over de informatie die in een reactie van het toegangstoken wordt verstrekt.
+   > Verwijs naar [ ophalen toegangstoken ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md#success) API documentatie voor details over de informatie die in een reactie van het toegangstoken wordt verstrekt.
    >
    > <br/>
    >
@@ -105,7 +105,7 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
    >
    > <br/>
    >
-   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, die extra informatie verstrekken die aan [&#x200B; voldoet verkrijgt toegangstoken &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md#error) API documentatie.
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, die extra informatie verstrekken die aan [ voldoet verkrijgt toegangstoken ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md#error) API documentatie.
 
    >[!TIP]
    >
@@ -115,22 +115,22 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
 
 +++B. Verificatiefase controleren
 
-1. **wint de status van het partnerkader terug:** de het stromen toepassing roept het [&#x200B; Video Kader van de Rekening van de Abonnee &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount) dat door Apple wordt ontwikkeld, om gebruikerstoestemming en leveranciersinformatie te verkrijgen.
+1. **wint de status van het partnerkader terug:** de het stromen toepassing roept het [ Video Kader van de Rekening van de Abonnee ](https://developer.apple.com/documentation/videosubscriberaccount) dat door Apple wordt ontwikkeld, om gebruikerstoestemming en leveranciersinformatie te verkrijgen.
 
    >[!IMPORTANT]
    >
-   > Verwijs naar de [&#x200B; documentatie van het Kader van de Rekening van de Abonnee van 0&rbrace; Video voor details op:](https://developer.apple.com/documentation/videosubscriberaccount)
+   > Verwijs naar de [ documentatie van het Kader van de Rekening van de Abonnee van 0} Video voor details op:](https://developer.apple.com/documentation/videosubscriberaccount)
    >
    > <br/>
    >
-   > * De het stromen toepassing moet [&#x200B; toestemming controleren om tot &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus) de het abonnementinformatie van de gebruiker toegang te hebben en slechts te werk te gaan als de gebruiker het toeliet.
-   > * De het stromen toepassing moet a [&#x200B; afgevaardigde &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanagerdelegate) voor `VSAccountManager` verstrekken.
-   > * De het stromen toepassing moet a [&#x200B; verzoek &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest) voor de informatie van de abonneerekening voorleggen.
-   > * De het stromen toepassing moet de [&#x200B; meta-gegevens &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadata) informatie wachten en verwerken.
+   > * De het stromen toepassing moet [ toestemming controleren om tot ](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus) de het abonnementinformatie van de gebruiker toegang te hebben en slechts te werk te gaan als de gebruiker het toeliet.
+   > * De het stromen toepassing moet a [ afgevaardigde ](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanagerdelegate) voor `VSAccountManager` verstrekken.
+   > * De het stromen toepassing moet a [ verzoek ](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest) voor de informatie van de abonneerekening voorleggen.
+   > * De het stromen toepassing moet de [ meta-gegevens ](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadata) informatie wachten en verwerken.
    >
    > <br/>
    >
-   > De streamingtoepassing moet ervoor zorgen dat deze een Booleaanse waarde opgeeft die gelijk is aan `false` voor de eigenschap [`isInterruptionAllowed` &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest/1771708-isinterruptionallowed) in het `VSAccountMetadataRequest` -object, om aan te geven dat de gebruiker in deze fase niet kan worden onderbroken.
+   > De streamingtoepassing moet ervoor zorgen dat deze een Booleaanse waarde opgeeft die gelijk is aan `false` voor de eigenschap [`isInterruptionAllowed` ](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest/1771708-isinterruptionallowed) in het `VSAccountMetadataRequest` -object, om aan te geven dat de gebruiker in deze fase niet kan worden onderbroken.
 
 1. **de statusinformatie van het partnerkader van de Terugkeer:** De het stromen toepassing bevestigt de reactiegegevens om ervoor te zorgen dat de basisvoorwaarden worden voldaan aan:
    * De toegangsstatus van de gebruikerstoestemming wordt verleend.
@@ -141,7 +141,7 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen profielen &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md#Request) API documentatie voor details op:
+   > Verwijs naar [ terugwinnen profielen ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md#Request) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `serviceProvider`
    > * Alle _vereiste_ kopballen, als `Authorization`, `AP-Device-Identifier`, en `AP-Partner-Framework-Status`
@@ -153,7 +153,7 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
    >
    > <br/>
    >
-   > Voor meer details over `AP-Partner-Framework-Status` kopbal, verwijs naar [&#x200B; AP-partner-kader-status &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md) documentatie.
+   > Voor meer details over `AP-Partner-Framework-Status` kopbal, verwijs naar [ AP-partner-kader-status ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md) documentatie.
 
 1. **de informatie van de Terugkeer over gevonden profielen:** de het eindpuntreactie van Profielen bevat informatie over de gevonden profielen verbonden aan de ontvangen parameters en kopballen.
 
@@ -169,7 +169,7 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen configuratie voor specifieke dienstverlener &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider.md#Request) API documentatie voor details op:
+   > Verwijs naar [ terugwinnen configuratie voor specifieke dienstverlener ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider.md#Request) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `serviceProvider`
    > * Alle _vereiste_ kopballen, als `Authorization`, `AP-Device-Identifier`, en `X-Device-Info`
@@ -179,7 +179,7 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen configuratie voor specifieke dienstverlener &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider.md#Response) API documentatie voor details op de informatie die in een configuratiereactie wordt verstrekt.
+   > Verwijs naar [ terugwinnen configuratie voor specifieke dienstverlener ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider.md#Response) API documentatie voor details op de informatie die in een configuratiereactie wordt verstrekt.
    >
    > <br/>
    >
@@ -189,7 +189,7 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
    >
    > <br/>
    >
-   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
    >[!IMPORTANT]
    >
@@ -199,22 +199,22 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
    > * `displayInPlatformPicker`: geeft aan of de MVPD kan worden weergegeven in de Apple-kiezer.
    > * `boardingStatus`: geeft aan of de MVPD is geactiveerd in het eenmalige aanmelding voor Apple.
 
-1. **wint de status van het partnerkader terug:** de het stromen toepassing roept het [&#x200B; Video Kader van de Rekening van de Abonnee &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount) dat door Apple wordt ontwikkeld, om gebruikerstoestemming en leveranciersinformatie te verkrijgen.
+1. **wint de status van het partnerkader terug:** de het stromen toepassing roept het [ Video Kader van de Rekening van de Abonnee ](https://developer.apple.com/documentation/videosubscriberaccount) dat door Apple wordt ontwikkeld, om gebruikerstoestemming en leveranciersinformatie te verkrijgen.
 
    >[!IMPORTANT]
    >
-   > Verwijs naar de [&#x200B; documentatie van het Kader van de Rekening van de Abonnee van 0&rbrace; Video voor details op:](https://developer.apple.com/documentation/videosubscriberaccount)
+   > Verwijs naar de [ documentatie van het Kader van de Rekening van de Abonnee van 0} Video voor details op:](https://developer.apple.com/documentation/videosubscriberaccount)
    >
    > <br/>
    >
-   > * De het stromen toepassing moet [&#x200B; toestemming controleren om tot &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus) de het abonnementinformatie van de gebruiker toegang te hebben en slechts te werk te gaan als de gebruiker het toeliet.
-   > * De het stromen toepassing moet a [&#x200B; afgevaardigde &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanagerdelegate) voor `VSAccountManager` verstrekken.
-   > * De het stromen toepassing moet a [&#x200B; verzoek &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest) voor de informatie van de abonneerekening voorleggen.
-   > * De het stromen toepassing moet de [&#x200B; meta-gegevens &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadata) informatie wachten en verwerken.
+   > * De het stromen toepassing moet [ toestemming controleren om tot ](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus) de het abonnementinformatie van de gebruiker toegang te hebben en slechts te werk te gaan als de gebruiker het toeliet.
+   > * De het stromen toepassing moet a [ afgevaardigde ](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanagerdelegate) voor `VSAccountManager` verstrekken.
+   > * De het stromen toepassing moet a [ verzoek ](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest) voor de informatie van de abonneerekening voorleggen.
+   > * De het stromen toepassing moet de [ meta-gegevens ](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadata) informatie wachten en verwerken.
    >
    > <br/>
    >
-   > De streamingtoepassing moet ervoor zorgen dat deze een Booleaanse waarde opgeeft die gelijk is aan `true` voor de eigenschap [`isInterruptionAllowed` &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest/1771708-isinterruptionallowed) in het `VSAccountMetadataRequest` -object, om aan te geven dat de gebruiker kan worden onderbroken om in deze fase een tv-provider te selecteren.
+   > De streamingtoepassing moet ervoor zorgen dat deze een Booleaanse waarde opgeeft die gelijk is aan `true` voor de eigenschap [`isInterruptionAllowed` ](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest/1771708-isinterruptionallowed) in het `VSAccountMetadataRequest` -object, om aan te geven dat de gebruiker kan worden onderbroken om in deze fase een tv-provider te selecteren.
 
 1. **de statusinformatie van het partnerkader van de Terugkeer:** De het stromen toepassing bevestigt de reactiegegevens om ervoor te zorgen dat de basisvoorwaarden worden voldaan aan:
    * De toegangsstatus van de gebruikerstoestemming wordt verleend.
@@ -225,7 +225,7 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; ophalen de verzoek van de partnerauthentificatie &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-partner-authentication-request.md#Request) API documentatie voor details op:
+   > Verwijs naar [ ophalen de verzoek van de partnerauthentificatie ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-partner-authentication-request.md#Request) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `serviceProvider` en `partner`
    > * Alle _vereiste_ kopballen zoals `Authorization`, `AP-Device-Identifier`, `Content-Type`, `X-Device-Info`, en `AP-Partner-Framework-Status`
@@ -237,13 +237,13 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
    >
    > <br/>
    >
-   > Voor meer details over `AP-Partner-Framework-Status` kopbal, verwijs naar [&#x200B; AP-partner-kader-status &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md) documentatie.
+   > Voor meer details over `AP-Partner-Framework-Status` kopbal, verwijs naar [ AP-partner-kader-status ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md) documentatie.
 
 1. **wijs op de volgende actie:** De het eindpuntreactie van de Partner van Sessies bevat de noodzakelijke gegevens om de het stromen toepassing betreffende de volgende actie te begeleiden.
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; ophalen de verzoek van de partnerauthentificatie &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-partner-authentication-request.md#Response) API documentatie voor details over de informatie die in een zittingsreactie wordt verstrekt.
+   > Verwijs naar [ ophalen de verzoek van de partnerauthentificatie ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-partner-authentication-request.md#Response) API documentatie voor details over de informatie die in een zittingsreactie wordt verstrekt.
    >
    > <br/>
    >
@@ -254,14 +254,14 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
    >
    > <br/>
    >
-   > Als de basisbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de basisbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) volgt.
    >
    > <br/>
    >
    > Het eindpunt van de Partner van Sessies bevestigt de verzoekgegevens om ervoor te zorgen dat de partner enige sign-on voorwaarden wordt voldaan aan:
    >
    >  * De partner enige sign-on configuratie in de server van Adobe Pass moet geldig en toegelaten zijn.
-   >  * De de statuslading van het partnerkader die via [&#x200B; wordt ontvangen AP-partner-kader-status &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md) kopbal moet geldig zijn.
+   >  * De de statuslading van het partnerkader die via [ wordt ontvangen AP-partner-kader-status ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md) kopbal moet geldig zijn.
    >
    > <br/>
    >
@@ -293,22 +293,22 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
 
    Als de Adobe Pass backend geen geldig profiel identificeert en de partner enige sign-on bevestiging overgaat, ontvangt de het stromen toepassing een reactie met acties en gegevens om tot het partnerkader over te gaan voor het beginnen van de authentificatiestroom met MVPD.
 
-1. **Volledige authentificatie van MVPD met partnerkader:** door:sturen het verzoek van de partnerauthentificatie (SAML verzoek) in vorige stap aan het [&#x200B; Video Kader van de Rekening van de Abonnee &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount) wordt verkregen. Als de authentificatiestroom succesvol is, veroorzaakt de [&#x200B; interactie van het Kader van de Rekening van de Abonnee 0&rbrace; Video met MVPD een reactie van de partnerauthentificatie (reactie van SAML) die samen met de informatie van de de statusstatus van het partnerkader is teruggekeerd.](https://developer.apple.com/documentation/videosubscriberaccount)
+1. **Volledige authentificatie van MVPD met partnerkader:** door:sturen het verzoek van de partnerauthentificatie (SAML verzoek) in vorige stap aan het [ Video Kader van de Rekening van de Abonnee ](https://developer.apple.com/documentation/videosubscriberaccount) wordt verkregen. Als de authentificatiestroom succesvol is, veroorzaakt de [ interactie van het Kader van de Rekening van de Abonnee 0} Video met MVPD een reactie van de partnerauthentificatie (reactie van SAML) die samen met de informatie van de de statusstatus van het partnerkader is teruggekeerd.](https://developer.apple.com/documentation/videosubscriberaccount)
 
    >[!IMPORTANT]
    >
-   > Verwijs naar de [&#x200B; documentatie van het Kader van de Rekening van de Abonnee van 0&rbrace; Video voor details op:](https://developer.apple.com/documentation/videosubscriberaccount)
+   > Verwijs naar de [ documentatie van het Kader van de Rekening van de Abonnee van 0} Video voor details op:](https://developer.apple.com/documentation/videosubscriberaccount)
    >
    > <br/>
    >
-   > * De het stromen toepassing moet [&#x200B; toestemming controleren om tot &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus) de het abonnementinformatie van de gebruiker toegang te hebben en slechts te werk te gaan als de gebruiker het toeliet.
-   > * De het stromen toepassing moet a [&#x200B; afgevaardigde &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanagerdelegate) voor `VSAccountManager` verstrekken.
-   > * De het stromen toepassing moet a [&#x200B; verzoek &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest) voor de informatie van de abonneerekening voorleggen en moet het verzoek van de partnerauthentificatie (SAML verzoek) omvatten die in vorige stap wordt verkregen.
-   > * De het stromen toepassing moet de [&#x200B; meta-gegevens &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadata) informatie wachten en verwerken.
+   > * De het stromen toepassing moet [ toestemming controleren om tot ](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus) de het abonnementinformatie van de gebruiker toegang te hebben en slechts te werk te gaan als de gebruiker het toeliet.
+   > * De het stromen toepassing moet a [ afgevaardigde ](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanagerdelegate) voor `VSAccountManager` verstrekken.
+   > * De het stromen toepassing moet a [ verzoek ](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest) voor de informatie van de abonneerekening voorleggen en moet het verzoek van de partnerauthentificatie (SAML verzoek) omvatten die in vorige stap wordt verkregen.
+   > * De het stromen toepassing moet de [ meta-gegevens ](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadata) informatie wachten en verwerken.
    >
    > <br/>
    >
-   > De het stromen toepassing moet ervoor zorgen het een waarde Van Boole gelijk aan `true` voor het [`isInterruptionAllowed` &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest/1771708-isinterruptionallowed) bezit in het `VSAccountMetadataRequest` voorwerp specificeert, om erop te wijzen dat de gebruiker kan worden onderbroken om met de geselecteerde leverancier van TV in deze fase voor authentiek te verklaren.
+   > De het stromen toepassing moet ervoor zorgen het een waarde Van Boole gelijk aan `true` voor het [`isInterruptionAllowed` ](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest/1771708-isinterruptionallowed) bezit in het `VSAccountMetadataRequest` voorwerp specificeert, om erop te wijzen dat de gebruiker kan worden onderbroken om met de geselecteerde leverancier van TV in deze fase voor authentiek te verklaren.
 
 1. **de reactie van de partnerauthentificatie van de Terugkeer:** De het stromen toepassing bevestigt de reactiegegevens om ervoor te zorgen dat de basisvoorwaarden worden voldaan aan:
    * De toegangsstatus van de gebruikerstoestemming wordt verleend.
@@ -320,7 +320,7 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; creeer en wint profiel terug gebruikend de reactie van de partnerauthentificatie &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md#Request) API documentatie voor details op:
+   > Verwijs naar [ creeer en wint profiel terug gebruikend de reactie van de partnerauthentificatie ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md#Request) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `serviceProvider`, `partner`, en `SAMLResponse`
    > * Alle _vereiste_ kopballen, als `Authorization`, `AP-Device-Identifier`, `Content-Type`, `X-Device-Info`, en `AP-Partner-Framework-Status`
@@ -332,13 +332,13 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
    >
    > <br/>
    >
-   > Voor meer details over `AP-Partner-Framework-Status` kopbal, verwijs naar [&#x200B; AP-partner-kader-status &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md) documentatie.
+   > Voor meer details over `AP-Partner-Framework-Status` kopbal, verwijs naar [ AP-partner-kader-status ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md) documentatie.
 
 1. **de informatie van de Terugkeer over partnerprofiel:** de het eindpuntreactie van Profielen bevat informatie over het partnerprofiel, met inbegrip van de attributen `type` die aan &quot;appleSSO&quot;worden geplaatst.
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; creeer en wint profiel terug gebruikend de reactie van de partnerauthentificatie &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md#Response) API documentatie voor details op de informatie die in een profielreactie wordt verstrekt.
+   > Verwijs naar [ creeer en wint profiel terug gebruikend de reactie van de partnerauthentificatie ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md#Response) API documentatie voor details op de informatie die in een profielreactie wordt verstrekt.
    >
    > <br/>
    >
@@ -349,14 +349,14 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
    >
    > <br/>
    >
-   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) volgt.
    >
    > <br/>
    >
    > Het eindpunt van de Partner van Profielen bevestigt de verzoekgegevens om ervoor te zorgen dat de partner enige sign-on voorwaarden wordt voldaan aan:
    >
    >  * De partner enige sign-on configuratie in de server van Adobe Pass moet geldig en toegelaten zijn.
-   >  * De de statuslading van het partnerkader die via [&#x200B; wordt ontvangen AP-partner-kader-status &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md) kopbal moet geldig zijn.
+   >  * De de statuslading van het partnerkader die via [ wordt ontvangen AP-partner-kader-status ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md) kopbal moet geldig zijn.
    >
    > <br/>
    >
@@ -368,7 +368,7 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
 
 +++ D. Besluiten fase
 
-1. **wint de status van het partnerkader terug:** de het stromen toepassing roept het [&#x200B; Video Kader van de Rekening van de Abonnee &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount) dat door Apple wordt ontwikkeld, om gebruikerstoestemming en leveranciersinformatie te verkrijgen.
+1. **wint de status van het partnerkader terug:** de het stromen toepassing roept het [ Video Kader van de Rekening van de Abonnee ](https://developer.apple.com/documentation/videosubscriberaccount) dat door Apple wordt ontwikkeld, om gebruikerstoestemming en leveranciersinformatie te verkrijgen.
 
    >[!IMPORTANT]
    > 
@@ -376,18 +376,18 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
 
    >[!IMPORTANT]
    >
-   > Verwijs naar de [&#x200B; documentatie van het Kader van de Rekening van de Abonnee van 0&rbrace; Video voor details op:](https://developer.apple.com/documentation/videosubscriberaccount)
+   > Verwijs naar de [ documentatie van het Kader van de Rekening van de Abonnee van 0} Video voor details op:](https://developer.apple.com/documentation/videosubscriberaccount)
    >
    > <br/>
    >
-   > * De het stromen toepassing moet [&#x200B; toestemming controleren om tot &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus) de het abonnementinformatie van de gebruiker toegang te hebben en slechts te werk te gaan als de gebruiker het toeliet.
-   > * De het stromen toepassing moet a [&#x200B; afgevaardigde &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanagerdelegate) voor `VSAccountManager` verstrekken.
-   > * De het stromen toepassing moet a [&#x200B; verzoek &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest) voor de informatie van de abonneerekening voorleggen.
-   > * De het stromen toepassing moet de [&#x200B; meta-gegevens &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadata) informatie wachten en verwerken.
+   > * De het stromen toepassing moet [ toestemming controleren om tot ](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus) de het abonnementinformatie van de gebruiker toegang te hebben en slechts te werk te gaan als de gebruiker het toeliet.
+   > * De het stromen toepassing moet a [ afgevaardigde ](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanagerdelegate) voor `VSAccountManager` verstrekken.
+   > * De het stromen toepassing moet a [ verzoek ](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest) voor de informatie van de abonneerekening voorleggen.
+   > * De het stromen toepassing moet de [ meta-gegevens ](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadata) informatie wachten en verwerken.
    >
    > <br/>
    >
-   > De streamingtoepassing moet ervoor zorgen dat deze een Booleaanse waarde opgeeft die gelijk is aan `false` voor de eigenschap [`isInterruptionAllowed` &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest/1771708-isinterruptionallowed) in het `VSAccountMetadataRequest` -object, om aan te geven dat de gebruiker in deze fase niet kan worden onderbroken.
+   > De streamingtoepassing moet ervoor zorgen dat deze een Booleaanse waarde opgeeft die gelijk is aan `false` voor de eigenschap [`isInterruptionAllowed` ](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest/1771708-isinterruptionallowed) in het `VSAccountMetadataRequest` -object, om aan te geven dat de gebruiker in deze fase niet kan worden onderbroken.
 
    >[!TIP]
    >
@@ -406,7 +406,7 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen pre-vergunningsbesluiten gebruikend specifieke mvpd &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md#request) API documentatie voor details op:
+   > Verwijs naar [ terugwinnen pre-vergunningsbesluiten gebruikend specifieke mvpd ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md#request) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `serviceProvider`, `mvpd`, en `resources`
    > * Alle _vereiste_ kopballen, als `Authorization` en `AP-Device-Identifier`
@@ -418,15 +418,15 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
    >
    > <br/>
    >
-   > Voor meer details over `AP-Partner-Framework-Status` kopbal, verwijs naar [&#x200B; AP-partner-kader-status &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md) documentatie.
+   > Voor meer details over `AP-Partner-Framework-Status` kopbal, verwijs naar [ AP-partner-kader-status ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md) documentatie.
 
 1. **de besluiten van de Terugkeer voorafgaand aan autorisatie:** De Besluiten pre-autoriseren eindpuntreactie bevat a `Permit` of `Deny` besluit voor elk middel:
    * Een `Permit` -beslissing betekent dat de bron kan worden afgespeeld. De reactie omvat geen media teken, aangezien de pre-vergunningsstroom niet moet worden gebruikt om middelen te spelen.
-   * Een `Deny` -beslissing betekent dat de bron niet kan worden afgespeeld. De reactie omvat een foutenlading die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   * Een `Deny` -beslissing betekent dat de bron niet kan worden afgespeeld. De reactie omvat een foutenlading die aan de [ Verbeterde documentatie van de Codes van de Fout ](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen pre-vergunningsbesluiten gebruikend specifieke mvpd &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md#response) API documentatie voor details over de informatie die in een besluitreactie wordt verstrekt.
+   > Verwijs naar [ terugwinnen pre-vergunningsbesluiten gebruikend specifieke mvpd ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md#response) API documentatie voor details over de informatie die in een besluitreactie wordt verstrekt.
    >
    > <br/>
    >
@@ -437,9 +437,9 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
    >
    > <br/>
    >
-   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
-1. **wint de status van het partnerkader terug:** de het stromen toepassing roept het [&#x200B; Video Kader van de Rekening van de Abonnee &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount) dat door Apple wordt ontwikkeld, om gebruikerstoestemming en leveranciersinformatie te verkrijgen.
+1. **wint de status van het partnerkader terug:** de het stromen toepassing roept het [ Video Kader van de Rekening van de Abonnee ](https://developer.apple.com/documentation/videosubscriberaccount) dat door Apple wordt ontwikkeld, om gebruikerstoestemming en leveranciersinformatie te verkrijgen.
 
    >[!IMPORTANT]
    >
@@ -447,18 +447,18 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
 
    >[!IMPORTANT]
    >
-   > Verwijs naar de [&#x200B; documentatie van het Kader van de Rekening van de Abonnee van 0&rbrace; Video voor details op:](https://developer.apple.com/documentation/videosubscriberaccount)
+   > Verwijs naar de [ documentatie van het Kader van de Rekening van de Abonnee van 0} Video voor details op:](https://developer.apple.com/documentation/videosubscriberaccount)
    >
    > <br/>
    >
-   > * De het stromen toepassing moet [&#x200B; toestemming controleren om tot &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus) de het abonnementinformatie van de gebruiker toegang te hebben en slechts te werk te gaan als de gebruiker het toeliet.
-   > * De het stromen toepassing moet a [&#x200B; afgevaardigde &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanagerdelegate) voor `VSAccountManager` verstrekken.
-   > * De het stromen toepassing moet a [&#x200B; verzoek &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest) voor de informatie van de abonneerekening voorleggen.
-   > * De het stromen toepassing moet de [&#x200B; meta-gegevens &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadata) informatie wachten en verwerken.
+   > * De het stromen toepassing moet [ toestemming controleren om tot ](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus) de het abonnementinformatie van de gebruiker toegang te hebben en slechts te werk te gaan als de gebruiker het toeliet.
+   > * De het stromen toepassing moet a [ afgevaardigde ](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanagerdelegate) voor `VSAccountManager` verstrekken.
+   > * De het stromen toepassing moet a [ verzoek ](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest) voor de informatie van de abonneerekening voorleggen.
+   > * De het stromen toepassing moet de [ meta-gegevens ](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadata) informatie wachten en verwerken.
    >
    > <br/>
    >
-   > De streamingtoepassing moet ervoor zorgen dat deze een Booleaanse waarde opgeeft die gelijk is aan `false` voor de eigenschap [`isInterruptionAllowed` &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest/1771708-isinterruptionallowed) in het `VSAccountMetadataRequest` -object, om aan te geven dat de gebruiker in deze fase niet kan worden onderbroken.
+   > De streamingtoepassing moet ervoor zorgen dat deze een Booleaanse waarde opgeeft die gelijk is aan `false` voor de eigenschap [`isInterruptionAllowed` ](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest/1771708-isinterruptionallowed) in het `VSAccountMetadataRequest` -object, om aan te geven dat de gebruiker in deze fase niet kan worden onderbroken.
 
    >[!TIP]
    >
@@ -477,7 +477,7 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen vergunningsbesluiten gebruikend specifieke mvpd &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md#request) API documentatie voor details op:
+   > Verwijs naar [ terugwinnen vergunningsbesluiten gebruikend specifieke mvpd ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md#request) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `serviceProvider`, `mvpd`, en `resources`
    > * Alle _vereiste_ kopballen, als `Authorization` en `AP-Device-Identifier`
@@ -489,15 +489,15 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
    >
    > <br/>
    >
-   > Voor meer details over `AP-Partner-Framework-Status` kopbal, verwijs naar [&#x200B; AP-partner-kader-status &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md) documentatie.
+   > Voor meer details over `AP-Partner-Framework-Status` kopbal, verwijs naar [ AP-partner-kader-status ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md) documentatie.
 
 1. **de vergunningsbesluit van de Terugkeer:** De Besluiten machtigen eindpuntreactie bevat a `Permit` of `Deny` besluit voor het specifieke middel:
    * Een `Permit` -beslissing betekent dat de bron kan worden afgespeeld. De reactie bevat een media-token.
-   * Een `Deny` -beslissing betekent dat de bron niet kan worden afgespeeld. De reactie omvat een foutenlading die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   * Een `Deny` -beslissing betekent dat de bron niet kan worden afgespeeld. De reactie omvat een foutenlading die aan de [ Verbeterde documentatie van de Codes van de Fout ](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen vergunningsbesluiten gebruikend specifieke mvpd &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md#response) API documentatie voor details over de informatie die in een besluitreactie wordt verstrekt.
+   > Verwijs naar [ terugwinnen vergunningsbesluiten gebruikend specifieke mvpd ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md#response) API documentatie voor details over de informatie die in een besluitreactie wordt verstrekt.
    >
    > <br/>
    >
@@ -508,7 +508,7 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
    >
    > <br/>
    >
-   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
 +++
 
@@ -518,7 +518,7 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; Logout van het Begin voor specifieke mvpd &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md#request) API documentatie voor details op:
+   > Verwijs naar [ Logout van het Begin voor specifieke mvpd ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md#request) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `serviceProvider`, `mvpd`, en `redirectUrl`
    > * Alle _vereiste_ kopballen, als `Authorization`, `AP-Device-Identifier`
@@ -535,7 +535,7 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; Logout van het Begin voor specifieke mvpd &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md#response) API documentatie voor details op de informatie die in een logout reactie wordt verstrekt.
+   > Verwijs naar [ Logout van het Begin voor specifieke mvpd ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md#response) API documentatie voor details op de informatie die in een logout reactie wordt verstrekt.
    >
    > <br/>
    >
@@ -546,6 +546,6 @@ Voer de bepaalde stappen uit om Apple enig teken-op uit te voeren gebruikend par
    >
    > <br/>
    >
-   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
 +++

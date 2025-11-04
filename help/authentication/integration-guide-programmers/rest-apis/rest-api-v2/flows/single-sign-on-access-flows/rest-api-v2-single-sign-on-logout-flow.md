@@ -17,11 +17,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> De implementatie van REST API V2 wordt begrensd door de [&#x200B; Throttling mechanisme &#x200B;](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
+> De implementatie van REST API V2 wordt begrensd door de [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
 
 >[!MORELIKETHIS]
 >
-> Zorg ervoor om [&#x200B; REST API V2 FAQs &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general) ook te bezoeken.
+> Zorg ervoor om [ REST API V2 FAQs ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general) ook te bezoeken.
 
 ## Eén aanmelding voor specifieke mvpd starten {#initiate-single-logout-for-specific-mvpd}
 
@@ -46,7 +46,7 @@ Voordat u een eenmalige aanmelding voor een specifieke MVPD start, moet u contro
 
 Voer de gegeven stappen uit om de enige logout stroom voor een specifieke MVPD zoals aangetoond in het volgende diagram uit te voeren.
 
-![&#x200B; Begin enige logout voor specifieke mvpd &#x200B;](/help/authentication/assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-initiate-single-logout-for-specific-mvpd-flow.png)
+![ Begin enige logout voor specifieke mvpd ](/help/authentication/assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-initiate-single-logout-for-specific-mvpd-flow.png)
 
 *Begin enige logout voor specifieke mvpd*
 
@@ -54,7 +54,7 @@ Voer de gegeven stappen uit om de enige logout stroom voor een specifieke MVPD z
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; Logout van het Begin voor specifieke mvpd &#x200B;](../../apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md) API documentatie voor details op:
+   > Verwijs naar [ Logout van het Begin voor specifieke mvpd ](../../apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `serviceProvider`, `mvpd`, en `redirectUrl`
    > * Alle _vereiste_ kopballen, als `Authorization`, `AP-Device-Identifier`
@@ -66,11 +66,11 @@ Voer de gegeven stappen uit om de enige logout stroom voor een specifieke MVPD z
    >
    > <br/>
    > 
-   > Voor meer details over `Adobe-Subject-Token` kopbal, verwijs naar [&#x200B; Adobe-Onderwerp-Symbolische &#x200B;](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) documentatie.
+   > Voor meer details over `Adobe-Subject-Token` kopbal, verwijs naar [ Adobe-Onderwerp-Symbolische ](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) documentatie.
    > 
    > <br/>
    > 
-   > Voor meer details over `AD-Service-Token` kopbal, verwijs naar [&#x200B; AD-dienst-Symbolische &#x200B;](../../appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md) documentatie.
+   > Voor meer details over `AD-Service-Token` kopbal, verwijs naar [ AD-dienst-Symbolische ](../../appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md) documentatie.
 
 1. **vind regelmatige en enige sign-on profielen:** de server van Adobe Pass identificeert zowel regelmatige als enige teken-op geldige profielen die op de ontvangen parameters en kopballen worden gebaseerd.
 
@@ -80,7 +80,7 @@ Voer de gegeven stappen uit om de enige logout stroom voor een specifieke MVPD z
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; Logout van het Begin voor specifieke mvpd &#x200B;](../../apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md) API documentatie voor details op de informatie die in een logout reactie wordt verstrekt.
+   > Verwijs naar [ Logout van het Begin voor specifieke mvpd ](../../apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md) API documentatie voor details op de informatie die in een logout reactie wordt verstrekt.
    > 
    > <br/>
    > 
@@ -91,7 +91,7 @@ Voer de gegeven stappen uit om de enige logout stroom voor een specifieke MVPD z
    >
    > <br/>
    > 
-   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
 1. **wijs logout volledig op:** als MVPD niet de logout stroom steunt, verwerkt de het stromen toepassing de reactie en kan het gebruiken om naar keuze een specifiek bericht op het gebruikersinterface te tonen.
 

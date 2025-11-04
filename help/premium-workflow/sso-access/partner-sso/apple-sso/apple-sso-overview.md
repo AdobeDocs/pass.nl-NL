@@ -23,8 +23,8 @@ Om te kunnen profiteren van de Single Sign-On (SSO) gebruikerservaring op een Ap
 
 Het eindresultaat zou een ervaring in lijn met de volgende gebruikersstromen moeten tot stand brengen, die wij u adviseren alvorens u begint uw toepassing te ontwikkelen:
 
-* Enige Sign-On (SSO) [&#x200B; gebruikersstromen voor iPhone en iPad &#x200B;](https://tve.zendesk.com/hc/article_attachments/205624966/User_flows_AppleSSO_iOS_v2.pdf) apparaten.
-* Enige Sign-On (SSO) [&#x200B; gebruikersstromen voor Apple TV &#x200B;](https://tve.zendesk.com/hc/article_attachments/206669126/User_flows_tvOS.pdf) apparaten.
+* Enige Sign-On (SSO) [ gebruikersstromen voor iPhone en iPad ](https://tve.zendesk.com/hc/article_attachments/205624966/User_flows_AppleSSO_iOS_v2.pdf) apparaten.
+* Enige Sign-On (SSO) [ gebruikersstromen voor Apple TV ](https://tve.zendesk.com/hc/article_attachments/206669126/User_flows_tvOS.pdf) apparaten.
 
 ## Vereisten {#apple-sso-prerequisites}
 
@@ -34,11 +34,11 @@ Voorwaarden bij instapweigering kunnen van toepassing zijn op een of meer entite
 
 Om te profiteren van de Single Sign-On (SSO) gebruikerservaring, moet één programmeur:
 
-* Contact Apple om het [&#x200B; Video Kader van de Rekening van de Abonnee van de Abonnee &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount) als deel van uw identiteitskaart van het Team van Apple toe te laten en de [&#x200B; Video Abonnee Enige Sign-On Entitlement &#x200B;](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_developer_video-subscriber-single-sign-on) als deel van uw Rekening van de Ontwikkelaar van Apple te vormen.
+* Contact Apple om het [ Video Kader van de Rekening van de Abonnee van de Abonnee ](https://developer.apple.com/documentation/videosubscriberaccount) als deel van uw identiteitskaart van het Team van Apple toe te laten en de [ Video Abonnee Enige Sign-On Entitlement ](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_developer_video-subscriber-single-sign-on) als deel van uw Rekening van de Ontwikkelaar van Apple te vormen.
 
    * Gebruik Xcode versie 8 of hoger en iOS/tvOS versie 10 of hoger.
 
-* Laat Enige Sign-On (SSO) voor elke gewenste integratie en platform (iOS/tvOS) door het [&#x200B; Dashboard van Adobe Pass TVE &#x200B;](https://experience.adobe.com/#/pass/authentication) toe door het `Enable Single Sign On` bezit aan `Yes` te plaatsen.
+* Laat Enige Sign-On (SSO) voor elke gewenste integratie en platform (iOS/tvOS) door het [ Dashboard van Adobe Pass TVE ](https://experience.adobe.com/#/pass/authentication) toe door het `Enable Single Sign On` bezit aan `Yes` te plaatsen.
 
 | Adobe Single Sign On inschakelen | Apple **Op-boted (Gesteund)** MVPDs | Apple **Plukker** MVPDs | Apple **niet Op-board (niet gesteund)** MVPDs |
 |-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
@@ -49,15 +49,15 @@ Om te profiteren van de Single Sign-On (SSO) gebruikerservaring, moet één prog
 
    * De Adobe Pass Authentication REST API V2 biedt ondersteuning voor Single Sign-On (SSO) voor partners.
 
-     Verwijs naar [&#x200B; Apple SSO Cookbook (REST API V2) &#x200B;](apple-sso-cookbook-rest-api-v2.md) documentatie.
+     Verwijs naar [ Apple SSO Cookbook (REST API V2) ](apple-sso-cookbook-rest-api-v2.md) documentatie.
 
    * De oudere Adobe Pass Authentication REST API V1 biedt ondersteuning voor Single Sign-On (SSO) voor partners.
 
-     Raadpleeg de [&#x200B; (Verouderd) Apple SSO Cookbook (REST API V1) &#x200B;](/help/authentication/integration-guide-programmers/legacy/sso-access/apple-sso-cookbook-rest-api-v1.md) -documentatie.
+     Raadpleeg de [ (Verouderd) Apple SSO Cookbook (REST API V1) ](/help/authentication/integration-guide-programmers/legacy/sso-access/apple-sso-cookbook-rest-api-v1.md) -documentatie.
 
    * De verouderde Adobe Pass Authentication AccessEnabler iOS/tvOS SDK biedt ondersteuning voor Single Sign-On (SSO) voor partners.
 
-     Raadpleeg de [&#x200B; (Verouderd) Apple SSO Cookbook (iOS/tvOS SDK) &#x200B;](/help/authentication/integration-guide-programmers/legacy/sso-access/apple-sso-cookbook-iostvos-sdk.md) -documentatie.
+     Raadpleeg de [ (Verouderd) Apple SSO Cookbook (iOS/tvOS SDK) ](/help/authentication/integration-guide-programmers/legacy/sso-access/apple-sso-cookbook-iostvos-sdk.md) -documentatie.
 
 ### MVPD {#apple-sso-prerequisites-mvpd}
 
@@ -75,7 +75,7 @@ Om te profiteren van de Single Sign-On (SSO) gebruikerservaring, moet één MVPD
 
 * Als er iets mis gaat met de Apple SSO-workflow, kan de toepassing die gebruikmaakt van de Adobe Pass Authentication AccessEnabler iOS/tvOS SDK dan terugvallen op de normale verificatiestroom?
 
-  Dit is mogelijk maar vereist een configuratieverandering die door het [&#x200B; Dashboard van Adobe Pass TVE &#x200B;](https://experience.adobe.com/#/pass/authentication) wordt uitgevoerd om **toe te laten Enige Sign-On** op **&#x200B;**&#x200B;voor de gewenste integratie en het platform (iOS/tvOS). Ben zich ervan bewust dat de cliënttoepassing de configuratieverandering slechts na het roepen van [&#x200B; setRequestor &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#setReqV3) API zal erkennen.
+  Dit is mogelijk maar vereist een configuratieverandering die door het [ Dashboard van Adobe Pass TVE ](https://experience.adobe.com/#/pass/authentication) wordt uitgevoerd om **toe te laten Enige Sign-On** op **** voor de gewenste integratie en het platform (iOS/tvOS). Ben zich ervan bewust dat de cliënttoepassing de configuratieverandering slechts na het roepen van [ setRequestor ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#setReqV3) API zal erkennen.
 
 
 * Weet de toepassing wanneer er een verificatie heeft plaatsgevonden als gevolg van een aanmelding via Apple SSO?
@@ -93,7 +93,7 @@ Om te profiteren van de Single Sign-On (SSO) gebruikerservaring, moet één MVPD
   Wanneer de gebruiker de toepassing start, wordt de gebruiker niet geverifieerd via de Apple SSO-workflow. Daarom moet de toepassing terugvallen op de normale verificatiestroom en een eigen MVPD-kiezer presenteren.
 
 
-* Wat gebeurt als een gebruiker binnen ondertekent door naar *`Settings -> TV Provider`* op iOS/iPadOS of *`Settings -> Accounts -> TV Provider`* op tvOS sectie te gaan die een MVPD heeft die **toelaten Enig Teken** geplaatst op **&#x200B;**&#x200B;door [&#x200B; Adobe Pass TVE Dashboard &#x200B;](https://experience.adobe.com/#/pass/authentication) voor iOS/tvOS platform heeft?
+* Wat gebeurt als een gebruiker binnen ondertekent door naar *`Settings -> TV Provider`* op iOS/iPadOS of *`Settings -> Accounts -> TV Provider`* op tvOS sectie te gaan die een MVPD heeft die **toelaten Enig Teken** geplaatst op **** door [ Adobe Pass TVE Dashboard ](https://experience.adobe.com/#/pass/authentication) voor iOS/tvOS platform heeft?
 
   Wanneer de gebruiker de toepassing start, wordt de gebruiker niet geverifieerd via de Apple SSO-workflow. Daarom moet de toepassing terugvallen op de normale verificatiestroom en een eigen MVPD-kiezer presenteren.
 
@@ -108,7 +108,7 @@ Om te profiteren van de Single Sign-On (SSO) gebruikerservaring, moet één MVPD
   Wanneer de gebruiker de toepassing start, selecteert de gebruiker de optie Andere tv-providers via de Apple SSO-workflow. Daarom moet de toepassing terugvallen op de normale verificatiestroom en een eigen MVPD-kiezer presenteren.
 
 
-* Wat gebeurt als een gebruiker een MVPD heeft die door het middel van [&#x200B; het Dashboard van Adobe Pass TVE &#x200B;](https://experience.adobe.com/#/pass/authentication) wordt gedegradeerd?
+* Wat gebeurt als een gebruiker een MVPD heeft die door het middel van [ het Dashboard van Adobe Pass TVE ](https://experience.adobe.com/#/pass/authentication) wordt gedegradeerd?
 
   Wanneer de gebruiker de toepassing start, wordt de gebruiker geverifieerd via het afbraakmechanisme en niet via de Apple SSO-workflow. De ervaring zou naadloos voor de gebruiker moeten zijn, terwijl de toepassing door *N010* waarschuwingscode zal worden geïnformeerd voor het geval het Adobe Pass Authentication AccessEnabler iOS/tvOS SDK gebruikt.
 

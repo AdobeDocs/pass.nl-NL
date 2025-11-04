@@ -25,8 +25,8 @@ TempPass is een krachtige oplossing voor programmeurs om:
 
 De TempPass-functie wordt geleverd door een pseudo-MVPD (verder genoemd &quot;Temp Pass&quot;) in de configuratie van de Adobe Pass-verificatieserver in te voeren als integratie met de deelnemende programmeur. De functie TempPass is beschikbaar in twee configuraties:
 
-* [&#x200B; Basis TempPass &#x200B;](#basic-temp-pass) voor op tijd-gebaseerde toegang.
-* [&#x200B; Promotional TempPass &#x200B;](#promotional-temp-pass) voor flexibele campagne-gedreven toegang.
+* [ Basis TempPass ](#basic-temp-pass) voor op tijd-gebaseerde toegang.
+* [ Promotional TempPass ](#promotional-temp-pass) voor flexibele campagne-gedreven toegang.
 
 >[!IMPORTANT]
 >
@@ -190,7 +190,7 @@ Tijdens de promotionele TempPass-flow wordt voor het bijhouden van gegevens een 
 
 Voordat u toegang krijgt tot de API voor tempPass opnieuw instellen, moet u de vereiste stappen in het DCR-proces (Dynamic Client Registration) uitvoeren. Dit verplichte proces zorgt ervoor dat u over het benodigde toegangstoken beschikt voor interactie met de API voor het opnieuw instellen van TempPass.
 
-Voor uitvoerige instructies, verwijs naar het [&#x200B; Dynamische Overzicht van de Registratie van de Cliënt &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) documentatie.
+Voor uitvoerige instructies, verwijs naar het [ Dynamische Overzicht van de Registratie van de Cliënt ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) documentatie.
 
 ## TempPass-API opnieuw instellen - DELETE /reset-tempass/v3/reset {#reset-tempass-v3-reset}
 
@@ -424,6 +424,6 @@ $ curl -H "Authorization: Bearer <access_token_here>" -X DELETE -v "https://mgmt
 
 ## REST API V2 {#rest-api-v2}
 
-Leveraging de eigenschap TempPass vereist het uitvoeren van codeupdates om te wijzigen hoe uw toepassing van TV overal (TVE) met de Authentificatie van Adobe Pass [&#x200B; REST API V2 &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md) in wisselwerking staat.
+Leveraging de eigenschap TempPass vereist het uitvoeren van codeupdates om te wijzigen hoe uw toepassing van TV overal (TVE) met de Authentificatie van Adobe Pass [ REST API V2 ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md) in wisselwerking staat.
 
-Voor een uitvoerige gids over deze updates en de bijbehorende werkschema&#39;s, verwijs naar de [&#x200B; Tijdelijke documentatie van de Stromen van de Toegang &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/temporary-access-flows/rest-api-v2-access-temporary-flows.md).
+Voor een uitvoerige gids over deze updates en de bijbehorende werkschema&#39;s, verwijs naar de [ Tijdelijke documentatie van de Stromen van de Toegang ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/temporary-access-flows/rest-api-v2-access-temporary-flows.md).

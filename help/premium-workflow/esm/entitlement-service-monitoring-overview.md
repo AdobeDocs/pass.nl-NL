@@ -83,7 +83,7 @@ De ESM API is niet algemeen beschikbaar.  Neem contact op met uw Adobe-vertegenw
 | platform | Het apparaat identificeerde platform. Mogelijke waarden: </br> - Android </br> - FireTV </br> - Roku </br> - iOS </br> - tvOS </br> - enzovoort |
 | application-name | De toepassingsnaam die in het TVE-dashboard is geconfigureerd voor de DCR-geregistreerde toepassing die is geconfigureerd om te worden gebruikt. |
 | toepassingsversie | De toepassingsversie die in het TVE-dashboard is geconfigureerd voor de DCR-geregistreerde toepassing die is geconfigureerd voor gebruik. |
-| klant-app | De identiteitskaart van de douanetoepassing ging via [&#x200B; Informatie van het Apparaat &#x200B;](/help/authentication/integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md) over. |
+| klant-app | De identiteitskaart van de douanetoepassing ging via [ Informatie van het Apparaat ](/help/authentication/integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md) over. |
 | inhoudscategorie | De categorie van de inhoud die door uw toepassing wordt aangevraagd. |
 
 ## ESM voor MVPD&#39;s {#esm-for-mvpds}

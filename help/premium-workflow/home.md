@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productaankondigingen van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productaankondigingen van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 [!UICONTROL Premium Workflow] van Adobe Pass biedt een robuuste suite van hulpmiddelen om verificatie en streamingbetrouwbaarheid te verbeteren. Verbeter real-time zichtbaarheid met [!UICONTROL Entitlement Service Monitoring], zorg ervoor dat de functie uptime is met de API voor slimme afbraak en verstrek flexibele toegang via [!UICONTROL TempPass] .
 
