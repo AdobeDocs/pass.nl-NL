@@ -60,7 +60,7 @@ De vraag van de zittingsinitialisatie wordt gedaan door een toepassing na het ve
 
 Er is geen behoefte om enige beëindigingscode op de eerste vraag te verstrekken omdat wij geen andere actieve stromen hebben. En geen metagegevenskenmerk omdat geen van de aanroepen van metagegevens is geretourneerd.
 
-Het **onderwerp** en **idp** parameters zijn verplicht, zullen zij als de wegvariabelen van URI worden gespecificeerd. U kunt het **onderwerp** en **idp** parameters verkrijgen door een vraag naar **mvpd** en **upstreamUserID** meta-gegevensgebieden van de Authentificatie van Adobe Pass te maken. Zie ook, het [&#x200B; overzicht van Meta-gegevens APIs &#x200B;](https://experienceleague.adobe.com/docs/primetime/authentication/auth-features/user-metadat/user-metadata-feature.html?lang=en#). In dit voorbeeld geven we de waarde &quot;12345&quot; als het onderwerp en &quot;adobe&quot; als het idp.
+Het **onderwerp** en **idp** parameters zijn verplicht, zullen zij als de wegvariabelen van URI worden gespecificeerd. U kunt het **onderwerp** en **idp** parameters verkrijgen door een vraag naar **mvpd** en **upstreamUserID** meta-gegevensgebieden van de Authentificatie van Adobe Pass te maken. Zie ook, het [&#x200B; overzicht van Meta-gegevens APIs &#x200B;](https://experienceleague.adobe.com/docs/primetime/authentication/auth-features/user-metadat/user-metadata-feature.html?lang=nl-NL#). In dit voorbeeld geven we de waarde &quot;12345&quot; als het onderwerp en &quot;adobe&quot; als het idp.
 
 
 ![](assets/session-init-params-frstapp.png)

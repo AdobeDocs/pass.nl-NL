@@ -29,7 +29,7 @@ Als u een kleine update toevoegt:
 1. In de &quot;Was deze inhoud nuttig?&quot; banner die bij de bodem van uw browser venster verschijnt klikt **Gedetailleerd terugkoppelt opties**.
 1. Klik **Voorstellen uitgeven** en voorleggen een trekkingsverzoek (PR) met uw veranderingen in UI GitHub.
 
-   Zie de algemene [&#x200B; de contributorgids van Adobe Docs &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html) voor meer informatie.
+   Zie de algemene [&#x200B; de contributorgids van Adobe Docs &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=nl-NL) voor meer informatie.
 
 Kleine correcties of verduidelijkingen die u ter documentatie en codevoorbeelden in dit antwoord aanbrengt, worden behandeld in de gebruiksvoorwaarden van Adobe.
 
@@ -43,7 +43,7 @@ Als u deel van de gemeenschap van Adobe bent en een nieuw onderwerp wilt creëre
 
 Communautaire contribuanten kunnen GitHub UI voor basishet uitgeven of vork gebruiken het repo om belangrijke bijdragen te leveren.
 
-Zie de [&#x200B; Gids van de Medewerker van de Docent van Adobe &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html) voor details.
+Zie de [&#x200B; Gids van de Medewerker van de Docent van Adobe &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=nl-NL) voor details.
 
 ## Interne contribuanten
 
