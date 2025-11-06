@@ -1,7 +1,8 @@
 ---
 title: Opmerkingen bij de release Adobe Pass Authentication Android 3.8.0
 description: Opmerkingen bij de release Adobe Pass Authentication Android 3.8.0
-source-git-commit: f7db5b71723c02b2924e73105769ab5b22e05bca
+exl-id: ad020b9a-61ad-492f-9522-d0e7a668196a
+source-git-commit: c9958a17ad9dfb518bab1d24087c85fdcb6fd057
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 0%
@@ -12,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 Op deze pagina worden nieuwe functies, wijzigingen en bekende problemen met deze release beschreven:
 
@@ -30,4 +31,4 @@ Er wordt echter geen kritieke informatie opgeslagen en de kans dat een gebruiker
 
 ## Geen pakket {#release-package-380}
 
-U kunt Android SDK v3.8.0 van [&#x200B; hier downloaden &#x200B;](https://tve.zendesk.com/hc/en-us/articles/204963219-Android-Native-AccessEnabler-Library).
+U kunt Android SDK v3.8.0 van [ hier downloaden ](https://tve.zendesk.com/hc/en-us/articles/204963219-Android-Native-AccessEnabler-Library).

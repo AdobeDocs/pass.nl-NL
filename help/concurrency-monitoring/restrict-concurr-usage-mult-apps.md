@@ -1,20 +1,20 @@
 ---
 title: Gelijktijdig gebruik beperken met meerdere toepassingen die bij verschillende eigenaars horen
 description: Gelijktijdig gebruik beperken met meerdere toepassingen die eigendom zijn van verschillende eigenaars
-source-git-commit: 59672b44074c472094ed27a23d6bfbcd7654c901
+exl-id: c358befc-36d6-4f55-92cc-4d02064c65fb
+source-git-commit: f30b6814b8a77424c13337d44d7b247105e0bfe2
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '275'
 ht-degree: 1%
 
 ---
-
 
 # Gelijktijdig gebruik beperken met meerdere toepassingen die eigendom zijn van verschillende eigenaars {#restr-concurr-usage}
 
 
 ## Omschrijving hoofdletter gebruiken
 
-MVPD M heeft een iPhone-toepassing, een iPad-toepassing en een website. Het moet op verzoek van programmeur P worden geïntegreerd met de Adobe Gelijktijdige Controle (CM). P Programmer heeft in CM een reeks beleid met regels bepaald die gelijktijdig gebruik zullen beperken. CM zal besluiten nemen over welke stromen mogen worden afgespeeld op basis van het vastgestelde beleid en de vastgestelde regels. Dit betekent dat zelfs als een stream mocht starten en afspelen, CM tijdens het afspelen kan besluiten de stream te stoppen.
+MVPD M heeft een iPhone-toepassing, een iPad-toepassing en een website. Het moet op verzoek van programmeur P worden geïntegreerd met Adobe Concurrency Monitoring (CM). P Programmer heeft in CM een reeks beleid met regels bepaald die gelijktijdig gebruik zullen beperken. CM zal besluiten nemen over welke stromen mogen worden afgespeeld op basis van het vastgestelde beleid en de vastgestelde regels. Dit betekent dat zelfs als een stream mocht starten en afspelen, CM tijdens het afspelen kan besluiten de stream te stoppen.
 
 
 
@@ -38,12 +38,12 @@ Nadat u het ticket hebt gemaakt, wordt de volgende informatie vrijgegeven voor g
 
 | type | beschrijving | voorbeeldwaarde | standaardwaarde |
 | --- | --- | --- | --- |
-| eindpunt | het eindpunt voor Adobe Gelijktijdige bewaking | http://streams.adobeprimetime.com/v1/ | http://streams.adobeprimetime.com/v1/ |
+| eindpunt | het eindpunt voor Adobe Concurrency Monitoring | http://streams.adobeprimetime.com/v1/ | http://streams.adobeprimetime.com/v1/ |
 | applicationId | iPhone-app-id | iphone54-75b4-431b-adb2-eb6b9e546013 | - |
 | applicationId | iPad-app-id | ipad5d54-75b4-431b-adb2-eb6b9e546013 | - |
 | applicationId | website-app-id | website4-75b4-431b-adb2-eb6b9e546013 | - |
-| interval voor hartslagen | Interval in seconden om hartslagvraag naar Adobe te verzenden Gelijktijdige Controle | 60 | 60 |
-| interval voor stroomnaleving | Interval in seconden om te controleren of de stream voldoet aan Adobe Gelijktijdige bewaking | 180 | 180 |
+| interval voor hartslagen | Interval in seconden om hartslagaanroepen naar Adobe Concurrency Monitoring te verzenden | 60 | 60 |
+| interval voor stroomnaleving | Interval in seconden om te controleren of de stream voldoet aan Adobe Concurrency Monitoring | 180 | 180 |
 
 
 ## Implementatierichtlijnen

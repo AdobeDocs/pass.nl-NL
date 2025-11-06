@@ -1,13 +1,13 @@
 ---
 title: Plaatsen van CM voor één enkele Aannemer/Beleid en Meerdere Toepassingen
 description: Plaatsen van CM voor één enkele Aannemer/Beleid en Meerdere Toepassingen
-source-git-commit: 59672b44074c472094ed27a23d6bfbcd7654c901
+exl-id: 5c579c7d-f235-4dba-95c2-8485021d9065
+source-git-commit: f30b6814b8a77424c13337d44d7b247105e0bfe2
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '241'
 ht-degree: 0%
 
 ---
-
 
 # Plaatsen van CM voor één enkele Aannemer/Beleid en Meerdere Toepassingen {#imp-cm}
 
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## Gebruik hoofdletters
 
-Programmer P heeft een iPhone-toepassing, een iPad-toepassing en een website. Deze functie moet worden geïntegreerd met de CCM (Adobe Concurency Monitoring) om het aantal gelijktijdige streams tussen deze apps te beperken. De programmeur zal beleid tot stand brengen dat gelijktijdig gebruik zal beperken. We zullen twee voorbeelden bekijken:
+Programmer P heeft een iPhone-toepassing, een iPad-toepassing en een website. Deze moet worden geïntegreerd met Adobe Concurency Monitoring (CM) om het aantal gelijktijdige streams tussen deze apps te beperken. De programmeur zal beleid tot stand brengen dat gelijktijdig gebruik zal beperken. We zullen twee voorbeelden bekijken:
 
 Het eerste beleid bevat één regel die niet meer dan twee gelijktijdige stromen toestaat. De meest recente stream kan worden afgespeeld.
 Het tweede beleid bevat twee regels. Er zijn maximaal 3 gelijktijdige streams van maximaal 2 apparaten mogelijk en de laatste stream kan worden afgespeeld.
@@ -29,7 +29,7 @@ Twee apps + één website worden gebruikt om streams te starten:
 
 1. De gebruiker start één stream vanuit de iPhone-app en één stream vanuit de iPad-app. Dat is in het beleid toegestaan.
 1. De gebruiker start vervolgens een derde stream vanaf de website van de programmeur.
-1. Met de regel in het beleid (max. 2 streams, laatste wins) kan de nieuwste stream dit afspelen **de eerste stream die is gestart, wordt gemarkeerd als niet-conform met het beleid en wordt gestopt.**
+1. De regel in het beleid (maximum 2 stromen, recentste wins) staat de recentste stroom toe om zo **te spelen de eerste stroom die werd begonnen zal als niet-volgzaam met het beleid worden gemerkt en zal worden tegengehouden.**
 
 
 

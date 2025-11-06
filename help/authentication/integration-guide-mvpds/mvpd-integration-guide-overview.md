@@ -78,7 +78,7 @@ Bij het eerste bezoek van een gebruiker aan een programmeertoepassing (TVE) volg
 De volgende stappen schetsen de stappen op hoog niveau in het geval van een integratie van SAML:
 
 1. **de Lading van de Toepassing van de Programmer (Website)**\
-   De gebruiker navigeert aan de toepassing van de Programmer (website), die de Authentificatie van Adobe Pass [&#x200B; REST API V2 &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md) integreert.
+   De gebruiker navigeert aan de toepassing van de Programmer (website), die de Authentificatie van Adobe Pass [ REST API V2 ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md) integreert.
 
 1. **het Beschermde Verzoek van de Inhoud**\
    Wanneer de gebruiker toegang probeert te krijgen tot beveiligde inhoud, geeft de toepassing van de programmeur een lijst van MVPD&#39;s weer waaruit de gebruiker kan kiezen.
@@ -105,7 +105,7 @@ De volgende stappen schetsen de stappen op hoog niveau in het geval van een inte
 In de volgende stappen worden de stappen op hoog niveau beschreven:
 
 1. **Verwerking van het Herkenningsteken van het Middel**\
-   De beschermde inhoud wordt geïdentificeerd door a [&#x200B; middelherkenningsteken &#x200B;](/help/authentication/integration-guide-programmers/features-standard/entitlements/decisions.md#resource-identifier), dat een eenvoudig koord of een complexere structuur kan zijn. Deze id is vooraf gedefinieerd en overeengekomen door de programmeur en de MVPD. De toepassing van de Programmer verzendt het middelherkenningsteken naar de Authentificatie van Adobe Pass [&#x200B; REST API V2 &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md).
+   De beschermde inhoud wordt geïdentificeerd door a [ middelherkenningsteken ](/help/authentication/integration-guide-programmers/features-standard/entitlements/decisions.md#resource-identifier), dat een eenvoudig koord of een complexere structuur kan zijn. Deze id is vooraf gedefinieerd en overeengekomen door de programmeur en de MVPD. De toepassing van de Programmer verzendt het middelherkenningsteken naar de Authentificatie van Adobe Pass [ REST API V2 ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md).
 
 1. **de Controle van de Vergunning van MVPD**\
    De server van de Authentificatie van Adobe Pass communiceert met het de vergunningseindpunt van MVPD gebruikend gestandaardiseerde protocollen.
@@ -114,10 +114,10 @@ In de volgende stappen worden de stappen op hoog niveau beschreven:
    Zodra de validatie is voltooid, bevestigt de MVPD dat de gebruiker (of niet) gerechtigd is om toegang te krijgen tot de inhoud en een reactie terug te sturen naar de Adobe Pass-verificatie.
 
 1. **Besluit en de Symbolische Generatie van Media**\
-   De Authentificatie van Adobe Pass verifieert de reactie, produceert a [&#x200B; besluit &#x200B;](/help/authentication/integration-guide-programmers/features-standard/entitlements/decisions.md) dat in het voorgeheugen ondergebracht wordt, en keert het besluit terug dat een media teken terug naar de toepassing van de Programmer (website) bevat.
+   De Authentificatie van Adobe Pass verifieert de reactie, produceert a [ besluit ](/help/authentication/integration-guide-programmers/features-standard/entitlements/decisions.md) dat in het voorgeheugen ondergebracht wordt, en keert het besluit terug dat een media teken terug naar de toepassing van de Programmer (website) bevat.
 
 1. **de Verificatie van de Toegang van de Inhoud**\
-   De toepassing van de Programmer gebruikt [&#x200B; Symbolische Verifier van Media &#x200B;](/help/authentication/integration-guide-programmers/features-standard/entitlements/media-tokens.md#media-token-verifier) om te bevestigen dat de correcte gebruiker tot de correcte inhoud toegang heeft. Na de validatie krijgt de gebruiker toegang om de beveiligde inhoud weer te geven.
+   De toepassing van de Programmer gebruikt [ Symbolische Verifier van Media ](/help/authentication/integration-guide-programmers/features-standard/entitlements/media-tokens.md#media-token-verifier) om te bevestigen dat de correcte gebruiker tot de correcte inhoud toegang heeft. Na de validatie krijgt de gebruiker toegang om de beveiligde inhoud weer te geven.
 
 ## Entitlement {#understanding-entitlements}
 

@@ -1,14 +1,13 @@
 ---
 title: Aangepaste metagegevens
 description: Aangepaste metagegevens
-source-git-commit: 19ed211c65deaa1fe97ae462065feac9f77afa64
+exl-id: 0cfd1158-8c6c-47c2-b838-5490ff4bf0ce
+source-git-commit: f30b6814b8a77424c13337d44d7b247105e0bfe2
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '367'
 ht-degree: 0%
 
 ---
-
-
 
 # Aangepaste metagegevens {#cm}
 
@@ -40,10 +39,9 @@ Op basis van de verzonden sleutel/waarden kunnen verschillende regels worden vas
 
 1. De klant beslist dat hij de parametergroep zou willen verzenden, die als waarden &quot;SPORTS&quot;en &quot;KIDS&quot;zal hebben.
 1. Vervolgens moet de app het volgende doen:
-   * Voor sportkanalen zou de app bij de initialisatie van de stream verzenden ***type=SPORTS*** als een queryparameter
-   * Voor kanalen met inhoud die gerelateerd is aan kinderen, verzendt de app bij de initialisatie van de stream ***type=KIDS*** als een queryparameter
+   * Voor sportkanalen, bij stroominitialisering zou app ***type=SPORTS*** als vraagparameter verzenden
+   * Voor kanalen met kinderen verwante inhoud, bij stroominitialisering zou app ***type=KIDS*** als vraagparameter verzenden
 1. Dan zou een beleid als dit kunnen worden bepaald:
    * `GROUP by type HAVING COUNT(streamID) < 4) IF type=KIDS`
    * `GROUP by type HAVING COUNT(streamID) < 2) IF type=SPORTS`
 1. Dit zou in feite betekenen dat wanneer een gebruiker naar sport kijkt, hij/zij het niet op meer dan 1 apparaat kan doen, echter wanneer de gebruiker de inhoud van kinderen bekijkt, wordt het bekijken toegestaan op maximum 3 apparaten.
-

@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 Op deze pagina worden nieuwe functies, wijzigingen en bekende problemen met deze release beschreven:
 
@@ -29,4 +29,4 @@ Voegt interne architecturale verbeteringen voor de oplossing van het opslagbehee
 
 ## Geen pakket {#release-package-381}
 
-U kunt iOS/tvOS SDK v3.8.1 van [&#x200B; hier &#x200B;](https://tve.zendesk.com/hc/en-us/articles/204963209) downloaden.
+U kunt iOS/tvOS SDK v3.8.1 van [ hier ](https://tve.zendesk.com/hc/en-us/articles/204963209) downloaden.

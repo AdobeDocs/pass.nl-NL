@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 Op deze pagina worden nieuwe functies, wijzigingen en bekende problemen met deze release beschreven:
 
@@ -34,14 +34,14 @@ Datum van de versie: **10/29/2024 - 10/31/2024**
 
 ##### Code
 
-* REST API V2 verhogingen (aangezien Adobe Pass 3.0 belangrijke versie leverde [&#x200B; REST API V2 &#x200B;](../integration-guide-programmers/rest-apis/rest-api-v2/apis/rest-api-v2-apis-overview.md)).
+* REST API V2 verhogingen (aangezien Adobe Pass 3.0 belangrijke versie leverde [ REST API V2 ](../integration-guide-programmers/rest-apis/rest-api-v2/apis/rest-api-v2-apis-overview.md)).
 * `notBefore` en `notAfter` velden op `/sessions/{code}` toegevoegd om informatie over de geldigheid van verificatiecode te retourneren.
 * Verbeterde platformidentificatie.
 
 ##### Documentatie
 
-* Om met nieuw REST API v2 te beginnen, verwijs naar het [&#x200B; REST API v2 Overzicht &#x200B;](../integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md) document.
+* Om met nieuw REST API v2 te beginnen, verwijs naar het [ REST API v2 Overzicht ](../integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md) document.
 
 ##### Gereedschappen
 
-* Om nieuwe REST API v2 te proberen, verwijs naar de nieuwe pagina van de Authentificatie van Adobe Pass van [&#x200B; Adobe Developer &#x200B;](https://developer.adobe.com/adobe-pass) website.
+* Om nieuwe REST API v2 te proberen, verwijs naar de nieuwe pagina van de Authentificatie van Adobe Pass van [ Adobe Developer ](https://developer.adobe.com/adobe-pass) website.

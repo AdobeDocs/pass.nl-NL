@@ -17,13 +17,13 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 ## Inleiding {#intro}
 
 In dit document worden de methoden en callbacks beschreven die door de Android SDK for Adobe Pass Authentication worden weergegeven en die worden ondersteund met Adobe Pass Authentication 1.7 en hoger. De hier beschreven methodes en callback functies worden bepaald in de AccessEnabler.h en EntitlementDelegate.h kopbaldossiers.
 
-Gelieve te verwijzen naar [&#x200B; https://tve.zendesk.com/hc/en-us/articles/204963219-Android-Native-AccessEnabler-Library &#x200B;](https://tve.zendesk.com/hc/en-us/articles/204963219-Android-Native-AccessEnabler-Library) voor de recentste Android AccessEnabler SDK.
+Gelieve te verwijzen naar [ https://tve.zendesk.com/hc/en-us/articles/204963219-Android-Native-AccessEnabler-Library ](https://tve.zendesk.com/hc/en-us/articles/204963219-Android-Native-AccessEnabler-Library) voor de recentste Android AccessEnabler SDK.
 
 
 **Nota:** het team van de Authentificatie van Adobe Pass moedigt u aan om slechts de Authentificatie van Adobe Pass *openbare* APIs te gebruiken:
@@ -69,7 +69,7 @@ Gelieve te verwijzen naar [&#x200B; https://tve.zendesk.com/hc/en-us/articles/20
 **Parameters:**
 
 - *appContext*: de toepassingscontext van Android.
-- env\_url: voor het testen met de testomgeving van Adobe staging, kan env\_url worden ingesteld op &quot;sp.auth-staging.adobe.com&quot;
+- env\_url: voor tests met de Adobe-testomgeving kunt u env\_url instellen op &quot;sp.auth-staging.adobe.com&quot;
 
 **Afgekeurd:**
 
@@ -86,7 +86,7 @@ Gelieve te verwijzen naar [&#x200B; https://tve.zendesk.com/hc/en-us/articles/20
 
 De serverreactie bevat een lijst van MVPDs samen met wat configuratieinformatie die aan de identiteit van Programmer in bijlage is. De serverreactie wordt intern gebruikt door de code van Toegangsbeheer. Alleen de status van de bewerking (SUCCESS/FAIL) wordt via de callback setRequestorComplete() aan uw toepassing gepresenteerd.
 
-Als de *urls* parameter niet wordt gebruikt, richt de resulterende netwerkvraag de standaarddienstverlener URL: het milieu van de Versie van de Adobe/van de Productie.
+Als de *urls* parameter niet wordt gebruikt, richt de resulterende netwerkvraag de standaarddienstverlener URL: het milieu van de Versie/van de Productie van Adobe.
 
 Als een waarde voor de *urls* parameter wordt verstrekt, richt de resulterende netwerkvraag alle URLs die in de *wordt verstrekt urls* parameter. Alle configuratieverzoeken worden teweeggebracht gelijktijdig in afzonderlijke draden. De eerste responder krijgt voorrang wanneer het compileren van de lijst van MVPDs. Voor elke MVPD in de lijst onthoudt de Access Enabler de URL van de bijbehorende serviceprovider. Alle volgende machtigingsaanvragen worden doorgestuurd naar de URL die is gekoppeld aan de serviceprovider die tijdens de configuratiefase aan de doel-MVPD is gekoppeld.
 
@@ -109,7 +109,7 @@ Als een waarde voor de *urls* parameter wordt verstrekt, richt de resulterende n
 
 - *signedRequestorID*: Een exemplaar van de aanvrageridentiteitskaart die digitaal met uw privé sleutel wordt ondertekend. <!--For more details. see [Registering Native Clients](http://tve.helpdocsonline.com/registering-native-clients)--> .
 
-- *urls*: Facultatieve parameter; door gebrek, wordt de dienstverlener van Adobe gebruikt (http://sp.auth.adobe.com/). Deze serie staat u toe om eindpunten voor authentificatie en vergunningsdiensten te specificeren die door Adobe worden verleend (verschillende instanties zouden voor het zuiveren doeleinden kunnen worden gebruikt). U kunt dit gebruiken om meerdere instanties van Adobe Pass-verificatieproviders op te geven. Daarbij bestaat de MVPD-lijst uit de eindpunten van alle serviceproviders. Elke MVPD is gekoppeld aan de snelste serviceprovider, dat wil zeggen de provider die eerst heeft gereageerd en die die MVPD ondersteunt.
+- *urls*: Facultatieve parameter; door gebrek, wordt de dienstverlener van Adobe gebruikt (http://sp.auth.adobe.com/). Met deze array kunt u eindpunten opgeven voor verificatie- en verificatieservices die door Adobe worden geleverd (verschillende instanties kunnen worden gebruikt voor foutopsporingsdoeleinden). U kunt dit gebruiken om meerdere instanties van Adobe Pass-verificatieproviders op te geven. Daarbij bestaat de MVPD-lijst uit de eindpunten van alle serviceproviders. Elke MVPD is gekoppeld aan de snelste serviceprovider, dat wil zeggen de provider die eerst heeft gereageerd en die die MVPD ondersteunt.
 
 **teweeggebrachte callbacks:** `setRequestorComplete()`
 
@@ -161,9 +161,9 @@ De waarden worden doorgegeven aan de server, onafhankelijk van de huidige flow (
 
 - *opties*: Een Kaart&lt;Koord, Koord> die globale opties van SDK bevatten. Momenteel zijn de volgende opties beschikbaar:
    - **applicationProfile** - het kan worden gebruikt om serverconfiguraties te maken die op deze waarde worden gebaseerd.
-   - **ap_vi** - identiteitskaart van het Experience Cloud (bezoekerID). Deze waarde kan later worden gebruikt voor geavanceerde analyserapporten.
+   - **ap_vi** - identiteitskaart van Experience Cloud (bezoekerID). Deze waarde kan later worden gebruikt voor geavanceerde analyserapporten.
    - **ap_ai** - identiteitskaart van Advertising
-   - **device_info** - de informatie van de Cliënt zoals hier beschreven: [&#x200B; die de verbinding en toepassing van het het informatieapparaat van de cliënt overgaan &#x200B;](/help/authentication/integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md).
+   - **device_info** - de informatie van de Cliënt zoals hier beschreven: [ die de verbinding en toepassing van het het informatieapparaat van de cliënt overgaan ](/help/authentication/integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md).
 
 [Terug naar boven...](#apis)
 
@@ -172,7 +172,7 @@ De waarden worden doorgegeven aan de server, onafhankelijk van de huidige flow (
 
 **Beschrijving:** controleert de authentificatiestatus. Het doet dit door naar een geldig authentificatietoken in de lokale symbolische opslagruimte te zoeken. Deze methode voert geen netwerkvraag uit en wij adviseren roepend het op de belangrijkste draad. Deze wordt door de toepassing gebruikt om de verificatiestatus van de gebruiker te controleren en de gebruikersinterface dienovereenkomstig bij te werken (de gebruikersinterface voor aanmelding/aanmelding wordt dus bijgewerkt). De authentificatiestatus wordt meegedeeld aan de toepassing via [*setAuthenticationStatus ()*](#setAuthNStatus) callback.
 
-Als een MVPD de functie &#39;Verificatie per aanvrager&#39; ondersteunt, kunnen meerdere verificatietokens op een apparaat worden opgeslagen.  Voor details op deze eigenschap, zie de [&#128279;](#$caching) sectie van de Richtlijnen van het 0&rbrace; Caching &lbrace;in het Technische Overzicht van Android.
+Als een MVPD de functie &#39;Verificatie per aanvrager&#39; ondersteunt, kunnen meerdere verificatietokens op een apparaat worden opgeslagen.  Voor details op deze eigenschap, zie de [ sectie van de Richtlijnen van het 0} Caching {in het Technische Overzicht van Android.](#$caching)
 
 | API-aanroep: verificatiestatus controleren |
 | --- |
@@ -192,11 +192,11 @@ Als een MVPD de functie &#39;Verificatie per aanvrager&#39; ondersteunt, kunnen 
 **Beschrijving:** begint het volledige authentificatiewerkschema. Het begint door de authentificatiestatus te controleren. Indien nog niet geverifieerd, wordt de verificatiestroom state-machine gestart:
 
 - Als de laatste authentificatiepoging succesvol was, wordt de selectiefase van MVPD overgeslagen en [*navigateToUrl ()*](#navigagteToUrl) callback wordt teweeggebracht. De toepassing gebruikt deze callback om de controle te concretiseren WebView die de gebruiker met de MVPD login pagina voorstelt.
-- Als de laatste authentificatiepoging niet succesvol was of als de gebruiker uitdrukkelijk het programma opende, [*displayProviderDialog ()*](#displayProviderDialog) callback wordt teweeggebracht. Deze callback wordt door uw toepassing gebruikt om de gebruikersinterface van de MVPD-selectie weer te geven. Ook wordt uw app vereist om de authentificatiestroom te hervatten door de bibliotheek van Inschakelen van de Toegang over de selectie van MVPD van de gebruiker via [&#x200B; te informeren setSelectedProvider () &#x200B;](#setSelectedProvider) methode.
+- Als de laatste authentificatiepoging niet succesvol was of als de gebruiker uitdrukkelijk het programma opende, [*displayProviderDialog ()*](#displayProviderDialog) callback wordt teweeggebracht. Deze callback wordt door uw toepassing gebruikt om de gebruikersinterface van de MVPD-selectie weer te geven. Ook wordt uw app vereist om de authentificatiestroom te hervatten door de bibliotheek van Inschakelen van de Toegang over de selectie van MVPD van de gebruiker via [ te informeren setSelectedProvider () ](#setSelectedProvider) methode.
 
 Aangezien de gebruikersgegevens op de MVPD-aanmeldingspagina worden gecontroleerd, moet uw toepassing de meervoudige omleidingsbewerkingen controleren die plaatsvinden terwijl de gebruiker op de MVPD-aanmeldingspagina wordt geverifieerd. Wanneer de correcte geloofsbrieven zijn ingegaan, wordt de controle WebView opnieuw gericht aan een douane URL die door de {*constante wordt bepaald 0} AccessEnabler.ADOBEPASS\_REDIRECT\_URL.* Deze URL is niet bedoeld om door WebView te worden geladen. De toepassing moet deze URL onderscheppen en deze gebeurtenis interpreteren als een signaal dat de aanmeldingsfase is voltooid. Het zou dan controle aan Toegang moeten overhandigen Enabler om de authentificatiestroom te voltooien (door *te roepen getAuthenticationToken ()* methode).
 
-Als een MVPD de functie &#39;Verificatie per aanvrager&#39; ondersteunt, kunnen meerdere verificatietokens worden opgeslagen op een apparaat (één per programmeur).  Voor details op deze eigenschap, zie de [&#128279;](#$caching) sectie van de Richtlijnen van het 0&rbrace; Caching &lbrace;in het Technische Overzicht van Android.
+Als een MVPD de functie &#39;Verificatie per aanvrager&#39; ondersteunt, kunnen meerdere verificatietokens worden opgeslagen op een apparaat (één per programmeur).  Voor details op deze eigenschap, zie de [ sectie van de Richtlijnen van het 0} Caching {in het Technische Overzicht van Android.](#$caching)
 
 Tot slot wordt de authentificatiestatus meegedeeld aan de toepassing via *setAuthenticationStatus ()* callback.
 
@@ -596,7 +596,7 @@ Er zijn twee soorten meta-gegevens beschikbaar aan Programmeurs:
       - `userID` - De gebruikers-id. Als een MVPD subaccounts ondersteunt en de gebruiker niet de hoofdaccount is, zal `userID` anders zijn dan `householdID` .
 
       - `channelID` - Een lijst met kanalen die de gebruiker mag bekijken
-   - Als de toets `METADATA_KEY_DEVICE_ID` is, wordt de query uitgevoerd om de huidige apparaat-id te verkrijgen. Deze functie is standaard uitgeschakeld en programmeurs moeten contact opnemen met de Adobe voor informatie over de mogelijkheden en kosten.
+   - Als de toets `METADATA_KEY_DEVICE_ID` is, wordt de query uitgevoerd om de huidige apparaat-id te verkrijgen. Deze functie is standaard uitgeschakeld en programmeurs dienen contact op te nemen met Adobe voor informatie over activering en kosten.
    - Als de sleutel `METADATA_KEY_TTL_AUTHZ` is en args een SerializableNameValuePair voorwerp met naam = `METADATA_ARG_RESOURCE_ID` en waarde = `[resource_id]` bevat, dan wordt de vraag gemaakt om de vervaltijd van het toestemmingstoken te verkrijgen verbonden aan de gespecificeerde middel.
    - Als de sleutel `METADATA_KEY_TTL_AUTHN` is, wordt de vraag gemaakt om de vervaltijd van het authentificatietoken te verkrijgen.
 
@@ -614,7 +614,7 @@ Er zijn twee soorten meta-gegevens beschikbaar aan Programmeurs:
 
 **teweeggebrachte callbacks:** [`setMetadataStatus()`](#setMetadaStatus)
 
-**Meer Informatie:** [&#x200B; Metagegevens van de Gebruiker &#x200B;](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata.md)
+**Meer Informatie:** [ Metagegevens van de Gebruiker ](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata.md)
 
 [Terug naar Android API...](#api)
 
@@ -676,7 +676,7 @@ Deze waarde is null wanneer de aanvraag is ingediend voor eenvoudige metagegeven
 
 **teweeggebracht door:** [`getMetadata()`](#getMetadata)
 
-**Meer Informatie:** [&#x200B; Metagegevens van de Gebruiker &#x200B;](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata.md)
+**Meer Informatie:** [ Metagegevens van de Gebruiker ](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata.md)
 
 
 [Terug naar Android API...](#api)
@@ -706,7 +706,7 @@ Toegangsactivering activeert een extra callback die niet noodzakelijk met de mac
 
 >[!WARNING]
 >
-> Het apparatentype en het werkende systeem worden afgeleid door het gebruik van een openbare bibliotheek van Java ([&#x200B; http://java.net/projects/user-agent-utils &#x200B;](http://java.net/projects/user-agent-utils)) en het koord van de gebruikersagent. Deze informatie wordt alleen verstrekt als een ruwe manier om operationele meetgegevens in apparatencategorieën op te delen, maar die Adobe kan geen verantwoordelijkheid voor onjuiste resultaten nemen. Gebruik de nieuwe functionaliteit.
+> Het apparatentype en het werkende systeem worden afgeleid door het gebruik van een openbare bibliotheek van Java ([ http://java.net/projects/user-agent-utils ](http://java.net/projects/user-agent-utils)) en het koord van de gebruikersagent. Houd er rekening mee dat deze informatie alleen wordt verstrekt als een grove manier om operationele meetgegevens in apparaatcategorieën op te delen, maar dat Adobe geen verantwoordelijkheid kan nemen voor onjuiste resultaten. Gebruik de nieuwe functionaliteit.
 
 
 - Mogelijke waarden voor apparaattype:

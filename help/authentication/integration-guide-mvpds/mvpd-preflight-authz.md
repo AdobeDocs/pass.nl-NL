@@ -22,7 +22,7 @@ ht-degree: 0%
 De Authentificatie van Adobe Pass kan Preflight Authorization momenteel op twee manieren voor MVPDs, of via AuthN reactiekenmerken of via een multichannel verzoek AuthZ steunen.  In de volgende scenario&#39;s worden de kosten/baten beschreven van de verschillende manieren waarop u Preflight-autorisatie kunt implementeren:
 
 * **het Hoogste scenario van het Geval** - MVPD verstrekt de lijst van vooraf erkende middelen tijdens de vergunningsfase (Multikanaal AuthZ).
-* **het slechtste scenario van het Geval** - als een MVPD geen vorm van veelvoudige middelenvergunning steunt, voert de server van de Authentificatie van Adobe Pass een vergunningsvraag aan MVPD voor elk middel in de middelenlijst uit. Dit scenario heeft een effect (in verhouding tot het aantal middelen) op de reactietijd voor het Preflight vergunningsverzoek. Hierdoor kan de belasting van zowel Adobe- als MVPD-servers toenemen, wat prestatieproblemen veroorzaakt. Ook zal het vergunningsverzoeken/reactiegebeurtenissen zonder de daadwerkelijke behoefte aan een spel produceren.
+* **het slechtste scenario van het Geval** - als een MVPD geen vorm van veelvoudige middelenvergunning steunt, voert de server van de Authentificatie van Adobe Pass een vergunningsvraag aan MVPD voor elk middel in de middelenlijst uit. Dit scenario heeft een effect (in verhouding tot het aantal middelen) op de reactietijd voor het Preflight vergunningsverzoek. Hierdoor kan de belasting van zowel Adobe- als MVPD-servers toenemen, wat prestatieproblemen kan veroorzaken. Ook zal het vergunningsverzoeken/reactiegebeurtenissen zonder de daadwerkelijke behoefte aan een spel produceren.
 * **Vervangen** - MVPD verstrekt de lijst van vooraf gemachtigde middelen tijdens de authentificatiefase, zodat zal er geen netwerkvraag nodig zijn, zelfs niet de preflight verzoek, aangezien de lijst op de cliënt in het voorgeheugen ondergebracht is.
 
 Hoewel MVPDs geen Preflight vergunning moet steunen, beschrijven de volgende secties sommige Preflight vergunningsmethodes die de Authentificatie van Adobe Pass kan steunen, alvorens terug te vallen naar het worstcasescenario hierboven.
@@ -117,7 +117,7 @@ De Authentificatie van Adobe Pass ontvangt de lijst van middelen van de toepassi
 
 Sommige MVPDs hebben toestemmingseindpunten die vergunning voor veelvoudige middelen in één verzoek steunen, maar zij vallen niet onder het scenario dat in Multikanaal AuthZ wordt beschreven. Deze specifieke MVPDs vereist douanewerk.
 
-De Adobe kan veelvoudige kanaalvergunning zonder veranderingen in de bestaande implementatie ook steunen.  Deze aanpak moet worden herzien tussen Adobe en het technische team van MVPD om ervoor te zorgen dat het naar behoren functioneert.
+Adobe kan ook ondersteuning bieden voor meerdere kanalen zonder wijzigingen in de bestaande implementatie.  Deze aanpak moet worden herzien tussen Adobe en het technische team van MVPD om ervoor te zorgen dat het naar behoren functioneert.
 
 ## MVPD&#39;s die Preflight-autorisatie ondersteunen {#mvpds-supp-preflight-authz}
 

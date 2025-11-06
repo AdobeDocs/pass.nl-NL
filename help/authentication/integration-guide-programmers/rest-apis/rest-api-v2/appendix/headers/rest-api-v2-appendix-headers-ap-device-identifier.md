@@ -83,7 +83,7 @@ AP-Device-Identifier: fingerprint YmEyM2QxNDEtZDcxNS01NjFjLTk0ZjQtZTllNGM5NjZiMW
 >
 > De documentatiebronnen zijn niet volledig en vereisen mogelijk aanvullende wijzigingen om in uw project te werken.
 > 
-> Ongeacht uw daadwerkelijke implementatie, moet de `AP-Device-Identifier` kopbal een waarde bevatten die zoals die in de [&#x200B; wordt beschreven Richtlijnen &#x200B;](#directives) sectie.
+> Ongeacht uw daadwerkelijke implementatie, moet de `AP-Device-Identifier` kopbal een waarde bevatten die zoals die in de [ wordt beschreven Richtlijnen ](#directives) sectie.
 
 ### Browsers {#browsers}
 
@@ -95,17 +95,17 @@ _(*) wij adviseren om een bibliotheek of de dienst te integreren die browser of 
 
 #### iOS en iPadOS {#ios-ipados}
 
-Om de `AP-Device-Identifier` kopbal voor apparaten te bouwen die [&#x200B; iOS of iPadOS &#x200B;](https://developer.apple.com/documentation/ios-ipados-release-notes) in werking stellen, kunt u naar de volgende documenten verwijzen:
+Om de `AP-Device-Identifier` kopbal voor apparaten te bouwen die [ iOS of iPadOS ](https://developer.apple.com/documentation/ios-ipados-release-notes) in werking stellen, kunt u naar de volgende documenten verwijzen:
 
-* Apple ontwikkelaarsdocumentatie voor [&#x200B; identifierForVendor &#x200B;](https://developer.apple.com/documentation/uikit/uidevice/1620059-identifierforvendor).
+* Apple ontwikkelaarsdocumentatie voor [ identifierForVendor ](https://developer.apple.com/documentation/uikit/uidevice/1620059-identifierforvendor).
 
 _(*) wij adviseren om een hash functie SHA-256 op OS toe te passen verstrekte waarde._
 
 #### Android {#android}
 
-Om de `AP-Device-Identifier` kopbal voor apparaten te bouwen die [&#x200B; Android &#x200B;](https://developer.android.com/about/versions) in werking stellen, kunt u naar de volgende documenten verwijzen:
+Om de `AP-Device-Identifier` kopbal voor apparaten te bouwen die [ Android ](https://developer.android.com/about/versions) in werking stellen, kunt u naar de volgende documenten verwijzen:
 
-* Android ontwikkelaarsdocumentatie voor [&#x200B; ANDROID_ID &#x200B;](https://developer.android.com/reference/android/provider/Settings.Secure#ANDROID_ID).
+* Android ontwikkelaarsdocumentatie voor [ ANDROID_ID ](https://developer.android.com/reference/android/provider/Settings.Secure#ANDROID_ID).
 
 _(*) wij adviseren om een hash functie SHA-256 op OS toe te passen verstrekte waarde._
 
@@ -113,25 +113,25 @@ _(*) wij adviseren om een hash functie SHA-256 op OS toe te passen verstrekte wa
 
 #### tvOS {#tvos}
 
-Om de `AP-Device-Identifier` kopbal voor apparaten te bouwen die [&#x200B; tvOS &#x200B;](https://developer.apple.com/documentation/tvos-release-notes) in werking stellen, kunt u naar de volgende documenten verwijzen:
+Om de `AP-Device-Identifier` kopbal voor apparaten te bouwen die [ tvOS ](https://developer.apple.com/documentation/tvos-release-notes) in werking stellen, kunt u naar de volgende documenten verwijzen:
 
-* Apple ontwikkelaarsdocumentatie voor [&#x200B; identifierForVendor &#x200B;](https://developer.apple.com/documentation/uikit/uidevice/1620059-identifierforvendor).
+* Apple ontwikkelaarsdocumentatie voor [ identifierForVendor ](https://developer.apple.com/documentation/uikit/uidevice/1620059-identifierforvendor).
 
 _(*) wij adviseren om een hash functie SHA-256 op OS toe te passen verstrekte waarde._
 
 #### Fire OS {#fireos}
 
-Om de `AP-Device-Identifier` kopbal voor apparaten te bouwen die [&#x200B; Vuur OS &#x200B;](https://developer.amazon.com/docs/fire-tv/fire-os-overview.html) in werking stellen, kunt u naar de volgende documenten verwijzen:
+Om de `AP-Device-Identifier` kopbal voor apparaten te bouwen die [ Vuur OS ](https://developer.amazon.com/docs/fire-tv/fire-os-overview.html) in werking stellen, kunt u naar de volgende documenten verwijzen:
 
-* Android ontwikkelaarsdocumentatie voor [&#x200B; ANDROID_ID &#x200B;](https://developer.android.com/reference/android/provider/Settings.Secure#ANDROID_ID).
+* Android ontwikkelaarsdocumentatie voor [ ANDROID_ID ](https://developer.android.com/reference/android/provider/Settings.Secure#ANDROID_ID).
 
 _(*) wij adviseren om een hash functie SHA-256 op OS toe te passen verstrekte waarde._
 
 #### Roku OS {#rokuos}
 
-Om de `AP-Device-Identifier` kopbal voor apparaten te bouwen die [&#x200B; Roku OS &#x200B;](https://developer.roku.com/docs/developer-program/release-notes/roku-os-release-notes.md) in werking stellen, kunt u naar de volgende documenten verwijzen:
+Om de `AP-Device-Identifier` kopbal voor apparaten te bouwen die [ Roku OS ](https://developer.roku.com/docs/developer-program/release-notes/roku-os-release-notes.md) in werking stellen, kunt u naar de volgende documenten verwijzen:
 
-* De ontwikkelaarsdocumentatie van Roku voor [&#x200B; GetChannelClientId &#x200B;](https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md#getchannelclientid-as-string).
+* De ontwikkelaarsdocumentatie van Roku voor [ GetChannelClientId ](https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md#getchannelclientid-as-string).
 
 _(*) wij adviseren om een hash functie SHA-256 op OS toe te passen verstrekte waarde._
 

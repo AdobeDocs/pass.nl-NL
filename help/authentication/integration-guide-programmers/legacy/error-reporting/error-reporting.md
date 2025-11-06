@@ -4,7 +4,7 @@ description: Fout bij rapporteren
 exl-id: a52bd2cf-c712-40a2-a25e-7d9560b46ba6
 source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
 workflow-type: tm+mt
-source-wordcount: '3012'
+source-wordcount: '3011'
 ht-degree: 0%
 
 ---
@@ -17,15 +17,15 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 ## Overzicht {#overview}
 
 Foutrapportage in Adobe Pass-verificatie wordt momenteel op twee verschillende manieren geïmplementeerd:
 
-* **Geavanceerde Fout die** meldt implementor registreert een foutencallback in het geval van [&#x200B; AccessEnabler JavaScript SDK &#x200B;](#accessenabler-javascript-sdk) of voert een genoemde interfacemethode uit &quot;`status`&quot;in het geval van [&#x200B; AccessEnabler iOS/tvOS SDK &#x200B;](#accessenabler-ios-tvos-sdk) en [&#x200B; AccessEnabler Android SDK &#x200B;](#accessenabler-android-sdk), om geavanceerde foutenrapportering te ontvangen. De fouten worden gecategoriseerd in **Informatie**, **Waarschuwing**, en **de types van Fout**. Dit het melden systeem is asynchroon **, in die** er geen garantie van de orde is waarin de veelvoudige fouten **zullen worden teweeggebracht.**  Voor details op het geavanceerde fout die systeem melden, zie [&#x200B; Geavanceerde Fout die &#x200B;](#advanced-error-reporting) sectie meldt.
+* **Geavanceerde Fout die** meldt implementor registreert een foutencallback in het geval van [ AccessEnabler JavaScript SDK ](#accessenabler-javascript-sdk) of voert een genoemde interfacemethode uit &quot;`status`&quot;in het geval van [ AccessEnabler iOS/tvOS SDK ](#accessenabler-ios-tvos-sdk) en [ AccessEnabler Android SDK ](#accessenabler-android-sdk), om geavanceerde foutenrapportering te ontvangen. De fouten worden gecategoriseerd in **Informatie**, **Waarschuwing**, en **de types van Fout**. Dit het melden systeem is asynchroon **, in die** er geen garantie van de orde is waarin de veelvoudige fouten **zullen worden teweeggebracht.**  Voor details op het geavanceerde fout die systeem melden, zie [ Geavanceerde Fout die ](#advanced-error-reporting) sectie meldt.
 
-* **Oorspronkelijke Fout die -** een statisch rapporterend systeem meldt waarin de foutenmeldingen tot specifieke callback functies worden overgegaan wanneer de specifieke verzoeken ontbreken. De fouten worden gegroepeerd in generische, authentificatie, en toestemmingstypes. Voor de lijst van fout die op in het originele systeem wordt gemeld, zie de [&#x200B; Oorspronkelijke Fout die &#x200B;](#original-error-reporting) sectie meldt.
+* **Oorspronkelijke Fout die -** een statisch rapporterend systeem meldt waarin de foutenmeldingen tot specifieke callback functies worden overgegaan wanneer de specifieke verzoeken ontbreken. De fouten worden gegroepeerd in generische, authentificatie, en toestemmingstypes. Voor de lijst van fout die op in het originele systeem wordt gemeld, zie de [ Oorspronkelijke Fout die ](#original-error-reporting) sectie meldt.
 
 
 ## Geavanceerde foutrapportage {#advanced-error-reporting}
@@ -37,7 +37,7 @@ Foutrapportage in Adobe Pass-verificatie wordt momenteel op twee verschillende m
 
 >[!IMPORTANT]
 >
->De oude [&#x200B; Oorspronkelijke Fout die &#x200B;](#original-error-reporting) API meldt zal blijven werken aangezien het vroeger deed, de geavanceerde fout meldt breekt niet de functionaliteit, maar de originele fout meldt zal geen updates meer ontvangen. Alle nieuwe fouten en updates zullen aan het geavanceerde fout rapporteringssysteem gebeuren.
+>De oude [ Oorspronkelijke Fout die ](#original-error-reporting) API meldt zal blijven werken aangezien het vroeger deed, de geavanceerde fout meldt breekt niet de functionaliteit, maar de originele fout meldt zal geen updates meer ontvangen. Alle nieuwe fouten en updates zullen aan het geavanceerde fout rapporteringssysteem gebeuren.
 
 ### AccessEnabled JavaScript SDK {#accessenabler-javascript-sdk}
 
@@ -46,7 +46,7 @@ Het nieuwe fout rapporterend systeem wordt verlaten facultatief, daarom kan de i
 
 #### Implementatie {#access-enab-js-imp}
 
-yourErrorHandler(errorData:Object)
+yourErrorHandler(errorData :Object)
 
 
 De callback-functie van de fouthandler ontvangt één object (een kaart) met de volgende structuur:
@@ -62,7 +62,7 @@ De callback-functie van de fouthandler ontvangt één object (een kaart) met de 
     }
 ```
 
-### 1. Binding {#bind}
+### &#x200B;1. Binding {#bind}
 
 **`.bind(eventType:String, handlerName:String):void`**
 
@@ -85,7 +85,7 @@ accessEnabler.bind('errorEvent', 'errorLogger');
 Vanwege technische beperkingen kunt u geen sluiting of anonieme functie binden. U moet de naam van de methode opgeven in de tweede parameter.
 
 
-### 2. Binding opheffen {#unbind}
+### &#x200B;2. Binding opheffen {#unbind}
 
 **`.unbind(eventType:String, handlerName:String=null):void`**
 
@@ -112,7 +112,7 @@ Het nieuwe systeem voor foutenrapportage is verplicht, daarom moet de uitvoerder
 
 #### Implementatie {#accessenab-ios-tvossdk-imp}
 
-Een uitvoerder moet met het volgende **&#x200B;**&#x200B;protocol in overeenstemming zijn EntitlementStatus:
+Een uitvoerder moet met het volgende **** protocol in overeenstemming zijn EntitlementStatus:
 
 **EntitlementStatus.h**
 
@@ -242,12 +242,12 @@ In de volgende tabel worden de foutcodes weergegeven en beschreven die door de n
 | VSA404 | Info | De machtiging Application Video Subscriber Account is onbepaald. | Stimuleer gebruikers die geen toestemming geven om abonnementsgegevens te openen door de voordelen van de Single Sign-On (SSO) gebruikerservaring uit te leggen. | De gebruiker kan zijn besluit wijzigen door naar de toepassingsinstellingen (toegang tot tv-provider) of naar het gedeelte van Settings -> TV-provider op iOS/iPadOS of Settings -> Accounts -> TV-provider op tvOS te gaan. | nvt | Ja | nvt |
 | VSA503 | Info | Verzoek om metagegevens van account voor toepassingsvideo-abonnee is mislukt. | Het MVPD-eindpunt reageert niet. De toepassing kan terugvallen op de normale verificatiestroom. | nvt | nvt | Ja | nvt |
 | 500 | Fout | Interne fout | Het gebruik AccessEnablerDebug en inspecteert zuivert logboeken (console.log output) om te bepalen wat verkeerd ging. | nvt | Ja | Ja | nvt |
-| SEC403 | Fout | Domeinbeveiligingsfout. De aanvrager gebruikt een ongeldig domein. Alle domeinen die door een bepaalde identiteitskaart van de Aanvrager worden gebruikt moeten door Adobe worden gewhitelliseerd. | - De AccessEnabler alleen laden vanuit de lijst met toegestane domeinen <br> <br> - Neem contact op met de Adobe om de whitelist van het domein te beheren voor de gebruikte id van de aanvrager <br> <br> - iOS: controleer of u het juiste certificaat gebruikt en of de handtekening juist is gemaakt | nvt | nvt | Ja | nvt |
+| SEC403 | Fout | Domeinbeveiligingsfout. De aanvrager gebruikt een ongeldig domein. Alle domeinen die door een bepaalde identiteitskaart van de Aanvrager worden gebruikt moeten door Adobe worden gewhitelliseerd. | - De AccessEnabler alleen laden vanuit de lijst met toegestane domeinen <br> <br> - Neem contact op met Adobe om de whitelist van het domein te beheren voor de gebruikte id van de aanvrager <br> <br> - iOS: controleer of u het juiste certificaat gebruikt en of de handtekening juist is gemaakt | nvt | nvt | Ja | nvt |
 | SEC412 | Waarschuwing | [ Beschikbaar in Versie 2.5 ] identiteitskaart van het Apparaat past niet aan. Dit kan gebeuren wanneer het onderliggende platform zijn identiteitskaart van het Apparaat verandert. In dit geval worden de bestaande tokens gewist en wordt de gebruiker niet meer geverifieerd. Merk op dat dit rechtmatig gebeurt wanneer de gebruiker JS SDK gebruikt en zwerft (op JS is client-IP onderdeel van de apparaat-id). Anders zou dit een aanwijzing kunnen zijn van een poging tot fraude - een poging om tokens van een ander apparaat te kopiëren. | - Controleer het aantal waarschuwingen. Als ze zonder duidelijke reden pieken (geen recente browserupdates, nieuwe besturingssystemen), kan dit een aanwijzing zijn voor pogingen tot fraude.  <br> <br> - (Optioneel) Informeer de gebruiker dat hij zich opnieuw moet aanmelden. | Meld u opnieuw aan. | Ja | Ja | Ja van 3.2 |
 | SEC420 | Fout | HTTP-beveiligingsfout bij communicatie met Adobe Pass-verificatieservers. Deze fout treedt doorgaans op wanneer spoofing/proxy&#39;s zijn geïnstalleerd. | - Laad `[https://]{SP_FQDN\}` in browser en keur manueel de SSL certificaten, bijvoorbeeld, **https://api.auth.adobe.com** of **https://api.auth-staging.adobe.com** goed <br> <br> - De proxycerts markeren als vertrouwd | Als dit voor een regelmatige gebruiker voorkomt, is het een aanwijzing van een mogelijke man-in-de-middenaanval! | Ja | Ja | Ja van 3.2 |
 | CFG100 | Waarschuwing | Datum/tijd/tijdzone van de clientcomputer is niet correct ingesteld. Dit zal waarschijnlijk leiden tot verificatie-/vergunningsfouten. | - Informeer de gebruiker om de juiste tijd in te stellen. <br> <br> Voer handelingen uit om machtigingsstromen te voorkomen, aangezien deze waarschijnlijk mislukken. | Stel de juiste datum/tijd in. | Ja | Ja | Ja van 3.2 |
 | CFG400 | Fout | Er is een ongeldige aanvrager-id opgegeven. | De ontwikkelaar MOET een geldige aanvrager-id opgeven. | nvt | Ja | Ja | Ja van 3.2 |
-| CFG404 | Fout | De Adobe Pass-verificatieservers zijn niet gevonden. Dit kan in drie gevallen gebeuren: <br><br> - De ontwikkelaar heeft een ongeldige spoofing. <br><br> - De gebruiker heeft netwerkproblemen en kan de Adobe Pass-verificatiedomeinen niet bereiken. <br><br> -Adobe Pass-verificatieservers zijn onjuist geconfigureerd. <br><br>  **Nota:** op Firefox, zal CFG400 in plaats van CFG404 (browser beperking) verschijnen | - Spoofing controleren. <br><br> - Controleer de netwerk-/DNS-instellingen. <br><br> -Inform Adobe. | Controleer de netwerk-/DNS-instellingen. | Ja | Ja | Ja van 3.2 |
+| CFG404 | Fout | De Adobe Pass-verificatieservers zijn niet gevonden. Dit kan in drie gevallen gebeuren: <br><br> - De ontwikkelaar heeft een ongeldige spoofing. <br><br> - De gebruiker heeft netwerkproblemen en kan de Adobe Pass-verificatiedomeinen niet bereiken. <br><br> -Adobe Pass-verificatieservers zijn onjuist geconfigureerd. <br><br>  **Nota:** op Firefox, zal CFG400 in plaats van CFG404 (browser beperking) verschijnen | - Spoofing controleren. <br><br> - Controleer de netwerk-/DNS-instellingen. <br><br> -Informeer Adobe. | Controleer de netwerk-/DNS-instellingen. | Ja | Ja | Ja van 3.2 |
 | CFG410 | Fout | AccessEnabler is te oud. | Informeer de gebruiker caches te wissen. | Wis de browsercache. | Ja | nvt | Ja van 3.2 |
 | CFG5xx | Fout | Er treden interne fouten op bij de Adobe Pass-verificatieservers. xx kan een willekeurig getal zijn. | - Informeer de gebruiker dat de Adobe Pass-verificatie niet beschikbaar is. <br><br> - Adobe Pass-verificatie omzeilen. <br> <br> - Informeer Adobe. | Probeer het later. | Ja | Ja | Ja van 3.2 |
 | N000 | Info | De gebruiker is niet geverifieerd. | nvt | Aanmelden. | Ja | Ja | Ja van 3.2 |
@@ -258,7 +258,7 @@ In de volgende tabel worden de foutcodes weergegeven en beschreven die door de n
 | N010 | Waarschuwing | De gebruiker werd voor authentiek verklaard terwijl de authenticate-all degradatieregel op zijn plaats voor de geselecteerde MVPD was. | De gebruiker optioneel laten weten dat hij &quot;gratis&quot; toegang krijgt vanwege MVPD-problemen. | nvt | Ja | Ja | Ja van 3.2 |
 | N011 | Info | De gebruiker is geverifieerd met TempPass. | - Informeer de gebruiker. <br> <br> - U kunt desgewenst een lijst met normale MVPD&#39;s presenteren. | Meld u optioneel aan bij uw gewone MVPD. | Ja | Ja | Ja van 3.2 |
 | N111 | Waarschuwing | Verlopen TempPass. | - Informeer de gebruiker. <br> <br> - Presenteer een lijst van regelmatige MVPDs. <br> <br> - Verberg de optie TempPass. | Meld u aan bij uw normale MVPD. | Ja | Ja | Ja van 3.2 |
-| N130 | Fout | **teken van de Authentificatie niet gevonden op zitting.** Dit kan een van de volgende oorzaken hebben: <br> <br> 1 Browser heeft (derde) cookies uitgeschakeld (niet van toepassing op AccessEnabler JavaScript SDK versie 4.x) <br> <br> 2. Browser heeft Enable cross-site tracking (Safari 11+) <br> <br> 3. Sessie is verlopen <br> <br> 4. De programmeur roept verificatie-API&#39;s op onjuiste wijze achter elkaar aan <br> <br> OPMERKING: deze foutcode is niet beschikbaar voor omleidingsstromen van volledige pagina&#39;s. | 1. Vraag de gebruiker of hij cookies van derden wil inschakelen <br> <br> 2. Gebruiker vragen om het bijhouden van meerdere sites uit te schakelen <br> <br> 3. Vraag de gebruiker om opnieuw te verifiëren <br> <br> 4. API&#39;s aanroepen in de juiste volgorde | 1. Cookies (van derden) inschakelen <br> <br> 2. Spatiëring tussen sites uitschakelen <br> <br> 3. Opnieuw verifiëren <br> <br> 4. NVT | Ja | Ja | Ja van 3.2 |
+| N130 | Fout | **teken van de Authentificatie niet gevonden op zitting.** Dit kan een van de volgende oorzaken hebben: <br> <br> 1 Browser heeft (derde) cookies uitgeschakeld (niet van toepassing op AccessEnabler JavaScript SDK versie 4.x) <br> <br> 2. Browser heeft Enable cross-site tracking (Safari 11+) <br> <br> 3. Sessie is verlopen <br> <br> 4. De programmeur roept verificatie-API&#39;s op onjuiste wijze achter elkaar aan <br> <br> OPMERKING: deze foutcode is niet beschikbaar voor omleidingsstromen van volledige pagina&#39;s. | &#x200B;1. Vraag de gebruiker of hij cookies van derden wil inschakelen <br> <br> 2. Gebruiker vragen om het bijhouden van meerdere sites uit te schakelen <br> <br> 3. Vraag de gebruiker om opnieuw te verifiëren <br> <br> 4. API&#39;s aanroepen in de juiste volgorde | &#x200B;1. Cookies (van derden) inschakelen <br> <br> 2. Spatiëring tussen sites uitschakelen <br> <br> 3. Opnieuw verifiëren <br> <br> 4. NVT | Ja | Ja | Ja van 3.2 |
 | N500 | Fout | Interne fout. <br> <br> Opmerking: dit is de &quot;Algemene verificatiefout&quot; en &quot;Interne verificatiefout&quot; van het oorspronkelijke foutsysteem. Deze fout zal uiteindelijk worden opgeheven. | Het gebruik AccessEnablerDebug en inspecteert zuivert logboeken (console.log output) om te bepalen wat verkeerd ging. | nvt | Ja | Ja | nvt |
 | R401 | Fout | Er is een fout opgetreden tijdens het verkrijgen van een toegangstoken. <br> <br> Opmerking: dit is een onherstelbare fout. Vertel de gebruiker dat de toepassing niet beschikbaar is. | - iOS: controleer de softwareinstructie en aangepaste schema&#39;s in uw toepassing. <br> <br> - JavaScript: controleer de softwareinstructie in uw websitetoepassing. <br> <br> Een ticket openen met Zendesk en de gebruiker laten weten dat het systeem tijdelijk niet beschikbaar is | nvt | Ja van v4.0 | Ja vanaf v3.0 | Ja van 3.2 |
 | R400 | Fout | De toepassing is niet geregistreerd. De software-instructie is ongeldig of is ingetrokken. <br> <br> Opmerking: dit is een onherstelbare fout. Vertel de gebruiker dat de toepassing niet beschikbaar is. | - iOS: controleer de softwareinstructie en aangepaste schema&#39;s in uw toepassing. <br> <br> - JavaScript: controleer de softwareinstructie in uw websitetoepassing. <br> <br> Een ticket openen met Zendesk en de gebruiker laten weten dat het systeem tijdelijk niet beschikbaar is | nvt | Ja van v4.0 | Ja vanaf v3.0 | Ja van 3.2 |
@@ -285,10 +285,10 @@ In de volgende tabel worden de foutcodes weergegeven en beschreven die door de n
 
 In deze sectie wordt het oorspronkelijke systeem voor foutrapportage beschreven, samen met de oorspronkelijke foutcodes. In het oorspronkelijke systeem voor foutrapportage geeft de AccessEnabler fouten door aan deze twee callback-functies: `setAuthenticationStatus()` na een aanroep van `checkAuthentication()`; `tokenRequestFailed()` , na de mislukking van een aanroep van `checkAuthorization()` of `getAuthorization()` .
 
-De oorspronkelijke foutrapportage en status-API&#39;s werken nog steeds precies zo als voorheen. De oorspronkelijke API&#39;s voor foutrapportage worden echter niet bijgewerkt. Alle nieuwe fout die en updates op de oude fouten melden zullen slechts in de nieuwe [&#x200B; Geavanceerde Fout die systeem &#x200B;](#advanced-error-reporting) meldt worden weerspiegeld.
+De oorspronkelijke foutrapportage en status-API&#39;s werken nog steeds precies zo als voorheen. De oorspronkelijke API&#39;s voor foutrapportage worden echter niet bijgewerkt. Alle nieuwe fout die en updates op de oude fouten melden zullen slechts in de nieuwe [ Geavanceerde Fout die systeem ](#advanced-error-reporting) meldt worden weerspiegeld.
 
 
-Voor voorbeelden van het gebruiken van het originele fout meldend systeem, zie de [&#x200B; JavaScript API Verwijzing &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/javascript-sdk/javascript-sdk-api-reference.md):[&#x200B; setAuthenticationStatus () &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/javascript-sdk/javascript-sdk-api-reference.md#set-authn-status-isauthn-error) en [&#x200B; tokenRequestFailed () &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/javascript-sdk/javascript-sdk-api-reference.md#token-request-failed-error-msg) functies, [&#x200B; iOS/tvOS API Verwijzing &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md): [&#x200B; setAuthenticationStatus () &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/javascript-sdk/javascript-sdk-api-reference.md#setAuthNStatus) en [&#x200B; tokentRequestFailed () {111, &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/javascript-sdk/javascript-sdk-api-reference.md#tokenReqFailed) 2} Android API Verwijzing [&#128279;](/help/authentication/integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-api-reference.md): [&#x200B; setAuthenticationStatus () &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-api-reference.md#setAuthNStatus) en [&#x200B; tokenRequestFailed () &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-api-reference.md#setAuthNStatus#tokenRequestFailed).
+Voor voorbeelden van het gebruiken van het originele fout meldend systeem, zie de [ JavaScript API Verwijzing ](/help/authentication/integration-guide-programmers/legacy/sdks/javascript-sdk/javascript-sdk-api-reference.md):[ setAuthenticationStatus () ](/help/authentication/integration-guide-programmers/legacy/sdks/javascript-sdk/javascript-sdk-api-reference.md#set-authn-status-isauthn-error) en [ tokenRequestFailed () ](/help/authentication/integration-guide-programmers/legacy/sdks/javascript-sdk/javascript-sdk-api-reference.md#token-request-failed-error-msg) functies, [ iOS/tvOS API Verwijzing ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md): [ setAuthenticationStatus () ](/help/authentication/integration-guide-programmers/legacy/sdks/javascript-sdk/javascript-sdk-api-reference.md#setAuthNStatus) en [ tokentRequestFailed () {111, ](/help/authentication/integration-guide-programmers/legacy/sdks/javascript-sdk/javascript-sdk-api-reference.md#tokenReqFailed) 2} Android API Verwijzing [: ](/help/authentication/integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-api-reference.md) setAuthenticationStatus () [ en ](/help/authentication/integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-api-reference.md#setAuthNStatus) tokenRequestFailed () [.](/help/authentication/integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-api-reference.md#setAuthNStatus#tokenRequestFailed)
 
 ### Oorspronkelijke callback-foutcodes {#original-callback-error-codes}
 

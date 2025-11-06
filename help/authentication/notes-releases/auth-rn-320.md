@@ -1,8 +1,8 @@
 ---
 title: Opmerkingen bij de release Adobe Pass Authentication 3.2.0
 description: Opmerkingen bij de release Adobe Pass Authentication 3.2.0
-exl-id: 4008512a-3155-4d96-9988-da0b0a496612
-source-git-commit: 13b0bb640aa599109e8c2f68d1e16fbdc3840951
+exl-id: 43aee317-dbac-4000-893e-839ee3e9f6ba
+source-git-commit: fcdf50b2caad20deef15fceeb3e23f4195c0078d
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 Op deze pagina worden nieuwe functies, wijzigingen en bekende problemen met deze release beschreven:
 
@@ -32,8 +32,8 @@ Datum van de versie: **06/10/2025 - 06/12/2025**
 
 #### REST API v2
 
-* Een nieuwe reden `missing_parameters_fallback` is toegevoegd voor gevallen wanneer de parameters op [&#x200B; Sessies API &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) reactie missen.
-* Een nieuw gebied &quot;apparaat&quot;is toegevoegd aan [&#x200B; Sessies API &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-retrieve-authentication-session-information-using-code.md) reactie.
+* Een nieuwe reden `missing_parameters_fallback` is toegevoegd voor gevallen wanneer de parameters op [ Sessies API ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) reactie missen.
+* Een nieuw gebied &quot;apparaat&quot;is toegevoegd aan [ Sessies API ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-retrieve-authentication-session-information-using-code.md) reactie.
 
 #### Nieuwe functies
 

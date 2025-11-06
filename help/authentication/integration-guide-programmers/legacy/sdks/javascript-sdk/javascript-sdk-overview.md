@@ -17,13 +17,13 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 ## Inleiding
 
-De Adobe adviseert hoogst dat u aan recentste JS v4.x van de bibliotheek AccessEnabler migreert.
+Adobe raadt u ten zeerste aan om naar de nieuwste JS v4.x van de AccessEnabler-bibliotheek te migreren.
 
-De integratie van Adobe Pass Authentication JavaScript biedt programmeurs een tv-oplossing overal in de vertrouwde ontwikkelomgeving van JS-webtoepassingen. De belangrijkste componenten van de integratie zijn uw &quot;high-level&quot;toepassing (gebruikersinteractie, videopresentatie), en de Adobe-geleverde &quot;laag-niveau&quot;bibliotheek AccessEnabler die uw ingang aan de toestemmingsstromen verstrekt, en communicatie met de servers van de Authentificatie van Adobe Pass behandelt.
+De integratie van Adobe Pass Authentication JavaScript biedt programmeurs een tv-oplossing overal in de vertrouwde ontwikkelomgeving van JS-webtoepassingen. De belangrijkste componenten van de integratie zijn uw &quot;high-level&quot;toepassing (gebruikersinteractie, videopresentatie), en de Adobe-Geleverde &quot;laag-niveau&quot;bibliotheek AccessEnabler die uw ingang aan de machtigingsstromen verstrekt, en communicatie met de servers van de Authentificatie van Adobe Pass behandelt.
 
 De volgende secties verstrekken beschrijvingen en steekproeven specifiek voor de integratie JavaScript AccessEnabler.
 
@@ -35,7 +35,7 @@ De volgende secties verstrekken beschrijvingen en steekproeven specifiek voor de
 
 Een gebruiker kan zich alleen aanmelden bij de MVPD en vervolgens worden geverifieerd als de pagina of speler de gebruiker een manier biedt om zijn of haar MVPD te identificeren. Er is een standaardversie van een dialoogvenster voor MVPD-selectie beschikbaar voor ontwikkeling. Voor productiegebruik moet u uw eigen MVPD-kiezer implementeren.
 
-Als u reeds weet wie de leverancier van de klant is, kunt u [&#x200B; MVPD programmatically plaatsen &#x200B;](/help/authentication/home.md), zonder gebruikersinteractie. De techniek is hetzelfde, maar passeert de stap om het dialoogvenster Provider aan te roepen en de klant te vragen zijn of haar MVPD te selecteren.
+Als u reeds weet wie de leverancier van de klant is, kunt u [ MVPD programmatically plaatsen ](/help/authentication/home.md), zonder gebruikersinteractie. De techniek is hetzelfde, maar passeert de stap om het dialoogvenster Provider aan te roepen en de klant te vragen zijn of haar MVPD te selecteren.
 
 ## De serviceprovider weergeven {#displaying-the-service-provider}
 
@@ -55,7 +55,7 @@ Het volgende codevoorbeeld toont aan hoe te om de dienstverlener voor de huidige
     </head>
     <body>
         <div id="alternative">
-        <a href="http://www.adobe.com/go/getflashplayer_nl"> 
+        <a href="http://www.adobe.com/go/getflashplayer"> 
             <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" 
                  alt="Get Adobe Flash player"/> </a>
         </div> 

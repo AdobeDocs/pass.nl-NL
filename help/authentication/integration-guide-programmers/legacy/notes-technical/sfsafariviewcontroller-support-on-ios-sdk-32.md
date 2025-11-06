@@ -4,7 +4,7 @@ description: Ondersteuning voor SFSafariViewController op iOS SDK 3.2+
 exl-id: 6691550f-c36f-4fae-aa77-082ca7d8a60a
 source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '432'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 </br>
 
@@ -39,7 +39,7 @@ In dergelijke gevallen introduceert de 3.2-versie de mogelijkheid voor de progra
 Om SVC manueel te beheren moet de implementor de volgende stappen uitvoeren:
 
 
-1. vraag **setOptions ([ &quot;handleSVC&quot;:waar ])** na de initialisering AccessEnabler (zorg ervoor deze vraag wordt uitgevoerd alvorens de authentificatie begint). Hierdoor wordt &quot;handmatig&quot; SVC-beheer ingeschakeld, zal de SDK de SVC niet automatisch presenteren, maar in plaats daarvan, wanneer dat nodig is     vraag **navigate (toUrl:*{url}* useSVC:waar)**.
+1. vraag **setOptions ([ &quot;handleSVC&quot;:true])** na de initialisering AccessEnabler (zorg ervoor deze vraag wordt uitgevoerd alvorens de authentificatie begint). Hierdoor wordt &quot;handmatig&quot; SVC-beheer ingeschakeld, zal de SDK de SVC niet automatisch presenteren, maar in plaats daarvan, wanneer dat nodig is     vraag **navigate (toUrl:*{url}* useSVC :true)**.
 
 1. Implementeer de optionele callback **`navigateToUrl:useSVC:`** binnen de implementatie en u moet een svc-instantie maken met behulp van de SFSafariViewController-instantie met behulp van de opgegeven url, en deze op het scherm presenteren:
 

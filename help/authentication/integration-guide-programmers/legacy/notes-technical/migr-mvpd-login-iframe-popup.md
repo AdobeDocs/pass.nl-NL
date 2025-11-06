@@ -4,7 +4,7 @@ description: De MVPD-aanmeldingspagina migreren van iFrame naar pop-up
 exl-id: 389ea0ea-4e18-4c2e-a527-c84bffd808b4
 source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '708'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 ## Pop-up en iFrame {#popup-vs-iframe}
 
@@ -183,7 +183,7 @@ function displayProviderDialog(providers) {
 }
 ```
 
-Nadat de gebruiker een MVPD in de kiezer heeft geselecteerd, moet de pop-up worden gemaakt. Sommige browsers kunnen popup blokkeren als het met ongeveer:blank of met een pagina wordt gecreeerd die op een ander domein is - daarom wordt het geadviseerd om het met hostname van te openen waar AccessEnabler wordt geladen.
+Nadat de gebruiker een MVPD in de kiezer heeft geselecteerd, moet de pop-up worden gemaakt. Sommige browsers kunnen popup blokkeren als het met ongeveer :blank of met een pagina wordt gecreeerd die op een ander domein is - daarom wordt het geadviseerd om het met hostname van te openen waar AccessEnabler wordt geladen.
 
 In de iFrame-implementatie werd het opnieuw instellen van de verificatiestroom uitgevoerd door de knop btnCloseIframe en de JavaScript-functie closeIframeAction(), maar nu is het niet meer mogelijk het iFrame te versieren. Zo, wordt het zelfde gedrag bereikt door te letten op wanneer popup (of door de gebruiker of door de authentificatiestroom te voltooien) wordt gesloten. Er is een codefragment toegevoegd dat ook nuttig is voor het geval de gebruiker de focus van de pop-up verliest:
 
@@ -235,4 +235,4 @@ function checkClosed() {
 >* De voorbeeldcode bevat een hardcoded variabele voor de gebruikte requestID - &#39;REF&#39;, die moet worden vervangen door een echte id van de programmeur.
 >* De voorbeeldcode wordt alleen correct uitgevoerd vanuit een zwevend domein dat is gekoppeld aan de gebruikte aanvrager-id.
 >* Aangezien de gehele code kan worden gedownload, is de code in deze technische notitie afgebroken. Voor een volledige steekproef, zie **JS iFrame vs Pop-up Steekproef**.
->* De externe bibliotheken van JavaScript werden verbonden van [&#x200B; Google Ontvangen Diensten &#x200B;](https://developers.google.com/speed/libraries/).
+>* De externe bibliotheken van JavaScript werden verbonden van [ Google Ontvangen Diensten ](https://developers.google.com/speed/libraries/).

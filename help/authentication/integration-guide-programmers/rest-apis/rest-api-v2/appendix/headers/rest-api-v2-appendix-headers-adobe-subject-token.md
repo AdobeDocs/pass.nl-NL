@@ -2,7 +2,7 @@
 title: Header - Adobe-Subject-token
 description: REST API V2 - Koptekst - Adobe-Onderwerptoken
 exl-id: 906d88f4-3b8f-491a-ab58-8e63d3b958d8
-source-git-commit: af867cb5e41843ffa297a31c2185d6e4b4ad1914
+source-git-commit: 81d3c3835d2e97e28c2ddb9c72d1a048a25ad433
 workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 0%
@@ -21,7 +21,7 @@ De <b> Adobe-Onderwerp-Symbolische </b> verzoekkopbal bevat het unieke platformh
 
 Deze kopbal wordt ontworpen voor gebruik in enig sign-on (SSO) toegelaten stromen die de methode van de Identiteit van het Platform gebruiken.
 
-Voor meer details over enige sign-on (SSO) toegelaten stromen leveraging de methode van de Identiteit van het Platform, verwijs naar [&#x200B; Enige sign-on gebruikend de stromen van de platformidentiteit &#x200B;](../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-platform-identity-flows.md) documentatie.
+Voor meer details over enige sign-on (SSO) toegelaten stromen leveraging de methode van de Identiteit van het Platform, verwijs naar [ Enige sign-on gebruikend de stromen van de platformidentiteit ](../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-platform-identity-flows.md) documentatie.
 
 ## Syntaxis {#syntax}
 
@@ -47,10 +47,10 @@ De handtekening van JSON-web (`JWS`) of JSON-webcodering (`JWE` ) die een ondert
 
 Dit is beschikbaar voor de volgende platforms:
 
-* [Amazon SSO Cookbook (REST API V2)](/help/premium-workflow/sso-access/platform-sso/amazon-single-sign-on/amazon-sso-cookbook-rest-api-v2.md)
+* [Amazon SSO Cookbook (REST API V2)](../../../../features-standard/sso-access/platform-sso/amazon-single-sign-on/amazon-sso-cookbook-rest-api-v2.md)
 
 ## Voorbeelden {#examples}
 
 Zie de voorbeelden die worden beschreven voor de volgende platformen:
 
-* [Amazon SSO Cookbook (REST API V2)](/help/premium-workflow/sso-access/platform-sso/amazon-single-sign-on/amazon-sso-cookbook-rest-api-v2.md)
+* [Amazon SSO Cookbook (REST API V2)](../../../../features-standard/sso-access/platform-sso/amazon-single-sign-on/amazon-sso-cookbook-rest-api-v2.md)

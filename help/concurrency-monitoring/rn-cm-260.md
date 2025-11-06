@@ -1,13 +1,13 @@
 ---
 title: Opmerkingen bij de release Adobe Pass Concurrency Monitoring 2.6.0
 description: Opmerkingen bij de release Adobe Pass Concurrency Monitoring 2.6.0
-source-git-commit: 59672b44074c472094ed27a23d6bfbcd7654c901
+exl-id: f24980e3-ffe8-4b5e-8adc-ae443baed40f
+source-git-commit: f30b6814b8a77424c13337d44d7b247105e0bfe2
 workflow-type: tm+mt
-source-wordcount: '193'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
-
 
 # Opmerkingen bij de release Adobe Pass Concurrency Monitoring 2.6.0 {#cm-260}
 
@@ -26,7 +26,7 @@ Met deze release kunt u bestaande stream(s) beëindigen zodat de huidige stream 
 
 
 
-**Externe beëindiging**
+**Verre beëindiging**
 
 * Op een 409 Conflict reactie, zal elke zitting die binnen &quot;conflicten&quot;gebied van het advies wordt vermeld een attribuut beëindigingscode dragen.
 * De gebruiker kan worden gevraagd de lijst met conflicterende sessies op te geven en de te doden sessie(s) te kiezen

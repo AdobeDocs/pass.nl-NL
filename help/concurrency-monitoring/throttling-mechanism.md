@@ -1,13 +1,13 @@
 ---
 title: Draaimechanisme
 description: Draaimechanisme
-source-git-commit: cbb45cae576332e2b63027992c597b834210988d
+exl-id: 15236570-1a75-42fb-9bba-0e2d7a59c9f6
+source-git-commit: 8552a62f4d6d80ba91543390bf0689d942b3a6f4
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '614'
 ht-degree: 1%
 
 ---
-
 
 # Draaimechanisme {#throttling-mechanism}
 
@@ -20,7 +20,7 @@ Wanneer de grens is bereikt, zullen de verzoeken met een specifieke reactiestatu
 ## Overzicht van het mechanisme {#mechanism-overview}
 
 Het mechanisme bepaalt het maximumaantal toegelaten vraag voor elk eindpunt van de Controle van de Valuta binnen een specifiek tijdinterval.
-Zodra dit maximumaantal vraag is bereikt, zal onze dienst met &quot;429 Te veel verzoeken&quot;antwoorden. De header 429 response &quot;Expires&quot; bevat de tijdstempel wanneer de volgende aanroep als geldig wordt beschouwd of wanneer de vertraging verloopt. Op dit moment verloopt de vertraging na één minuut vanaf de eerste 429 reactie.
+Zodra dit maximumaantal vraag is bereikt, zal onze dienst met &quot;429 Te veel verzoeken&quot;antwoorden. De header 429 response &quot;Expires&quot; bevat de tijdstempel wanneer de volgende aanroep als geldig wordt beschouwd of wanneer de vertraging verloopt. Op dit moment verloopt de vertraging na een vertraging   minuut vanaf de eerste 429 reactie.
 
 De eindpunten die met throttling worden gevormd zijn:
 1. Een nieuwe sessie maken: POST /sessies/{idp}/{subject}
@@ -28,14 +28,14 @@ De eindpunten die met throttling worden gevormd zijn:
 3. Een sessie beëindigen: DELETE /sessies/{idp}/{subject}/{sessionId}
 
 De vertraging wordt gevormd op twee niveaus:
-1. sessie: dezelfde unieke {sessionId} parameter verzonden in `Heartbeat` oproepen en `Terminate a session` vraag.
-2. gebruiker: zelfde uniek {subject} parameter verzonden in `Create a new session` vraag.
+1. sessie: dezelfde unieke {sessionId} -parameter verzonden in `Heartbeat` call and `Terminate a session` call.
+2. gebruiker: dezelfde unieke {subject} -parameter verzonden in `Create a new session` -aanroep.
 
 De limiet voor het wijzigen van het sessieniveau is ingesteld op 200 verzoeken binnen één minuut.\
 De limiet voor het wijzigen van de snelheid op gebruikersniveau is ingesteld op 200 verzoeken binnen één minuut.\
 Beide grenzen (de throttling van het zittingsniveau en gebruiker - niveauthrottling) zijn configureerbaar, en wij zullen hen bijwerken voor het geval dat zij door geldige integratiescenario&#39;s zullen worden bereikt. Hiervoor raden we u aan contact op te nemen met het ondersteuningsteam.
 
-**Scenario voor het vertragen van het zittingsniveau:**
+**Scenario voor de vertraging van het zittingsniveau:**
 
 | Tijd | Verzoek om verzending naar CM | Aantal verzoeken | Antwoord ontvangen van CM | Toelichting |
 |-----------|-----------------------------------------|--------------------|------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
@@ -48,12 +48,12 @@ Beide grenzen (de throttling van het zittingsniveau en gebruiker - niveauthrottl
 
 | Tijd | Verzoek om verzending naar CM | Aantal verzoeken | Antwoord ontvangen van CM | Toelichting |
 |-----------|------------------------------|--------------------|------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
-| Tweede 10 | POST/sessies/idp1/subject1 | 50 | 50 oproepen ontvangen &quot;202 geaccepteerd&quot; | 50 vraag die van de grens wordt verbruikt |
-| Tweede 50 | POST/sessies/idp1/subject1 | 151 | 150 oproepen ontvangen &quot;202 Erkend&quot;en 1 vraag ontvangt &quot;429 Te veel verzoeken&quot; | 200 vraag die van de grens wordt verbruikt en 1 vraag zal 429 reactie ontvangen |
-| Tweede 61 | POST/sessies/idp1/subject1 | 1 | 1 oproep ontvangt &quot;429 Te veel verzoeken&quot; | Er zijn nog geen aanroepen beschikbaar binnen de limiet |
-| Tweede 70 | POST/sessies/idp1/subject1 | 1 | 1 uitnodiging ontvangt &quot;202 Accepted&quot; | Limiet die aan 200 beschikbare vraag wordt geplaatst omdat 60 seconden sinds tweede 10 zijn overgegaan |
+| Tweede 10 | POST /sessies/idp1/subject1 | 50 | 50 oproepen ontvangen &quot;202 geaccepteerd&quot; | 50 vraag die van de grens wordt verbruikt |
+| Tweede 50 | POST /sessies/idp1/subject1 | 151 | 150 oproepen ontvangen &quot;202 Erkend&quot;en 1 vraag ontvangt &quot;429 Te veel verzoeken&quot; | 200 vraag die van de grens wordt verbruikt en 1 vraag zal 429 reactie ontvangen |
+| Tweede 61 | POST /sessies/idp1/subject1 | 1 | 1 oproep ontvangt &quot;429 Te veel verzoeken&quot; | Er zijn nog geen aanroepen beschikbaar binnen de limiet |
+| Tweede 70 | POST /sessies/idp1/subject1 | 1 | 1 uitnodiging ontvangt &quot;202 Accepted&quot; | Limiet die aan 200 beschikbare vraag wordt geplaatst omdat 60 seconden sinds tweede 10 zijn overgegaan |
 
-**Voorbeeld van reactie:**
+**429 voorbeeld van de Reactie:**
 
 ```
 HTTP/2 429
@@ -73,4 +73,4 @@ x-content-type-options: nosniff
 ## Aanbevelingen voor klantintegratie {#customer-integration-recommendations}
 
 Met een correcte implementatie, zullen de klanten &quot;429 Te veel Verzoeken&quot;reactie niet ontvangen.
-Toch adviseert de Adobe dat elke klant &quot;429 Te Vele Antwoord van Verzoeken&quot;geschikt gebruikend de hierboven vermelde technische details behandelt. Wanneer het behandelen van de reactie, &quot;verloopt&quot;kopbal zou moeten worden gebruikt om te bepalen wanneer om het volgende geldige verzoek te verzenden.
+Toch raadt Adobe aan dat elke klant het antwoord &quot;429 Te veel verzoeken&quot; op de juiste wijze verwerkt met behulp van de hierboven vermelde technische details. Wanneer het behandelen van de reactie, &quot;verloopt&quot;kopbal zou moeten worden gebruikt om te bepalen wanneer om het volgende geldige verzoek te verzenden.

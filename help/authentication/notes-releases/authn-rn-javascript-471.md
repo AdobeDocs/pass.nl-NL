@@ -1,7 +1,8 @@
 ---
 title: Opmerkingen bij de release Adobe Pass Authentication JavaScript 4.7.1
 description: Opmerkingen bij de release Adobe Pass Authentication JavaScript 4.7.1
-source-git-commit: ecafc3a92f691203d8113a741f0b6cd00a134e80
+exl-id: 3db96d64-536e-4ce9-86ff-096e7a9c68be
+source-git-commit: 0c6aec04ae9df410228730b5bce6ced1aeecd312
 workflow-type: tm+mt
 source-wordcount: '109'
 ht-degree: 0%
@@ -12,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 Op deze pagina worden nieuwe functies, wijzigingen en bekende problemen met deze release beschreven:
 

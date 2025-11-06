@@ -17,11 +17,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 </br>
 
-De veranderingen van de keychain opslag van [&#x200B; nieuwe versie AccessEnabler 3.7.0 &#x200B;](/help/authentication/notes-releases/authn-rn-ios-tvos-370.md) zijn onverenigbaar met de implementatie van de keychain opslag van versie AccessEnabler lager dan 3.7.0.
+De veranderingen van de keychain opslag van [ nieuwe versie AccessEnabler 3.7.0 ](/help/authentication/notes-releases/authn-rn-ios-tvos-370.md) zijn onverenigbaar met de implementatie van de keychain opslag van versie AccessEnabler lager dan 3.7.0.
 
 Het verbeteringspad voor één toepassing die nieuwe AccessEnabler versie 3.7.0 goedkeurt zal alle tekenen van vorige versie/s van de opslag van de Keychain migreren. Daarom zouden de eind - gebruikers **geen verlies van authentificatie/vergunningszittingen** tijdens het AccessEnabler proces van de kaderupdate moeten ervaren.
 
@@ -30,15 +30,15 @@ Het verbeteringspad voor één toepassing die nieuwe AccessEnabler versie 3.7.0 
 Sommige beperkingen, die hieronder worden beschreven, kunnen door implementatoren worden aangetroffen.
 
 
-1. Reguliere (Adobe) SSO werkt niet tussen één toepassing die AccessEnabler versie 3.7.0 gebruikt en één toepassing die versie(s) gebruikt van AccessEnabler lager dan 3.7.0, zelfs niet voor toepassingen die door dezelfde leverancier zijn ontwikkeld.
+1. Reguliere (Adobe) SSO werkt niet tussen één toepassing die AccessEnabler versie 3.7.0 gebruikt en één toepassing die AccessEnabler versie/s lager dan 3.7.0 gebruikt, zelfs niet voor toepassingen die door dezelfde leverancier zijn ontwikkeld.
 
    >[!IMPORTANT]
    >
    >* SSO op systeemniveau (Apple) wordt niet beïnvloed!
    >
-   >* De regelmatige (Adobe) SSO zal blijven werken als beide toepassingen door de zelfde verkoper worden ontwikkeld en AccessEnabler versie/s gebruiken lager dan 3.7.0!
+   >* Reguliere (Adobe) SSO blijft werken als beide toepassingen door dezelfde leverancier zijn ontwikkeld en de AccessEnabler-versie/s lager dan 3.7.0 gebruiken!
    >
-   >* De regelmatige (Adobe) SSO zal werken als beide toepassingen door de zelfde verkoper worden ontwikkeld en AccessEnabler versie 3.7.0 gebruiken!
+   >* Reguliere (Adobe) SSO werkt als beide toepassingen door dezelfde leverancier zijn ontwikkeld en AccessEnabler versie 3.7.0 gebruiken!
 
 
 1. In de situatie van het degraderen van één toepassing gebruikend AccessEnabler versie 3.7.0 aan een lagere versie van AccessEnabler, dan zullen de nieuwe geproduceerde tokens niet worden gemigreerd. Daarom zouden de eindgebruikers het verlies van authentificatie/vergunningszittingen kunnen ervaren, zonder het te verwachten.

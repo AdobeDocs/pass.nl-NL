@@ -1,8 +1,8 @@
 ---
 title: Opmerkingen bij de release Adobe Pass Authentication 3.3.0
 description: Opmerkingen bij de release Adobe Pass Authentication 3.3.0
-exl-id: 8a7b4c9d-3e5f-42a1-b8c9-7d6e5f4a3b2c
-source-git-commit: bbbd3331c8c71aaf7e3ac4a102a5d8182722a271
+exl-id: 64867bd4-d406-491d-8f04-f40b0a84e5cd
+source-git-commit: b8ba9f65773b9d600183922cf42a13239aa9d58a
 workflow-type: tm+mt
 source-wordcount: '91'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 Op deze pagina worden nieuwe functies, wijzigingen en bekende problemen met deze release beschreven:
 

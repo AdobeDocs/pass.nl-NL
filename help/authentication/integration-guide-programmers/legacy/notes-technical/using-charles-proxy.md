@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 **Karel:** <http://charlesproxy.com>
 
@@ -97,7 +97,7 @@ Met kaart ver kunt u een &quot;inkomend&quot;verzoek aan een verschillend eindpu
 
 ## Mobiel {#mobile}
 
-### Charles gebruiken op een iOS-apparaat (iPhone/iPad) {#use-charles-on-an-ios-device-(iphone-/-ipad)}
+### Charles gebruiken op een iOS-apparaat (iPhone / iPad) {#use-charles-on-an-ios-device-(iphone-/-ipad)}
 
 #### SSL-verbinding van iPhone {#ssl-connection-from-iphone}
 
@@ -156,4 +156,4 @@ verzoeken.
 <http://www.charlesproxy.com/documentation/configuration/browser-and-system-configuration>
 
 
-Blader naar [&#x200B; de volmacht van Charles &#x200B;](http://charlesproxy.com/charles.crt) van uw apparaat van Android.
+Blader naar [ de volmacht van Charles ](http://charlesproxy.com/charles.crt) van uw apparaat van Android.

@@ -1,24 +1,24 @@
 ---
 title: Gebruik hoofdletters
 description: Gebruik gevallen in Gelijktijdige controle.
-source-git-commit: 19ed211c65deaa1fe97ae462065feac9f77afa64
+exl-id: 6cc30bb6-e985-4d9a-9f99-a7f04ae8deb7
+source-git-commit: f30b6814b8a77424c13337d44d7b247105e0bfe2
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 0%
 
 ---
 
-
 # Gevallen gebruiken {#use-cases}
 
 Het belangrijkste geval van het gebruik van de Dienst van de Tellende van de Stroom telt het aantal gezamenlijke videostromen die door een gebruiker worden gecontroleerd en verstrekt een besluit betreffende zijn gelijktijdig gebruik voor zelfde rekening identiteitskaart
 
-Om het gebruik door abonnee te controleren, is er een behoefte aan de gecentraliseerde dienst die gebruikersactiviteit kan bijeenvoegen ongeacht of het op de website of de toepassing van de programmeur, op het MVPD inhoudsportaal of op een syndicated bezit gebeurt.
+Om het gebruik door abonnee te controleren, is er een behoefte aan de gecentraliseerde dienst die gebruikersactiviteit kan bijeenvoegen ongeacht of het op de website of de toepassing van de programmeur, op het de inhoudsportaal van MVPD of op een syndicated bezit gebeurt.
 
 De belangrijkste gebruiksgevallen die door deze gecentraliseerde dienst worden gesteund moeten zijn:
 
-1. Zodra een abonnee begint met het bekijken van een video, kan de toepassing **een streaming sessie initialiseren** en starten **rapportageactiviteit** gegevens.
-1. In dezelfde centrale dienst ontvangt een andere instantie ***CM-besluiten*** - indien de toepassing een of meer beleidsregels heeft die in de CM-dienst zijn geregistreerd, zal de dienst reageren met een toegangsbesluit dat is gebaseerd op de huidige activiteit.
+1. Zodra een abonnee begint te letten op een video, kan de toepassing **een het stromen zitting** initialiseren en **beginnen die activiteitengegevens** melden.
+1. In de zelfde centrale dienst, zal een andere instantie ***besluiten van CM*** ontvangen - voor het geval dat de toepassing één of meerdere beleid heeft dat in de dienst van cm wordt geregistreerd, zal de dienst met toegangsbesluit antwoorden dat op de huidige activiteit wordt gebaseerd.
 
 
 ## Een sessie maken {#create-session}

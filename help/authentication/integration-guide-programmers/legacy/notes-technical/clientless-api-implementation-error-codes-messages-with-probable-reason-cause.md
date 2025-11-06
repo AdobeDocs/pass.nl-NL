@@ -1,6 +1,6 @@
 ---
-title: Clientless API-implementatie - Foutcodes / berichten met waarschijnlijke reden / oorzaak
-description: Clientless API-implementatie - Foutcodes / berichten met waarschijnlijke reden / oorzaak
+title: Implementatie van de API zonder client - foutcodes / berichten met mogelijke reden / oorzaak
+description: Implementatie van de API zonder client - foutcodes / berichten met mogelijke reden / oorzaak
 exl-id: 616e35fc-9b72-422b-9a05-e6248bd52490
 source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
 workflow-type: tm+mt
@@ -9,55 +9,55 @@ ht-degree: 0%
 
 ---
 
-# (Nalatenschap) Clientless API-implementatie - Foutcodes / berichten met waarschijnlijke reden / oorzaak {#clientless-api-implementation--error-codes-messages-with-probable-reason-cause}
+# (Verouderd) Clientless API-implementatie - foutcodes / berichten met vermoedelijke oorzaak / oorzaak {#clientless-api-implementation--error-codes-messages-with-probable-reason-cause}
 
 >[!NOTE]
 >
->De inhoud van deze pagina is uitsluitend bedoeld voor informatieve doeleinden. Voor het gebruik van deze API is een actuele licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
+>De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
 >[!IMPORTANT]
 >
-> Zorg ervoor dat u op de hoogte blijft van de meest recente productaankondigingen voor Adobe Pass-verificatie en tijdlijnen voor buitengebruikstelling die zijn verzameld op de [pagina Productaankondigingen](/help/authentication/product-announcements.md) .
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 </br>
 
 
-## Fout: Niet geautoriseerd
+## Fout: niet geautoriseerd
 
 ### Oorzaken:
 
-1. Ontbrekende autorisatiekop in de POST
-1. Probleem met autorisatieheader - controleer of de aanvraagtijd in milliseconden is.
+1. Ontbrekende machtigingheader in de POST
+1. Uitgave met machtigingsheader - controleer of de aanvraagtijd in milliseconden is.
 
-## Fout: SC 400 tijdens authenticatie
+## Fout: SC 400 tijdens verifiëren
 
 ### Oorzaken:
 
-1. De server heeft de registratiecode niet gevonden, die is aangemaakt voor een specifieke aanvrager en omgeving.
-1. Het kan zijn dat je problemen ondervindt met cross-domain scripting
-1. De juiste spoofing moet worden toegevoegd aan het bestand /etc/hosts
+1. De server heeft de registratiecode, die voor een specifieke aanvrager en omgeving is gemaakt, niet gevonden.
+1. Mogelijk gaat u naar problemen met interdomeinscripts
+1. Correcte spoofing moet worden toegevoegd aan het bestand /etc/hosts
 
 ## Fout: 400 onjuist verzoek
 
 ### Oorzaken:
 
-1. Verkeerd ingedeelde url voor POST/GET
-1. SAMLAssertionParserException – De versleutelde SAML-bewering kon aan het einde van Adobe niet worden gedecodeerd
+1. Onjuiste URL voor POST/GET
+1. SAMLAssertionParserException - de gecodeerde bevestiging van SAML kon niet bij het eind van Adobe worden gedecrypteerd
 
 ## Fout: 403 Verboden
 
 ### Oorzaken:
 
-1. Te veel snelle verzoeken - een functie van het API-beheer om DoS-aanvallen te voorkomen.
-2. Als je een prequal-omgeving gebruikt, voeg dan spoofing toe, zorg er anders voor dat spoofing is verwijderd uit het bestand /etc/hosts
+1. Te veel snelle aanvragen - een functie van het API-beheer om DoS-aanvallen te voorkomen.
+2. Als het gebruiken van prequizmilieu dan spoofing toevoegt, anders zorg ervoor spoofing is verwijderd uit /etc/hosts- dossier
 
-## Fout: Kan niet inloggen op de MVPD-pagina
+## Fout: kan zich niet aanmelden bij MVPD-pagina
 
 ### Oorzaken:
 
 1. Gebruikersnaam en wachtwoord komen niet overeen
 2. Aanmelding is mogelijk uitgeschakeld
-3. Controleer of de login voor productie of enscenering is
+3. Controleren of de aanmelding is bedoeld voor productie of staging
 
 
 <!--

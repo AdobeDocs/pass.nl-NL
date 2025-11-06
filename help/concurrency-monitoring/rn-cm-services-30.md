@@ -1,13 +1,13 @@
 ---
 title: Opmerkingen bij de release Gelijktijdige controlediensten 3.0
 description: Opmerkingen bij de release Gelijktijdige controlediensten 3.0
-source-git-commit: 19ed211c65deaa1fe97ae462065feac9f77afa64
+exl-id: 247e310f-35a2-4078-a3d7-53b44ef08ad9
+source-git-commit: f30b6814b8a77424c13337d44d7b247105e0bfe2
 workflow-type: tm+mt
-source-wordcount: '88'
-ht-degree: 0%
+source-wordcount: '93'
+ht-degree: 2%
 
 ---
-
 
 # Opmerkingen bij de release Gelijktijdige controlediensten 3.0 {#cms-rn-30}
 
@@ -15,7 +15,8 @@ Op deze pagina worden nieuwe functies, wijzigingen en bekende problemen met deze
 
 ## Geen info {#release-info}
 
-Versie: 3.0 Releasedatum: 05-05-2020
+Versie: 3.0
+Releasedatum: 05-05-2020
 
 ## Overzicht van release {#release-overview}
 

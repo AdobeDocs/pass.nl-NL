@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 </br>
 
@@ -79,7 +79,7 @@ Raadpleeg <https://tve.zendesk.com/hc/en-us/articles/115005561623-fire-TV-Native
 - *appContext*: De toepassingscontext van Amazon Fire OS.
 - softwareStatement
 - redirectUrl : in het geval van FireOS wordt de parameterwaarde genegeerd en ingesteld op default : adobepass://android.app
-- env_url: voor het testen met behulp van een testomgeving voor Adobe staging, kan env\_url worden ingesteld op &quot;sp.auth-staging.adobe.com&quot;
+- env_url: voor tests met de Adobe-testomgeving kan env\_url worden ingesteld op &quot;sp.auth-staging.adobe.com&quot;
 
 **Afgekeurd:**
 
@@ -95,7 +95,7 @@ Raadpleeg <https://tve.zendesk.com/hc/en-us/articles/115005561623-fire-TV-Native
 
 De serverreactie bevat een lijst van MVPDs samen met wat configuratieinformatie die aan de identiteit van Programmer in bijlage is. De serverreactie wordt intern gebruikt door de code van Toegangsbeheer. Alleen de status van de bewerking (SUCCESS/FAIL) wordt via de callback setRequestorComplete() aan uw toepassing gepresenteerd.
 
-Als de *urls* parameter niet wordt gebruikt, richt de resulterende netwerkvraag de standaarddienstverlener URL: het milieu van de Versie van de Adobe/van de Productie.
+Als de *urls* parameter niet wordt gebruikt, richt de resulterende netwerkvraag de standaarddienstverlener URL: het milieu van de Versie/van de Productie van Adobe.
 
 Als een waarde voor de *urls* parameter wordt verstrekt, richt de resulterende netwerkvraag alle URLs die in de *wordt verstrekt urls* parameter. Alle configuratieverzoeken worden teweeggebracht gelijktijdig in afzonderlijke draden. De eerste responder krijgt voorrang wanneer het compileren van de lijst van MVPDs. Voor elke MVPD in de lijst onthoudt de Access Enabler de URL van de bijbehorende serviceprovider. Alle volgende machtigingsaanvragen worden doorgestuurd naar de URL die is gekoppeld aan de serviceprovider die tijdens de configuratiefase aan de doel-MVPD is gekoppeld.
 
@@ -117,7 +117,7 @@ Als een waarde voor de *urls* parameter wordt verstrekt, richt de resulterende n
 **Parameters:**
 
 - *requestID*: Unieke identiteitskaart verbonden aan de Programmer. Geef de unieke id die door Adobe is toegewezen door aan uw site wanneer u zich voor het eerst hebt geregistreerd bij de Adobe Pass-verificatieservice.
-- *urls*: Facultatieve parameter; door gebrek, wordt de dienstverlener van Adobe gebruikt (http://sp.auth.adobe.com/). Deze serie staat u toe om eindpunten voor authentificatie en vergunningsdiensten te specificeren die door Adobe worden verleend (verschillende instanties zouden voor het zuiveren doeleinden kunnen worden gebruikt). U kunt dit gebruiken om meerdere instanties van Adobe Pass-verificatieproviders op te geven. Daarbij bestaat de MVPD-lijst uit de eindpunten van alle serviceproviders. Elke MVPD is gekoppeld aan de snelste serviceprovider, dat wil zeggen de provider die eerst heeft gereageerd en die die MVPD ondersteunt.
+- *urls*: Facultatieve parameter; door gebrek, wordt de dienstverlener van Adobe gebruikt (http://sp.auth.adobe.com/). Met deze array kunt u eindpunten opgeven voor verificatie- en verificatieservices die door Adobe worden geleverd (verschillende instanties kunnen worden gebruikt voor foutopsporingsdoeleinden). U kunt dit gebruiken om meerdere instanties van Adobe Pass-verificatieproviders op te geven. Daarbij bestaat de MVPD-lijst uit de eindpunten van alle serviceproviders. Elke MVPD is gekoppeld aan de snelste serviceprovider, dat wil zeggen de provider die eerst heeft gereageerd en die die MVPD ondersteunt.
 
 **teweeggebrachte callbacks:** `setRequestorComplete()`
 
@@ -175,7 +175,7 @@ De waarden worden doorgegeven aan de server, onafhankelijk van de huidige flow (
 
 - *opties*: Een Kaart \&lt;Koord, Koord \> die globale opties van SDK bevatten. Momenteel zijn de volgende opties beschikbaar:
    - **applicationProfile** - het kan worden gebruikt om serverconfiguraties te maken die op deze waarde worden gebaseerd.
-   - **ap \_vi** - de Dienst van identiteitskaart van het Experience Cloud Deze waarde kan later worden gebruikt voor geavanceerde analyserapporten.
+   - **ap \_vi** - de Dienst van identiteitskaart van Experience Cloud Deze waarde kan later worden gebruikt voor geavanceerde analyserapporten.
    - **apparaat\_info** - de Informatie van het Apparaat zoals die in **wordt beschreven het overgaan van het koekje van apparateninformatie**
 
 </br>
@@ -203,7 +203,7 @@ Als een MVPD de functie &#39;Verificatie per aanvrager&#39; ondersteunt, kunnen 
 **Beschrijving:** begint het volledige authentificatiewerkschema. Het begint door de authentificatiestatus te controleren. Indien nog niet geverifieerd, wordt de verificatiestroom state-machine gestart:
 
 - Als de laatste authentificatiepoging succesvol was, wordt de selectiefase van MVPD overgeslagen en een controle WebView zal de gebruiker met de MVPD login pagina voorstellen.
-- Als de laatste authentificatiepoging niet succesvol was of als de gebruiker uitdrukkelijk het programma opende, [*displayProviderDialog ()*](#displayProviderDialog) callback wordt teweeggebracht. Deze callback wordt door uw toepassing gebruikt om de gebruikersinterface van de MVPD-selectie weer te geven. Ook wordt uw app vereist om de authentificatiestroom te hervatten door de bibliotheek van Inschakelen van de Toegang over de selectie van MVPD van de gebruiker via [&#x200B; te informeren setSelectedProvider () &#x200B;](#setSelectedProvider) methode.
+- Als de laatste authentificatiepoging niet succesvol was of als de gebruiker uitdrukkelijk het programma opende, [*displayProviderDialog ()*](#displayProviderDialog) callback wordt teweeggebracht. Deze callback wordt door uw toepassing gebruikt om de gebruikersinterface van de MVPD-selectie weer te geven. Ook wordt uw app vereist om de authentificatiestroom te hervatten door de bibliotheek van Inschakelen van de Toegang over de selectie van MVPD van de gebruiker via [ te informeren setSelectedProvider () ](#setSelectedProvider) methode.
 
 Als een MVPD de functie &#39;Verificatie per aanvrager&#39; ondersteunt, kunnen meerdere verificatietokens worden opgeslagen op een apparaat (één per programmeur).
 
@@ -260,7 +260,7 @@ Zodra de gebruiker gewenste MVPD heeft geselecteerd, wordt de upper-layer toepas
 | ```public void setSelectedProvider(String mvpdId)``` |
 
 
-**Beschikbaarheid:**&#x200B;v 1.0+
+**Beschikbaarheid:**v 1.0+
 
 **Parameters:** niets
 
@@ -355,7 +355,7 @@ Deze callback signaleert ook wanneer de logout stroom volledig is.
 | --- |
 | ```public void checkPreauthorizedResources(ArrayList<String> resources)``` |
 
-**Beschikbaarheid:**&#x200B;v 1.0+
+**Beschikbaarheid:**v 1.0+
 
 **Parameters:** de `resources` parameter is een serie van middelen waarvoor de gebruiker reeds gemachtigd is om te bekijken.
 
@@ -427,7 +427,7 @@ Deze callback signaleert ook wanneer de logout stroom volledig is.
 | --- |
 | ```public void setToken(String token, String resourceId)``` |
 
-**Beschikbaarheid:**&#x200B;v 1.0+
+**Beschikbaarheid:**v 1.0+
 
 **Parameters:**
 
@@ -529,7 +529,7 @@ Er zijn twee soorten meta-gegevens beschikbaar aan Programmeurs:
 - *metadataKey*: Een gegevensstructuur die een sleutel en args variabele inkapselt, met de volgende betekenis:
    - Als de sleutel `METADATA_KEY_TTL_AUTHN` is, wordt de vraag gemaakt om de vervaltijd van het authentificatietoken te verkrijgen.
    - Als de sleutel `METADATA_KEY_TTL_AUTHZ` is en args een SerializableNameValuePair voorwerp met naam = `METADATA_ARG_RESOURCE_ID` en waarde = `[resource_id]` bevat, dan wordt de vraag gemaakt om de vervaltijd van het toestemmingstoken te verkrijgen verbonden aan de gespecificeerde middel.
-   - Als de toets `METADATA_KEY_DEVICE_ID` is, wordt de query uitgevoerd om de huidige apparaat-id te verkrijgen. Deze functie is standaard uitgeschakeld en programmeurs moeten contact opnemen met de Adobe voor informatie over de mogelijkheden en kosten.
+   - Als de toets `METADATA_KEY_DEVICE_ID` is, wordt de query uitgevoerd om de huidige apparaat-id te verkrijgen. Deze functie is standaard uitgeschakeld en programmeurs dienen contact op te nemen met Adobe voor informatie over activering en kosten.
    - Als de sleutel `METADATA_KEY_USER_META` is en args een SerializableNameValuePair voorwerp met naam = `METADATA_KEY_USER_META` en waarde = `[metadata_name]` bevat, dan wordt de vraag gemaakt voor gebruikersmeta-gegevens. De huidige lijst met beschikbare metagegevenstypen voor gebruikers:
       - `zip` - Postcode
       - `householdID` - Huishoudelijke id. Als een MVPD geen subaccounts ondersteunt, is dit hetzelfde als `userID` .
@@ -541,7 +541,7 @@ De werkelijke gebruikersmetagegevens die beschikbaar zijn voor een programmeur, 
 
 **teweeggebrachte callbacks:** [`setMetadataStatus()`](#setMetadaStatus)
 
-**Meer Informatie:** [&#x200B; Metagegevens van de Gebruiker &#x200B;](#setmetadatastatus)
+**Meer Informatie:** [ Metagegevens van de Gebruiker ](#setmetadatastatus)
 
 </br>
 
@@ -603,7 +603,7 @@ Deze waarde is null wanneer de aanvraag is ingediend voor eenvoudige metagegeven
 
 **teweeggebracht door:** [`getMetadata()`](#getMetadata)
 
-**Meer Informatie:** [&#x200B; Metagegevens van de Gebruiker &#x200B;](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/user-metadata.md)
+**Meer Informatie:** [ Metagegevens van de Gebruiker ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/user-metadata.md)
 
 </br>
 
@@ -625,7 +625,7 @@ Toegangsactivering activeert een extra callback die niet noodzakelijk met de mac
 
 >[!WARNING]
 >
-> Het apparaattype en het besturingssysteem worden afgeleid door het gebruik van een openbare Java-bibliotheek (http://java.net/projects/user-agent-utils) en de userAgent-tekenreeks. Deze informatie wordt alleen verstrekt als een ruwe manier om operationele meetgegevens in apparatencategorieën op te delen, maar die Adobe kan geen verantwoordelijkheid voor onjuiste resultaten nemen. Gebruik de nieuwe functionaliteit.
+> Het apparaattype en het besturingssysteem worden afgeleid door het gebruik van een openbare Java-bibliotheek (http://java.net/projects/user-agent-utils) en de userAgent-tekenreeks. Houd er rekening mee dat deze informatie alleen wordt verstrekt als een grove manier om operationele meetgegevens in apparaatcategorieën op te delen, maar dat Adobe geen verantwoordelijkheid kan nemen voor onjuiste resultaten. Gebruik de nieuwe functionaliteit.
 
 - Mogelijke waarden voor apparaattype:
    - `computer`

@@ -2,7 +2,7 @@
 title: Verminderde toegangsstromen
 description: REST API V2 - Verminderde toegangsstromen
 exl-id: 9276f5d9-8b1a-4282-8458-0c1e1e06bcf5
-source-git-commit: af867cb5e41843ffa297a31c2185d6e4b4ad1914
+source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
 workflow-type: tm+mt
 source-wordcount: '1615'
 ht-degree: 0%
@@ -17,15 +17,15 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> De implementatie van REST API V2 wordt begrensd door de [&#x200B; Throttling mechanisme &#x200B;](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
+> De implementatie van REST API V2 wordt begrensd door de [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
 
 >[!MORELIKETHIS]
 >
-> Zorg ervoor om [&#x200B; REST API V2 FAQs &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general) ook te bezoeken.
+> Zorg ervoor om [ REST API V2 FAQs ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general) ook te bezoeken.
 
 Degradatie zorgt ervoor dat bepaalde eindpunten voor MVPD-verificatie en -autorisatie tijdelijk worden overgeslagen. Meestal initieert de programmeur deze actie, maar ongeacht wie een degradatiegebeurtenis teweegbrengt, hangt de actie van vroegere regelingen af die met betrokken MVPDs worden gemaakt.
 
-Voor meer details over de eigenschap van de Afbraak, verwijs naar de [&#x200B; documentatie van de Afbraak &#x200B;](/help/premium-workflow/degraded-access/degradation-feature.md).
+Voor meer details over de eigenschap van de Afbraak, verwijs naar de [ documentatie van de Afbraak ](../../../../features-premium/degraded-access/degradation-feature.md).
 
 De degraded toegangsstromen staan u toe om voor de volgende scenario&#39;s te vragen:
 
@@ -55,7 +55,7 @@ Voordat u de verificatiestroom uitvoert terwijl de degradatie wordt toegepast, m
 
 Volg de gegeven stappen om de authentificatiestroom uit te voeren terwijl de degradatie zoals aangetoond in het volgende diagram wordt toegepast.
 
-![&#x200B; voer authentificatie uit terwijl de degradatie wordt toegepast &#x200B;](/help/authentication/assets/rest-api-v2/flows/degraded-access-flows/rest-api-v2-perform-authentication-while-degradation-is-applied-flow.png)
+![ voer authentificatie uit terwijl de degradatie wordt toegepast ](../../../../../assets/rest-api-v2/flows/degraded-access-flows/rest-api-v2-perform-authentication-while-degradation-is-applied-flow.png)
 
 *voer authentificatie uit terwijl de degradatie wordt toegepast*
 
@@ -63,7 +63,7 @@ Volg de gegeven stappen om de authentificatiestroom uit te voeren terwijl de deg
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; creeer authentificatiesessie &#x200B;](../../apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) API documentatie voor details op:
+   > Verwijs naar [ creeer authentificatiesessie ](../../apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) API documentatie voor details op:
    > 
    > * Alle _vereiste_ parameters, als `serviceProvider`, `mvpd`, `domainName`, en `redirectUrl`
    > * Alle _vereiste_ kopballen, als `Authorization` en `AP-Device-Identifier`
@@ -77,7 +77,7 @@ Volg de gegeven stappen om de authentificatiestroom uit te voeren terwijl de deg
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; creeer authentificatiesessie &#x200B;](../../apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) API documentatie voor details over de informatie die in een zittingsreactie wordt verstrekt.
+   > Verwijs naar [ creeer authentificatiesessie ](../../apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) API documentatie voor details over de informatie die in een zittingsreactie wordt verstrekt.
    > 
    > <br/>
    > 
@@ -88,7 +88,7 @@ Volg de gegeven stappen om de authentificatiestroom uit te voeren terwijl de deg
    >
    > <br/>
    > 
-   > Als de basisbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de basisbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
    >
    > <br/>
    > 
@@ -123,7 +123,7 @@ Zorg ervoor dat aan de volgende voorwaarden is voldaan voordat u autorisatiebesl
 
 Volg de gegeven stappen om de vergunningsstroom uit te voeren terwijl de degradatie wordt toegepast zoals aangetoond in het volgende diagram.
 
-![&#x200B; wint vergunningsbesluiten terug terwijl de degradatie wordt toegepast &#x200B;](/help/authentication/assets/rest-api-v2/flows/degraded-access-flows/rest-api-v2-retrieve-authorization-decisions-while-degradation-is-applied-flow.png)
+![ wint vergunningsbesluiten terug terwijl de degradatie wordt toegepast ](../../../../../assets/rest-api-v2/flows/degraded-access-flows/rest-api-v2-retrieve-authorization-decisions-while-degradation-is-applied-flow.png)
 
 *wint vergunningsbesluiten terug terwijl de degradatie wordt toegepast*
 
@@ -131,7 +131,7 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren terwijl de degrada
 
    >[!IMPORTANT]
    > 
-   > Verwijs naar [&#x200B; terugwinnen vergunningsbesluiten gebruikend specifieke mvpd &#x200B;](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details op:
+   > Verwijs naar [ terugwinnen vergunningsbesluiten gebruikend specifieke mvpd ](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `serviceProvider`, `mvpd`, en `resources`
    > * Alle _vereiste_ kopballen, als `Authorization` en `AP-Device-Identifier`
@@ -143,7 +143,7 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren terwijl de degrada
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen vergunningsbesluiten gebruikend specifieke mvpd &#x200B;](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details over de informatie die in een besluitreactie wordt verstrekt.
+   > Verwijs naar [ terugwinnen vergunningsbesluiten gebruikend specifieke mvpd ](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details over de informatie die in een besluitreactie wordt verstrekt.
    >
    > <br/>
    > 
@@ -154,7 +154,7 @@ Volg de gegeven stappen om de vergunningsstroom uit te voeren terwijl de degrada
    >
    > <br/>
    > 
-   > Als de basisbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de basisbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
    >
    > <br/>
    >
@@ -189,7 +189,7 @@ Voordat u beslissingen vóór de toelating ophaalt terwijl de afbraak wordt toeg
 
 Volg de gegeven stappen om de stroom van de voorafgaande toestemming uit te voeren terwijl de degradatie wordt toegepast zoals aangetoond in het volgende diagram.
 
-![&#x200B; wint pre-vergunningsbesluiten terug terwijl de degradatie wordt toegepast &#x200B;](/help/authentication/assets/rest-api-v2/flows/degraded-access-flows/rest-api-v2-retrieve-preauthorization-decisions-while-degradation-is-applied-flow.png)
+![ wint pre-vergunningsbesluiten terug terwijl de degradatie wordt toegepast ](../../../../../assets/rest-api-v2/flows/degraded-access-flows/rest-api-v2-retrieve-preauthorization-decisions-while-degradation-is-applied-flow.png)
 
 *wint pre-vergunningsbesluiten terug terwijl de degradatie wordt toegepast*
 
@@ -197,7 +197,7 @@ Volg de gegeven stappen om de stroom van de voorafgaande toestemming uit te voer
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen pre-vergunningsbesluiten gebruikend specifieke mvpd &#x200B;](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md) API documentatie voor details op:
+   > Verwijs naar [ terugwinnen pre-vergunningsbesluiten gebruikend specifieke mvpd ](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `serviceProvider`, `mvpd`, en `resources`
    > * Alle _vereiste_ kopballen, als `Authorization` en `AP-Device-Identifier`
@@ -209,7 +209,7 @@ Volg de gegeven stappen om de stroom van de voorafgaande toestemming uit te voer
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen pre-vergunningsbesluiten gebruikend specifieke mvpd &#x200B;](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md) API documentatie voor details over de informatie die in een besluitreactie wordt verstrekt.
+   > Verwijs naar [ terugwinnen pre-vergunningsbesluiten gebruikend specifieke mvpd ](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md) API documentatie voor details over de informatie die in een besluitreactie wordt verstrekt.
    >
    > <br/>
    >
@@ -220,7 +220,7 @@ Volg de gegeven stappen om de stroom van de voorafgaande toestemming uit te voer
    >
    > <br/>
    > 
-   > Als de basisbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de basisbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
    >
    > <br/>
    >
@@ -242,7 +242,7 @@ Volg de gegeven stappen om de stroom van de voorafgaande toestemming uit te voer
 >
 > <br/>
 > 
-> De het eindpuntreactie van Sessies instrueert de toepassing om met besluitvormingsstromen te werk te gaan terwijl de degradatie wordt toegepast. Voor meer details, verwijs naar [&#x200B; authentificatie uitvoeren terwijl de degradatie wordt toegepast &#x200B;](#perform-authentication-while-degradation-is-applied) sectie.
+> De het eindpuntreactie van Sessies instrueert de toepassing om met besluitvormingsstromen te werk te gaan terwijl de degradatie wordt toegepast. Voor meer details, verwijs naar [ authentificatie uitvoeren terwijl de degradatie wordt toegepast ](#perform-authentication-while-degradation-is-applied) sectie.
 
 ### Vereisten {#prerequisites-retrieve-profile-while-degradation-is-applied}
 
@@ -263,7 +263,7 @@ Voordat u het profiel voor een specifieke MVPD ophaalt terwijl de degradatie wor
 
 Volg de gegeven stappen om de stroom van de profielherwinning voor een specifieke MVPD uit te voeren terwijl de degradatie wordt toegepast zoals aangetoond in het volgende diagram.
 
-![&#x200B; wint profiel terug terwijl de degradatie wordt toegepast &#x200B;](/help/authentication/assets/rest-api-v2/flows/degraded-access-flows/rest-api-v2-retrieve-profile-while-degradation-is-applied-flow.png)
+![ wint profiel terug terwijl de degradatie wordt toegepast ](../../../../../assets/rest-api-v2/flows/degraded-access-flows/rest-api-v2-retrieve-profile-while-degradation-is-applied-flow.png)
 
 *wint profiel terug terwijl de degradatie wordt toegepast*
 
@@ -271,7 +271,7 @@ Volg de gegeven stappen om de stroom van de profielherwinning voor een specifiek
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen profiel voor specifieke mvpd &#x200B;](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) API documentatie voor details op:
+   > Verwijs naar [ terugwinnen profiel voor specifieke mvpd ](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `serviceProvider`, en `mvpd`
    > * Alle _vereiste_ kopballen, als `Authorization` en `AP-Device-Identifier`
@@ -283,7 +283,7 @@ Volg de gegeven stappen om de stroom van de profielherwinning voor een specifiek
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen profiel voor specifieke mvpd &#x200B;](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) API documentatie voor details op de informatie die in een profielreactie wordt verstrekt.
+   > Verwijs naar [ terugwinnen profiel voor specifieke mvpd ](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) API documentatie voor details op de informatie die in een profielreactie wordt verstrekt.
    >
    > <br/>
    >
@@ -294,7 +294,7 @@ Volg de gegeven stappen om de stroom van de profielherwinning voor een specifiek
    >
    > <br/>
    > 
-   > Als de basisbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de basisbevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
    >
    > <br/>
    > 
@@ -312,4 +312,4 @@ Volg de gegeven stappen om de stroom van de profielherwinning voor een specifiek
 
 >[!NOTE]
 >
-> De stappen voor de stroom van de profielterugwinning voor een specifieke authentificatiecode zijn het zelfde als hierboven, behalve dat wordt gebruikt het eindpunt in [&#x200B; wordt beschreven terugwinnen profiel voor specifieke code &#x200B;](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) documentatie die.
+> De stappen voor de stroom van de profielterugwinning voor een specifieke authentificatiecode zijn het zelfde als hierboven, behalve dat wordt gebruikt het eindpunt in [ wordt beschreven terugwinnen profiel voor specifieke code ](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) documentatie die.

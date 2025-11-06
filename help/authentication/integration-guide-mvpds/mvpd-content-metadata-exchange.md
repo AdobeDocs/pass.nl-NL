@@ -27,14 +27,14 @@ Aan de programmeerzijde ondersteunt Adobe Pass Authentication gestructureerde MR
    * objecttitel
    * resource-id
    * ratingwaarde en -type
-1. De waarden die uit de MRSS worden geëxtraheerd, worden gebruikt om de vergunningsaanvraag op te bouwen die aan de MVPD wordt doorgegeven.
+1. De waarden die uit de MRSS worden geëxtraheerd, worden gebruikt om het vergunningsverzoek dat aan de MVPD wordt doorgegeven, te bouwen.
 
 De Authentificatie van Adobe Pass steunt twee benaderingen voor het omzetten van MRSS in formaten die door MVPDs worden gesteund:
 
-* **XACML**.  De eerste aanpak wordt afgestemd op de OLCA-standaard.  Het gebruikt XACML, waarin de waarden MRSS worden gehaald om een XACMLResource met attributen te bouwen die aan de elementen MRSS in kaart brengen.  Dit wordt dan overgegaan tot MVPD.
+* **XACML**.  De eerste aanpak wordt afgestemd op de OLCA-standaard.  Het gebruikt XACML, waarin de waarden MRSS worden gehaald om een XACMLResource met attributen te bouwen die aan de elementen MRSS in kaart brengen.  Dit wordt vervolgens doorgegeven aan de MVPD.
 * **REST**.  De tweede aanpak is REST-gebaseerd.  MRSS is base64 gecodeerd en overgegaan als parameter URL op de vraag REST.
 
-In beide benaderingen verwerkt het MVPD het vergunningsverzoek door de geëxtraheerde waarden in zijn eigen logische stroom op te nemen en een reactie op de toelating te retourneren.
+In beide benaderingen verwerkt de MVPD het vergunningsverzoek door de geëxtraheerde waarden in de eigen logische stroom op te nemen en een reactie op de toelating te retourneren.
 
 ## Integratiedetails {#integration-details}
 

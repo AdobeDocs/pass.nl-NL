@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 </br>
 
@@ -37,7 +37,7 @@ Als de aanvraag `/authenticate` als volgt is samengesteld...
 ```
 
 
-...het wordt hieronder door de browser van het IE geïnterpreteerd en wordt naar de Adobe verzonden in de volgende notatie:
+...het wordt hieronder door de browser van het IE geïnterpreteerd en wordt in de volgende notatie naar Adobe verzonden:
 
 
 ```
@@ -63,4 +63,4 @@ U kunt dit probleem op een van de volgende manieren oplossen:
 
 1. Normaliseer `&reg_code` als u `&amp;reg_code` gebruikt.
 
-1. Adobe kon een nieuwe eigenschap introduceren om een foutencode terug naar het tweede scherm in antwoord op een authentificatievraag te verzenden, als de symbolische verwezenlijking AuthN ontbrak.
+1. Adobe zou een nieuwe eigenschap kunnen introduceren om een foutencode terug naar het tweede scherm in antwoord op een authentificatievraag te verzenden, als de symbolische verwezenlijking AuthN ontbrak.

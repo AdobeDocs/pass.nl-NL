@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 
 1. De programmeur maakt een Zendesk-ticket waarmee de Xbox 360/One for Adobe Pass Authentication Client less-oplossing kan worden ingeschakeld door de volgende informatie op te geven:
@@ -26,9 +26,9 @@ ht-degree: 0%
 
    1. Id aanvrager: bv. netgeo, CNN enz.
 
-1. De Adobe zal X509 Certificaten tot stand brengen en zal de privé sleutel en het wachtwoord aan zijn eind vormen.
+1. Adobe maakt X509-certificaten en configureert de persoonlijke sleutel en het wachtwoord aan het einde.
 
-1. De Adobe zal het Openbare certificaat (van X509 cert) aan Programmeur in het kaartje of via e-mail verstrekken.
+1. Adobe zal het Public Certificate (van X509 cert) aan de Programer in het ticket of via e-mail verstrekken.
 
 1. De programmeur moet dat openbare certificaat dan installeren op de GDNP-portal voor de toepassing die bij Microsoft is geregistreerd.
 
@@ -49,4 +49,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Wegens de grote lengte van het teken van XSTS, heeft de console XBox een technische beperking: het kan niet het teken als parameter van HTTP naar Adobe Pass betaal-TV authentificatie APIs verzenden. Met Adobe Pass pay-TV-verificatie kan de XSTS-token worden verzonden als onderdeel van de HTTP-header &quot;Authorization&quot; wanneer de API&#39;s worden aangeroepen. De XSTS-token moet worden versleuteld met de openbare sleutel uit het X.509-certificaat dat aan de programmeur is uitgegeven via betaaltelevisie-verificatie van Adobe Pass. Bij Adobe Pass pay-TV-verificatie wordt de bijbehorende persoonlijke sleutel opgeslagen en gebruikt om het XSTS-token te decoderen en de deviceId ervan te extraheren.
+>Vanwege de grote lengte van het XSTS-token heeft de XBox-console een technische beperking: het kan het token als een HTTP GET-parameter niet verzenden naar de Adobe Pass pay-TV-verificatie-API&#39;s. Met Adobe Pass pay-TV-verificatie kan de XSTS-token worden verzonden als onderdeel van de HTTP-header &quot;Authorization&quot; wanneer de API&#39;s worden aangeroepen. De XSTS-token moet worden versleuteld met de openbare sleutel uit het X.509-certificaat dat aan de programmeur is uitgegeven via betaaltelevisie-verificatie van Adobe Pass. Bij Adobe Pass pay-TV-verificatie wordt de bijbehorende persoonlijke sleutel opgeslagen en gebruikt om het XSTS-token te decoderen en de deviceId ervan te extraheren.

@@ -1,14 +1,13 @@
 ---
 title: Beleidsinformatie
 description: Beleidsinformatie
-source-git-commit: 19ed211c65deaa1fe97ae462065feac9f77afa64
+exl-id: 964bb28d-cfef-4a37-b6c4-10cc59be0b47
+source-git-commit: f30b6814b8a77424c13337d44d7b247105e0bfe2
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---
-
-
 
 # Beleidsinformatie {#pip}
 
@@ -16,7 +15,7 @@ ht-degree: 0%
 >
 >Deze pagina is verouderd omdat deze van toepassing is op de vorige versie van de API die niet langer wordt aanbevolen voor nieuwe integratie
 
-In het volgende diagram wordt de stroom weergegeven voor het geval de klant voor de **Beleidsinformatie**, in welk geval CM alleen wordt gebruikt voor het opvragen van de activiteit en alle toegangslogica is ingebed in de cliënttoepassing):
+Het volgende diagram toont de stroom in het geval dat de klant voor het **Punt van de Informatie van het Beleid** kiest, in welk geval wordt CM slechts gebruikt voor het vragen van de activiteit en al toegangslogica ingebed in de cliënttoepassing):
 
 ![](assets/pip-workflow.png)
 
@@ -33,4 +32,3 @@ In een notendop, is de gebruikelijke berichtstroom als volgt:
 1. Tijdens het afspelen van video doet de van instrumenten voorzien toepassing hartslagvraag aan de Dienst van de Controle van de Valuta, die toont dat de gebruiker momenteel een video verbruikt.
 1. Op elk ander punt, kunnen andere van instrumenten voorzien toepassingen de vraagvraag van de Status aan de Dienst van de Controle van de Valuta maken, die de huidige gebruikersactiviteit zal terugkeren.
 1. Aan het einde van het afspelen van video kan de van instrumenten voorziene toepassing een hartslagaanroep uitvoeren met &quot;event=stop&quot;, wat betekent dat de video is gestopt en dat de huidige stream niet meer als een actieve stream moet worden geteld.
-

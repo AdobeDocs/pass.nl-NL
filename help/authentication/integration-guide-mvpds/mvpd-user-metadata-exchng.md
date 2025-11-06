@@ -1,6 +1,6 @@
 ---
-title: MVPD-uitwisseling van metagegevens van gebruikers
-description: MVPD-uitwisseling van metagegevens van gebruikers
+title: MVPD User Metadata Exchange
+description: MVPD User Metadata Exchange
 exl-id: 8bce6acc-cd33-476c-af5e-27eb2239cad1
 source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
 workflow-type: tm+mt
@@ -9,7 +9,7 @@ ht-degree: 0%
 
 ---
 
-# MVPD-uitwisseling van metagegevens van gebruikers
+# MVPD User Metadata Exchange
 
 >[!NOTE]
 >
@@ -27,15 +27,15 @@ De volgende gegevenstypen voor gebruikers zijn momenteel beschikbaar voor uitwis
 * Huishoudelijke ID
 * Kanaal-id
 
-Gebruikend deze eigenschap, kunnen MVPDs en Programmers speciale gebruiksgevallen zoals oudercontrole uitvoeren. Bijvoorbeeld, kan een MVPD ouderlijke classificatiegegevens tot een Programmer overgaan, die dan die gegevens gebruikt om beschikbare het bekijken keuzen voor een gebruiker te filtreren.
+Gebruikend deze eigenschap, kunnen MVPDs en Programmers speciale gebruiksgevallen zoals oudercontrole uitvoeren. Een MVPD kan bijvoorbeeld beoordelingsgegevens voor ouders doorgeven aan een programmeur, die die gegevens vervolgens gebruikt om de beschikbare weergaveopties voor een gebruiker te filteren.
 
 Belangrijke punten van metagegevens van gebruiker:
 
-* MVPD gaat gebruikersmeta-gegevens tot de toepassing van de Programmer tijdens de authentificatie en vergunningsstromen over
+* De MVPD geeft gebruikersmetagegevens door aan de toepassing van de programmeur tijdens de verificatie- en machtigingsstromen
 * Adobe Pass Authentication slaat de metagegevenswaarden op in de AuthN- en AuthZ-tokens
 * Adobe Pass-verificatie kan waarden normaliseren voor MVPD&#39;s die gebruikersmetagegevens in verschillende indelingen bieden
 * Sommige parameters kunnen worden gecodeerd met de sleutel van de programmeur
-* Specifieke waarden worden door de Adobe beschikbaar gesteld via een configuratiewijziging
+* Adobe stelt specifieke waarden beschikbaar via een configuratiewijziging
 
 >[!NOTE]
 >
@@ -49,13 +49,13 @@ In dit voorbeeld wordt de uitwisseling van het volgende getoond:
 
 * [Programmeren naar MVPD Metadata Exchange](#progr-mvpd-metadata-exch)
 
-* [MVPD aan de Stroom van de Uitwisseling van Metagegevens van de Programmer](#mvpd-progr-exchange-flow)
+* [MVPD to Programmer Metadata Exchange Flow](#mvpd-progr-exchange-flow)
 
 ### Programmeren naar MVPD Metadata Exchange {#progr-mvpd-metadata-exch}
 
-Momenteel ondersteunen de programmeur-API, Adobe Pass-verificatie en MVPD-autorisatoren alleen kanaalverificatie. Het kanaal wordt als onbewerkte teksttekenreeks opgegeven in de API-aanroep getAuthorization() van de programmeur. Deze tekenreeks wordt volledig doorgegeven aan de autoriserende backend van de MVPD:
+Momenteel ondersteunen de programmeur-API, Adobe Pass-verificatie en MVPD-autorisatoren alleen kanaalverificatie. Het kanaal wordt als onbewerkte teksttekenreeks opgegeven in de API-aanroep getAuthorization() van de programmeur. Deze tekenreeks wordt helemaal doorgegeven aan de MVPD die de backend autoriseert:
 
-Van de app of de plaats van de Programmer, kiest de gebruiker XACML geschikt MVPD (in dit voorbeeld, &quot;TNT&quot;). Voor informatie over XACML, zie [&#x200B; eXtensible Taal van de Prijsverhoging van het Toegangsbeheer &#x200B;](https://en.wikipedia.org/wiki/XACML){target=_blank} .
+In de app of site van de programmeur kiest de gebruiker een MVPD die geschikt is voor XACML (in dit voorbeeld &#39;TNT&#39;). Voor informatie over XACML, zie [ eXtensible Taal van de Prijsverhoging van het Toegangsbeheer ](https://en.wikipedia.org/wiki/XACML){target=_blank}.
 De toepassing van de Programmer vormt een verzoek AuthZ dat de middel en zijn meta-gegevens omvat.  Dit voorbeeld bevat een MPAA-classificatie van &quot;pg&quot; in het mediakarakter van het kanaalelement:
 
 ```XML
@@ -68,17 +68,17 @@ var resource = '<rss version="2.0" xmlns:media="http://video.search.yahoo.com/mr
 getAuthorization(resource);
 ```
 
-De Authentificatie van Adobe Pass steunt eigenlijk meer korrelige vergunning, tot het activaniveau, wanneer gesteund door zowel MVPD als programmeur. De bron en de bijbehorende metagegevens zijn ondoorzichtig voor de Adobe. De bedoeling is om een standaardindeling in te stellen voor het normaliseren van de bron-id en de metagegevens, zodat de bron-id&#39;s naar andere MVPD&#39;s worden verzonden.
+De Authentificatie van Adobe Pass steunt eigenlijk meer korrelige vergunning, tot het activaniveau, wanneer gesteund door zowel MVPD als programmeur. De bron en de bijbehorende metagegevens zijn ondoorzichtig voor Adobe. Het is de bedoeling een standaardindeling in te stellen voor het normaliseren van de bron-id en de metagegevens, zodat de bron-id&#39;s naar andere MVPD&#39;s worden verzonden.
 
 >[!NOTE]
 >
->Als de gebruiker een kanaal-slechts geschikt MVPD kiest, dan haalt de Authentificatie van Adobe Pass SLECHTS de kanaaltitel (&quot;TNT&quot;in het bovenstaande voorbeeld) en gaat slechts de titel tot MVPD over.
+>Als de gebruiker een MVPD kiest die alleen via een kanaal kan worden gebruikt, haalt Adobe Pass Authentication ALLEEN de kanaaltitel (&quot;TNT&quot; in het bovenstaande voorbeeld) uit en geeft alleen de titel door aan de MVPD.
 
-### MVPD aan de Stroom van de Uitwisseling van Metagegevens van de Programmer {#mvpd-progr-exchange-flow}
+### MVPD to Programmer Metadata Exchange Flow {#mvpd-progr-exchange-flow}
 
 Adobe Pass Authentication gaat uit van de volgende veronderstellingen:
 
-* MVPD verzendt de maximumclassificatie als deel van de reactie SAML
+* De MVPD verzendt de maximale score als onderdeel van de SAML-respons
 * Deze informatie wordt opgeslagen als onderdeel van het verificatietoken
 * Een API wordt geleverd door Adobe Pass Authentication, zodat programmeurs deze informatie kunnen ophalen
 * Programmeurs implementeren deze functie op hun site of in hun app (bijvoorbeeld om video&#39;s te verbergen die de maximale score voor de gebruiker overschrijden)
@@ -105,13 +105,13 @@ Adobe Pass Authentication gaat uit van de volgende veronderstellingen:
 
 ### Notities {#notes-mvpd-progr-metadata-exch-flow}
 
-**Normalisatie en Bevestiging van het Middel.** Middel-id&#39;s kunnen worden doorgegeven als een tekenreeks zonder opmaak of als een MRSS-tekenreeks. Een programmeur kan besluiten of het duidelijke koordformaat of MRSS te gebruiken, maar zal een voorafgaande overeenkomst met MVPD nodig hebben zodat MVPD weet hoe te om dat middel te behandelen.
+**Normalisatie en Bevestiging van het Middel.** Middel-id&#39;s kunnen worden doorgegeven als een tekenreeks zonder opmaak of als een MRSS-tekenreeks. Een programmeur kan besluiten of het gewone koordformaat of MRSS te gebruiken, maar zal een voorafgaande overeenkomst met MVPD nodig hebben zodat MVPD weet hoe te om dat middel te behandelen.
 
 **identiteitskaart van het Middel en de Specificatie van Meta-gegevens.** Adobe Pass Authentication gebruikt de RSS-standaard met de Media RSS-extensie om een resource en de bijbehorende metagegevens op te geven. In combinatie met de Media RSS-extensie ondersteunt Adobe Pass Authentication een groot aantal metagegevens, zoals de besturingselementen voor ouders (via `<media:rating>` ) of de geolocatie (`<media:location>` ).
 
 De Authentificatie van Adobe Pass kan transparante omzetting van het koord van het erfeniskanaal aan het overeenkomstige middel RSS voor MVPDs ook steunen die RSS vereisen. In de andere richting, steunt de Authentificatie van Adobe Pass omzetting van RSS+MRSS aan gewone kanaaltitel, voor kanaal-slechts MVPDs.
 
-**de Authentificatie van Adobe Pass verzekert volledige achterwaartse verenigbaarheid met bestaande integratie.** Dat wil zeggen dat voor programmeurs die gebruik maken van verificatie op kanaalniveau, de Adobe Pass-verificatie ervoor zorgt dat de kanaal-id in de vereiste indeling wordt verpakt voordat deze naar een MVPD wordt verzonden die deze indeling begrijpt. Het omgekeerde geldt ook: als een programmeur al zijn middelen in een nieuw formaat specificeert, vertaalt de Authentificatie van Adobe Pass het nieuwe formaat in een eenvoudig kanaalkoord als het machtigen tegen MVPD die slechts kanaalniveauvergunning doet.
+**de Authentificatie van Adobe Pass verzekert volledige achterwaartse verenigbaarheid met bestaande integratie.** Dat wil zeggen dat voor programmeurs die gebruik maken van verificatie op kanaalniveau, de Adobe Pass-verificatie ervoor zorgt dat de kanaal-id in de vereiste indeling wordt verpakt voordat deze naar een MVPD wordt verzonden die deze indeling begrijpt. Het omgekeerde geldt ook: als een programmeur al zijn middelen in een nieuw formaat specificeert, vertaalt de Authentificatie van Adobe Pass het nieuwe formaat in een eenvoudige kanaalkoord als het machtigen tegen een MVPD die slechts kanaalniveauvergunning doet.
 
 ## Gebruiksscenario&#39;s metagegevens gebruiker {#user-metadata-use-cases}
 
@@ -125,7 +125,7 @@ De gevallen van het gebruik zijn voortdurend veranderend en uitbreidend aangezie
 
 ### MVPD-gebruikersnaam {#mvpd-user-id}
 
-* Zoals verstrekt door het MVPD
+* Zoals verstrekt door de MVPD
 * Niet de daadwerkelijke login informatie van de gebruiker, aangezien het door MVPD wordt gehakt
 * Kan worden gebruikt om problemen aan te geven met of voor specifieke gebruikers
 * Gecodeerd

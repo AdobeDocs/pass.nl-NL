@@ -4,7 +4,7 @@ description: Registratiepagina
 exl-id: 581b8e2e-7420-4511-88b9-f2cd43a41e10
 source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '509'
 ht-degree: 0%
 
 ---
@@ -19,21 +19,21 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 >[!NOTE]
 >
-> De implementatie van REST API wordt begrensd door [&#x200B; Throttling mechanisme &#x200B;](/help/authentication/integration-guide-programmers/throttling-mechanism.md)
+> De implementatie van REST API wordt begrensd door [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md)
 
 &lt;REGGIE_FQDN>:
 
-* Productie - [&#x200B; api.auth.adobe.com &#x200B;](http://api.auth.adobe.com/)
-* Het opvoeren - [&#x200B; api.auth-staging.adobe.com &#x200B;](http://api.auth-staging.adobe.com/)
+* Productie - [ api.auth.adobe.com ](http://api.auth.adobe.com/)
+* Het opvoeren - [ api.auth-staging.adobe.com ](http://api.auth-staging.adobe.com/)
 
 &lt;SP_FQDN>:
 
-* Productie - [&#x200B; api.auth.adobe.com &#x200B;](http://api.auth.adobe.com/)
-* Het opvoeren - [&#x200B; api.auth-staging.adobe.com &#x200B;](http://api.auth-staging.adobe.com/)
+* Productie - [ api.auth.adobe.com ](http://api.auth.adobe.com/)
+* Het opvoeren - [ api.auth-staging.adobe.com ](http://api.auth-staging.adobe.com/)
 
 <br>
 
@@ -43,7 +43,7 @@ Retourneert willekeurig gegenereerde registratie- en aanmeldingspagina-URI.
 
 | Endpoint | Geroepen <br> door | Invoer   <br> Parameter | HTTP <br> Methode | Antwoord | HTTP-respons <br> |
 | --- | --- | --- | --- | --- | --- |
-| &lt;REGGIE_FQDN>/reggie/v1/{requestor}/regcode <br> bijvoorbeeld:<br> REGGIE_FQDN/reggie/v1/sampleRequestorId/regcode | Streaming App <br> of <br> de Dienst van de Programmer | 1. aanvrager <br>    (De component van de Weg) <br> 2.  deviceId (Hashed)   <br>    (Verplicht) <br> 3.  device_info/x-apparaat-Info (Verplicht) <br> 4.  mvpd (Facultatief) <br> 5.  ttl (Facultatief) <br> | POST | XML of JSON met een registratiecode en informatie of foutdetails als dit mislukt. Zie onderstaande voorbeelden. | 201 |
+| &lt;REGGIE_FQDN>/reggie/v1/{requestor}/regcode <br> bijvoorbeeld:<br> REGGIE_FQDN/reggie/v1/sampleRequestorId/regcode | Streaming App <br> of <br> de Dienst van de Programmer | &#x200B;1. aanvrager <br>    (De component van de Weg) <br> 2.  deviceId (Hashed)   <br>    (Verplicht) <br> 3.  device_info/x-apparaat-Info (Verplicht) <br> 4.  mvpd (Facultatief) <br> 5.  ttl (Facultatief) <br> | POST | XML of JSON met een registratiecode en informatie of foutdetails als dit mislukt. Zie onderstaande voorbeelden. | 201 |
 
 {style="table-layout:auto"}
 
@@ -53,7 +53,7 @@ Retourneert willekeurig gegenereerde registratie- en aanmeldingspagina-URI.
 | Accepteren | Koptekst <br> Waarde: toepassing/json | aangeven welk inhoudstype de client moet kunnen begrijpen |
 | aanvrager | Query-parameter | De programmeeraanvragerId waarvoor deze verrichting geldig is. |
 | deviceId | Query-parameter | Het apparaat-id bytes. |
-| device_info/<br> x-apparaat-Info | device_info: Body <br> X-Device-Info: Koptekst | Informatie over streaming apparaat.<br>**Nota**: Dit KAN device_info als parameter worden overgegaan URL, maar wegens de potentiële grootte van deze parameter en beperkingen op de lengte van een GET URL, ZOU het als x-Apparaat-Info in de kopbal van http moeten worden overgegaan. <br> zie de volledige details in [&#x200B; het overgaan van Apparaat en de Informatie van de Verbinding &#x200B;](/help/authentication/integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md). |
+| device_info/<br> x-apparaat-Info | device_info: Body <br> X-Device-Info: Koptekst | Informatie over streaming apparaat.<br>**Nota**: Dit KAN device_info als parameter worden overgegaan URL, maar wegens de potentiële grootte van deze parameter en beperkingen op de lengte van GET URL, ZOU het als x-Apparaat-Info in de kopbal van http moeten worden overgegaan. <br> zie de volledige details in [ het overgaan van Apparaat en de Informatie van de Verbinding ](/help/authentication/integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md). |
 | mvpd | Query-parameter | De MVPD-id waarvoor deze bewerking geldig is. |
 | ttl | Query-parameter | Hoe lang deze regcode in seconden zou moeten leven.<br>**Nota**: De maximumwaarde die voor ttl wordt toegestaan is 36000 seconden (10 uren). Hogere waarden resulteren in een 400 HTTP-respons (onjuiste aanvraag). Als `ttl` leeg blijft, stelt Adobe Pass Authentication een standaardwaarde van 30 minuten in. |
 | _deviceType_ | Query-parameter | Vervangen, niet gebruiken. |
@@ -81,7 +81,7 @@ Retourneert willekeurig gegenereerde registratie- en aanmeldingspagina-URI.
 >POST /reggie/v1/{req_id}/regcode HTTP/1.1<br>X-Forwarded-For:203.45.101.20
 >```
 >
-><br>
+<br>
 
 ### Response JSON
 
@@ -126,7 +126,7 @@ Retourneert willekeurig gegenereerde registratie- en aanmeldingspagina-URI.
 | info:deviceInfo | Base64 Normalized de Informatie van het Apparaat bouwt op informatie die van gebruiker-Agent, x-Apparaat-Info of device_info wordt ontvangen |
 | info:userAgent | Gebruikersagent verzonden door de toepassing |
 | info:originalUserAgent | Gebruikersagent verzonden door de toepassing |
-| info:authenticationType | OAUTH2 voor vraag die DCR gebruiken |
+| info:authorizationType | OAUTH2 voor vraag die DCR gebruiken |
 | info:sourceApplicationInformation | Application Info zoals geconfigureerd in DCR |
 
 {style="table-layout:auto"}

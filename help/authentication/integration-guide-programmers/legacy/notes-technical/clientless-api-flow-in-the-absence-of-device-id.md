@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 </br>
 
@@ -43,7 +43,7 @@ Nadat deze stappen zijn uitgevoerd, gebruikt Adobe Pass-verificatie de UUID als 
 
 ## Permanente oplossing
 
-Adobe wijzigt dit in een toekomstige versie door `deviceId` optioneel te laden bij het maken van de reg-code en UUID als tokensleutel te gebruiken in plaats van `deviceId` , wanneer `deviceId` niet aanwezig is.
+Adobe wijzigt dit in een toekomstige versie door `deviceId` optioneel te laden bij het maken van de reg-code en UUID als tokensleutel te gebruiken in plaats van `deviceId` wanneer `deviceId` niet aanwezig is.
 
 <!--
 ## Related Information

@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 Op deze pagina worden nieuwe functies, wijzigingen en bekende problemen met deze release beschreven:
 
@@ -27,8 +27,8 @@ Datum van de versie: **03/26/2024**
 
 * Werkt SDK Privacy Manifest bij in overeenstemming met de privacyvereisten van iOS 17.
 * Hiermee wordt een probleem verholpen dat er in sommige situaties voor zorgde dat gebruikers tijdens de verificatiestroom op een leeg scherm bleven.
-* Voegt apparatenregistreren en serverregistreren toe om inzicht informatie over de staat van Keychain te verkrijgen.
+* Voegt apparaatregistratie en serverlogbestand toe om insight-informatie over de status van Keychain te verkrijgen.
 
 ## Geen pakket {#release-package-392}
 
-U kunt iOS/tvOS SDK v3.9.2 van [&#x200B; hier &#x200B;](https://tve.zendesk.com/hc/en-us/articles/204963209-iOS-tvOS-Native-AccessEnabler-Library) downloaden.
+U kunt iOS/tvOS SDK v3.9.2 van [ hier ](https://tve.zendesk.com/hc/en-us/articles/204963209-iOS-tvOS-Native-AccessEnabler-Library) downloaden.

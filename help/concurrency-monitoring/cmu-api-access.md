@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan. Neem contact op met uw Adobe voor vragen over beschikbaarheid.
+>De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan. Neem contact op met uw Adobe-vertegenwoordiger voor vragen over beschikbaarheid.
 
 ## Overzicht van de toegangsprocedure {#api-access-procedure-overview}
 
@@ -26,15 +26,14 @@ Voer de stappen in de onderstaande secties uit om toegang te krijgen.
 
 ## Toegangsprocedures {#access-procedure-steps}
 
-1. Een geregistreerde toepassing hebben op de Adobe Pass DCR-server. Voor deze stap gelieve ons [&#x200B; Team van de Steun &#x200B;](mailto:tve-support@adobe.com) te contacteren.
+1. Een geregistreerde toepassing hebben op de Adobe Pass DCR-server. Voor deze stap gelieve ons [ Team van de Steun ](mailto:tve-support@adobe.com) te contacteren.
 
 2. De software-instructie ophalen
-   1. Ga naar [&#x200B; Adobe Pass TVE Dashboard &#x200B;](https://experience.adobe.com/#/pass/authentication)
+   1. Ga naar [ Adobe Pass TVE Dashboard ](https://experience.adobe.com/#/pass/authentication)
    2. Programmeur selecteren
    3. Ga naar *Geregistreerde Toepassingen* lusje
    4. Toepassing selecteren
    5. Klik op Downloaden op de geregistreerde toepassingsrij waarvoor u een softwareverklaring wilt krijgen en sparen het als dossier op uw lokale machine
-
       <figure>
           <img src="assets/programmer-download-software-statement-button.png"
                alt="Softwareinstructie downloaden">
@@ -47,7 +46,6 @@ Voer de stappen in de onderstaande secties uit om toegang te krijgen.
 
 3. Toegangstoken verkrijgen
    1. Krijg cliëntgeloofsbrieven door de hierboven verkregen softwareverklaring te gebruiken en de hieronder vraag uit te voeren. Op deze manier zal een client_id - client_geheime paar worden verkregen, die kan worden gebruikt om het toegangstoken te krijgen.
-
       *deze stap zou niet elke keer moeten worden uitgevoerd. Het zou opnieuw moeten worden gedaan slechts wanneer de geloofsbrieven verlopen.*
       <figure>
           <img src="assets/dcr_request_1_get_client_credentials.png"
@@ -55,7 +53,6 @@ Voer de stappen in de onderstaande secties uit om toegang te krijgen.
        </figure>
 
    2. Krijg toegangstoken door de lagere vraag te gebruiken. Gebruik dit toegangstoken om een CMU API aan te roepen tot het teken zal verlopen.
-
       *deze stap zou moeten worden uitgevoerd slechts als het laatste geproduceerde teken verliep.*
       <figure>
           <img src="assets/dcr_get_access_token_call.png"

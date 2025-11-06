@@ -1,42 +1,42 @@
 ---
 title: Verklarende woordenlijst
 description: Woordenlijst met termen in Gelijktijdige bewaking
-source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
+exl-id: 3b3b36fe-9f04-4de9-bd84-9f8d766bbc71
+source-git-commit: f30b6814b8a77424c13337d44d7b247105e0bfe2
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '762'
 ht-degree: 0%
 
 ---
-
 
 # Verklarende woordenlijst {#glossary}
 
 ## Account-id {#accid-defn}
 
-* MVPD-account van een abonnee, meestal overeenkomend met de werkelijke factureringsaccount. Deze rekening moet door het MVPD in zijn eigen systeem identificeerbaar zijn.
+* MVPD-account van een abonnee, meestal overeenkomend met de werkelijke factureringsaccount. Deze rekening moet door de MVPD in haar eigen systeem kunnen worden geïdentificeerd.
 
 ## Handeling {#action-defn}
 
-* Het type toegang dat het onderwerp aanvraagt; de mogelijke waarden voor CM zijn ***initiëren*** of ***continue*** een streaming sessie.
+* Het type van toegang dat het onderwerp verzoekt; de mogelijke waarden voor cm ****** in werking stellen of ***blijven*** een het stromen zitting.
 
 ## Actieve stroom {#active-stream-defn}
 
 * Een stroom die minstens 1 gebeurtenis (hartslag) in de laatste 90 seconden heeft ontvangen.
 
-* ***Opmerking:*** Als de laatste gebeurtenis in de stream van het type stop is (`?event=stop`), wordt het niet meegeteld. Dit is een optimalisatie die een speler toestaat om een stroom uitdrukkelijk te sluiten zodat het niet als &quot;actief&quot;meer wordt beschouwd.
+* ***Nota:*** als de laatste gebeurtenis in de stroom van typeeinde (`?event=stop`) is, zal het niet worden geteld. Dit is een optimalisatie die een speler toestaat om een stroom uitdrukkelijk te sluiten zodat het niet als &quot;actief&quot;meer wordt beschouwd.
 
 ## Toepassing {#application-defn}
 
 * Ontwikkeld door de huurder voor toegang tot video-inhoud
-* Maakt en handhaaft besluiten over inhoudstoegang op informatie die door de Dienst van de Controle van de Valuta wordt verstrekt (dit is geldig in [Beleidsinformatie](/help/concurrency-monitoring/policy-info-pt-versionone.md) case)
-* Heeft een unieke **toepassings-id** verstrekt door Adobe.
+* Maakt en handhaaft besluiten over inhoudstoegang die op informatie wordt gebaseerd die door de Dienst van de Controle van de Valuta wordt verstrekt (dit is geldig in het [ geval van het Punt van de Informatie van het Beleid 0})](/help/concurrency-monitoring/policy-info-pt-versionone.md)
+* Zal een unieke **toepassingsidentiteitskaart** hebben die door Adobe wordt verstrekt.
 
 ## Gelijktijdige bewakingsservice {#cm-service-defn}
 
 * treedt op als een controlesysteem voor de abonnees, dat de MVPD&#39;s en de programmeurs steunt in hun eisen inzake de handhaving van het intertoepassingsbeleid.
 * Ontvangt hartslagen die op stroomactiviteit wijzen.
-* Handelt als een _Beleidsbeslissingspunt_ door vergunningsverzoeken te evalueren die op gebruikersactiviteit worden gebaseerd en toe te staan/ontkennen antwoord te verstrekken.
-* Handelt als een _Beleidsinformatie_ door het aantal actieve stromen (en extra stroommeta-gegevens) voor een abonnee te melden.
+* Handelt als Punt van het Besluit van het a _Beleid_ door vergunningsverzoeken te evalueren die op gebruikersactiviteit worden gebaseerd en toe te staan/ontkennen reactie te verstrekken.
+* Handelt als Punt van de Informatie van het a _Beleid_ door het aantal actieve stromen (en extra stroommeta-gegevens) voor een abonnee te melden.
 
 ## Omgeving {#env-defn}
 
@@ -73,12 +73,12 @@ ht-degree: 0%
 
 * Handelt als een service- en contentprovider.
 * vertrouwt op de opgestelde cliënttoepassing die met de dienst van de Controle van de Zitting integreert om het bepaalde veiligheidsbeleid af te dwingen dat op de bovengenoemde dienstgegevens wordt gebaseerd.
-* Moet MVPD in het verzamelen van abonneeactiviteit steunen en de beperkende regels afdwingen wanneer op hun eigenschappen.
+* Moet de MVPD ondersteunen bij het verzamelen van abonneeactiviteiten en het afdwingen van de beperkende regels wanneer ze zich op hun eigendommen bevinden.
 * Misschien ook geïnteresseerd in het beperken van gelijktijdige toegang tot hun inhoud voor alle bestemmingspoorten, als afzonderlijke regel.
 
-  *V: Waarom programmeur en niet aanvrager-id in de rest van de Adobe Pass-verificatie?*
+  *Q: Waarom programmeur en niet identiteitskaart van de Aanvrager zoals in de rest van de Authentificatie van Adobe Pass?*
 
-  *A: De reden is om programmeurs toe te staan om deze parameter flexibel te gebruiken om gegevens tussen hun eigenschappen door te geven of te isoleren afhankelijk van hun gebruiksgevallen.*
+  *A: De reden moet Programmeurs toestaan om deze parameter flexibel te gebruiken om gegevens tussen hun eigenschappen afhankelijk van hun gebruiksgevallen over te gaan of te isoleren.*
 
 ## Bron {#resource-defn}
 
@@ -94,13 +94,13 @@ ht-degree: 0%
 
 ## Onderwerp {#subj-defn}
 
-* De consument van de (video)inhoud via internet. We vermijden bewust de term _&#x200B;**user**&#x200B;_, aangezien Gelijktijdige bewaking doorgaans betrekking heeft op de ID&#39;s van de MVPD-account (waarbij verschillende werkelijke gebruikers betrokken zijn die hetzelfde contract delen, bijvoorbeeld gezinsleden voor een huishouden).
+* De consument van de (video)inhoud via internet. Wij vermijden opzettelijk de termijn _**gebruiker**_, aangezien de Controle van de Zalk gewoonlijk MVPD rekening IDs behandelt (die verscheidene daadwerkelijke gebruikers impliceren die het zelfde contract, bijvoorbeeld familieleden voor een huishouden delen).
 
 * Voor elke stroom, kan het onderwerp met attributen met betrekking tot de daadwerkelijke persoon worden verbeterd die de dienst, hun netwerk aangesloten apparaat gebruikt etc.
 
 ## Abonnement {#subscriber-defn}
 
-* De betalende klant van een MVPD of een persoon die de geloofsbrieven van een betalende klant deelt
+* De betalende klant van een MVPD of een persoon die de gegevens van een betalende klant deelt
 * Kan worden gestopt met het bekijken van inhoud door de Concurrency Monitoring Service, door de clienttoepassing die de bovengenoemde service gebruikt.
 * In het gunstigste geval merkt hij of zij nooit het bestaan van de Dienst van de Controle van de Valuta op
 

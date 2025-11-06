@@ -4,7 +4,7 @@ description: iOS/tvOS API-naslaggids
 exl-id: 017a55a8-0855-4c52-aad0-d3d597996fcb
 source-git-commit: 9dc25b66d12b05a8afe16d1a866707880b5d6a51
 workflow-type: tm+mt
-source-wordcount: '6942'
+source-wordcount: '6935'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 ## Inleiding {#intro}
 
@@ -27,12 +27,12 @@ Op deze pagina worden de methoden en callback-functies beschreven die door de na
 Bijbehorende documentatie:
 
 * Voor een geleidelijke analyse van hoe te om Adobe Pass uit te voeren
-de stroom van de authentificatierechten die deze API gebruiken, zie [&#x200B; Cookbook van de Integratie van iOS &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-cookbook.md).
-* Voor recentste iOS AccessEnabler SDK, zie [&#x200B; de Inheemse Bibliotheek van Inschakelen van de Toegang van iOS &#x200B;](https://tve.zendesk.com/hc/en-us/articles/204963209-iOS-Native-AccessEnabler-Library).
+de stroom van de authentificatierechten die deze API gebruiken, zie [ Cookbook van de Integratie van iOS ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-cookbook.md).
+* Voor recentste iOS AccessEnabler SDK, zie [ de Inheemse Bibliotheek van Inschakelen van de Toegang van iOS ](https://tve.zendesk.com/hc/en-us/articles/204963209-iOS-Native-AccessEnabler-Library).
 
 >[!NOTE]
 >
->De Adobe moedigt u aan om slechts de Authentificatie van Adobe Pass *openbare* APIs te gebruiken:
+>Adobe moedigt u aan om slechts de Authentificatie van Adobe Pass *openbare* APIs te gebruiken:
 >
 >* Openbare API&#39;s zijn beschikbaar en volledig getest op alle ondersteunde clienttypen. Voor om het even welke openbare eigenschap, zorgen wij ervoor dat elk cliënttype een overeenkomstige versie van de bijbehorende methode(n) heeft.
 >* Openbare API&#39;s moeten zo stabiel mogelijk zijn, achterwaartse compatibiliteit ondersteunen en ervoor zorgen dat partnerintegratie niet wordt verbroken. Voor niet-openbare API&#39;s behouden we ons echter het recht voor om hun handtekening op elk toekomstig moment te wijzigen. Als u een bepaalde stroom tegenkomt die niet door een combinatie van de huidige openbare API van de Authentificatie van Adobe Pass vraag kan worden gesteund, is de beste benadering ons op de hoogte te brengen. Rekening houdend met uw behoeften, kunnen wij openbare APIs wijzigen en een stabiele oplossing verstrekken die zich voortzet.
@@ -41,13 +41,13 @@ de stroom van de authentificatierechten die deze API gebruiken, zie [&#x200B; Co
 
 ## API-naslag {#apis}
 
-* [&#x200B; init &#x200B;](#initWithSoftwareStatement):softwareStatement - Instantieert het voorwerp AccessEnabler.
+* [ init ](#initWithSoftwareStatement):softwareStatement - Instantieert het voorwerp AccessEnabler.
 
-* **[GEDEPRECEERDE]** [&#x200B; init &#x200B;](#init) - Instantieert het voorwerp AccessEnabler.
+* **[GEDEPRECEERDE]** [ init ](#init) - Instantieert het voorwerp AccessEnabler.
 
 * [`setOptions:options:`](#setOptions) - Hiermee configureert u algemene SDK-opties, zoals profiel of bezoeker-id.
 
-* [`setRequestor:`](#setReqV3) [`requestorID`](#setReqV3), [`setRequestor:requestorID:serviceProviders:`](#setReqV3) - vestigt de identiteit van de programmeur.
+* [`setRequestor:`](#setReqV3)[`requestorID`](#setReqV3), [`setRequestor:requestorID:serviceProviders:`](#setReqV3) - vestigt de identiteit van de programmeur.
 
 * **[VERVANGEN]** [`setRequestor:signedRequestorId:`](#setReq), [`setRequestor:signedRequestorId:serviceProviders:`](#setReq) - Vestigt de identiteit van de Programmer.
 
@@ -59,7 +59,7 @@ de stroom van de authentificatierechten die deze API gebruiken, zie [&#x200B; Co
 
 * [`getAuthentication`](#getAuthN) , [`getAuthentication:withData:`](#getAuthN) - De volledige verificatieworkflow wordt gestart.
 
-* [`getAuthentication:filter`](#getAuthN_filter), [`getAuthentication:withData:`](#getAuthN) [&#x200B; andFilter &#x200B;](#getAuthN_filter) - begint het volledige authentificatiewerkschema.
+* [`getAuthentication:filter`](#getAuthN_filter), [`getAuthentication:withData:`](#getAuthN)[ andFilter ](#getAuthN_filter) - begint het volledige authentificatiewerkschema.
 
 * [`displayProviderDialog:`](#dispProvDialog) - Informeert uw toepassing om de juiste UI-elementen te instantiëren waarmee de gebruiker een MVPD kan selecteren.
 
@@ -107,7 +107,7 @@ de stroom van de authentificatierechten die deze API gebruiken, zie [&#x200B; Co
 
 * [`MVPD`](#mvpd) - De klasse MVPD. [ bevat informatie over MVPD ]
 
-### init:softwareStatement {#initWithSoftwareStatement}
+### init :softwareStatement {#initWithSoftwareStatement}
 
 **Dossier:** AccessEnabler/headers/AccessEnabler.h
 
@@ -123,7 +123,7 @@ de stroom van de authentificatierechten die deze API gebruiken, zie [&#x200B; Co
 
 **Parameters:**
 
-* **softwareStatement:** een koord dat de toepassing in het systeem van de Adobe identificeert. Ontdek hoe u een Software Statement kunt verkrijgen.
+* **softwareStatement:** een koord dat de toepassing in het systeem van Adobe identificeert. Ontdek hoe u een Software Statement kunt verkrijgen.
 
 [Terug naar boven...](#apis)
 
@@ -147,7 +147,7 @@ de stroom van de authentificatierechten die deze API gebruiken, zie [&#x200B; Co
 
 </br>
 
-### setOptions:opties {#setOptions}
+### setOptions:options {#setOptions}
 
 **Dossier:** AccessEnabler/headers/AccessEnabler.h
 
@@ -165,11 +165,11 @@ de stroom van de authentificatierechten die deze API gebruiken, zie [&#x200B; Co
 
 * *opties*: Een NSDictionary die globale opties van SDK bevat. Momenteel zijn de volgende opties beschikbaar:
    * **applicationProfile** - het kan worden gebruikt om serverconfiguraties te maken die op deze waarde worden gebaseerd.
-   * **bezoekorID** - de Dienst van identiteitskaart van het Experience Cloud. Deze waarde kan later worden gebruikt voor geavanceerde analyserapporten.
-   * **handleSVC** - Van Boole die als de programmeur SFSafariViewControllers zal behandelen. Gelieve te zien [&#x200B; SFSafariViewController steun op iOS SDK 3.2+ &#x200B;](/help/authentication/integration-guide-programmers/legacy/notes-technical/sfsafariviewcontroller-support-on-ios-sdk-32.md) voor meer details.
+   * **bezoekorID** - de Dienst van identiteitskaart van Experience Cloud. Deze waarde kan later worden gebruikt voor geavanceerde analyserapporten.
+   * **handleSVC** - Van Boole die als de programmeur SFSafariViewControllers zal behandelen. Gelieve te zien [ SFSafariViewController steun op iOS SDK 3.2+ ](/help/authentication/integration-guide-programmers/legacy/notes-technical/sfsafariviewcontroller-support-on-ios-sdk-32.md) voor meer details.
       * Als de reeks aan **vals,** SDK automatisch de eindgebruiker met een SFSafariViewController zal voorstellen. De SDK navigeert verder naar de URL van de MVPD-aanmeldingspagina.
-      * Als de reeks aan **waar,** SDK **&#x200B;**&#x200B;automatisch niet &lbrace;de eindgebruiker met een SFSafariViewController zal voorstellen. SDK zal verder **navigeren (toUrl:{url}, useSVC:JA)**.
-* **apparaat\_info** - de informatie van de Cliënt zoals die in [&#x200B; wordt beschreven het overgaan cliëntinformatie &#x200B;](/help/authentication/integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md).
+      * Als de reeks aan **waar,** SDK **** automatisch niet {de eindgebruiker met een SFSafariViewController zal voorstellen. SDK zal verder **navigeren (toUrl:{url}, useSVC :YES)**.
+* **apparaat\_info** - de informatie van de Cliënt zoals die in [ wordt beschreven het overgaan cliëntinformatie ](/help/authentication/integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md).
 
 [Terug naar boven...](#apis)
 
@@ -182,7 +182,7 @@ de stroom van de authentificatierechten die deze API gebruiken, zie [&#x200B; Co
 
 De serverreactie bevat een lijst van MVPDs samen met wat configuratieinformatie die aan de identiteit van Programmer in bijlage is. De serverreactie wordt gebruikt intern door de code AccessEnabler. Alleen de status van de bewerking (SUCCESS/FAIL) wordt via de callback `setRequestorComplete:` aan uw toepassing gepresenteerd.
 
-Als de parameter `urls` niet wordt gebruikt, richt de resulterende netwerkaanroep zich op de standaarddienstverlener URL: de Adobe RELEASE/productie milieu.
+Als de parameter `urls` niet wordt gebruikt, richt de resulterende netwerkaanroep zich op de standaardserviceprovider URL: de Adobe RELEASE/production omgeving.
 
 
 Als een waarde voor de parameter `urls` wordt opgegeven, richt de resulterende netwerkaanroep alle URL&#39;s die in de parameter `urls` worden opgegeven. Alle configuratieverzoeken worden teweeggebracht gelijktijdig in afzonderlijke draden. De eerste responder krijgt voorrang wanneer het compileren van de lijst van MVPDs. Voor elke MVPD in de lijst, onthoudt AccessEnabler URL van de bijbehorende dienstverlener. Alle volgende machtigingsaanvragen worden doorgestuurd naar de URL die is gekoppeld aan de serviceprovider die tijdens de configuratiefase aan de doel-MVPD is gekoppeld.
@@ -203,8 +203,8 @@ Als een waarde voor de parameter `urls` wordt opgegeven, richt de resulterende n
 
 **Parameters:**
 
-* *requestID*: Unieke identiteitskaart verbonden aan de Programmer. Geef de unieke id die door Adobe aan uw site is toegewezen door wanneer u zich voor het eerst aanmeldt bij de Adobe Pass-verificatieservice.
-* *urls*: Facultatieve parameter; door gebrek, wordt de dienstverlener van Adobe gebruikt (http://sp.auth.adobe.com/). Deze serie staat u toe om eindpunten voor authentificatie en vergunningsdiensten te specificeren die door Adobe worden verleend (verschillende instanties zouden voor het zuiveren doeleinden kunnen worden gebruikt). U kunt dit gebruiken om meerdere instanties van Adobe Pass-verificatieproviders op te geven. Daarbij bestaat de MVPD-lijst uit de eindpunten van alle serviceproviders. Elke MVPD is gekoppeld aan de snelste serviceprovider, dat wil zeggen de provider die eerst heeft gereageerd en die die MVPD ondersteunt.
+* *requestID*: Unieke identiteitskaart verbonden aan de Programmer. Geef de unieke id die Adobe aan uw site heeft toegewezen door aan wanneer u zich voor het eerst aanmeldt bij de Adobe Pass-verificatieservice.
+* *urls*: Facultatieve parameter; door gebrek, wordt de dienstverlener van Adobe gebruikt (http://sp.auth.adobe.com/). Met deze array kunt u eindpunten opgeven voor verificatie- en verificatieservices die door Adobe worden geleverd (verschillende instanties kunnen worden gebruikt voor foutopsporingsdoeleinden). U kunt dit gebruiken om meerdere instanties van Adobe Pass-verificatieproviders op te geven. Daarbij bestaat de MVPD-lijst uit de eindpunten van alle serviceproviders. Elke MVPD is gekoppeld aan de snelste serviceprovider, dat wil zeggen de provider die eerst heeft gereageerd en die die MVPD ondersteunt.
 
 >[!NOTE]
 >
@@ -224,7 +224,7 @@ Als een waarde voor de parameter `urls` wordt opgegeven, richt de resulterende n
 
 De serverreactie bevat een lijst van MVPDs samen met wat configuratieinformatie die aan de identiteit van Programmer in bijlage is. De serverreactie wordt gebruikt intern door de code AccessEnabler. Alleen de status van de bewerking (SUCCESS/FAIL) wordt via de callback `setRequestorComplete:` aan uw toepassing gepresenteerd.
 
-Als de parameter `urls` niet wordt gebruikt, richt de resulterende netwerkaanroep zich op de standaarddienstverlener URL: de Adobe RELEASE/productie milieu.
+Als de parameter `urls` niet wordt gebruikt, richt de resulterende netwerkaanroep zich op de standaardserviceprovider URL: de Adobe RELEASE/production omgeving.
 
 Als een waarde voor de parameter `urls` wordt opgegeven, richt de resulterende netwerkaanroep alle URL&#39;s die in de parameter `urls` worden opgegeven. Alle configuratieverzoeken worden teweeggebracht gelijktijdig in afzonderlijke draden. De eerste responder krijgt voorrang wanneer het compileren van de lijst van MVPDs. Voor elke MVPD in de lijst, onthoudt AccessEnabler URL van de bijbehorende dienstverlener. Alle volgende machtigingsaanvragen worden doorgestuurd naar de URL die is gekoppeld aan de serviceprovider die tijdens de configuratiefase aan de doel-MVPD is gekoppeld.
 
@@ -244,7 +244,7 @@ Als een waarde voor de parameter `urls` wordt opgegeven, richt de resulterende n
 
 * *requestID*: Unieke identiteitskaart verbonden aan de Programmer. Geef de unieke id die door Adobe is toegewezen door aan uw site wanneer u zich voor het eerst hebt geregistreerd bij de Adobe Pass-verificatieservice.
 * *signedRequestorID*: **Deze parameter bestaat in iOS AccessEnabler versies 1.2 en later.** Een kopie van de aanvrager-id die digitaal is ondertekend met uw persoonlijke sleutel. <!--For more details, see [Registering Native Clients](https://tve.helpdocsonline.com/registering-native-clients)--> .
-* *urls*: Facultatieve parameter; door gebrek, wordt de dienstverlener van Adobe gebruikt (http://sp.auth.adobe.com/). Deze serie staat u toe om eindpunten voor authentificatie en vergunningsdiensten te specificeren die door Adobe worden verleend (verschillende instanties zouden voor het zuiveren doeleinden kunnen worden gebruikt). U kunt dit gebruiken om meerdere instanties van Adobe Pass-verificatieproviders op te geven. Daarbij bestaat de MVPD-lijst uit de eindpunten van alle serviceproviders. Elke MVPD is gekoppeld aan de snelste serviceprovider, dat wil zeggen de provider die eerst heeft gereageerd en die die MVPD ondersteunt.
+* *urls*: Facultatieve parameter; door gebrek, wordt de dienstverlener van Adobe gebruikt (http://sp.auth.adobe.com/). Met deze array kunt u eindpunten opgeven voor verificatie- en verificatieservices die door Adobe worden geleverd (verschillende instanties kunnen worden gebruikt voor foutopsporingsdoeleinden). U kunt dit gebruiken om meerdere instanties van Adobe Pass-verificatieproviders op te geven. Daarbij bestaat de MVPD-lijst uit de eindpunten van alle serviceproviders. Elke MVPD is gekoppeld aan de snelste serviceprovider, dat wil zeggen de provider die eerst heeft gereageerd en die die MVPD ondersteunt.
 
 **Nota&#39;s:** Als geroepen zonder de `serviceProviders` parameter, zal de bibliotheek de configuratie van de standaarddienstverlener (namelijk `https://sp.auth.adobe.com` voor het productieprofiel of `https://sp.auth-staging.adobe.com` voor het opvoeren profiel) terugwinnen. Als de parameter `serviceProviders` wordt opgegeven, moet deze een array van URL&#39;s zijn. De configuratiegegevens worden opgehaald uit alle opgegeven eindpunten en worden samengevoegd. Als dubbele informatie in verschillende dienstverlener reacties bestaat, wordt het conflict opgelost ten gunste van de snelst antwoordende server (d.w.z., de server met de kortste reactietijd neemt belangrijkheid).
 
@@ -261,7 +261,7 @@ Als een waarde voor de parameter `urls` wordt opgegeven, richt de resulterende n
 
 De serverreactie bevat een lijst van MVPDs samen met wat configuratieinformatie die aan de identiteit van Programmer in bijlage is. De serverreactie wordt gebruikt intern door de code AccessEnabler. Alleen de status van de bewerking (SUCCESS/FAIL) wordt via de callback `setRequestorComplete:` aan uw toepassing gepresenteerd.
 
-Als de parameter `urls` niet wordt gebruikt, richt de resulterende netwerkaanroep zich op de standaarddienstverlener URL: de Adobe RELEASE/productie milieu.
+Als de parameter `urls` niet wordt gebruikt, richt de resulterende netwerkaanroep zich op de standaardserviceprovider URL: de Adobe RELEASE/production omgeving.
 
 Als een waarde voor de parameter `urls` wordt opgegeven, richt de resulterende netwerkaanroep alle URL&#39;s die in de parameter `urls` worden opgegeven. Alle configuratieverzoeken worden teweeggebracht gelijktijdig in afzonderlijke draden. De eerste responder krijgt voorrang wanneer het compileren van de lijst van MVPDs. Voor elke MVPD in de lijst, onthoudt AccessEnabler URL van de bijbehorende dienstverlener. Alle volgende machtigingsaanvragen worden doorgestuurd naar de URL die is gekoppeld aan de serviceprovider die tijdens de configuratiefase aan de doel-MVPD is gekoppeld.
 
@@ -313,10 +313,10 @@ Als een waarde voor de parameter `urls` wordt opgegeven, richt de resulterende n
 
 **Parameters:**
 
-* *requestID*: Unieke identiteitskaart verbonden aan de Programmer. Geef de unieke id die door Adobe aan uw site is toegewezen, door aan uw site wanneer u het eerst   geregistreerd bij de Adobe Pass Authentication-service.
+* *requestID*: Unieke identiteitskaart verbonden aan de Programmer. Geef de unieke id door Adobe aan uw site door wanneer u het eerst   geregistreerd bij de Adobe Pass Authentication-service.
 * *signedRequestorID*: **Deze parameter bestaat in iOS AccessEnabler   versies 1.2 en hoger.** Een kopie van de aanvrager-id die digitaal is ondertekend met uw persoonlijke sleutel. <!--For more details, see [Registering Native Clients](https://tve.helpdocsonline.com/registering-native-clients)--> .
-* *urls*: Facultatieve parameter; door gebrek, de dienstverlener van Adobe   wordt gebruikt (http://sp.auth.adobe.com/). Deze serie staat u toe om eindpunten voor authentificatie en vergunningsdiensten te specificeren die door Adobe worden verleend (verschillende instanties zouden voor het zuiveren doeleinden kunnen worden gebruikt). U kunt dit gebruiken om meerdere instanties van Adobe Pass-verificatieproviders op te geven. Daarbij bestaat de MVPD-lijst uit de eindpunten van alle serviceproviders. Elke MVPD is gekoppeld aan de snelste serviceprovider, dat wil zeggen de provider die eerst heeft gereageerd en die die MVPD ondersteunt.
-* geheim en publicKey: De geheime en openbare sleutel die wordt gebruikt om de tweede het schermvraag te ondertekenen. Voor meer informatie zie de [&#x200B; Clienteless documentatie &#x200B;](#create_dev).
+* *urls*: Facultatieve parameter; door gebrek, de dienstverlener van Adobe   wordt gebruikt (http://sp.auth.adobe.com/). Met deze array kunt u eindpunten opgeven voor verificatie- en verificatieservices die door Adobe worden geleverd (verschillende instanties kunnen worden gebruikt voor foutopsporingsdoeleinden). U kunt dit gebruiken om meerdere instanties van Adobe Pass-verificatieproviders op te geven. Daarbij bestaat de MVPD-lijst uit de eindpunten van alle serviceproviders. Elke MVPD is gekoppeld aan de snelste serviceprovider, dat wil zeggen de provider die eerst heeft gereageerd en die die MVPD ondersteunt.
+* geheim en publicKey: De geheime en openbare sleutel die wordt gebruikt om de tweede het schermvraag te ondertekenen. Voor meer informatie zie de [ Clienteless documentatie ](#create_dev).
 
 Als deze wordt aangeroepen zonder de parameter `serviceProviders` , haalt de bibliotheek de configuratie op van het standaardservicebureau (d.w.z. `https://sp.auth.adobe.com` voor het productieprofiel of https://sp.auth-staging.adobe.com voor het staging-profiel). Als de parameter `serviceProviders` wordt opgegeven, moet deze een array van URL&#39;s zijn. De configuratiegegevens worden opgehaald uit alle opgegeven eindpunten en worden samengevoegd. Als dubbele informatie in verschillende dienstverlener reacties bestaat, wordt het conflict opgelost ten gunste van de snelst antwoordende server (d.w.z., de server met de kortste reactietijd neemt belangrijkheid).
 
@@ -414,7 +414,7 @@ de [`setAuthenticationStatus:errorCode:`](#setAuthNStatus) callback.
 * als de laatste verificatiepoging succesvol was, de MVPD   de selectiefase wordt overgeslagen en   de callback van [`navigateToUrl:`](#nav2url) wordt geactiveerd. De   de toepassing gebruikt deze callback om de controle te concretiseren WebView die de gebruiker met de MVPD login pagina voorstelt. **[NOTA: Vanaf Toegang toelaten 1.5, is deze functionaliteit niet beschikbaar wegens een beperking in SDK ].**
 * als de laatste verificatiepoging is mislukt of als de gebruiker zich expliciet heeft afgemeld, wordt de [`displayProviderDialog:`](#dispProvDialog) callback   geactiveerd. Deze callback wordt door uw toepassing gebruikt om de gebruikersinterface van de MVPD-selectie weer te geven. Uw app is ook vereist om de verificatiestroom te hervatten door de AccessEnabler-bibliotheek via de [`setSelectedProvider:`](#setSelProv) -methode te informeren over de MVPD-selectie van de gebruiker.
 
-Aangezien de gebruikersgegevens op de MVPD-aanmeldingspagina worden gecontroleerd, moet uw toepassing de meervoudige omleidingsbewerkingen controleren die plaatsvinden terwijl de gebruiker op de MVPD-aanmeldingspagina wordt geverifieerd. Wanneer de correcte geloofsbrieven zijn ingegaan, wordt de controle WebView opnieuw gericht aan een douane URL die door de `ADOBEPASS_REDIRECT_URL` constante wordt bepaald. Deze URL is niet bedoeld om door WebView te worden geladen. De toepassing moet deze URL onderscheppen en deze gebeurtenis interpreteren als een signaal dat de aanmeldingsfase is voltooid. Het zou dan controle aan AccessEnabler moeten overdragen om de authentificatiestroom (door de [&#128279;](#handleExternalURL) methode te roepen 0&rbrace; handleExternalURL) te voltooien.
+Aangezien de gebruikersgegevens op de MVPD-aanmeldingspagina worden gecontroleerd, moet uw toepassing de meervoudige omleidingsbewerkingen controleren die plaatsvinden terwijl de gebruiker op de MVPD-aanmeldingspagina wordt geverifieerd. Wanneer de correcte geloofsbrieven zijn ingegaan, wordt de controle WebView opnieuw gericht aan een douane URL die door de `ADOBEPASS_REDIRECT_URL` constante wordt bepaald. Deze URL is niet bedoeld om door WebView te worden geladen. De toepassing moet deze URL onderscheppen en deze gebeurtenis interpreteren als een signaal dat de aanmeldingsfase is voltooid. Het zou dan controle aan AccessEnabler moeten overdragen om de authentificatiestroom (door de [ methode te roepen 0} handleExternalURL) te voltooien.](#handleExternalURL)
 
 Tot slot wordt de authentificatiestatus meegedeeld aan de toepassing via [`setAuthenticationStatus:errorCode:`](#setAuthNStatus) callback.
 
@@ -478,7 +478,7 @@ Tot slot wordt de authentificatiestatus meegedeeld aan de toepassing via [`setAu
 
 **Beschrijving:** begint het volledige authentificatiewerkschema. Het begint door de authentificatiestatus te controleren. Indien nog niet geverifieerd, wordt de verificatiestroom state-machine gestart:
 
-* [&#x200B; presentTvProviderDialog () &#x200B;](#presentTvDialog) zal worden geroepen als de huidige aanvrager minstens één MVPD heeft die SSO steunt. Als geen MVPD SSO steunt, zal de klassieke authentificatiestroom beginnen en de filterparameter wordt genegeerd.
+* [ presentTvProviderDialog () ](#presentTvDialog) zal worden geroepen als de huidige aanvrager minstens één MVPD heeft die SSO steunt. Als geen MVPD SSO steunt, zal de klassieke authentificatiestroom beginnen en de filterparameter wordt genegeerd.
 * Nadat de gebruiker de Apple SSO-stroom [`dismissTvProviderDialog()`](#dismissTvDialog) heeft voltooid, wordt deze geactiveerd en het verificatieproces is voltooid.
 
 Tot slot wordt de authentificatiestatus meegedeeld aan de toepassing via [`setAuthenticationStatus:errorCode:`](#setAuthNStatus) callback.
@@ -598,7 +598,7 @@ Tot slot wordt de authentificatiestatus meegedeeld aan de toepassing via [`setAu
 
 Nadat de gebruiker de gewenste MVPD heeft geselecteerd, moet de toepassing op de bovenste laag de verificatiestroom hervatten door `setSelectedProvider:` aan te roepen en deze de id van de MVPD door te geven die overeenkomt met de selectie van de gebruiker.
 
-**Aborting de authentificatiestroom** - dit is een punt waar de gebruiker de capaciteit heeft om de &quot;Achterknoop&quot;te drukken, die aan het aborteren van de authentificatiestroom gelijkwaardig is. In dat scenario, wordt uw toepassing vereist om [&#x200B; setSelectedProvider te roepen:](#setSelProv) methode, die ongeldig als parameter overgaat, om AccessEnabler de kans te geven om zijn authentificatiestatus-machine terug te stellen.
+**Aborting de authentificatiestroom** - dit is een punt waar de gebruiker de capaciteit heeft om de &quot;Achterknoop&quot;te drukken, die aan het aborteren van de authentificatiestroom gelijkwaardig is. In dat scenario, wordt uw toepassing vereist om [ setSelectedProvider te roepen:](#setSelProv) methode, die ongeldig als parameter overgaat, om AccessEnabler de kans te geven om zijn authentificatiestatus-machine terug te stellen.
 
 <table class="pass_api_table">
 <colgroup>
@@ -672,11 +672,11 @@ Wanneer het overgaan van *ongeldig* als parameter, veronderstelt de Toegang dat 
 
 **Dossier:** AccessEnabler/headers/EntitlementDelegate.h
 
-**Beschrijving:** Callback die door AccessEnabler wordt teweeggebracht om uw toepassing te verzoeken om een controlemechanisme UIWebView/WKWebView te concretiseren en URL te laden die in de 2&rbrace; parameter van callback wordt verstrekt. **`url`** De callback gaat de **`url`** parameter over die URL van het authentificatieeindpunt of URL van het logout eindpunt vertegenwoordigt.
+**Beschrijving:** Callback die door AccessEnabler wordt teweeggebracht om uw toepassing te verzoeken om een controlemechanisme UIWebView/WKWebView te concretiseren en URL te laden die in de 2} parameter van callback wordt verstrekt. **`url`** De callback gaat de **`url`** parameter over die URL van het authentificatieeindpunt of URL van het logout eindpunt vertegenwoordigt.
 
-Aangezien het UIWebView/WKWebView ` ` controlemechanisme door verscheidene redirects gaat, moet uw toepassing de activiteit van het controlemechanisme controleren en het moment ontdekken wanneer het een specifieke douane URL laadt die door de `ADOBEPASS_REDIRECT_URL ` constante (d.w.z. `adobepass://ios.app` wordt bepaald). Deze specifieke aangepaste URL is in feite ongeldig en is niet bestemd voor de controller om deze daadwerkelijk te laden. Het moet slechts door uw toepassing als signaal worden geïnterpreteerd dat de authentificatie of logout stroom heeft voltooid en dat het veilig is om het controlemechanisme te sluiten. Wanneer het controlemechanisme deze specifieke douane URL laadt moet uw toepassing UIWebView/WKWebView sluiten en de 20&rbrace; API methode roepen van AccessEnabler &lbrace;.`handleExternalURL:url `
+Aangezien het UIWebView/WKWebView ` ` controlemechanisme door verscheidene redirects gaat, moet uw toepassing de activiteit van het controlemechanisme controleren en het moment ontdekken wanneer het een specifieke douane URL laadt die door de `ADOBEPASS_REDIRECT_URL ` constante (d.w.z. `adobepass://ios.app` wordt bepaald). Deze specifieke aangepaste URL is in feite ongeldig en is niet bestemd voor de controller om deze daadwerkelijk te laden. Het moet slechts door uw toepassing als signaal worden geïnterpreteerd dat de authentificatie of logout stroom heeft voltooid en dat het veilig is om het controlemechanisme te sluiten. Wanneer het controlemechanisme deze specifieke douane URL laadt moet uw toepassing UIWebView/WKWebView sluiten en de 20} API methode roepen van AccessEnabler {.`handleExternalURL:url `
 
-**Nota:** Gelieve te merken op dat in het geval van de authentificatiestroom dit een punt is waar de gebruiker de capaciteit heeft om de &quot;Achterknoop&quot;te drukken, die aan het aborteren van de authentificatiestroom gelijkwaardig is. In zulk een scenario, wordt uw toepassing vereist om [&#x200B; setSelectedProvider te roepen:](#setSelProv) methode die **`nil`** als parameter overgaat en een kans geeft aan AccessEnabler om zijn authentificatiestatus-machine terug te stellen.
+**Nota:** Gelieve te merken op dat in het geval van de authentificatiestroom dit een punt is waar de gebruiker de capaciteit heeft om de &quot;Achterknoop&quot;te drukken, die aan het aborteren van de authentificatiestroom gelijkwaardig is. In zulk een scenario, wordt uw toepassing vereist om [ setSelectedProvider te roepen:](#setSelProv) methode die **`nil`** als parameter overgaat en een kans geeft aan AccessEnabler om zijn authentificatiestatus-machine terug te stellen.
 
 <table class="pass_api_table">
 <colgroup>
@@ -700,7 +700,7 @@ Aangezien het UIWebView/WKWebView ` ` controlemechanisme door verscheidene redir
 
 * *url*: URL die aan de MVPD login pagina richt
 
-**teweeggebracht door:** [&#x200B; setSelectedProvider:](#setSelProv)
+**teweeggebracht door:** [ setSelectedProvider:](#setSelProv)
 
 
 
@@ -712,13 +712,13 @@ Aangezien het UIWebView/WKWebView ` ` controlemechanisme door verscheidene redir
 
 **Dossier:** AccessEnabler/headers/EntitlementDelegate.h
 
-**Beschrijving:** Callback die door AccessEnabler in plaats van `navigateToUrl:` callback in werking wordt gesteld voor het geval dat uw toepassing eerder handmatige behandeling van het Controlemechanisme van de Mening Safari (SVC) via [&#x200B; setOptions (\ [&quot;handleSVC&quot;:waar&quot;\]) &#x200B;](#setOptions), en slechts in het geval van MVPDs die Controlemechanisme van de Mening vereisen (SVC). Voor alle andere MVPD&#39;s wordt de callback `navigateToUrl:` aangeroepen. Gelieve te zien &lbrace;de steun SFSafariViewController op iOS SDK 3.2+ [&#128279;](/help/authentication/integration-guide-programmers/legacy/notes-technical/sfsafariviewcontroller-support-on-ios-sdk-32.md) voor details op hoe het Controlemechanisme van de Mening Safari (SVC) zou moeten worden beheerd.
+**Beschrijving:** Callback die door AccessEnabler in plaats van `navigateToUrl:` callback in werking wordt gesteld voor het geval dat uw toepassing eerder handmatige behandeling van het Controlemechanisme van de Mening Safari (SVC) via [ setOptions (\ [&quot;handleSVC&quot;:true &quot;\]) ](#setOptions), en slechts in het geval van MVPDs die Controlemechanisme van de Mening vereisen (SVC). Voor alle andere MVPD&#39;s wordt de callback `navigateToUrl:` aangeroepen. Gelieve te zien {de steun SFSafariViewController op iOS SDK 3.2+ [ voor details op hoe het Controlemechanisme van de Mening Safari (SVC) zou moeten worden beheerd.](/help/authentication/integration-guide-programmers/legacy/notes-technical/sfsafariviewcontroller-support-on-ios-sdk-32.md)
 
 Net als bij de `navigateToUrl:` callback wordt `navigateToUrl:useSVC:` door de AccessEnabler geactiveerd om uw toepassing te vragen een `SFSafariViewController` -controller te instantiëren en de URL te laden die in de **`url`** -parameter van de callback is opgegeven. De callback geeft de parameter **`url`** door die de URL van het verificatieeindpunt of de URL van het logout-eindpunt vertegenwoordigt, en de parameter **`useSVC`** die aangeeft dat de toepassing een `SFSafariViewController` moet gebruiken.
 
-Aangezien het `SFSafariViewController` controlemechanisme door verscheidene omleidingen gaat, moet uw toepassing de activiteit van het controlemechanisme controleren en het ogenblik ontdekken wanneer het een specifieke douane URL laadt die door uw `application's custom scheme` wordt bepaald (b.v.**&#x200B; &#x200B;** `adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com`). Deze specifieke aangepaste URL is in feite ongeldig en is niet bestemd voor de controller om deze daadwerkelijk te laden. Het moet slechts door uw toepassing als signaal worden geïnterpreteerd dat de authentificatie of logout stroom heeft voltooid en dat het veilig is om het controlemechanisme te sluiten. Wanneer het controlemechanisme deze specifieke douane URL laadt moet uw toepassing `SFSafariViewController` sluiten en de 1&rbrace; API methode van AccessEnabler roepen &lbrace;.`handleExternalURL:url `
+Aangezien het `SFSafariViewController` controlemechanisme door verscheidene omleidingen gaat, moet uw toepassing de activiteit van het controlemechanisme controleren en het ogenblik ontdekken wanneer het een specifieke douane URL laadt die door uw `application's custom scheme` wordt bepaald (b.v.** ** `adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com`). Deze specifieke aangepaste URL is in feite ongeldig en is niet bestemd voor de controller om deze daadwerkelijk te laden. Het moet slechts door uw toepassing als signaal worden geïnterpreteerd dat de authentificatie of logout stroom heeft voltooid en dat het veilig is om het controlemechanisme te sluiten. Wanneer het controlemechanisme deze specifieke douane URL laadt moet uw toepassing `SFSafariViewController` sluiten en de 1} API methode van AccessEnabler roepen {.`handleExternalURL:url `
 
-**Nota:** Gelieve te merken op dat in het geval van de authentificatiestroom dit een punt is waar de gebruiker de capaciteit heeft om de &quot;Achterknoop&quot;te drukken, die aan het aborteren van de authentificatiestroom gelijkwaardig is. In zulk een scenario, wordt uw toepassing vereist om [&#x200B; setSelectedProvider te roepen:](#setSelProv) methode die **`nil`** als parameter overgaat en een kans geeft aan AccessEnabler om zijn authentificatiestatus-machine terug te stellen.
+**Nota:** Gelieve te merken op dat in het geval van de authentificatiestroom dit een punt is waar de gebruiker de capaciteit heeft om de &quot;Achterknoop&quot;te drukken, die aan het aborteren van de authentificatiestroom gelijkwaardig is. In zulk een scenario, wordt uw toepassing vereist om [ setSelectedProvider te roepen:](#setSelProv) methode die **`nil`** als parameter overgaat en een kans geeft aan AccessEnabler om zijn authentificatiestatus-machine terug te stellen.
 
 <table class="pass_api_table">
 <colgroup>
@@ -732,25 +732,25 @@ Aangezien het `SFSafariViewController` controlemechanisme door verscheidene omle
 <tbody>
 <tr class="odd">
 <td><pre><code>@optional
-&#x200B;- (void) navigateToUrl:(NSString *)url useSVC:(BOOL)useSVC; </code></pre></td>
+- (void) navigateToUrl:(NSString *)url useSVC:(BOOL)useSVC; </code></pre></td>
 </tr>
 </tbody>
 </table>
 
-**Beschikbaarheid:**&#x200B;v 3.2+
+**Beschikbaarheid:**v 3.2+
 
 **Parameters**:
 
 * *url:* URL die aan de MVPD aanmeldingspagina richt
 * *useSVC:* of url in SFSafariViewController zou moeten worden geladen.
 
-**teweeggebracht door:**&#x200B;[&#x200B; setOptions:](#setOptions) vóór [&#x200B; setSelectedProvider:](#setSelProv)
+**teweeggebracht door:**[ setOptions:](#setOptions) vóór [ setSelectedProvider:](#setSelProv)
 
 [Terug naar boven...](#apis)
 
 </br>
 
-#### handleExternalURL:url {#handleExternalURL}
+#### handleExternalURL :url {#handleExternalURL}
 
 **Dossier:** AccessEnabler/headers/AccessEnabler.h
 
@@ -852,7 +852,7 @@ In het geval van de authentificatiestroom voltooit AccessEnabler de stroom door 
    * `ACCESS_ENABLER_STATUS_SUCCESS` - de verificatiestroom is voltooid
    * `ACCESS_ENABLER_STATUS_ERROR` - verificatiestroom mislukt
 * *code*: mislukkingsreden. Als *status* `ACCESS_ENABLER_STATUS_SUCCESS` is, dan *code* een leeg koord (d.w.z., dat door de `USER_AUTHENTICATED` constante wordt bepaald) is. In het geval van een fout kan deze parameter een van de volgende waarden hebben:
-   * `USER_NOT_AUTHENTICATED_ERROR` - De gebruiker is niet geverifieerd. In antwoord op [&#x200B; checkAuthentication:](#checkAuthN) methodevraag wanneer er geen geldig authentificatietoken in het lokale symbolische geheime voorgeheugen is.
+   * `USER_NOT_AUTHENTICATED_ERROR` - De gebruiker is niet geverifieerd. In antwoord op [ checkAuthentication:](#checkAuthN) methodevraag wanneer er geen geldig authentificatietoken in het lokale symbolische geheime voorgeheugen is.
    * `PROVIDER_NOT_SELECTED_ERROR` - De AccessEnabler heeft de       authentificatiestatus-machine na de hogere laagtoepassing       overgegaan *ongeldig* tot [`setSelectedProvider:`](#setSelProv) om de authentificatiestroom af te breken.  Waarschijnlijk heeft de gebruiker de verificatiestroom geannuleerd (druk op de knop &quot;Terug&quot;).
    * `GENERIC_AUTHENTICATION_ERROR` - De verificatiestroom is mislukt als gevolg van redenen zoals netwerkonbeschikbaarheid of omdat de gebruiker de verificatiestroom expliciet heeft geannuleerd.
 
@@ -1176,7 +1176,7 @@ voor de gegeven bron
 
 **Beschrijving:** Deze methode wordt geroepen door uw toepassing om de logout stroom in werking te stellen. De logout is het resultaat van een reeks HTTP-omleidingsbewerkingen omdat de gebruiker moet worden afgemeld bij zowel de Adobe Pass Authentication-servers als bij de MVPD-servers. Omdat deze stroom niet kan worden voltooid met een eenvoudige HTTP-aanvraag die is uitgegeven door de AccessEnabler-bibliotheek, moet een `UIWebView/WKWebView or SFSafariViewController` -controller worden geïnstantieerd om de HTTP-omleidingsbewerkingen te kunnen volgen.
 
-De logout-flow verschilt van de verificatiestroom omdat de gebruiker op geen enkele wijze met de `UIWebView/WKWebView or SFSafariViewController` -controller hoeft te communiceren. Daarom adviseert de Adobe dat u de controle onzichtbaar (d.w.z. verborgen) tijdens het logout proces maakt.
+De logout-flow verschilt van de verificatiestroom omdat de gebruiker op geen enkele wijze met de `UIWebView/WKWebView or SFSafariViewController` -controller hoeft te communiceren. Daarom raadt Adobe u aan het besturingselement onzichtbaar te maken (verborgen) tijdens het logout-proces.
 
 Een patroon gelijkend op de authentificatiestroom wordt gebruikt. De iOS AccessEnabler activeert de callback `navigateToUrl:` of de `navigateToUrl:useSVC:` om een controller `UIWebView/WKWebView or SFSafariViewController` te maken en de URL te laden die in de parameter `url` van de callback wordt opgegeven. Dit is URL van het logout eindpunt op de achtergrondserver. Voor tvOS AccessEnabler wordt noch de callback `navigateToUrl:` , noch de callback `navigateToUrl:useSVC:` aangeroepen.
 
@@ -1317,7 +1317,7 @@ indeling:
    * Als de sleutel `METADATA_OPCODE_KEY` is en de waarde `METADATA_AUTHENTICATION` is, dan wordt de vraag gemaakt om de vervaltijd van het authentificatietoken te verkrijgen.
    * Als de sleutel `METADATA_OPCODE_KEY` is en de waarde `METADATA_AUTHORIZATION` **is en**\
      key is `METADATA_RESOURCE_ID_KEY` en de waarde is een bepaalde middelID, dan wordt de vraag gemaakt om de vervaltijd van het toestemmingstoken te verkrijgen verbonden aan het gespecificeerde middel.
-   * Als de toets `METADATA_OPCODE_KEY` is en de waarde `METADATA_DEVICE_ID` is, wordt de query uitgevoerd om de huidige apparaat-id te verkrijgen. Deze functie is standaard uitgeschakeld en programmeurs moeten contact opnemen met de Adobe voor informatie over de mogelijkheden en kosten.
+   * Als de toets `METADATA_OPCODE_KEY` is en de waarde `METADATA_DEVICE_ID` is, wordt de query uitgevoerd om de huidige apparaat-id te verkrijgen. Deze functie is standaard uitgeschakeld en programmeurs dienen contact op te nemen met Adobe voor informatie over activering en kosten.
    * Als de sleutel `METADATA_OPCODE_KEY` is en de waarde `METADATA_USER_META` **is en** de sleutel is `METADATA_USER_META_KEY` en de waarde is de naam van de meta-gegevens, dan wordt de vraag gemaakt voor gebruikersmeta-gegevens. De lijst met beschikbare metagegevenstypen voor gebruikers:
       * `zip` - Lijst met postcodes
       * `householdID` - Huishoudelijke id. Als een MVPD geen subaccounts ondersteunt, is dit gelijk aan `userID` .
@@ -1331,7 +1331,7 @@ indeling:
 
 **teweeggebrachte callbacks:** [`setMetadataStatus:encrypted:forKey:andArguments:`](#setMetaStatus)
 
-**Meer Informatie:** [&#x200B; Metagegevens van de Gebruiker &#x200B;](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/user-metadata.md)
+**Meer Informatie:** [ Metagegevens van de Gebruiker ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/user-metadata.md)
 
 [Terug naar boven...](#apis)
 
@@ -1341,7 +1341,7 @@ indeling:
 
 **Dossier:** AccessEnabler/headers/EntitlementDelegate.h
 
-**Omschrijving** Callback die door AccessEnabler na het roepen van [&#x200B; wordt teweeggebracht getAuthentication () &#x200B;](#getAuthN) als de huidige aanvrager minstens één MVPD met steun SSO steunt.
+**Omschrijving** Callback die door AccessEnabler na het roepen van [ wordt teweeggebracht getAuthentication () ](#getAuthN) als de huidige aanvrager minstens één MVPD met steun SSO steunt.
 
 <table class="pass_api_table">
 <colgroup>
@@ -1367,7 +1367,7 @@ indeling:
 
 **teweeggebracht door:** [`getAuthentication`](#getAuthN)
 
-**Meer Informatie:** [&#x200B; iOS/tvOS enig Teken &#x200B;](#presentTvDialog)
+**Meer Informatie:** [ iOS/tvOS enig Teken ](#presentTvDialog)
 
 [Terug naar boven...](#apis)
 
@@ -1403,7 +1403,7 @@ indeling:
 
 **teweeggebracht door:** actie van de Gebruiker
 
-**Meer Informatie:** [&#x200B; iOS/tvOS enig Teken &#x200B;](#presentTvDialog)
+**Meer Informatie:** [ iOS/tvOS enig Teken ](#presentTvDialog)
 
 [Terug naar boven...](#apis)
 
@@ -1438,7 +1438,7 @@ indeling:
 
 **Parameters**:
 
-* *meta-gegevens*: De gevraagde meta-gegevens. Deze waarde is een `NSString` in het geval van statische metagegevens (TTL voor verificatie, TTL voor autorisatie, apparaat-id).  Het is een complex object wanneer u gebruikersspecifieke metagegevens aanvraagt. Dit complexe object is doorgaans de Objectief-C-representatie van een JSON-payload (bijvoorbeeld &#39;&lbrace;&quot;street&quot;: &quot;Main Avenue&quot;, &quot;building&quot;: [ &quot;150&quot;, &quot;320&quot;]&#39; wordt in doelstelling-C vertaald als NSDictionary(&quot;street&quot; -> &quot;Main Avenue&quot;, &quot;building&quot; -> NSArray(&quot;15 0&quot;, &quot;320&quot;).   Voorbeeld van JSON-object voor metagegevens:
+* *meta-gegevens*: De gevraagde meta-gegevens. Deze waarde is een `NSString` in het geval van statische metagegevens (TTL voor verificatie, TTL voor autorisatie, apparaat-id).  Het is een complex object wanneer u gebruikersspecifieke metagegevens aanvraagt. Dit complexe object is doorgaans de Objectief-C-representatie van een JSON-payload (bijvoorbeeld &#39;{&quot;street&quot;: &quot;Main Avenue&quot;, &quot;building&quot;: [ &quot;150&quot;, &quot;320&quot;]&#39; wordt in doelstelling-C vertaald als NSDictionary(&quot;street&quot; -> &quot;Main Avenue&quot;, &quot;building&quot; -> NSArray(&quot;15 0&quot;, &quot;320&quot;).   Voorbeeld van JSON-object voor metagegevens:
 
 ```JSON
         {
@@ -1465,7 +1465,7 @@ indeling:
 
 **teweeggebracht door:** [`getMetadata:`](#getMeta)
 
-**Meer Informatie:** [&#x200B; Metagegevens van de Gebruiker &#x200B;](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/user-metadata.md)
+**Meer Informatie:** [ Metagegevens van de Gebruiker ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/user-metadata.md)
 
 
 [Terug naar boven...](#apis)
@@ -1485,7 +1485,7 @@ indeling:
 * (NSString) ID - De MVPD-id.
 * (NSString) displayName - De naam van MVPD. [ dit zou moeten worden gebruikt aan vertoning in de plukker ]
 * (NSString) logoURL - Het adres van het MVPD-logo.
-* (BOOL) enablePlatformServices - als waar, steunt MVPD de diensten SSO zoals [&#x200B; Apple SSO &#x200B;](#presentTvDialog).
+* (BOOL) enablePlatformServices - als waar, steunt MVPD de diensten SSO zoals [ Apple SSO ](#presentTvDialog).
 * (NSString) boardingStatus - kan 3 waarden hebben:
    * 0 - De MVPD biedt geen ondersteuning voor Apple SSO.
    * PICKER - De MVPD kan worden weergegeven in de Apple-kiezer, maar de verificatiestroom wordt uitgevoerd door Adobe.
@@ -1514,7 +1514,7 @@ AccessEnabler teweegbrengt een extra callback teweeg die niet noodzakelijk met d
 
 **Beschikbaarheid:** v1.0+
 
-**Nota:** het apparatentype en het werkende systeem worden afgeleid door het gebruik van een openbare bibliotheek van Java (<http://java.net/projects/user-agent-utils>) en het koord van de gebruikersagent. Deze informatie wordt alleen verstrekt als een ruwe manier om operationele meetgegevens in apparatencategorieën op te delen, maar die Adobe kan geen verantwoordelijkheid voor onjuiste resultaten nemen. Gebruik de nieuwe functionaliteit.
+**Nota:** het apparatentype en het werkende systeem worden afgeleid door het gebruik van een openbare bibliotheek van Java (<http://java.net/projects/user-agent-utils>) en het koord van de gebruikersagent. Houd er rekening mee dat deze informatie alleen wordt verstrekt als een grove manier om operationele meetgegevens in apparaatcategorieën op te delen, maar dat Adobe geen verantwoordelijkheid kan nemen voor onjuiste resultaten. Gebruik de nieuwe functionaliteit.
 
 * Mogelijke waarden voor apparaattype:
    * `computer`

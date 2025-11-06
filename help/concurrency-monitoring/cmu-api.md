@@ -17,14 +17,14 @@ ht-degree: 0%
 
 ## API-overzicht {#api-overview}
 
-Het gebruik van de Controle van de gelijktijdige (CMU) wordt uitgevoerd als WOLAP (Web-based [&#x200B; Online Analytische Verwerking &#x200B;](http://en.wikipedia.org/wiki/Online_analytical_processing)) project. CMU is een generiek zaken-meldend Web API die door een gegevenspakhuis wordt gesteund. Het doet dienst als de vraagtaal van HTTP die typische verrichtingen toelaat OLAP om RESTfully worden uitgevoerd.
+Het gebruik van de Controle van de gelijktijdige (CMU) wordt uitgevoerd als WOLAP (Web-based [ Online Analytische Verwerking ](http://en.wikipedia.org/wiki/Online_analytical_processing)) project. CMU is een generiek zaken-meldend Web API die door een gegevenspakhuis wordt gesteund. Het doet dienst als de vraagtaal van HTTP die typische verrichtingen toelaat OLAP om RESTfully worden uitgevoerd.
 
 
 >[!NOTE]
 >
->De CMU-API is niet algemeen beschikbaar. Neem contact op met uw Adobe voor vragen over beschikbaarheid.
+>De CMU-API is niet algemeen beschikbaar. Neem contact op met uw Adobe-vertegenwoordiger voor vragen over beschikbaarheid.
 
-CMU API verstrekt een hiërarchische mening van de onderliggende kubussen OLAP. Elk middel ([&#x200B; afmeting &#x200B;](/help/concurrency-monitoring/cm-usage-reports.md#dimensions-2-filter-metrics) in de afmetinghiërarchie, in kaart gebracht als segment van de weg URL) produceert rapporten met (bijeengevoegde) [&#x200B; metriek &#x200B;](/help/concurrency-monitoring/cm-usage-reports.md#monitor-metrics) voor de huidige selectie. Elke bron wijst naar de bovenliggende bron (voor roll-up) en de bijbehorende subbronnen (voor boor-down). Segmenteren en dicing worden bereikt via parameters van queryreeksen die de afmetingen vastzetten op specifieke waarden of bereiken.
+CMU API verstrekt een hiërarchische mening van de onderliggende kubussen OLAP. Elk middel ([ afmeting ](/help/concurrency-monitoring/cm-usage-reports.md#dimensions-2-filter-metrics) in de afmetinghiërarchie, in kaart gebracht als segment van de weg URL) produceert rapporten met (bijeengevoegde) [ metriek ](/help/concurrency-monitoring/cm-usage-reports.md#monitor-metrics) voor de huidige selectie. Elke bron wijst naar de bovenliggende bron (voor roll-up) en de bijbehorende subbronnen (voor boor-down). Segmenteren en dicing worden bereikt via parameters van queryreeksen die de afmetingen vastzetten op specifieke waarden of bereiken.
 
 De REST API verstrekt de beschikbare gegevens binnen een tijdsinterval dat in het verzoek wordt gespecificeerd (die terug naar standaardwaarden als niets wordt verstrekt), volgens de afmetingspad, verstrekte filters, en geselecteerde metriek. Het tijdbereik wordt niet toegepast op rapporten die geen tijdafmetingen bevatten (jaar, maand, dag, uur, minuut, seconde).
 
@@ -36,7 +36,7 @@ De beschikbare URL-paden kunnen worden gevonden via koppelingen in het antwoord.
 
 De volgende boor-down bomen illustreren de afmetingen (middelen) beschikbaar in CMU 2.0:
 
-**Dimensionen beschikbaar aan de HUIDIGEN van CM**
+**Afmetingen beschikbaar aan de HUIDIGEN van CM**
 
 ![](assets/new_breakdown.png)
 
@@ -99,7 +99,7 @@ Parameters voor door CMU API gereserveerde queryreeks:
 | start | Ja | De tijd van het begin voor het rapport als ISO8601; de server zal het resterende deel invullen als slechts een prefix wordt verstrekt: b.v., zal start=2012 in start=2012-01-01 :00: 00:00 resulteren | Gerapporteerd door de server in de zelfverbinding; de server probeert redelijke gebreken te verstrekken die op geselecteerde tijdgranulariteit worden gebaseerd | start=2012-07-15 |
 
 
-De enige beschikbare HTTP-methode die momenteel beschikbaar is, is GET. Ondersteuning voor OPTIONS/HEAD-methoden is mogelijk in toekomstige versies beschikbaar.
+GET is momenteel de enige beschikbare HTTP-methode. Ondersteuning voor OPTIONS-/HEAD-methoden is mogelijk in toekomstige versies beschikbaar.
 
 
 
@@ -112,7 +112,7 @@ De enige beschikbare HTTP-methode die momenteel beschikbaar is, is GET. Onderste
 | 401 | Ongeautoriseerd | Wordt veroorzaakt door een aanvraag die niet de juiste OAuth-headers bevat om de gebruiker te verifiëren |
 | 403 | Verboden | Geeft aan dat het verzoek niet is toegestaan in de huidige beveiligingscontext. Dit gebeurt wanneer de gebruiker is geverifieerd, maar geen toegang heeft tot de gevraagde informatie |
 | 404 | Niet gevonden | Vindt plaats als de aanvraag een ongeldig URL-pad bevat. Dit zou nooit moeten voorkomen als de cliënt &quot;boor-down&quot;/&quot;roll-up&quot;verbindingen volgt die met 200 reacties worden verstrekt |
-| 405 | Methode niet toegestaan | Geeft aan dat een niet-ondersteunde methode is gebruikt in de aanvraag. Hoewel momenteel alleen de methode GET wordt ondersteund, kunnen toekomstige versies HEAD of OPTIONS toestaan |
+| 405 | Methode niet toegestaan | Geeft aan dat een niet-ondersteunde methode is gebruikt in de aanvraag. Hoewel momenteel alleen de GET-methode wordt ondersteund, kunnen toekomstige versies HEAD of OPTIONS toestaan |
 | 406 | Niet acceptabel | Geeft aan dat de client een niet-ondersteund mediatype heeft aangevraagd |
 | 500 | Interne serverfout | &quot;Dit mag nooit gebeuren&quot; |
 | 503 | Service niet beschikbaar | Signaleert een fout binnen de toepassing of zijn gebiedsdelen |

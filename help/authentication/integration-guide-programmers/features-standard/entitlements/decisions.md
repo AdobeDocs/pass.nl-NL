@@ -15,22 +15,22 @@ ht-degree: 0%
 >
 > De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
-De besluiten worden geproduceerd door de Authentificatie van Adobe Pass [&#x200B; VERTONING API V2 &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md) die op de de vergunning van MVPD van de gebruiker of voorvergunningsonderzoeken wordt gebaseerd, die bepalen of de toegang tot [&#x200B; beschermde inhoud &#x200B;](#protected-resources) wordt verleend of ontkend.
+De besluiten worden geproduceerd door de Authentificatie van Adobe Pass [ VERTONING API V2 ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md) die op de de vergunning van MVPD van de gebruiker of voorvergunningsonderzoeken wordt gebaseerd, die bepalen of de toegang tot [ beschermde inhoud ](#protected-resources) wordt verleend of ontkend.
 
 Er zijn twee soorten besluiten die, afhankelijk van aangehaalde API worden verstrekt:
 
-* [&#x200B; Besluiten van de preAutorisatie &#x200B;](#preauthorization-decisions) die informatieve besluiten zijn.
-* [&#x200B; Besluiten van de Toestemming &#x200B;](#authorization-decisions) die gebiedende besluiten zijn.
+* [ Besluiten van de preAutorisatie ](#preauthorization-decisions) die informatieve besluiten zijn.
+* [ Besluiten van de Toestemming ](#authorization-decisions) die gebiedende besluiten zijn.
 
 ## Voorbereidende besluiten {#preauthorization-decisions}
 
-Het pre-vergunningsbesluit is een informatief besluit dat de cliënttoepassing om toelaat worden geïnformeerd of MVPD de toegang van de gebruiker tot a [&#x200B; beschermde middel &#x200B;](#protected-resources) kan toestaan of ontkennen.
+Het pre-vergunningsbesluit is een informatief besluit dat de cliënttoepassing om toelaat worden geïnformeerd of MVPD de toegang van de gebruiker tot a [ beschermde middel ](#protected-resources) kan toestaan of ontkennen.
 
 Het doel van voorafgaande toestemming (Preflight-autorisatie) is de toepassing in staat te stellen nauwkeurige informatie weer te geven over de inhoud die de gebruiker kan bekijken. Dit wordt bereikt door de gebruikersinterface te verbeteren met indicatoren, zoals vergrendelde of ontgrendelde pictogrammen, die de toegangsstatus weerspiegelen.
 
 >[!IMPORTANT]
 >
-> Het pre-vergunningsbesluit moet niet op een gebiedende manier worden gebruikt om middelen te spelen, aangezien dat het doel van een [&#x200B; vergunningsbesluit &#x200B;](#authorization-decisions) is.
+> Het pre-vergunningsbesluit moet niet op een gebiedende manier worden gebruikt om middelen te spelen, aangezien dat het doel van een [ vergunningsbesluit ](#authorization-decisions) is.
 
 Het gebruik van de API voor voorafgaande toestemming is niet verplicht. De clienttoepassing kan dit overslaan als deze een catalogus met bronnen wil presenteren zonder filtering.
 
@@ -40,11 +40,11 @@ Als de clienttoepassing van plan is deze functie te gebruiken, is het belangrijk
 > 
 > Het maximumaantal middelen kan pas worden verhoogd nadat overeenstemming is bereikt met de vertegenwoordigers van de MVPD en de Adobe Pass Authentication. Zodra u hiermee akkoord bent gegaan, kunnen de wijzigingen worden geïmplementeerd via het Adobe Pass TVE-dashboard door een beheerder in uw organisatie of een Adobe Pass-verificatievertegenwoordiger die namens u optreedt.
 > 
-> Voor meer details, verwijs naar de [&#128279;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#add-more-properties) documentatie van de Gebruiker van de Gids van de Integratie van het Dashboard van 0&rbrace; TVE.
+> Voor meer details, verwijs naar de [ documentatie van de Gebruiker van de Gids van de Integratie van het Dashboard van 0} TVE.](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#add-more-properties)
 
 MVPD&#39;s kunnen preautorisatie door diverse mechanismen steunen, elk met duidelijke implicaties voor prestaties en het maximumaantal middelen dat in één enkele API verzoek kan worden behandeld.
 
-Voor meer details over de bestaande mechanismen ondersteunend prepermission, verwijs naar de [&#x200B; Preflight 1&rbrace; documentatie van MVPD.](/help/authentication/integration-guide-mvpds/mvpd-preflight-authz.md)
+Voor meer details over de bestaande mechanismen ondersteunend prepermission, verwijs naar de [ Preflight 1} documentatie van MVPD.](/help/authentication/integration-guide-mvpds/mvpd-preflight-authz.md)
 
 >[!IMPORTANT]
 >
@@ -52,7 +52,7 @@ Voor meer details over de bestaande mechanismen ondersteunend prepermission, ver
 
 ## Toelatingsbesluiten {#authorization-decisions}
 
-Het vergunningsbesluit is een gebiedend besluit dat de cliënttoepassing toestaat om met het besluit van MVPD volgzaam te zijn om de toegang van de gebruiker tot a [&#x200B; beschermde middel &#x200B;](#protected-resources) toe te laten of te ontkennen.
+Het vergunningsbesluit is een gebiedend besluit dat de cliënttoepassing toestaat om met het besluit van MVPD volgzaam te zijn om de toegang van de gebruiker tot a [ beschermde middel ](#protected-resources) toe te laten of te ontkennen.
 
 Het doel van de autorisatie is om de toepassing in staat te stellen de door de gebruiker gevraagde bronnen af te spelen, na rechtenvalidatie met de MVPD en ontvangst van een media-token van Adobe Pass-verificatie.
 
@@ -60,7 +60,7 @@ Het doel van de autorisatie is om de toepassing in staat te stellen de door de g
 > 
 > Adobe Pass Authentication raadt programmeurs aan de Media Token Verifier-bibliotheek te gebruiken om het mediatoken te valideren dat in een autorisatiebesluit is opgenomen. Hierdoor wordt beveiligde toegang gegarandeerd voordat de videostream wordt gestart.
 > 
-> Voor meer details, verwijs naar de [&#x200B; Tokens van Media &#x200B;](/help/authentication/integration-guide-programmers/features-standard/entitlements/media-tokens.md) documentatie.
+> Voor meer details, verwijs naar de [ Tokens van Media ](/help/authentication/integration-guide-programmers/features-standard/entitlements/media-tokens.md) documentatie.
 
 Het gebruik van de autorisatie-API is verplicht. De clienttoepassing kan deze fase niet overslaan als deze bronnen wil afspelen die de gebruiker vraagt, omdat de toepassing eerst met de MVPD moet controleren of de gebruiker gerechtigd is voordat de stream wordt vrijgegeven.
 
@@ -77,9 +77,9 @@ De Tijd-aan-Levende van de vergunning (TTL) bepaalt hoe lang een middel alvorens
 * Platformcategorie (bijvoorbeeld desktop, mobiel, met tv verbonden apparaten)
 * Specifiek platform (bijvoorbeeld iOS, Android, tvOS, Roku, FireTV)
 
-De vergunning (authZ) TTL kan door het Dashboard van Adobe Pass [&#x200B; worden bekeken en worden veranderd TVE &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#tve-dashboard) door één van uw organisatiebeheerders of door een vertegenwoordiger van de Authentificatie van Adobe Pass handelend namens u.
+De vergunning (authZ) TTL kan door het Dashboard van Adobe Pass [ worden bekeken en worden veranderd TVE ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#tve-dashboard) door één van uw organisatiebeheerders of door een vertegenwoordiger van de Authentificatie van Adobe Pass handelend namens u.
 
-Voor meer details, verwijs naar de [&#128279;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#most-used-flows) documentatie van de Gebruiker van de Gids van de Integratie van het Dashboard van 0&rbrace; TVE.
+Voor meer details, verwijs naar de [ documentatie van de Gebruiker van de Gids van de Integratie van het Dashboard van 0} TVE.](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#most-used-flows)
 
 ## Beveiligde bronnen {#protected-resources}
 
@@ -127,7 +127,7 @@ In het geval van een complexere resource-id kan de RSS-resource-id als volgt aan
     </rss>
 ```
 
-De unieke id&#39;s zijn voornamelijk ondoorzichtig voor Adobe Pass-verificatie, maar transformatoren kunnen worden toegepast op basis van de MVPD-mogelijkheden en -vereisten. Als MVPD een middelherkenningsteken niet herkent of ontleedt, keert het een fout aan de Authentificatie van Adobe Pass terug, die later de fout aan de cliënttoepassing gebruikend een [&#x200B; Verbeterde Code van de Fout &#x200B;](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) opnieuw afspeelt.
+De unieke id&#39;s zijn voornamelijk ondoorzichtig voor Adobe Pass-verificatie, maar transformatoren kunnen worden toegepast op basis van de MVPD-mogelijkheden en -vereisten. Als MVPD een middelherkenningsteken niet herkent of ontleedt, keert het een fout aan de Authentificatie van Adobe Pass terug, die later de fout aan de cliënttoepassing gebruikend een [ Verbeterde Code van de Fout ](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) opnieuw afspeelt.
 
 ## REST API V2 {#rest-api-v2}
 
@@ -148,5 +148,5 @@ Raadpleeg de volgende documenten voor meer informatie over hoe en wanneer u de b
 
 >[!MORELIKETHIS]
 >
-> [&#x200B; Veelgestelde vragen van de Fase van de Voorkeur &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#preauthorization-phase-faqs-general)
-> [Veelgestelde vragen over de autorisatiefase &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authorization-phase-faqs-general)
+> [ Veelgestelde vragen van de Fase van de Voorkeur ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#preauthorization-phase-faqs-general)
+> [Veelgestelde vragen over de autorisatiefase ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authorization-phase-faqs-general)

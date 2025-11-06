@@ -4,7 +4,7 @@ description: Proxy MVPD SAML-integratie
 exl-id: 6c83e703-d8cd-476b-8514-05b8230902be
 source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '700'
 ht-degree: 0%
 
 ---
@@ -17,55 +17,55 @@ ht-degree: 0%
 
 ## Overzicht {#overview-proxy-mvpd-saml-int}
 
-In dit document wordt de SAML-verificatiestroom voor Proxy-integratie beschreven.  Deze stromen zijn afhankelijk van de configuratiegegevens van de Volmacht aanwezig in de de serverconfiguratie van de Authentificatie van Adobe Pass. De Volmacht MVPD duwt zijn Volmacht config gegevens aan de server van de Authentificatie van Adobe Pass via de Dienst van het Web van de Volmacht van de Volmacht van Adobe Pass.
+In dit document wordt de SAML-verificatiestroom voor Proxy-integratie beschreven.  Deze stromen zijn afhankelijk van de configuratiegegevens van de Volmacht aanwezig in de de serverconfiguratie van de Authentificatie van Adobe Pass. Proxy MVPD duwt zijn Proxy config- gegevens aan de server van de Authentificatie van Adobe Pass via de Dienst van het Web van de Volmacht van de Authentificatie van Adobe Pass.
 
 ## Proxyconfiguratiegegevens {#proxy-config-data}
 
-Elke Volmacht MVPD verstrekt de configuratiegegevens van de Volmacht voor hun Proxied MVPDs aan de Dienst van het Web van de Volmacht van de Volmacht van de Authentificatie van Adobe Pass.  De details voor dat worden behandeld in de documentatie van de Dienst van het Web van de Volmacht.   Voor de stroom van SAML AuthN om te werken, moeten de volmacht config gegevens de volgende eigenschappen omvatten:
+Elke Proxy van MVPD verstrekt de configuratiegegevens van de Volmacht voor hun Proxied MVPDs aan de Dienst van het Web van de Volmacht van de Volmacht van de Authentificatie van Adobe Pass.  De details voor dat worden behandeld in de documentatie van de Dienst van het Web van de Volmacht.   Voor de stroom van SAML AuthN om te werken, moeten de volmacht config gegevens de volgende eigenschappen omvatten:
 
 | Eigenschap | Beschrijving |
 |------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| MVPD-id | String die Proxied MVPD intern aan de Authentificatie van Adobe Pass vertegenwoordigt.  Door Adobe als uniek te bevestigen in de context van Adobe Pass-verificatie. |
-| URL standaardlogo MVPD | URL aan een embleem dat in een Ervaring van de Selecteur MVPD voor de gebruiker kan worden getoond.  Gebruik een transparante achtergrond. |
-| Weergavenaam MVPD | Tekenreeks die moet worden gebruikt als de tekst voor de weergavenaam die met het logo kan worden weergegeven, mogelijk als alternatieve tekst. |
+| MVPD-id | Tekenreeks die de proxy-MVPD intern vertegenwoordigt voor Adobe Pass-verificatie.  Door Adobe als uniek te bevestigen in de context van Adobe Pass-verificatie. |
+| URL standaardlogo van MVPD | URL naar een logo dat kan worden weergegeven in een MVPD Selector-ervaring voor de gebruiker.  Gebruik een transparante achtergrond. |
+| MVPD-weergavenaam | Tekenreeks die moet worden gebruikt als de tekst voor de weergavenaam die met het logo kan worden weergegeven, mogelijk als alternatieve tekst. |
 
 
 
 ## SAML-integratiestromen {#saml-int-flows}
 
-Wanneer een abonnee MVPD de plaats of de toepassing van een Programmer bezoekt, antwoordt de Authentificatie van Adobe Pass op een API vraag van de plaats of de toepassing met een lijst van MVPDs die voor die Programmer wordt geactiveerd.  De integratie kan direct of geproxideerd zijn; er is geen onderscheid tussen hen en de programmeur. Hierdoor kunnen programmeurs de lijst met actieve MVPD&#39;s op elke manier presenteren die zij geschikt achten. De abonnee kiest hun MVPD, en de Authentificatie van Adobe Pass richt de abonnee aan de specifieke Leverancier van de Identiteit van MVPD.
+Wanneer een MVPD-abonnee de site of de toepassing van een programmeur bezoekt, reageert de Adobe Pass-verificatie op een API-aanroep van de site of toepassing met een lijst met voor die programmeur geactiveerde MVPD&#39;s.  De integratie kan direct of geproxideerd zijn; er is geen onderscheid tussen hen en de programmeur. Hierdoor kunnen programmeurs de lijst met actieve MVPD&#39;s op elke manier presenteren die zij geschikt achten. De abonnee kiest hun MVPD, en de Authentificatie van Adobe Pass richt de abonnee aan de MVPD specifieke Leverancier van de Identiteit opnieuw.
 
-In het geval van een geïntegreerde Volmacht MVPD, wordt de integratie gedaan tussen de Authentificatie van Adobe Pass en Volmacht MVPD. De Authentificatie van Adobe Pass verzendt het verzoek van de gebruikersauthentificatie naar de Volmacht MVPD, en de Volmacht MVPD behandelt redirection. Opdat de Volmacht MVPD weet waar te om het verzoek van de gebruikersauthentificatie opnieuw te richten, verzendt de Authentificatie van Adobe Pass een herkenningsteken MVPD in het de authentificatieverzoek van SAML.  Dit herkenningsteken is identiteitskaart MVPD die door de Leverancier van de Volmacht door als de Dienst van het Web van de Volmacht zoals hierboven gespecificeerd wordt gespecificeerd.
+In het geval van een geïntegreerde MVPD Proxy, wordt de integratie gedaan tussen de Authentificatie van Adobe Pass en de Volmacht van MVPD. De Authentificatie van Adobe Pass verzendt het verzoek van de gebruikersauthentificatie naar de Volmacht van MVPD, en de Volmacht van MVPD behandelt redirection. Adobe Pass Authentication verzendt een MVPD-id in het SAML-verificatieverzoek, zodat de MVPD Proxy weet waar het verificatieverzoek van de gebruiker moet worden omgeleid.  Dit herkenningsteken is MVPD identiteitskaart die door de Leverancier van de Volmacht door middel van de Dienst van het Web van de Volmacht zoals hierboven gespecificeerd wordt gespecificeerd.
 
 ### Verificatie {#authn-saml-int}
 
-Adobe Pass Authentication to integration with a Proxy MVPD:
+Adobe Pass Authentication to integration with a Proxy MVPD is het volgende vereist:
 
-* Een Volmacht MVPD verstrekte lijst van Proxied MVPDs, die aan de Dienst van het Web van de Volmacht van de Adobe wordt geduwd
+* Een Volmacht MVPD verstrekte lijst van Proxied MVPDs, die aan de Dienst van het Web van de Volmacht van Adobe wordt geduwd
 
 * SAML-metagegevens voor de bovenliggende MVPD-proxy
 
-* (Aanbevolen) - Proxy MVPD behandelt extra omleiding aan de login pagina URL van Proxied MVPD
+* (Aanbevolen) - De Proxy MVPD handelt extra omleiding aan de login pagina URL van Proxied MVPD af
 
-* De Volmacht MVPD moet havens 443 en 80 voor volgende IPs openen:
-   * 192 150,4,5
-   * Op 19.15.10.2000
-   * 192 150 11,4
-   * 4 53 93 130
-   * 193 105 140 131
-   * 193 105 140 132
-   * 76.74.170.2004
-   * 63 140 39,4
-   * 66 235 132,38
-   * 66 235 139,38
-   * 66 235 139 168
+* De proxy van MVPD moet poort 443 en 80 openen voor de volgende IP&#39;s:
+   * 192.150.4.5
+   * 192.150.10.200
+   * 192.150.11.4
+   * 4.53.93.130
+   * 193.105.140.131
+   * 193.105.140.132
+   * 76.74.170.204
+   * 63.140.39.4
+   * 66.235.132.38
+   * 66.235.139.38
+   * 66.235.139.168
 
 
 #### SAML-verzoek en -antwoord voor verificatie {#authn-saml-req-resp}
 
-In het SAML verzoek AuthN, omvatten de integratie van de Volmacht het volgende extra bezit dat door de Volmacht moet worden behandeld MVPD.  Dit bezit is noodzakelijk om de aanvrager namens Proxied MVPD correct te verwerken, en de juiste login ervaring terug te geven. (Deze eigenschap wordt gemarkeerd in de voorbeeldaanvraag hieronder.)
+In het SAML verzoek AuthN, omvatten de integratie van de Volmacht het volgende extra bezit dat door de Volmacht van MVPD moet worden behandeld.  Dit bezit is noodzakelijk om de aanvrager namens Proxied MVPD correct te verwerken, en de juiste login ervaring terug te geven. (Deze eigenschap wordt gemarkeerd in de voorbeeldaanvraag hieronder.)
 
-**Scoping Bezit** - omvat een punt IDPEntry dat specifieke MVPD_ID en Naam MVPD omvat.  Dit vertegenwoordigt MVPD die de gebruiker eigenlijk van de plukker van de Programmer selecteerde, en past MVPD_ID aan die in de Dienst van het Web van de Volmacht wordt gespecificeerd.
+**Scoping Bezit** - omvat een punt IDPEntry dat specifieke MVPD_ID en de Naam van MVPD omvat.  Dit vertegenwoordigt MVPD dat de gebruiker eigenlijk van de plukker van de Programmer selecteerde, en MVPD_ID aanpast die in de Dienst van het Web van de Volmacht wordt gespecificeerd.
 
 Er is een extra bereikeigenschap voor RequestorID die kan worden gebruikt om de aanmelding aan te passen aan het specifieke merk van de programmeur (indien nodig). Het kan ook eenvoudig worden gebruikt voor analyses van de oorsprong van het verzoek.
 
@@ -164,11 +164,11 @@ In de reactie van SAML AuthN, zou de Volmacht MVPD Proxied MVPD als Entiteit IdP
 
 ### Toestemming {#authz-proxy-mvpd-saml-int}
 
-Voor het machtigingsdeel zou het MVPD de door de programmeur gespecificeerde bron voor goedkeuring moeten goedkeuren.  In de meeste gevallen, is dit een koordherkenningsteken voor het kanaalnetwerk, zoals TBS of TNT.
+Voor het autorisatiedeel zou de MVPD de door de programmeur gespecificeerde bron moeten aanvaarden voor goedkeuring.  In de meeste gevallen, is dit een koordherkenningsteken voor het kanaalnetwerk, zoals TBS of TNT.
 
 #### SAML-aanvraag en -antwoord voor autorisatie {#authz-saml-req-resp}
 
-In de reactie AuthZ, moet de ISSUER de ISSUER van de Reactie van SAML aanpassen die het Geavanceerd MVPD herkenningsteken zou moeten zijn.
+In de reactie AuthZ, moet de ISSUER de ISSUER van de Reactie van SAML aanpassen die het Geleide herkenningsteken van MVPD zou moeten zijn.
 
 **Steekproef AuthZ XACML Verzoek**
 

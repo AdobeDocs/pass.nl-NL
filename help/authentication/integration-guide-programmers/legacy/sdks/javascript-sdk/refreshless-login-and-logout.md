@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 ## Overzicht {#overview}
 
@@ -59,7 +59,7 @@ Er is ook de situatie waarin de gebruiker uitdrukkelijk de authentificatiestroom
 
 1. **Volledige pagina richt opnieuw -** wanneer de login pagina wordt gesloten, zal de gebruiker aan de website van de Programmer opnieuw moeten navigeren en de volledige stroom van het begin in werking stellen. In dit scenario is geen expliciete actie van de programmeur vereist.
 1. **iFrame -** De programmeur wordt geadviseerd om iFrame binnen a `div` (of gelijkaardige component UI) te ontvangen die een Dichte knoop in bijlage aan het heeft. Wanneer de gebruiker op de knop Sluiten drukt, vernietigt de programmeur het iFrame samen met de bijbehorende UI en voert hij `setSelectedProvider(null)` uit. Deze vraag staat AccessEnabler toe om zijn interne staat te ontruimen en maakt het voor de gebruiker mogelijk om een verdere authentificatiestroom in werking te stellen. `setAuthenticationStatus` en `sendTrackingData(AUTHENTICATION_DETECTION...)` worden geactiveerd om een mislukte verificatiestroom aan te geven (zowel aan `getAuthentication` als `getAuthorization`).
-1. **Popup -** sommige browsers kunnen niet nauwkeurig de gebeurtenis ontdekken van de vensterdichte, zodat moet een verschillende benadering hier worden genomen (in tegenstelling tot de iFrame stroom hierboven). De Adobe adviseert dat de programmeur een tijdopnemer initialiseert die periodiek het bestaan van login popup verifieert. Als het venster niet bestaat, kan de programmeur ervoor zorgen dat de gebruiker de login stroom manueel annuleerde, en de Programmeur kan met het roepen `setSelectedProvider(null)` te werk gaan. De teweeggebrachte callbacks zijn het zelfde als in stroom 2 hierboven.
+1. **Popup -** sommige browsers kunnen niet nauwkeurig de gebeurtenis ontdekken van de vensterdichte, zodat moet een verschillende benadering hier worden genomen (in tegenstelling tot de iFrame stroom hierboven). Adobe raadt aan dat de programmeur een timer initialiseert die periodiek het bestaan van de pop-up met aanmelding controleert. Als het venster niet bestaat, kan de programmeur ervoor zorgen dat de gebruiker de login stroom manueel annuleerde, en de Programmeur kan met het roepen `setSelectedProvider(null)` te werk gaan. De teweeggebrachte callbacks zijn het zelfde als in stroom 2 hierboven.
 
 </br>
 
@@ -77,7 +77,7 @@ De logout-API van de AccessEnabler wist de lokale status van de bibliotheek en l
 
 >[!NOTE]
 >
->Voor de verbeterde aanmeldings- en aanmeldstromen zonder vernieuwing is het vereist dat de browser moderne HTML5-technologieën, waaronder webberichten, ondersteunt.
+>Voor de verbeterde aanmeldings- en aanmeldstromen zonder vernieuwing moet de browser moderne HTML5-technologieën, waaronder webberichten, ondersteunen.
 
 Zowel de hierboven beschreven verificatie- (aanmelding) als aanmeldstromen bieden een vergelijkbare gebruikerservaring door de hoofdpagina opnieuw te laden nadat elke flow is voltooid.  De huidige functie is bedoeld om de gebruikerservaring te verbeteren door aanmeldingsgegevens en aanmeldgegevens zonder vernieuwen (background) te bieden. De programmeur kan aanmeldingsgegevens voor de achtergrond in- en uitschakelen door twee Booleaanse markeringen (`backgroundLogin` en `backgroundLogout` ) door te geven aan de parameter `configInfo` van de `setRequestor` API. Standaard is aanmeldingsnaam/afmelding op de achtergrond uitgeschakeld (dit biedt compatibiliteit met de vorige implementatie).
 

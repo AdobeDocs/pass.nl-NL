@@ -4,7 +4,7 @@ description: MVPD-lijst opgeven
 exl-id: db2d8f19-d0b9-4195-bf0b-f9de0d96062b
 source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '254'
 ht-degree: 1%
 
 ---
@@ -17,23 +17,23 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 >[!NOTE]
 >
-> De implementatie van REST API wordt begrensd door [&#x200B; Throttling mechanisme &#x200B;](/help/authentication/integration-guide-programmers/throttling-mechanism.md)
+> De implementatie van REST API wordt begrensd door [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md)
 
 ## REST API-eindpunten {#clientless-endpoints}
 
 &lt;REGGIE_FQDN>:
 
-* Productie - [&#x200B; api.auth.adobe.com &#x200B;](http://api.auth.adobe.com/)
-* Het opvoeren - [&#x200B; api.auth-staging.adobe.com &#x200B;](http://api.auth-staging.adobe.com/)
+* Productie - [ api.auth.adobe.com ](http://api.auth.adobe.com/)
+* Het opvoeren - [ api.auth-staging.adobe.com ](http://api.auth-staging.adobe.com/)
 
 &lt;SP_FQDN>:
 
-* Productie - [&#x200B; api.auth.adobe.com &#x200B;](http://api.auth.adobe.com/)
-* Het opvoeren - [&#x200B; api.auth-staging.adobe.com &#x200B;](http://api.auth-staging.adobe.com/)
+* Productie - [ api.auth.adobe.com ](http://api.auth.adobe.com/)
+* Het opvoeren - [ api.auth-staging.adobe.com ](http://api.auth-staging.adobe.com/)
 
 </br>
 
@@ -43,7 +43,7 @@ Keert lijst van gevormde MVPDs voor de aanvrager terug.
 
 | Endpoint | Geroepen </br> door | Invoer   </br> Params | HTTP </br> Methode | Antwoord | HTTP-respons </br> |
 | --- | --- | --- | --- | --- | --- |
-| &lt;SP_FQDN>/api/v1/config/{requestorId} </br></br> Bijvoorbeeld:</br></br> &lt;SP_FQDN>/api/v1/config/sampleRequestorId | Adobe Pass-verificatie | 1. Aanvrager </br>    (De component van de Weg) </br>_2.  deviceType (afgekeurd)_ | GET | XML of JSON met lijst van MVPD&#39;s. | 200 |
+| &lt;SP_FQDN>/api/v1/config/{requestorId}</br></br> Bijvoorbeeld:</br></br> &lt;SP_FQDN>/api/v1/config/sampleRequestorId | Adobe Pass-verificatie | &#x200B;1. Aanvrager </br>    (De component van de Weg) </br>_2.  deviceType (afgekeurd)_ | GET | XML of JSON met lijst van MVPD&#39;s. | 200 |
 
 {style="table-layout:auto"}
 

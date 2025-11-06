@@ -14,13 +14,13 @@ ht-degree: 0%
 >
 > De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
-Dit document verstrekt de klanten van de Authentificatie van Adobe Pass van gestructureerde regels en beste praktijken specifiek die voor AI-bijgewoonde ontwikkeling van (TV overal) toepassingen worden ontworpen die [&#x200B; REST API V2 &#x200B;](rest-api-v2-overview.md) gebruiken.
+Dit document verstrekt de klanten van de Authentificatie van Adobe Pass van gestructureerde regels en beste praktijken specifiek die voor AI-bijgewoonde ontwikkeling van (TV overal) toepassingen worden ontworpen die [ REST API V2 ](rest-api-v2-overview.md) gebruiken.
 
-Door de AI ontwikkelingsregels te volgen die in deze gids worden geschetst, kunnen de ontwikkelaars hun AI codeerassistenten verzekeren helpen volgzame, uitvoerbare, en onderhoudsbare integratie tot stand brengen die aan de [&#x200B; verplichte vereisten en geadviseerde praktijken &#x200B;](rest-api-v2-checklist.md) naleven.
+Door de AI ontwikkelingsregels te volgen die in deze gids worden geschetst, kunnen de ontwikkelaars hun AI codeerassistenten verzekeren helpen volgzame, uitvoerbare, en onderhoudsbare integratie tot stand brengen die aan de [ verplichte vereisten en geadviseerde praktijken ](rest-api-v2-checklist.md) naleven.
 
 ## Regels voor codeassistenten {#coding-assistants-rules}
 
-De regels verstrekken systeem-vlakke instructies aan Agenten. Beschouw ze als permanente context, voorkeuren of workflows. De regels binnen dit document zijn compatibel met populaire AI-Gerichte coderingsassistenten, en transformeren [&#x200B; REST API V2 Checklist &#x200B;](rest-api-v2-checklist.md) in actionable AI ontwikkelingsrichtlijnen.
+De regels verstrekken systeem-vlakke instructies aan Agenten. Beschouw ze als permanente context, voorkeuren of workflows. De regels binnen dit document zijn compatibel met populaire AI-Gerichte coderingsassistenten, en transformeren [ REST API V2 Checklist ](rest-api-v2-checklist.md) in actionable AI ontwikkelingsrichtlijnen.
 
 Ga vandaag aan de slag door uw AI-ontwikkelomgeving te configureren met onze uitgebreide regelset en profiteer van de voordelen van intelligente, compatibele code genereren voor de integratie van uw Adobe Pass Authentication REST API V2. Kopieer en plak onder de regels naar het configuratiebestand van de ontwikkelomgeving, afhankelijk van het AI-gereedschap dat u gebruikt.
 
@@ -33,19 +33,19 @@ You are an expert developer assistant helping to implement Adobe Pass Authentica
 
 For latest API specifications, refer to the official documentation:
 
-- Retrieve configuration for specific service provider: https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-apis/rest-api-v2-configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider
-- Create authentication session: https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-apis/rest-api-v2-sessions-apis/rest-api-v2-sessions-apis-create-authentication-session
-- Resume authentication session: https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-apis/rest-api-v2-sessions-apis/rest-api-v2-sessions-apis-resume-authentication-session
-- Retrieve authentication session: https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-apis/rest-api-v2-sessions-apis/rest-api-v2-sessions-apis-retrieve-authentication-session-information-using-code
-- Perform authentication in user agent: https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-apis/rest-api-v2-sessions-apis/rest-api-v2-sessions-apis-perform-authentication-in-user-agent
-- Retrieve profiles: https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-apis/rest-api-v2-profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles
-- Retrieve profile for specific mvpd: https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-apis/rest-api-v2-profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd
-- Retrieve profile for specific code: https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-apis/rest-api-v2-profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code
-- Retrieve authorization decisions using specific mvpd: https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-apis/rest-api-v2-decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd
-- Retrieve preauthorization decisions using specific mvpd: https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-apis/rest-api-v2-decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd
-- Initiate logout for specific mvpd: https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-apis/rest-api-v2-logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd
-- Retrieve partner authentication request: https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-apis/rest-api-v2-partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-partner-authentication-request
-- Create and retrieve profile using partner authentication response: https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-apis/rest-api-v2-partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response
+- Retrieve configuration for specific service provider: https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-apis/rest-api-v2-configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider
+- Create authentication session: https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-apis/rest-api-v2-sessions-apis/rest-api-v2-sessions-apis-create-authentication-session
+- Resume authentication session: https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-apis/rest-api-v2-sessions-apis/rest-api-v2-sessions-apis-resume-authentication-session
+- Retrieve authentication session: https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-apis/rest-api-v2-sessions-apis/rest-api-v2-sessions-apis-retrieve-authentication-session-information-using-code
+- Perform authentication in user agent: https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-apis/rest-api-v2-sessions-apis/rest-api-v2-sessions-apis-perform-authentication-in-user-agent
+- Retrieve profiles: https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-apis/rest-api-v2-profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles
+- Retrieve profile for specific mvpd: https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-apis/rest-api-v2-profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd
+- Retrieve profile for specific code: https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-apis/rest-api-v2-profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code
+- Retrieve authorization decisions using specific mvpd: https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-apis/rest-api-v2-decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd
+- Retrieve preauthorization decisions using specific mvpd: https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-apis/rest-api-v2-decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd
+- Initiate logout for specific mvpd: https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-apis/rest-api-v2-logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd
+- Retrieve partner authentication request: https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-apis/rest-api-v2-partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-partner-authentication-request
+- Create and retrieve profile using partner authentication response: https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-apis/rest-api-v2-partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response
 
 ## Core Principles
 

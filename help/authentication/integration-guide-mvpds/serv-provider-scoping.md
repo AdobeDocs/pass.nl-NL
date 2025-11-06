@@ -17,9 +17,9 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-De standaardimplementatie van een integratie van de Authentificatie van Adobe Pass met MVPD is gebaseerd op de **Specificatie OLCA**. In het gedeelte Verificatievereisten van de specificatie OLCA (6.5, Subject Identifier) wordt aangegeven dat het mogelijk is het bereik van de Serviceverlener (SP) voor de Subject-id aan te geven. (Het onderwerpherkenningsteken is verduisterde Gebruiker - identiteitskaart MVPD keert aan SP terug.)  In een integratie van de Authentificatie van Adobe Pass, wordt het vereist dat MVPDs scoping van de verzoeken van de Authentificatie van SP toelaat.
+De standaardimplementatie van een integratie van de Authentificatie van Adobe Pass met MVPD is gebaseerd op de **Specificatie OLCA**. In het gedeelte Verificatievereisten van de specificatie OLCA (6.5, Subject Identifier) wordt aangegeven dat het mogelijk is het bereik van de Serviceverlener (SP) voor de Subject-id aan te geven. (De onderwerpherkenningsteken is de verduisterde Gebruiker - identiteitskaart de MVPD aan SP terugkeert.)  In een integratie van de Authentificatie van Adobe Pass, wordt het vereist dat MVPDs scoping van de verzoeken van de Authentificatie van SP toelaat.
 
-Met de Authentificatie die van Adobe Pass de rol van SP voor Programmer neemt, is het noodzakelijk om een aanpassing uit te voeren die SP scoping van het verzoek van de Authentificatie toelaat.  Dit moet worden gedaan zodat MVPD het netwerkmerk kan identificeren dat in de bevestiging SAML aan de Identiteitsprovider van MVPD (IdP) wordt overgegaan.  Scoping kan op een van de twee manieren worden uitgevoerd die in de volgende sectie worden beschreven.
+Met de Authentificatie die van Adobe Pass de rol van SP voor Programmer neemt, is het noodzakelijk om een aanpassing uit te voeren die SP scoping van het verzoek van de Authentificatie toelaat.  Dit moet worden gedaan zodat de MVPD het netwerkmerk kan identificeren dat in de bevestiging van SAML aan de MVPD Identity Provider (IdP) wordt overgegaan.  Scoping kan op een van de twee manieren worden uitgevoerd die in de volgende sectie worden beschreven.
 
 ## Scoping serviceprovider {#service-provider-scoping}
 

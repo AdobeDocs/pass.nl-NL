@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 De API voor vooraf autoriseren kan worden gebruikt om een voorafgaande beslissing voor een of meer bronnen te verkrijgen, op deze manier kan de toepassing UI-tips en/of inhoud filteren implementeren.
 
@@ -173,7 +173,7 @@ Deze sectie benadrukt de structuur JSON van sommige mogelijke voorwerpen Preauth
 
 >[!IMPORTANT]
 >
->De lijst van mogelijke extra fouten die door het middel van de verbeterde fout worden teruggewonnen meldend eigenschap wordt gedocumenteerd in [&#x200B; Geavanceerde fout die &#x200B;](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) meldt.
+>De lijst van mogelijke extra fouten die door het middel van de verbeterde fout worden teruggewonnen meldend eigenschap wordt gedocumenteerd in [ Geavanceerde fout die ](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) meldt.
 
 #### Voltooid
 
@@ -239,7 +239,7 @@ Een of meer bronnen beschikken over een afgewezen besluit vooraf en de verbeterd
                    "code" : "authorization_denied_by_mvpd",
                    "message" : "User not authorized",
                    "details" : "Your subscription package does not include the "TestStream3" channel.",
-                   "helpUrl" : "https://experienceleague.adobe.com/docs/primetime/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=nl-NL",
+                   "helpUrl" : "https://experienceleague.adobe.com/docs/primetime/authentication/auth-features/error-reportn/enhanced-error-codes.html",
                    "trace" : "0453f8c8-167a-4429-8784-cd32cfeaee58",
                    "action" : "none"
                 }
@@ -267,7 +267,7 @@ Bij Adobe Pass-verificatieservices is een fout opgetreden tijdens het onderhoud 
             "code" : "bad_request",
             "message": "Missing required parameter : deviceId",
             "details": "",
-            "helpUrl" : "https://experienceleague.adobe.com/docs/primetime/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=nl-NL",
+            "helpUrl" : "https://experienceleague.adobe.com/docs/primetime/authentication/auth-features/error-reportn/enhanced-error-codes.html",
             "trace" : "9f115e1c-0158-4a41-8805-9f68923f3646",
             "action" : "none"
         }

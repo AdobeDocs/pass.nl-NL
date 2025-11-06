@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 </br>
 
@@ -27,13 +27,13 @@ Dit document beschrijft de informatie nodig om nieuwe **Adobe Pass Authentificat
 
 ## Architectuur op hoog niveau en integratie op besturingssysteemniveau {#high}
 
-Om Single Sign On te bereiken tussen tv-toepassingen overal op Amazon fireTV-platform en om de algemene ervaring op dit platform te verbeteren, hebben we besloten om onze kern-SDK op het niveau van het FireTV-besturingssysteem te integreren. De programmeurs zullen tegen een stompenbibliotheek moeten compileren die door Adobe wordt verstrekt. De eigenlijke functionaliteit wordt geleverd door de bibliotheek van de Adobe die aanwezig is in Amazon fireTV OS.
+Om Single Sign On te bereiken tussen tv-toepassingen overal op Amazon fireTV-platform en om de algemene ervaring op dit platform te verbeteren, hebben we besloten om onze kern-SDK op het niveau van het FireTV-besturingssysteem te integreren. Programmeurs moeten een stub-bibliotheek van Adobe gebruiken. De eigenlijke functionaliteit wordt geleverd door de Adobe-bibliotheek die aanwezig is in Amazon fireTV OS.
 
 Totdat Amazon een FireTV-simulator aanbiedt die onze bibliotheek op besturingssysteemniveau bevat, is de ontwikkeling alleen mogelijk met echte FireTV-apparaten.
 
 ## Voordelen {#bene}
 
-* Single Sign On tussen alle Adobe-tv-toepassingen overal op Amazon fireTV-platform met alle geïntegreerde MVPD&#39;s.
+* Single Sign On tussen alle Adobe powered TV-toepassingen overal op Amazon fireTV-platform met alle geïntegreerde MVPD&#39;s.
 * Mogelijkheid om te profiteren van HBA (met ondersteunde MVPD&#39;s).
 * Mogelijkheid om de nieuwste FireTV SDK te gebruiken zonder dat u uw toepassingen telkens opnieuw hoeft bij te werken wanneer een nieuwe SDK-versie wordt uitgebracht.
 * Alle TVE-toepassingen profiteren van het gebruik van de gedeelde systeembibliotheek omdat er geen lokale kopie van de AccessEnabler-bibliotheek nodig is. Hierdoor wordt ook gegarandeerd dat alle toepassingen dezelfde SDK-versie gebruiken.
@@ -47,7 +47,7 @@ Vergeleken met de op Clientless API gebaseerde app, gaat de verificatie naar het
 
 Hiervoor moeten programmeurs een MVPD-kiezer toevoegen aan hun apps, zodat gebruikers hun tv-provider direct op het FireTV-apparaat kunnen kiezen. Als u MVPD selecteert, wordt de aanmeldingspagina van MVPD weergegeven op het FireTV-apparaat.
 
-Draadframes van de gebruikersstromen die de regelmatige, HBA, en scenario&#39;s SSO op fireTV beschrijven kunnen bij [&#x200B; Amazon Vuur TV - MVVPD Onderteken-binnen de Stroom van de Gebruiker worden gevonden &#x200B;](https://xd.adobe.com/view/9058288e-4b67-43a1-9d5b-5f76ede6c51e/).
+Draadframes van de gebruikersstromen die de regelmatige, HBA, en scenario&#39;s SSO op fireTV beschrijven kunnen bij [ Amazon Vuur TV - MVVPD Onderteken-binnen de Stroom van de Gebruiker worden gevonden ](https://xd.adobe.com/view/9058288e-4b67-43a1-9d5b-5f76ede6c51e/).
 
 ## Migratie van op Android SDK gebaseerde app naar op FireTV SDK gebaseerde app {#migra2}
 
@@ -83,6 +83,6 @@ In vergelijking met de bestaande Android SDK is het op FireTV SDK eenvoudiger om
 
    * TempPass-stromen zijn één scherm en gedragen zich net als op andere native apparaten.
 
-1. Werkt andere functionaliteit voor Adoben zoals voorheen?
+1. Werkt andere Adobe-functionaliteit zoals voorheen?
 
    * Alle Adobe Pass-verificatiefunctionaliteit werkt op fireTV net als op Android-apparaten.

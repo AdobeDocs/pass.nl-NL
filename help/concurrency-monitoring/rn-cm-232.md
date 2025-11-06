@@ -1,13 +1,13 @@
 ---
 title: Opmerkingen bij de release Adobe Pass Concurrency Monitoring 2.3.2
 description: Opmerkingen bij de release Adobe Pass Concurrency Monitoring 2.3.2
-source-git-commit: 59672b44074c472094ed27a23d6bfbcd7654c901
+exl-id: 3996da45-498c-482a-b374-3cda1c5df2f7
+source-git-commit: f30b6814b8a77424c13337d44d7b247105e0bfe2
 workflow-type: tm+mt
-source-wordcount: '130'
-ht-degree: 0%
+source-wordcount: '141'
+ht-degree: 1%
 
 ---
-
 
 # Opmerkingen bij de release Adobe Pass Concurrency Monitoring 2.3.2 {#cm-232}
 
@@ -19,10 +19,10 @@ Releasedatum: 11-12-2015
 
 * Nieuwe uitsplitsingen beschikbaar in de Gebruiksrapporten. De nieuwe uitsplitsingen zijn beschikbaar als de toepassing die met Gelijktijdige Controle wordt geïntegreerd douanemetagegevens verzendt.
    * toepassing - de toepassings-id die in de URL van de oproep wordt vermeld
-   * mvpd - MVPD die in vraag URL wordt gemeld
+   * mvpd - de MVPD rapporteerde in de URL van de oproep
    * kanaal - het kanaal van douanemetagegevens
    * platform - het aangepaste platform voor metagegevens
-* Nieuwe metriek voor **streamduur** beschikbaar in de Gebruiksrapporten. De nieuwe metriek kan worden gebruikt om een histogram van stroomduur tot stand te brengen. De volgende intervallen in minuten zijn momenteel beschikbaar:
+* Nieuwe metriek met betrekking tot **stroomduur** beschikbaar in de Rapporten van het Gebruik. De nieuwe metriek kan worden gebruikt om een histogram van stroomduur tot stand te brengen. De volgende intervallen in minuten zijn momenteel beschikbaar:
    * duration_0-15
    * duration_15-30
    * duration_30-60

@@ -1,6 +1,6 @@
 ---
-title: MVPD Authorization
-description: MVPD Authorization
+title: MVPD-autorisatie
+description: MVPD-autorisatie
 exl-id: 215780e4-12b6-4ba6-8377-4d21b63b6975
 source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
 workflow-type: tm+mt
@@ -9,7 +9,7 @@ ht-degree: 0%
 
 ---
 
-# MVPD Authorization
+# MVPD-autorisatie
 
 >[!NOTE]
 >
@@ -17,15 +17,15 @@ ht-degree: 0%
 
 ## Overzicht {#mvpd-authz-overview}
 
-De vergunning (AuthZ) wordt uitgevoerd via backchannel (server-aan-server) mededelingen tussen een Adobe-ontvangen backend server en het eindpunt AuthZ MVPD.
+De vergunning (AuthZ) wordt uitgevoerd via backchannel (server-aan-server) mededelingen tussen een Adobe-ontvangen backend server en het eindpunt van AuthZ van MVPD.
 
 Voor verzoeken AuthZ, zou het vergunningseindpunt minstens de volgende parameters moeten kunnen verwerken:
 
 * **Uid**. De gebruikers-id die is ontvangen van de verificatiestap.
 
-* **identiteitskaart van het Middel**. Een tekenreeks die een bepaalde inhoudsbron identificeert. Deze middelidentiteitskaart wordt gespecificeerd door de Programmer, en MVPD moet de bedrijfsregels betreffende deze middelen versterken (bijvoorbeeld, door te controleren dat de gebruiker aan een bepaald kanaal wordt ingetekend).
+* **identiteitskaart van het Middel**. Een tekenreeks die een bepaalde inhoudsbron identificeert. Deze resource-id wordt opgegeven door de programmeur en de MVPD moet de bedrijfsregels voor deze bronnen versterken (bijvoorbeeld door te controleren of de gebruiker is geabonneerd op een bepaald kanaal).
 
-Naast het bepalen of de gebruiker een vergunning heeft, moet het antwoord de tijd-aan-levende (TTL) van deze vergunning omvatten, d.w.z. wanneer de vergunning verloopt. Als TTL niet wordt geplaatst, zal het verzoek AuthZ ontbreken.  Om deze reden, **TTL is een verplichte configuratie die op de kant van de Authentificatie van Adobe Pass** plaatst, om het geval te behandelen wanneer MVPD niet TTL in hun verzoek omvat.
+Naast het bepalen of de gebruiker een vergunning heeft, moet het antwoord de tijd-aan-levende (TTL) van deze vergunning omvatten, d.w.z. wanneer de vergunning verloopt. Als TTL niet wordt geplaatst, zal het verzoek AuthZ ontbreken.  Om deze reden, **TTL is een verplichte configuratie die op de kant van de Authentificatie van Adobe Pass** plaatst, om het geval te behandelen wanneer een MVPD TTL niet in hun verzoek omvat.
 
 ## De vergunningsaanvraag {#authz-req}
 
@@ -40,7 +40,7 @@ Een AuthZ-verzoek moet een onderwerp bevatten namens wie het verzoek wordt gedaa
 
 
 
-SP op dit punt moet een XACML Authorization DecisionQuery voorbereiden en het verzenden (via de POST van HTTP) naar het (eerder-overeengekomen) Punt van het Besluit van het Beleid (PDP) voor IdP. Hieronder ziet u een voorbeeld van een eenvoudig XACML-verzoek (zie de XACML-kernspecificatie):
+SP op dit punt moet een XACML Authorization DecisionQuery voorbereiden en het verzenden (via HTTP POST) naar het (eerder-overeengekomen) Punt van het Besluit van het Beleid (PDP) voor IdP. Hieronder ziet u een voorbeeld van een eenvoudig XACML-verzoek (zie de XACML-kernspecificatie):
 
 ```XML
 POST https://authz.site.com/XACML_endpoint
@@ -80,7 +80,7 @@ http://docs.oasis-open.org/xacml/access_control-xacml-2.0-context-schema-os.xsd"
 ```
 
 
-Na het ontvangen van het verzoek AuthZ, evalueert PDP van MVPD het verzoek en bepaalt of het onderwerp zou moeten worden toegestaan om de gevraagde actie op het middel uit te voeren. Het MVPD keert dan een antwoord met een Besluit, een code van de Status, en een bericht terug, zoals die in de Reactie van de Toestemming hieronder worden beschreven.
+Na het ontvangen van het verzoek AuthZ, evalueert PDP van MVPD het verzoek en bepaalt of het onderwerp de gevraagde actie op het middel zou moeten mogen uitvoeren. De MVPD geeft vervolgens een antwoord met een beslissing, statuscode en bericht, zoals hieronder beschreven in de machtigingsreactie.
 
 ## De machtigingsreactie {#authz-response}
 

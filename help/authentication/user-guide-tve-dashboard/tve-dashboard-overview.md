@@ -15,7 +15,7 @@ ht-degree: 0%
 >
 >De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
-Het [[!DNL Adobe]  Dashboard van TVE van de pas &#x200B;](https://experience.adobe.com/pass/authentication) is een hulpmiddel voor de klanten van de Authentificatie van Adobe Pass (Programmers) om hun configuratie en gegevens te beheren. Dit dashboard voor zelfbediening biedt een aantal functies, zoals:
+Het [[!DNL Adobe]  Dashboard van TVE van de pas ](https://experience.adobe.com/pass/authentication) is een hulpmiddel voor de klanten van de Authentificatie van Adobe Pass (Programmers) om hun configuratie en gegevens te beheren. Dit dashboard voor zelfbediening biedt een aantal functies, zoals:
 
 * **het beheer van de Integratie**: Voeg nieuwe integraties tussen respectieve merken (Kanalen) van een programmeur en Multichannel Video Programmerende Distributeurs (MVPDs) in het ecosysteem van de Authentificatie van Adobe Pass toe.
 
@@ -48,7 +48,7 @@ Adobe Pass Authentication biedt de volgende secties in het TVE-dashboard:
 
 ## Bronnen {#resources-tve-dashboard}
 
-Adobe stelt voor de volgende bronnen te gebruiken om de stromen en functies grondig te begrijpen, zodat u vertrouwd raakt met de terminologie die in deze handleiding wordt gebruikt:
+Adobe stelt voor de volgende bronnen te gebruiken om de stromen en functies grondig te begrijpen, zodat u vertrouwd kunt raken met de terminologie die in deze handleiding wordt gebruikt:
 
 * [TVE - Technisch document](/help/authentication/kickstart/technical-paper.md)
 * [Programmer Kickstart Guide](/help/authentication/kickstart/programmer-kickstart-guide.md)

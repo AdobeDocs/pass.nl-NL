@@ -40,7 +40,7 @@ Het voorgestelde vertragingsmechanisme gebruikt de geïdentificeerde apparaten i
 
 Server-aan-server implementaties moeten de IP van hun cliënt adressen door:sturen gebruikend het &quot;X-Door:sturen-voor&quot;kopbalmechanisme.
 
-U kunt meer details op vinden hoe te om x-door:sturen-voor kopbal [&#x200B; hier &#x200B;](legacy/rest-api-v1/cookbooks/rest-api-cookbook-servertoserver.md) over te gaan.
+U kunt meer details op vinden hoe te om x-door:sturen-voor kopbal [ hier ](legacy/rest-api-v1/cookbooks/rest-api-cookbook-servertoserver.md) over te gaan.
 
 ### Werkelijke grenswaarden en eindpunten {#throttling-mechanism-limits}
 
@@ -136,7 +136,7 @@ p3p: CP="NOI DSP COR CURa ADMa DEVa OUR BUS IND UNI COM NAV STA"
 
 Klanten die een aangepaste implementatie (inclusief server-naar-server) gebruiken om te communiceren met de API voor controle van de controle van de controle moeten ervoor zorgen dat zij hun IP-adres van de gebruiker kunnen vastleggen en het correct kunnen doorsturen, met behulp van de X-Forwarded-For-header die verder gaat naar de API voor verificatie van de controle van de controle van de controle.
 
-Zie [&#x200B; hier &#x200B;](legacy/rest-api-v1/cookbooks/rest-api-cookbook-servertoserver.md) voor meer details.
+Zie [ hier ](legacy/rest-api-v1/cookbooks/rest-api-cookbook-servertoserver.md) voor meer details.
 
 ### Reageren op nieuwe antwoordcode
 

@@ -21,7 +21,7 @@ De <b> AD-dienst-Symbolische </b> verzoekkopbal bevat het unieke gebruikersherke
 
 Deze kopbal wordt ontworpen voor gebruik in enig sign-on (SSO) toegelaten stromen leveraging de Symbolische methode van de Dienst.
 
-Voor meer details over enige sign-on (SSO) toegelaten stromen leveraging de Symbolische methode van de Dienst, verwijs naar [&#x200B; Enige sign-on gebruikend de stromen van het de dienstteken &#x200B;](../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-service-token-flows.md) documentatie.
+Voor meer details over enige sign-on (SSO) toegelaten stromen leveraging de Symbolische methode van de Dienst, verwijs naar [ Enige sign-on gebruikend de stromen van het de dienstteken ](../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-service-token-flows.md) documentatie.
 
 ## Syntaxis {#syntax}
 
