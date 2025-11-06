@@ -2,7 +2,7 @@
 title: iOS/tvOS-toepassingsregistratie
 description: iOS/tvOS-toepassingsregistratie
 exl-id: 89ee6b5a-29fa-4396-bfc8-7651aa3d6826
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
 workflow-type: tm+mt
 source-wordcount: '632'
 ht-degree: 0%
@@ -18,13 +18,13 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 ## Inleiding {#Intro}
 
 Vanaf versie 3.0 van iOS/tvOS AccessEnabler SDK veranderen we het verificatiemechanisme met Adobe-servers. In plaats van het gebruiken van een openbare sleutel en een geheim systeem om requestID te ondertekenen, introduceren wij het concept een koord van de softwareverklaring dat kan worden gebruikt om een toegangstoken te verkrijgen die later voor alle vraag wordt gebruikt die SDK aan onze servers maakt. Naast een software-instructie hebt u ook een aangepast URL-schema voor uw toepassing nodig.
 
-Voor meer informatie, zie [&#x200B; Dynamisch Overzicht van de Registratie van de Cliënt 1&rbrace;.](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)
+Voor meer informatie, zie [ Dynamisch Overzicht van de Registratie van de Cliënt 1}.](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)
 
 ## Wat is een Software Statement? {#Soft_state}
 
@@ -45,7 +45,7 @@ Een verklaring van de Software is een teken JWT dat informatie over uw toepassin
 - Er moet een lijst met alle geregistreerde toepassingen worden weergegeven. Klik op de knop   `Download` op de toepassing die u net hebt gemaakt. Mogelijk moet u een paar minuten wachten voordat de Software Statement wordt weergegeven. U kunt deze instructie dan downloaden.
 - Er wordt een tekstbestand gedownload. Gebruik de inhoud ervan als de Software Statement.
 
-Voor meer informatie zie, [&#x200B; Dynamisch Beheer van de Registratie van de Cliënt &#x200B;](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md#dynamic-client-registration-management).
+Voor meer informatie zie, [ Dynamisch Beheer van de Registratie van de Cliënt ](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md#dynamic-client-registration-management).
 
 ### Als u geen toegang hebt tot het Adobe TVE-dashboard:
 

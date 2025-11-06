@@ -2,7 +2,7 @@
 title: Trackingpreventiebeoordeling Apple Safari
 description: Trackingpreventiebeoordeling Apple Safari
 exl-id: a3362020-92ff-4232-b923-e462868730d5
-source-git-commit: c1f891fabd47954dc6cf76a575c3376ed0f5cd3d
+source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
 workflow-type: tm+mt
 source-wordcount: '1849'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 ## Safari 10 {#safari10}
 
@@ -44,7 +44,7 @@ Om deze beperkingen te verlichten kunt u de gebruiker instrueren om de Safari 10
 >
 >Alle bovenstaande gegevens uit rubriek Safari 10 zijn nog steeds van toepassing in het geval van Safari 11.
 
-Beginnend met Safari 11, introduceert browser [&#x200B; Intelligente het Volgen Preventie &#x200B;](https://webkit.org/blog/7675/intelligent-tracking-prevention/) (ITP) mechanisme, een technologie die heuristiek gebruikt om dwars-plaats het volgen te verhinderen. Deze heuristiek is van invloed op de manier waarop cookies van derden worden opgeslagen en opnieuw afgespeeld op netwerkaanroepen. Dit betekent dat, afhankelijk van de activering van het ITP-mechanisme, de Safari-browser cookies van derden in de communicatie tussen client en server blokkeert.
+Beginnend met Safari 11, introduceert browser [ Intelligente het Volgen Preventie ](https://webkit.org/blog/7675/intelligent-tracking-prevention/) (ITP) mechanisme, een technologie die heuristiek gebruikt om dwars-plaats het volgen te verhinderen. Deze heuristiek is van invloed op de manier waarop cookies van derden worden opgeslagen en opnieuw afgespeeld op netwerkaanroepen. Dit betekent dat, afhankelijk van de activering van het ITP-mechanisme, de Safari-browser cookies van derden in de communicatie tussen client en server blokkeert.
 
 De dienst van de Authentificatie van Adobe Pass gebruikt en baseert zich op koekjes als deel van het authentificatieproces **om** te functioneren. In situaties waarin het verificatieproces automatisch plaatsvindt (bijvoorbeeld Temperatuurcontrole) of in implementaties waarin iFrames of de functie &quot;Zonder refressless&quot; wordt gebruikt, worden cookies van Adobe standaard beschouwd als cookies van derden en geblokkeerd. In andere gevallen gebruikt Safari een computerleeralgoritme dat alle cookies van de Adobe Pass Authentication-service zou kunnen markeren als &#39;tracking cookies&#39;, zodat ITP&#39;s blokkeren.
 
@@ -54,13 +54,13 @@ Deze wijzigingen zijn van invloed op en hebben invloed op de Adobe Pass-verifica
 
 ### Oplossing {#mitigation-safari11}
 
-Voor zowel AccessEnabler JavaScript SDK v3 (versies 3.x) als AccessEnabler JavaScript SDK v4 (versies 4.x) bevat de bibliotheek een mechanisme waarmee kan worden vastgesteld in welke situaties de verificatie van de gebruiker is geblokkeerd omdat de vereiste cookies ontbreken. In deze situaties teweegbrengt de bibliotheek een specifieke foutencallback [&#x200B; N130 &#x200B;](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md#advanced-error-codes-reference) teweeg, die terug naar de toegelaten website van de Authentificatie van Adobe Pass wordt overgegaan om als signaal te worden gebruikt om de gebruiker op te dragen acties te voeren die de kwestie kunnen verlichten. Om van dit mechanisme te profiteren moet de website de [&#x200B; Fout uitvoeren die &#x200B;](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md) specificatie meldt.
+Voor zowel AccessEnabler JavaScript SDK v3 (versies 3.x) als AccessEnabler JavaScript SDK v4 (versies 4.x) bevat de bibliotheek een mechanisme waarmee kan worden vastgesteld in welke situaties de verificatie van de gebruiker is geblokkeerd omdat de vereiste cookies ontbreken. In deze situaties teweegbrengt de bibliotheek een specifieke foutencallback [ N130 ](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md#advanced-error-codes-reference) teweeg, die terug naar de toegelaten website van de Authentificatie van Adobe Pass wordt overgegaan om als signaal te worden gebruikt om de gebruiker op te dragen acties te voeren die de kwestie kunnen verlichten. Om van dit mechanisme te profiteren moet de website de [ Fout uitvoeren die ](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md) specificatie meldt.
 
 Voor AccessEnabler JavaScript SDK v2 (versies 2.x) biedt de bibliotheek het hierboven beschreven mechanisme niet. Daarom kan de voor Adobe Pass-verificatie ingeschakelde website niet worden gesignaleerd wanneer de gebruiker moet worden geïnstrueerd om actie te ondernemen om het probleem op te lossen.
 
 De lijst van acties die de bovengenoemde kwesties **kunnen verlichten is op alle drie versies** van AccessEnabler JavaScript SDK van toepassing.
 
-Wanneer [&#x200B; N130 &#x200B;](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md#advanced-error-codes-reference) foutencallback door de website van de uitvoerder wordt ontvangen, zou de gebruiker moeten worden opgedragen om Intelligente het Volgen Preventie (ITP) onbruikbaar te maken en 3de partijkoekjes toe te laten door:
+Wanneer [ N130 ](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md#advanced-error-codes-reference) foutencallback door de website van de uitvoerder wordt ontvangen, zou de gebruiker moeten worden opgedragen om Intelligente het Volgen Preventie (ITP) onbruikbaar te maken en 3de partijkoekjes toe te laten door:
 
 * In geval van de Hoge Sierra van Mac OS X en later: Het ongedaan maken van het controleren van &quot;**verhindert dwars-plaats het volgen**&quot;optie voor &quot;**het volgen van de Website**&quot;ingang in het lusje van de Privacy van browser van Voorkeur, zoals afgebeeld in hieronder beeld.
 
@@ -144,7 +144,7 @@ Om de individualisatieproblemen te verlichten en een gebruikersinteractie te heb
 >Alle bovenstaande gegevens uit de secties Safari 10 tot en met Safari 12 zijn nog steeds van toepassing in het geval van Safari 13.
 
 
-Beginnend met Safari 13, introduceert browser nieuwe veranderingen in [&#x200B; Intelligente het Volgen Preventie &#x200B;](https://webkit.org/blog/7675/intelligent-tracking-prevention/) (ITP), makend de heuristiek achter het mechanisme strikter in het proces om derdekoekjes als het volgen van koekjes te vlaggen, om dwars-plaats het volgen te verhinderen.
+Beginnend met Safari 13, introduceert browser nieuwe veranderingen in [ Intelligente het Volgen Preventie ](https://webkit.org/blog/7675/intelligent-tracking-prevention/) (ITP), makend de heuristiek achter het mechanisme strikter in het proces om derdekoekjes als het volgen van koekjes te vlaggen, om dwars-plaats het volgen te verhinderen.
 
 Zoals in vorige secties wordt beschreven gebruikt de dienst van de Authentificatie van Adobe Pass en baseert zich op derdekoekjes als deel van de authentificatieprocessen wanneer de implementors AccessEnabler JavaScript SDK v2 (versies 2.x) en AccessEnabler JavaScript SDK v3 (versies 3.x) gebruiken. Vergeleken met eerdere versies van Safari browser toen ITP intrad nadat het enige tijd was doorgebracht om te &quot;leren&quot; over de interactie tussen de gebruiker en de betrokken partijen (de websites van de programmeur en Adobe), blokkeert Safari 13 browser van de start derde partijkoekjes die als het volgen van koekjes in de cliënt - server modelmededeling worden beschouwd.
 
@@ -156,16 +156,16 @@ AccessEnabler JavaScript SDK v4 (versies 4.x)-bibliotheek gebruikt geen cookies 
 
 Eerst en vooral adviseren wij sterk **migratie aan AccessEnabler JavaScript SDK versies 4.x** om een stabiel en voorspelbaar gedrag op browser Safari te hebben.
 
-Ten tweede bevat de bibliotheek voor AccessEnabler JavaScript SDK v3 (versies 3.x) een mechanisme waarmee kan worden vastgesteld in welke situaties gebruikersverificatie is geblokkeerd omdat vereiste cookies ontbreken. In deze situaties teweegbrengt de bibliotheek een specifieke foutencallback ([&#x200B; N130 &#x200B;](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md#advanced-error-codes-reference)) teweeg die terug naar de toegelaten website van de Authentificatie van Adobe Pass wordt overgegaan om als signaal te worden gebruikt om de gebruiker op te dragen acties te voeren die de kwestie kunnen verlichten. Om van dit mechanisme te profiteren moet de website de [&#x200B; Fout uitvoeren die &#x200B;](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md) specificatie meldt.
+Ten tweede bevat de bibliotheek voor AccessEnabler JavaScript SDK v3 (versies 3.x) een mechanisme waarmee kan worden vastgesteld in welke situaties gebruikersverificatie is geblokkeerd omdat vereiste cookies ontbreken. In deze situaties teweegbrengt de bibliotheek een specifieke foutencallback ([ N130 ](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md#advanced-error-codes-reference)) teweeg die terug naar de toegelaten website van de Authentificatie van Adobe Pass wordt overgegaan om als signaal te worden gebruikt om de gebruiker op te dragen acties te voeren die de kwestie kunnen verlichten. Om van dit mechanisme te profiteren moet de website de [ Fout uitvoeren die ](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md) specificatie meldt.
 
 Voor AccessEnabler JavaScript SDK v2 (versies 2.x) biedt de bibliotheek het hierboven beschreven mechanisme niet. Daarom kan de voor Adobe Pass-verificatie ingeschakelde website niet worden gesignaleerd wanneer de gebruiker moet worden geïnstrueerd om actie te ondernemen om het probleem op te lossen.
 
-Wanneer [&#x200B; N130 &#x200B;](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md#advanced-error-codes-reference) foutencallback door de website van de uitvoerder wordt ontvangen, zou de gebruiker moeten worden opgedragen om Intelligente het Volgen Preventie (ITP) onbruikbaar te maken en 3de partijkoekjes toe te laten door:
+Wanneer [ N130 ](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md#advanced-error-codes-reference) foutencallback door de website van de uitvoerder wordt ontvangen, zou de gebruiker moeten worden opgedragen om Intelligente het Volgen Preventie (ITP) onbruikbaar te maken en 3de partijkoekjes toe te laten door:
 
 * In geval van de Hoge Sierra van Mac OS X en later: Het ongedaan maken van het controleren van &quot;**verhindert dwars-plaats het volgen**&quot;optie voor &quot;**het volgen van de Website**&quot;ingang in het lusje van de Privacy van browser van Voorkeur, zoals afgebeeld in hieronder beeld.
 
   ![](../../../assets/prvnt-cross-site-tr-safari13.png)
 
-* In geval van Mac OS X Sierra en vroeger: Het controleren van </span> staat altijd **&#x200B;**&#x200B;optie voor de &quot;**Cookies en website- gegevens**&quot;ingang in het lusje van de Privacy van browser van Voorkeur, zoals die in hieronder beeld wordt getoond toe.
+* In geval van Mac OS X Sierra en vroeger: Het controleren van </span> staat altijd **** optie voor de &quot;**Cookies en website- gegevens**&quot;ingang in het lusje van de Privacy van browser van Voorkeur, zoals die in hieronder beeld wordt getoond toe.
 
   ![](../../../assets/always-allow-safari13.png)

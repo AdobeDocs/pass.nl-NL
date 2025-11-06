@@ -2,7 +2,7 @@
 title: Win configuratie voor specifieke dienstverlener terug
 description: REST API V2 - Configuratie ophalen voor specifieke serviceprovider
 exl-id: ad7e4c6d-ed96-4ae7-82a9-3c24e5fc9302
-source-git-commit: 110e8519d6c042cc38de3fbefcd34297b6edcfad
+source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
 workflow-type: tm+mt
 source-wordcount: '728'
 ht-degree: 0%
@@ -17,11 +17,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> De implementatie van REST API V2 wordt begrensd door de [&#x200B; Throttling mechanisme &#x200B;](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
+> De implementatie van REST API V2 wordt begrensd door de [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
 
 >[!MORELIKETHIS]
 >
-> Zorg ervoor om [&#x200B; REST API V2 FAQs &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#configuration-phase-faqs-general) ook te bezoeken.
+> Zorg ervoor om [ REST API V2 FAQs ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#configuration-phase-faqs-general) ook te bezoeken.
 
 ## Verzoek {#request}
 
@@ -68,7 +68,7 @@ ht-degree: 0%
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Toestemming</td>
-      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="../../appendix/headers/rest-api-v2-appendix-headers-authorization.md"> 1&rbrace; kopbaldocumentatie van de Toestemming &lbrace;.</a></td>
+      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="../../appendix/headers/rest-api-v2-appendix-headers-authorization.md"> 1} kopbaldocumentatie van de Toestemming {.</a></td>
       <td><i>vereist</i></td>
    </tr>
    <tr>
@@ -149,7 +149,7 @@ ht-degree: 0%
       <td>405</td>
       <td>Methode niet toegestaan</td>
       <td>
-        De HTTP-methode is ongeldig, de client moet een HTTP-methode gebruiken die is toegestaan voor de aangevraagde resource en het opnieuw proberen. Voor meer details verwijs naar de <a href="#request"> 1&rbrace; sectie van het Verzoek &lbrace;.</a>
+        De HTTP-methode is ongeldig, de client moet een HTTP-methode gebruiken die is toegestaan voor de aangevraagde resource en het opnieuw proberen. Voor meer details verwijs naar de <a href="#request"> 1} sectie van het Verzoek {.</a>
       </td>
    </tr>
    <tr>

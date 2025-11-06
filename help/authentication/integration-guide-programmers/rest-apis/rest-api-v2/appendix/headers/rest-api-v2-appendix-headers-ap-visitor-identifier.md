@@ -2,7 +2,7 @@
 title: Koptekst - AP-bezoeker-id
 description: REST API V2 - Koptekst - AP-bezoeker-id
 exl-id: 216f398b-1cfa-4453-a81d-963675b33ec2
-source-git-commit: 7d19319d83af0122624ab3b80b1f31fc0cbbf182
+source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
 workflow-type: tm+mt
 source-wordcount: '91'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 De <b> AP-Bezoeker-Herkenningsteken </b> verzoekkopbal bevat `ECID` die door de cliënttoepassing wordt vereist om een bezoeker over de oplossingen van Adobe Experience Cloud uniek te identificeren.
 
-Voor meer details over het gebruik van ECID in de Authentificatie van Adobe Pass, verwijs naar [&#x200B; Gebruikend identiteitskaart van Experience Cloud in de Authentificatie van Adobe Pass &#x200B;](../../../../features-premium/analytics/exp-cloud-id-authn.md) documentatie.
+Voor meer details over het gebruik van ECID in de Authentificatie van Adobe Pass, verwijs naar [ Gebruikend identiteitskaart van Experience Cloud in de Authentificatie van Adobe Pass ](../../../../features-premium/analytics/exp-cloud-id-authn.md) documentatie.
 
 ## Syntaxis {#syntax}
 

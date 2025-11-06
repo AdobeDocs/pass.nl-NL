@@ -2,7 +2,7 @@
 title: TVE-dashboardomgevingen
 description: Begrijp het gebruik en het werk van verschillende milieu's in het Dashboard van TVE.
 exl-id: 591becb8-2f6c-46e0-b108-c64e6df69f89
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
 workflow-type: tm+mt
 source-wordcount: '346'
 ht-degree: 0%
@@ -60,7 +60,7 @@ Voer de stappen uit om te schakelen tussen Adobe Pass Authentication TVE Dashboa
 
 1. Selecteer het vereiste het opvoeren of productiemilieu van het **milieu** dropdown menu bij de bovenkant van het linkerpaneel.
 
-   ![&#x200B; Dashboardmilieu&#39;s van TVE dropdown &#x200B;](../assets/tve-dashboard/new-tve-dashboard/dashboard/dashboard-environment-menu.png)
+   ![ Dashboardmilieu&#39;s van TVE dropdown ](../assets/tve-dashboard/new-tve-dashboard/dashboard/dashboard-environment-menu.png)
 
    *het milieu dropdown menu van het Dashboard van de Authentificatie van Adobe Pass TVE*
 

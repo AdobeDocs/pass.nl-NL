@@ -2,7 +2,7 @@
 title: Verificatie met het OAuth 2.0-protocol
 description: Verificatie met het OAuth 2.0-protocol
 exl-id: 0c1f04fe-51dc-4b4d-88e7-66e8f4609e02
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
 workflow-type: tm+mt
 source-wordcount: '1088'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Het protocol biedt ook meer flexibiliteit in termen van gegevens die worden bloo
 
 Om authentificatie met OAuth 2.0 te steunen, moet een MVPD aan de volgende voorwaarden voldoen:
 
-Eerst en vooral, moet MVPD ervoor zorgen dat het de [&#x200B; stroom van de Verlening van de Code van de 0&rbrace; Vergunning &lbrace;steunt.](https://oauthlib.readthedocs.io/en/latest/oauth2/grants/authcode.html)
+Eerst en vooral, moet MVPD ervoor zorgen dat het de [ stroom van de Verlening van de Code van de 0} Vergunning {steunt.](https://oauthlib.readthedocs.io/en/latest/oauth2/grants/authcode.html)
 
 Na te hebben bevestigd dat het de stroom ondersteunt, moet de MVPD ons de volgende informatie verstrekken:
 
@@ -67,7 +67,7 @@ In de authentificatiestroom, zal de Authentificatie van Adobe Pass met MVPD over
 
 
 
-![&#x200B; Diagram om de stroom van de Authentificatie in de Authentificatie van Adobe te tonen die met MVPD op het protocol communiceert dat in configuratie wordt geselecteerd.](../assets/authn-flow.png)
+![ Diagram om de stroom van de Authentificatie in de Authentificatie van Adobe te tonen die met MVPD op het protocol communiceert dat in configuratie wordt geselecteerd.](../assets/authn-flow.png)
 
 **Figuur 1: OAuth 2.0 authentificatiestroom**
 

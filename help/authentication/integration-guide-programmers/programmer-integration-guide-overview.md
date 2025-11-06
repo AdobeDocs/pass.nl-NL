@@ -2,7 +2,7 @@
 title: Programmeringsintegratiegids
 description: Programmeringsintegratiegids
 exl-id: 51461caf-08ef-459e-b284-8f317f45e7b1
-source-git-commit: b753c6a6bdfd8767e86cbe27327752620158cdbb
+source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
 workflow-type: tm+mt
 source-wordcount: '2119'
 ht-degree: 0%
@@ -28,13 +28,13 @@ Voordat u toegang tot beveiligde inhoud verleent, moet u bepalen of de viewer er
 
 Voor programmeurs is het bepalen van de aanspraak niet altijd eenvoudig. MVPD’s zijn de bewaarnemers van de identificatiegegevens en toegangsrechten van hun klanten. Bovendien kunnen programmeurs zich op een groot aantal verschillende MVPD&#39;s abonneren, elk met unieke systemen. Deze complexiteit maakt het controleren van het recht technisch lastig en hulpbronnenintensief.
 
-![&#x200B; die&rbrace; gebruikerstoestemming direct door programmeur wordt bepaald &#x200B;](../assets/user-ent-by-progr.png){align="center"}
+![ die} gebruikerstoestemming direct door programmeur wordt bepaald ](../assets/user-ent-by-progr.png){align="center"}
 
-*die&rbrace; gebruikerstoestemming direct door programmeur wordt bepaald*
+*die} gebruikerstoestemming direct door programmeur wordt bepaald*
 
 Adobe Pass-verificatie vergemakkelijkt op veilige wijze machtigingstransacties tussen programmeurs en MVPD&#39;s, waardoor het snel, gemakkelijk en veilig is om beveiligde inhoud aan in aanmerking komende viewers te leveren.
 
-![&#x200B; Gebruikersnaam die door de Authentificatie van Adobe Pass wordt gemedieerd &#x200B;](../assets/user-ent-mediatedby-authn.png){align="center"}
+![ Gebruikersnaam die door de Authentificatie van Adobe Pass wordt gemedieerd ](../assets/user-ent-mediatedby-authn.png){align="center"}
 
 *Gebruikersnaam die door de Authentificatie van Adobe Pass wordt gemedieerd*
 
@@ -71,24 +71,24 @@ In deze sectie worden de Gebruiksgevallen voor de integratie van de programmeur 
 
 | **Fase** | **Prioriteit** | **Geval van het Gebruik** | **Documenten** |
 |----------------------|--------------|-------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Authentificatie** | **Hoog** | Verificatie | Voor meer details, verwijs naar de documenten die onder de [&#x200B; sectie van de Fase van de Authentificatie &#x200B;](#authentication-phase) worden samengevoegd. |
-|                      | **Hoog** | Home-Based Authentication (HBA) | Voor meer details, verwijs naar [&#x200B; op huis-Gebaseerde Authentificatie &#x200B;](/help/authentication/integration-guide-programmers/features-standard/hba-access/home-based-authentication.md). |
-|                      | **Hoog** | Eenmalige aanmelding (SSO) | Voor meer details, verwijs naar de documenten die onder [&#x200B; worden samengevoegd Enige Sign-On (SSO) &#x200B;](#sso) sectie. |
-|                      | **Hoog** | MVPD selecteren | Voor meer details, verwijs naar de documenten die onder de [&#x200B; sectie van de Fase van de Configuratie &#x200B;](#configuration-phase) worden samengevoegd. |
+| **Authentificatie** | **Hoog** | Verificatie | Voor meer details, verwijs naar de documenten die onder de [ sectie van de Fase van de Authentificatie ](#authentication-phase) worden samengevoegd. |
+|                      | **Hoog** | Home-Based Authentication (HBA) | Voor meer details, verwijs naar [ op huis-Gebaseerde Authentificatie ](/help/authentication/integration-guide-programmers/features-standard/hba-access/home-based-authentication.md). |
+|                      | **Hoog** | Eenmalige aanmelding (SSO) | Voor meer details, verwijs naar de documenten die onder [ worden samengevoegd Enige Sign-On (SSO) ](#sso) sectie. |
+|                      | **Hoog** | MVPD selecteren | Voor meer details, verwijs naar de documenten die onder de [ sectie van de Fase van de Configuratie ](#configuration-phase) worden samengevoegd. |
 |                      | **Medium** | Aanmeldingspagina van MVPD met merk | Laat MVPDs toe om login pagina&#39;s van branding te voorzien specifiek voor de programmeur of de dienstverlener, met inbegrip van steun voor standaardtaalvoorkeur. |
-|                      | **Hoog** | De waarden voor tijd tot leven (TTL) per platform configureren | Voor meer details, verwijs naar de [&#x200B; Gids van de Gebruiker van de Integratie van het Dashboard van TVE &#x200B;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#most-used-flows). |
-| **preAuthorisation** | **Laag** | Voorvoegsel (Preflight-autorisatie) | Voor meer details, verwijs naar de documenten die onder de [&#x200B; sectie van de Fase van de Voorkeur &#x200B;](#preauthorization-phase) worden samengevoegd. |
-|                      | **Medium** | Verbeterde foutcodes | Voor meer details, verwijs naar [&#x200B; Verbeterde Codes van de Fout &#x200B;](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md). |
-| **Vergunning** | **Hoog** | Toestemming | Voor meer details, verwijs naar de documenten die onder de [&#x200B; sectie van de Fase van de Toestemming &#x200B;](#authorization-phase) worden samengevoegd. |
+|                      | **Hoog** | De waarden voor tijd tot leven (TTL) per platform configureren | Voor meer details, verwijs naar de [ Gids van de Gebruiker van de Integratie van het Dashboard van TVE ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#most-used-flows). |
+| **preAuthorisation** | **Laag** | Voorvoegsel (Preflight-autorisatie) | Voor meer details, verwijs naar de documenten die onder de [ sectie van de Fase van de Voorkeur ](#preauthorization-phase) worden samengevoegd. |
+|                      | **Medium** | Verbeterde foutcodes | Voor meer details, verwijs naar [ Verbeterde Codes van de Fout ](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md). |
+| **Vergunning** | **Hoog** | Toestemming | Voor meer details, verwijs naar de documenten die onder de [ sectie van de Fase van de Toestemming ](#authorization-phase) worden samengevoegd. |
 |                      | **Hoog** | Verificatie via afzonderlijk kanaal | Hiermee kunnen gebruikers toegang krijgen tot inhoud van meerdere kanaalnetwerken binnen één TVE-toepassing. Programmeurs kunnen kanaalspecifieke vergunningsvraag maken om bevoegdheid te verifiëren. |
 |                      | **Laag** | Autorisatie op bedrijfsniveau | Hiermee kunnen MVPD&#39;s tijdens de autorisatie gedetailleerde analyses voor afzonderlijke inhoudselementen verzamelen. |
-|                      | **Medium** | Verbeterde foutcodes | Voor meer details, verwijs naar [&#x200B; Verbeterde Codes van de Fout &#x200B;](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md). |
-|                      | **Hoog** | Programmer Federated Player - met machtiging op paginaniveau | Voor meer details, verwijs naar de [&#x200B; Tokens van Media &#x200B;](/help/authentication/integration-guide-programmers/features-standard/entitlements/media-tokens.md). |
-|                      | **Medium** | Programmer Federated Player - met interne Player Authorization | Voor meer details, verwijs naar de [&#x200B; Tokens van Media &#x200B;](/help/authentication/integration-guide-programmers/features-standard/entitlements/media-tokens.md). |
-|                      | **Hoog** | Gesynchroniseerde speler - Gehost op MVPD Portal met machtiging op paginaniveau | Voor meer details, verwijs naar de [&#x200B; Tokens van Media &#x200B;](/help/authentication/integration-guide-programmers/features-standard/entitlements/media-tokens.md). |
+|                      | **Medium** | Verbeterde foutcodes | Voor meer details, verwijs naar [ Verbeterde Codes van de Fout ](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md). |
+|                      | **Hoog** | Programmer Federated Player - met machtiging op paginaniveau | Voor meer details, verwijs naar de [ Tokens van Media ](/help/authentication/integration-guide-programmers/features-standard/entitlements/media-tokens.md). |
+|                      | **Medium** | Programmer Federated Player - met interne Player Authorization | Voor meer details, verwijs naar de [ Tokens van Media ](/help/authentication/integration-guide-programmers/features-standard/entitlements/media-tokens.md). |
+|                      | **Hoog** | Gesynchroniseerde speler - Gehost op MVPD Portal met machtiging op paginaniveau | Voor meer details, verwijs naar de [ Tokens van Media ](/help/authentication/integration-guide-programmers/features-standard/entitlements/media-tokens.md). |
 |                      | **Laag** | Ouderlijke controle - Inhoudsbeoordelingen in vergunningsaanvragen | Hiermee kan de programmeur inhoudsbeoordelingen opnemen als onderdeel van het vergunningsverzoek aan de MVPD die nuttig zijn voor het verlenen van vergunningen op bedrijfsniveau. |
 |                      | **Laag** | Ouderlijke controle - Inhoud filteren op basis van gebruikerskenmerken | Hiermee kan de programmeur de maximale toegestane inhoudclassificatie voor een gebruiker controleren en de beschikbare inhoud dienovereenkomstig filteren. |
-| **Logout** | **Medium** | Afmelden | Voor meer details, verwijs naar de documenten die onder de [&#x200B; worden samengevoegd Logout sectie van de Fase &#x200B;](#logout-phase). |
+| **Logout** | **Medium** | Afmelden | Voor meer details, verwijs naar de documenten die onder de [ worden samengevoegd Logout sectie van de Fase ](#logout-phase). |
 
 ## Entitlement Flow {#entitlement-flow}
 
@@ -114,7 +114,7 @@ Voor een gedetailleerde verkenning van de machtigingsstroom en de bijbehorende f
 
 ### Registratiefase {#registration-phase}
 
-Het doel van de Fase van de Registratie is de cliënttoepassing tegen de Authentificatie van Adobe Pass door het [&#x200B; Dynamische Registratie van de Cliënt (DCR) te registreren &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) proces.
+Het doel van de Fase van de Registratie is de cliënttoepassing tegen de Authentificatie van Adobe Pass door het [ Dynamische Registratie van de Cliënt (DCR) te registreren ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) proces.
 
 Het dynamische proces van de Registratie van de Cliënt (DCR) vereist de cliënttoepassing om een paar cliëntgeloofsbrieven te verkrijgen en een toegangstoken als einddoel van de Fase van de Registratie terug te winnen.
 
@@ -129,7 +129,7 @@ Het dynamische proces van de Registratie van de Cliënt (DCR) vereist de cliënt
 
 **FAQs**
 
-* [&#x200B; de fase FAQs van de Registratie &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#registration-phase-faqs-general).
+* [ de fase FAQs van de Registratie ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#registration-phase-faqs-general).
 
 ### Configuratiefase {#configuration-phase}
 
@@ -143,7 +143,7 @@ De configuratiefase fungeert als een noodzakelijke stap voor de verificatiefase 
 
 **FAQs**
 
-* [&#x200B; de fase FAQs van de Configuratie &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#configuration-phase-faqs-general).
+* [ de fase FAQs van de Configuratie ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#configuration-phase-faqs-general).
 
 >[!TIP]
 >
@@ -162,7 +162,7 @@ Met geslaagde verificatie wordt een profiel gegenereerd dat is gekoppeld aan de 
 De volgende stappen schetsen de stappen op hoog niveau in het geval van een integratie van SAML:
 
 1. **de Lading van de Toepassing van de Programmer (Website)**\
-   De gebruiker navigeert aan de toepassing van de Programmer (website), die de Authentificatie van Adobe Pass [&#x200B; REST API V2 &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md) integreert.
+   De gebruiker navigeert aan de toepassing van de Programmer (website), die de Authentificatie van Adobe Pass [ REST API V2 ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md) integreert.
 
 1. **het Beschermde Verzoek van de Inhoud**\
    Wanneer de gebruiker toegang probeert te krijgen tot beveiligde inhoud, geeft de toepassing van de programmeur een lijst van MVPD&#39;s weer waaruit de gebruiker kan kiezen.
@@ -253,7 +253,7 @@ Succesvolle autorisatie genereert een beslissing, die ook een media-token bevat 
 In de volgende stappen worden de stappen op hoog niveau beschreven:
 
 1. **Verwerking van het Herkenningsteken van het Middel**\
-   De beschermde inhoud wordt geïdentificeerd door a [&#x200B; middelherkenningsteken &#x200B;](/help/authentication/integration-guide-programmers/features-standard/entitlements/decisions.md#resource-identifier), dat een eenvoudig koord of een complexere structuur kan zijn. Deze id is vooraf gedefinieerd en overeengekomen door de programmeur en de MVPD. De toepassing van de Programmer verzendt het middelherkenningsteken naar de Authentificatie van Adobe Pass [&#x200B; REST API V2 &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md).
+   De beschermde inhoud wordt geïdentificeerd door a [ middelherkenningsteken ](/help/authentication/integration-guide-programmers/features-standard/entitlements/decisions.md#resource-identifier), dat een eenvoudig koord of een complexere structuur kan zijn. Deze id is vooraf gedefinieerd en overeengekomen door de programmeur en de MVPD. De toepassing van de Programmer verzendt het middelherkenningsteken naar de Authentificatie van Adobe Pass [ REST API V2 ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md).
 
 1. **de Controle van de Vergunning van MVPD**\
    De server van de Authentificatie van Adobe Pass communiceert met het de vergunningseindpunt van MVPD gebruikend gestandaardiseerde protocollen.
@@ -262,10 +262,10 @@ In de volgende stappen worden de stappen op hoog niveau beschreven:
    Zodra de validatie is voltooid, bevestigt de MVPD dat de gebruiker (of niet) gerechtigd is om toegang te krijgen tot de inhoud en een reactie terug te sturen naar de Adobe Pass-verificatie.
 
 1. **Besluit en de Symbolische Generatie van Media**\
-   De Authentificatie van Adobe Pass verifieert de reactie, produceert a [&#x200B; besluit &#x200B;](/help/authentication/integration-guide-programmers/features-standard/entitlements/decisions.md) dat in het voorgeheugen ondergebracht wordt, en keert het besluit terug dat een media teken terug naar de toepassing van de Programmer (website) bevat.
+   De Authentificatie van Adobe Pass verifieert de reactie, produceert a [ besluit ](/help/authentication/integration-guide-programmers/features-standard/entitlements/decisions.md) dat in het voorgeheugen ondergebracht wordt, en keert het besluit terug dat een media teken terug naar de toepassing van de Programmer (website) bevat.
 
 1. **de Verificatie van de Toegang van de Inhoud**\
-   De toepassing van de Programmer gebruikt [&#x200B; Symbolische Verifier van Media &#x200B;](/help/authentication/integration-guide-programmers/features-standard/entitlements/media-tokens.md#media-token-verifier) om te bevestigen dat de correcte gebruiker tot de correcte inhoud toegang heeft. Na de validatie krijgt de gebruiker toegang om de beveiligde inhoud weer te geven.
+   De toepassing van de Programmer gebruikt [ Symbolische Verifier van Media ](/help/authentication/integration-guide-programmers/features-standard/entitlements/media-tokens.md#media-token-verifier) om te bevestigen dat de correcte gebruiker tot de correcte inhoud toegang heeft. Na de validatie krijgt de gebruiker toegang om de beveiligde inhoud weer te geven.
 
 **APIs**
 

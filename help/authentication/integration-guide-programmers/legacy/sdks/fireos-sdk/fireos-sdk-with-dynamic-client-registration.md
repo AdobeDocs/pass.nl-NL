@@ -2,7 +2,7 @@
 title: Amazon FireOS SDK met Dynamic Client-registratie
 description: Amazon FireOS SDK met Dynamic Client-registratie
 exl-id: 27acf3f5-8b7e-4299-b0f0-33dd6782aeda
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
 workflow-type: tm+mt
 source-wordcount: '1169'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 </br>
 
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 FireOS AccessEnabler SDK for FireTV is gewijzigd om verificatie in te schakelen zonder sessiecookies te gebruiken. Aangezien steeds meer browsers de toegang tot cookies beperken, was een andere methode nodig om verificatie toe te staan.
 
-**FireOS SDK 3.0.4** vervangt het huidige mechanisme van de toepassingsregistratie dat op ondertekende identiteitskaart van de aanvrager en de authentificatie van het zittingskoekje met [&#x200B; Dynamisch Overzicht van de Registratie van de Cliënt &#x200B;](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) wordt gebaseerd.
+**FireOS SDK 3.0.4** vervangt het huidige mechanisme van de toepassingsregistratie dat op ondertekende identiteitskaart van de aanvrager en de authentificatie van het zittingskoekje met [ Dynamisch Overzicht van de Registratie van de Cliënt ](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) wordt gebaseerd.
 
 
 ## API-wijzigingen {#API}
@@ -152,7 +152,7 @@ Vervangen:
    - aanmelden geannuleerd: MVPD-selectie opnieuw instellen
    - Het URL-schema is ingesteld als &quot;adobepass://android.app&quot; om vast te leggen wanneer de verificatie is voltooid
 
-- e. get/checkAuthorization: SDK zal **access\_token &#x200B;** in kopbal als Vergunning omvatten: Drager **toegang \_token**
+- e. get/checkAuthorization: SDK zal **access\_token **in kopbal als Vergunning omvatten: Drager **toegang \_token**
 
 - als de toestemming succesvol is , zal een oproep worden gedaan om het media token te verkrijgen
 

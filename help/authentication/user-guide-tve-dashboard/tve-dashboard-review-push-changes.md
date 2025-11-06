@@ -2,7 +2,7 @@
 title: Wijzigingen controleren en duwen
 description: Leer hoe u wijzigingen in het TVE-dashboard kunt bekijken en duwt.
 exl-id: 2f29712e-7b3f-472a-a36f-32780bec1508
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Voer de volgende stappen uit om wijzigingen te bekijken en te drukken.
 
 1. Zoek het bericht voor revisie- en pushwijzigingen onder aan het scherm.
 
-   ![&#x200B; Overzicht en duw veranderingsbericht &#x200B;](../assets/tve-dashboard/new-tve-dashboard/review/review-and-push-changes-banner-view.png)
+   ![ Overzicht en duw veranderingsbericht ](../assets/tve-dashboard/new-tve-dashboard/review/review-and-push-changes-banner-view.png)
 
    *Overzicht en duw de berichtvakje van veranderingen*
 
@@ -29,7 +29,7 @@ Voer de volgende stappen uit om wijzigingen te bekijken en te drukken.
 
 1. Typ een korte beschrijving van de verandering in **Beschrijving van de Configuratie** om het doel van elke verandering effectief te volgen en te begrijpen.
 
-   ![&#x200B; voeg een Beschrijving van de Configuratie toe &#x200B;](../assets/tve-dashboard/new-tve-dashboard/review/review-and-push-configuration-details-panel-view.png)
+   ![ voeg een Beschrijving van de Configuratie toe ](../assets/tve-dashboard/new-tve-dashboard/review/review-and-push-configuration-details-panel-view.png)
 
    *voeg een Beschrijving van de Configuratie toe*
 
@@ -39,7 +39,7 @@ Voer de volgende stappen uit om wijzigingen te bekijken en te drukken.
 
 1. Selecteer **Mening** om de vorige en nieuwe waarden te herzien verbonden aan een configuratieverandering.
 
-   ![&#x200B; de configuratieveranderingen van de Mening &#x200B;](../assets/tve-dashboard/new-tve-dashboard/review/review-and-push-changes-view-button.png)
+   ![ de configuratieveranderingen van de Mening ](../assets/tve-dashboard/new-tve-dashboard/review/review-and-push-changes-view-button.png)
 
    *de configuratieveranderingen van de Mening*
 
@@ -49,7 +49,7 @@ Voer de volgende stappen uit om wijzigingen te bekijken en te drukken.
    >
    >De **Duw verandert** knoop wordt actief slechts na het toevoegen van de Beschrijving van de a **Configuratie**.
 
-   ![&#x200B; de veranderingen van de Duw &#x200B;](../assets/tve-dashboard/new-tve-dashboard/review/review-and-push-push-changes-button.png)
+   ![ de veranderingen van de Duw ](../assets/tve-dashboard/new-tve-dashboard/review/review-and-push-push-changes-button.png)
 
    *de veranderingen van de Duw*
 

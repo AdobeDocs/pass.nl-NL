@@ -2,7 +2,7 @@
 title: Koptekst - Autorisatie
 description: REST API V2 - Koptekst - Autorisatie
 exl-id: 86917d7e-ffd9-4d34-8f9c-5a50083f85e6
-source-git-commit: 81d3c3835d2e97e28c2ddb9c72d1a048a25ad433
+source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 0%
@@ -18,9 +18,9 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-De <b> verzoekkopbal van de Vergunning 0&rbrace; &lbrace;bevat het </b> toegangstoken dat door de cliënttoepassing wordt vereist om tot Adobe Pass beschermde APIs toegang te hebben.`Bearer`
+De <b> verzoekkopbal van de Vergunning 0} {bevat het </b> toegangstoken dat door de cliënttoepassing wordt vereist om tot Adobe Pass beschermde APIs toegang te hebben.`Bearer`
 
-Voor meer details over het mechanisme om tot Adobe Pass beschermde APIs toegang te hebben, verwijs naar het [&#x200B; Dynamische Overzicht van de Registratie van de Cliënt 1&rbrace; documentatie.](../../../rest-api-dcr/dynamic-client-registration-overview.md)
+Voor meer details over het mechanisme om tot Adobe Pass beschermde APIs toegang te hebben, verwijs naar het [ Dynamische Overzicht van de Registratie van de Cliënt 1} documentatie.](../../../rest-api-dcr/dynamic-client-registration-overview.md)
 
 ## Syntaxis {#syntax}
 
@@ -42,7 +42,7 @@ Voor meer details over het mechanisme om tot Adobe Pass beschermde APIs toegang 
 
 <b> &lt;access_token></b>
 
-De waarde van het toegangstoken is een ondoorzichtige waarde die een beperkte tijd-aan-levende (b.v., 24 uur) heeft die van Adobe Pass moet worden verkregen zoals die in [&#x200B; wordt beschreven terugwinnen toegangstoken &#x200B;](../../../rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md) API documentatie.
+De waarde van het toegangstoken is een ondoorzichtige waarde die een beperkte tijd-aan-levende (b.v., 24 uur) heeft die van Adobe Pass moet worden verkregen zoals die in [ wordt beschreven terugwinnen toegangstoken ](../../../rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md) API documentatie.
 
 ## Voorbeelden {#examples}
 

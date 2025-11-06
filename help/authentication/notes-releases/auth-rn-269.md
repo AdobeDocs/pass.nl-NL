@@ -2,7 +2,7 @@
 title: Opmerkingen bij de release Adobe Pass Authentication 2.69
 description: Opmerkingen bij de release Adobe Pass Authentication 2.69
 exl-id: d031c4c5-dbd5-4a77-b298-a53b992cc4c5
-source-git-commit: ecafc3a92f691203d8113a741f0b6cd00a134e80
+source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 Op deze pagina worden nieuwe functies, wijzigingen en bekende problemen met deze release beschreven:
 
@@ -34,7 +34,7 @@ Datum van de versie: **02/27/2024 - 02/29/2024**
 
 * Problemen met patchbeveiliging.
 * Verbeteringen voor de beveiligingslaag Temperatuur-controle herstellen met Dynamic Client Registration (DCR).
-   * U kunt meer details hier vinden: [&#x200B; Functie TempPass &#x200B;](../integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md)
+   * U kunt meer details hier vinden: [ Functie TempPass ](../integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md)
 * Verbeteringen voor rapportage van platformidentificatie.
 
 #### REST API&#39;s
@@ -52,4 +52,4 @@ Datum van de versie: **02/27/2024 - 02/29/2024**
 #### JavaScript SDK 4.7.0
 
 * Verwijderd versie 2.0.1 van Access Enabler JavaScript SDK vanwege beveiligingsproblemen.
-   * Volg de verbinding voor meer details: [&#x200B; de Authentificatie JavaScript 4.7.0 Nota&#39;s van de Versie van Adobe Pass &#x200B;](authn-rn-javascript-470.md)
+   * Volg de verbinding voor meer details: [ de Authentificatie JavaScript 4.7.0 Nota&#39;s van de Versie van Adobe Pass ](authn-rn-javascript-470.md)

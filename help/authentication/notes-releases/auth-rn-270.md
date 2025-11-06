@@ -2,7 +2,7 @@
 title: Opmerkingen bij de release Adobe Pass Authentication 2.70
 description: Opmerkingen bij de release Adobe Pass Authentication 2.70
 exl-id: 81713f8e-bc51-4057-9b00-6a2d6c83cd02
-source-git-commit: ecafc3a92f691203d8113a741f0b6cd00a134e80
+source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
 workflow-type: tm+mt
 source-wordcount: '136'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 Op deze pagina worden nieuwe functies, wijzigingen en bekende problemen met deze release beschreven:
 
@@ -35,7 +35,7 @@ Datum van de versie: **04/23/2024 - 04/25/2024**
 * Problemen met patchbeveiliging.
 * Verbeteringen voor de Degradation API-service.
    * DCR gebruiken als beveiligingsmechanisme voor de afbraak-API.
-   * U kunt meer details hier vinden: [&#x200B; Eigenschap van de Verslechtering &#x200B;](../integration-guide-programmers/features-premium/degraded-access/degradation-feature.md)
+   * U kunt meer details hier vinden: [ Eigenschap van de Verslechtering ](../integration-guide-programmers/features-premium/degraded-access/degradation-feature.md)
 
 #### REST API&#39;s
 

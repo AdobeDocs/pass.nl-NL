@@ -2,7 +2,7 @@
 title: Header - Adobe-Subject-token
 description: REST API V2 - Koptekst - Adobe-Onderwerptoken
 exl-id: 906d88f4-3b8f-491a-ab58-8e63d3b958d8
-source-git-commit: 81d3c3835d2e97e28c2ddb9c72d1a048a25ad433
+source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
 workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 0%
@@ -21,7 +21,7 @@ De <b> Adobe-Onderwerp-Symbolische </b> verzoekkopbal bevat het unieke platformh
 
 Deze kopbal wordt ontworpen voor gebruik in enig sign-on (SSO) toegelaten stromen die de methode van de Identiteit van het Platform gebruiken.
 
-Voor meer details over enige sign-on (SSO) toegelaten stromen leveraging de methode van de Identiteit van het Platform, verwijs naar [&#x200B; Enige sign-on gebruikend de stromen van de platformidentiteit &#x200B;](../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-platform-identity-flows.md) documentatie.
+Voor meer details over enige sign-on (SSO) toegelaten stromen leveraging de methode van de Identiteit van het Platform, verwijs naar [ Enige sign-on gebruikend de stromen van de platformidentiteit ](../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-platform-identity-flows.md) documentatie.
 
 ## Syntaxis {#syntax}
 

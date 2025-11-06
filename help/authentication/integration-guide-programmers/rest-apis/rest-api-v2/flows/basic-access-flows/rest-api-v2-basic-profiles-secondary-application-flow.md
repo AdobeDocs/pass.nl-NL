@@ -2,7 +2,7 @@
 title: Basisprofielen - secundaire toepassing - Stroom
 description: REST API V2 - Basisprofielen - Secundaire toepassing - Stroom
 exl-id: 1fcefcfa-7534-4b85-b3b5-df513685d66b
-source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
+source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
 workflow-type: tm+mt
 source-wordcount: '418'
 ht-degree: 0%
@@ -17,11 +17,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> De implementatie van REST API V2 wordt begrensd door de [&#x200B; Throttling mechanisme &#x200B;](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
+> De implementatie van REST API V2 wordt begrensd door de [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
 
 >[!MORELIKETHIS]
 >
-> Zorg ervoor om [&#x200B; REST API V2 FAQs &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general) ook te bezoeken.
+> Zorg ervoor om [ REST API V2 FAQs ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general) ook te bezoeken.
 
 De **stroom van Profielen** binnen de rechten van de Authentificatie van Adobe Pass staat de secundaire toepassing toe om tot informatie over actieve gebruikerslogins toegang te hebben.
 
@@ -41,7 +41,7 @@ Voordat u het profiel voor een specifieke verificatiecode ophaalt, moet u contro
 
 Volg de gegeven stappen om de basisstroom van de profielherwinning voor een specifieke authentificatiecode uit te voeren die binnen een secundaire toepassing zoals aangetoond in het volgende diagram wordt uitgevoerd.
 
-![&#x200B; wint profiel voor specifieke code &#x200B;](../../../../../assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-retrieve-profile-within-secondary-application-for-specific-code.png) terug
+![ wint profiel voor specifieke code ](../../../../../assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-retrieve-profile-within-secondary-application-for-specific-code.png) terug
 
 *wint profiel voor specifieke code* terug
 
@@ -49,7 +49,7 @@ Volg de gegeven stappen om de basisstroom van de profielherwinning voor een spec
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen profiel voor specifieke code &#x200B;](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) API documentatie voor details op:
+   > Verwijs naar [ terugwinnen profiel voor specifieke code ](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `serviceProvider`, en `code`
    > * Alle _vereiste_ kopballen, als `Authorization`
@@ -61,7 +61,7 @@ Volg de gegeven stappen om de basisstroom van de profielherwinning voor een spec
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen profiel voor specifieke code &#x200B;](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) API documentatie voor details op de informatie die in een profielreactie wordt verstrekt.
+   > Verwijs naar [ terugwinnen profiel voor specifieke code ](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) API documentatie voor details op de informatie die in een profielreactie wordt verstrekt.
    > 
    > <br/>
    > 
@@ -71,7 +71,7 @@ Volg de gegeven stappen om de basisstroom van de profielherwinning voor een spec
    >
    > <br/>
    > 
-   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
 1. **wijst op authentificatiestroom gebeëindigd met succes:** als de het eindpuntreactie van Profielen een profiel bevat, verwerkt de secundaire toepassing de reactie en kan het gebruiken om naar keuze een specifiek bericht op het gebruikersinterface te tonen.
 

@@ -2,7 +2,7 @@
 title: Koptekst - X-Roku-Reserved-Roku-Connect-Token
 description: REST API V2 - Koptekst - X-Roku-Reserved-Roku-Connect-Token
 exl-id: 21016d5b-4d10-4018-a82c-f2797b2d9fb9
-source-git-commit: 560cdcdabb3d507121912938d687a47020e85293
+source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
 workflow-type: tm+mt
 source-wordcount: '149'
 ht-degree: 0%
@@ -21,7 +21,7 @@ De <b> x-Roku-Gereserveerde-roku-Connect-Symbolische </b> verzoekkopbal bevat he
 
 Deze kopbal wordt ontworpen voor gebruik in enig sign-on (SSO) toegelaten stromen die de methode van de Identiteit van het Platform gebruiken.
 
-Voor meer details over enige sign-on (SSO) toegelaten stromen leveraging de methode van de Identiteit van het Platform, verwijs naar [&#x200B; Enige sign-on gebruikend de stromen van de platformidentiteit &#x200B;](../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-platform-identity-flows.md) documentatie.
+Voor meer details over enige sign-on (SSO) toegelaten stromen leveraging de methode van de Identiteit van het Platform, verwijs naar [ Enige sign-on gebruikend de stromen van de platformidentiteit ](../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-platform-identity-flows.md) documentatie.
 
 ## Syntaxis {#syntax}
 

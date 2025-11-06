@@ -2,7 +2,7 @@
 title: TVE-dashboardintegratie
 description: Wis over de integratie tussen uw kanalen en MVPDs en hoe te om integratie te beheren.
 exl-id: 0add340b-120c-4e82-8e3c-6c190d77cf7e
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
 workflow-type: tm+mt
 source-wordcount: '2093'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 >
 >De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
-De **sectie van de Integraties** van het Dashboard van TVE staat u toe om montages voor de integratie tussen uw kanalen en MVPDs te bekijken en te beheren. U kunt [&#x200B; een nieuwe integratie &#x200B;](#create-new-integration) volgens uw vereiste ook tot stand brengen.
+De **sectie van de Integraties** van het Dashboard van TVE staat u toe om montages voor de integratie tussen uw kanalen en MVPDs te bekijken en te beheren. U kunt [ een nieuwe integratie ](#create-new-integration) volgens uw vereiste ook tot stand brengen.
 
 Het **lusje van de Integraties** in het linkerpaneel toont een lijst van bestaande integratie met de volgende details:
 
@@ -24,7 +24,7 @@ Het **lusje van de Integraties** in het linkerpaneel toont een lijst van bestaan
 * Kanaalnaam met kanaal-id
 * MVPD-weergavenaam en MVPD-id
 
-![&#x200B; Lijst van bestaande Integraties &#x200B;](../assets/tve-dashboard/new-tve-dashboard/integrations/integrations-list.png)
+![ Lijst van bestaande Integraties ](../assets/tve-dashboard/new-tve-dashboard/integrations/integrations-list.png)
 
 *Lijst van bestaande Integraties*
 
@@ -43,13 +43,13 @@ Voer de volgende stappen uit om een specifieke integratie te beheren.
 
 >[!IMPORTANT]
 >
-> De Controle van de mening [&#x200B; en duw verandert &#x200B;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) voor meer informatie bij het activeren van de configuratieveranderingen.
+> De Controle van de mening [ en duw verandert ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) voor meer informatie bij het activeren van de configuratieveranderingen.
 
 ### Eindpuntselectie {#endpoint-selection}
 
 In deze sectie kunt u de eindpunten van de MVPD kiezen die worden gebruikt voor verificatie-, autorisatie- en afmeldingsstromen in de respectieve vervolgkeuzemenu&#39;s.
 
-![&#x200B; Eindpunten voor authentificatie, vergunning, en logout stromen &#x200B;](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-endpoint-selection-panel-view.png)
+![ Eindpunten voor authentificatie, vergunning, en logout stromen ](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-endpoint-selection-panel-view.png)
 
 *Eindpunten voor authentificatie, vergunning, en logout stromen*
 
@@ -63,7 +63,7 @@ In deze sectie kunt u de eindpunten van de MVPD kiezen die worden gebruikt voor 
 
 ### Platforminstellingen {#platform-settings}
 
-Deze sectie staat u toe om integratiemontages over alle [&#x200B; platforms &#x200B;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-reports.md#platforms) te bekijken en uit te geven. U kunt deze instellingen wijzigen op basis van afzonderlijke platforms. U kunt bijvoorbeeld de duur van de TTL-autorisatie aanpassen op Android terwijl een standaardwaarde voor een ander platform wordt behouden.
+Deze sectie staat u toe om integratiemontages over alle [ platforms ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-reports.md#platforms) te bekijken en uit te geven. U kunt deze instellingen wijzigen op basis van afzonderlijke platforms. U kunt bijvoorbeeld de duur van de TTL-autorisatie aanpassen op Android terwijl een standaardwaarde voor een ander platform wordt behouden.
 
 Elke eigenschap in platforminstellingen neemt een standaardwaarde over die door de MVPD is ingesteld, maar kan indien nodig worden aangepast.
 
@@ -87,7 +87,7 @@ Elke eigenschap in platforminstellingen neemt een standaardwaarde over die door 
 
 * **Niet-geïdentificeerde Apparaten**: Plaats waarden voor eigenschappen toepasselijk op alle apparaten waar het huidige mechanisme niet het platform kan nauwkeurig identificeren. In dergelijke gevallen past u de meest beperkende regels toe die door de MVPD zijn vastgesteld.
 
-  ![&#x200B; Categorie van platforms en hun apparaten &#x200B;](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-platform-settings-menu.png)
+  ![ Categorie van platforms en hun apparaten ](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-platform-settings-menu.png)
 
   *Categorie van platforms en hun apparaten*
 
@@ -117,7 +117,7 @@ Voer de volgende stappen uit om verificatie en autorisatie-TTL op alle platforms
    >
    >Als u de duur van **wilt veranderen AuthN TTL** en **AuthZ TTL** voor een platformcategorie of een specifiek platform, selecteer dienovereenkomstig het platform.
 
-   ![&#x200B; De duur van AuthN TTL AuthZ TTL van de Verandering over alle platforms &#x200B;](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-platform-settings-authn-ttl-authz-ttl-properties.png)
+   ![ De duur van AuthN TTL AuthZ TTL van de Verandering over alle platforms ](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-platform-settings-authn-ttl-authz-ttl-properties.png)
 
    *De duur van AuthN TTL AuthZ TTL van de Verandering over alle platforms*
 
@@ -125,7 +125,7 @@ Voer de volgende stappen uit om verificatie en autorisatie-TTL op alle platforms
 
 1. Selecteer naar boven en naar beneden pijlen om de duur voor het aantal dagen, uren, notulen, en seconden in **aan te passen TTL AuthN** en **Eigenschappen AuthZ TTL**.
 
-De duur voor **AuthN TTL** en **AuthZ TTL** over alle platforms zal slechts na [&#x200B; overzicht en duw veranderingen &#x200B;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) worden bijgewerkt.
+De duur voor **AuthN TTL** en **AuthZ TTL** over alle platforms zal slechts na [ overzicht en duw veranderingen ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) worden bijgewerkt.
 
 **laat platform SSO** toe
 
@@ -143,7 +143,7 @@ Voer de volgende stappen uit om SSO voor een specifieke integratie en een specif
 
 1. Selecteer een specifiek platform of een categorie van platforms waarvoor u enig teken binnen wilt toelaten onder **de Montages van het Platform**.
 
-   ![&#x200B; laat Enig Teken voor een specifiek platform toe &#x200B;](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-platform-settings-single-sign-on-properties.png)
+   ![ laat Enig Teken voor een specifiek platform toe ](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-platform-settings-single-sign-on-properties.png)
 
    *laat Enig Teken voor een specifiek platform toe*
 
@@ -153,11 +153,11 @@ Voer de volgende stappen uit om SSO voor een specifieke integratie en een specif
 
 1. Selecteer **ja** om of **Nr** toe te laten om van **de Toestemming van het Platform van de Afdwingen** dropdown menu onbruikbaar te maken.
 
-   **het bezitscontroles van de Toestemming van het Platform van 0&rbrace; afdwingen &lbrace;als het besluit van de gebruiker om** **toe te staan of** ontken **platformtoegang tot hun abonnement van TV-provider wordt gerespecteerd.**
+   **het bezitscontroles van de Toestemming van het Platform van 0} afdwingen {als het besluit van de gebruiker om** **toe te staan of** ontken **platformtoegang tot hun abonnement van TV-provider wordt gerespecteerd.**
 
    Bijvoorbeeld, als zowel **toelaten Enig Teken** en **de Toestemming van het Platform van de Afdwingen** wordt toegelaten, en de gebruiker verkiest om platformtoegang tot hun abonnement van de Leverancier van TV te ontkennen, dan zal de respectieve toepassing (kanaal) het teken van de Authentificatie van Adobe Pass niet kunnen gebruiken dat door een andere toepassing (kanaal) wordt verkregen.
 
-Het **Enige Teken** bezit voor een geselecteerd platform zal worden toegelaten of slechts gehandicapt na [&#x200B; overzicht en duw veranderingen &#x200B;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md).
+Het **Enige Teken** bezit voor een geselecteerd platform zal worden toegelaten of slechts gehandicapt na [ overzicht en duw veranderingen ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md).
 
 **laat op huis-gebaseerde authentificatie** toe
 
@@ -171,7 +171,7 @@ Volg deze stappen om op huis-gebaseerde authentificatie voor op OAuth2 gebaseerd
 
 1. Selecteer een specifiek platform of een categorie van platforms waarvoor u op huis-gebaseerde authentificatie onder **de Montages van het Platform** wilt toelaten.
 
-   ![&#x200B; laat op huis-gebaseerde authentificatie voor een specifiek platform &#x200B;](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-platform-settings-attempt-hba-properties.png) toe
+   ![ laat op huis-gebaseerde authentificatie voor een specifiek platform ](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-platform-settings-attempt-hba-properties.png) toe
 
    *laat op huis-gebaseerde authentificatie voor een specifiek platform* toe
 
@@ -183,7 +183,7 @@ Volg deze stappen om op huis-gebaseerde authentificatie voor op OAuth2 gebaseerd
 >
 >Het veranderen van de duur van **HBA AuthN TTL** bezit zou moeten worden vermeden. Dit kan leiden tot onverwachte fouten in het autorisatieproces.
 
-Het **bezit van HBA van de Poging** voor specifieke MVPD zal worden toegelaten of slechts na [&#x200B; overzicht en duw veranderingen &#x200B;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) onbruikbaar gemaakt.
+Het **bezit van HBA van de Poging** voor specifieke MVPD zal worden toegelaten of slechts na [ overzicht en duw veranderingen ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) onbruikbaar gemaakt.
 
 #### Meer eigenschappen toevoegen {#add-more-properties}
 
@@ -204,11 +204,11 @@ Nochtans, in gevallen waar MVPDs ermee akkoord gaat om deze grens op te heffen, 
 
 **Preflight Max Middelen** zal een nieuw attribuut toevoegen waar de overeengekomen grens met MVPD kan worden gespecificeerd.
 
-![&#x200B; voeg Preflight Max bezit van Middelen &#x200B;](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-platform-settings-preflight-max-resources-properties.png) toe
+![ voeg Preflight Max bezit van Middelen ](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-platform-settings-preflight-max-resources-properties.png) toe
 
 *voeg Preflight Max bezit van Middelen* toe
 
-Het **Preflight Max bezit van Middelen** zal slechts na [&#x200B; overzicht en duw veranderingen &#x200B;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) worden toegevoegd.
+Het **Preflight Max bezit van Middelen** zal slechts na [ overzicht en duw veranderingen ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) worden toegevoegd.
 
 **de vertoningsnaam of embleem URL van de Verandering MVPD**
 
@@ -216,11 +216,11 @@ Voor programmeertoepassingen die niet hun plukker van MVPD willen bouwen en in p
 
 Afhankelijk van het apparaatplatform en de gewenste gebruikerservaring kunnen verschillende waarden voor deze eigenschappen voor dezelfde MVPD worden gebruikt.
 
-![&#x200B; voeg het bezit van de Naam van de Vertoning of van het Logo URL &#x200B;](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-platform-settings-display-name-logo-url-properties.png) toe
+![ voeg het bezit van de Naam van de Vertoning of van het Logo URL ](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-platform-settings-display-name-logo-url-properties.png) toe
 
 *voeg het bezit van de Naam van de Vertoning of van het Logo URL* toe
 
-Het **bezit van de Naam van de Vertoning** of **Logo URL** zal slechts na [&#x200B; overzicht en duw veranderingen &#x200B;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) worden toegevoegd.
+Het **bezit van de Naam van de Vertoning** of **Logo URL** zal slechts na [ overzicht en duw veranderingen ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) worden toegevoegd.
 
 **verzoek een nieuwe authentificatiestroom op app (kanaal) omschakeling**
 
@@ -228,11 +228,11 @@ Als u een nieuwe verificatie wilt forceren wanneer gebruikers schakelen tussen a
 
 Toevoegend **Auth per Samenvoeger** breekt effectief één enkel teken voor het respectieve kanaal.
 
-![&#x200B; voeg Auth per het bezit van de Samenvoeger &#x200B;](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-platform-settings-auth-per-aggregator-properties.png) toe
+![ voeg Auth per het bezit van de Samenvoeger ](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-platform-settings-auth-per-aggregator-properties.png) toe
 
 *voeg Auth per het bezit van de Samenvoeger* toe
 
-Het **Auth per het samenvoegen** bezit zal slechts na [&#x200B; overzicht en duw veranderingen &#x200B;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) worden toegevoegd.
+Het **Auth per het samenvoegen** bezit zal slechts na [ overzicht en duw veranderingen ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) worden toegevoegd.
 
 Zodra toegevoegd, uitgezochte **ja** om **Auth per het bezit van de Samenvoegaar** voor een geselecteerde integratie toe te laten.
 
@@ -244,7 +244,7 @@ Selecteren <img alt= "delete, knop eigenschap" src="../assets/tve-dashboard/new-
 >
 >Bepaalde eigenschappen kunnen niet worden verwijderd, omdat het verplichte vereisten voor de geselecteerde MVPD zijn.
 
-Het bezit zal van de **montages van het Platform** sectie slechts na [&#x200B; overzicht en duw veranderingen &#x200B;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) worden geschrapt.
+Het bezit zal van de **montages van het Platform** sectie slechts na [ overzicht en duw veranderingen ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) worden geschrapt.
 
 ### Metagegevens gebruiker {#user-metadata}
 
@@ -260,18 +260,18 @@ In de sectie met gebruikersmetagegevens worden de volgende kolommen weergegeven:
 
 **Beschrijving**: Verstrekt een korte beschrijving van elke parameter van gebruikersmeta-gegevens.
 
-**Gecodeerde**: Deze kolom staat u toe om parameters in API toe te laten of onbruikbaar te maken door **ja** of **Nr** van het dropdown menu respectievelijk te selecteren. Het kiezen voor **ja** wijst erop dat de parameterwaarde in API zal worden gecodeerd. De encryptie wordt uitgevoerd gebruikend een certificaat dat door het 1&rbrace; werkingsgebied van meta-gegevens van de a **Gebruiker wordt bepaald.**
+**Gecodeerde**: Deze kolom staat u toe om parameters in API toe te laten of onbruikbaar te maken door **ja** of **Nr** van het dropdown menu respectievelijk te selecteren. Het kiezen voor **ja** wijst erop dat de parameterwaarde in API zal worden gecodeerd. De encryptie wordt uitgevoerd gebruikend een certificaat dat door het 1} werkingsgebied van meta-gegevens van de a **Gebruiker wordt bepaald.**
 
 >[!TIP]
 >
 >
 > Zorg altijd ervoor dat de **parameter van het ZIP** wordt gecodeerd.
 
-Leer meer over beschikbare certificaten in [&#x200B; Programmeurs &#x200B;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-programmers.md#available-certificates) en [&#x200B; Kanalen &#x200B;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-channels.md#available-certificates) secties.
+Leer meer over beschikbare certificaten in [ Programmeurs ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-programmers.md#available-certificates) en [ Kanalen ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-channels.md#available-certificates) secties.
 
 **Toegelaten**: Deze kolom staat u toe om de parameters in API toe te laten of onbruikbaar te maken door **ja** of **Nr** respectievelijk van het dropdown menu te selecteren.
 
-![&#x200B; Parameters beschikbaar voor Metagegevens van de Gebruiker &#x200B;](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-user-metadata-panel-view.png)
+![ Parameters beschikbaar voor Metagegevens van de Gebruiker ](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-user-metadata-panel-view.png)
 
 *Parameters beschikbaar voor Metagegevens van de Gebruiker*
 
@@ -283,7 +283,7 @@ Voer de volgende stappen uit om een nieuwe integratie te maken met een nieuwe MV
 
 1. Selecteer **creeer nieuwe integratie** bij het hoger-recht van de **sectie van de Integraties**.
 
-   ![&#x200B; creeer een nieuwe integratie &#x200B;](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-create-new-integration-button.png)
+   ![ creeer een nieuwe integratie ](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-create-new-integration-button.png)
 
    *creeer een nieuwe integratie*
 
@@ -293,7 +293,7 @@ Voer de volgende stappen uit om een nieuwe integratie te maken met een nieuwe MV
 
    Selecteer a **Kanaal** van het **Uitgezochte drop-down menu van het Kanaal** om een nieuwe integratie toe te voegen. Zodra u het kanaal hebt geselecteerd, selecteer vereiste **MVPD** van **Uitgezochte MVPD** dropdown menu om met het geselecteerde kanaal worden geïntegreerd.
 
-   ![&#x200B; Uitgezochte Kanaal en MVPD &#x200B;](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-new-integration-select-channel-and-mvpd-panel-view.png)
+   ![ Uitgezochte Kanaal en MVPD ](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-new-integration-select-channel-and-mvpd-panel-view.png)
 
    *Uitgezochte Kanaal en MVPD*
 
@@ -305,7 +305,7 @@ Voer de volgende stappen uit om een nieuwe integratie te maken met een nieuwe MV
    >
    >Wijzig de standaardeindpunten in geen enkele stroom, tenzij dit specifiek door de MVPD wordt aangegeven.
 
-   ![&#x200B; Eindpunten selecteren &#x200B;](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-new-integration-select-endpoints-panel-view.png)
+   ![ Eindpunten selecteren ](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-new-integration-select-endpoints-panel-view.png)
 
    *Uitgezochte eindpunten*
 
@@ -319,13 +319,13 @@ Voer de volgende stappen uit om een nieuwe integratie te maken met een nieuwe MV
 
    Bijvoorbeeld, kunt u **AuthN TTL** of **identiteitskaart van de Partner** (identiteitskaart van het Kanaal) voor co-branding doeleinden op de login van MVPD pagina in het volgende beeld uitgeven.
 
-   ![&#x200B; geef Aanvullende informatie &#x200B;](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-new-integration-additional-information-panel-view.png) uit
+   ![ geef Aanvullende informatie ](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-new-integration-additional-information-panel-view.png) uit
 
    *geef Aanvullende informatie* uit
 
    Selecteer **sparen integratie** bij het hoger-recht van **creeer nieuwe integratie** sectie.
 
-Een nieuwe integratie zal slechts na [&#x200B; overzicht en duw veranderingen &#x200B;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) worden gecreeerd.
+Een nieuwe integratie zal slechts na [ overzicht en duw veranderingen ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) worden gecreeerd.
 
 
 ## Integratie uitschakelen {#disable-integration}
@@ -338,10 +338,10 @@ Voer de volgende stappen uit om een integratie uit te schakelen:
 
 1. Schakel de schakeloptie rechtsboven in de geselecteerde integratie uit.
 
-   ![&#x200B; maak integratie &#x200B;](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-enabled-disabled-button.png) onbruikbaar
+   ![ maak integratie ](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-enabled-disabled-button.png) onbruikbaar
 
    *maak integratie* onbruikbaar
 
-De integratie zal slechts na [&#x200B; overzicht en duw veranderingen &#x200B;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) worden onbruikbaar gemaakt.
+De integratie zal slechts na [ overzicht en duw veranderingen ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) worden onbruikbaar gemaakt.
 
 Nadat de integratie is uitgeschakeld, kunnen eindgebruikers het gebruik van de specifieke MVPD niet meer verifiëren of autoriseren.

@@ -2,7 +2,7 @@
 title: Basisautorisatie - Primaire toepassing - Stroom
 description: REST API V2 - Basisautorisatie - Primaire toepassing - Stroom
 exl-id: 46bc9326-966e-44fc-8546-2f58be01b7bc
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> De implementatie van REST API V2 wordt begrensd door de [&#x200B; Throttling mechanisme &#x200B;](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
+> De implementatie van REST API V2 wordt begrensd door de [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
 
 De **stroom van de Vergunning** binnen de bevoegdheid van de Authentificatie van Adobe Pass staat de het stromen toepassing toe om te bepalen of een MVPD het verzoek van de gebruiker om inhoud toelaat of ontkent te stromen. Als de beslissing `Permit` is, bevat de reactie een media-token. Adobe Pass-server ondertekent het mediatoken en stelt de streamingtoepassing in staat de verificatiebibliotheek voor mediatoken te gebruiken om de authenticiteit van de token te controleren voordat de stream wordt vrijgegeven.
 
@@ -39,7 +39,7 @@ Voordat u autorisatiebesluiten ophaalt met een specifieke MVPD, moet u controler
 
 Volg de gegeven stappen om de basisvergunningsstroom uit te voeren gebruikend een specifieke MVPD die binnen een primaire toepassing zoals aangetoond in het volgende diagram wordt uitgevoerd.
 
-![&#x200B; wint vergunningsbesluiten terug gebruikend specifieke mvpd &#x200B;](../../../../../assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-retrieve-authorization-decisions-within-primary-application-using-specific-mvpd.png)
+![ wint vergunningsbesluiten terug gebruikend specifieke mvpd ](../../../../../assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-retrieve-authorization-decisions-within-primary-application-using-specific-mvpd.png)
 
 *wint vergunningsbesluiten terug gebruikend specifieke mvpd*
 
@@ -47,7 +47,7 @@ Volg de gegeven stappen om de basisvergunningsstroom uit te voeren gebruikend ee
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen vergunningsbesluiten gebruikend specifieke mvpd &#x200B;](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details op:
+   > Verwijs naar [ terugwinnen vergunningsbesluiten gebruikend specifieke mvpd ](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `serviceProvider`, `mvpd`, en `resources`
    > * Alle _vereiste_ kopballen, als `Authorization` en `AP-Device-Identifier`
@@ -61,7 +61,7 @@ Volg de gegeven stappen om de basisvergunningsstroom uit te voeren gebruikend ee
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen vergunningsbesluiten gebruikend specifieke mvpd &#x200B;](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details over de informatie die in een besluitreactie wordt verstrekt.
+   > Verwijs naar [ terugwinnen vergunningsbesluiten gebruikend specifieke mvpd ](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details over de informatie die in een besluitreactie wordt verstrekt.
    > 
    > <br/>
    > 
@@ -72,15 +72,15 @@ Volg de gegeven stappen om de basisvergunningsstroom uit te voeren gebruikend ee
    >
    > <br/>
    > 
-   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
 1. **stroom van het Begin met media teken:** de het stromen toepassing gebruikt het media teken om de inhoud te spelen.
 
-1. **Terugkeer `Deny` besluit met details:** De Besluiten staan eindpuntreactie toe bevat a `Deny` besluit en een foutenlading die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+1. **Terugkeer `Deny` besluit met details:** De Besluiten staan eindpuntreactie toe bevat a `Deny` besluit en een foutenlading die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen vergunningsbesluiten gebruikend specifieke mvpd &#x200B;](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details over de informatie die in een besluitreactie wordt verstrekt.
+   > Verwijs naar [ terugwinnen vergunningsbesluiten gebruikend specifieke mvpd ](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details over de informatie die in een besluitreactie wordt verstrekt.
    > 
    > <br/>
    > 
@@ -91,6 +91,6 @@ Volg de gegeven stappen om de basisvergunningsstroom uit te voeren gebruikend ee
    >
    > <br/>
    > 
-   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
 1. **handvat `Deny` besluitvormingsdetails:** de het stromen toepassing verwerkt de fouteninformatie van de reactie en kan het gebruiken om naar keuze een specifiek bericht op het gebruikersinterface te tonen.

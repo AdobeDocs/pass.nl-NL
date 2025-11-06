@@ -2,7 +2,7 @@
 title: Kickstart-handleiding voor programmeurs
 description: Kickstart-handleiding voor programmeurs
 exl-id: 0aecdb81-9b97-4475-b0b0-654d916b2374
-source-git-commit: 37858fa83aecbdf443a4a6058c78e4f9246eee42
+source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Adobe beschikt over een aantal bronnen waarmee u Adobe Pass-verificatie kunt int
 
 Het installatieproces omvat onder andere de volgende stappen:
 
-![&#x200B; Adobe® het Proces van de Integratie van de Authentificatie van de Volwassing &#x200B;](../assets/progr-flow-int-lifecycle.png)
+![ Adobe® het Proces van de Integratie van de Authentificatie van de Volwassing ](../assets/progr-flow-int-lifecycle.png)
 
 *Adobe® het Proces van de Integratie van de Authentificatie van de Volwassing*
 
@@ -69,22 +69,22 @@ Het installatieproces omvat onder andere de volgende stappen:
 
 ## Toegang tot klantenondersteuning {#access-customer-support}
 
-**Adobe zal** toegang tot ons systeem van de klantensteun via [&#x200B; Zendesk &#x200B;](https://tve.zendesk.com/home) verlenen. Als u toegang wilt tot Zendesk, moet u zich registreren en een account maken op https://tve.zendesk.com/home. Er is geen limiet voor het aantal gebruikers dat u kunt registreren. Zodra geregistreerd, kunt u commentaren op om het even welk voorgelegd kaartje bekijken en delen.
+**Adobe zal** toegang tot ons systeem van de klantensteun via [ Zendesk ](https://tve.zendesk.com/home) verlenen. Als u toegang wilt tot Zendesk, moet u zich registreren en een account maken op https://tve.zendesk.com/home. Er is geen limiet voor het aantal gebruikers dat u kunt registreren. Zodra geregistreerd, kunt u commentaren op om het even welk voorgelegd kaartje bekijken en delen.
 
-Het Adobe Pass-verificatieteam is beschikbaar als hulp bij vragen of technische problemen die u tijdens het integratieproces kunt tegenkomen. Gelieve te contacteren ons in [&#x200B; tve-support@adobe.com &#x200B;](mailto:tve-support@adobe.com).
+Het Adobe Pass-verificatieteam is beschikbaar als hulp bij vragen of technische problemen die u tijdens het integratieproces kunt tegenkomen. Gelieve te contacteren ons in [ tve-support@adobe.com ](mailto:tve-support@adobe.com).
 
 ## Toegang tot documentatie {#access-documentation}
 
-**Adobe zal** toegang tot onze openbare documentatie via [&#x200B; de Liga van de Ervaring van Adobe &#x200B;](https://experienceleague.adobe.com/nl/docs/pass/authentication/home) verlenen.
+**Adobe zal** toegang tot onze openbare documentatie via [ de Liga van de Ervaring van Adobe ](https://experienceleague.adobe.com/en/docs/pass/authentication/home) verlenen.
 
-Het team van de Authentificatie van Adobe Pass verstrekt uitvoerige documentatie voor de beschikbare eigenschappen en APIs onder de [&#x200B; Gids van de Integratie voor de sectie van Programmers &#x200B;](/help/authentication/integration-guide-programmers/programmer-integration-guide-overview.md). Verwijs naar de inhoudstafel onder deze sectie voor verbindingen aan gedetailleerde informatie over elk onderwerp.
+Het team van de Authentificatie van Adobe Pass verstrekt uitvoerige documentatie voor de beschikbare eigenschappen en APIs onder de [ Gids van de Integratie voor de sectie van Programmers ](/help/authentication/integration-guide-programmers/programmer-integration-guide-overview.md). Verwijs naar de inhoudstafel onder deze sectie voor verbindingen aan gedetailleerde informatie over elk onderwerp.
 
 ## Toegang tot het testgereedschap {#access-testing-tool}
 
-**Adobe zal** toegang tot ons APIs exploratiehulpmiddel via [&#x200B; Adobe Developer &#x200B;](https://developer.adobe.com/adobe-pass/) website verstrekken.
+**Adobe zal** toegang tot ons APIs exploratiehulpmiddel via [ Adobe Developer ](https://developer.adobe.com/adobe-pass/) website verstrekken.
 
 ## Toegang tot hulpprogramma voor configuratiebeheer {#access-configuration-management-tool}
 
-**Adobe zal** toegang tot een zelfbedieningshulpmiddel verstrekken om uw configuratie en gegevens via [&#x200B; Dashboard van Adobe Pass te beheren TVE &#x200B;](https://experience.adobe.com/pass/authentication).
+**Adobe zal** toegang tot een zelfbedieningshulpmiddel verstrekken om uw configuratie en gegevens via [ Dashboard van Adobe Pass te beheren TVE ](https://experience.adobe.com/pass/authentication).
 
-Het team van de Authentificatie van Adobe Pass verstrekt uitvoerige documentatie voor het gebruik van het Dashboard van TVE onder de [&#x200B; Gids van de Gebruiker voor het Dashboard van TVE &#x200B;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-overview.md) sectie. Verwijs naar de inhoudstafel onder deze sectie voor verbindingen aan gedetailleerde informatie over elk onderwerp.
+Het team van de Authentificatie van Adobe Pass verstrekt uitvoerige documentatie voor het gebruik van het Dashboard van TVE onder de [ Gids van de Gebruiker voor het Dashboard van TVE ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-overview.md) sectie. Verwijs naar de inhoudstafel onder deze sectie voor verbindingen aan gedetailleerde informatie over elk onderwerp.

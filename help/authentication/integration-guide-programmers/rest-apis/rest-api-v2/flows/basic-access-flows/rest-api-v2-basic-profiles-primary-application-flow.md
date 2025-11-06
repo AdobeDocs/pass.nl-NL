@@ -2,7 +2,7 @@
 title: Basisprofielen - primaire toepassing - Stroom
 description: REST API V2 - Basisprofielen - Primaire toepassing - Stroom
 exl-id: 19ddf382-9a32-4b94-aa84-7611c0e1780e
-source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
+source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
 workflow-type: tm+mt
 source-wordcount: '974'
 ht-degree: 0%
@@ -17,11 +17,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> De implementatie van REST API V2 wordt begrensd door de [&#x200B; Throttling mechanisme &#x200B;](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
+> De implementatie van REST API V2 wordt begrensd door de [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
 
 >[!MORELIKETHIS]
 >
-> Zorg ervoor om [&#x200B; REST API V2 FAQs &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general) ook te bezoeken.
+> Zorg ervoor om [ REST API V2 FAQs ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general) ook te bezoeken.
 
 De **stroom van Profielen** binnen de rechten van de Authentificatie van Adobe Pass staat de het stromen toepassing toe om tot informatie over actieve gebruikerslogins toegang te hebben.
 
@@ -43,7 +43,7 @@ Controleer voordat u profielen ophaalt of aan de volgende voorwaarden is voldaan
 
 Volg de gegeven stappen om de basisprofielen uit te voeren terugwinningsstroom die binnen een primaire toepassing zoals aangetoond in het volgende diagram wordt uitgevoerd.
 
-![&#x200B; wint profielen &#x200B;](../../../../../assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-retrieve-profiles-within-primary-application.png) terug
+![ wint profielen ](../../../../../assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-retrieve-profiles-within-primary-application.png) terug
 
 *wint profielen* terug
 
@@ -51,7 +51,7 @@ Volg de gegeven stappen om de basisprofielen uit te voeren terugwinningsstroom d
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen profielen &#x200B;](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md) API documentatie voor details op:
+   > Verwijs naar [ terugwinnen profielen ](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `serviceProvider`
    > * Alle _vereiste_ kopballen, als `Authorization`, `AP-Device-Identifier`
@@ -63,7 +63,7 @@ Volg de gegeven stappen om de basisprofielen uit te voeren terugwinningsstroom d
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen profielen &#x200B;](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md) API documentatie voor details over de informatie die in een profielreactie wordt verstrekt.
+   > Verwijs naar [ terugwinnen profielen ](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md) API documentatie voor details over de informatie die in een profielreactie wordt verstrekt.
    > 
    > <br/>
    > 
@@ -73,7 +73,7 @@ Volg de gegeven stappen om de basisprofielen uit te voeren terugwinningsstroom d
    >
    > <br/>
    >
-   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
 1. **kies een profiel en ga met besluitvormingsstromen te werk:** als de het eindpuntreactie van Profielen profielen bevat, gebruikt de het stromen toepassing zijn interne logica (uiteindelijk door met de eindgebruiker in wisselwerking te staan) om één van de beschikbare profielen te kiezen om met verdere besluitvormingsstromen verder te gaan.
 
@@ -91,7 +91,7 @@ Voordat u het profiel voor een specifieke MVPD ophaalt, moet u controleren of aa
 
 Volg de gegeven stappen om de basisstroom van de profielherwinning voor een specifieke MVPD uit te voeren die binnen een primaire toepassing zoals aangetoond in het volgende diagram wordt uitgevoerd.
 
-![&#x200B; wint profiel voor specifieke mvpd terug &#x200B;](../../../../../assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-retrieve-profile-within-primary-application-for-specific-mvpd.png)
+![ wint profiel voor specifieke mvpd terug ](../../../../../assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-retrieve-profile-within-primary-application-for-specific-mvpd.png)
 
 *wint profiel voor specifieke mvpd terug*
 
@@ -99,7 +99,7 @@ Volg de gegeven stappen om de basisstroom van de profielherwinning voor een spec
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen profiel voor specifieke mvpd &#x200B;](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) API documentatie voor details op:
+   > Verwijs naar [ terugwinnen profiel voor specifieke mvpd ](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `serviceProvider` en `mvpd`
    > * Alle _vereiste_ kopballen, als `Authorization`, `AP-Device-Identifier`
@@ -111,7 +111,7 @@ Volg de gegeven stappen om de basisstroom van de profielherwinning voor een spec
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen profiel voor specifieke mvpd &#x200B;](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) API documentatie voor details op de informatie die in een profielreactie wordt verstrekt.
+   > Verwijs naar [ terugwinnen profiel voor specifieke mvpd ](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) API documentatie voor details op de informatie die in een profielreactie wordt verstrekt.
    > 
    > <br/>
    > 
@@ -122,7 +122,7 @@ Volg de gegeven stappen om de basisstroom van de profielherwinning voor een spec
    >
    > <br/>
    > 
-   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
 1. **ga met besluitvormingsstromen te werk:** als de het eindpuntreactie van Profielen een profiel bevat, gebruikt de het stromen toepassing de profielinformatie om met verdere besluitvormingsstromen verder te gaan.
 
@@ -140,7 +140,7 @@ Voordat u het profiel voor een specifieke verificatiecode ophaalt, moet u contro
 
 Volg de gegeven stappen om de basisstroom van de profielherwinning voor een specifieke authentificatiecode uit te voeren die binnen een primaire toepassing zoals aangetoond in het volgende diagram wordt uitgevoerd.
 
-![&#x200B; wint profiel voor specifieke code &#x200B;](../../../../../assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-retrieve-profile-within-primary-application-for-specific-code.png) terug
+![ wint profiel voor specifieke code ](../../../../../assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-retrieve-profile-within-primary-application-for-specific-code.png) terug
 
 *wint profiel voor specifieke code* terug
 
@@ -148,7 +148,7 @@ Volg de gegeven stappen om de basisstroom van de profielherwinning voor een spec
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen profiel voor specifieke code &#x200B;](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) API documentatie voor details op:
+   > Verwijs naar [ terugwinnen profiel voor specifieke code ](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `serviceProvider`, en `code`
    > * Alle _vereiste_ kopballen, als `Authorization`
@@ -160,7 +160,7 @@ Volg de gegeven stappen om de basisstroom van de profielherwinning voor een spec
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [&#x200B; terugwinnen profiel voor specifieke code &#x200B;](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) API documentatie voor details op de informatie die in een profielreactie wordt verstrekt.
+   > Verwijs naar [ terugwinnen profiel voor specifieke code ](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) API documentatie voor details op de informatie die in een profielreactie wordt verstrekt.
    > 
    > <br/>
    > 
@@ -170,7 +170,7 @@ Volg de gegeven stappen om de basisstroom van de profielherwinning voor een spec
    >
    > <br/>
    >
-   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
 1. **ga met besluitvormingsstromen te werk:** als de het eindpuntreactie van Profielen een profiel bevat, gebruikt de het stromen toepassing de profielinformatie om met verdere besluitvormingsstromen verder te gaan.
 

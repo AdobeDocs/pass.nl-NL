@@ -2,7 +2,7 @@
 title: Android-toepassingsregistratie
 description: Android-toepassingsregistratie
 exl-id: 6238bd87-ac97-4a5c-9d92-3631f7b2d46a
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 0%
@@ -17,13 +17,13 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 ## Inleiding {#intro}
 
 Vanaf versie 3.0 van Android AccessEnabler SDK veranderen we het verificatiemechanisme met Adobe-servers. In plaats van het gebruiken van een openbare sleutel en een geheim systeem om requestorID te ondertekenen, introduceren wij het concept een koord van de Verklaring van de Software dat kan worden gebruikt om een toegangstoken te verkrijgen dat later voor alle vraag wordt gebruikt die SDK aan onze servers maakt. Naast een verklaring van de Software zult u ook een diepe verbinding voor uw toepassing moeten creëren.
 
-Voor meer informatie, zie [&#x200B; Dynamisch Overzicht van de Registratie van de Cliënt 1&rbrace;.](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)
+Voor meer informatie, zie [ Dynamisch Overzicht van de Registratie van de Cliënt 1}.](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)
 
 ## Wat is een Software Statement? {#what}
 
@@ -41,7 +41,7 @@ Hier zijn manieren u een Verklaring van de Software kunt verkrijgen.
 
 ### Als u toegang hebt tot het Adobe TVE-dashboard
 
-1. Open uw browser en navigeer aan [&#x200B; Adobe Pass TVE Dashboard &#x200B;](https://experience.adobe.com/#/pass/authentication).
+1. Open uw browser en navigeer aan [ Adobe Pass TVE Dashboard ](https://experience.adobe.com/#/pass/authentication).
 
 1. Navigeer naar de sectie **[!UICONTROL Channels]** en selecteer vervolgens het kanaal.
 
@@ -61,7 +61,7 @@ Hier zijn manieren u een Verklaring van de Software kunt verkrijgen.
 
    Een tekstbestand wordt gedownload. Gebruik de inhoud ervan als de Software Statement.
 
-Voor meer informatie, zie [&#x200B; Dynamisch Beheer van de Registratie van de Cliënt &#x200B;](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md#dynamic-client-registration-management).
+Voor meer informatie, zie [ Dynamisch Beheer van de Registratie van de Cliënt ](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md#dynamic-client-registration-management).
 
 ### Als u geen toegang hebt tot het Adobe TVE-dashboard
 

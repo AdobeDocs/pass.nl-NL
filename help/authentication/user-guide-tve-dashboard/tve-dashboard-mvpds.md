@@ -2,7 +2,7 @@
 title: MVPD's voor TVE-dashboard
 description: Leer over MVPDs en zijn configuraties binnen het Dashboard van TVE.
 exl-id: 802c1570-9a5b-4bec-8fb2-6c7738b28bc9
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Het **MVPDs** lusje in het linkerpaneel toont een lijst van MVPDs met de volgend
 
 * **identiteitskaart van MVPD**: Een unieke identiteitskaart van MVPD gebruikte aan opstelling een nieuwe integratie in het systeem.
 
-![&#x200B; Lijst van geïntegreerde MVPDs &#x200B;](../assets/tve-dashboard/new-tve-dashboard/mvpds/mvpds-list-view.png)
+![ Lijst van geïntegreerde MVPDs ](../assets/tve-dashboard/new-tve-dashboard/mvpds/mvpds-list-view.png)
 
 *Lijst van geïntegreerde MVPDs*
 
