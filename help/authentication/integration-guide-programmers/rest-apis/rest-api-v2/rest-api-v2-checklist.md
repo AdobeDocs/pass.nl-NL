@@ -15,13 +15,13 @@ ht-degree: 0%
 >
 > De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
-Dit document voegt op één plaats de verplichte vereisten en geadviseerde praktijken voor Programmers samen die cliënttoepassingen uitvoeren die de Authentificatie van Adobe Pass [ VERTONEN API V2 ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md) verbruiken.
+Dit document voegt op één plaats de verplichte vereisten en geadviseerde praktijken voor Programmers samen die cliënttoepassingen uitvoeren die de Authentificatie van Adobe Pass [&#x200B; VERTONEN API V2 &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md) verbruiken.
 
 Het volgende document moet als onderdeel van uw acceptatiecriteria worden beschouwd bij de implementatie van REST API V2 en moet als controlelijst worden gebruikt om ervoor te zorgen dat alle noodzakelijke stappen zijn gezet om een succesvolle integratie te bereiken.
 
 >[!TIP]
 >
-> Voor AI-bijgewoonde ontwikkeling, zie onze [ AI Regels ](rest-api-v2-ai-rules.md) die deze vereisten in gestructureerde regels voor AI coderingsmedewerkers omzet.
+> Voor AI-bijgewoonde ontwikkeling, zie onze [&#x200B; AI Regels &#x200B;](rest-api-v2-ai-rules.md) die deze vereisten in gestructureerde regels voor AI coderingsmedewerkers omzet.
 
 ## Verplichte eisen {#mandatory-requirements}
 
@@ -312,7 +312,7 @@ Het volgende document moet als onderdeel van uw acceptatiecriteria worden bescho
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;"><i>Validatie van mediatokens</i></td>
-      <td>Valideer media tokens gebruikend de <a href="/help/authentication/integration-guide-programmers/features-standard/entitlements/media-tokens.md#media-token-verifier"> bibliotheek van de Verificateur van het Symbolische van 0} Media.</a></td>
+      <td>Valideer media tokens gebruikend de <a href="/help/authentication/integration-guide-programmers/features-standard/entitlements/media-tokens.md#media-token-verifier"> bibliotheek van de Verificateur van het Symbolische van 0&rbrace; Media.</a></td>
       <td>Risico's van frauduleuze regelingen zoals stroom ripping.</td>
    </tr>
    <tr>
@@ -393,11 +393,11 @@ Het volgende document moet als onderdeel van uw acceptatiecriteria worden bescho
    <tr>
       <td style="background-color: #DEEBFF;"><i>Verificatie</i></td>
       <td>Het opiniepeilingsmechanisme bepaalt het stemmen <br/><br/> Geheime voorgeheugen delen van profielen</td>
-      <td>De steun veelvoudige profielen {de Eigenschap van de Verslechtering van de Steun (als bedrijfsvereiste) <br/><br/> de Eigenschap van de Steun TempPass (als bedrijfsvereiste) <br/><br/> Steun Enige Sign-On Eigenschap (als bedrijfsvereiste)<br/><br/></td>
+      <td>De steun veelvoudige profielen &lbrace;de Eigenschap van de Verslechtering van de Steun (als bedrijfsvereiste) <br/><br/> de Eigenschap van de Steun TempPass (als bedrijfsvereiste) <br/><br/> Steun Enige Sign-On Eigenschap (als bedrijfsvereiste)<br/><br/></td>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;"><i>Voorafgaande goedkeuring</i></td>
-      <td>De vergunningsbesluiten van het geheime voorgeheugen {<br/><br/> proberen mechanisme fijn het stemmen</td>
+      <td>De vergunningsbesluiten van het geheime voorgeheugen &lbrace;<br/><br/> proberen mechanisme fijn het stemmen</td>
       <td>De gebruikerservaring verbeteren door foutcodes te gebruiken voor beslissingen waarbij voorafgaande toestemming is geweigerd</td>
    </tr>
    <tr>

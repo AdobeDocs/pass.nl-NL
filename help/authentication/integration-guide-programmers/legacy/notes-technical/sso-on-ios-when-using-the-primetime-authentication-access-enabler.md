@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 </br>
 
@@ -27,7 +27,7 @@ Single Sign-On (SSO) tussen apps met Adobe Pass-verificatie werkt op verschillen
 
 Dit document richt **SSO op iOS**, wanneer het gebruiken van de Authentificatie van Adobe Pass **Toegelaten Toegang**.
 
-**** 1.10 **van Toegangsactivering van 0} {is de recentste versie van de Authentificatie iOS van Adobe Pass inheemse SDK.** Adobe raadt u ten zeerste aan naar deze versie te gaan in plaats van bij een oudere versie te blijven. Als u een oudere versie van Toegankelijkheid gebruikt, kunt u de recentste versie [ hier ](https://tve.zendesk.com/hc/en-us/articles/204963209-iOS-Native-AccessEnabler-Library) downloaden.
+**&#x200B;**&#x200B;1.10 **van Toegangsactivering van 0&rbrace; &lbrace;is de recentste versie van de Authentificatie iOS van Adobe Pass inheemse SDK.** Adobe raadt u ten zeerste aan naar deze versie te gaan in plaats van bij een oudere versie te blijven. Als u een oudere versie van Toegankelijkheid gebruikt, kunt u de recentste versie [&#x200B; hier &#x200B;](https://tve.zendesk.com/hc/en-us/articles/204963209-iOS-Native-AccessEnabler-Library) downloaden.
 
 De SSO voor iOS wordt gedicteerd door de volgende omstandigheden:
 
@@ -39,12 +39,12 @@ De SSO voor iOS wordt gedicteerd door de volgende omstandigheden:
 Het gedrag van SSO is als volgt:
 
 - **iOS 6 en lager**: SSO werkt automatisch tussen apps die door het zelfde team of verschillende teams worden ontwikkeld. De apparaat-id wordt berekend op basis van het MAC-adres (dezelfde waarde wordt in alle apps geproduceerd) en het opslaggebied wordt door alle apps gedeeld (aangepast plakbord kan op iOS 6 en lager worden gedeeld door alle apps).
-   - **Belangrijk:** Gelieve te merken op dat de versie van iOS SDK 1.9.4 [ het minimumplaatsingsdoel van iOS aan iOS 7 heeft verhoogd.](https://tve.zendesk.com/hc/en-us/articles/204963209-iOS-Native-AccessEnabler-Library)
+   - **Belangrijk:** Gelieve te merken op dat de versie van iOS SDK 1.9.4 [&#x200B; het minimumplaatsingsdoel van iOS aan iOS 7 heeft verhoogd.](https://tve.zendesk.com/hc/en-us/articles/204963209-iOS-Native-AccessEnabler-Library)
 - **iOS 7 en hoger**: SSO zal in de volgende voorwaarden werken:
 
-1. Toepassingen worden gepubliceerd met hetzelfde Apple-distributieprofiel of profielen die tot hetzelfde team behoren. Dit is de enige manier waarop apps aangepaste plakborden kunnen delen op iOS 7 en hoger. In alle andere scenario&#39;s wordt het plakbord in sandbox per toepassing geplaatst. Van [*https://developer.apple.com/library/IOs/releasenotes/General/RN-iOSSDK-7.0/index.html* ](https://developer.apple.com/library/ios/releasenotes/General/RN-iOSSDK-7.0/index.html): \+ \ [`UIPasteboard pasteboardWithName:create:\`] en + \ [`UIPasteboard pasteboardWithUniqueName` \] nu uniek de bepaalde naam om slechts die apps in de zelfde toepassingsgroep toe te staan om tot het plakbord toegang te hebben. Als de ontwikkelaar een plakbord probeert te maken met een naam die al bestaat en geen deel uitmaakt van dezelfde app-suite, krijgt hij of zij een eigen unieke en persoonlijke plakbord. Merk op dat dit niet het systeem verstrekt plakborden, algemeen, en vinden beïnvloedt.
+1. Toepassingen worden gepubliceerd met hetzelfde Apple-distributieprofiel of profielen die tot hetzelfde team behoren. Dit is de enige manier waarop apps aangepaste plakborden kunnen delen op iOS 7 en hoger. In alle andere scenario&#39;s wordt het plakbord in sandbox per toepassing geplaatst. Van [*https://developer.apple.com/library/IOs/releasenotes/General/RN-iOSSDK-7.0/index.html* &#x200B;](https://developer.apple.com/library/ios/releasenotes/General/RN-iOSSDK-7.0/index.html): \+ \ [`UIPasteboard pasteboardWithName:create:\`] en + \ [`UIPasteboard pasteboardWithUniqueName` \] nu uniek de bepaalde naam om slechts die apps in de zelfde toepassingsgroep toe te staan om tot het plakbord toegang te hebben. Als de ontwikkelaar een plakbord probeert te maken met een naam die al bestaat en geen deel uitmaakt van dezelfde app-suite, krijgt hij of zij een eigen unieke en persoonlijke plakbord. Merk op dat dit niet het systeem verstrekt plakborden, algemeen, en vinden beïnvloedt.
 
-1. Toepassingen hebben hetzelfde voorvoegsel voor de bundel-id (alle componenten behalve de laatste). Alleen toepassingen die hetzelfde voorvoegsel voor de bundel-id hebben, berekenen dezelfde IDFV. Van [*https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIDevice \ _Class/index.html \#//apple\_ref/occ/instp/UIDevice/identifierForVendor* ](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIDevice_Class/index.html#//apple_ref/occ/instp/UIDevice/identifierForVendor): Op IOS 7, worden alle componenten van de bundel behalve de laatste component gebruikt om verkopersidentiteitskaart te produceren. Als de bundel-id slechts één component bevat, wordt de volledige bundel-id gebruikt.
+1. Toepassingen hebben hetzelfde voorvoegsel voor de bundel-id (alle componenten behalve de laatste). Alleen toepassingen die hetzelfde voorvoegsel voor de bundel-id hebben, berekenen dezelfde IDFV. Van [*https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIDevice \ _Class/index.html \#//apple\_ref/occ/instp/UIDevice/identifierForVendor* &#x200B;](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIDevice_Class/index.html#//apple_ref/occ/instp/UIDevice/identifierForVendor): Op IOS 7, worden alle componenten van de bundel behalve de laatste component gebruikt om verkopersidentiteitskaart te produceren. Als de bundel-id slechts één component bevat, wordt de volledige bundel-id gebruikt.
 
 Laten we nu focussen op het **&#39;iOS 7 en hoger&#39;** scenario, aangezien het voor echte gebruikers het meest frequent is:
 

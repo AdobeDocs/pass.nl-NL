@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 Op deze pagina worden nieuwe functies, wijzigingen en bekende problemen met deze release beschreven:
 
@@ -35,7 +35,7 @@ Datum van de versie: **04/23/2024 - 04/25/2024**
 * Problemen met patchbeveiliging.
 * Verbeteringen voor de Degradation API-service.
    * DCR gebruiken als beveiligingsmechanisme voor de afbraak-API.
-   * U kunt meer details hier vinden: [ Eigenschap van de Verslechtering ](../integration-guide-programmers/features-premium/degraded-access/degradation-feature.md)
+   * U kunt meer details hier vinden: [&#x200B; Eigenschap van de Verslechtering &#x200B;](../integration-guide-programmers/features-premium/degraded-access/degradation-feature.md)
 
 #### REST API&#39;s
 

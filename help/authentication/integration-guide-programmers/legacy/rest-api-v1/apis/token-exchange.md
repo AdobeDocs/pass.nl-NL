@@ -17,23 +17,23 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 >[!NOTE]
 >
-> De implementatie van REST API wordt begrensd door [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md)
+> De implementatie van REST API wordt begrensd door [&#x200B; Throttling mechanisme &#x200B;](/help/authentication/integration-guide-programmers/throttling-mechanism.md)
 
 ## REST API-eindpunten {#clientless-endpoints}
 
 &lt;REGGIE_FQDN>:
 
-* Productie - [ api.auth.adobe.com ](http://api.auth.adobe.com/)
-* Het opvoeren - [ api.auth-staging.adobe.com ](http://api.auth-staging.adobe.com/)
+* Productie - [&#x200B; api.auth.adobe.com &#x200B;](http://api.auth.adobe.com/)
+* Het opvoeren - [&#x200B; api.auth-staging.adobe.com &#x200B;](http://api.auth-staging.adobe.com/)
 
 &lt;SP_FQDN>:
 
-* Productie - [ api.auth.adobe.com ](http://api.auth.adobe.com/)
-* Het opvoeren - [ api.auth-staging.adobe.com ](http://api.auth-staging.adobe.com/)
+* Productie - [&#x200B; api.auth.adobe.com &#x200B;](http://api.auth.adobe.com/)
+* Het opvoeren - [&#x200B; api.auth-staging.adobe.com &#x200B;](http://api.auth-staging.adobe.com/)
 
 </br>
 
@@ -43,7 +43,7 @@ Hiermee wordt een Platform SSO-profiel &quot;uitgewisseld&quot; voor een Adobe-t
 
 | Endpoint | Geroepen </br> door | Invoer   </br> Params | HTTP </br> Methode | Antwoord | HTTP-respons </br> |
 | --- | --- | --- | --- | --- | --- |
-| &lt;SP_FQDN>/api/v1/tokens/authn | Streaming App </br></br> of </br></br> de Dienst van de Programmer | &#x200B;1. aanvrager (Verplicht) </br>    </br> 2.  deviceId (Verplicht) </br>    </br> 3.  mvpd (Verplicht) </br>    </br> 4.  deviceType (Verplicht) </br>    </br> 5.  SAMLResponse (Verplicht) </br>    </br> 6.  deviceUser (Afgekeurd) </br>    </br> 7.  appId (afgekeurd) | POST | De succesvolle reactie zal 204 Geen Inhoud zijn, erop wijzend dat het teken met succes werd gecreeerd en klaar voor gebruik voor de auteurstromen is. | 204 - Geen inhoud   </br> {400 - Onjuist verzoek |
+| &lt;SP_FQDN>/api/v1/tokens/authn | Streaming App </br></br> of </br></br> de Dienst van de Programmer | &#x200B;1. aanvrager (Verplicht) </br>    </br> 2.  deviceId (Verplicht) </br>    </br> 3.  mvpd (Verplicht) </br>    </br> 4.  deviceType (Verplicht) </br>    </br> 5.  SAMLResponse (Verplicht) </br>    </br> 6.  deviceUser (Afgekeurd) </br>    </br> 7.  appId (afgekeurd) | POST | De succesvolle reactie zal 204 Geen Inhoud zijn, erop wijzend dat het teken met succes werd gecreeerd en klaar voor gebruik voor de auteurstromen is. | 204 - Geen inhoud   </br> &lbrace;400 - Onjuist verzoek |
 
 
 | Invoerparameter | Beschrijving |

@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 >[!TIP]
 > 
@@ -38,7 +38,7 @@ Deze versie bevat functies die in de SWIFT-taal zijn geschreven. Als uw app gehe
 
 > Ga voor meer informatie over hoe u de softwareinstructie kunt verkrijgen naar deze
 > pagina:
-> [Toepassingsregistratie ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-application-registration.md)
+> [Toepassingsregistratie &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-application-registration.md)
 
 Zodra u uw softwareverklaring hebt adviseren wij het ontvangen op een verre server zodat kunt u het gemakkelijk intrekken of veranderen zonder een nieuwe versie van de toepassing in de App Store op te stellen. Wanneer de toepassing begint, verkrijg uw softwareverklaring van de verre plaats en ga het in de aannemer AccessEnabler over:
 
@@ -46,13 +46,13 @@ Zodra u uw softwareverklaring hebt adviseren wij het ontvangen op een verre serv
     accessEnabler = AccessEnabler("YOUR_SOFTWARE_STATEMENT_HERE");
 ```
 
-> API info hier: [ iOS / tvOS API Verwijzing ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md)
+> API info hier: [&#x200B; iOS / tvOS API Verwijzing &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md)
 
 </br>
 
 ## Het aangepaste URL-schema toevoegen {#add-custom}
 
-> Voor informatie over hoe te om een schema van douane URL te verkrijgen gaat naar deze pagina: [ verkrijg een regeling van klant URL ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-application-registration.md)
+> Voor informatie over hoe te om een schema van douane URL te verkrijgen gaat naar deze pagina: [&#x200B; verkrijg een regeling van klant URL &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-application-registration.md)
 
 Nadat u het aangepaste URL-schema hebt gekregen, moet u dit toevoegen aan het bestand info.plist van de toepassing. Het aangepaste schema heeft de volgende indeling: `adbe.u-XFXJeTSDuJiIQs0HVRAg://`. U moet de dubbele punt en de schuine streep weglaten wanneer u deze aan het bestand toevoegt. Het bovenstaande voorbeeld wordt `adbe.u-XFXJeTSDuJiIQs0HVRAg` .
 
@@ -72,9 +72,9 @@ Nadat u het aangepaste URL-schema hebt gekregen, moet u dit toevoegen aan het be
 
 ## Aanroepen onderscheppen op het aangepaste URL-schema {#intercept}
 
-Dit is slechts van toepassing op het geval dat uw toepassing eerder handmatige behandeling van het Controlemechanisme van de Mening Safari (SVC) via [ gebruikte setOptions (\ [&quot;handleSVC&quot;:true \]) ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md) vraag en voor specifieke MVPDs die Controlemechanisme van de Mening Safari (SVC) vereisen, daarom vereist ladend URLs van de authentificatie en logout eindpunten door een controlemechanisme SFSafariViewController in plaats van UIWeb Beeld-/WKWebView-controller.
+Dit is slechts van toepassing op het geval dat uw toepassing eerder handmatige behandeling van het Controlemechanisme van de Mening Safari (SVC) via [&#x200B; gebruikte setOptions (\ [&quot;handleSVC&quot;:true \]) &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md) vraag en voor specifieke MVPDs die Controlemechanisme van de Mening Safari (SVC) vereisen, daarom vereist ladend URLs van de authentificatie en logout eindpunten door een controlemechanisme SFSafariViewController in plaats van UIWeb Beeld-/WKWebView-controller.
 
-Tijdens authentificatie en logout stromen moet uw toepassing de activiteit van het `SFSafariViewController ` controlemechanisme controleren aangezien het door verscheidene redirects gaat. Uw toepassing moet het moment detecteren waarop een specifieke aangepaste URL wordt geladen die door uw `application's custom URL scheme` wordt gedefinieerd (bijvoorbeeld `adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com)` . Wanneer het controlemechanisme deze specifieke douane URL laadt moet uw toepassing `SFSafariViewController` sluiten en de 1} API methode van AccessEnabler roepen {.`handleExternalURL:url `
+Tijdens authentificatie en logout stromen moet uw toepassing de activiteit van het `SFSafariViewController ` controlemechanisme controleren aangezien het door verscheidene redirects gaat. Uw toepassing moet het moment detecteren waarop een specifieke aangepaste URL wordt geladen die door uw `application's custom URL scheme` wordt gedefinieerd (bijvoorbeeld `adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com)` . Wanneer het controlemechanisme deze specifieke douane URL laadt moet uw toepassing `SFSafariViewController` sluiten en de 1&rbrace; API methode van AccessEnabler roepen &lbrace;.`handleExternalURL:url `
 
 Voeg in de `AppDelegate` de volgende methode toe:
 
@@ -87,7 +87,7 @@ Voeg in de `AppDelegate` de volgende methode toe:
         }
 ```
 
-> API info hier: [ Handel Externe URL ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md)
+> API info hier: [&#x200B; Handel Externe URL &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md)
 
 </br>
 
@@ -126,7 +126,7 @@ wordt:
     accessEnabler.setRequestor(requestorId)
 ```
 
-> API info hier: [ vastgestelde Aanvrager ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md)
+> API info hier: [&#x200B; vastgestelde Aanvrager &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md)
 
 </br>
 
@@ -146,4 +146,4 @@ in dit verband:
     accessEnabler.handleExternalURL(request.url?.description);
 ```
 
-> API info hier: [ Handel Externe URL ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md)
+> API info hier: [&#x200B; Handel Externe URL &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md)

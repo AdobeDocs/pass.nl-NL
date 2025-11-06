@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 </br>
 
@@ -48,7 +48,7 @@ Het doel van deze workflow is om een gebruiker aan te melden bij zijn MVPD.  Na 
 
 Hoewel de volgende native clientworkflow afwijkt van de typische browsergebaseerde verificatieworkflow, zijn de stappen 1-5 hetzelfde voor zowel native clients als op browsers gebaseerde clients:
 
-1. Uw pagina of speler stelt het authentificatiewerkschema met een vraag [ in werking getAuthentication () ](#getAuthN), die voor een geldig in de cache opgenomen authentificatietoken controleert. Deze methode heeft een optionele parameter `redirectURL` ; als u geen waarde opgeeft voor `redirectURL` , wordt de gebruiker na een geslaagde verificatie geretourneerd naar de URL vanwaar de verificatie is geïnitialiseerd.
+1. Uw pagina of speler stelt het authentificatiewerkschema met een vraag [&#x200B; in werking getAuthentication () &#x200B;](#getAuthN), die voor een geldig in de cache opgenomen authentificatietoken controleert. Deze methode heeft een optionele parameter `redirectURL` ; als u geen waarde opgeeft voor `redirectURL` , wordt de gebruiker na een geslaagde verificatie geretourneerd naar de URL vanwaar de verificatie is geïnitialiseerd.
 1. AccessEnabler bepaalt de huidige authentificatiestatus. Als de gebruiker momenteel voor authentiek wordt verklaard, roept AccessEnabler uw `setAuthenticationStatus()` callback functie, die een authentificatiestatus overgaat die op succes wijst (Stap 7 hieronder).
 1. Als de gebruiker niet voor authentiek wordt verklaard, gaat AccessEnabler de authentificatiestroom door te bepalen of de laatste authentificatiepoging van de gebruiker met bepaalde MVPD succesvol was. Als een MVPD-id in de cache wordt opgeslagen EN de markering `canAuthenticate` true is OF als een MVPD is geselecteerd met [`setSelectedProvider()`](#setSelectedProvider) , wordt de gebruiker niet gevraagd het dialoogvenster voor MVPD-selectie te openen. De verificatiestroom gaat verder met gebruik van de cachewaarde van de MVPD (hetzelfde MVPD dat tijdens de laatste geslaagde verificatie is gebruikt). Er wordt een netwerkaanroep naar de back-endserver gemaakt en de gebruiker wordt omgeleid naar de MVPD-aanmeldingspagina (stap 6 hieronder).
 1. Als er geen MVPD-id in de cache is opgeslagen EN er geen MVPD is geselecteerd met [`setSelectedProvider()`](#setSelectedProvider) OF als de markering `canAuthenticate` is ingesteld op false, wordt de callback [`displayProviderDialog()`](#displayProviderDialog) aangeroepen. Deze callback leidt uw pagina of speler om tot UI te leiden die de gebruiker met een lijst van MVPDs voorstelt om te kiezen van. Er is een array met MVPD-objecten beschikbaar, die de benodigde informatie bevat voor het maken van de MVPD-kiezer. Elk MVPD-object beschrijft een MVPD-entiteit en bevat informatie zoals de id van de MVPD (bijvoorbeeld XFINITY, AT\&amp;T, enzovoort) en de URL waar het MVPD-logo kan worden gevonden.

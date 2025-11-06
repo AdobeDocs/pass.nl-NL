@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## Domeinmodel {#domain-model}
 
-Deze pagina moet dienen als referentie voor verschillende toepassingen en implementaties van beleid. Wij adviseren u ook om het [ 1} deel van de Verklarende woordenlijst {van de documentatie voor term definities te raadplegen.](/help/concurrency-monitoring/cm-glossary.md)
+Deze pagina moet dienen als referentie voor verschillende toepassingen en implementaties van beleid. Wij adviseren u ook om het [&#x200B; 1&rbrace; deel van de Verklarende woordenlijst &lbrace;van de documentatie voor term definities te raadplegen.](/help/concurrency-monitoring/cm-glossary.md)
 
 A **huurder** bezit **toepassingen** waarvoor het **beleid** wenst af te dwingen. **de toepassingen van de Cliënt** moeten met **toepassingsidentiteitskaart** worden gevormd (die door Adobe wordt verstrekt).
 
@@ -27,7 +27,7 @@ Voor elk van het toepasselijke beleid, moeten wij dan alle **relevante activitei
 
 **de stroom &quot;S&quot;is begonnen door een toepassing die beleid &quot;P&quot;onder zijn beleid omvat.**
 
-![ de stroom &quot;S&quot;is begonnen door een toepassing die beleid &quot;P&quot;onder zijn beleid omvat.](assets/pdp-domain-model.png)
+![&#x200B; de stroom &quot;S&quot;is begonnen door een toepassing die beleid &quot;P&quot;onder zijn beleid omvat.](assets/pdp-domain-model.png)
 
 ## Droog gebruik {#dry-run-use-cases}
 
@@ -39,7 +39,7 @@ Wij zullen met één enkele huurder, met één enkele toepassing en één enkel 
 
 Wanneer een stream is gestart, bestaat de activiteit alleen uit die stream en kan deze worden afgespeeld.
 
-![ Één huurder. Eén toepassing. Eén beleid. Eén stream ](assets/onetenant-app-policy-stream.png)
+![&#x200B; Één huurder. Eén toepassing. Eén beleid. Eén stream &#x200B;](assets/onetenant-app-policy-stream.png)
 
 
 ### &#x200B;2. Eén huurder. Eén toepassing. Eén beleid. Twee stromen. {#onetenant-oneapp-onepolicy-twostreams}
@@ -48,7 +48,7 @@ Zodra een tweede stroom (door het zelfde onderwerp gebruikend de zelfde toepassi
 
 De grens wordt overschreden omdat het beleid verklaart dat slechts één stroom wordt toegestaan om te spelen, zodat zullen wij slechts de recentste stroom (**s2**) toestaan om te spelen.
 
-![ Één huurder. Eén toepassing. Eén beleid. Twee stromen.](assets/tenant-app-policy-twostream.png)
+![&#x200B; Één huurder. Eén toepassing. Eén beleid. Twee stromen.](assets/tenant-app-policy-twostream.png)
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ De grens wordt overschreden omdat het beleid verklaart dat slechts één stroom 
 
 Laten wij nu veronderstellen dat een nieuwe huurder het zelfde beleid in hun toepassingen wil afdwingen:
 
-![ Twee huurders. Twee toepassingen. Eén beleid. Twee stromen.](assets/onepolicy-twotenant-app-stream.png)
+![&#x200B; Twee huurders. Twee toepassingen. Eén beleid. Twee stromen.](assets/onepolicy-twotenant-app-stream.png)
 
 Wegens de twee huurders die door het zelfde beleid worden verbonden, is de situatie die in gebruik 2 wordt beschreven hier van toepassing en **s3** wordt toegestaan om te spelen aangezien het de recentste stroom is.
 
@@ -66,7 +66,7 @@ Wegens de twee huurders die door het zelfde beleid worden verbonden, is de situa
 
 Nu, veronderstellen dat de tweede huurder een nieuwe toepassing opstelt en een nieuw beleid wil bepalen dat tussen **app2** en **app3** zal worden gedeeld.
 
-![ Twee huurders. Drie toepassingen. Twee beleidsvormen. Twee stromen.](assets/twotenant-policies-streams-threeapps.png)
+![&#x200B; Twee huurders. Drie toepassingen. Twee beleidsvormen. Twee stromen.](assets/twotenant-policies-streams-threeapps.png)
 
 Op dit ogenblik, worden de actieve stromen **s3** en **s4** allebei toegestaan. Voor **s3**, wanneer beleid **P1** wordt geëvalueerd, zal het systeem **s3** slechts tellen als **relevante activiteit** (**s4** is op geen manier verwant met beleid **P1**) zodat is er geen schending.
 
@@ -76,7 +76,7 @@ Het beleid **P2** wordt toegepast op beide stromen en het zal zowel **s3** en **
 
 Nu veronderstellend dat een nieuwe poging van de stroominitialisatie gebruikend **app2** wordt uitgevoerd:
 
-![ Twee huurders. Drie toepassingen. Twee beleidsvormen. Drie stromen.](assets/twotenants-policies-threeapps-streams.png)
+![&#x200B; Twee huurders. Drie toepassingen. Twee beleidsvormen. Drie stromen.](assets/twotenants-policies-threeapps-streams.png)
 
 **s5** wordt toegestaan om door **P1** te beginnen (die nieuwere stromen toestaat om over te nemen) maar het wordt ontkend door **P2**, zodat zal het niet beginnen.
 

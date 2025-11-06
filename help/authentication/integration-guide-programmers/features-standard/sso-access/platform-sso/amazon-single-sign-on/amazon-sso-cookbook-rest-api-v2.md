@@ -17,7 +17,7 @@ ht-degree: 0%
 
 De Adobe Pass Authentication REST API V2 biedt ondersteuning voor Platform Single Sign-On (SSO) voor eindgebruikers van clienttoepassingen die op FireOS worden uitgevoerd.
 
-Dit document doet dienst als uitbreiding aan het bestaande [ REST API V2 Overzicht ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md) dat een mening op hoog niveau en het document verstrekt dat beschrijft hoe te om [ Enige sign-on uit te voeren gebruikend de stromen van de platformidentiteit ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-platform-identity-flows.md).
+Dit document doet dienst als uitbreiding aan het bestaande [&#x200B; REST API V2 Overzicht &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md) dat een mening op hoog niveau en het document verstrekt dat beschrijft hoe te om [&#x200B; Enige sign-on uit te voeren gebruikend de stromen van de platformidentiteit &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-platform-identity-flows.md).
 
 ## Amazon Single Sign-On met identiteitsstromen van platforms {#cookbook}
 
@@ -29,7 +29,7 @@ Voordat u verdergaat met de Amazon Single Sign-On met behulp van platformidentit
 
 #### Amazon SSO SDK integreren {#integrate-amazon-sso-sdk}
 
-De het stromen toepassing moet de [ Amazon SSO SDK ](https://tve.zendesk.com/hc/en-us/article_attachments/360064368131/ottSSOTokenLib_v1.jar) bibliotheek voor Enige Sign-On (SSO) in zijn bouwstijl integreren.
+De het stromen toepassing moet de [&#x200B; Amazon SSO SDK &#x200B;](https://tve.zendesk.com/hc/en-us/article_attachments/360064368131/ottSSOTokenLib_v1.jar) bibliotheek voor Enige Sign-On (SSO) in zijn bouwstijl integreren.
 
 * Download en kopieer de nieuwste Amazon SSO SDK-bibliotheek naar een `/SSOEnabler` -map parallel aan de map van de toepassing.
 
@@ -153,7 +153,7 @@ Adobe Pass Authentication REST API V2 ondersteunt de volgende methoden voor het 
 
 >[!IMPORTANT]
 > 
-> Voor meer details over `Adobe-Subject-Token` kopbal, verwijs naar [ Adobe-Onderwerp-Symbolische ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) documentatie.
+> Voor meer details over `Adobe-Subject-Token` kopbal, verwijs naar [&#x200B; Adobe-Onderwerp-Symbolische &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) documentatie.
 
 #### Voorbeelden
 

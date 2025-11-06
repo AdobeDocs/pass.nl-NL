@@ -11,18 +11,18 @@ ht-degree: 0%
 
 # API-overzicht {#api-overview}
 
-Bekijk de [ online API documentatie ](http://docs.adobeptime.io/cm-api-v2/) voor meer details.
+Bekijk de [&#x200B; online API documentatie &#x200B;](http://docs.adobeptime.io/cm-api-v2/) voor meer details.
 
 ## Doel en voorwaarden {#purpose-prerequisites}
 
-Dit document helpt toepassingsontwikkelaars om onze Swagger API-specificatie te gebruiken bij het implementeren van een integratie met Gelijktijdige bewaking. Het wordt ten zeerste aanbevolen dat de lezer een eerder inzicht heeft in de concepten die door de service zijn gedefinieerd voordat deze richtlijn wordt gevolgd. Om dit begrip te hebben, is het noodzakelijk om een overzicht van de [ productdocumentatie ](/help/concurrency-monitoring/cm-home.md) en de [ Tagger API specificatie ](http://docs.adobeptime.io/cm-api-v2/) te hebben.
+Dit document helpt toepassingsontwikkelaars om onze Swagger API-specificatie te gebruiken bij het implementeren van een integratie met Gelijktijdige bewaking. Het wordt ten zeerste aanbevolen dat de lezer een eerder inzicht heeft in de concepten die door de service zijn gedefinieerd voordat deze richtlijn wordt gevolgd. Om dit begrip te hebben, is het noodzakelijk om een overzicht van de [&#x200B; productdocumentatie &#x200B;](/help/concurrency-monitoring/cm-home.md) en de [&#x200B; Tagger API specificatie &#x200B;](http://docs.adobeptime.io/cm-api-v2/) te hebben.
 
 
 ## Inleiding {#api-overview-intro}
 
 Tijdens het ontwikkelingsproces vormt de openbare documentatie van Swagger de referentierichtlijn voor het begrijpen en testen van de API-stromen. Dit is een grote plaats om te beginnen om een hands-on benadering te hebben en vertrouwd te worden met de manier de echte toepassingen zich in verschillende scenario&#39;s van gebruikersinteractie zouden gedragen.
 
-Verzend een kaartje in [ Zendesk ](mailto:tve-support@adobe.com) om uw bedrijf en toepassingen in de Controle van de Valuta te registreren. Adobe wijst een toepassings-id toe aan elke entiteit. In deze gids zullen wij twee verwijzingstoepassingen met ids **demo-app** en **demo-app-2** gebruiken die onder de huurder Adobe zullen zijn.
+Verzend een kaartje in [&#x200B; Zendesk &#x200B;](mailto:tve-support@adobe.com) om uw bedrijf en toepassingen in de Controle van de Valuta te registreren. Adobe wijst een toepassings-id toe aan elke entiteit. In deze gids zullen wij twee verwijzingstoepassingen met ids **demo-app** en **demo-app-2** gebruiken die onder de huurder Adobe zullen zijn.
 
 
 ## Gebruik hoofdletters {#api-use-case}
@@ -49,7 +49,7 @@ Na het drukken &quot;uitproberen het&quot;, voor de toepassing met identiteitska
 
 ![](assets/empty-metadata-call.png)
 
-Zoals u kunt zien in het veld voor de responsstructuur, is de lijst met metagegevenskenmerken leeg. Dit betekent dat de kenmerken die door het ontwerp worden vereist, voldoende zijn om het beleid voor drie streams te evalueren dat aan deze toepassing is toegewezen. Zie ook, de [ Standaarddocumentatie van de Gebieden van Meta-gegevens ](/help/concurrency-monitoring/standard-metadata-attributes.md). Na deze vraag, kunnen wij verdergaan en een nieuwe zitting op het middel van de REST van Sessies tot stand brengen.
+Zoals u kunt zien in het veld voor de responsstructuur, is de lijst met metagegevenskenmerken leeg. Dit betekent dat de kenmerken die door het ontwerp worden vereist, voldoende zijn om het beleid voor drie streams te evalueren dat aan deze toepassing is toegewezen. Zie ook, de [&#x200B; Standaarddocumentatie van de Gebieden van Meta-gegevens &#x200B;](/help/concurrency-monitoring/standard-metadata-attributes.md). Na deze vraag, kunnen wij verdergaan en een nieuwe zitting op het middel van de REST van Sessies tot stand brengen.
 
 
 #### Sessieinitialisatie {#session-initial}
@@ -60,7 +60,7 @@ De vraag van de zittingsinitialisatie wordt gedaan door een toepassing na het ve
 
 Er is geen behoefte om enige beëindigingscode op de eerste vraag te verstrekken omdat wij geen andere actieve stromen hebben. En geen metagegevenskenmerk omdat geen van de aanroepen van metagegevens is geretourneerd.
 
-Het **onderwerp** en **idp** parameters zijn verplicht, zullen zij als de wegvariabelen van URI worden gespecificeerd. U kunt het **onderwerp** en **idp** parameters verkrijgen door een vraag naar **mvpd** en **upstreamUserID** meta-gegevensgebieden van de Authentificatie van Adobe Pass te maken. Zie ook, het [ overzicht van Meta-gegevens APIs ](https://experienceleague.adobe.com/docs/primetime/authentication/auth-features/user-metadat/user-metadata-feature.html?lang=en#). In dit voorbeeld geven we de waarde &quot;12345&quot; als het onderwerp en &quot;adobe&quot; als het idp.
+Het **onderwerp** en **idp** parameters zijn verplicht, zullen zij als de wegvariabelen van URI worden gespecificeerd. U kunt het **onderwerp** en **idp** parameters verkrijgen door een vraag naar **mvpd** en **upstreamUserID** meta-gegevensgebieden van de Authentificatie van Adobe Pass te maken. Zie ook, het [&#x200B; overzicht van Meta-gegevens APIs &#x200B;](https://experienceleague.adobe.com/docs/primetime/authentication/auth-features/user-metadat/user-metadata-feature.html?lang=en#). In dit voorbeeld geven we de waarde &quot;12345&quot; als het onderwerp en &quot;adobe&quot; als het idp.
 
 
 ![](assets/session-init-params-frstapp.png)
@@ -135,7 +135,7 @@ Als er geen lopende zittingen voor een specifieke gebruiker zijn wanneer u de vr
 
 ![](assets/get-all-running-streams-empty.png)
 
-Merk ook op dat in dit geval **** kopbal niet aanwezig is.
+Merk ook op dat in dit geval **&#x200B;**&#x200B;kopbal niet aanwezig is.
 
 In het geval dat een zitting werd gecreeerd dodend een andere, gebruikend **x-beëindigt** kopbal, onder meta-gegevens u gebied **vervangen** zult vinden. De waarde is een indicator van de gedode sessie om ruimte te maken voor de huidige sessie.
 
@@ -156,7 +156,7 @@ Deze informatie is bedoeld voor geavanceerde opmaak van foutberichten en voor he
 
 Elke conflicterende zitting zal a **terminateCode** dragen die voor **kan worden gebruikt het doden** die stroom. Op deze manier kan de toepassing de gebruiker toestaan om te kiezen welke sessie(s) worden beëindigd om toegang te krijgen tot de huidige sessie.
 
-De toepassing kan de informatie van het evaluatieresultaat gebruiken om een bepaald bericht aan de gebruiker te tonen wanneer het tegenhouden van de video en verdere acties te nemen indien nodig. U kunt andere bestaande streams stoppen om een nieuwe te starten. Dit wordt gedaan door de **waarde te gebruiken 0} terminateCode die op het** **gebied voor een specifiek conflicterend attribuut aanwezig is.** De waarde zal als X-beëindig HTTP- kopbal in de vraag naar een nieuwe zittingsinitialisering worden verstrekt.
+De toepassing kan de informatie van het evaluatieresultaat gebruiken om een bepaald bericht aan de gebruiker te tonen wanneer het tegenhouden van de video en verdere acties te nemen indien nodig. U kunt andere bestaande streams stoppen om een nieuwe te starten. Dit wordt gedaan door de **waarde te gebruiken 0&rbrace; terminateCode die op het** **gebied voor een specifiek conflicterend attribuut aanwezig is.** De waarde zal als X-beëindig HTTP- kopbal in de vraag naar een nieuwe zittingsinitialisering worden verstrekt.
 
 ![](assets/session-init-termination-code.png)
 

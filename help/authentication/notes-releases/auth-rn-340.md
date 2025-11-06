@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 Op deze pagina worden nieuwe functies, wijzigingen en bekende problemen met deze release beschreven:
 
@@ -31,14 +31,14 @@ Datum van de versie: **09/16/2025 - 09/18/2025**
 
 #### REST API v2
 
-* Toegevoegde steun voor [ identiteitskaart van Experience Cloud (ECID) ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-visitor-identifier.md) om gebruikersidentificatie en het volgen mogelijkheden te verbeteren.
-* De veranderde kopballen AP-Apparaat-Herkenningsteken en x-Apparaat-Info aan facultatief voor REST API V2 [ Configuratie API ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider.md).
+* Toegevoegde steun voor [&#x200B; identiteitskaart van Experience Cloud (ECID) &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-visitor-identifier.md) om gebruikersidentificatie en het volgen mogelijkheden te verbeteren.
+* De veranderde kopballen AP-Apparaat-Herkenningsteken en x-Apparaat-Info aan facultatief voor REST API V2 [&#x200B; Configuratie API &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider.md).
 
 #### Opgeloste problemen
 
-* Probleem verholpen waar identiteitskaart van MVPD en identiteitskaart van de Volmacht MVPD in het teken van REST API V2 [ de reactie van Besluiten ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) werd omgekeerd.
-* Oplossing voor een kwestie waar verzoekers identiteitskaart niet aanwezig in het teken van REST API V2 [ de reactie van Besluiten ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) was.
-* Vaste een kwestie waar het overgaan te veel middelen aan REST API V2 [ vooraf goedkeurde Besluiten ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md) API in een lege besluitenlijst in de reactie in plaats van de [ Verbeterde Code van de Fout ](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) **to_many_resources** resulteerde.
+* Probleem verholpen waar identiteitskaart van MVPD en identiteitskaart van de Volmacht MVPD in het teken van REST API V2 [&#x200B; de reactie van Besluiten &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) werd omgekeerd.
+* Oplossing voor een kwestie waar verzoekers identiteitskaart niet aanwezig in het teken van REST API V2 [&#x200B; de reactie van Besluiten &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) was.
+* Vaste een kwestie waar het overgaan te veel middelen aan REST API V2 [&#x200B; vooraf goedkeurde Besluiten &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md) API in een lege besluitenlijst in de reactie in plaats van de [&#x200B; Verbeterde Code van de Fout &#x200B;](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) **to_many_resources** resulteerde.
 
 #### Dic
 

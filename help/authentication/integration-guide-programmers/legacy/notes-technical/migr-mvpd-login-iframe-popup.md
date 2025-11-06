@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 ## Pop-up en iFrame {#popup-vs-iframe}
 
@@ -235,4 +235,4 @@ function checkClosed() {
 >* De voorbeeldcode bevat een hardcoded variabele voor de gebruikte requestID - &#39;REF&#39;, die moet worden vervangen door een echte id van de programmeur.
 >* De voorbeeldcode wordt alleen correct uitgevoerd vanuit een zwevend domein dat is gekoppeld aan de gebruikte aanvrager-id.
 >* Aangezien de gehele code kan worden gedownload, is de code in deze technische notitie afgebroken. Voor een volledige steekproef, zie **JS iFrame vs Pop-up Steekproef**.
->* De externe bibliotheken van JavaScript werden verbonden van [ Google Ontvangen Diensten ](https://developers.google.com/speed/libraries/).
+>* De externe bibliotheken van JavaScript werden verbonden van [&#x200B; Google Ontvangen Diensten &#x200B;](https://developers.google.com/speed/libraries/).

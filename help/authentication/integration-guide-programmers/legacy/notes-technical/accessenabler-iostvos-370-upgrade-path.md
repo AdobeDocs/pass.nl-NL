@@ -17,11 +17,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 </br>
 
-De veranderingen van de keychain opslag van [ nieuwe versie AccessEnabler 3.7.0 ](/help/authentication/notes-releases/authn-rn-ios-tvos-370.md) zijn onverenigbaar met de implementatie van de keychain opslag van versie AccessEnabler lager dan 3.7.0.
+De veranderingen van de keychain opslag van [&#x200B; nieuwe versie AccessEnabler 3.7.0 &#x200B;](/help/authentication/notes-releases/authn-rn-ios-tvos-370.md) zijn onverenigbaar met de implementatie van de keychain opslag van versie AccessEnabler lager dan 3.7.0.
 
 Het verbeteringspad voor één toepassing die nieuwe AccessEnabler versie 3.7.0 goedkeurt zal alle tekenen van vorige versie/s van de opslag van de Keychain migreren. Daarom zouden de eind - gebruikers **geen verlies van authentificatie/vergunningszittingen** tijdens het AccessEnabler proces van de kaderupdate moeten ervaren.
 

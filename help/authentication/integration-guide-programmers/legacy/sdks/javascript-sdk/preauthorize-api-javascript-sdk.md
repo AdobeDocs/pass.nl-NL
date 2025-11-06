@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 ## Overzicht {#preauth-overview}
 
@@ -255,8 +255,8 @@ accessEnablerApi.preauthorize(request, callback);
 
      &quot;JavaScript 
     
-     {
-     &quot;besluiten&quot;: [
+     &lbrace;
+     &quot;besluiten&quot;: &lbrack;
      
      &quot;identiteitskaart&quot;: &quot;RES01&quot;, 
      &quot;geautoriseerd&quot;: waar 
@@ -265,11 +265,11 @@ accessEnablerApi.preauthorize(request, callback);
      &quot;identiteitskaart&quot;: &quot;RES02&quot;, 
      &quot;geautoriseerd&quot;: vals 
     , 
-     {
+     &lbrace;
      &quot;identiteitskaart&quot; RES: &quot;03&quot;, 
      &quot;geautoriseerd&quot;: waar 
      
-    ] 
+    &rbrack; 
      
     
     &quot;
@@ -282,8 +282,8 @@ accessEnablerApi.preauthorize(request, callback);
     <td>
 
      &quot;JavaScript 
-     {
-     &quot;besluiten&quot;: [
+     &lbrace;
+     &quot;besluiten&quot;: &lbrack;
      
      &quot;identiteitskaart&quot;: &quot;RES01&quot;, 
      &quot;geautoriseerd&quot;: waar 
@@ -299,11 +299,11 @@ accessEnablerApi.preauthorize(request, callback);
      &quot;actie&quot;: &quot;niets&quot;
      
     , 
-     {
+     &lbrace;
      &quot;identiteitskaart&quot;: &quot;RES03&quot;, 
      &quot;geautoriseerd&quot;: waar 
     , 
-    ] 
+    &rbrack; 
      
     
     &quot;
@@ -329,8 +329,8 @@ accessEnablerApi.preauthorize(request, callback);
 
      &quot;JavaScript 
     
-     {
-     &quot;besluiten&quot;: [
+     &lbrace;
+     &quot;besluiten&quot;: &lbrack;
      
      &quot;identiteitskaart&quot;: &quot;RES01&quot;, 
      &quot;geautoriseerd&quot;: vals 
@@ -339,11 +339,11 @@ accessEnablerApi.preauthorize(request, callback);
      &quot;identiteitskaart&quot;: &quot;RES02&quot;, 
      &quot;geautoriseerd&quot;: vals 
     , 
-     {
+     &lbrace;
      &quot;identiteitskaart&quot; RES: 03&quot;,
      &quot;geautoriseerd&quot;: vals 
      
-    ] 
+    &rbrack; 
      
     
     &quot;
@@ -357,9 +357,9 @@ accessEnablerApi.preauthorize(request, callback);
 
      &quot;JavaScript 
     
-     {
-     &quot;besluiten&quot;: [
-     {
+     &lbrace;
+     &quot;besluiten&quot;: &lbrack;
+     &lbrace;
      &quot;identiteitskaart&quot;: &quot;RES01&quot;, 
      &quot;geautoriseerd&quot;: vals, 
      &quot;fout&quot;: 
@@ -381,7 +381,7 @@ accessEnablerApi.preauthorize(request, callback);
      &quot;actie&quot;: &quot;none&quot;
      
     , 
-     {
+     &lbrace;
      &quot;id&quot;: &quot;RES03&quot;, 
      &quot;geautoriseerd&quot;: vals, 
      &quot;fout&quot;: 
@@ -392,7 +392,7 @@ accessEnablerApi.preauthorize(request, callback);
      &quot;actie&quot;: &quot;retry&quot;
      
      
-    ] 
+    &rbrack; 
      
     
     &quot;
@@ -417,7 +417,7 @@ accessEnablerApi.preauthorize(request, callback);
     <td>
 
      &quot;JavaScript 
-     {
+     &lbrace;
      &quot;status&quot;: 
      &quot;status&quot;: 400, 
      &quot;code&quot;: &quot;internal_error&quot;, 
@@ -450,7 +450,7 @@ accessEnablerApi.preauthorize(request, callback);
     <td>
 
      &quot;JavaScript 
-     {
+     &lbrace;
      &quot;status&quot;: 
      &quot;status&quot;: 412, 
      &quot;code&quot;: &quot;missing_resource&quot;, 
@@ -459,7 +459,7 @@ accessEnablerApi.preauthorize(request, callback);
      &quot;actie&quot;: &quot;niets&quot;
     , 
      &quot;decisions&quot;: [] 
-    } 
+    &rbrace; 
     &quot;
 
 </td>
@@ -482,8 +482,8 @@ accessEnablerApi.preauthorize(request, callback);
     <td>
 
      &quot;JavaScript 
-     {
-     &quot;besluiten&quot;: [
+     &lbrace;
+     &quot;besluiten&quot;: &lbrack;
      
      &quot;identiteitskaart&quot;: &quot;RES01&quot;, 
      &quot;geautoriseerd&quot;: vals, 
@@ -506,7 +506,7 @@ accessEnablerApi.preauthorize(request, callback);
      &quot;actie&quot;: &quot;retry&quot;
      
      
-    ] 
+    &rbrack; 
      
     &quot;
 
@@ -530,7 +530,7 @@ accessEnablerApi.preauthorize(request, callback);
     <td>
 
      &quot;JavaScript 
-     {
+     &lbrace;
      &quot;status&quot;: 
      &quot;status&quot;: 0, 
      &quot;code&quot;: &quot;authentication_session_missing&quot;, 
@@ -564,7 +564,7 @@ accessEnablerApi.preauthorize(request, callback);
     <td>
 
      &quot;JavaScript 
-     {
+     &lbrace;
      &quot;status&quot;: 
      &quot;status&quot;: 0, 
      &quot;code&quot;: &quot;requestor_not_configured&quot;, 

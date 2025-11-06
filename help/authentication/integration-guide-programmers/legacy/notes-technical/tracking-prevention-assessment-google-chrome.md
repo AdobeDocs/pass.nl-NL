@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 ## Overzicht
 
@@ -29,16 +29,16 @@ De evaluatie wordt uitgevoerd voor TVE-toepassingen (TV Anywhere) die worden uit
 
 Hieronder vindt u een lijst met bronnen die zijn verzameld op de website van Google Developer en ook op hun officiële blog waarin we onze klanten aanbevelen om te raadplegen:
 
-* [ de volgende stap naar het geleidelijk uit elimineren derdekoekjes in Chrome ](https://blog.google/products/chrome/privacy-sandbox-tracking-protection/)
-* [ documentatie van de Ontwikkelaar voor Sandbox van de Privacy ](https://developers.google.com/privacy-sandbox)
-* [ voorbereidingen voor derdekoekjesbeperkingen ](https://developers.google.com/privacy-sandbox/3pcd)
-* [ voorbereidingen voor de dederdekoekjesgeleidelijke eliminatie ](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout)
-* [ Voorbereidend voor het eind van derdekoekjes ](https://developers.google.com/privacy-sandbox/blog/cookie-countdown-2023oct)
-* [ derdekoekjes die door gebrek voor 1% van de gebruikers van Chrome worden beperkt ](https://developers.google.com/privacy-sandbox/blog/cookie-countdown-2024jan)
+* [&#x200B; de volgende stap naar het geleidelijk uit elimineren derdekoekjes in Chrome &#x200B;](https://blog.google/products/chrome/privacy-sandbox-tracking-protection/)
+* [&#x200B; documentatie van de Ontwikkelaar voor Sandbox van de Privacy &#x200B;](https://developers.google.com/privacy-sandbox)
+* [&#x200B; voorbereidingen voor derdekoekjesbeperkingen &#x200B;](https://developers.google.com/privacy-sandbox/3pcd)
+* [&#x200B; voorbereidingen voor de dederdekoekjesgeleidelijke eliminatie &#x200B;](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout)
+* [&#x200B; Voorbereidend voor het eind van derdekoekjes &#x200B;](https://developers.google.com/privacy-sandbox/blog/cookie-countdown-2023oct)
+* [&#x200B; derdekoekjes die door gebrek voor 1% van de gebruikers van Chrome worden beperkt &#x200B;](https://developers.google.com/privacy-sandbox/blog/cookie-countdown-2024jan)
 
 ## Tijdlijn
 
-Als kort samenvattend Google Chrome begon [ het Volgen Beveiliging ](https://privacysandbox.com/) te testen, een nieuwe eigenschap die dwars-plaats het volgen beïnvloedt die alle derdekoekjes beïnvloedt.
+Als kort samenvattend Google Chrome begon [&#x200B; het Volgen Beveiliging &#x200B;](https://privacysandbox.com/) te testen, een nieuwe eigenschap die dwars-plaats het volgen beïnvloedt die alle derdekoekjes beïnvloedt.
 
 Aanvankelijk begon dit begin 2024, wat ongeveer 1% van de gebruikers betreft en hun (tentatieve) plan is om dit met ingang van het derde kwartaal van 2024 met maximaal 100% van de gebruikers te verlengen.
 
@@ -68,7 +68,7 @@ Raadpleeg de volgende secties voor hulp bij het ontwikkelen van uw zelfbeoordeli
 
 ### Controle van het gebruik van cookies
 
-Beginnend met Chrome 118, benadrukt het [ lusje van de Kwesties DevTools potentieel beïnvloede koekjes met het volgende bericht: ](https://developer.chrome.com/docs/devtools/issues/).`Cookie sent in cross-site context will be blocked in future Chrome versions`
+Beginnend met Chrome 118, benadrukt het [&#x200B; lusje van de Kwesties DevTools potentieel beïnvloede koekjes met het volgende bericht: &#x200B;](https://developer.chrome.com/docs/devtools/issues/).`Cookie sent in cross-site context will be blocked in future Chrome versions`
 
 Cookies die zijn gemarkeerd voor gebruik door derden, kunnen worden geïdentificeerd aan de hand van hun kenmerkwaarde `SameSite=None` .
 

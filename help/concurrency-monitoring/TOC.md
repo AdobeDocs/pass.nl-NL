@@ -15,7 +15,7 @@ ht-degree: 11%
 # Hulp bij Adobe Pass-controle op gelijktijdige valuta {#cm}
 
 - [Gelijktijdige bewaking](cm-home.md)
-- [ Gelijktijdige Woordenlijst van de Controle ](cm-glossary.md)
+- [&#x200B; Gelijktijdige Woordenlijst van de Controle &#x200B;](cm-glossary.md)
 - [Gelijktijdige controle](cm-use-cases.md)
 - [Beleidsbeslissingspunt](cm-policy-decision-point.md)
 - [Overzicht van API voor gelijktijdige bewaking](cm-api-overview.md)

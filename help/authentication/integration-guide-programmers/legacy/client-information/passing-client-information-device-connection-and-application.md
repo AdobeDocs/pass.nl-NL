@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 ## Toepassingsgebied {#pass-client-info-scope}
 
@@ -93,7 +93,7 @@ Adobe Pass-verificatieservices bieden op de volgende manieren ondersteuning voor
 
 De AccessEnabler JavaScript SDK bouwt standaard een JSON-object met clientinformatie dat wordt doorgegeven aan de Adobe Pass Authentication-services, tenzij dit wordt overschreven.
 
-JavaScript AccessEnabler SDK steunt **het met voeten treden slechts** de &quot;applicationId&quot;sleutel van de cliëntinformatie JSON voorwerp door [ setRequestor ](/help/authentication/integration-guide-programmers/legacy/sdks/javascript-sdk/javascript-sdk-api-reference.md#setrequestor(inRequestorID,endpoints,options)) *applicationId* optiesparameter.
+JavaScript AccessEnabler SDK steunt **het met voeten treden slechts** de &quot;applicationId&quot;sleutel van de cliëntinformatie JSON voorwerp door [&#x200B; setRequestor &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/javascript-sdk/javascript-sdk-api-reference.md#setrequestor(inRequestorID,endpoints,options)) *applicationId* optiesparameter.
 
 >[!CAUTION]
 >
@@ -104,19 +104,19 @@ JavaScript AccessEnabler SDK steunt **het met voeten treden slechts** de &quot;a
 
 De AccessEnabler iOS/tvOS SDK bouwt standaard een JSON-object met clientinformatie dat wordt doorgegeven aan de Adobe Pass Authentication-services, tenzij dit wordt overschreven.
 
-AccessEnabler iOS/tvOS SDK steunt **het met voeten treden van de volledige** cliëntinformatie JSON voorwerp door de [ setOptions ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#setoptions) apparaat_info parameter.
+AccessEnabler iOS/tvOS SDK steunt **het met voeten treden van de volledige** cliëntinformatie JSON voorwerp door de [&#x200B; setOptions &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#setoptions) apparaat_info parameter.
 
 >[!CAUTION]
 >
 >De *device_info* parameterwaarde moet a **Base64 gecodeerde** ** waarde zijn NSString.
 >
->In het geval dat de toepassing van de Programmer besluit om *device_info* over te gaan, dan zullen alle sleutels van cliëntinformatie die door AccessEnabler iOS/tvOS SDK worden gegevens verwerkt worden met voeten getreden. Daarom is het zeer belangrijk om de waarden voor zoveel mogelijk sleutels te berekenen en over te gaan. Voor meer details betreffende de implementatie, zie de [ lijst van het 0} Overzicht {en ](#pass-client-info-overview) het koekjesboek van iOS/tvOS [.](#ios-tvos)
+>In het geval dat de toepassing van de Programmer besluit om *device_info* over te gaan, dan zullen alle sleutels van cliëntinformatie die door AccessEnabler iOS/tvOS SDK worden gegevens verwerkt worden met voeten getreden. Daarom is het zeer belangrijk om de waarden voor zoveel mogelijk sleutels te berekenen en over te gaan. Voor meer details betreffende de implementatie, zie de [&#x200B; lijst van het 0&rbrace; Overzicht &lbrace;en &#x200B;](#pass-client-info-overview) het koekjesboek van iOS/tvOS [.](#ios-tvos)
 
 #### Android/FireOS SDK {#and-fire-os-sdk}
 
 De `AccessEnabler` Android/FireOS SDK bouwt standaard een JSON-object met clientinformatie dat wordt doorgegeven aan de Adobe Pass-verificatieservices, tenzij dit wordt overschreven.
 
-De `AccessEnabler` Android/FireOS SDK steunt **met voeten tredend de volledige** cliëntinformatie JSON voorwerp door de [ setOptions ](/help/authentication/integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-api-reference.md#setOptions) [ setOptions ](/help/authentication/integration-guide-programmers/legacy/sdks/fireos-sdk/amazon-fireos-native-client-api-reference.md#fire_setOption) parameter `device_info`.
+De `AccessEnabler` Android/FireOS SDK steunt **met voeten tredend de volledige** cliëntinformatie JSON voorwerp door de [&#x200B; setOptions &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-api-reference.md#setOptions) [&#x200B; setOptions &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/fireos-sdk/amazon-fireos-native-client-api-reference.md#fire_setOption) parameter `device_info`.
 
 >[!NOTE]
 >
@@ -124,7 +124,7 @@ De `AccessEnabler` Android/FireOS SDK steunt **met voeten tredend de volledige**
 
 >[!IMPORTANT]
 >
->Als de programmeertoepassing besluit om `device_info` door te geven, worden alle sleutels voor clientinformatie die door de `AccessEnabler` Android/FireOS SDK zijn berekend, overschreven. Daarom is het zeer belangrijk om de waarden voor zoveel mogelijk sleutels te berekenen en over te gaan. Voor meer details betreffende de implementatie, zie de [ lijst van het 0} Overzicht {en ](#pass-client-info-overview) Android [ en ](#android) FireOS [ kookboek.](#fire-tv)
+>Als de programmeertoepassing besluit om `device_info` door te geven, worden alle sleutels voor clientinformatie die door de `AccessEnabler` Android/FireOS SDK zijn berekend, overschreven. Daarom is het zeer belangrijk om de waarden voor zoveel mogelijk sleutels te berekenen en over te gaan. Voor meer details betreffende de implementatie, zie de [&#x200B; lijst van het 0&rbrace; Overzicht &lbrace;en &#x200B;](#pass-client-info-overview) Android [&#x200B; en &#x200B;](#android) FireOS [&#x200B; kookboek.](#fire-tv)
 
 ## Cookbooks {#cookbooks}
 
@@ -244,7 +244,7 @@ private JSONObject computeClientInformation() {
 >[!NOTE]
 >
 >**Middelen:**
->* de openbare klasse [ bouwt ](https://developer.android.com/reference/android/os/Build.html){target=_blank} in de documentatie van ontwikkelaars van Java.
+>* de openbare klasse [&#x200B; bouwt &#x200B;](https://developer.android.com/reference/android/os/Build.html){target=_blank} in de documentatie van ontwikkelaars van Java.
 
 ### FireTV {#fire-tv}
 
@@ -281,8 +281,8 @@ De toepassingsinformatie kan als volgt worden samengesteld:
 >[!NOTE]
 >
 >**Middelen:**
->* openbare klasse [ bouwt ](https://developer.android.com/reference/android/os/Build.html){target=_blank} in de documentatie van ontwikkelaars van Android.
->* [ identificerend apparaten FireTV ](https://developer.amazon.com/docs/fire-tv/identify-amazon-fire-tv-devices.html){target=_blank}
+>* openbare klasse [&#x200B; bouwt &#x200B;](https://developer.android.com/reference/android/os/Build.html){target=_blank} in de documentatie van ontwikkelaars van Android.
+>* [&#x200B; identificerend apparaten FireTV &#x200B;](https://developer.amazon.com/docs/fire-tv/identify-amazon-fire-tv-devices.html){target=_blank}
 
 ### iOS/tvOS {#ios-tvos}
 
@@ -388,9 +388,9 @@ De toepassingsinformatie kan als volgt worden samengesteld:
 >[!NOTE]
 >
 >**Middelen:**
->* [ UIDevice ](https://developer.apple.com/documentation/uikit/uidevice#//apple_ref/occ/cl/UIDevice){target=_blank}
->* [ uname ](https://man7.org/linux/man-pages/man2/uname.2.html){target=_blank}
->* [ Ongeveer Reachability ](https://developer.apple.com/library/archive/samplecode/Reachability/Introduction/Intro.html){target=_blank}
+>* [&#x200B; UIDevice &#x200B;](https://developer.apple.com/documentation/uikit/uidevice#//apple_ref/occ/cl/UIDevice){target=_blank}
+>* [&#x200B; uname &#x200B;](https://man7.org/linux/man-pages/man2/uname.2.html){target=_blank}
+>* [&#x200B; Ongeveer Reachability &#x200B;](https://developer.apple.com/library/archive/samplecode/Reachability/Introduction/Intro.html){target=_blank}
 
 ### Roku {#roku}
 
@@ -426,7 +426,7 @@ De toepassingsinformatie kan als volgt worden samengesteld:
 
 >[!NOTE]
 >
->Voor meer informatie, zie [ ifDeviceInfo ](https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md)
+>Voor meer informatie, zie [&#x200B; ifDeviceInfo &#x200B;](https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md)
 
 ### XBOX 1/360 {#xbox}
 
@@ -462,5 +462,5 @@ De toepassingsinformatie kan als volgt worden samengesteld:
 
 **Middelen**
 
-* [ Klasse EasClientDeviceInformation ](https://docs.microsoft.com/en-us/uwp/api/windows.security.exchangeactivesyncprovisioning.easclientdeviceinformation?view=winrt-22000)
-* [ Klasse DisplayInformation ](https://docs.microsoft.com/en-us/uwp/api/windows.graphics.display.displayinformation?view=winrt-22000)
+* [&#x200B; Klasse EasClientDeviceInformation &#x200B;](https://docs.microsoft.com/en-us/uwp/api/windows.security.exchangeactivesyncprovisioning.easclientdeviceinformation?view=winrt-22000)
+* [&#x200B; Klasse DisplayInformation &#x200B;](https://docs.microsoft.com/en-us/uwp/api/windows.graphics.display.displayinformation?view=winrt-22000)

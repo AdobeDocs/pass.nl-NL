@@ -17,15 +17,15 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 ## Overzicht {#overview}
 
 Foutrapportage in Adobe Pass-verificatie wordt momenteel op twee verschillende manieren geïmplementeerd:
 
-* **Geavanceerde Fout die** meldt implementor registreert een foutencallback in het geval van [ AccessEnabler JavaScript SDK ](#accessenabler-javascript-sdk) of voert een genoemde interfacemethode uit &quot;`status`&quot;in het geval van [ AccessEnabler iOS/tvOS SDK ](#accessenabler-ios-tvos-sdk) en [ AccessEnabler Android SDK ](#accessenabler-android-sdk), om geavanceerde foutenrapportering te ontvangen. De fouten worden gecategoriseerd in **Informatie**, **Waarschuwing**, en **de types van Fout**. Dit het melden systeem is asynchroon **, in die** er geen garantie van de orde is waarin de veelvoudige fouten **zullen worden teweeggebracht.**  Voor details op het geavanceerde fout die systeem melden, zie [ Geavanceerde Fout die ](#advanced-error-reporting) sectie meldt.
+* **Geavanceerde Fout die** meldt implementor registreert een foutencallback in het geval van [&#x200B; AccessEnabler JavaScript SDK &#x200B;](#accessenabler-javascript-sdk) of voert een genoemde interfacemethode uit &quot;`status`&quot;in het geval van [&#x200B; AccessEnabler iOS/tvOS SDK &#x200B;](#accessenabler-ios-tvos-sdk) en [&#x200B; AccessEnabler Android SDK &#x200B;](#accessenabler-android-sdk), om geavanceerde foutenrapportering te ontvangen. De fouten worden gecategoriseerd in **Informatie**, **Waarschuwing**, en **de types van Fout**. Dit het melden systeem is asynchroon **, in die** er geen garantie van de orde is waarin de veelvoudige fouten **zullen worden teweeggebracht.**  Voor details op het geavanceerde fout die systeem melden, zie [&#x200B; Geavanceerde Fout die &#x200B;](#advanced-error-reporting) sectie meldt.
 
-* **Oorspronkelijke Fout die -** een statisch rapporterend systeem meldt waarin de foutenmeldingen tot specifieke callback functies worden overgegaan wanneer de specifieke verzoeken ontbreken. De fouten worden gegroepeerd in generische, authentificatie, en toestemmingstypes. Voor de lijst van fout die op in het originele systeem wordt gemeld, zie de [ Oorspronkelijke Fout die ](#original-error-reporting) sectie meldt.
+* **Oorspronkelijke Fout die -** een statisch rapporterend systeem meldt waarin de foutenmeldingen tot specifieke callback functies worden overgegaan wanneer de specifieke verzoeken ontbreken. De fouten worden gegroepeerd in generische, authentificatie, en toestemmingstypes. Voor de lijst van fout die op in het originele systeem wordt gemeld, zie de [&#x200B; Oorspronkelijke Fout die &#x200B;](#original-error-reporting) sectie meldt.
 
 
 ## Geavanceerde foutrapportage {#advanced-error-reporting}
@@ -37,7 +37,7 @@ Foutrapportage in Adobe Pass-verificatie wordt momenteel op twee verschillende m
 
 >[!IMPORTANT]
 >
->De oude [ Oorspronkelijke Fout die ](#original-error-reporting) API meldt zal blijven werken aangezien het vroeger deed, de geavanceerde fout meldt breekt niet de functionaliteit, maar de originele fout meldt zal geen updates meer ontvangen. Alle nieuwe fouten en updates zullen aan het geavanceerde fout rapporteringssysteem gebeuren.
+>De oude [&#x200B; Oorspronkelijke Fout die &#x200B;](#original-error-reporting) API meldt zal blijven werken aangezien het vroeger deed, de geavanceerde fout meldt breekt niet de functionaliteit, maar de originele fout meldt zal geen updates meer ontvangen. Alle nieuwe fouten en updates zullen aan het geavanceerde fout rapporteringssysteem gebeuren.
 
 ### AccessEnabled JavaScript SDK {#accessenabler-javascript-sdk}
 
@@ -112,7 +112,7 @@ Het nieuwe systeem voor foutenrapportage is verplicht, daarom moet de uitvoerder
 
 #### Implementatie {#accessenab-ios-tvossdk-imp}
 
-Een uitvoerder moet met het volgende **** protocol in overeenstemming zijn EntitlementStatus:
+Een uitvoerder moet met het volgende **&#x200B;**&#x200B;protocol in overeenstemming zijn EntitlementStatus:
 
 **EntitlementStatus.h**
 
@@ -285,10 +285,10 @@ In de volgende tabel worden de foutcodes weergegeven en beschreven die door de n
 
 In deze sectie wordt het oorspronkelijke systeem voor foutrapportage beschreven, samen met de oorspronkelijke foutcodes. In het oorspronkelijke systeem voor foutrapportage geeft de AccessEnabler fouten door aan deze twee callback-functies: `setAuthenticationStatus()` na een aanroep van `checkAuthentication()`; `tokenRequestFailed()` , na de mislukking van een aanroep van `checkAuthorization()` of `getAuthorization()` .
 
-De oorspronkelijke foutrapportage en status-API&#39;s werken nog steeds precies zo als voorheen. De oorspronkelijke API&#39;s voor foutrapportage worden echter niet bijgewerkt. Alle nieuwe fout die en updates op de oude fouten melden zullen slechts in de nieuwe [ Geavanceerde Fout die systeem ](#advanced-error-reporting) meldt worden weerspiegeld.
+De oorspronkelijke foutrapportage en status-API&#39;s werken nog steeds precies zo als voorheen. De oorspronkelijke API&#39;s voor foutrapportage worden echter niet bijgewerkt. Alle nieuwe fout die en updates op de oude fouten melden zullen slechts in de nieuwe [&#x200B; Geavanceerde Fout die systeem &#x200B;](#advanced-error-reporting) meldt worden weerspiegeld.
 
 
-Voor voorbeelden van het gebruiken van het originele fout meldend systeem, zie de [ JavaScript API Verwijzing ](/help/authentication/integration-guide-programmers/legacy/sdks/javascript-sdk/javascript-sdk-api-reference.md):[ setAuthenticationStatus () ](/help/authentication/integration-guide-programmers/legacy/sdks/javascript-sdk/javascript-sdk-api-reference.md#set-authn-status-isauthn-error) en [ tokenRequestFailed () ](/help/authentication/integration-guide-programmers/legacy/sdks/javascript-sdk/javascript-sdk-api-reference.md#token-request-failed-error-msg) functies, [ iOS/tvOS API Verwijzing ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md): [ setAuthenticationStatus () ](/help/authentication/integration-guide-programmers/legacy/sdks/javascript-sdk/javascript-sdk-api-reference.md#setAuthNStatus) en [ tokentRequestFailed () {111, ](/help/authentication/integration-guide-programmers/legacy/sdks/javascript-sdk/javascript-sdk-api-reference.md#tokenReqFailed) 2} Android API Verwijzing [: ](/help/authentication/integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-api-reference.md) setAuthenticationStatus () [ en ](/help/authentication/integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-api-reference.md#setAuthNStatus) tokenRequestFailed () [.](/help/authentication/integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-api-reference.md#setAuthNStatus#tokenRequestFailed)
+Voor voorbeelden van het gebruiken van het originele fout meldend systeem, zie de [&#x200B; JavaScript API Verwijzing &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/javascript-sdk/javascript-sdk-api-reference.md):[&#x200B; setAuthenticationStatus () &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/javascript-sdk/javascript-sdk-api-reference.md#set-authn-status-isauthn-error) en [&#x200B; tokenRequestFailed () &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/javascript-sdk/javascript-sdk-api-reference.md#token-request-failed-error-msg) functies, [&#x200B; iOS/tvOS API Verwijzing &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md): [&#x200B; setAuthenticationStatus () &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/javascript-sdk/javascript-sdk-api-reference.md#setAuthNStatus) en [&#x200B; tokentRequestFailed () {111, &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/javascript-sdk/javascript-sdk-api-reference.md#tokenReqFailed) 2} Android API Verwijzing [: &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-api-reference.md) setAuthenticationStatus () [&#x200B; en &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-api-reference.md#setAuthNStatus) tokenRequestFailed () [.](/help/authentication/integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-api-reference.md#setAuthNStatus#tokenRequestFailed)
 
 ### Oorspronkelijke callback-foutcodes {#original-callback-error-codes}
 

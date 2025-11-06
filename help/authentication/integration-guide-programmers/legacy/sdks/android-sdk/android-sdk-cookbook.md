@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 </br>
 
@@ -61,7 +61,7 @@ De het netwerkactiviteit van AccessEnabler vindt in een verschillende draad plaa
 ### A. Vereisten {#prereqs}
 
 1. Maak uw callback-functies:
-   - [setRequestorComplete()`](#$setRequestorComplete)
+   - [setRequestorComplete()&grave;](#$setRequestorComplete)
 
      Wordt geactiveerd door `setRequestor()` en retourneert een geslaagde of mislukte bewerking.\
      Het succes wijst erop u met machtigingsvraag kunt te werk gaan.
@@ -71,7 +71,7 @@ De het netwerkactiviteit van AccessEnabler vindt in een verschillende draad plaa
      Wordt alleen geactiveerd door `getAuthentication()` als de gebruiker geen provider (MVPD) heeft geselecteerd en nog niet is geverifieerd.\
      De parameter `mvpds` is een array van providers die beschikbaar zijn voor de gebruiker.
 
-   - [setAuthenticationStatus(status, errorCode)`](#$setAuthNStatus)
+   - [setAuthenticationStatus(status, errorCode)&grave;](#$setAuthNStatus)
 
      Wordt telkens geactiveerd door `checkAuthentication()` .\
      Wordt alleen geactiveerd door `getAuthentication()` als de gebruiker al is geverifieerd en een provider heeft geselecteerd.
@@ -87,7 +87,7 @@ De het netwerkactiviteit van AccessEnabler vindt in een verschillende draad plaa
      Wordt geactiveerd door `checkAuthentication(), getAuthentication(), checkAuthorization(), getAuthorization(), setSelectedProvider()` .\
      De parameter `event` geeft aan welke gebeurtenis entitlement heeft plaatsgevonden. De parameter `data` is een lijst met waarden die betrekking hebben op de gebeurtenis.
 
-   - [setToken(token, resource)`](#$setToken)
+   - [setToken(token, resource)&grave;](#$setToken)
 
      Wordt geactiveerd door `checkAuthorization()` en `getAuthorization()` nadat u een resource hebt bekeken.\
      De parameter `token` is het kortstondige media-token; de parameter `resource` is de inhoud die de gebruiker mag bekijken.
@@ -126,7 +126,7 @@ De het netwerkactiviteit van AccessEnabler vindt in een verschillende draad plaa
    - **Afhankelijkheid:** Eigen de Authentificatie van Adobe Pass
 Android Library (AccessEnabler)
 
-   b. Vraag ` setRequestor()` om de identificatie van de Programmer te vestigen; ga in de 1} van de Programmer en (facultatief) een serie van de eindpunten van de Authentificatie van Adobe Pass over.`requestorID`
+   b. Vraag ` setRequestor()` om de identificatie van de Programmer te vestigen; ga in de 1&rbrace; van de Programmer en (facultatief) een serie van de eindpunten van de Authentificatie van Adobe Pass over.`requestorID`
 
    - **Afhankelijkheid:** Geldige VraagID van de Authentificatie van Adobe Pass\
      (Gebruik hiervoor Adobe Pass Authentication Account Manager.)
@@ -139,7 +139,7 @@ Android Library (AccessEnabler)
 
    <!--Removed bad image link from first note cell above. ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/icons/1313859077_lightbulb.png) -->
 
-1. Vraag [ checkAuthentication () ](#$checkAuthN) om een bestaande authentificatie te controleren zonder de volledige stroom van de Authentificatie in werking te stellen.   Als deze vraag slaagt, kunt u aan de stroom van de Vergunning direct te werk gaan.  Zo niet, ga dan door naar de verificatiestroom.
+1. Vraag [&#x200B; checkAuthentication () &#x200B;](#$checkAuthN) om een bestaande authentificatie te controleren zonder de volledige stroom van de Authentificatie in werking te stellen.   Als deze vraag slaagt, kunt u aan de stroom van de Vergunning direct te werk gaan.  Zo niet, ga dan door naar de verificatiestroom.
 
    - **Afhankelijkheid:** Een succesvolle vraag aan `setRequestor()` (dit gebiedsdeel is eveneens op alle verdere vraag van toepassing).
 
@@ -149,7 +149,7 @@ Android Library (AccessEnabler)
 
 1. Vraag [`getAuthentication()`](#$getAuthN) om de authentificatiestroom in werking te stellen, of bevestiging te krijgen dat de gebruiker reeds voor authentiek verklaard is.\
    **Trekkers:**
-   - De callback setAuthenticationStatus(), als de gebruiker al is geverifieerd.  In dit geval, ga direct aan de [ Stroom van de Vergunning ](#authz_flow) te werk.
+   - De callback setAuthenticationStatus(), als de gebruiker al is geverifieerd.  In dit geval, ga direct aan de [&#x200B; Stroom van de Vergunning &#x200B;](#authz_flow) te werk.
    - De callback displayProviderDialog(), als de gebruiker nog niet is geverifieerd.
 
 1. Geef de gebruiker de lijst met providers weer die naar `displayProviderDialog()` is verzonden.
@@ -174,7 +174,7 @@ Android Library (AccessEnabler)
 
 ### D. Vergunningsstroom {#authz_flow}
 
-1. Vraag [ getAuthorization () ](#$getAuthZ) om de vergunning in werking te stellen
+1. Vraag [&#x200B; getAuthorization () &#x200B;](#$getAuthZ) om de vergunning in werking te stellen
 stroom.
 
    Afhankelijkheid: geldige ResourceID(&#39;s) overeengekomen met de MVPD(s).
@@ -201,7 +201,7 @@ stroom.
 
 1. De gebruiker selecteert de media die u wilt weergeven.
 2. Zijn de media beveiligd?  Uw toepassing controleert of het geselecteerde medium is beveiligd:
-- Als de geselecteerde media beschermd is, begint uw toepassing de [ Stroom van de Vergunning ](#authz_flow) hierboven.
+- Als de geselecteerde media beschermd is, begint uw toepassing de [&#x200B; Stroom van de Vergunning &#x200B;](#authz_flow) hierboven.
 - Als het geselecteerde medium niet is beveiligd, speelt u de media voor de gebruiker af.
 
 
@@ -221,6 +221,6 @@ stroom.
 
 ### Gebruikersstromen voor Login met veelvoudige MVPDs en Logout {#user_flows}
 
-[ hier ](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/AndroidSSOUserFlows.pdf) u hebt een document beschrijvend het gedrag wanneer het gebruiken van veelvoudige MVPDs en wat gebeurt wanneer de gebruiker zich uit een toepassing afmeldt.
+[&#x200B; hier &#x200B;](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/AndroidSSOUserFlows.pdf) u hebt een document beschrijvend het gedrag wanneer het gebruiken van veelvoudige MVPDs en wat gebeurt wanneer de gebruiker zich uit een toepassing afmeldt.
 
 Het beschreven gedrag is beschikbaar als u Android SDK versie >= 2.0.0 gebruikt.

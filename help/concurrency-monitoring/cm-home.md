@@ -11,15 +11,15 @@ ht-degree: 0%
 
 # Inleiding Gelijktijdige bewaking {#intro}
 
-Om over [ Escalatieprocedures ](/help/concurrency-monitoring/cm-escalation-procedures.md) betreffende Gelijktijdige Controle te weten, zie het artikel van de escalatieprocedures.
+Om over [&#x200B; Escalatieprocedures &#x200B;](/help/concurrency-monitoring/cm-escalation-procedures.md) betreffende Gelijktijdige Controle te weten, zie het artikel van de escalatieprocedures.
 
 De Gelijktijdige Controle staat zowel Identiteit als Inhoudsleveranciers (MVPDs en Programmers) toe om grenzen op gelijktijdig gebruik over veelvoudige toepassingen (potentieel bezeten door veelvoudige partners) te bepalen en af te dwingen.
 
 **de Gelijktijdige Controle API wordt ontvangen bij de volgende plaats:**
 
-* **V2.0: [ Gelijktijdige Controle API ](http://docs.adobeptime.io/cm-api-v2/)**
+* **V2.0: [&#x200B; Gelijktijdige Controle API &#x200B;](http://docs.adobeptime.io/cm-api-v2/)**
 
-Om omhoog voor onze dienst van de Controle van de Valuta te ondertekenen, contacteer ons [ Team van de Steun ](mailto:tve-support@adobe.com). Geef de volgende informatie op en ons team zal u graag helpen:
+Om omhoog voor onze dienst van de Controle van de Valuta te ondertekenen, contacteer ons [&#x200B; Team van de Steun &#x200B;](mailto:tve-support@adobe.com). Geef de volgende informatie op en ons team zal u graag helpen:
 
 1. Naam van uw bedrijf
 1. Toepassingen die u wilt integreren met Gelijktijdige bewaking. Verstrek voor elke aanvraag:

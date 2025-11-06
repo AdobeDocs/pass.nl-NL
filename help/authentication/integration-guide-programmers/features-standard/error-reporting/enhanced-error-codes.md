@@ -37,7 +37,7 @@ Enhanced Error Codes vertegenwoordigen een Adobe Pass-verificatiefunctie die aan
 >
 > <br/>
 >
-> Om deze eigenschap uitdrukkelijk toe te laten, creeer een kaartje door onze [ Zendesk ](https://adobeprimetime.zendesk.com) en vraag uw Technische Manager van de Rekening (TAM) voor hulp.
+> Om deze eigenschap uitdrukkelijk toe te laten, creeer een kaartje door onze [&#x200B; Zendesk &#x200B;](https://adobeprimetime.zendesk.com) en vraag uw Technische Manager van de Rekening (TAM) voor hulp.
 
 ## Vertegenwoordiging {#enhanced-error-codes-representation}
 
@@ -45,9 +45,9 @@ Enhanced Error Codes kunnen worden weergegeven in de `JSON` - of `XML` -indeling
 
 | Adobe Pass-verificAPI | JSON | XML |
 |-------------------------------|---------|---------|
-| REST API v2 | &amp;check; |         |
-| REST API v1 | &amp;check; | &amp;check; |
-| API voor voorafgaande autorisatie van SDK&#39;s | &amp;check; |         |
+| REST API v2 | &check; |         |
+| REST API v1 | &check; | &check; |
+| API voor voorafgaande autorisatie van SDK&#39;s | &check; |         |
 
 >[!IMPORTANT]
 >
@@ -202,10 +202,10 @@ Uitgebreide foutcodes bevatten de volgende `JSON` -velden of `XML` -kenmerken me
 
 | Naam | Type | Voorbeeld | Beperkt | Beschrijving |
 |-----------|-----------|---------------------------------------------------------------------------------------------------------------------|:----------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *actie* | *koord* | *niets* | &amp;check; | De Adobe Pass-verificatie raadt u aan een actie uit te voeren om de situatie zoals die in dit document is gedefinieerd, te verhelpen. <br/><br/> voor meer details, verwijs naar de [ sectie van de Actie ](#enhanced-error-codes-action). |
-| *status* | *geheel* | *403* | &amp;check; | De code van de de reactiestatus van HTTP zoals die in [ wordt bepaald RFC 7231 ](https://tools.ietf.org/html/rfc7231#section-6) document. <br/><br/> voor meer details, verwijs naar de [ 2} sectie van de Status {.](#enhanced-error-codes-status) |
-| *code* | *koord* | *authentication_deny_by_mvpd* | &amp;check; | De unieke identificatiecode van de Adobe Pass-verificatie die is gekoppeld aan de fout zoals gedefinieerd in dit document. <br/><br/> voor meer details, verwijs naar de [ sectie van de Code ](#enhanced-error-codes-code). |
-| *bericht* | *koord* | *MVPD is een &quot;Weigeren&quot;besluit teruggekeerd wanneer het verzoeken van vergunning voor het gespecificeerde middel* |            | Het leesbare bericht dat in sommige gevallen aan de eindgebruiker kan worden weergegeven. <br/><br/> voor meer details, verwijs naar de [ Behandeling van de Reactie ](#enhanced-error-codes-response-handling) sectie. |
+| *actie* | *koord* | *niets* | &check; | De Adobe Pass-verificatie raadt u aan een actie uit te voeren om de situatie zoals die in dit document is gedefinieerd, te verhelpen. <br/><br/> voor meer details, verwijs naar de [&#x200B; sectie van de Actie &#x200B;](#enhanced-error-codes-action). |
+| *status* | *geheel* | *403* | &check; | De code van de de reactiestatus van HTTP zoals die in [&#x200B; wordt bepaald RFC 7231 &#x200B;](https://tools.ietf.org/html/rfc7231#section-6) document. <br/><br/> voor meer details, verwijs naar de [&#x200B; 2&rbrace; sectie van de Status &lbrace;.](#enhanced-error-codes-status) |
+| *code* | *koord* | *authentication_deny_by_mvpd* | &check; | De unieke identificatiecode van de Adobe Pass-verificatie die is gekoppeld aan de fout zoals gedefinieerd in dit document. <br/><br/> voor meer details, verwijs naar de [&#x200B; sectie van de Code &#x200B;](#enhanced-error-codes-code). |
+| *bericht* | *koord* | *MVPD is een &quot;Weigeren&quot;besluit teruggekeerd wanneer het verzoeken van vergunning voor het gespecificeerde middel* |            | Het leesbare bericht dat in sommige gevallen aan de eindgebruiker kan worden weergegeven. <br/><br/> voor meer details, verwijs naar de [&#x200B; Behandeling van de Reactie &#x200B;](#enhanced-error-codes-response-handling) sectie. |
 | *details* | *koord* | *Uw abonnementspakket omvat niet het &quot;Levende&quot;kanaal* |            | Het gedetailleerde bericht dat in sommige gevallen door een dienstenpartner kon worden verstrekt, <br/><br/> Dit gebied zou niet aanwezig kunnen zijn voor het geval de de dienstenpartner geen douanebericht verstrekt. |
 | *helpUrl* | *url* | *https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html* |            | De openbare documentatie URL van de Authentificatie van Adobe Pass die met meer informatie over verbindt waarom deze fout en mogelijke oplossingen voorkwam. <br/><br/> Dit veld bevat een absolute URL en mag niet worden afgeleid van foutcode, afhankelijk van de foutcontext kan een andere URL worden opgegeven. |
 | *spoor* | *koord* | *12f6fef9-d2e0-422b-a9d7-60d799abe353* |            | De unieke id voor de reactie die kan worden gebruikt wanneer contact wordt opgenomen met de ondersteuning van Adobe Pass-verificatie om specifieke problemen op te lossen. |
@@ -264,7 +264,7 @@ Uitgebreide foutcodes met een &quot;status&quot; van 5 xx worden meestal weergeg
 
 Uitgebreide foutcodes bevatten een veld &quot;code&quot; met een unieke id voor Adobe Pass-verificatie die aan de fout is gekoppeld.
 
-De mogelijke waarden voor het &quot;code&quot;gebied worden samengevoegd [ hieronder ](#enhanced-error-codes-list) in twee lijsten die op de geïntegreerde Authentificatie API van Adobe Pass worden gebaseerd.
+De mogelijke waarden voor het &quot;code&quot;gebied worden samengevoegd [&#x200B; hieronder &#x200B;](#enhanced-error-codes-list) in twee lijsten die op de geïntegreerde Authentificatie API van Adobe Pass worden gebaseerd.
 
 ## Lijsten {#enhanced-error-codes-lists}
 
@@ -356,7 +356,7 @@ In de onderstaande tabel worden mogelijke Enhanced Error Codes weergegeven die e
 
 ### (Verouderd) SDK&#39;s autoriseren API vooraf {#enhanced-error-codes-lists-sdks-preauthorize-api}
 
-Verwijs naar de vorige [ sectie ](#enhanced-error-codes-list-rest-api-v1) voor mogelijke Verbeterde Codes van de Fout een cliënttoepassing zou kunnen ontmoeten wanneer geïntegreerd met de Authentificatie SDKs van Adobe Pass preauthorize API.
+Verwijs naar de vorige [&#x200B; sectie &#x200B;](#enhanced-error-codes-list-rest-api-v1) voor mogelijke Verbeterde Codes van de Fout een cliënttoepassing zou kunnen ontmoeten wanneer geïntegreerd met de Authentificatie SDKs van Adobe Pass preauthorize API.
 
 ## Reactieafhandeling {#enhanced-error-codes-response-handling}
 
@@ -366,7 +366,7 @@ Verwijs naar de vorige [ sectie ](#enhanced-error-codes-list-rest-api-v1) voor m
 >
 > <br/>
 >
-> Daarom is het belangrijk om volledige fouteninformatie te verzamelen en te verstrekken wanneer het creëren van een kaartje door onze [ Zendesk ](https://adobeprimetime.zendesk.com), om ervoor te zorgen dat de noodzakelijke veranderingen alvorens de nieuwe toepassing of de nieuwe eigenschap worden aangebracht.
+> Daarom is het belangrijk om volledige fouteninformatie te verzamelen en te verstrekken wanneer het creëren van een kaartje door onze [&#x200B; Zendesk &#x200B;](https://adobeprimetime.zendesk.com), om ervoor te zorgen dat de noodzakelijke veranderingen alvorens de nieuwe toepassing of de nieuwe eigenschap worden aangebracht.
 
 Samenvattend, wanneer het behandelen van reacties die de Geavanceerde Codes van de Fout bevatten, zou u het volgende moeten overwegen:
 

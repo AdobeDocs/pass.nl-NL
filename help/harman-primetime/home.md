@@ -22,11 +22,11 @@ Harman handhaaft Primetime reclame en publicatieproducten, terwijl Adobe Adobe P
 
 | Hulplijn | Beschrijving |
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------- |
-| [ Primetime Dynamische Ad Insertion ](https://experienceleague.adobe.com/docs/primetime/ad-insertion/home.html) | Adobe Pass Ad Insertion Help |
+| [&#x200B; Primetime Dynamische Ad Insertion &#x200B;](https://experienceleague.adobe.com/docs/primetime/ad-insertion/home.html) | Adobe Pass Ad Insertion Help |
 
 ## Adobe Pass-hulplijnen
 
 | Hulplijn | Beschrijving |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [ de Authentificatie van Adobe Pass ](/help/authentication/home.md) | Adobe Pass-verificatie is een machtigingsoplossing voor TV Everywhere, die een modulair kader verstrekt om te bepalen of iemand die toegang tot een bron vraagt, daar rechten voor heeft. |
-| [ de Gelijktijdige Controle van Adobe Pass ](/help/concurrency-monitoring/cm-home.md) | Leer hoe u limieten kunt definiëren en afdwingen voor gelijktijdig gebruik in meerdere applicaties. |
+| [&#x200B; de Authentificatie van Adobe Pass &#x200B;](/help/authentication/home.md) | Adobe Pass-verificatie is een machtigingsoplossing voor TV Everywhere, die een modulair kader verstrekt om te bepalen of iemand die toegang tot een bron vraagt, daar rechten voor heeft. |
+| [&#x200B; de Gelijktijdige Controle van Adobe Pass &#x200B;](/help/concurrency-monitoring/cm-home.md) | Leer hoe u limieten kunt definiëren en afdwingen voor gelijktijdig gebruik in meerdere applicaties. |

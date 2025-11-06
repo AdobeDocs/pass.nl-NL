@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 </br>
 
@@ -73,7 +73,7 @@ Terwijl het doorbladeren door deze sectie houdt in mening dat alle de dienstkoek
 De verificatiestroom van gebruikers kan worden beïnvloed in Chrome 80 en hoger (behalve versie 82). Om ervoor te zorgen dat de gebruiker geen problemen heeft om te verifiëren vanwege de bovenstaande updates, kunt u het volgende doen:
 
 - Controleer dat het ** koekje JSESSIONID in browser wordt geplaatst en hebbend *SameSite=None* en *Veilige* geplaatste attributen.
-- Controleer dat het ** koekje JSESSIONID van het *https://sp.auth.adobe.com/authenticate/saml* netwerkverzoek het ** koekje JSESSIONID van het *https://sp.auth.adobe.com/session* netwerkverzoek aanpast.
+- Controleer dat het **&#x200B; koekje JSESSIONID van het *https://sp.auth.adobe.com/authenticate/saml* netwerkverzoek het &#x200B;** koekje JSESSIONID van het *https://sp.auth.adobe.com/session* netwerkverzoek aanpast.
 
 
 ### AccessEnabler JavaScript SDK versie 3.5.0 Problemen oplossen {#350-Troubleshooting}
@@ -81,7 +81,7 @@ De verificatiestroom van gebruikers kan worden beïnvloed in Chrome 80 en hoger 
 De verificatiestroom van gebruikers kan worden beïnvloed in Chrome 80 en hoger (behalve versie 82). Om ervoor te zorgen dat de gebruiker geen problemen heeft om te verifiëren vanwege de bovenstaande updates, kunt u het volgende doen:
 
 - Controleer dat het ** koekje JSESSIONID in browser wordt geplaatst en hebbend *SameSite=None* en *Veilige* geplaatste attributen.
-- Controleer dat het ** koekje JSESSIONID van het *https://sp.auth.adobe.com/authenticate/saml* netwerkverzoek het ** koekje JSESSIONID van het *https://sp.auth.adobe.com/session* netwerkverzoek aanpast.
+- Controleer dat het **&#x200B; koekje JSESSIONID van het *https://sp.auth.adobe.com/authenticate/saml* netwerkverzoek het &#x200B;** koekje JSESSIONID van het *https://sp.auth.adobe.com/session* netwerkverzoek aanpast.
 - Controleer dat het *pas \_sfp* koekje in browser wordt geplaatst en hebbend *SameSite=None* en *Veilige* geplaatste attributen.
 - Controleer dat het *pas \_sfp* koekje in *https://sp.auth.adobe.com/session* netwerkverzoek wordt geplaatst.
 

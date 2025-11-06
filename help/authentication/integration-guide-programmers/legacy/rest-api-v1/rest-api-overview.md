@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 ## Overzicht {#over}
 
@@ -25,7 +25,7 @@ De Adobe Pass Authentication REST API biedt directe toegang tot de TVE-services 
 
 ### Draaimechanisme
 
-De Adobe Pass Authentificatie REST API wordt geregeerd door a [ het Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md).
+De Adobe Pass Authentificatie REST API wordt geregeerd door a [&#x200B; het Throttling mechanisme &#x200B;](/help/authentication/integration-guide-programmers/throttling-mechanism.md).
 
 
 ### Server-naar-server
@@ -84,8 +84,8 @@ Het volgende is op zowel server-aan-server als Verbonden toepassingen van het Ap
 
 | **Functionaliteit** | **Verantwoordelijk voor de behandeling van de functionaliteit** | **Beschrijving van de beperkingen van huidige Clientless API en verschillen van inheemse SDKs** |
 | --- | --- | --- |
-| Configuratie-instellingen toegepast per platform | Adobe | Één **belangrijkste beperking** op het gebruiken van REST API door alle platforms (met inbegrip van mobiele apparaten zoals iOS &amp; Android) is dat de configuratiemontages die met REST API in ons de configuratiehulpmiddel van het Dashboard van TVE beantwoorden op alle apparaten worden toegepast (zelfs als er een apparaat van iOS is dat een inheemse toepassing in werking stelt die bovenop onze REST API wordt uitgevoerd). Deze beperking **kan** overeengekomen TTLs en overeengekomen platformmontages met MVPDs breken - als die per elk platform verschillen. [ 1 ](#1) |
-| Single Sign-On | Programmeurs | SSO is met behulp van de REST-API alleen beschikbaar op platforms die ondersteuning bieden voor Platform SSO (bijvoorbeeld Apple, Roku, Amazon), terwijl SSO niet kan worden gegarandeerd voor andere platforms wanneer de REST-API wordt gebruikt. De SDK&#39;s slaan gegevens in cache op verschillende manieren in de site of in de app. Dit betekent dat de gebruiker zich één keer aanmeldt op een site/app en al is aangemeld op deelnemende sites, zonder dat gebruikersinteractie nodig is. [ 2 ](#2) |
+| Configuratie-instellingen toegepast per platform | Adobe | Één **belangrijkste beperking** op het gebruiken van REST API door alle platforms (met inbegrip van mobiele apparaten zoals iOS &amp; Android) is dat de configuratiemontages die met REST API in ons de configuratiehulpmiddel van het Dashboard van TVE beantwoorden op alle apparaten worden toegepast (zelfs als er een apparaat van iOS is dat een inheemse toepassing in werking stelt die bovenop onze REST API wordt uitgevoerd). Deze beperking **kan** overeengekomen TTLs en overeengekomen platformmontages met MVPDs breken - als die per elk platform verschillen. [&#x200B; 1 &#x200B;](#1) |
+| Single Sign-On | Programmeurs | SSO is met behulp van de REST-API alleen beschikbaar op platforms die ondersteuning bieden voor Platform SSO (bijvoorbeeld Apple, Roku, Amazon), terwijl SSO niet kan worden gegarandeerd voor andere platforms wanneer de REST-API wordt gebruikt. De SDK&#39;s slaan gegevens in cache op verschillende manieren in de site of in de app. Dit betekent dat de gebruiker zich één keer aanmeldt op een site/app en al is aangemeld op deelnemende sites, zonder dat gebruikersinteractie nodig is. [&#x200B; 2 &#x200B;](#2) |
 | Eén aanmelding | Programmeurs | In een native SDK SSO-scenario wordt het afmelden bij één deelnemende toepassing overal vanaf de gebruiker afgemeld. Op de huidige REST API steunen wij geen SLO, zal het afmelden van één toepassing de gebruiker slechts voor die bepaalde toepassing afmelden. |
 | Caching | Programmeurs | De REST API implementaties zullen hun eigen caching mechanisme voor zaken overeengekomen gegevenspunten moeten uitvoeren. De SDK&#39;s plaatsen automatisch verschillende gegevensposten in de cache, waarbij rekening wordt gehouden met verschillende bedrijfsregels. Bijvoorbeeld, worden de gebruikersmeta-gegevens in het voorgeheugen ondergebracht met zelfde TTL zoals het authentificatietoken, terwijl sommige punten programmatically van caching (preflight) kunnen worden uitgesloten. |
 | Gedetailleerd mechanisme voor foutrapportage | Programmeurs | De REST API is vooral gebaseerd op HTTP-foutcodes voor het rapporteren van toepassingsfouten, terwijl SDK&#39;s een gedetailleerd mechanisme voor foutmeldingen hebben dat de toepassingsontwikkelaars helpt beter te begrijpen wat er gebeurt. |
@@ -104,4 +104,4 @@ Het volgende is op zowel server-aan-server als Verbonden toepassingen van het Ap
 
 ## Minimale apparaatvereisten {#min_reqs}
 
-Om Adobe Pass Authentificatie REST API te gebruiken, moeten de apparaten aan de minimum technische vereisten voldoen of overschrijden die in de REST API sectie van het [ document van de Vereisten van de Authentificatie van Adobe Pass / van het Apparaat / van Hulpmiddelen ](#general_clientless_reqs) worden vermeld.
+Om Adobe Pass Authentificatie REST API te gebruiken, moeten de apparaten aan de minimum technische vereisten voldoen of overschrijden die in de REST API sectie van het [&#x200B; document van de Vereisten van de Authentificatie van Adobe Pass / van het Apparaat / van Hulpmiddelen &#x200B;](#general_clientless_reqs) worden vermeld.

@@ -30,7 +30,7 @@ Een gegevensbewaarbeleid bepaalt hoe lang Adobe de gegevens van de klant opslaat
 
 ## Gegevensverzameling {#data-collection}
 
-*Clickstream gegevens* vertegenwoordigt gegevens die door klanten op de zittingshartslagen (bijvoorbeeld, subjectID, mvpdName, en meta-gegevens) worden gedeeld. Alle gebieden van douanemetagegevens worden van verwijzingen voorzien in de [ Standaard meta-gegevensattributen ](/help/concurrency-monitoring/standard-metadata-attributes.md).
+*Clickstream gegevens* vertegenwoordigt gegevens die door klanten op de zittingshartslagen (bijvoorbeeld, subjectID, mvpdName, en meta-gegevens) worden gedeeld. Alle gebieden van douanemetagegevens worden van verwijzingen voorzien in de [&#x200B; Standaard meta-gegevensattributen &#x200B;](/help/concurrency-monitoring/standard-metadata-attributes.md).
 
 ## Klanttypen {#customer-types}
 

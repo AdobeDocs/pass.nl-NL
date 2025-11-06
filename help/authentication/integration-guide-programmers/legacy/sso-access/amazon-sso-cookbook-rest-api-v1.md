@@ -17,11 +17,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 De Adobe Pass Authentication REST API V1 biedt ondersteuning voor Platform Single Sign-On (SSO) voor eindgebruikers van clienttoepassingen die op FireOS worden uitgevoerd.
 
-Dit document doet dienst als uitbreiding aan het bestaande [ REST API V1 Overzicht ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/rest-api-overview.md) dat een mening op hoog niveau verstrekt.
+Dit document doet dienst als uitbreiding aan het bestaande [&#x200B; REST API V1 Overzicht &#x200B;](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/rest-api-overview.md) dat een mening op hoog niveau verstrekt.
 
 ## Amazon Single Sign-On met identiteitsstromen van platforms {#cookbook}
 
@@ -31,7 +31,7 @@ Voordat u verdergaat met de Amazon Single Sign-On met behulp van platformidentit
 
 #### Amazon SSO SDK integreren {#integrate-amazon-sso-sdk}
 
-De het stromen toepassing moet de [ Amazon SSO SDK ](https://tve.zendesk.com/hc/en-us/article_attachments/360064368131/ottSSOTokenLib_v1.jar) bibliotheek voor Enige Sign-On (SSO) in zijn bouwstijl integreren.
+De het stromen toepassing moet de [&#x200B; Amazon SSO SDK &#x200B;](https://tve.zendesk.com/hc/en-us/article_attachments/360064368131/ottSSOTokenLib_v1.jar) bibliotheek voor Enige Sign-On (SSO) in zijn bouwstijl integreren.
 
 * Download en kopieer de nieuwste Amazon SSO SDK-bibliotheek naar een `/SSOEnabler` -map parallel aan de map van de toepassing.
 

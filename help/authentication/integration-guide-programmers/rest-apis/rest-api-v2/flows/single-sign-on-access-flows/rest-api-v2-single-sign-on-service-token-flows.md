@@ -17,11 +17,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> De implementatie van REST API V2 wordt begrensd door de [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
+> De implementatie van REST API V2 wordt begrensd door de [&#x200B; Throttling mechanisme &#x200B;](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
 
 >[!MORELIKETHIS]
 >
-> Zorg ervoor om [ REST API V2 FAQs ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general) ook te bezoeken.
+> Zorg ervoor om [&#x200B; REST API V2 FAQs &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general) ook te bezoeken.
 
 Met de methode Servicetokken kunnen meerdere toepassingen een unieke gebruikersnaam gebruiken om SSO (Single Sign-On) op meerdere apparaten en platforms te bereiken bij het gebruik van Adobe Pass-services.
 
@@ -32,7 +32,7 @@ De toepassingen zijn verantwoordelijk voor het ophalen van de unieke lading van 
 
 De toepassingen zijn verantwoordelijk voor het opnemen van deze unieke lading van de gebruikers-id als onderdeel van de header `AD-Service-Token` voor alle aanvragen die deze opgeven.
 
-Voor meer details over `AD-Service-Token` kopbal, verwijs naar [ AD-dienst-Symbolische ](../../appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md) documentatie.
+Voor meer details over `AD-Service-Token` kopbal, verwijs naar [&#x200B; AD-dienst-Symbolische &#x200B;](../../appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md) documentatie.
 
 ## Verificatie uitvoeren via Single Sign-On met gebruik van servicetoken {#performing-authentication-flow-using-service-token-single-sign-on-method}
 
@@ -41,11 +41,11 @@ Voor meer details over `AD-Service-Token` kopbal, verwijs naar [ AD-dienst-Symbo
 Alvorens de authentificatiestroom door enig teken-binnen uit te voeren gebruikend een de dienstteken, zorg ervoor de volgende eerste vereisten worden voldaan:
 
 * De externe identiteitsservice moet consistente informatie retourneren als `JWS` lading in alle toepassingen op meerdere apparaten en platforms.
-* De eerste het stromen toepassing moet het unieke gebruikersidentificatie terugwinnen en `JWS` nuttige lading als deel van [ a.u.b.-dienst-Symbolische ](../../appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md) kopbal voor alle verzoeken omvatten die het specificeren.
+* De eerste het stromen toepassing moet het unieke gebruikersidentificatie terugwinnen en `JWS` nuttige lading als deel van [&#x200B; a.u.b.-dienst-Symbolische &#x200B;](../../appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md) kopbal voor alle verzoeken omvatten die het specificeren.
 * De eerste streamingtoepassing moet een MVPD selecteren.
 * De eerste streamingtoepassing moet een verificatiesessie starten om u aan te melden bij de geselecteerde MVPD.
 * De eerste streamingtoepassing moet worden geverifieerd met de geselecteerde MVPD in een gebruikersagent.
-* De tweede het stromen toepassing moet het unieke gebruikersidentificatie terugwinnen en `JWS` nuttige lading als deel van [ a.u.b.-dienst-Symbolische ](../../appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md) kopbal voor alle verzoeken omvatten die het specificeren.
+* De tweede het stromen toepassing moet het unieke gebruikersidentificatie terugwinnen en `JWS` nuttige lading als deel van [&#x200B; a.u.b.-dienst-Symbolische &#x200B;](../../appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md) kopbal voor alle verzoeken omvatten die het specificeren.
 
 >[!IMPORTANT]
 >
@@ -60,7 +60,7 @@ Alvorens de authentificatiestroom door enig teken-binnen uit te voeren gebruiken
 
 Voer de bepaalde stappen uit om de authentificatiestroom door enige sign-on uit te voeren gebruikend een de dienstteken zoals aangetoond in het volgende diagram.
 
-![ voer authentificatie door enig teken-op gebruikend de dienstteken ](../../../../../assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-perform-authentication-through-single-sign-on-using-service-token-flow.png) uit
+![&#x200B; voer authentificatie door enig teken-op gebruikend de dienstteken &#x200B;](../../../../../assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-perform-authentication-through-single-sign-on-using-service-token-flow.png) uit
 
 *voer authentificatie door enig teken-op gebruikend de dienstteken* uit
 
@@ -74,7 +74,7 @@ Voer de bepaalde stappen uit om de authentificatiestroom door enige sign-on uit 
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [ creeer authentificatiesessie ](../../apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) API documentatie voor details op:
+   > Verwijs naar [&#x200B; creeer authentificatiesessie &#x200B;](../../apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `serviceProvider`, `mvpd`, `domainName`, en `redirectUrl`
    > * Alle _vereiste_ kopballen, als `Authorization`, `AP-Device-Identifier`
@@ -86,13 +86,13 @@ Voer de bepaalde stappen uit om de authentificatiestroom door enige sign-on uit 
    >
    > <br/>
    > 
-   > Voor meer details over `AD-Service-Token` kopbal, verwijs naar [ AD-dienst-Symbolische ](../../appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md) documentatie.
+   > Voor meer details over `AD-Service-Token` kopbal, verwijs naar [&#x200B; AD-dienst-Symbolische &#x200B;](../../appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md) documentatie.
 
 1. **wijs op de volgende actie:** De het eindpuntreactie van Sessies bevat de noodzakelijke gegevens om de eerste het stromen toepassing betreffende de volgende actie te begeleiden.
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [ creeer authentificatiesessie ](../../apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) API documentatie voor details over de informatie die in een zittingsreactie wordt verstrekt.
+   > Verwijs naar [&#x200B; creeer authentificatiesessie &#x200B;](../../apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) API documentatie voor details over de informatie die in een zittingsreactie wordt verstrekt.
    >
    > <br/>
    > 
@@ -103,7 +103,7 @@ Voer de bepaalde stappen uit om de authentificatiestroom door enige sign-on uit 
    >
    > <br/>
    > 
-   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
 1. **Open URL in gebruikersagent:** De reactie van het eindpunt van zittingen bevat de volgende gegevens:
    * De `url` die kan worden gebruikt om de interactieve verificatie te starten op de MVPD-aanmeldingspagina.
@@ -118,7 +118,7 @@ Voer de bepaalde stappen uit om de authentificatiestroom door enige sign-on uit 
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [ terugwinnen profiel voor specifieke code ](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) API documentatie voor details op:
+   > Verwijs naar [&#x200B; terugwinnen profiel voor specifieke code &#x200B;](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) API documentatie voor details op:
    > 
    > * Alle _vereiste_ parameters, als `serviceProvider`, `code`
    > * Alle _vereiste_ kopballen, als `Authorization`, `AP-Device-Identifier`
@@ -134,7 +134,7 @@ Voer de bepaalde stappen uit om de authentificatiestroom door enige sign-on uit 
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [ terugwinnen profiel voor specifieke code ](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) API documentatie voor details op de informatie die in een profielreactie wordt verstrekt.
+   > Verwijs naar [&#x200B; terugwinnen profiel voor specifieke code &#x200B;](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) API documentatie voor details op de informatie die in een profielreactie wordt verstrekt.
    >
    > <br/>
    > 
@@ -144,7 +144,7 @@ Voer de bepaalde stappen uit om de authentificatiestroom door enige sign-on uit 
    >
    > <br/>
    > 
-   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
 1. **ga met besluitvormingsstromen te werk:** de eerste het stromen toepassing kan met verdere besluitvormingsstromen verdergaan.
 
@@ -154,7 +154,7 @@ Voer de bepaalde stappen uit om de authentificatiestroom door enige sign-on uit 
    >
    > <br/>
    > 
-   > Voor meer details over `AD-Service-Token` kopbal, verwijs naar [ AD-dienst-Symbolische ](../../appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md) documentatie.
+   > Voor meer details over `AD-Service-Token` kopbal, verwijs naar [&#x200B; AD-dienst-Symbolische &#x200B;](../../appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md) documentatie.
 
 1. **verklaart met de identiteitsdienst voor authentiek:** de tweede het stromen toepassing roept de identiteitsdienst, buiten de systemen van Adobe Pass, om de `JWS` lading te verkrijgen verbonden aan het unieke gebruikersidentificatie.
 
@@ -166,7 +166,7 @@ Voer de bepaalde stappen uit om de authentificatiestroom door enige sign-on uit 
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [ terugwinnen profielen ](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md) API documentatie voor details op:
+   > Verwijs naar [&#x200B; terugwinnen profielen &#x200B;](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `serviceProvider`
    > * Alle _vereiste_ kopballen, als `Authorization`, `AP-Device-Identifier`
@@ -178,7 +178,7 @@ Voer de bepaalde stappen uit om de authentificatiestroom door enige sign-on uit 
    >
    > <br/>
    > 
-   > Voor meer details over `AD-Service-Token` kopbal, verwijs naar [ AD-dienst-Symbolische ](../../appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md) documentatie.
+   > Voor meer details over `AD-Service-Token` kopbal, verwijs naar [&#x200B; AD-dienst-Symbolische &#x200B;](../../appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md) documentatie.
 
 1. **vind enig sign-on profiel:** de server van Adobe Pass identificeert een geldig enig sign-on profiel dat op de ontvangen parameters en kopballen wordt gebaseerd.
 
@@ -186,7 +186,7 @@ Voer de bepaalde stappen uit om de authentificatiestroom door enige sign-on uit 
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [ terugwinnen profielen ](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md) API documentatie voor details over de informatie die in een profielreactie wordt verstrekt.
+   > Verwijs naar [&#x200B; terugwinnen profielen &#x200B;](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md) API documentatie voor details over de informatie die in een profielreactie wordt verstrekt.
    > 
    > <br/>
    > 
@@ -196,7 +196,7 @@ Voer de bepaalde stappen uit om de authentificatiestroom door enige sign-on uit 
    >
    > <br/>
    > 
-   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
 1. **ga met besluitvormingsstromen te werk:** De tweede het stromen toepassing kan met verdere besluitvormingsstromen verdergaan.
 
@@ -206,7 +206,7 @@ Voer de bepaalde stappen uit om de authentificatiestroom door enige sign-on uit 
    >
    > <br/>
    > 
-   > Voor meer details over `AD-Service-Token` kopbal, verwijs naar [ AD-dienst-Symbolische ](../../appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md) documentatie.
+   > Voor meer details over `AD-Service-Token` kopbal, verwijs naar [&#x200B; AD-dienst-Symbolische &#x200B;](../../appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md) documentatie.
 
 ## Haal vergunningsbesluiten door enig sign-on gebruikend de dienstteken terug {#performing-authorization-flow-using-service-token-single-sign-on-method}
 
@@ -215,7 +215,7 @@ Voer de bepaalde stappen uit om de authentificatiestroom door enige sign-on uit 
 Alvorens de vergunningsstroom door enige sign-on het gebruiken van een de dienstteken uit te voeren, zorg ervoor de volgende eerste vereisten worden voldaan:
 
 * De externe identiteitsservice moet consistente informatie retourneren als `JWS` lading in alle toepassingen op meerdere apparaten en platforms.
-* De eerste het stromen toepassing moet het unieke gebruikersidentificatie terugwinnen en `JWS` nuttige lading als deel van [ a.u.b.-dienst-Symbolische ](../../appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md) kopbal voor alle verzoeken omvatten die het specificeren.
+* De eerste het stromen toepassing moet het unieke gebruikersidentificatie terugwinnen en `JWS` nuttige lading als deel van [&#x200B; a.u.b.-dienst-Symbolische &#x200B;](../../appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md) kopbal voor alle verzoeken omvatten die het specificeren.
 * De tweede streamingtoepassing moet een autorisatiebesluit ophalen voordat een door de gebruiker geselecteerde resource wordt afgespeeld.
 
 >[!IMPORTANT]
@@ -224,13 +224,13 @@ Alvorens de vergunningsstroom door enige sign-on het gebruiken van een de dienst
 >
 > <br/>
 > 
-> * De eerste het stromen toepassing heeft authentificatie uitgevoerd en een geldige waarde voor [ AD-dienst-Symbolische ](../../appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md) verzoekkopbal omvat.
+> * De eerste het stromen toepassing heeft authentificatie uitgevoerd en een geldige waarde voor [&#x200B; AD-dienst-Symbolische &#x200B;](../../appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md) verzoekkopbal omvat.
 
 ### Workflow {#workflow-steps-scenario-performing-authorization-flow-using-service-token-single-sign-on-method}
 
 Voer de gegeven stappen uit om de vergunningsstroom door enige sign-on uit te voeren gebruikend een de dienstteken zoals aangetoond in het volgende diagram.
 
-![ wint vergunningsbesluiten door enige sign-on het gebruiken van de dienstteken ](../../../../../assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-retrieve-authorization-decisions-through-single-sign-on-using-service-token-flow.png) terug
+![&#x200B; wint vergunningsbesluiten door enige sign-on het gebruiken van de dienstteken &#x200B;](../../../../../assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-retrieve-authorization-decisions-through-single-sign-on-using-service-token-flow.png) terug
 
 *wint vergunningsbesluiten door enige sign-on het gebruiken van de dienstteken* terug
 
@@ -244,7 +244,7 @@ Voer de gegeven stappen uit om de vergunningsstroom door enige sign-on uit te vo
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [ terugwinnen vergunningsbesluiten gebruikend specifieke mvpd ](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details op:
+   > Verwijs naar [&#x200B; terugwinnen vergunningsbesluiten gebruikend specifieke mvpd &#x200B;](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details op:
    >
    > * Alle _vereiste_ parameters, als `serviceProvider`, `mvpd`, en `resources`
    > * Alle _vereiste_ kopballen, als `Authorization` en `AP-Device-Identifier`
@@ -256,7 +256,7 @@ Voer de gegeven stappen uit om de vergunningsstroom door enige sign-on uit te vo
    >
    > <br/>
    > 
-   > Voor meer details over `AD-Service-Token` kopbal, verwijs naar [ AD-dienst-Symbolische ](../../appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md) documentatie.
+   > Voor meer details over `AD-Service-Token` kopbal, verwijs naar [&#x200B; AD-dienst-Symbolische &#x200B;](../../appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md) documentatie.
 
 1. **vind enig sign-on profiel:** de server van Adobe Pass identificeert een geldig enig sign-on profiel dat op de ontvangen parameters en kopballen wordt gebaseerd.
 
@@ -266,7 +266,7 @@ Voer de gegeven stappen uit om de vergunningsstroom door enige sign-on uit te vo
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [ terugwinnen vergunningsbesluiten gebruikend specifieke mvpd ](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details over de informatie die in een besluitreactie wordt verstrekt.
+   > Verwijs naar [&#x200B; terugwinnen vergunningsbesluiten gebruikend specifieke mvpd &#x200B;](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details over de informatie die in een besluitreactie wordt verstrekt.
    > 
    > <br/>
    > 
@@ -277,15 +277,15 @@ Voer de gegeven stappen uit om de vergunningsstroom door enige sign-on uit te vo
    >
    > <br/>
    > 
-   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
 1. **stroom van het Begin met media teken:** de tweede het stromen toepassing gebruikt het media teken om de inhoud te spelen.
 
-1. **Terugkeer `Deny` besluit met details:** De Besluiten staan eindpuntreactie toe bevat a `Deny` besluit en een foutenlading die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+1. **Terugkeer `Deny` besluit met details:** De Besluiten staan eindpuntreactie toe bevat a `Deny` besluit en een foutenlading die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
    >[!IMPORTANT]
    >
-   > Verwijs naar [ terugwinnen vergunningsbesluiten gebruikend specifieke mvpd ](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details over de informatie die in een besluitreactie wordt verstrekt.
+   > Verwijs naar [&#x200B; terugwinnen vergunningsbesluiten gebruikend specifieke mvpd &#x200B;](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API documentatie voor details over de informatie die in een besluitreactie wordt verstrekt.
    > 
    > <br/>
    > 
@@ -296,10 +296,10 @@ Voer de gegeven stappen uit om de vergunningsstroom door enige sign-on uit te vo
    >
    > <br/>
    > 
-   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [ Verbeterde documentatie van de Codes van de Fout ](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
+   > Als de bevestiging ontbreekt, zal een foutenreactie worden geproduceerd, verstrekkend extra informatie die aan de [&#x200B; Verbeterde documentatie van de Codes van de Fout &#x200B;](../../../../features-standard/error-reporting/enhanced-error-codes.md) volgt.
 
 1. **handvat `Deny` besluitvormingsdetails:** de tweede het stromen toepassing verwerkt de fouteninformatie van de reactie en kan het gebruiken om naar keuze een specifiek bericht op het gebruikersinterface te tonen.
 
 >[!NOTE]
 >
-> De stappen voor de pre-vergunningsstroom zijn het zelfde als die voor de vergunningsstroom, behalve dat is het gebruikte eindpunt in [ wordt beschreven terugwinnen pre-vergunningsbesluiten gebruikend specifieke mvpd ](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md) documentatie die.
+> De stappen voor de pre-vergunningsstroom zijn het zelfde als die voor de vergunningsstroom, behalve dat is het gebruikte eindpunt in [&#x200B; wordt beschreven terugwinnen pre-vergunningsbesluiten gebruikend specifieke mvpd &#x200B;](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md) documentatie die.

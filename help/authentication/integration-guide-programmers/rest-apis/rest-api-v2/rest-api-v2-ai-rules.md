@@ -14,13 +14,13 @@ ht-degree: 0%
 >
 > De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
-Dit document verstrekt de klanten van de Authentificatie van Adobe Pass van gestructureerde regels en beste praktijken specifiek die voor AI-bijgewoonde ontwikkeling van (TV overal) toepassingen worden ontworpen die [ REST API V2 ](rest-api-v2-overview.md) gebruiken.
+Dit document verstrekt de klanten van de Authentificatie van Adobe Pass van gestructureerde regels en beste praktijken specifiek die voor AI-bijgewoonde ontwikkeling van (TV overal) toepassingen worden ontworpen die [&#x200B; REST API V2 &#x200B;](rest-api-v2-overview.md) gebruiken.
 
-Door de AI ontwikkelingsregels te volgen die in deze gids worden geschetst, kunnen de ontwikkelaars hun AI codeerassistenten verzekeren helpen volgzame, uitvoerbare, en onderhoudsbare integratie tot stand brengen die aan de [ verplichte vereisten en geadviseerde praktijken ](rest-api-v2-checklist.md) naleven.
+Door de AI ontwikkelingsregels te volgen die in deze gids worden geschetst, kunnen de ontwikkelaars hun AI codeerassistenten verzekeren helpen volgzame, uitvoerbare, en onderhoudsbare integratie tot stand brengen die aan de [&#x200B; verplichte vereisten en geadviseerde praktijken &#x200B;](rest-api-v2-checklist.md) naleven.
 
 ## Regels voor codeassistenten {#coding-assistants-rules}
 
-De regels verstrekken systeem-vlakke instructies aan Agenten. Beschouw ze als permanente context, voorkeuren of workflows. De regels binnen dit document zijn compatibel met populaire AI-Gerichte coderingsassistenten, en transformeren [ REST API V2 Checklist ](rest-api-v2-checklist.md) in actionable AI ontwikkelingsrichtlijnen.
+De regels verstrekken systeem-vlakke instructies aan Agenten. Beschouw ze als permanente context, voorkeuren of workflows. De regels binnen dit document zijn compatibel met populaire AI-Gerichte coderingsassistenten, en transformeren [&#x200B; REST API V2 Checklist &#x200B;](rest-api-v2-checklist.md) in actionable AI ontwikkelingsrichtlijnen.
 
 Ga vandaag aan de slag door uw AI-ontwikkelomgeving te configureren met onze uitgebreide regelset en profiteer van de voordelen van intelligente, compatibele code genereren voor de integratie van uw Adobe Pass Authentication REST API V2. Kopieer en plak onder de regels naar het configuratiebestand van de ontwikkelomgeving, afhankelijk van het AI-gereedschap dat u gebruikt.
 

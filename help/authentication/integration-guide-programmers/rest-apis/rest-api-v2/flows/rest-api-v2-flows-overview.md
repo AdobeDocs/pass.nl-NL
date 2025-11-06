@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 Ga om aan de slag te gaan naar de openbare documentatie van de stromen die u interesseert voor de onderstaande lijst.
 
@@ -44,4 +44,4 @@ Ga om aan de slag te gaan naar de openbare documentatie van de stromen die u int
 
 ## Wilt u de REST API V2 proberen?
 
-U kunt REST API V2 door onze product-specifieke pagina van [ Adobe Developer ](https://developer.adobe.com/adobe-pass/) website nu onderzoeken.
+U kunt REST API V2 door onze product-specifieke pagina van [&#x200B; Adobe Developer &#x200B;](https://developer.adobe.com/adobe-pass/) website nu onderzoeken.

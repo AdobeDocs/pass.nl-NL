@@ -25,7 +25,7 @@ Op deze pagina worden nieuwe functies, wijzigingen en bekende problemen met deze
 * het aantal gebruikers dat elk gelijktijdig niveau heeft bereikt (d.w.z. hoeveel gebruikers ooit 2 gezamenlijke stromen, 3 gelijktijdige stromen, etc. hebben gehad) tijdens elk korrelige interval
 * de totale duur voor elk valutaniveau, in minuten (de gemiddelde waarde kan worden berekend door deze waarde eenvoudig te delen door het bovenstaande aantal)
 * het totale aantal keren dat gebruikers elk gelijktijdige niveau hebben bereikt, om het effect van een bepaalde regel in termen van zowel betrokken gebruikers als geaggregeerde gebruikerservaring te schatten
-Meer details zijn op de [ pagina van de Rapporten van het Gebruik ](/help/concurrency-monitoring/cm-usage-reports.md).
+Meer details zijn op de [&#x200B; pagina van de Rapporten van het Gebruik &#x200B;](/help/concurrency-monitoring/cm-usage-reports.md).
 
 We hebben ook de beveiliging van SQL-injecties verbeterd en verschillende oplossingen voor problemen toegevoegd.
 

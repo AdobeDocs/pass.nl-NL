@@ -15,7 +15,7 @@ ht-degree: 0%
 
 
 
-**A:** de Controle van de Gelijktijdige kan niet direct tussen levende inhoud en Video op bestelling (VOD) onderscheiden. De videospeler moet het type van inhoud kennen het speelt en deze informatie tijdens de [ vraag van de zittingsinitialisering ](/help/concurrency-monitoring/cm-api-overview.md#session-initial) (die voor Gelijktijdige Controle wordt vereist) verzenden. De normale workflow ziet er als volgt uit:
+**A:** de Controle van de Gelijktijdige kan niet direct tussen levende inhoud en Video op bestelling (VOD) onderscheiden. De videospeler moet het type van inhoud kennen het speelt en deze informatie tijdens de [&#x200B; vraag van de zittingsinitialisering &#x200B;](/help/concurrency-monitoring/cm-api-overview.md#session-initial) (die voor Gelijktijdige Controle wordt vereist) verzenden. De normale workflow ziet er als volgt uit:
 
 1. De klanten van de Controle van de Gelijktijdige bepalen een reeks meta-gegevens die zij op (b.v. content-type=live|vod, apparaat-type=mobile|console|Desktop) zouden willen uitvoeren.
 1. Het team van de Controle van de Valuta voert het gewenste beleid uit. Voorbeeld:

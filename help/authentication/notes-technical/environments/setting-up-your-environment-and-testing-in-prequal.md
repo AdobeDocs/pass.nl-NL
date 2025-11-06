@@ -101,7 +101,7 @@ Addresses:  52.26.79.43
 
 **dit is een gemakkelijke stap:**
 
-* lading [ voorrecht milieu ](https://entitlement-prequal.auth.adobe.com/environment.html) en [ recht ](https://entitlement.auth.adobe.com/environment.html). Ze zouden dezelfde reactie moeten teruggeven.
+* lading [&#x200B; voorrecht milieu &#x200B;](https://entitlement-prequal.auth.adobe.com/environment.html) en [&#x200B; recht &#x200B;](https://entitlement.auth.adobe.com/environment.html). Ze zouden dezelfde reactie moeten teruggeven.
 
 
 ## STAP 4.  Voer een eenvoudige authentificatie/vergunningsstroom uit gebruikend de website van de programmeur {#peform-a-simple-auth-flow}
@@ -115,6 +115,6 @@ Addresses:  52.26.79.43
 
 ## STAP 6.  Testen met de API-testsite {#perform-testing-using-api-testing-site}
 
-* Als u dieper in het testen van de Authentificatie van Adobe Pass wilt gaan, adviseren wij u de [ API testplaats ](http://entitlement-prequal.auth.adobe.com/apitest/api.html) gebruiken.
+* Als u dieper in het testen van de Authentificatie van Adobe Pass wilt gaan, adviseren wij u de [&#x200B; API testplaats &#x200B;](http://entitlement-prequal.auth.adobe.com/apitest/api.html) gebruiken.
 
-U kunt meer details op API testplaats bij [ vinden hoe te om de stromen van de Authentificatie en van de Vergunning te testen gebruikend Adobe API testplaats ](/help/authentication/integration-guide-programmers/legacy/notes-technical/test-authn-authz-flows-using-adobes-api-test-site.md).
+U kunt meer details op API testplaats bij [&#x200B; vinden hoe te om de stromen van de Authentificatie en van de Vergunning te testen gebruikend Adobe API testplaats &#x200B;](/help/authentication/integration-guide-programmers/legacy/notes-technical/test-authn-authz-flows-using-adobes-api-test-site.md).

@@ -17,17 +17,17 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> De implementatie van REST API V2 wordt begrensd door de [ Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
+> De implementatie van REST API V2 wordt begrensd door de [&#x200B; Throttling mechanisme &#x200B;](/help/authentication/integration-guide-programmers/throttling-mechanism.md) documentatie.
 
-Het document is voorgenomen voor ontwikkelaars die [ de Authentificatie van Adobe Pass REST API V2 ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md) in hun het stromen toepassingen integreren die een cliënt-aan-Server (C2S) architectuur hebben.
+Het document is voorgenomen voor ontwikkelaars die [&#x200B; de Authentificatie van Adobe Pass REST API V2 &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md) in hun het stromen toepassingen integreren die een cliënt-aan-Server (C2S) architectuur hebben.
 
 ## Vereisten {#prerequisites}
 
-Voor termijnen en definities, verwijs naar de [ REST API V2 Verklarende woordenlijst ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md) documentatie.
+Voor termijnen en definities, verwijs naar de [&#x200B; REST API V2 Verklarende woordenlijst &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md) documentatie.
 
-Voor verplichte vereisten en geadviseerde praktijken, verwijs naar de [ REST API V2 Checklist ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-checklist.md) documentatie.
+Voor verplichte vereisten en geadviseerde praktijken, verwijs naar de [&#x200B; REST API V2 Checklist &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-checklist.md) documentatie.
 
-Voor vaak gestelde vragen, verwijs naar [ REST API V2 FAQs ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md) documentatie.
+Voor vaak gestelde vragen, verwijs naar [&#x200B; REST API V2 FAQs &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md) documentatie.
 
 ## A. Registratiefase {#registration-phase}
 
@@ -101,15 +101,15 @@ De verificatiefase fungeert als een noodzakelijke stap voor de fase voorafgaand 
 * **wint profielen terug:** de het stromen toepassing controleert bestaande profielen door het [**/api/v2/ {serviceProvider} /profiles**](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md) eindpunt te roepen.
 
 
-* **Scenario 1:** er zijn bestaande profielen, kan de het stromen toepassing aan de [ VoorkeurFase ](#preauthorization-phase) of [ Fase van de Toestemming ](#authorization-phase) te werk gaan.
+* **Scenario 1:** er zijn bestaande profielen, kan de het stromen toepassing aan de [&#x200B; VoorkeurFase &#x200B;](#preauthorization-phase) of [&#x200B; Fase van de Toestemming &#x200B;](#authorization-phase) te werk gaan.
 
 
-* **Scenario 2:** Er zijn geen bestaande profielen, kan de het stromen toepassing aan de volgende stap te werk gaan [ de gebruiker ](#step-3-authenticate-the-user) voor authentiek verklaren.
+* **Scenario 2:** Er zijn geen bestaande profielen, kan de het stromen toepassing aan de volgende stap te werk gaan [&#x200B; de gebruiker &#x200B;](#step-3-authenticate-the-user) voor authentiek verklaren.
 
 
-* **Scenario 3:** Er zijn geen bestaande profielen, kan de het stromen toepassing te werk gaan om de gebruiker van tijdelijke toegang door de [ TempPass ](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md) eigenschap te voorzien.
+* **Scenario 3:** Er zijn geen bestaande profielen, kan de het stromen toepassing te werk gaan om de gebruiker van tijdelijke toegang door de [&#x200B; TempPass &#x200B;](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md) eigenschap te voorzien.
 
-   * Dit scenario is buiten het werkingsgebied van dit document, verwijs naar de [ Tijdelijke documentatie van de Stromen van de Toegang ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/temporary-access-flows/rest-api-v2-access-temporary-flows.md) voor meer informatie.
+   * Dit scenario is buiten het werkingsgebied van dit document, verwijs naar de [&#x200B; Tijdelijke documentatie van de Stromen van de Toegang &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/temporary-access-flows/rest-api-v2-access-temporary-flows.md) voor meer informatie.
 
 ### Stap 3: De gebruiker verifiëren {#step-3-authenticate-the-user}
 
@@ -136,15 +136,15 @@ De verificatiefase fungeert als een noodzakelijke stap voor de fase voorafgaand 
 
    * De het stromen toepassing moet **beginnen het opiniepeilings** mechanisme onder de volgende voorwaarden:
 
-      * **Authentificatie die binnen de primaire (scherm) toepassing wordt uitgevoerd:** de primaire (het stromen) toepassing zou moeten beginnen opiniepeilend wanneer de gebruiker de definitieve bestemmingspagina bereikt, nadat de browser component URL laadt die voor de `redirectUrl` parameter in het [ wordt gespecificeerd Sessions ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) eindpuntverzoek.
+      * **Authentificatie die binnen de primaire (scherm) toepassing wordt uitgevoerd:** de primaire (het stromen) toepassing zou moeten beginnen opiniepeilend wanneer de gebruiker de definitieve bestemmingspagina bereikt, nadat de browser component URL laadt die voor de `redirectUrl` parameter in het [&#x200B; wordt gespecificeerd Sessions &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) eindpuntverzoek.
 
-      * **Authentificatie die binnen een secundaire (scherm) toepassing wordt uitgevoerd:** de primaire (het stromen) toepassing zou moeten beginnen opiniepeilend zodra de gebruiker het authentificatieproces-recht na het ontvangen van de [ 3} eindpuntreactie van Zittingen {en het tonen van de authentificatiecode aan de gebruiker in werking stelt.](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md)
+      * **Authentificatie die binnen een secundaire (scherm) toepassing wordt uitgevoerd:** de primaire (het stromen) toepassing zou moeten beginnen opiniepeilend zodra de gebruiker het authentificatieproces-recht na het ontvangen van de [&#x200B; 3&rbrace; eindpuntreactie van Zittingen &lbrace;en het tonen van de authentificatiecode aan de gebruiker in werking stelt.](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md)
 
    * De het stromen toepassing moet **het opiniepeilings** mechanisme onder de volgende voorwaarden tegenhouden:
 
       * **Succesvolle authentificatie:** de het profielinformatie van de gebruiker wordt met succes teruggewonnen, bevestigend hun authentificatiestatus. Op dit moment is opiniepeiling niet langer nodig.
 
-      * **de zitting van de Authentificatie en de codereduur:** de authentificatiesessie en de code verlopen, zoals die door `notAfter` wordt vermeld timestamp (b.v., 30 minuten) in de [ 4} eindpuntreactie van Zittingen {. ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) Als dit gebeurt, moet de gebruiker het authentificatieproces opnieuw beginnen, en de opiniepeiling die de vorige authentificatiecode gebruikt zou onmiddellijk moeten worden tegengehouden.
+      * **de zitting van de Authentificatie en de codereduur:** de authentificatiesessie en de code verlopen, zoals die door `notAfter` wordt vermeld timestamp (b.v., 30 minuten) in de [&#x200B; 4&rbrace; eindpuntreactie van Zittingen &lbrace;. &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) Als dit gebeurt, moet de gebruiker het authentificatieproces opnieuw beginnen, en de opiniepeiling die de vorige authentificatiecode gebruikt zou onmiddellijk moeten worden tegengehouden.
 
       * **Nieuwe geproduceerde authentificatiecode:** als de gebruiker om een nieuwe authentificatiecode op het primaire (scherm) apparaat verzoekt, is de bestaande zitting niet meer geldig, en de opiniepeiling die de vorige authentificatiecode gebruikt zou onmiddellijk moeten worden tegengehouden.
 
@@ -186,9 +186,9 @@ De fase voorafgaand aan autorisatie is niet verplicht. De streamingtoepassing ka
 
    * De streamingtoepassing is niet vereist voor het opslaan van beslissingen voorafgaand aan de autorisatie in permanente opslag. Nochtans, wordt het geadviseerd om vergunningsbesluiten in het voorgeheugen op te slaan om de gebruikerservaring te verbeteren. Dit helpt onnodige vraag naar middelen vermijden die reeds vooraf zijn geautoriseerd, die latentie verminderen en prestaties verbeteren.
 
-   * De het stromen toepassing kan de reden voor een ontkend pre-vergunningsbesluit bepalen door de [ foutencode en het bericht ](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) te inspecteren inbegrepen in de reactie van Besluiten pre-goedkeurt eindpunt. Deze gegevens verschaffen insight de specifieke reden waarom het verzoek om voorafgaande toestemming is geweigerd, zodat de gebruiker op de hoogte wordt gebracht van de gebruikerservaring of de benodigde afhandeling in de toepassing wordt geactiveerd. Ervoor zorgen dat elk nieuw mechanisme dat wordt toegepast voor het ophalen van beslissingen vóór toelating, niet in een eindeloze lus resulteert als het besluit vóór toelating wordt geweigerd. U kunt overwegen om pogingen tot een redelijk aantal te beperken en weigeringen netjes af te handelen door duidelijke feedback aan de gebruiker te bekijken.
+   * De het stromen toepassing kan de reden voor een ontkend pre-vergunningsbesluit bepalen door de [&#x200B; foutencode en het bericht &#x200B;](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) te inspecteren inbegrepen in de reactie van Besluiten pre-goedkeurt eindpunt. Deze gegevens verschaffen insight de specifieke reden waarom het verzoek om voorafgaande toestemming is geweigerd, zodat de gebruiker op de hoogte wordt gebracht van de gebruikerservaring of de benodigde afhandeling in de toepassing wordt geactiveerd. Ervoor zorgen dat elk nieuw mechanisme dat wordt toegepast voor het ophalen van beslissingen vóór toelating, niet in een eindeloze lus resulteert als het besluit vóór toelating wordt geweigerd. U kunt overwegen om pogingen tot een redelijk aantal te beperken en weigeringen netjes af te handelen door duidelijke feedback aan de gebruiker te bekijken.
 
-   * De streamingtoepassing kan een voorafgaande beslissing voor een beperkt aantal bronnen verkrijgen in één API-aanvraag, meestal maximaal 5, als gevolg van voorwaarden die door de MVPD&#39;s worden opgelegd. Dit maximumaantal middelen kan worden bekeken en veranderd na het akkoord gaan met MVPDs door het Dashboard van Adobe Pass [ TVE ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#tve-dashboard) door één van uw organisatiebeheerders of door een vertegenwoordiger van de Authentificatie van Adobe Pass handelend namens u.
+   * De streamingtoepassing kan een voorafgaande beslissing voor een beperkt aantal bronnen verkrijgen in één API-aanvraag, meestal maximaal 5, als gevolg van voorwaarden die door de MVPD&#39;s worden opgelegd. Dit maximumaantal middelen kan worden bekeken en veranderd na het akkoord gaan met MVPDs door het Dashboard van Adobe Pass [&#x200B; TVE &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#tve-dashboard) door één van uw organisatiebeheerders of door een vertegenwoordiger van de Authentificatie van Adobe Pass handelend namens u.
 
 
 ## D. Vergunningsfase {#authorization-phase}
@@ -219,7 +219,7 @@ De autorisatiefase is verplicht. De streamingtoepassing kan deze fase niet overs
 
    * De streamingtoepassing is niet vereist voor het opslaan van beslissingen over machtigingen in permanente opslag.
 
-   * De het stromen toepassing kan de reden voor een ontkend vergunningsbesluit bepalen door de [ foutencode en het bericht ](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) te inspecteren inbegrepen in de reactie van Besluiten machtigt eindpunt. Deze gegevens verschaffen insight de specifieke reden waarom de aanvraag voor een vergunning is afgewezen, zodat de gebruiker op de hoogte kan worden gebracht van de ervaring of een noodzakelijke afhandeling van de toepassing kan worden gestart. Ervoor zorgen dat een nieuw mechanisme dat wordt toegepast voor het ophalen van vergunningsbesluiten niet in een eindeloze lus resulteert als het vergunningsbesluit wordt geweigerd. U kunt overwegen om pogingen tot een redelijk aantal te beperken en weigeringen netjes af te handelen door duidelijke feedback aan de gebruiker te bekijken.
+   * De het stromen toepassing kan de reden voor een ontkend vergunningsbesluit bepalen door de [&#x200B; foutencode en het bericht &#x200B;](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) te inspecteren inbegrepen in de reactie van Besluiten machtigt eindpunt. Deze gegevens verschaffen insight de specifieke reden waarom de aanvraag voor een vergunning is afgewezen, zodat de gebruiker op de hoogte kan worden gebracht van de ervaring of een noodzakelijke afhandeling van de toepassing kan worden gestart. Ervoor zorgen dat een nieuw mechanisme dat wordt toegepast voor het ophalen van vergunningsbesluiten niet in een eindeloze lus resulteert als het vergunningsbesluit wordt geweigerd. U kunt overwegen om pogingen tot een redelijk aantal te beperken en weigeringen netjes af te handelen door duidelijke feedback aan de gebruiker te bekijken.
 
    * De streamingtoepassing is niet vereist om een verlopen mediatoken te vernieuwen terwijl de stream actief wordt afgespeeld. Als het media-token tijdens het afspelen verloopt, moet het zijn toegestaan dat de stream zonder onderbreking wordt voortgezet. Nochtans, moet de cliënt om een nieuw vergunningsbesluit verzoeken — en een nieuw media teken verkrijgen — de volgende tijd de gebruiker probeert om een middel te spelen.
 

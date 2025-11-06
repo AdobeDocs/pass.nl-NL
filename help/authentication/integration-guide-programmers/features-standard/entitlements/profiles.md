@@ -14,7 +14,7 @@ ht-degree: 0%
 >
 > De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
-De profielen worden gecreeerd door de Authentificatie van Adobe Pass [ REST API V2 ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md) wanneer een gebruiker met succes met hun leverancier van de Tv van de Betaal (MVPD) verklaart.
+De profielen worden gecreeerd door de Authentificatie van Adobe Pass [&#x200B; REST API V2 &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md) wanneer een gebruiker met succes met hun leverancier van de Tv van de Betaal (MVPD) verklaart.
 
 Het type profiel varieert op basis van de gebruikte verificatiemethode:
 
@@ -39,9 +39,9 @@ Profielen slaan sleutelgegevens op die cliënttoepassingen toelaten om:
 * Bepaal de verificatiestatus van de gebruiker.
 * Identificeer de gebruikte authentificatiemethode.
 * Identificeer de identiteitsprovider.
-* Toegang [ gebruikersmeta-gegevens ](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata.md).
+* Toegang [&#x200B; gebruikersmeta-gegevens &#x200B;](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata.md).
 
-Profielen worden veilig opgeslagen op de achtergrond van de Adobe Pass-verificatie en zijn gekoppeld aan de toepassing, het apparaat en de id van de serviceprovider die ze aanvragen. Zij blijven geldig voor een beperkte tijd, zoals die door de [ Tijd-aan-Levende Authentificatie (TTL) ](#authentication-ttl-management) wordt bepaald.
+Profielen worden veilig opgeslagen op de achtergrond van de Adobe Pass-verificatie en zijn gekoppeld aan de toepassing, het apparaat en de id van de serviceprovider die ze aanvragen. Zij blijven geldig voor een beperkte tijd, zoals die door de [&#x200B; Tijd-aan-Levende Authentificatie (TTL) &#x200B;](#authentication-ttl-management) wordt bepaald.
 
 ## Verificatietijd-aan-Levende (TTL) Beheer {#authentication-ttl-management}
 
@@ -50,9 +50,9 @@ De Tijd-aan-Levende van de authentificatie (TTL) bepaalt hoe lang een gebruiker 
 * Platformcategorie (bijvoorbeeld desktop, mobiel, met tv verbonden apparaten)
 * Specifiek platform (bijvoorbeeld iOS, Android, tvOS, Roku, FireTV)
 
-De authentificatie (authN) TTL kan door het Dashboard van Adobe Pass [ worden bekeken en worden veranderd TVE ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#tve-dashboard) door één van uw organisatiebeheerders of door een vertegenwoordiger van de Authentificatie van Adobe Pass handelend namens u.
+De authentificatie (authN) TTL kan door het Dashboard van Adobe Pass [&#x200B; worden bekeken en worden veranderd TVE &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#tve-dashboard) door één van uw organisatiebeheerders of door een vertegenwoordiger van de Authentificatie van Adobe Pass handelend namens u.
 
-Voor meer details, verwijs naar de [ documentatie van de Gebruiker van de Gids van de Integratie van het Dashboard van 0} TVE.](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#most-used-flows)
+Voor meer details, verwijs naar de [&#x200B; documentatie van de Gebruiker van de Gids van de Integratie van het Dashboard van 0&rbrace; TVE.](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#most-used-flows)
 
 ## REST API V2 {#rest-api-v2}
 
@@ -71,4 +71,4 @@ Raadpleeg de volgende documenten voor meer informatie over hoe en wanneer u de b
 
 >[!MORELIKETHIS]
 >
-> [ FAQs van de Fase van de Authentificatie ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general)
+> [&#x200B; FAQs van de Fase van de Authentificatie &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general)

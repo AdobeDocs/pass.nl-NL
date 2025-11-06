@@ -15,7 +15,7 @@ ht-degree: 0%
 >
 >De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
-De officiële documentatie beschrijvend de milieu&#39;s van Adobe is beschikbaar [ Vestiging uw milieu en het testen in Prequal ](/help/authentication/notes-technical/environments/setting-up-your-environment-and-testing-in-prequal.md):
+De officiële documentatie beschrijvend de milieu&#39;s van Adobe is beschikbaar [&#x200B; Vestiging uw milieu en het testen in Prequal &#x200B;](/help/authentication/notes-technical/environments/setting-up-your-environment-and-testing-in-prequal.md):
 
 De Adobe-omgevingen worden in een paar woorden samengevat:
 
@@ -32,6 +32,6 @@ Elk milieu heeft twee profielen: **het opvoeren** en **productie**.
 
 De reden voor het hebben van de twee profielen is dat op het het opvoeren profiel wij nieuwe partners voorbereiden om te leven, en zij zouden het systeem met of de volgende bouwstijl (pre-Kwalificatie) of met versie willen testen (stabieler).
 
-Als een partner de nieuwe versie wil testen, zijn er een paar extra stappen die moeten worden gedaan. Zie, [ Vestiging uw milieu en het testen in Pre-qual ](/help/authentication/notes-technical/environments/setting-up-your-environment-and-testing-in-prequal.md).
+Als een partner de nieuwe versie wil testen, zijn er een paar extra stappen die moeten worden gedaan. Zie, [&#x200B; Vestiging uw milieu en het testen in Pre-qual &#x200B;](/help/authentication/notes-technical/environments/setting-up-your-environment-and-testing-in-prequal.md).
 
 Door de bovenstaande stappen te volgen, is gegarandeerd dat de komende release zal worden getest in de pre-kwalificatieomgeving.

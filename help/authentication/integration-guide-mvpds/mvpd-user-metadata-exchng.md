@@ -55,7 +55,7 @@ In dit voorbeeld wordt de uitwisseling van het volgende getoond:
 
 Momenteel ondersteunen de programmeur-API, Adobe Pass-verificatie en MVPD-autorisatoren alleen kanaalverificatie. Het kanaal wordt als onbewerkte teksttekenreeks opgegeven in de API-aanroep getAuthorization() van de programmeur. Deze tekenreeks wordt helemaal doorgegeven aan de MVPD die de backend autoriseert:
 
-In de app of site van de programmeur kiest de gebruiker een MVPD die geschikt is voor XACML (in dit voorbeeld &#39;TNT&#39;). Voor informatie over XACML, zie [ eXtensible Taal van de Prijsverhoging van het Toegangsbeheer ](https://en.wikipedia.org/wiki/XACML){target=_blank}.
+In de app of site van de programmeur kiest de gebruiker een MVPD die geschikt is voor XACML (in dit voorbeeld &#39;TNT&#39;). Voor informatie over XACML, zie [&#x200B; eXtensible Taal van de Prijsverhoging van het Toegangsbeheer &#x200B;](https://en.wikipedia.org/wiki/XACML){target=_blank}.
 De toepassing van de Programmer vormt een verzoek AuthZ dat de middel en zijn meta-gegevens omvat.  Dit voorbeeld bevat een MPAA-classificatie van &quot;pg&quot; in het mediakarakter van het kanaalelement:
 
 ```XML

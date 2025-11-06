@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 </br>
 
@@ -47,7 +47,7 @@ Vergeleken met de op Clientless API gebaseerde app, gaat de verificatie naar het
 
 Hiervoor moeten programmeurs een MVPD-kiezer toevoegen aan hun apps, zodat gebruikers hun tv-provider direct op het FireTV-apparaat kunnen kiezen. Als u MVPD selecteert, wordt de aanmeldingspagina van MVPD weergegeven op het FireTV-apparaat.
 
-Draadframes van de gebruikersstromen die de regelmatige, HBA, en scenario&#39;s SSO op fireTV beschrijven kunnen bij [ Amazon Vuur TV - MVVPD Onderteken-binnen de Stroom van de Gebruiker worden gevonden ](https://xd.adobe.com/view/9058288e-4b67-43a1-9d5b-5f76ede6c51e/).
+Draadframes van de gebruikersstromen die de regelmatige, HBA, en scenario&#39;s SSO op fireTV beschrijven kunnen bij [&#x200B; Amazon Vuur TV - MVVPD Onderteken-binnen de Stroom van de Gebruiker worden gevonden &#x200B;](https://xd.adobe.com/view/9058288e-4b67-43a1-9d5b-5f76ede6c51e/).
 
 ## Migratie van op Android SDK gebaseerde app naar op FireTV SDK gebaseerde app {#migra2}
 

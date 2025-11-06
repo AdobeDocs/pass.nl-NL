@@ -17,14 +17,14 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 ## Tijdelijke gegevens wissen {#clearing-temporary-data}
 
 Met Adobe Pass-verificatie worden tijdelijke gegevens opgeslagen, zoals browsercache, LSO&#39;s-cache en cookies. Het wissen van tijdelijke gegevens is belangrijk om ervoor te zorgen dat u bij het testen een schone lei krijgt.
 
 - [De browsercache en cookies wissen](#clearing-the-browser-cache-and-cookies)
-- [ het Schrappen LSOs Geheime voorgeheugen ](#clearing-lsos-cache)
+- [&#x200B; het Schrappen LSOs Geheime voorgeheugen &#x200B;](#clearing-lsos-cache)
 
 
 ## De browsercache en cookies wissen {#clearing-the-browser-cache-and-cookies}
@@ -34,7 +34,7 @@ Het is afhankelijk van de browser, maar in Firefox: &quot;Tools&quot; -\> &quot;
 
 ## LSO&#39;s-cache wissen {#clearing-lsos-cache}
 
-Heb toegang tot de [ hulp van de Speler van de Flits ](http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager07.html).
+Heb toegang tot de [&#x200B; hulp van de Speler van de Flits &#x200B;](http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager07.html).
 
 Selecteer ```entitlement.\*``` (afhankelijk van wat het wordt getest) en klik &quot;Website van de Schrapping&quot;.
 
