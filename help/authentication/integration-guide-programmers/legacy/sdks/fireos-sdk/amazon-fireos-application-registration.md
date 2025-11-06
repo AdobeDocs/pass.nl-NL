@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 </br>
 
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 Vanaf versie 3.0 van de FireOS AccessEnabler SDK veranderen we het verificatiemechanisme met Adobe-servers. In plaats van het gebruiken van een openbare sleutel en een geheim systeem om requestorID te ondertekenen, introduceren wij het concept een koord van de Verklaring van de Software dat kan worden gebruikt om een toegangstoken te verkrijgen dat later voor alle vraag wordt gebruikt die SDK aan onze servers maakt. Naast een Software Statement zult u ook een diepe verbinding voor uw toepassing moeten tot stand brengen.
 
-Meer informatie, zie [ Dynamisch het Overzicht van de Registratie van de Cliënt ](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md).
+Meer informatie, zie [&#x200B; Dynamisch het Overzicht van de Registratie van de Cliënt &#x200B;](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md).
 
 ## Wat is een Software Statement? {#what}
 
@@ -59,11 +59,11 @@ Een verklaring van de Software is een teken JWT dat informatie over uw toepassin
 
    Een tekstbestand wordt gedownload. Gebruik de inhoud ervan als de Software Statement.
 
-Meer informatie, zie [ Dynamisch Beheer van de Registratie van de Cliënt ](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md#dynamic-client-registration-management).
+Meer informatie, zie [&#x200B; Dynamisch Beheer van de Registratie van de Cliënt &#x200B;](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md#dynamic-client-registration-management).
 
 ### Als u geen toegang hebt tot het Adobe TVE-dashboard:
 
-Verzend een kaartje naar [ tve-support@adobe.com ](mailto:tve-support@adobe.com). Neem alle benodigde informatie op, zoals het kanaal, de naam van de toepassing, de versie en de platforms. Iemand van ons ondersteuningsteam zal een softwareinstructie voor u maken.
+Verzend een kaartje naar [&#x200B; tve-support@adobe.com &#x200B;](mailto:tve-support@adobe.com). Neem alle benodigde informatie op, zoals het kanaal, de naam van de toepassing, de versie en de platforms. Iemand van ons ondersteuningsteam zal een softwareinstructie voor u maken.
 
 ## Hoe te om de Verklaring van de Software te gebruiken {#use}
 

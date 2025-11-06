@@ -15,14 +15,14 @@ ht-degree: 0%
 >
 >De inhoud op deze pagina wordt alleen ter informatie verstrekt. Voor het gebruik van deze API is een huidige licentie van Adobe vereist. Ongeautoriseerd gebruik is niet toegestaan.
 
-De **sectie van Programmeurs** van het Dashboard van TVE staat u toe om montages voor de [ programmeurs ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#programmer) verbonden aan uw rekeningsrechten te bekijken en te beheren. U kunt ook [ een nieuwe programmeur ](#add-new-programmer) volgens uw vereiste toevoegen.
+De **sectie van Programmeurs** van het Dashboard van TVE staat u toe om montages voor de [&#x200B; programmeurs &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#programmer) verbonden aan uw rekeningsrechten te bekijken en te beheren. U kunt ook [&#x200B; een nieuwe programmeur &#x200B;](#add-new-programmer) volgens uw vereiste toevoegen.
 
 Het **lusje van Programmeurs** in het linkerpaneel toont een lijst van bestaande programmeurs met de volgende details:
 
 * **identiteitskaart van de Programmer**: Een herkenningsteken van het media bedrijf binnen het systeem.
 * **Kanalen**: Het aantal bijbehorende kanalen verbonden aan een programmeur.
 
-![ Lijst van bestaande programmeurs ](../assets/tve-dashboard/new-tve-dashboard/programmers/programmers-list-view.png)
+![&#x200B; Lijst van bestaande programmeurs &#x200B;](../assets/tve-dashboard/new-tve-dashboard/programmers/programmers-list-view.png)
 
 *Lijst van bestaande programmeurs*
 
@@ -41,27 +41,27 @@ Voer de volgende stappen uit om verschillende instellingen van een specifieke pr
    * [Geregistreerde toepassingen](#registered-applications)
    * [Aangepaste schema&#39;s](#custom-schemes)
 
-   ![ montages van de Programmer ](../assets/tve-dashboard/new-tve-dashboard/programmers/programmer-tabs-view.png)
+   ![&#x200B; montages van de Programmer &#x200B;](../assets/tve-dashboard/new-tve-dashboard/programmers/programmer-tabs-view.png)
 
    *montages van de Programmer*
 
 >[!IMPORTANT]
 >
-> De Controle van de mening [ en duw verandert ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) voor meer informatie bij het activeren van de configuratieveranderingen.
+> De Controle van de mening [&#x200B; en duw verandert &#x200B;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) voor meer informatie bij het activeren van de configuratieveranderingen.
 
 ### Kanalen {#channels}
 
-Op dit tabblad wordt een lijst weergegeven met kanalen die zijn gekoppeld aan een huidige programmeur. Selecteer een specifiek kanaal van deze lijst om tot gedetailleerde informatie in de [ sectie van Kanalen ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-channels.md) toegang te hebben.
+Op dit tabblad wordt een lijst weergegeven met kanalen die zijn gekoppeld aan een huidige programmeur. Selecteer een specifiek kanaal van deze lijst om tot gedetailleerde informatie in de [&#x200B; sectie van Kanalen &#x200B;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-channels.md) toegang te hebben.
 
-Om een nieuw kanaal voor de geselecteerde programmeur toe te voegen, **voeg nieuw kanaal** van de hoger-juiste hoek van **Beschikbare Kanalen** sectie toe. Leer [ hoe te om een nieuw kanaal ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-channels.md#add-new-channel) toe te voegen.
+Om een nieuw kanaal voor de geselecteerde programmeur toe te voegen, **voeg nieuw kanaal** van de hoger-juiste hoek van **Beschikbare Kanalen** sectie toe. Leer [&#x200B; hoe te om een nieuw kanaal &#x200B;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-channels.md#add-new-channel) toe te voegen.
 
-![ voeg een nieuw kanaal ](../assets/tve-dashboard/new-tve-dashboard/programmers/programmer-add-new-channel-button.png) toe
+![&#x200B; voeg een nieuw kanaal &#x200B;](../assets/tve-dashboard/new-tve-dashboard/programmers/programmer-add-new-channel-button.png) toe
 
 *voeg een nieuw kanaal* toe
 
 ### Certificaten {#certificates}
 
-Dit lusje toont een lijst van [ beschikbare certificaten ](#available-certificates) die in de de encryptiesstromen van gebruikersmeta-gegevens worden gebruikt. Er worden details weergegeven over elk certificaat dat het volgende bevat:
+Dit lusje toont een lijst van [&#x200B; beschikbare certificaten &#x200B;](#available-certificates) die in de de encryptiesstromen van gebruikersmeta-gegevens worden gebruikt. Er worden details weergegeven over elk certificaat dat het volgende bevat:
 
 * De status (of toegelaten voor **encryptie van gebruikersmeta-gegevens** gebruik of niet)
 * Serienummer
@@ -86,7 +86,7 @@ Ga als volgt te werk om een nieuw certificaat toe te voegen.
 
 1. Selecteer **nieuw certificaat** bij de hoger-juiste hoek van de **Beschikbare sectie van Certificaten** toevoegen.
 
-   ![ voeg een nieuw certificaat toe ](../assets/tve-dashboard/new-tve-dashboard/programmers/programmer-add-new-certificate-button.png)
+   ![&#x200B; voeg een nieuw certificaat toe &#x200B;](../assets/tve-dashboard/new-tve-dashboard/programmers/programmer-add-new-certificate-button.png)
 
    *voeg een nieuw certificaat toe*
 
@@ -102,7 +102,7 @@ Ga als volgt te werk om een nieuw certificaat toe te voegen.
 
 1. Selecteer **ja** van **Gebruikt aan gecodeerde gebruikersmeta-gegevens** dropdown menu om een nieuw certificaat te activeren.
 
-Er is een nieuwe configuratiewijziging gemaakt en deze is gereed voor serverupdate. Om het nieuwe certificaat te gebruiken dat in de **Beschikbare sectie van Certificaten** wordt vermeld, ga met de [ overzicht en duw veranderingen ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) stroom te werk.
+Er is een nieuwe configuratiewijziging gemaakt en deze is gereed voor serverupdate. Om het nieuwe certificaat te gebruiken dat in de **Beschikbare sectie van Certificaten** wordt vermeld, ga met de [&#x200B; overzicht en duw veranderingen &#x200B;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) stroom te werk.
 
 ##### Certificaat verwijderen {#delete-certificate}
 
@@ -112,17 +112,17 @@ Ga als volgt te werk om een certificaat te verwijderen.
 
 1. Selecteer **verwijderen**.
 
-   ![ verwijder het geselecteerde certificaat ](../assets/tve-dashboard/new-tve-dashboard/programmers/programmer-remove-certificate-button.png)
+   ![&#x200B; verwijder het geselecteerde certificaat &#x200B;](../assets/tve-dashboard/new-tve-dashboard/programmers/programmer-remove-certificate-button.png)
 
    *verwijder het geselecteerde certificaat*
 
 1. Selecteer **Schrapping** op het **certificaat van de Schrapping** dialoogvakje.
 
-Er is een nieuwe configuratiewijziging gemaakt en deze is gereed voor serverupdate. Het certificaat zal van de **Beschikbare certificaten** sectie slechts na [ overzicht en duw veranderingen ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) worden geschrapt.
+Er is een nieuwe configuratiewijziging gemaakt en deze is gereed voor serverupdate. Het certificaat zal van de **Beschikbare certificaten** sectie slechts na [&#x200B; overzicht en duw veranderingen &#x200B;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) worden geschrapt.
 
 ### Geregistreerde toepassingen {#registered-applications}
 
-Op dit tabblad wordt een lijst met geregistreerde toepassingen weergegeven. Voor meer details met betrekking tot geregistreerd toepassingsgebruik, verwijs naar het [ dynamische overzicht van de cliëntregistratie ](../integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) documentatie.
+Op dit tabblad wordt een lijst met geregistreerde toepassingen weergegeven. Voor meer details met betrekking tot geregistreerd toepassingsgebruik, verwijs naar het [&#x200B; dynamische overzicht van de cliëntregistratie &#x200B;](../integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) documentatie.
 
 U kunt de volgende handelingen uitvoeren met geregistreerde toepassingen:
 
@@ -135,7 +135,7 @@ Ga als volgt te werk om een nieuwe geregistreerde toepassing toe te voegen.
 
 1. Selecteer **nieuwe toepassing** bij de hoger-juiste hoek van de **Geregistreerde sectie van Toepassingen** toevoegen.
 
-   ![ voeg een nieuwe toepassing ](../assets/tve-dashboard/new-tve-dashboard/programmers/programmer-add-new-application-button.png) toe
+   ![&#x200B; voeg een nieuwe toepassing &#x200B;](../assets/tve-dashboard/new-tve-dashboard/programmers/programmer-add-new-application-button.png) toe
 
    *voeg een nieuwe toepassing* toe
 
@@ -163,13 +163,13 @@ Ga als volgt te werk om een nieuwe geregistreerde toepassing toe te voegen.
 
    >[!IMPORTANT]
    >
-   > Het wordt aanbevolen een nieuwe geregistreerde toepassing te maken voor elke belangrijke update van uw clienttoepassing om de levenscyclus en het gebruik ervan te beheren. Indien noodzakelijk, creeer een kaartje door onze [ Zendesk ](https://adobeprimetime.zendesk.com) en vraag uw Technische Manager van de Rekening (TAM) om een geregistreerde toepassing te herroepen om de functionaliteit van een specifieke versie van de cliënttoepassing te blokkeren.
+   > Het wordt aanbevolen een nieuwe geregistreerde toepassing te maken voor elke belangrijke update van uw clienttoepassing om de levenscyclus en het gebruik ervan te beheren. Indien noodzakelijk, creeer een kaartje door onze [&#x200B; Zendesk &#x200B;](https://adobeprimetime.zendesk.com) en vraag uw Technische Manager van de Rekening (TAM) om een geregistreerde toepassing te herroepen om de functionaliteit van een specifieke versie van de cliënttoepassing te blokkeren.
 
-1. Selecteer **waarde &quot;DIRECT van het Type 0} {van het drop-down menu.**
+1. Selecteer **waarde &quot;DIRECT van het Type 0&rbrace; &lbrace;van het drop-down menu.**
 
 1. Selecteer **toepassing** toevoegen.
 
-Er is een nieuwe configuratiewijziging gemaakt en deze is gereed voor serverupdate. Om de nieuwe geregistreerde toepassing te gebruiken die in de **Geregistreerde sectie van Toepassingen** wordt vermeld, ga met de [ overzicht en duw veranderingen ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) stroom te werk.
+Er is een nieuwe configuratiewijziging gemaakt en deze is gereed voor serverupdate. Om de nieuwe geregistreerde toepassing te gebruiken die in de **Geregistreerde sectie van Toepassingen** wordt vermeld, ga met de [&#x200B; overzicht en duw veranderingen &#x200B;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) stroom te werk.
 
 #### Software-instructie downloaden {#download-software-statement}
 
@@ -179,14 +179,14 @@ Voer de volgende stappen uit om een softwareinstructie te downloaden.
 
 1. Selecteer **Download**.
 
-   ![ Download een softwareverklaring ](../assets/tve-dashboard/new-tve-dashboard/programmers/programmer-download-software-statement-button.png)
+   ![&#x200B; Download een softwareverklaring &#x200B;](../assets/tve-dashboard/new-tve-dashboard/programmers/programmer-download-software-statement-button.png)
 
    *Download een softwareverklaring*
 
 
 ### Aangepaste schema&#39;s {#custom-schemes}
 
-Op dit tabblad wordt een lijst met aangepaste schema&#39;s weergegeven. Voor meer details met betrekking tot het gebruik van douaneregelingen, verwijs naar de [ iOS/tvOS toepassingsregistratie ](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-application-registration.md).
+Op dit tabblad wordt een lijst met aangepaste schema&#39;s weergegeven. Voor meer details met betrekking tot het gebruik van douaneregelingen, verwijs naar de [&#x200B; iOS/tvOS toepassingsregistratie &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-application-registration.md).
 
 U kunt de volgende wijzigingen aanbrengen in aangepaste schema&#39;s:
 
@@ -198,11 +198,11 @@ Voer de volgende stappen uit om een nieuw aangepast schema te genereren.
 
 1. Selecteer **produceer nieuwe douaneregeling**.
 
-   ![ produceer een nieuw douaneregeling ](../assets/tve-dashboard/new-tve-dashboard/programmers/programmer-add-new-custom-scheme-button.png)
+   ![&#x200B; produceer een nieuw douaneregeling &#x200B;](../assets/tve-dashboard/new-tve-dashboard/programmers/programmer-add-new-custom-scheme-button.png)
 
    *produceer een nieuw douaneregeling*
 
-Er is een nieuwe configuratiewijziging gemaakt en deze is gereed voor serverupdate. Om de nieuwe douaneregeling te gebruiken die in de **sectie van de Douane van de Schema&#39;s** wordt vermeld, ga met de [ overzicht te werk en druk veranderingen ](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) stroom.
+Er is een nieuwe configuratiewijziging gemaakt en deze is gereed voor serverupdate. Om de nieuwe douaneregeling te gebruiken die in de **sectie van de Douane van de Schema&#39;s** wordt vermeld, ga met de [&#x200B; overzicht te werk en druk veranderingen &#x200B;](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) stroom.
 
 ## Nieuwe programmeur toevoegen {#add-new-programmer}
 
@@ -212,7 +212,7 @@ Ga als volgt te werk om een nieuwe programmeerentiteit toe te voegen.
 
 1. Selecteer **nieuwe programmeur** bij de hoger-juiste hoek van de **sectie van Programmers** toevoegen.
 
-   ![ voeg een nieuwe programmeur ](../assets/tve-dashboard/new-tve-dashboard/programmers/programmer-add-new-programmer-button.png) toe
+   ![&#x200B; voeg een nieuwe programmeur &#x200B;](../assets/tve-dashboard/new-tve-dashboard/programmers/programmer-add-new-programmer-button.png) toe
 
    *voeg een nieuwe programmeur* toe
 
@@ -222,4 +222,4 @@ Ga als volgt te werk om een nieuwe programmeerentiteit toe te voegen.
 
 1. Selecteer **programmer** toevoegen.
 
-Er is een nieuwe configuratiewijziging gemaakt en deze is gereed voor serverupdate. Om de nieuwe programmeur te gebruiken die in de **sectie wordt vermeld van 0} Programmers {, ga met de** overzicht te werk en druk veranderingen [ stroom.](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md)
+Er is een nieuwe configuratiewijziging gemaakt en deze is gereed voor serverupdate. Om de nieuwe programmeur te gebruiken die in de **sectie wordt vermeld van 0&rbrace; Programmers &lbrace;, ga met de** overzicht te werk en druk veranderingen [&#x200B; stroom.](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md)

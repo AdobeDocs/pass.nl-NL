@@ -26,12 +26,12 @@ Er zijn twee secties beschikbaar op de homepage:
 
 In deze sectie, kunt u tot de openbare documentatie van het welkome bericht direct toegang hebben, en een momentopname van uw huidige configuraties bekijken.
 
-* **Actieve integratie**: Het aantal actieve integratie in het huidige milieu. Selecteer **Mening meer in integratiesectie** om tot gedetailleerde informatie in de [ sectie van de Integraties ](tve-dashboard-integrations.md) toegang te hebben.
-* **Actieve kanalen**: Het aantal actieve kanalen in het huidige milieu. Selecteer **Mening meer in de sectie van Kanalen** om tot gedetailleerde informatie in de [ Kanalen ](tve-dashboard-channels.md) sectie toegang te hebben.
-* **updates van het Gegevensbestand**: Het aantal configuratieveranderingen die aan huidig milieu worden aangebracht. Selecteer **Mening meer in de sectie van het Logboek van Veranderingen** om tot gedetailleerde informatie in de [ sectie van het Logboek van Veranderingen ](tve-dashboard-changes-log.md) toegang te hebben.
+* **Actieve integratie**: Het aantal actieve integratie in het huidige milieu. Selecteer **Mening meer in integratiesectie** om tot gedetailleerde informatie in de [&#x200B; sectie van de Integraties &#x200B;](tve-dashboard-integrations.md) toegang te hebben.
+* **Actieve kanalen**: Het aantal actieve kanalen in het huidige milieu. Selecteer **Mening meer in de sectie van Kanalen** om tot gedetailleerde informatie in de [&#x200B; Kanalen &#x200B;](tve-dashboard-channels.md) sectie toegang te hebben.
+* **updates van het Gegevensbestand**: Het aantal configuratieveranderingen die aan huidig milieu worden aangebracht. Selecteer **Mening meer in de sectie van het Logboek van Veranderingen** om tot gedetailleerde informatie in de [&#x200B; sectie van het Logboek van Veranderingen &#x200B;](tve-dashboard-changes-log.md) toegang te hebben.
 * **ESM dashboard**: Houd een oog uit voor het aanstaande Dashboard ESM, die diepgaande metriek op bezitsgebruik in het huidige milieu aanbieden. Deze functionaliteit is in toekomstige updates beschikbaar.
 
-![ Welkome scherm ](../assets/tve-dashboard/new-tve-dashboard/dashboard/dashboard-welcome-panel-view.png)
+![&#x200B; Welkome scherm &#x200B;](../assets/tve-dashboard/new-tve-dashboard/dashboard/dashboard-welcome-panel-view.png)
 
 *Welkome scherm*
 
@@ -43,8 +43,8 @@ Deze sectie presenteert 10 meest recente configuratieveranderingen die omvatten:
 * **die door** wordt gedrukt: De rekening verantwoordelijk voor de verandering.
 * **de datum van de Duw**: De datum toen de verandering werd aangebracht.
 
-![ Status van de Configuratie van een Logboek van Veranderingen ](../assets/tve-dashboard/new-tve-dashboard/dashboard/dashboard-configuration-status-panel-view.png)
+![&#x200B; Status van de Configuratie van een Logboek van Veranderingen &#x200B;](../assets/tve-dashboard/new-tve-dashboard/dashboard/dashboard-configuration-status-panel-view.png)
 
 *Status van de Configuratie van een Logboek van Veranderingen*
 
-Om de volledige lijst van veranderingen te bekijken, selecteer **Mening meer in het Logboek van Veranderingen** bij het laag-recht om de [ sectie van het Logboek van Veranderingen ](tve-dashboard-changes-log.md) te bekijken.
+Om de volledige lijst van veranderingen te bekijken, selecteer **Mening meer in het Logboek van Veranderingen** bij het laag-recht om de [&#x200B; sectie van het Logboek van Veranderingen &#x200B;](tve-dashboard-changes-log.md) te bekijken.

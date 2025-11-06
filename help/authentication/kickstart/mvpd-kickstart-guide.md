@@ -33,7 +33,7 @@ Adobe biedt een reeks bronnen die u kunnen helpen bij de integratie met Adobe Pa
 
 Het installatieproces omvat onder andere de volgende stappen:
 
-![ Adobe® het Proces van de Integratie van de Authentificatie van de Volwassing ](../assets/mvpd-int-lifecycle.png)
+![&#x200B; Adobe® het Proces van de Integratie van de Authentificatie van de Volwassing &#x200B;](../assets/mvpd-int-lifecycle.png)
 
 *Adobe® het Proces van de Integratie van de Authentificatie van de Volwassing*
 
@@ -121,7 +121,7 @@ Het installatieproces omvat onder andere de volgende stappen:
 
   In de RELEASE-omgeving wordt de huidige (stabiele) productiebuild gehost.
 
-Voor meer informatie over hoe te om deze milieu&#39;s te gebruiken, verwijs naar [ Begrijpend de ](/help/authentication/notes-technical/environments/understanding-the-adobe-environments.md) documentatie van de Milieu van Adobe.
+Voor meer informatie over hoe te om deze milieu&#39;s te gebruiken, verwijs naar [&#x200B; Begrijpend de &#x200B;](/help/authentication/notes-technical/environments/understanding-the-adobe-environments.md) documentatie van de Milieu van Adobe.
 
 >[!IMPORTANT]
 > 
@@ -129,16 +129,16 @@ Voor meer informatie over hoe te om deze milieu&#39;s te gebruiken, verwijs naar
 
 ## Toegang tot klantenondersteuning {#access-customer-support}
 
-**Adobe zal** toegang tot ons systeem van de klantensteun via [ Zendesk ](https://tve.zendesk.com/home) verlenen. Als u toegang wilt tot Zendesk, moet u zich registreren en een account maken op https://tve.zendesk.com/home.
+**Adobe zal** toegang tot ons systeem van de klantensteun via [&#x200B; Zendesk &#x200B;](https://tve.zendesk.com/home) verlenen. Als u toegang wilt tot Zendesk, moet u zich registreren en een account maken op https://tve.zendesk.com/home.
 
-Het Adobe Pass-verificatieteam is beschikbaar voor alle vragen of technische problemen die we tijdens het integratieproces kunnen tegenkomen. Gelieve te contacteren ons in [ tve-support@adobe.com ](mailto:tve-support@adobe.com).
+Het Adobe Pass-verificatieteam is beschikbaar voor alle vragen of technische problemen die we tijdens het integratieproces kunnen tegenkomen. Gelieve te contacteren ons in [&#x200B; tve-support@adobe.com &#x200B;](mailto:tve-support@adobe.com).
 
 ## Toegang tot documentatie {#access-documentation}
 
-**Adobe zal** toegang tot onze openbare documentatie via [ de Liga van de Ervaring van Adobe ](https://experienceleague.adobe.com/en/docs/pass/authentication/home) verlenen.
+**Adobe zal** toegang tot onze openbare documentatie via [&#x200B; de Liga van de Ervaring van Adobe &#x200B;](https://experienceleague.adobe.com/en/docs/pass/authentication/home) verlenen.
 
-Het team van de Authentificatie van Adobe Pass verstrekt uitvoerige documentatie voor de beschikbare eigenschappen en werkschema&#39;s onder de [ Gids van de Integratie voor MVPDs ](/help/authentication/integration-guide-mvpds/mvpd-integration-guide-overview.md) sectie. Verwijs naar de inhoudstafel onder deze sectie voor verbindingen aan gedetailleerde informatie over elk onderwerp.
+Het team van de Authentificatie van Adobe Pass verstrekt uitvoerige documentatie voor de beschikbare eigenschappen en werkschema&#39;s onder de [&#x200B; Gids van de Integratie voor MVPDs &#x200B;](/help/authentication/integration-guide-mvpds/mvpd-integration-guide-overview.md) sectie. Verwijs naar de inhoudstafel onder deze sectie voor verbindingen aan gedetailleerde informatie over elk onderwerp.
 
 ## Toegang tot het testgereedschap {#access-testing-tool}
 
-**Adobe zal** toegang tot ons APIs exploratiehulpmiddel via [ Adobe Developer ](https://developer.adobe.com/adobe-pass/) website verstrekken.
+**Adobe zal** toegang tot ons APIs exploratiehulpmiddel via [&#x200B; Adobe Developer &#x200B;](https://developer.adobe.com/adobe-pass/) website verstrekken.

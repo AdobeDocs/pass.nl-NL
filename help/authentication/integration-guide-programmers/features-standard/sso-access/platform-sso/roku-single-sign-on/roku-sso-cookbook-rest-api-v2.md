@@ -17,7 +17,7 @@ ht-degree: 0%
 
 De Adobe Pass Authentication REST API V2 biedt ondersteuning voor Platform Single Sign-On (SSO) voor eindgebruikers van clienttoepassingen die op RokuOS worden uitgevoerd.
 
-Dit document doet dienst als uitbreiding aan het bestaande [ REST API V2 Overzicht ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md) dat een mening op hoog niveau en het document verstrekt dat beschrijft hoe te om [ Enige sign-on uit te voeren gebruikend de stromen van de platformidentiteit ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-platform-identity-flows.md).
+Dit document doet dienst als uitbreiding aan het bestaande [&#x200B; REST API V2 Overzicht &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md) dat een mening op hoog niveau en het document verstrekt dat beschrijft hoe te om [&#x200B; Enige sign-on uit te voeren gebruikend de stromen van de platformidentiteit &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-platform-identity-flows.md).
 
 ## Single Sign-On gebruiken om identiteitsstromen van platforms te gebruiken {#cookbook}
 
@@ -27,7 +27,7 @@ Adobe Pass-verificatie werkt samen met Roku om de gebruikerservaring bij aanmeld
 
 Alvorens met Roku enig teken-op het gebruiken van de stromen van de platformidentiteit te werk te gaan, zorg ervoor dat SSO Roku wordt toegelaten. Roku SSO wordt toegelaten door gebrek tenzij de programmeur of MVPD verzoek om SSO om worden onbruikbaar gemaakt.
 
-Elke Programmeur kan Enige Sign-On (SSO) op het platform van Roku voor specifieke integratie door het [ Adobe Pass TVE Dashboard ](https://experience.adobe.com/pass/authentication) toelaten of onbruikbaar maken.
+Elke Programmeur kan Enige Sign-On (SSO) op het platform van Roku voor specifieke integratie door het [&#x200B; Adobe Pass TVE Dashboard &#x200B;](https://experience.adobe.com/pass/authentication) toelaten of onbruikbaar maken.
 
 ### Workflow {#workflow}
 

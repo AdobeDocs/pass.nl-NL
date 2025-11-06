@@ -39,7 +39,7 @@ Het protocol biedt ook meer flexibiliteit in termen van gegevens die worden bloo
 
 Om authentificatie met OAuth 2.0 te steunen, moet een MVPD aan de volgende voorwaarden voldoen:
 
-Eerst en vooral, moet MVPD ervoor zorgen dat het de [ stroom van de Verlening van de Code van de 0} Vergunning {steunt.](https://oauthlib.readthedocs.io/en/latest/oauth2/grants/authcode.html)
+Eerst en vooral, moet MVPD ervoor zorgen dat het de [&#x200B; stroom van de Verlening van de Code van de 0&rbrace; Vergunning &lbrace;steunt.](https://oauthlib.readthedocs.io/en/latest/oauth2/grants/authcode.html)
 
 Na te hebben bevestigd dat het de stroom ondersteunt, moet de MVPD ons de volgende informatie verstrekken:
 
@@ -67,7 +67,7 @@ In de authentificatiestroom, zal de Authentificatie van Adobe Pass met MVPD over
 
 
 
-![ Diagram om de stroom van de Authentificatie in de Authentificatie van Adobe te tonen die met MVPD op het protocol communiceert dat in configuratie wordt geselecteerd.](../assets/authn-flow.png)
+![&#x200B; Diagram om de stroom van de Authentificatie in de Authentificatie van Adobe te tonen die met MVPD op het protocol communiceert dat in configuratie wordt geselecteerd.](../assets/authn-flow.png)
 
 **Figuur 1: OAuth 2.0 authentificatiestroom**
 

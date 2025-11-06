@@ -23,7 +23,7 @@ Het **MVPDs** lusje in het linkerpaneel toont een lijst van MVPDs met de volgend
 
 * **identiteitskaart van MVPD**: Een unieke identiteitskaart van MVPD gebruikte aan opstelling een nieuwe integratie in het systeem.
 
-![ Lijst van geïntegreerde MVPDs ](../assets/tve-dashboard/new-tve-dashboard/mvpds/mvpds-list-view.png)
+![&#x200B; Lijst van geïntegreerde MVPDs &#x200B;](../assets/tve-dashboard/new-tve-dashboard/mvpds/mvpds-list-view.png)
 
 *Lijst van geïntegreerde MVPDs*
 
