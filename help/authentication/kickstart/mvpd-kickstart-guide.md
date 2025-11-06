@@ -135,7 +135,7 @@ Het Adobe Pass-verificatieteam is beschikbaar voor alle vragen of technische pro
 
 ## Toegang tot documentatie {#access-documentation}
 
-**Adobe zal** toegang tot onze openbare documentatie via [&#x200B; de Liga van de Ervaring van Adobe &#x200B;](https://experienceleague.adobe.com/en/docs/pass/authentication/home) verlenen.
+**Adobe zal** toegang tot onze openbare documentatie via [&#x200B; de Liga van de Ervaring van Adobe &#x200B;](https://experienceleague.adobe.com/nl/docs/pass/authentication/home) verlenen.
 
 Het team van de Authentificatie van Adobe Pass verstrekt uitvoerige documentatie voor de beschikbare eigenschappen en werkschema&#39;s onder de [&#x200B; Gids van de Integratie voor MVPDs &#x200B;](/help/authentication/integration-guide-mvpds/mvpd-integration-guide-overview.md) sectie. Verwijs naar de inhoudstafel onder deze sectie voor verbindingen aan gedetailleerde informatie over elk onderwerp.
 

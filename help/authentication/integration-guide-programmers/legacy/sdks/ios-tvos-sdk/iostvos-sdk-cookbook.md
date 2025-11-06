@@ -48,7 +48,7 @@ De het netwerkactiviteit van AccessEnabler vindt plaats in zijn eigen draad, zod
 
 ## De Experience Cloud ID-service configureren (bezoeker-id) {#visitorIDSetup}
 
-Het vormen van de [&#x200B; identiteitskaart van Experience Cloud &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/home.html) waarde is belangrijk van het [!DNL Analytics] standpunt. Wanneer een `visitorID` -waarde is ingesteld, verzendt de SDK deze informatie samen met elke netwerkaanroep en verzamelt de [!DNL Adobe Pass] -verificatieserver deze informatie. U kunt de analyses van de Adobe Pass Authentication-service koppelen aan andere analytische rapporten die u hebt van andere toepassingen of websites. De informatie over hoe te opstellings bezoekorID kan [&#x200B; hier &#x200B;](#setOptions) worden gevonden.
+Het vormen van de [&#x200B; identiteitskaart van Experience Cloud &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=nl-NL) waarde is belangrijk van het [!DNL Analytics] standpunt. Wanneer een `visitorID` -waarde is ingesteld, verzendt de SDK deze informatie samen met elke netwerkaanroep en verzamelt de [!DNL Adobe Pass] -verificatieserver deze informatie. U kunt de analyses van de Adobe Pass Authentication-service koppelen aan andere analytische rapporten die u hebt van andere toepassingen of websites. De informatie over hoe te opstellings bezoekorID kan [&#x200B; hier &#x200B;](#setOptions) worden gevonden.
 
 ## Machtigingsstromen {#entitlement}
 
