@@ -89,9 +89,9 @@ Verificatie op een apparaat met een tv-verbinding kan lastiger zijn dan op een m
 
 Met dit gebruiksgeval kunt u koppelingen tot stand brengen tussen D2C- en TVE(MVPD)-referenties op één apparaat en dat gekoppelde profiel gebruiken op andere apparaten in dezelfde toepassing.
 
-![ D2C-TVE SSO-stroom ](../../../assets/sso_service_d2c_1.png)
+![&#x200B; D2C-TVE SSO-stroom &#x200B;](../../../assets/sso_service_d2c_1.png)
 
-![ stroom van 0} dwars-ApparaatSSO ](../../../assets/sso_service_d2c_2.png)
+![&#x200B; stroom van 0&rbrace; dwars-ApparaatSSO &#x200B;](../../../assets/sso_service_d2c_2.png)
 
 ### SSO voor meerdere apparaten {#cross-device-sso-detailed}
 
@@ -121,7 +121,7 @@ De token Service heeft &quot;iat&quot; - uitgegeven bij en &quot;exp&quot; - ver
 
 ### Stap 3 - Verificatie met Adobe Pass REST API V2 met een TVE MVPD {#step-3}
 
-De authentificatie met Adobe Pass zou moeten worden uitgevoerd gebruikend het Token van de Dienst: [ REST API V2 - Enige Sign-On de Symbolische Stroom van de Dienst ](https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-flows/rest-api-v2-single-sign-on-access-flows/rest-api-v2-single-sign-on-service-token-flows)
+De authentificatie met Adobe Pass zou moeten worden uitgevoerd gebruikend het Token van de Dienst: [&#x200B; REST API V2 - Enige Sign-On de Symbolische Stroom van de Dienst &#x200B;](https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-flows/rest-api-v2-single-sign-on-access-flows/rest-api-v2-single-sign-on-service-token-flows)
 
 ### Stap 4 - Een ander apparaat koppelen {#step-4}
 
@@ -211,7 +211,7 @@ Als de service Token API-aanvraag niet kan worden onderhouden vanwege een fout m
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Toestemming</td>
-      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-authorization"> 1} kopbaldocumentatie van de Toestemming {.</a></td>
+      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-authorization"> 1&rbrace; kopbaldocumentatie van de Toestemming &lbrace;.</a></td>
       <td><i>vereist</i></td>
    </tr>
    <tr>
@@ -487,7 +487,7 @@ Content-Type: application/json
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Toestemming</td>
-      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-authorization"> 1} kopbaldocumentatie van de Toestemming {.</a></td>
+      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-authorization"> 1&rbrace; kopbaldocumentatie van de Toestemming &lbrace;.</a></td>
       <td><i>vereist</i></td>
    </tr>
    <tr>
@@ -711,7 +711,7 @@ Als de koppelings-API-aanvraag niet kan worden onderhouden vanwege een fout in d
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Toestemming</td>
-      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-authorization"> 1} kopbaldocumentatie van de Toestemming {.</a></td>
+      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-authorization"> 1&rbrace; kopbaldocumentatie van de Toestemming &lbrace;.</a></td>
       <td><i>vereist</i></td>
    </tr>
    <tr>
@@ -955,7 +955,7 @@ Als de Unlink API-aanvraag niet kan worden onderhouden vanwege een fout met de A
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Toestemming</td>
-      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-authorization"> 1} kopbaldocumentatie van de Toestemming {.</a></td>
+      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-authorization"> 1&rbrace; kopbaldocumentatie van de Toestemming &lbrace;.</a></td>
       <td><i>vereist</i></td>
    </tr>
    <tr>
@@ -1251,7 +1251,7 @@ Als de API-aanvraag van de List niet kan worden onderhouden vanwege een fout in 
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Toestemming</td>
-      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-authorization"> 1} kopbaldocumentatie van de Toestemming {.</a></td>
+      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-authorization"> 1&rbrace; kopbaldocumentatie van de Toestemming &lbrace;.</a></td>
       <td><i>vereist</i></td>
    </tr>
    <tr>
