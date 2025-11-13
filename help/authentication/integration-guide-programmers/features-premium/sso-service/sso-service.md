@@ -121,7 +121,7 @@ De token Service heeft &quot;iat&quot; - uitgegeven bij en &quot;exp&quot; - ver
 
 ### Stap 3 - Verificatie met Adobe Pass REST API V2 met een TVE MVPD {#step-3}
 
-De authentificatie met Adobe Pass zou moeten worden uitgevoerd gebruikend het Token van de Dienst: [&#x200B; REST API V2 - Enige Sign-On de Symbolische Stroom van de Dienst &#x200B;](https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-flows/rest-api-v2-single-sign-on-access-flows/rest-api-v2-single-sign-on-service-token-flows)
+De authentificatie met Adobe Pass zou moeten worden uitgevoerd gebruikend het Token van de Dienst: [&#x200B; REST API V2 - Enige Sign-On de Symbolische Stroom van de Dienst &#x200B;](https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-flows/rest-api-v2-single-sign-on-access-flows/rest-api-v2-single-sign-on-service-token-flows)
 
 ### Stap 4 - Een ander apparaat koppelen {#step-4}
 
@@ -211,13 +211,13 @@ Als de service Token API-aanvraag niet kan worden onderhouden vanwege een fout m
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Toestemming</td>
-      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-authorization"> 1&rbrace; kopbaldocumentatie van de Toestemming &lbrace;.</a></td>
+      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-authorization"> 1&rbrace; kopbaldocumentatie van de Toestemming &lbrace;.</a></td>
       <td><i>vereist</i></td>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">AP-apparaat-id</td>
       <td>
-         De generatie van de apparatenherkenningstekenlading wordt beschreven in <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-ap-device-identifier"> AP-apparaat-Identifier </a> kopbaldocumentatie.
+         De generatie van de apparatenherkenningstekenlading wordt beschreven in <a href="https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-ap-device-identifier"> AP-apparaat-Identifier </a> kopbaldocumentatie.
          <br/><br/>
          Deze id wordt gebruikt als de standaard SSO-id wanneer X-SSO-ID niet wordt opgegeven.
       </td>
@@ -226,7 +226,7 @@ Als de service Token API-aanvraag niet kan worden onderhouden vanwege een fout m
    <tr>
       <td style="background-color: #DEEBFF;">X-Apparaat-Info</td>
       <td>
-         De apparateninformatie zoals die in <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-x-device-info"> x-apparaat-Info </a> kopbaldocumentatie wordt gespecificeerd.
+         De apparateninformatie zoals die in <a href="https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-x-device-info"> x-apparaat-Info </a> kopbaldocumentatie wordt gespecificeerd.
          <br/><br/>
          <b> sterk geadviseerd </b> om te gebruiken wanneer het het apparatenplatform van de toepassing het verstrekken van geldige waarden uitdrukkelijk toestaat.
          <br/><br/>
@@ -287,21 +287,21 @@ Als de service Token API-aanvraag niet kan worden onderhouden vanwege een fout m
       <td>400</td>
       <td>Ongeldig verzoek</td>
       <td>
-        De aanvraag is ongeldig, de client moet de aanvraag corrigeren en het opnieuw proberen. Het reactielichaam kan fouteninformatie bevatten die aan de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes"> Verbeterde documentatie van de Codes van de Fout </a> volgt.
+        De aanvraag is ongeldig, de client moet de aanvraag corrigeren en het opnieuw proberen. Het reactielichaam kan fouteninformatie bevatten die aan de <a href="https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes"> Verbeterde documentatie van de Codes van de Fout </a> volgt.
       </td>
    </tr>
    <tr>
       <td>401</td>
       <td>Ongeautoriseerd</td>
       <td>
-        Het toegangstoken is ongeldig, moet de cliënt een nieuw toegangstoken verkrijgen en opnieuw proberen. Voor meer details verwijs naar de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview"> Dynamische documentatie van de Registratie van de Cliënt van het Overzicht </a>.
+        Het toegangstoken is ongeldig, moet de cliënt een nieuw toegangstoken verkrijgen en opnieuw proberen. Voor meer details verwijs naar de <a href="https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview"> Dynamische documentatie van de Registratie van de Cliënt van het Overzicht </a>.
       </td>
    </tr>
    <tr>
       <td>500</td>
       <td>Interne serverfout</td>
       <td>
-        Er is een probleem opgetreden op de server. Het reactielichaam kan fouteninformatie bevatten die aan de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes"> Verbeterde documentatie van de Codes van de Fout </a> volgt.
+        Er is een probleem opgetreden op de server. Het reactielichaam kan fouteninformatie bevatten die aan de <a href="https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes"> Verbeterde documentatie van de Codes van de Fout </a> volgt.
       </td>
    </tr>
 </table>
@@ -376,7 +376,7 @@ Als de service Token API-aanvraag niet kan worden onderhouden vanwege een fout m
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;"></td>
-      <td>Het reactielichaam kan extra fouteninformatie verstrekken die aan de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes"> Verbeterde documentatie van de Codes van de Fout </a> volgt.</td>
+      <td>Het reactielichaam kan extra fouteninformatie verstrekken die aan de <a href="https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes"> Verbeterde documentatie van de Codes van de Fout </a> volgt.</td>
       <td><i>vereist</i></td>
    </tr>
 </table>
@@ -487,7 +487,7 @@ Content-Type: application/json
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Toestemming</td>
-      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-authorization"> 1&rbrace; kopbaldocumentatie van de Toestemming &lbrace;.</a></td>
+      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-authorization"> 1&rbrace; kopbaldocumentatie van de Toestemming &lbrace;.</a></td>
       <td><i>vereist</i></td>
    </tr>
    <tr>
@@ -534,21 +534,21 @@ Content-Type: application/json
       <td>400</td>
       <td>Ongeldig verzoek</td>
       <td>
-        De aanvraag is ongeldig, de client moet de aanvraag corrigeren en het opnieuw proberen. Het reactielichaam kan fouteninformatie bevatten die aan de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes"> Verbeterde documentatie van de Codes van de Fout </a> volgt.
+        De aanvraag is ongeldig, de client moet de aanvraag corrigeren en het opnieuw proberen. Het reactielichaam kan fouteninformatie bevatten die aan de <a href="https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes"> Verbeterde documentatie van de Codes van de Fout </a> volgt.
       </td>
    </tr>
    <tr>
       <td>401</td>
       <td>Ongeautoriseerd</td>
       <td>
-        Het toegangstoken of de dienstteken is ongeldig, moet de cliënt een nieuw toegangstoken of de dienstteken verkrijgen en opnieuw proberen. Voor meer details verwijs naar de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview"> Dynamische documentatie van de Registratie van de Cliënt van het Overzicht </a>.
+        Het toegangstoken of de dienstteken is ongeldig, moet de cliënt een nieuw toegangstoken of de dienstteken verkrijgen en opnieuw proberen. Voor meer details verwijs naar de <a href="https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview"> Dynamische documentatie van de Registratie van de Cliënt van het Overzicht </a>.
       </td>
    </tr>
    <tr>
       <td>500</td>
       <td>Interne serverfout</td>
       <td>
-        Er is een probleem opgetreden op de server. Het reactielichaam kan fouteninformatie bevatten die aan de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes"> Verbeterde documentatie van de Codes van de Fout </a> volgt.
+        Er is een probleem opgetreden op de server. Het reactielichaam kan fouteninformatie bevatten die aan de <a href="https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes"> Verbeterde documentatie van de Codes van de Fout </a> volgt.
       </td>
    </tr>
 </table>
@@ -623,7 +623,7 @@ Content-Type: application/json
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;"></td>
-      <td>Het reactielichaam kan extra fouteninformatie verstrekken die aan de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes"> Verbeterde documentatie van de Codes van de Fout </a> volgt.</td>
+      <td>Het reactielichaam kan extra fouteninformatie verstrekken die aan de <a href="https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes"> Verbeterde documentatie van de Codes van de Fout </a> volgt.</td>
       <td><i>vereist</i></td>
    </tr>
 </table>
@@ -711,12 +711,12 @@ Als de koppelings-API-aanvraag niet kan worden onderhouden vanwege een fout in d
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Toestemming</td>
-      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-authorization"> 1&rbrace; kopbaldocumentatie van de Toestemming &lbrace;.</a></td>
+      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-authorization"> 1&rbrace; kopbaldocumentatie van de Toestemming &lbrace;.</a></td>
       <td><i>vereist</i></td>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">AP-apparaat-id</td>
-      <td>De generatie van de apparatenherkenningstekenlading wordt beschreven in <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-ap-device-identifier"> AP-apparaat-Identifier </a> kopbaldocumentatie.</td>
+      <td>De generatie van de apparatenherkenningstekenlading wordt beschreven in <a href="https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-ap-device-identifier"> AP-apparaat-Identifier </a> kopbaldocumentatie.</td>
       <td><i>vereist</i></td>
    </tr>
    <tr>
@@ -763,21 +763,21 @@ Als de koppelings-API-aanvraag niet kan worden onderhouden vanwege een fout in d
       <td>400</td>
       <td>Ongeldig verzoek</td>
       <td>
-        De aanvraag is ongeldig, de client moet de aanvraag corrigeren en het opnieuw proberen. Het reactielichaam kan fouteninformatie bevatten die aan de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes"> Verbeterde documentatie van de Codes van de Fout </a> volgt.
+        De aanvraag is ongeldig, de client moet de aanvraag corrigeren en het opnieuw proberen. Het reactielichaam kan fouteninformatie bevatten die aan de <a href="https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes"> Verbeterde documentatie van de Codes van de Fout </a> volgt.
       </td>
    </tr>
    <tr>
       <td>401</td>
       <td>Ongeautoriseerd</td>
       <td>
-        Het toegangstoken is ongeldig, moet de cliënt een nieuw toegangstoken verkrijgen en opnieuw proberen. Voor meer details verwijs naar de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview"> Dynamische documentatie van de Registratie van de Cliënt van het Overzicht </a>.
+        Het toegangstoken is ongeldig, moet de cliënt een nieuw toegangstoken verkrijgen en opnieuw proberen. Voor meer details verwijs naar de <a href="https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview"> Dynamische documentatie van de Registratie van de Cliënt van het Overzicht </a>.
       </td>
    </tr>
    <tr>
       <td>500</td>
       <td>Interne serverfout</td>
       <td>
-        Er is een probleem opgetreden op de server. Het reactielichaam kan fouteninformatie bevatten die aan de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes"> Verbeterde documentatie van de Codes van de Fout </a> volgt.
+        Er is een probleem opgetreden op de server. Het reactielichaam kan fouteninformatie bevatten die aan de <a href="https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes"> Verbeterde documentatie van de Codes van de Fout </a> volgt.
       </td>
    </tr>
 </table>
@@ -852,7 +852,7 @@ Als de koppelings-API-aanvraag niet kan worden onderhouden vanwege een fout in d
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;"></td>
-      <td>Het reactielichaam kan extra fouteninformatie verstrekken die aan de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes"> Verbeterde documentatie van de Codes van de Fout </a> volgt.</td>
+      <td>Het reactielichaam kan extra fouteninformatie verstrekken die aan de <a href="https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes"> Verbeterde documentatie van de Codes van de Fout </a> volgt.</td>
       <td><i>vereist</i></td>
    </tr>
 </table>
@@ -955,7 +955,7 @@ Als de Unlink API-aanvraag niet kan worden onderhouden vanwege een fout met de A
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Toestemming</td>
-      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-authorization"> 1&rbrace; kopbaldocumentatie van de Toestemming &lbrace;.</a></td>
+      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-authorization"> 1&rbrace; kopbaldocumentatie van de Toestemming &lbrace;.</a></td>
       <td><i>vereist</i></td>
    </tr>
    <tr>
@@ -969,7 +969,7 @@ Als de Unlink API-aanvraag niet kan worden onderhouden vanwege een fout met de A
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">AP-apparaat-id</td>
-      <td>De generatie van de apparatenherkenningstekenlading wordt beschreven in <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-ap-device-identifier"> AP-apparaat-Identifier </a> kopbaldocumentatie.</td>
+      <td>De generatie van de apparatenherkenningstekenlading wordt beschreven in <a href="https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-ap-device-identifier"> AP-apparaat-Identifier </a> kopbaldocumentatie.</td>
       <td><i>vereist</i></td>
    </tr>
    <tr>
@@ -1016,14 +1016,14 @@ Als de Unlink API-aanvraag niet kan worden onderhouden vanwege een fout met de A
       <td>400</td>
       <td>Ongeldig verzoek</td>
       <td>
-        De aanvraag is ongeldig, de client moet de aanvraag corrigeren en het opnieuw proberen. Het reactielichaam kan fouteninformatie bevatten die aan de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes"> Verbeterde documentatie van de Codes van de Fout </a> volgt.
+        De aanvraag is ongeldig, de client moet de aanvraag corrigeren en het opnieuw proberen. Het reactielichaam kan fouteninformatie bevatten die aan de <a href="https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes"> Verbeterde documentatie van de Codes van de Fout </a> volgt.
       </td>
    </tr>
    <tr>
       <td>401</td>
       <td>Ongeautoriseerd</td>
       <td>
-        Het toegangstoken is ongeldig, moet de cliënt een nieuw toegangstoken verkrijgen en opnieuw proberen. Voor meer details verwijs naar de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview"> Dynamische documentatie van de Registratie van de Cliënt van het Overzicht </a>.
+        Het toegangstoken is ongeldig, moet de cliënt een nieuw toegangstoken verkrijgen en opnieuw proberen. Voor meer details verwijs naar de <a href="https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview"> Dynamische documentatie van de Registratie van de Cliënt van het Overzicht </a>.
       </td>
    </tr>
    <tr>
@@ -1037,7 +1037,7 @@ Als de Unlink API-aanvraag niet kan worden onderhouden vanwege een fout met de A
       <td>500</td>
       <td>Interne serverfout</td>
       <td>
-        Er is een probleem opgetreden op de server. Het reactielichaam kan fouteninformatie bevatten die aan de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes"> Verbeterde documentatie van de Codes van de Fout </a> volgt.
+        Er is een probleem opgetreden op de server. Het reactielichaam kan fouteninformatie bevatten die aan de <a href="https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes"> Verbeterde documentatie van de Codes van de Fout </a> volgt.
       </td>
    </tr>
 </table>
@@ -1106,7 +1106,7 @@ Als de Unlink API-aanvraag niet kan worden onderhouden vanwege een fout met de A
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;"></td>
-      <td>Het reactielichaam kan extra fouteninformatie verstrekken die aan de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes"> Verbeterde documentatie van de Codes van de Fout </a> volgt.</td>
+      <td>Het reactielichaam kan extra fouteninformatie verstrekken die aan de <a href="https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes"> Verbeterde documentatie van de Codes van de Fout </a> volgt.</td>
       <td><i>vereist</i></td>
    </tr>
 </table>
@@ -1251,12 +1251,12 @@ Als de API-aanvraag van de List niet kan worden onderhouden vanwege een fout in 
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Toestemming</td>
-      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-authorization"> 1&rbrace; kopbaldocumentatie van de Toestemming &lbrace;.</a></td>
+      <td>De generatie van de toonder symbolische nuttige lading wordt beschreven in de <a href="https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-authorization"> 1&rbrace; kopbaldocumentatie van de Toestemming &lbrace;.</a></td>
       <td><i>vereist</i></td>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">AP-apparaat-id</td>
-      <td>De generatie van de apparatenherkenningstekenlading wordt beschreven in <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-ap-device-identifier"> AP-apparaat-Identifier </a> kopbaldocumentatie.</td>
+      <td>De generatie van de apparatenherkenningstekenlading wordt beschreven in <a href="https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-ap-device-identifier"> AP-apparaat-Identifier </a> kopbaldocumentatie.</td>
       <td><i>vereist</i></td>
    </tr>
    <tr>
@@ -1303,14 +1303,14 @@ Als de API-aanvraag van de List niet kan worden onderhouden vanwege een fout in 
       <td>400</td>
       <td>Ongeldig verzoek</td>
       <td>
-        De aanvraag is ongeldig, de client moet de aanvraag corrigeren en het opnieuw proberen. Het reactielichaam kan fouteninformatie bevatten die aan de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes"> Verbeterde documentatie van de Codes van de Fout </a> volgt.
+        De aanvraag is ongeldig, de client moet de aanvraag corrigeren en het opnieuw proberen. Het reactielichaam kan fouteninformatie bevatten die aan de <a href="https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes"> Verbeterde documentatie van de Codes van de Fout </a> volgt.
       </td>
    </tr>
    <tr>
       <td>401</td>
       <td>Ongeautoriseerd</td>
       <td>
-        Het toegangstoken is ongeldig, moet de cliënt een nieuw toegangstoken verkrijgen en opnieuw proberen. Voor meer details verwijs naar de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview"> Dynamische documentatie van de Registratie van de Cliënt van het Overzicht </a>.
+        Het toegangstoken is ongeldig, moet de cliënt een nieuw toegangstoken verkrijgen en opnieuw proberen. Voor meer details verwijs naar de <a href="https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview"> Dynamische documentatie van de Registratie van de Cliënt van het Overzicht </a>.
       </td>
    </tr>
    <tr>
@@ -1324,7 +1324,7 @@ Als de API-aanvraag van de List niet kan worden onderhouden vanwege een fout in 
       <td>500</td>
       <td>Interne serverfout</td>
       <td>
-        Er is een probleem opgetreden op de server. Het reactielichaam kan fouteninformatie bevatten die aan de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes"> Verbeterde documentatie van de Codes van de Fout </a> volgt.
+        Er is een probleem opgetreden op de server. Het reactielichaam kan fouteninformatie bevatten die aan de <a href="https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes"> Verbeterde documentatie van de Codes van de Fout </a> volgt.
       </td>
    </tr>
 </table>
@@ -1357,7 +1357,7 @@ Als de API-aanvraag van de List niet kan worden onderhouden vanwege een fout in 
       <td>
          JSON met een overzicht van sleutel-, waardeparen.
          <br/><br/>
-         <b> Sleutel:</b> deviceId - de nuttige lading van het apparatenherkenningsteken zoals die in <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-ap-device-identifier"> wordt beschreven AP-Apparaat-Identifier </a> kopbaldocumentatie
+         <b> Sleutel:</b> deviceId - de nuttige lading van het apparatenherkenningsteken zoals die in <a href="https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-ap-device-identifier"> wordt beschreven AP-Apparaat-Identifier </a> kopbaldocumentatie
          <br/><br/>
          <b> Waarde:</b> attributen - JSON die een kaart van apparatenmeta-gegevensattributen met inbegrip van bevatten:
          <ul>
@@ -1397,7 +1397,7 @@ Als de API-aanvraag van de List niet kan worden onderhouden vanwege een fout in 
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;"></td>
-      <td>Het reactielichaam kan extra fouteninformatie verstrekken die aan de <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes"> Verbeterde documentatie van de Codes van de Fout </a> volgt.</td>
+      <td>Het reactielichaam kan extra fouteninformatie verstrekken die aan de <a href="https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes"> Verbeterde documentatie van de Codes van de Fout </a> volgt.</td>
       <td><i>vereist</i></td>
    </tr>
 </table>
@@ -1514,7 +1514,7 @@ Alle reacties op fouten bevatten de volgende velden:
     "code": "header_missing",
     "message": "Required header is missing",
     "action": "check_headers",
-    "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
+    "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=nl-NL",
     "trace": "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
   }
 }
