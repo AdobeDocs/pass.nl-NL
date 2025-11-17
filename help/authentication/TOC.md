@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass-verificatie
 user-guide-description: Adobe Pass-verificatie is een machtigingsoplossing voor TV Everywhere, die een modulair kader verstrekt om te bepalen of iemand die toegang tot een bron vraagt, daar rechten voor heeft.
-source-git-commit: 151c64276377be5ef21bca4c0d3eaa04ac3da495
+source-git-commit: 53ebbd82fc160f68fccdddb18cf98e249ad6ecce
 workflow-type: tm+mt
-source-wordcount: '1285'
+source-wordcount: '1287'
 ht-degree: 3%
 
 ---
@@ -292,6 +292,7 @@ ht-degree: 3%
    - [Integraties](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md)
    - [Rapporten](/help/authentication/user-guide-tve-dashboard/tve-dashboard-reports.md)
    - [Wijzigingenlogboek](/help/authentication/user-guide-tve-dashboard/tve-dashboard-changes-log.md)
+   - [ESM-dashboard](/help/authentication/user-guide-tve-dashboard/tve-dashboard-esm.md)
 - Technische notities {#tech-notes}
    - Omgevingen {#environments}
       - [De Adobe-omgevingen begrijpen](notes-technical/environments/understanding-the-adobe-environments.md)
