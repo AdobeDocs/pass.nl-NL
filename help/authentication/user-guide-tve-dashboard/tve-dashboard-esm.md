@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Het ESM dashboard verstrekt een verenigde mening van betitelings en gebeurtenisgegevens om u prestaties te controleren, anomalieën te identificeren, en gebruikerstoegangspatronen over de partners van MVPD te begrijpen. Deze gids verklaart hoe te om de filters van het dashboard te gebruiken, rapporten te interpreteren, en zeer belangrijke metriek over configureerbare tijdintervallen te begrijpen.
 
-![ ESM de mening van het Dashboard ](../assets/tve-dashboard/new-tve-dashboard/esm/esm-full-page.png)
+![&#x200B; ESM de mening van het Dashboard &#x200B;](../assets/tve-dashboard/new-tve-dashboard/esm/esm-full-page.png)
 
 ## Gebruik hoofdletters {#use-cases}
 
@@ -25,7 +25,7 @@ Het ESM dashboard verstrekt een verenigde mening van betitelings en gebeurtenisg
 - MVPD-prestaties vergelijken
 - Begrijp klantengebruik per toepassing
 
-Meer details over ESM gegevens en gebeurtenissen kunnen bij [ het Overzicht van de Controle van de Dienst van het Entitlement ](https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview) worden gevonden.
+Meer details over ESM gegevens en gebeurtenissen kunnen bij [&#x200B; het Overzicht van de Controle van de Dienst van het Entitlement &#x200B;](https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview) worden gevonden.
 
 ## Rapporten {#reports}
 
@@ -101,7 +101,7 @@ Als u een nieuw filter wilt toevoegen, selecteert u de knop Filters toevoegen.
 
 Op de pagina &quot;Gegevenssetfilters&quot; kunt u de benodigde filters slepen en neerzetten.
 
-![ de filters van het Dashboard van ESM ](../assets/tve-dashboard/new-tve-dashboard/esm/filters-modal.png)
+![&#x200B; de filters van het Dashboard van ESM &#x200B;](../assets/tve-dashboard/new-tve-dashboard/esm/filters-modal.png)
 
 Voor elke sectie kunt u filters afzonderlijk verwijderen of de volledige selectie wissen.
 
@@ -114,7 +114,7 @@ Voor elke sectie kunt u filters afzonderlijk verwijderen of de volledige selecti
 
 Hiermee bepaalt u het venster en de granulariteit van de analyse.
 
-![ de tijdintervallen van het Dashboard van ESM ](../assets/tve-dashboard/new-tve-dashboard/esm/date-picker.png)
+![&#x200B; de tijdintervallen van het Dashboard van ESM &#x200B;](../assets/tve-dashboard/new-tve-dashboard/esm/date-picker.png)
 
 ### Datumbereik {#date-range}
 
