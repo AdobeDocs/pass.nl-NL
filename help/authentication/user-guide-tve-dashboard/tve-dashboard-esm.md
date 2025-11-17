@@ -25,7 +25,7 @@ Het ESM dashboard verstrekt een verenigde mening van betitelings en gebeurtenisg
 - MVPD-prestaties vergelijken
 - Begrijp klantengebruik per toepassing
 
-Meer details over ESM gegevens en gebeurtenissen kunnen bij [&#x200B; het Overzicht van de Controle van de Dienst van het Entitlement &#x200B;](https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview) worden gevonden.
+Meer details over ESM gegevens en gebeurtenissen kunnen bij [&#x200B; het Overzicht van de Controle van de Dienst van het Entitlement &#x200B;](https://experienceleague.adobe.com/nl/docs/pass/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview) worden gevonden.
 
 ## Rapporten {#reports}
 
