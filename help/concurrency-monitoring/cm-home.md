@@ -33,5 +33,5 @@ Gelijktijdige bewaking werkt via een eenvoudige maar krachtige API:
 
 ## Nieuw bij Gelijktijdige controle? {#new-to-cm}
 
-Begin met onze [ Begonnen Gids ](getting-started/getting-started-overview.md) om de grondbeginselen te begrijpen en opstelling uw eerste integratie.
+Begin met onze [&#x200B; Begonnen Gids &#x200B;](getting-started/getting-started-overview.md) om de grondbeginselen te begrijpen en opstelling uw eerste integratie.
 

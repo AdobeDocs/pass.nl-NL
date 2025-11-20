@@ -44,7 +44,7 @@ Wanneer een gebruiker in de LIFO-modus een nieuwe stream probeert te starten en 
 
 ### LIFO-stroomdiagram
 
-![ LIFO het Diagram van de Stroom ](../assets/lifo-flow-diagram.png)
+![&#x200B; LIFO het Diagram van de Stroom &#x200B;](../assets/lifo-flow-diagram.png)
 
 *Cijfer: LIFO (Laatste binnen, Eerste uit) de strategiestroom - de Nieuwe zittingen worden geblokkeerd wanneer de grenzen worden bereikt, die handbeëindiging van bestaande zittingen vereisen.*
 
@@ -73,7 +73,7 @@ Wanneer een gebruiker in de FIFO-modus een nieuwe stream probeert te starten en 
 
 ### FIFO-stroomdiagram
 
-![ FIFO het Diagram van de Stroom ](../assets/fifo-flow-diagram.png)
+![&#x200B; FIFO het Diagram van de Stroom &#x200B;](../assets/fifo-flow-diagram.png)
 
 *Cijfer: FIFO (eerst binnen, eerst uit) strategiestroom - de Nieuwe zittingen kunnen beginnen door bestaande zittingen met gebruikersselectie te eindigen.*
 
@@ -106,7 +106,7 @@ Als er een conflict optreedt in de FIFO-modus:
 |-------------------------------|-----------------------------------------|-------------------------------|
 | **Conflict Resolutie** | Automatische beëindiging van de oudste sessie | Handmatige beëindiging vereist |
 | **de Behandeling van de Fout** | 409 reacties hoeven niet te worden verwerkt | Moet 409 reacties verwerken |
-| **Ervaring van 0} Gebruiker** | Complexere gebruikersinterface, maar vloeiender stroom | Eenvoudiger gebruikersinterface, maar meer wrijving |
+| **Ervaring van 0&rbrace; Gebruiker** | Complexere gebruikersinterface, maar vloeiender stroom | Eenvoudiger gebruikersinterface, maar meer wrijving |
 | **Complexiteit van de Implementatie** | Hoger (gebruikersinterface voor sessieselectie) | Lager (eenvoudige foutberichten) |
 | **Geval van het Gebruik** | Inhoudsomschakeling, detectie | Uitgebreide weergave, beveiliging |
 

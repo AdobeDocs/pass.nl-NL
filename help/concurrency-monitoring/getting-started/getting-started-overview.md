@@ -62,9 +62,9 @@ De gelijktijdige Controle werkt als dienst van het a **zittingsbeheer** die:
 
 ## Snelstartpad {#quick-start-path}
 
-1. {de belangrijkste concepten van het overzicht **- leer over** zittingen, beleid, en meta-gegevens [](key-concepts.md)
-2. **kies uw strategie** - Overzicht [ LIFO vs FIFO strategieën ](../use-cases/lifo-fifo-strategies.md)
-3. **Begin die** uitvoert - volg de [ API Verwijzing ](../api/api-reference-overview.md)
+1. &lbrace;de belangrijkste concepten van het overzicht **- leer over** zittingen, beleid, en meta-gegevens [&#128279;](key-concepts.md)
+2. **kies uw strategie** - Overzicht [&#x200B; LIFO vs FIFO strategieën &#x200B;](../use-cases/lifo-fifo-strategies.md)
+3. **Begin die** uitvoert - volg de [&#x200B; API Verwijzing &#x200B;](../api/api-reference-overview.md)
 
 ## Klaar om te integreren? {#ready-to-integrate}
 
@@ -74,7 +74,7 @@ De gelijktijdige Controle werkt als dienst van het a **zittingsbeheer** die:
 
 ## Serviceregistratie {#service-registration}
 
-Om met Gelijktijdige Controle te beginnen, contacteer ons [ Team van de Steun ](mailto:tve-support@adobe.com) met de volgende informatie:
+Om met Gelijktijdige Controle te beginnen, contacteer ons [&#x200B; Team van de Steun &#x200B;](mailto:tve-support@adobe.com) met de volgende informatie:
 
 1. **de naam van het Bedrijf** en contactdetails
 2. **Toepassingen** wilt u met de Controle van de Valuta integreren. Verstrek voor elke aanvraag:
@@ -85,7 +85,7 @@ Om met Gelijktijdige Controle te beginnen, contacteer ons [ Team van de Steun ](
 
 ## Hebt u hulp nodig? {#need-help}
 
-- **API Ontdekkingsreiziger** - test APIs op interactieve wijze bij [ Swagger UI ](https://streams-stage.adobeprimetime.com/swagger-ui/index.html)
-- **Zeer belangrijke termijnen en definities** - [ Verklarende woordenlijst ](../cm-glossary.md)
-- **hoe te om hulp te krijgen?** - [ Procedures van de Steun ](../support/cm-escalation-procedures.md)
-- **Steun** - Contact [ tve-support@adobe.com ](mailto:tve-support@adobe.com)
+- **API Ontdekkingsreiziger** - test APIs op interactieve wijze bij [&#x200B; Swagger UI &#x200B;](https://streams-stage.adobeprimetime.com/swagger-ui/index.html)
+- **Zeer belangrijke termijnen en definities** - [&#x200B; Verklarende woordenlijst &#x200B;](../cm-glossary.md)
+- **hoe te om hulp te krijgen?** - [&#x200B; Procedures van de Steun &#x200B;](../support/cm-escalation-procedures.md)
+- **Steun** - Contact [&#x200B; tve-support@adobe.com &#x200B;](mailto:tve-support@adobe.com)

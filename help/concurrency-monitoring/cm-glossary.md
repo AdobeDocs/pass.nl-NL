@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ## Handeling {#action-defn}
 
-* Het type van toegang dat het onderwerp verzoekt; de mogelijke waarden voor cm ****** in werking stellen of ***blijven*** een het stromen zitting.
+* Het type van toegang dat het onderwerp verzoekt; de mogelijke waarden voor cm **&#x200B;**&#x200B;**&#x200B; in werking stellen of &#x200B;***blijven*** een het stromen zitting.
 
 ## Actieve stroom {#active-stream-defn}
 
@@ -28,7 +28,7 @@ ht-degree: 0%
 ## Toepassing {#application-defn}
 
 * Ontwikkeld door de huurder voor toegang tot video-inhoud
-* Maakt en handhaaft besluiten over inhoudstoegang die op informatie wordt gebaseerd die door de Dienst van de Controle van de Valuta wordt verstrekt (dit is geldig in het [ geval van het Punt van de Informatie van het Beleid 0})](/help/concurrency-monitoring/technical/policy-info-pt-versionone.md)
+* Maakt en handhaaft besluiten over inhoudstoegang die op informatie wordt gebaseerd die door de Dienst van de Controle van de Valuta wordt verstrekt (dit is geldig in het [&#x200B; geval van het Punt van de Informatie van het Beleid 0&rbrace;)](/help/concurrency-monitoring/technical/policy-info-pt-versionone.md)
 * Zal een unieke **toepassingsidentiteitskaart** hebben die door Adobe wordt verstrekt.
 
 ## Gelijktijdige bewakingsservice {#cm-service-defn}
@@ -94,7 +94,7 @@ ht-degree: 0%
 
 ## Onderwerp {#subj-defn}
 
-* De consument van de (video)inhoud via internet. Wij vermijden opzettelijk de termijn _**gebruiker**_, aangezien de Controle van de Zalk gewoonlijk MVPD rekening IDs behandelt (die verscheidene daadwerkelijke gebruikers impliceren die het zelfde contract, bijvoorbeeld familieleden voor een huishouden delen).
+* De consument van de (video)inhoud via internet. Wij vermijden opzettelijk de termijn _&#x200B;**gebruiker**&#x200B;_, aangezien de Controle van de Zalk gewoonlijk MVPD rekening IDs behandelt (die verscheidene daadwerkelijke gebruikers impliceren die het zelfde contract, bijvoorbeeld familieleden voor een huishouden delen).
 
 * Voor elke stroom, kan het onderwerp met attributen met betrekking tot de daadwerkelijke persoon worden verbeterd die de dienst, hun netwerk aangesloten apparaat gebruikt etc.
 

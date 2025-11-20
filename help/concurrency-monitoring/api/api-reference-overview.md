@@ -217,7 +217,7 @@ Wanneer u 429 Te veel verzoeken ontvangt:
 
 ### Interactieve API Explorer
 
-Gebruik onze [ Vwagen UI ](https://streams-stage.adobeprimetime.com/swagger-ui/index.html) voor het interactieve testen:
+Gebruik onze [&#x200B; Vwagen UI &#x200B;](https://streams-stage.adobeprimetime.com/swagger-ui/index.html) voor het interactieve testen:
 
 1. Voer uw toepassings-id in de rechterbovenhoek in
 2. Klik op Verkennen om verificatie in te stellen

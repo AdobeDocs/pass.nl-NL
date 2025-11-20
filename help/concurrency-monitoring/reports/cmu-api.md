@@ -17,14 +17,14 @@ ht-degree: 0%
 
 ## API-overzicht {#api-overview}
 
-Het gebruik van de Controle van de gelijktijdige (CMU) wordt uitgevoerd als WOLAP (Web-based [ Online Analytische Verwerking ](http://en.wikipedia.org/wiki/Online_analytical_processing)) project. CMU is een generiek zaken-meldend Web API die door een gegevenspakhuis wordt gesteund. Het doet dienst als de vraagtaal van HTTP die typische verrichtingen toelaat OLAP om RESTfully worden uitgevoerd.
+Het gebruik van de Controle van de gelijktijdige (CMU) wordt uitgevoerd als WOLAP (Web-based [&#x200B; Online Analytische Verwerking &#x200B;](http://en.wikipedia.org/wiki/Online_analytical_processing)) project. CMU is een generiek zaken-meldend Web API die door een gegevenspakhuis wordt gesteund. Het doet dienst als de vraagtaal van HTTP die typische verrichtingen toelaat OLAP om RESTfully worden uitgevoerd.
 
 
 >[!NOTE]
 >
 >De CMU-API is niet algemeen beschikbaar. Neem contact op met uw Adobe-vertegenwoordiger voor vragen over beschikbaarheid.
 
-CMU API verstrekt een hiërarchische mening van de onderliggende kubussen OLAP. Elk middel ([ afmeting ](/help/concurrency-monitoring/reports/cm-usage-reports.md#dimensions-2-filter-metrics) in de afmetinghiërarchie, in kaart gebracht als segment van de weg URL) produceert rapporten met (bijeengevoegde) [ metriek ](/help/concurrency-monitoring/reports/cm-usage-reports.md#monitor-metrics) voor de huidige selectie. Elke bron wijst naar de bovenliggende bron (voor roll-up) en de bijbehorende subbronnen (voor boor-down). Segmenteren en dicing worden bereikt via parameters van queryreeksen die de afmetingen vastzetten op specifieke waarden of bereiken.
+CMU API verstrekt een hiërarchische mening van de onderliggende kubussen OLAP. Elk middel ([&#x200B; afmeting &#x200B;](/help/concurrency-monitoring/reports/cm-usage-reports.md#dimensions-2-filter-metrics) in de afmetinghiërarchie, in kaart gebracht als segment van de weg URL) produceert rapporten met (bijeengevoegde) [&#x200B; metriek &#x200B;](/help/concurrency-monitoring/reports/cm-usage-reports.md#monitor-metrics) voor de huidige selectie. Elke bron wijst naar de bovenliggende bron (voor roll-up) en de bijbehorende subbronnen (voor boor-down). Segmenteren en dicing worden bereikt via parameters van queryreeksen die de afmetingen vastzetten op specifieke waarden of bereiken.
 
 De REST API verstrekt de beschikbare gegevens binnen een tijdsinterval dat in het verzoek wordt gespecificeerd (die terug naar standaardwaarden als niets wordt verstrekt), volgens de afmetingspad, verstrekte filters, en geselecteerde metriek. Het tijdbereik wordt niet toegepast op rapporten die geen tijdafmetingen bevatten (jaar, maand, dag, uur, minuut, seconde).
 
