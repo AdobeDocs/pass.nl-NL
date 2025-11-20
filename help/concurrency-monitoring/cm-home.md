@@ -2,27 +2,36 @@
 title: Inleiding Gelijktijdige bewaking
 description: Inleiding Gelijktijdige bewaking
 exl-id: 725cc64b-6b03-46e3-a038-41e9b1341c6b
-source-git-commit: f30b6814b8a77424c13337d44d7b247105e0bfe2
+source-git-commit: ed340643e807d786638d59f9bf07d73b7f909a72
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '221'
 ht-degree: 0%
 
 ---
 
 # Inleiding Gelijktijdige bewaking {#intro}
 
-Om over [&#x200B; Escalatieprocedures &#x200B;](/help/concurrency-monitoring/cm-escalation-procedures.md) betreffende Gelijktijdige Controle te weten, zie het artikel van de escalatieprocedures.
+Gelijktijdige bewaking is een service waarmee leveranciers van inhoud en identiteitsproviders (MVPD&#39;s en programmeurs) beperkingen kunnen definiëren en afdwingen voor gelijktijdige videostreaming in meerdere toepassingen, apparaten en platforms. Of u een programmeur bent die probeert te controleren hoeveel stromen een abonnee kan letten gelijktijdig, of een MVPD die gebruiksbeleid over uw inhoudspartners willen afdwingen, verstrekt de Controle van de Valuta de hulpmiddelen u wenst.
 
-De Gelijktijdige Controle staat zowel Identiteit als Inhoudsleveranciers (MVPDs en Programmers) toe om grenzen op gelijktijdig gebruik over veelvoudige toepassingen (potentieel bezeten door veelvoudige partners) te bepalen en af te dwingen.
+## Wat is Gelijktijdige controle? {#what-is-cm}
 
-**de Gelijktijdige Controle API wordt ontvangen bij de volgende plaats:**
+Gelijktijdige controle is een gecentraliseerde service die actieve videoverstreaming sessies in real-time bijhoudt en beheert. Zo kunt u:
 
-* **V2.0: [&#x200B; Gelijktijdige Controle API &#x200B;](http://docs.adobeptime.io/cm-api-v2/)**
+- **Gelijktijdige stromen van de Grens per abonnee** - controleer hoeveel gelijktijdige videostromen een gebruiker tot toegang heeft
+- **afdwingen apparatenbeperkingen** - Beperk het stromen tot specifieke apparatentypes of hoeveelheden
+- **voert op plaats-gebaseerde beleid** uit - beperkt het stromen die op geografische plaats wordt gebaseerd
+- **creeer inhoud-specifieke regels** - pas verschillende grenzen voor levende vs. de inhoud van VOD toe
+- **de gebruikspatronen van de Monitor** - de Inzichten van de Versterking in hoe uw inhoud wordt verbruikt
 
-Om omhoog voor onze dienst van de Controle van de Valuta te ondertekenen, contacteer ons [&#x200B; Team van de Steun &#x200B;](mailto:tve-support@adobe.com). Geef de volgende informatie op en ons team zal u graag helpen:
+## Hoe het werkt {#how-it-works}
 
-1. Naam van uw bedrijf
-1. Toepassingen die u wilt integreren met Gelijktijdige bewaking. Verstrek voor elke aanvraag:
-   * Toepassingsnaam
-   * Toepassingsplatform(s)
-1. De derde die om de integratie heeft verzocht (voor het geval dat u zich op verzoek van een andere partij, programmeur of MVPD abonneert op Gelijktijdige Controle)
+Gelijktijdige bewaking werkt via een eenvoudige maar krachtige API:
+
+1. **Initialisatie van de Zitting** - wanneer een gebruiker begint te letten op inhoud, leidt uw toepassing tot een zitting
+2. **Evaluatie van het Beleid** - de dienst evalueert uw bepaald beleid tegen huidig gebruik
+3. **Real-time Controle** - de vraag van de Hartslag houdt zittingen actief en controleert naleving
+
+## Nieuw bij Gelijktijdige controle? {#new-to-cm}
+
+Begin met onze [ Begonnen Gids ](getting-started/getting-started-overview.md) om de grondbeginselen te begrijpen en opstelling uw eerste integratie.
+
