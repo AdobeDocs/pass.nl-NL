@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release iOS / tvOS 3.7.0 verifiëren
 description: Opmerkingen bij de release iOS / tvOS 3.7.0 verifiëren
 exl-id: 19c1179e-16b1-4608-954f-25b0980d7ad9
-source-git-commit: ca2cda44b1dd8b907235053eff07f314b09249a2
+source-git-commit: cafdcf3b4df6adb54fba21b56ee427b87791bac2
 workflow-type: tm+mt
-source-wordcount: '123'
+source-wordcount: '122'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 Op deze pagina worden nieuwe functies, wijzigingen en bekende problemen met deze release beschreven:
 
@@ -32,5 +32,3 @@ Voegt verbeteringen voor het gebruik van het AccessEnabler-framework toe door Ke
 U kunt hier iOS/tvOS SDK v3.7.0 downloaden.
 
 Controleer dit technische artikel voordat u de upgrade naar deze versie uitvoert.
-
-DEMO
