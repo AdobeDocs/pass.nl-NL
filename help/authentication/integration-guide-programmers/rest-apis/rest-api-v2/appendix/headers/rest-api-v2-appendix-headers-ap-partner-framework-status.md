@@ -2,9 +2,9 @@
 title: Koptekst - AP-Partner-Framework-Status
 description: REST API V2 - Koptekst - AP-Partner-Kader-Status
 exl-id: f589d948-e23e-43d4-81c2-8db0e7a40e93
-source-git-commit: 5c912bbbe97fff65d38dbade32cd4554ad8c2fac
+source-git-commit: 22529618db679f7dbfb493906e1aeb4a0443a40c
 workflow-type: tm+mt
-source-wordcount: '404'
+source-wordcount: '415'
 ht-degree: 0%
 
 ---
@@ -70,8 +70,8 @@ De `Base64-encoded` -waarde van het JSON-element dat de volgende kenmerken bevat
                   <ul>
                      <li><b> verleend </b><br/> de gebruiker stond de toepassing toe om tot abonnementinformatie toegang te hebben.</li>
                      <li><b> ontkende </b><br/> de gebruiker de toepassing ontkende om tot abonnementinformatie toegang te hebben.</li>
-                     <li><b> hangende </b><br/> de gebruiker verkoos nog niet om de toepassing toe te staan om tot abonnementsinformatie toegang te hebben.</li>
-                     <li><b> nietDetermined </b><br/> de toepassing wordt niet toegestaan om tot abonnementsinformatie toegang te hebben.</li>
+                     <li><b> beperkt </b><br/> de toepassing wordt niet toegestaan om tot abonnementsinformatie toegang te hebben.</li>
+                     <li><b> nietDetermined </b><br/> de gebruiker heeft niet gekozen of om de toepassing toe te staan om tot abonnementsinformatie toegang te hebben.</li>
                   </ul>
                </td>
             </tr>
