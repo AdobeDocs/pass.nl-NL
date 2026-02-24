@@ -18,7 +18,7 @@ Laatste update: Tue Dec 09 2025 00 :00: 00 GMT+0000 (Coordinated Universal Time)
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](https://experienceleague.adobe.com/en/docs/pass/authentication/product-announcements) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](https://experienceleague.adobe.com/en/docs/pass/authentication/product-announcements) wordt samengevoegd.
 
 Op deze pagina worden nieuwe functies, wijzigingen en bekende problemen met deze release beschreven:
 
