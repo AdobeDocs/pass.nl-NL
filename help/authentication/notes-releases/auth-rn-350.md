@@ -1,13 +1,13 @@
 ---
 title: Opmerkingen bij de release Adobe Pass Authentication 3.5.0
 description: Meer informatie over de nieuwe functies, wijzigingen en bekende problemen met deze release.
-source-git-commit: 6ff46a124f5f3c78173028ae3efed68d71ee6e41
+exl-id: b196f636-26a5-4974-903e-40b5f8b93a24
+source-git-commit: 1cbddf081fc7d57a187c9701e4ade8593baf8759
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '273'
 ht-degree: 0%
 
 ---
-
 
 # Opmerkingen bij de release Adobe Pass Authentication 3.5.0
 
@@ -18,7 +18,7 @@ Laatste update: Tue Dec 09 2025 00 :00: 00 GMT+0000 (Coordinated Universal Time)
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](https://experienceleague.adobe.com/nl/docs/pass/authentication/product-announcements) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](https://experienceleague.adobe.com/en/docs/pass/authentication/product-announcements) wordt samengevoegd.
 
 Op deze pagina worden nieuwe functies, wijzigingen en bekende problemen met deze release beschreven:
 
@@ -44,3 +44,15 @@ Datum van de versie: **12/09/2025 - 12/11/2025**
 * Probleem verholpen met REST API V2 waarbij `authenticated_profile_expired` -foutcode niet werd geretourneerd toen geverifieerde profielen waren verlopen.
 * Probleem verholpen waarbij latentieberekeningen voor autorisatie en Preflight-TTL-waarden onjuist waren in REST API V2.
 * Probleem verholpen waarbij de inconsistente antwoordindeling werd geretourneerd wanneer het DCR-token vervalt.
+
+## Onderhoudsupdate - februari 2026 {#maintenance-update-february-2026}
+
+Adobe Pass-verificatie: adobe-pass-**3.5.0.5**\
+Datum van de versie: **02/24/2026 - 26-02-2026**
+
+Deze update-release voor onderhoud bevat belangrijke verbeteringen om de betrouwbaarheid en beveiliging van het systeem te verbeteren:
+
+### Verbeteringen
+
+* Verbeterde afhandeling van verificatieafbraak voor proxied MVPD-configuraties in REST API V2, waardoor u consistenter kunt werken tijdens onderbrekingen van de MVPD-service.
+* Verbeterde validatie van URL-parameters en omleiding van verwerking om beveiligingscontroles te versterken en de algehele systeemintegriteit te verbeteren.
