@@ -1,7 +1,7 @@
 ---
 title: Opmerkingen bij de release Adobe Pass Authentication 3.6.0
 description: Opmerkingen bij de release Adobe Pass Authentication 3.6.0
-source-git-commit: a406afacfe95321f46a740ab9c84fdaf576c971a
+source-git-commit: 41bfd38eec7cd3eaf18a6dd41965244376ac61ec
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 Op deze pagina worden nieuwe functies, wijzigingen en bekende problemen met deze release beschreven:
 
@@ -24,7 +24,7 @@ Op deze pagina worden nieuwe functies, wijzigingen en bekende problemen met deze
 ### Buildnummer {#build-number-360}
 
 De Authentificatie van Adobe Pass: adobe-pas **3.6.0**\
-Datum van de versie: **04/07/2025 - 04/09/2025**
+Datum van de versie: **04/07/2026 - 04/09/2026**
 
 ### Overzicht van release {#release-overview-360}
 
