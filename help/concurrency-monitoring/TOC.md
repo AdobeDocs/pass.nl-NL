@@ -21,7 +21,7 @@ ht-degree: 0%
 - Integratiegids {#integration-guide}
    - [Verklarende woordenlijst](cm-glossary.md)
    - API-naslag {#api-reference}
-      - [ Overzicht ](api/api-reference-overview.md)
+      - [&#x200B; Overzicht &#x200B;](api/api-reference-overview.md)
       - [API-eindpunten](api/api-endpoints.md)
       - [API-naslag](api/cm-api-overview.md)
    - [API voor gelijktijdige bewaking](reports/cmu-api.md)
