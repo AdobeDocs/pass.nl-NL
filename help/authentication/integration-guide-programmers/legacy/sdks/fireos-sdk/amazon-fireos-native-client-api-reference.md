@@ -2,9 +2,9 @@
 title: Native API-naslaggids voor Amazon FireOS
 description: Native API-naslaggids voor Amazon FireOS
 exl-id: 8ac9f976-fd6b-4b19-a80d-49bfe57134b5
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: b51ac004765a8617347ac2ddadbfe60adff8ea3a
 workflow-type: tm+mt
-source-wordcount: '3451'
+source-wordcount: '3498'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 </br>
 
@@ -68,8 +68,7 @@ Raadpleeg <https://tve.zendesk.com/hc/en-us/articles/115005561623-fire-TV-Native
 
 | API-aanroep: constructor |
 | --- |
-| ```public static AccessEnabler getInstance(Context appContext, String softwareStatement, String redirectUrl)<br>        throws AccessEnablerException```<br><br> |
-| ```public static AccessEnabler getInstance(Context appContext, String env_url, String softwareStatement, String redirectUrl) throws AccessEnablerException``` |
+| ```public static AccessEnabler getInstance(Context appContext, String softwareStatement, String redirectUrl)<br>        throws AccessEnablerException```<br><br>  <code> public static AccessEnabler getInstance(Context appContext, String env_url, String softwareStatement, String redirectUrl) genereert AccessEnablerException </code> |
 
 **Beschikbaarheid:** v3.0+
 
@@ -203,7 +202,7 @@ Als een MVPD de functie &#39;Verificatie per aanvrager&#39; ondersteunt, kunnen 
 **Beschrijving:** begint het volledige authentificatiewerkschema. Het begint door de authentificatiestatus te controleren. Indien nog niet geverifieerd, wordt de verificatiestroom state-machine gestart:
 
 - Als de laatste authentificatiepoging succesvol was, wordt de selectiefase van MVPD overgeslagen en een controle WebView zal de gebruiker met de MVPD login pagina voorstellen.
-- Als de laatste authentificatiepoging niet succesvol was of als de gebruiker uitdrukkelijk het programma opende, [*displayProviderDialog ()*](#displayProviderDialog) callback wordt teweeggebracht. Deze callback wordt door uw toepassing gebruikt om de gebruikersinterface van de MVPD-selectie weer te geven. Ook wordt uw app vereist om de authentificatiestroom te hervatten door de bibliotheek van Inschakelen van de Toegang over de selectie van MVPD van de gebruiker via [&#x200B; te informeren setSelectedProvider () &#x200B;](#setSelectedProvider) methode.
+- Als de laatste authentificatiepoging niet succesvol was of als de gebruiker uitdrukkelijk het programma opende, [*displayProviderDialog ()*](#displayProviderDialog) callback wordt teweeggebracht. Deze callback wordt door uw toepassing gebruikt om de gebruikersinterface van de MVPD-selectie weer te geven. Ook wordt uw app vereist om de authentificatiestroom te hervatten door de bibliotheek van Inschakelen van de Toegang over de selectie van MVPD van de gebruiker via [ te informeren setSelectedProvider () ](#setSelectedProvider) methode.
 
 Als een MVPD de functie &#39;Verificatie per aanvrager&#39; ondersteunt, kunnen meerdere verificatietokens worden opgeslagen op een apparaat (één per programmeur).
 
@@ -260,7 +259,7 @@ Zodra de gebruiker gewenste MVPD heeft geselecteerd, wordt de upper-layer toepas
 | ```public void setSelectedProvider(String mvpdId)``` |
 
 
-**Beschikbaarheid:**&#x200B;v 1.0+
+**Beschikbaarheid:**v 1.0+
 
 **Parameters:** niets
 
@@ -341,7 +340,7 @@ Deze callback signaleert ook wanneer de logout stroom volledig is.
 
 **Beschikbaarheid:** v1.0+
 
-**&lt;Parameters:** de `resources` parameter is een serie van middelen waarvoor de vergunning zou moeten worden gecontroleerd. Elk element in de lijst moet een tekenreeks zijn die de bron-id vertegenwoordigt. Voor de bron-id gelden dezelfde beperkingen als voor de bron-id in de aanroep van `getAuthorization()` . Dit houdt in dat er een waarde moet worden overeengekomen tussen de programmeur en de MVPD of een RSS-fragment voor media.
+**&lt;Parameters:** De `resources` -parameter is een array met bronnen waarvoor de verificatie moet worden gecontroleerd. Elk element in de lijst moet een tekenreeks zijn die de bron-id vertegenwoordigt. Voor de bron-id gelden dezelfde beperkingen als voor de bron-id in de aanroep van `getAuthorization()` . Dit houdt in dat er een waarde moet worden overeengekomen tussen de programmeur en de MVPD of een RSS-fragment voor media.
 
 **callback teweeggebracht:** `preauthorizedResources()`
 
@@ -355,7 +354,7 @@ Deze callback signaleert ook wanneer de logout stroom volledig is.
 | --- |
 | ```public void checkPreauthorizedResources(ArrayList<String> resources)``` |
 
-**Beschikbaarheid:**&#x200B;v 1.0+
+**Beschikbaarheid:**v 1.0+
 
 **Parameters:** de `resources` parameter is een serie van middelen waarvoor de gebruiker reeds gemachtigd is om te bekijken.
 
@@ -427,7 +426,7 @@ Deze callback signaleert ook wanneer de logout stroom volledig is.
 | --- |
 | ```public void setToken(String token, String resourceId)``` |
 
-**Beschikbaarheid:**&#x200B;v 1.0+
+**Beschikbaarheid:**v 1.0+
 
 **Parameters:**
 
@@ -541,7 +540,7 @@ De werkelijke gebruikersmetagegevens die beschikbaar zijn voor een programmeur, 
 
 **teweeggebrachte callbacks:** [`setMetadataStatus()`](#setMetadaStatus)
 
-**Meer Informatie:** [&#x200B; Metagegevens van de Gebruiker &#x200B;](#setmetadatastatus)
+**Meer Informatie:** [ Metagegevens van de Gebruiker ](#setmetadatastatus)
 
 </br>
 
@@ -603,7 +602,7 @@ Deze waarde is null wanneer de aanvraag is ingediend voor eenvoudige metagegeven
 
 **teweeggebracht door:** [`getMetadata()`](#getMetadata)
 
-**Meer Informatie:** [&#x200B; Metagegevens van de Gebruiker &#x200B;](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/user-metadata.md)
+**Meer Informatie:** [ Metagegevens van de Gebruiker ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/user-metadata.md)
 
 </br>
 

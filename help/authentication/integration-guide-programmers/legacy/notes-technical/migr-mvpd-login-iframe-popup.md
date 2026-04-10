@@ -2,9 +2,9 @@
 title: De MVPD-aanmeldingspagina migreren van iFrame naar pop-up
 description: De MVPD-aanmeldingspagina migreren van iFrame naar pop-up
 exl-id: 389ea0ea-4e18-4c2e-a527-c84bffd808b4
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: b51ac004765a8617347ac2ddadbfe60adff8ea3a
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '712'
 ht-degree: 0%
 
 ---
@@ -17,15 +17,17 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 ## Pop-up en iFrame {#popup-vs-iframe}
 
 Sommige gebruikers hebben problemen met cookies van derden aangetroffen tijdens de iFrame-implementatie van een MVPD-aanmeldingspagina.
-<!--These issues are described in the tech notes linked below:
+<!--
+These issues are described in the tech notes linked below:
 
 * [Adobe Pass Authentication and Safari login issues](https://tve.helpdocsonline.com/adobe-pass)
-* [MVPD iFrame login and 3rd party cookies](https://tve.helpdocsonline.com/mvpd)-->
+* [MVPD iFrame login and 3rd party cookies](https://tve.helpdocsonline.com/mvpd)
+-->
 
 Het team van de Authentificatie van Adobe Pass **adviseert het uitvoeren van popup/nieuwe venster login pagina** eerder dan de iFrame versie op Firefox en Safari.  Als u echter een aanmeldingspagina voor Internet Explorer implementeert, kunnen er problemen optreden met de popup-implementatie. De IE-problemen worden veroorzaakt door het feit dat, nadat de gebruiker zich in het pop-upvenster met zijn MVPD heeft geverifieerd, de Adobe Pass-verificatie een bovenliggende pagina omleiden forceert. Dit wordt gezien als een pop-upblokkering door Internet Explorer. Het team van de Authentificatie van Adobe Pass **adviseert het uitvoeren van iFrame login voor Internet Explorer**.
 
@@ -235,4 +237,4 @@ function checkClosed() {
 >* De voorbeeldcode bevat een hardcoded variabele voor de gebruikte requestID - &#39;REF&#39;, die moet worden vervangen door een echte id van de programmeur.
 >* De voorbeeldcode wordt alleen correct uitgevoerd vanuit een zwevend domein dat is gekoppeld aan de gebruikte aanvrager-id.
 >* Aangezien de gehele code kan worden gedownload, is de code in deze technische notitie afgebroken. Voor een volledige steekproef, zie **JS iFrame vs Pop-up Steekproef**.
->* De externe bibliotheken van JavaScript werden verbonden van [&#x200B; Google Ontvangen Diensten &#x200B;](https://developers.google.com/speed/libraries/).
+>* De externe bibliotheken van JavaScript werden verbonden van [ Google Ontvangen Diensten ](https://developers.google.com/speed/libraries/).

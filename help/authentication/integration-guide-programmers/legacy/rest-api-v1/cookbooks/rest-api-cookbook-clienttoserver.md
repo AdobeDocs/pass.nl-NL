@@ -2,9 +2,9 @@
 title: REST API Cookbook (client-naar-server)
 description: Testen van API-cookboekclient naar server.
 exl-id: f54a1eda-47d5-4f02-b343-8cdbc99a73c0
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+source-git-commit: b51ac004765a8617347ac2ddadbfe60adff8ea3a
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '906'
 ht-degree: 0%
 
 ---
@@ -17,18 +17,18 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 ## Overzicht {#overview}
 
-Dit document bevat stapsgewijze instructies voor het engineeringteam van een programmeur om een &quot;slim apparaat&quot; (spelconsole, smart TV-app, set top box, enz.) te integreren met Adobe Pass-verificatie via REST API-services. Deze client-to-server-benadering, waarbij REST API&#39;s worden gebruikt in plaats van een client-SDK, maakt bredere ondersteuning mogelijk van verschillende platforms waarvoor het ontwikkelen van een aanzienlijk aantal unieke SDK&#39;s niet haalbaar is. Voor een breed technisch overzicht van hoe de Klantloze oplossing werkt, zie het [&#x200B; Klantloze Technische Overzicht &#x200B;](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/rest-api-overview.md).
+Dit document bevat stapsgewijze instructies voor het engineeringteam van een programmeur om een &quot;slim apparaat&quot; te integreren (spelconsole, smart TV-app, set top box, enz.) met Adobe Pass Authentication using REST API services. Deze client-to-server-benadering, waarbij REST API&#39;s worden gebruikt in plaats van een client-SDK, maakt bredere ondersteuning mogelijk van verschillende platforms waarvoor het ontwikkelen van een aanzienlijk aantal unieke SDK&#39;s niet haalbaar is. Voor een breed technisch overzicht van hoe de Klantloze oplossing werkt, zie het [ Klantloze Technische Overzicht ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/rest-api-overview.md).
 
 
 Deze aanpak vereist twee componenten (streaming app en AuthN app) om de vereiste stromen te voltooien: opstarten, registreren, autoriseren en weergavemedia in de streaming app en de verificatiestroom in uw AuthN-app.
 
 ### Draaimechanisme
 
-De Adobe Pass Authentificatie REST API wordt geregeerd door a [&#x200B; het Throttling mechanisme &#x200B;](/help/authentication/integration-guide-programmers/throttling-mechanism.md).
+De Adobe Pass Authentificatie REST API wordt geregeerd door a [ het Throttling mechanisme ](/help/authentication/integration-guide-programmers/throttling-mechanism.md).
 
 ## Componenten {#components}
 
@@ -49,7 +49,7 @@ In een werkende cliënt-aan-server oplossing zijn de volgende componenten betrok
 
 ### Dynamische clientregistratie (DCR)
 
-Adobe Pass gebruikt DCR om clientcommunicatie tussen een programmeertoepassing of server en de Adobe Pass-services te beveiligen. De stroom DCR is afzonderlijk en wordt beschreven in het [&#x200B; Dynamische Overzicht van de Registratie van de Cliënt &#x200B;](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) documentatie.
+Adobe Pass gebruikt DCR om clientcommunicatie tussen een programmeertoepassing of server en de Adobe Pass-services te beveiligen. De stroom DCR is afzonderlijk en wordt beschreven in het [ Dynamische Overzicht van de Registratie van de Cliënt ](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) documentatie.
 
 
 ### Streaming (slim apparaat) App Flows
@@ -72,11 +72,11 @@ Adobe Pass gebruikt DCR om clientcommunicatie tussen een programmeertoepassing o
 
 1. U krijgt een registratiecode en URL waarmee uw gebruiker toegang krijgt tot de tweede toepassing voor schermaanmelding en u kunt deze aan de gebruiker presenteren:
 
-   a. Verzend een POST-aanvraag naar de Adobe Registration Code Service, waarbij u een hashed device ID en een &quot;Registration URL&quot; doorgeeft.  Bijvoorbeeld: [`<REGGIE_FQDN>/reggie/v1/[requestorId]/regcode [device ID]`](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md)
+   a.  Verzend een POST-aanvraag naar de Adobe Registration Code Service en geef een hashed device ID en een &quot;Registration URL&quot; door.  Bijvoorbeeld: [`<REGGIE_FQDN>/reggie/v1/[requestorId]/regcode [device ID]`](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md)
 
-   b. De geretourneerde registratiecode en URL aan de gebruiker presenteren.
+   b.  De geretourneerde registratiecode en URL presenteren aan de gebruiker.
 
-   c. Geef de gebruiker de opdracht om naar een apparaat te schakelen dat geschikt is voor internet, naar de URL te navigeren en vervolgens de registratiecode in te voeren.
+   c.  Geef de gebruiker de opdracht om naar een apparaat te schakelen dat geschikt is voor internet, naar de URL te navigeren en vervolgens de registratiecode in te voeren.
 
 
 
@@ -96,7 +96,7 @@ Adobe Pass gebruikt DCR om clientcommunicatie tussen een programmeertoepassing o
 
    * Als het een AuthZ-fout was, is de gebruiker niet geautoriseerd om de gevraagde media te bekijken en moet een foutbericht worden weergegeven aan de gebruiker.
 
-   * Als er een andere fout is opgetreden (verbindingsfout, netwerkfout, enz.), geeft u een geschikt foutbericht weer aan de gebruiker.
+   * Als er een andere fout is opgetreden (verbindingsfout, netwerkfout, enz.) geeft u vervolgens een geschikt foutbericht weer aan de gebruiker.
 
 
 
@@ -106,12 +106,12 @@ Adobe Pass gebruikt DCR om clientcommunicatie tussen een programmeertoepassing o
 
 2. Zijn de media beveiligd?
 
-   a. Uw app controleert of de media is beveiligd.
+   a.  Uw app controleert of de media is beveiligd.
 
-   b. Als het medium is beveiligd, wordt de autorisatie door uw app gestart
+   b.  Als de media is beveiligd, start uw app de autorisatie
 (AuthZ) Stroom hierboven.
 
-   c. Als het medium niet is beveiligd, kunt u het medium voor de
+   c.  Als de media niet zijn beveiligd, kunt u de media voor de
 gebruiker.
 
 3. De media afspelen.

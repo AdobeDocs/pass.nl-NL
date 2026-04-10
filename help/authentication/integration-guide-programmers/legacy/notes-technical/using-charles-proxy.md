@@ -2,9 +2,9 @@
 title: Charles Proxy gebruiken
 description: Charles Proxy gebruiken
 exl-id: bb38543f-f6bc-4b5a-91b8-41bc51ee4c56
-source-git-commit: 175755aa7463257487b29c5f4da989cf34e91bfd
+source-git-commit: b51ac004765a8617347ac2ddadbfe60adff8ea3a
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '379'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 **Karel:** <http://charlesproxy.com>
 
@@ -43,7 +43,8 @@ SSL-proxy inschakelen `\[ *Proxy -\> Proxy Settings... -\> SSL* \]`
 
 Schakel het selectievakje SSL-proxy inschakelen in en voeg alle HTTPS-locaties toe.
 
-<!-- NOTE TO WRITER - THESE IMAGES LINKS ARE BROKEN
+<!-- 
+NOTE TO WRITER - THESE IMAGES LINKS ARE BROKEN
 ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/ProxySettings.PNG) ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/SSLSettings.PNG) ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/AddHttpsLocations.PNG)
 -->
 
@@ -68,7 +69,8 @@ Als de uitvoer te onoverzichtelijk wordt, kunt u kiezen om locaties te negeren o
 
 DNS spoofing is zeer nuttig wanneer het proberen om een verzoek aan verschillende IP, vooral opnieuw te richten wanneer het werken met mobiele apparaten:
 
-<!-- NOTE TO WRITER - THESE IMAGES LINKS ARE BROKEN
+<!-- 
+NOTE TO WRITER - THESE IMAGES LINKS ARE BROKEN
 ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/DNSSpoofing.PNG)
 -->
 
@@ -83,7 +85,8 @@ DNS spoofing is zeer nuttig wanneer het proberen om een verzoek aan verschillend
 
 Met kaart ver kunt u een &quot;inkomend&quot;verzoek aan een verschillend eindpunt opnieuw richten. Het meest gebruikte hoofdlettergebruik voor deze functie is &quot;Map&quot; `AccessEnabler.swf` naar `AccessEnablerDebug.swf:`
 
-<!-- NOTE TO WRITER - THESE IMAGES LINKS ARE BROKEN
+<!-- 
+NOTE TO WRITER - THESE IMAGES LINKS ARE BROKEN
 ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/MapRemote.PNG) ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/MapRemoteAdd.PNG)
 -->
 
@@ -103,7 +106,8 @@ Met kaart ver kunt u een &quot;inkomend&quot;verzoek aan een verschillend eindpu
 
 Blader naar <http://charlesproxy.com/charles.crt> op uw iOS-apparaat.  Hiermee wordt het dialoogvenster voor certificaatinstallatie gestart:
 
-<!-- NOTE TO WRITER - THESE IMAGES LINKS ARE BROKEN
+<!-- 
+NOTE TO WRITER - THESE IMAGES LINKS ARE BROKEN
 ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/iOSDeviceSSLCertificate1\(1\).PNG)![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/iOSDeviceSSLCertificate2\(1\).PNG)![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/iOSDeviceSSLCertificate3.PNG)
 -->
 
@@ -122,7 +126,8 @@ Selecteer op uw iOS-apparaat `\[ *Settings* -\> *Wi-FI* -\> (*YOUR\_WIFI\_NETWOR
 
 </br>
 
-<!-- NOTE TO WRITER - THESE IMAGES LINKS ARE BROKEN
+<!-- 
+NOTE TO WRITER - THESE IMAGES LINKS ARE BROKEN
 ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/iOSDeviceManualProxy1.png)![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/iOSDeviceManualProxy2.PNG)
 -->
 
@@ -131,7 +136,8 @@ Hier moet u IP en haven van de machine specificeren waar u Charles in werking st
 
 </br>
 
-<!-- NOTE TO WRITER - THESE IMAGES LINKS ARE BROKEN
+<!-- 
+NOTE TO WRITER - THESE IMAGES LINKS ARE BROKEN
 ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/iOSDeviceManualProxy3.PNG)
 -->
 
@@ -156,4 +162,4 @@ verzoeken.
 <http://www.charlesproxy.com/documentation/configuration/browser-and-system-configuration>
 
 
-Blader naar [&#x200B; de volmacht van Charles &#x200B;](http://charlesproxy.com/charles.crt) van uw apparaat van Android.
+Blader naar [ de volmacht van Charles ](http://charlesproxy.com/charles.crt) van uw apparaat van Android.

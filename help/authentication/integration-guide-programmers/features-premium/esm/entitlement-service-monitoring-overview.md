@@ -2,9 +2,9 @@
 title: Overzicht van Entitlement Service-controle
 description: Overzicht van Entitlement Service-controle
 exl-id: ebd5d650-0a32-4583-9045-5156356494e2
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+source-git-commit: b51ac004765a8617347ac2ddadbfe60adff8ea3a
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1349'
 ht-degree: 0%
 
 ---
@@ -44,8 +44,8 @@ De ESM API is niet algemeen beschikbaar.  Neem contact op met uw Adobe-vertegenw
 | afgekeurd | Aantal pogingen van vergunningen die als kwaadwillig door de Leverancier van de Dienst van Adobe worden beschouwd en als resultaat van een de aanvalspreventie van Dos worden verworpen |
 | authz-latentie | Het totale aantal milliseconden dat wordt besteed aan het eindpunt van MVPD |
 | media-tokens | Aantal gegenereerde korte mediatokens (die overeenkomen met het aantal afspeelverzoeken) |
-| unieke accounts | Aantal unieke gebruikers die machtigingsacties (AuthN / AuthZ) in het geselecteerde tijdinterval hebben uitgevoerd. (Deze metrische waarde geeft alleen aan of er dagelijkse waarden worden aangevraagd.) </br> Deze waarde wordt berekend voor elk afzonderlijk datacenter. Wanneer de afmeting &quot;dc&quot;niet wordt gevraagd, zal metrisch niet worden getoond. |
-| unieke sessies | Aantal unieke sessies dat aanroepen van de verificatiestroom naar de Adobe Pass-verificatieservice binnen het geselecteerde tijdsinterval heeft uitgevoerd. (Deze metrische waarde geeft alleen aan of er dagelijkse waarden worden aangevraagd.) </br> Deze waarde wordt berekend voor elk afzonderlijk datacenter. Wanneer de afmeting &quot;dc&quot;niet wordt gevraagd, zal metrisch niet worden getoond. |
+| unieke accounts | Aantal unieke gebruikers die machtigingsacties (AuthN / AuthZ) in het geselecteerde tijdinterval hebben uitgevoerd. (Deze maatstaf wordt alleen weergegeven als er dagelijkse waarden worden aangevraagd.) </br> Dit wordt berekend voor elk individueel Centrum van Gegevens. Wanneer de afmeting &quot;dc&quot;niet wordt gevraagd, zal metrisch niet worden getoond. |
+| unieke sessies | Aantal unieke sessies dat aanroepen van de verificatiestroom naar de Adobe Pass-verificatieservice binnen het geselecteerde tijdsinterval heeft uitgevoerd. (Deze maatstaf wordt alleen weergegeven als er dagelijkse waarden worden aangevraagd.) </br> Dit wordt berekend voor elk individueel Centrum van Gegevens. Wanneer de afmeting &quot;dc&quot;niet wordt gevraagd, zal metrisch niet worden getoond. |
 | aantal | Een eenvoudige teller die in de gebeurtenis-georiënteerde rapporten wordt gebruikt |
 
 </br>
@@ -71,7 +71,7 @@ De ESM API is niet algemeen beschikbaar.  Neem contact op met uw Adobe-vertegenw
 | afhaken | De externe verificatieprovider wanneer de verificatiestroom wordt uitgevoerd via een extern systeem. </br> De waarden kunnen zijn: </br> - N.v.t. - de verificatie is geleverd door Adobe Pass Authentication </br> - Apple - het externe systeem dat de verificatie heeft geleverd, is Apple |
 | os-family | Besturingssysteem dat op het apparaat wordt uitgevoerd |
 | browser-familie | Gebruikersagent voor toegang tot Adobe Pass-verificatie |
-| cdt | Het apparaatplatform (alternatief), dat momenteel wordt gebruikt voor Clientless. </br> De waarden kunnen zijn: </br> - N.v.t. - de gebeurtenis is niet afkomstig van een SDK zonder Clientless </br> - Onbekend - Omdat de parameter deviceType van een API zonder Clientless optioneel is, zijn er aanroepen die geen waarde bevatten. </br> - elke andere waarde die via de client-API is verzonden, bijvoorbeeld xbox, appletv, roku enzovoort. </br> |
+| cdt | Het apparaatplatform (alternatief), dat momenteel wordt gebruikt voor Clientless. </br>  De waarden kunnen zijn: </br> - N.v.t. - de gebeurtenis is niet afkomstig van een SDK zonder Clientless </br> - Onbekend - Omdat de parameter deviceType van een API zonder Clientless optioneel is, zijn er aanroepen die geen waarde bevatten. </br> - elke andere waarde die via de client-API is verzonden, bijvoorbeeld xbox, appletv, roku enzovoort. </br> |
 | platformversie | De versie van Clientless SDK |
 | van het type os | Besturingssysteem dat op het apparaat wordt uitgevoerd, alternatief (momenteel niet gebruikt) |
 | browserversie | Versie van gebruikersagent |
@@ -83,7 +83,7 @@ De ESM API is niet algemeen beschikbaar.  Neem contact op met uw Adobe-vertegenw
 | platform | Het apparaat identificeerde platform. Mogelijke waarden: </br> - Android </br> - FireTV </br> - Roku </br> - iOS </br> - tvOS </br> - enzovoort |
 | application-name | De toepassingsnaam die in het TVE-dashboard is geconfigureerd voor de DCR-geregistreerde toepassing die is geconfigureerd om te worden gebruikt. |
 | toepassingsversie | De toepassingsversie die in het TVE-dashboard is geconfigureerd voor de DCR-geregistreerde toepassing die is geconfigureerd voor gebruik. |
-| klant-app | De identiteitskaart van de douanetoepassing ging via [&#x200B; Informatie van het Apparaat &#x200B;](/help/authentication/integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md) over. |
+| klant-app | De identiteitskaart van de douanetoepassing ging via [ Informatie van het Apparaat ](/help/authentication/integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md) over. |
 | inhoudscategorie | De categorie van de inhoud die door uw toepassing wordt aangevraagd. |
 
 ## ESM voor MVPD&#39;s {#esm-for-mvpds}
@@ -114,7 +114,7 @@ De ESM API is niet algemeen beschikbaar.  Neem contact op met uw Adobe-vertegenw
 | mvpd | De mvpd-id die wordt gebruikt voor het uitvoeren van de machtigingsaanvraag |
 | aanvrager-id | De aanvrager-id die wordt gebruikt voor het uitvoeren van de machtigingsaanvraag |
 | afhaken | De externe verificatieprovider wanneer de verificatiestroom wordt uitgevoerd via een extern systeem. </br> De waarden kunnen zijn: </br> - N.v.t. - de verificatie is geleverd door Adobe Pass Authentication </br> - Apple - het externe systeem dat de verificatie heeft geleverd, is Apple |
-| cdt | Het apparaatplatform (alternatief), dat momenteel wordt gebruikt voor Clientless. </br> De waarden kunnen zijn: </br> - N.v.t. - de gebeurtenis is niet afkomstig van een SDK zonder Clientless </br> - Onbekend - Omdat de parameter deviceType van een API zonder Clientless optioneel is, zijn er aanroepen die geen waarde bevatten. </br> - elke andere waarde die via de client-API is verzonden, bijvoorbeeld xbox, appletv, roku enzovoort. </br> |
+| cdt | Het apparaatplatform (alternatief), dat momenteel wordt gebruikt voor Clientless. </br>  De waarden kunnen zijn: </br> - N.v.t. - de gebeurtenis is niet afkomstig van een SDK zonder Clientless </br> - Onbekend - Omdat de parameter deviceType van een API zonder Clientless optioneel is, zijn er aanroepen die geen waarde bevatten. </br> - elke andere waarde die via de client-API is verzonden, bijvoorbeeld xbox, appletv, roku enzovoort. </br> |
 | sdk-type | De SDK van de client wordt gebruikt (Flash, HTML5, Android native, iOS, Clientless enz.) |
 | platform | Het apparaat identificeerde platform. Mogelijke waarden: </br> - Android </br> - FireTV </br> - Roku </br> - iOS </br> - tvOS </br> - enzovoort |
 | nsdk | De client SDK gebruikt (android, fireTV, js, iOS, tvOS, non-sdk) |

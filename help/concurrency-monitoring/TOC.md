@@ -2,26 +2,26 @@
 product: adobe primetime
 feature: Concurrency Monitoring
 audience: end-user
-user-guide-title: Gelijktijdige bewaking van Adobe Pass
-user-guide-description: Leer hoe u limieten kunt definiëren en afdwingen voor gelijktijdig gebruik in meerdere applicaties.
-source-git-commit: ed340643e807d786638d59f9bf07d73b7f909a72
+user-guide-title: Adobe Pass Gelijkvallige Controle
+user-guide-description: Leer grenzen voor gelijktijdig gebruik in meerdere toepassingen te definiëren en af te dwingen.
+source-git-commit: b51ac004765a8617347ac2ddadbfe60adff8ea3a
 workflow-type: tm+mt
-source-wordcount: '276'
-ht-degree: 5%
+source-wordcount: '252'
+ht-degree: 0%
 
 ---
 
 
 # Hulp bij Adobe Pass-controle op gelijktijdige valuta {#cm}
 
-- [&#x200B; Inleiding CM &#x200B;](cm-home.md) {#cm-intro}
+- [CM-inleiding](cm-home.md)
 - Aan de slag {#getting-started}
    - [Aan de slag met Gelijktijdige controle](getting-started/getting-started-overview.md)
    - [Belangrijke concepten](getting-started/key-concepts.md)
 - Integratiegids {#integration-guide}
    - [Verklarende woordenlijst](cm-glossary.md)
    - API-naslag {#api-reference}
-      - [&#x200B; Overzicht &#x200B;](api/api-reference-overview.md)
+      - [ Overzicht ](api/api-reference-overview.md)
       - [API-eindpunten](api/api-endpoints.md)
       - [API-naslag](api/cm-api-overview.md)
    - [API voor gelijktijdige bewaking](reports/cmu-api.md)
@@ -34,7 +34,7 @@ ht-degree: 5%
    - [Uitvoeringsmodellen](technical/implementation-models.md)
    - [Single Tenant Policy Multiple Apps](technical/single-tenant-policy-mult-app.md)
    - [Gelijktijdig gebruik van meerdere toepassingen beperken](technical/restrict-concurr-usage-mult-apps.md)
-- [&#x200B; de Rapporten van het Gebruik van CM &#x200B;](reports/cm-usage-reports.md) {#cm-usage-reports}
+- [CM-verbruiksrapporten](reports/cm-usage-reports.md)
 - Technische notities {#tech-notes}
    - [Standaardmetagegevenskenmerken](technical/standard-metadata-attributes.md)
    - [Aangepaste metagegevens](technical/custom-metadata.md)
@@ -72,4 +72,4 @@ ht-degree: 5%
    - [Gelijktijdige bewaking - Opmerkingen bij de release 2.5.0](releases/rn-cm-250.md)
    - [Gelijktijdige bewaking - Opmerkingen bij de release 2.3.2](releases/rn-cm-232.md)
    - [Gelijktijdige bewaking - Opmerkingen bij de release 2.2.2](releases/rn-cm-222.md)
-- [&#x200B; procedures van de Steun &#x200B;](support/cm-escalation-procedures.md) {#support-procedures}
+- [Ondersteuningsprocedures](support/cm-escalation-procedures.md)

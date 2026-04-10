@@ -2,9 +2,9 @@
 title: Plaatsen van CM voor één enkele Aannemer/Beleid en Meerdere Toepassingen
 description: Plaatsen van CM voor één enkele Aannemer/Beleid en Meerdere Toepassingen
 exl-id: 5c579c7d-f235-4dba-95c2-8485021d9065
-source-git-commit: ed340643e807d786638d59f9bf07d73b7f909a72
+source-git-commit: b51ac004765a8617347ac2ddadbfe60adff8ea3a
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 
 
-## Gebruik hoofdletters
+## Gebruiksscenario&#39;s
 
 Programmer P heeft een iPhone-toepassing, een iPad-toepassing en een website. Deze moet worden geïntegreerd met Adobe Concurency Monitoring (CM) om het aantal gelijktijdige streams tussen deze apps te beperken. De programmeur zal beleid tot stand brengen dat gelijktijdig gebruik zal beperken. We zullen twee voorbeelden bekijken:
 
@@ -35,7 +35,7 @@ Twee apps + één website worden gebruikt om streams te starten:
 
 
 
-<!---
+<!--
 
 Figure 1: Policy with one rule
 
@@ -471,4 +471,4 @@ Related Information
 Introduction - Adobe Concurrency Monitoring
 API Console - Adobe Concurrency Monitoring
 User Metadata - Adobe Pass Authentication
---->
+-->

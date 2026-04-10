@@ -2,9 +2,9 @@
 title: Entitlement Service Monitoring API
 description: Entitlement Service Monitoring API
 exl-id: a9572372-14a6-4caa-9ab6-4a6baababaa1
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+source-git-commit: b51ac004765a8617347ac2ddadbfe60adff8ea3a
 workflow-type: tm+mt
-source-wordcount: '2027'
+source-wordcount: '2098'
 ht-degree: 0%
 
 ---
@@ -19,20 +19,20 @@ ht-degree: 0%
 >
 > Controleer voordat u de afbraakAPI gebruikt of aan de volgende voorwaarden is voldaan:
 >
-> * Haal de cliëntgeloofsbrieven zoals die in [&#x200B; worden beschreven terug cliëntgeloofsbrieven &#x200B;](../../rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-client-credentials.md) API documentatie.
-> * Haal het toegangstoken zoals die in [&#x200B; wordt beschreven terug toegangstoken &#x200B;](../../rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md) API documentatie.
+> * Haal de cliëntgeloofsbrieven zoals die in [ worden beschreven terug cliëntgeloofsbrieven ](../../rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-client-credentials.md) API documentatie.
+> * Haal het toegangstoken zoals die in [ wordt beschreven terug toegangstoken ](../../rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md) API documentatie.
 >
-> Verwijs naar de [&#x200B; Dynamische documentatie van het Overzicht van de Registratie van de Cliënt &#x200B;](../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) voor meer informatie over hoe te om een geregistreerde toepassing tot stand te brengen en de softwareverklaring te downloaden.
+> Verwijs naar de [ Dynamische documentatie van het Overzicht van de Registratie van de Cliënt ](../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) voor meer informatie over hoe te om een geregistreerde toepassing tot stand te brengen en de softwareverklaring te downloaden.
 
 ## API-overzicht {#api-overview}
 
-De Controle van de Dienst van het recht (ESM) wordt uitgevoerd als WOLAP (Web-based [&#x200B; Online Analytische Verwerking &#x200B;](https://en.wikipedia.org/wiki/Online_analytical_processing){target=_blank}) project. ESM is een generisch zaken-meldend Web API die door een gegevenspakhuis wordt gesteund. Het doet dienst als de vraagtaal van HTTP die typische verrichtingen toelaat OLAP om RESTfully worden uitgevoerd.
+De Controle van de Dienst van het recht (ESM) wordt uitgevoerd als WOLAP (Web-based [ Online Analytische Verwerking ](https://en.wikipedia.org/wiki/Online_analytical_processing){target=_blank}) project. ESM is een generisch zaken-meldend Web API die door een gegevenspakhuis wordt gesteund. Het doet dienst als de vraagtaal van HTTP die typische verrichtingen toelaat OLAP om RESTfully worden uitgevoerd.
 
 >[!NOTE]
 >
 >De ESM API is niet algemeen beschikbaar. Neem contact op met uw Adobe-vertegenwoordiger voor vragen over beschikbaarheid.
 
-ESM API verstrekt een hiërarchische mening van de onderliggende kubussen OLAP. Elk middel ([&#x200B; afmeting &#x200B;](#esm_dimensions) in de afmetinghiërarchie, in kaart gebracht als segment van de weg URL) produceert rapporten met (bijeengevoegde) [&#x200B; metriek &#x200B;](#esm_metrics) voor de huidige selectie. Elke bron wijst naar de bovenliggende bron (voor roll-up) en de bijbehorende subbronnen (voor boor-down). Segmenteren en dicing worden bereikt via parameters van queryreeksen die de afmetingen vastzetten op specifieke waarden of bereiken.
+ESM API verstrekt een hiërarchische mening van de onderliggende kubussen OLAP. Elk middel ([ afmeting ](#esm_dimensions) in de afmetinghiërarchie, in kaart gebracht als segment van de weg URL) produceert rapporten met (bijeengevoegde) [ metriek ](#esm_metrics) voor de huidige selectie. Elke bron wijst naar de bovenliggende bron (voor roll-up) en de bijbehorende subbronnen (voor boor-down). Segmenteren en dicing worden bereikt via parameters van queryreeksen die de afmetingen vastzetten op specifieke waarden of bereiken.
 
 De REST API verstrekt de beschikbare gegevens binnen een tijdsinterval dat in het verzoek wordt gespecificeerd (die terug naar standaardwaarden als niets wordt verstrekt), volgens de afmetingspad, verstrekte filters, en geselecteerde metriek. Het tijdbereik wordt niet toegepast op rapporten die geen tijdafmetingen bevatten (jaar, maand, dag, uur, minuut, seconde).
 
@@ -42,7 +42,7 @@ De beschikbare URL-paden kunnen worden gevonden via koppelingen in het antwoord.
 
 ## Boor-down Boom {#drill-down-tree}
 
-De volgende boor-benedenbomen illustreren de afmetingen (middelen) beschikbaar in ESM 3.0 voor [&#x200B; Programmers &#x200B;](#progr-dimensions) en [&#x200B; MVPDs &#x200B;](#mvpd-dimensions).
+De volgende boor-benedenbomen illustreren de afmetingen (middelen) beschikbaar in ESM 3.0 voor [ Programmers ](#progr-dimensions) en [ MVPDs ](#mvpd-dimensions).
 
 
 ### Afmetingen beschikbaar voor programmeurs {#progr-dimensions}
@@ -94,9 +94,9 @@ De volgende filteropties zijn beschikbaar:
 
 * **IN** de filters kunnen worden gespecificeerd door de zelfde dimensie-naam parameter veelvoudige tijden met verschillende waarden toe te voegen: dimensie=value1\&amp;dimensie=value2
 
-* **niet evenaart** filters moeten &quot;\!&quot; gebruiken symbool na de naam van de dimensie die resulteert in de &#39;\!=&#39; &quot;operator&quot;: dimensie\!=value
+* **niet evenaart** de filters moeten het symbool &quot;\!&quot;na de afmetingsnaam gebruiken die in &quot;\!=&quot;&quot;exploitant&quot;resulteert: afmeting\!=waarde
 
-* **NIET IN** filters vereisen &quot;\!=&#39; operator moet meerdere keren worden gebruikt, één keer voor elke waarde in de set: dimensie\!=value1\&amp;Dimensie\!=value2&amp;...
+* **NIET IN** de filters vereisen de exploitant &quot;\!=&quot;om veelvoudige tijden, eens voor elke waarde in de reeks te worden gebruikt: afmeting\!=waarde1\&amp;dimensie\!=waarde2 &amp;...
 
 Er is ook een speciaal gebruik voor de afmetingsnamen in het vraagkoord: Als de afmetingsnaam als parameter van het vraagkoord zonder waarde wordt gebruikt, zal dit API instrueren om een projectie terug te keren die die afmeting in het rapport omvat.
 
@@ -106,8 +106,8 @@ Er is ook een speciaal gebruik voor de afmetingsnamen in het vraagkoord: Als de 
 |---|---|
 | /dimensie1/dimensie2/dimensie3?dimensie1=waarde1 | SELECTEER * vanuit projectie WAAR dimensie1 = &#39;waarde1&#39; </br> GROEP BY dimensie1, dimensie2, dimensie3 |
 | /dimensie1/dimensie2/dimensie3?dimensie1=waarde1&amp;dimensie1=waarde2 | SELECTEER * vanuit projectie WAAR dimensie1 IN (&#39;value1&#39;, &#39;value2&#39;) </br> GROEP BY dimensie1, dimensie2, dimensie3 |
-| /dimensie1/dimensie2/dimensie3?dimensie1!=value1 | SELECTEREN * vanuit projectie WAAR dimensie1 &lt;> &#39;value1&#39; | </br> GROEP BY dimensie1, dimensie2, dimensie3 |
-| /dimensie1/dimensie2/dimensie3?dimensie1!=value1&amp;Dimensie2!=value2 | SELECTEER * vanuit projectie WAAR dimensie1 NIET IN (&#39;value1&#39;, &#39;value2&#39;) | </br> GROEP BY dimensie1, dimensie2, dimensie3 |
+| /dimensie1/dimensie2/dimensie3?dimensie1!=waarde1 | SELECTEREN * vanuit projectie WAAR dimensie1 &lt;> &#39;value1&#39; \| </br> GROEP BY dimensie1, dimensie2, dimensie3 |
+| /dimensie1/dimensie2/dimensie3?dimensie1!=waarde1&amp;dimensie2!=waarde2 | SELECTEER * vanuit projectie WAAR dimensie1 NIET IN (&#39;value1&#39;, &#39;value2&#39;) \| </br> GROEP BY dimensie1, dimensie2, dimensie3 |
 | Ervan uitgaande dat er geen direct pad is: /afmetingen1/dimensie3 </br> , maar dat er wel een pad is: /afmetingen1/dimensie2/dimensie3 </br> </br> /dimensie1?afmetingen3 | SELECTEREN * vanuit projectiegroep BY dimensie1, dimensie3 |
 
 >[!NOTE]

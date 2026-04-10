@@ -2,9 +2,9 @@
 title: Android SDK Cookbook
 description: Android SDK Cookbook
 exl-id: 7f66ab92-f52c-4dae-8016-c93464dd5254
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+source-git-commit: b51ac004765a8617347ac2ddadbfe60adff8ea3a
 workflow-type: tm+mt
-source-wordcount: '1703'
+source-wordcount: '1690'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [&#x200B; pagina van de Mededelingen van het Product &#x200B;](/help/authentication/product-announcements.md) wordt samengevoegd.
+> Zorg ervoor u over de recentste het productmededelingen van de Authentificatie van Adobe Pass en ontmantelingschronologie wordt geïnformeerd die in de [ pagina van de Mededelingen van het Product ](/help/authentication/product-announcements.md) wordt samengevoegd.
 
 </br>
 
@@ -61,7 +61,7 @@ De het netwerkactiviteit van AccessEnabler vindt in een verschillende draad plaa
 ### A. Vereisten {#prereqs}
 
 1. Maak uw callback-functies:
-   - [setRequestorComplete()&grave;](#$setRequestorComplete)
+   - [`setRequestorComplete()`](#$setRequestorComplete)
 
      Wordt geactiveerd door `setRequestor()` en retourneert een geslaagde of mislukte bewerking.\
      Het succes wijst erop u met machtigingsvraag kunt te werk gaan.
@@ -71,7 +71,7 @@ De het netwerkactiviteit van AccessEnabler vindt in een verschillende draad plaa
      Wordt alleen geactiveerd door `getAuthentication()` als de gebruiker geen provider (MVPD) heeft geselecteerd en nog niet is geverifieerd.\
      De parameter `mvpds` is een array van providers die beschikbaar zijn voor de gebruiker.
 
-   - [setAuthenticationStatus(status, errorCode)&grave;](#$setAuthNStatus)
+   - [`setAuthenticationStatus(status, errorcode)`](#$setAuthNStatus)
 
      Wordt telkens geactiveerd door `checkAuthentication()` .\
      Wordt alleen geactiveerd door `getAuthentication()` als de gebruiker al is geverifieerd en een provider heeft geselecteerd.
@@ -82,32 +82,32 @@ De het netwerkactiviteit van AccessEnabler vindt in een verschillende draad plaa
 
      Wordt geactiveerd door `getAuthentication()` nadat de gebruiker een MVPD selecteert. De parameter `url` biedt de locatie van de MVPD-aanmeldingspagina.
 
-   - [` sendTrackingData(event, data)`](#$sendTrackingData)
+   - [`sendTrackingData(event, data)`](#$sendTrackingData)
 
      Wordt geactiveerd door `checkAuthentication(), getAuthentication(), checkAuthorization(), getAuthorization(), setSelectedProvider()` .\
      De parameter `event` geeft aan welke gebeurtenis entitlement heeft plaatsgevonden. De parameter `data` is een lijst met waarden die betrekking hebben op de gebeurtenis.
 
-   - [setToken(token, resource)&grave;](#$setToken)
+   - [`setToken(token, resource)`](#$setToken)
 
      Wordt geactiveerd door `checkAuthorization()` en `getAuthorization()` nadat u een resource hebt bekeken.\
      De parameter `token` is het kortstondige media-token; de parameter `resource` is de inhoud die de gebruiker mag bekijken.
 
-   - [` tokenRequestFailed(resource, code, description)`](#$tokenRequestFailed)
+   - [`tokenRequestFailed(resource, code, description)`](#$tokenRequestFailed)
 
      Wordt geactiveerd door `checkAuthorization()` en `getAuthorization()` nadat de autorisatie is mislukt.\
      De parameter `resource` is de inhoud die de gebruiker probeerde te bekijken. De parameter `code` is de foutcode die aangeeft welk type fout is opgetreden. De parameter `description` beschrijft de fout die aan de foutcode is gekoppeld.
 
-   - [` selectedProvider(mvpd)`](#$selectedProvider)
+   - [`selectedProvider(mvpd)`](#$selectedProvider)
 
      Wordt geactiveerd door `getSelectedProvider()` .\
      De parameter `mvpd` biedt informatie over de provider die door de gebruiker is geselecteerd.
 
-   - [` setMetadataStatus(metadata, key, arguments)`](#$setMetadataStatus)
+   - [`setMetadataStatus(metadata, key, arguments)`](#$setMetadataStatus)
 
      geactiveerd door `getMetadata().`\
      De parameter `metadata` bevat de specifieke gegevens die u hebt aangevraagd. De parameter `key` is de sleutel die wordt gebruikt in de aanvraag `getMetadata()` en de parameter `arguments` is hetzelfde woordenboek dat is doorgegeven aan `getMetadata()` .
 
-   - [&quot;preauthorisedResources(resources)&quot;](#$preauthResources)
+   - [`preauthorizedResources(resources)`](#$preauthResources)
 
      Wordt geactiveerd door `checkPreauthorizedResources()` .\
      De parameter `authorizedResources` geeft de bronnen weer die de gebruiker mag bekijken.
@@ -121,12 +121,12 @@ De het netwerkactiviteit van AccessEnabler vindt in een verschillende draad plaa
 1. Start de toepassing op het hoogste niveau.
 1. Adobe Pass-verificatie starten
 
-   a. Vraag [`getInstance`](#$getInstance) aan om één instantie van Adobe Pass Authentication AccessEnabler te maken.
+   a.  Roep [`getInstance`](#$getInstance) aan om één instantie van Adobe Pass Authentication AccessEnabler te maken.
 
    - **Afhankelijkheid:** Eigen de Authentificatie van Adobe Pass
 Android Library (AccessEnabler)
 
-   b. Vraag ` setRequestor()` om de identificatie van de Programmer te vestigen; ga in de 1&rbrace; van de Programmer en (facultatief) een serie van de eindpunten van de Authentificatie van Adobe Pass over.`requestorID`
+   b.  Vraag ` setRequestor()` om het identificeren van de Programmer te vestigen; ga in de programmeur `requestorID` en (facultatief) een serie van de eindpunten van de Authentificatie van Adobe Pass over.
 
    - **Afhankelijkheid:** Geldige VraagID van de Authentificatie van Adobe Pass\
      (Gebruik hiervoor Adobe Pass Authentication Account Manager.)
@@ -134,12 +134,12 @@ Android Library (AccessEnabler)
    - **Trekkers:** setRequestorComplete () callback
 
    | OPMERKING |     |
-   | --- | --- |  
-   |  | Er kunnen geen aanvragen voor een machtiging worden ingevuld totdat de identiteit van de aanvrager volledig is vastgesteld. Dit betekent in feite dat setRequestor() nog steeds wordt uitgevoerd, alle volgende aanvragen voor machtigingen (bijvoorbeeld `checkAuthentication()` ) worden geblokkeerd.<br><br> u hebt twee implementatieopties: Zodra de informatie van de verzoeksidentificatie wordt verzonden naar de achterste server, kan de toepassingslaag UI één van de twee volgende benaderingen kiezen:<br><br> 1.  Wacht op het teweegbrengen van `setRequestorComplete()` callback (deel van de afgevaardigde AccessEnabler).  Deze optie biedt de meeste zekerheid dat `setRequestor()` is voltooid en wordt daarom aangeraden voor de meeste implementaties.<br> 2.  Ga verder zonder te wachten op het activeren van de callback van `setRequestorComplete()` en geef aanvragen voor machtigingen af. Deze vraag (checkAuthentication, checkAuthorization, getAuthentication, getAuthorization, checkPreauthorisedResource, getMetadata, logout) wordt een rij gevormd door de bibliotheek AccessEnabler, die de daadwerkelijke netwerkvraag na `setRequestor(). ` zal maken Deze optie kan nu en dan worden onderbroken als bijvoorbeeld, de netwerkverbinding instabiel is. |
+   | --- | --- |
+   |  | Er kunnen geen aanvragen voor een machtiging worden ingevuld totdat de identiteit van de aanvrager volledig is vastgesteld. Dit betekent in feite dat setRequestor() nog steeds wordt uitgevoerd, alle volgende aanvragen voor machtigingen (bijvoorbeeld `checkAuthentication()` ) worden geblokkeerd.<br><br> u hebt twee implementatieopties: Zodra de informatie van de verzoeksidentificatie wordt verzonden naar de achterste server, kan de toepassingslaag UI één van de twee volgende benaderingen kiezen:<br><br> 1.  Wacht op het teweegbrengen van `setRequestorComplete()` callback (deel van de afgevaardigde AccessEnabler).  Deze optie verstrekt de meeste zekerheid dat `setRequestor()` voltooide, zodat wordt het geadviseerd voor de meeste implementaties.<br> 2.  Ga verder zonder te wachten op het activeren van de callback van `setRequestorComplete()` en geef aanvragen voor machtigingen af. Deze vraag (checkAuthentication, checkAuthorization, getAuthentication, getAuthorization, checkPreauthorisedResource, getMetadata, logout) wordt een rij gevormd door de bibliotheek AccessEnabler, die de daadwerkelijke netwerkvraag na `setRequestor(). ` zal maken Deze optie kan nu en dan worden onderbroken als bijvoorbeeld, de netwerkverbinding instabiel is. |
 
    <!--Removed bad image link from first note cell above. ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/icons/1313859077_lightbulb.png) -->
 
-1. Vraag [&#x200B; checkAuthentication () &#x200B;](#$checkAuthN) om een bestaande authentificatie te controleren zonder de volledige stroom van de Authentificatie in werking te stellen.   Als deze vraag slaagt, kunt u aan de stroom van de Vergunning direct te werk gaan.  Zo niet, ga dan door naar de verificatiestroom.
+1. Vraag [ checkAuthentication () ](#$checkAuthN) om een bestaande authentificatie te controleren zonder de volledige stroom van de Authentificatie in werking te stellen.   Als deze vraag slaagt, kunt u aan de stroom van de Vergunning direct te werk gaan.  Zo niet, ga dan door naar de verificatiestroom.
 
    - **Afhankelijkheid:** Een succesvolle vraag aan `setRequestor()` (dit gebiedsdeel is eveneens op alle verdere vraag van toepassing).
 
@@ -149,7 +149,7 @@ Android Library (AccessEnabler)
 
 1. Vraag [`getAuthentication()`](#$getAuthN) om de authentificatiestroom in werking te stellen, of bevestiging te krijgen dat de gebruiker reeds voor authentiek verklaard is.\
    **Trekkers:**
-   - De callback setAuthenticationStatus(), als de gebruiker al is geverifieerd.  In dit geval, ga direct aan de [&#x200B; Stroom van de Vergunning &#x200B;](#authz_flow) te werk.
+   - De callback setAuthenticationStatus(), als de gebruiker al is geverifieerd.  In dit geval, ga direct aan de [ Stroom van de Vergunning ](#authz_flow) te werk.
    - De callback displayProviderDialog(), als de gebruiker nog niet is geverifieerd.
 
 1. Geef de gebruiker de lijst met providers weer die naar `displayProviderDialog()` is verzonden.
@@ -174,7 +174,7 @@ Android Library (AccessEnabler)
 
 ### D. Vergunningsstroom {#authz_flow}
 
-1. Vraag [&#x200B; getAuthorization () &#x200B;](#$getAuthZ) om de vergunning in werking te stellen
+1. Vraag [ getAuthorization () ](#$getAuthZ) om de vergunning in werking te stellen
 stroom.
 
    Afhankelijkheid: geldige ResourceID(&#39;s) overeengekomen met de MVPD(s).
@@ -187,7 +187,7 @@ stroom.
    - Als `getAuthorization()` ontbreekt: Onderzoek de geworpen uitzondering om zijn type (AuthN, AuthZ, of iets anders) te bepalen:
       - Als het een authentificatie (AuthN) fout was dan herstart de authentificatiestroom.
       - Als het een autorisatiefout (AuthZ) was, dan is de gebruiker niet geautoriseerd om de gevraagde media te bekijken en een soort foutbericht zou aan de gebruiker moeten worden getoond.
-      - Als er een ander type fout is opgetreden (verbindingsfout, netwerkfout, enz.), geeft u een geschikt foutbericht weer voor de gebruiker.
+      - Als er een ander type fout is opgetreden (verbindingsfout, netwerkfout, enz.) geeft u vervolgens een geschikt foutbericht weer aan de gebruiker.
 
 1. Valideer de token voor korte media.\
    Gebruik de Adobe Pass Authentication Media Token Verifier-bibliotheek om het kortstondige mediatoken te verifiëren dat door de bovenstaande `getAuthorization()` oproep wordt geretourneerd:
@@ -201,7 +201,7 @@ stroom.
 
 1. De gebruiker selecteert de media die u wilt weergeven.
 2. Zijn de media beveiligd?  Uw toepassing controleert of het geselecteerde medium is beveiligd:
-- Als de geselecteerde media beschermd is, begint uw toepassing de [&#x200B; Stroom van de Vergunning &#x200B;](#authz_flow) hierboven.
+- Als de geselecteerde media beschermd is, begint uw toepassing de [ Stroom van de Vergunning ](#authz_flow) hierboven.
 - Als het geselecteerde medium niet is beveiligd, speelt u de media voor de gebruiker af.
 
 
@@ -211,9 +211,9 @@ stroom.
 1. Roep [`logout()`](#$logout) aan om de gebruiker af te melden.\
    AccessEnabler wist alle in het cachegeheugen opgeslagen waarden en tokens voor de huidige MVPD voor de huidige aanvrager en ook voor aanvragers met Single Sign On. Na het ontruimen van het geheime voorgeheugen, richt AccessEnabler een servervraag om de server-zijzittingen schoon te maken.  Merk op dat aangezien de servervraag in SAML kon resulteren die aan IdP (dit staat voor de zittingsschoonmaak op de kant IdP toe) wordt omgeleid, deze vraag moet alle omleidingen volgen. Om deze reden, moet deze vraag binnen een controle worden behandeld WebView.
 
-   a. Na het zelfde patroon zoals het authentificatiewerkschema, doet het domein AccessEnabler een verzoek aan de UI toepassingslaag (via `navigateToUrl()` callback) om tot een controle te leiden WebView en die controle op te dragen om URL van het logout eindpunt op de backendserver te laden.
+   a.  Na het zelfde patroon zoals het authentificatiewerkschema, doet het domein AccessEnabler een verzoek aan de UI toepassingslaag (via `navigateToUrl()` callback) om tot een controle te leiden WebView en die controle op te dragen om URL van het logout eindpunt op de backendserver te laden.
 
-   b. Opnieuw, moet UI de activiteit van de controle controleren WebView en het ogenblik ontdekken wanneer de controle, aangezien het door verscheidene omleidingen gaat, de douane URL van de toepassing laadt (d.w.z.: `http://adobepass.android.app/`). Zodra deze gebeurtenis plaatsvindt, sluit de UI toepassingslaag WebView en het logout proces volledig is.
+   b.  Nogmaals, moet UI de activiteit van de controle controleren WebView en het moment ontdekken wanneer de controle, aangezien het door verscheidene omleidingen gaat, de douane URL van de toepassing laadt (d.w.z.: `http://adobepass.android.app/`). Zodra deze gebeurtenis plaatsvindt, sluit de UI toepassingslaag WebView en het logout proces volledig is.
 
    **Nota:** de logout stroom verschilt van de authentificatiestroom in die zin dat de gebruiker niet wordt vereist om met WebView op om het even welke manier in wisselwerking te staan. De toepassingslaag UI gebruikt een WebView om ervoor te zorgen dat alle omleidingen worden gevolgd. Aldus is het mogelijk (en geadviseerd) om de controle WebView onzichtbaar (d.w.z. verborgen) tijdens het logout proces te maken.
 
@@ -221,6 +221,6 @@ stroom.
 
 ### Gebruikersstromen voor Login met veelvoudige MVPDs en Logout {#user_flows}
 
-[&#x200B; hier &#x200B;](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/AndroidSSOUserFlows.pdf) u hebt een document beschrijvend het gedrag wanneer het gebruiken van veelvoudige MVPDs en wat gebeurt wanneer de gebruiker zich uit een toepassing afmeldt.
+[ hier ](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/AndroidSSOUserFlows.pdf) u hebt een document beschrijvend het gedrag wanneer het gebruiken van veelvoudige MVPDs en wat gebeurt wanneer de gebruiker zich uit een toepassing afmeldt.
 
 Het beschreven gedrag is beschikbaar als u Android SDK versie >= 2.0.0 gebruikt.
