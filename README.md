@@ -1,8 +1,8 @@
 ---
 source-git-commit: e1fcfc03f1084e9159a73ad4e18b864d796bff3c
 workflow-type: tm+mt
-source-wordcount: '483'
-ht-degree: 5%
+source-wordcount: '521'
+ht-degree: 0%
 
 ---
 # Contribute-artikel
@@ -11,13 +11,13 @@ Wij zijn blij met de bijdragen van onze gemeenschap en van Adobe-medewerkers van
 
 ## Adobe Open Source-gedragscode
 
-Dit project heeft de [Adobe-gedragscode voor open source](code-of-conduct.md) of de [.NET Foundation-gedragscode](https://dotnetfoundation.org/code-of-conduct) overgenomen. Zie het artikel [Bijdragen](contributing.md) voor meer informatie.
+Dit project heeft de [ Adobe Open Code van Source van Gedrag ](code-of-conduct.md) of de [ .NET Code van de Stichting van Gedrag ](https://dotnetfoundation.org/code-of-conduct) goedgekeurd. Voor meer informatie, zie het [ bijdragende ](contributing.md) artikel.
 
 ## Hoe kan ik bijdragen aan Adobe-inhoud
 
 **als u geen werknemer van Adobe** bent kunt u een externe communautaire bijdrage voorleggen. Communautaire bijdragen worden geïmporteerd in onze interne systemen en worden bewerkt en samengevoegd in de publieke repo. Het publieke repo wordt vervolgens gesynchroniseerd met de meest recente wijzigingen en samengevoegd in de privéopslagplaats.
 
-**als u een werknemer van Adobe** bent, kunt u rechtstreeks tot de privé [&#x200B; bewaarplaats van Adobe GitHub &#x200B;](https://git.corp.adobe.com/AdobeDocs/) bijdragen. Zie de Adobe Experience League Authoring Guide voor Adobe-werknemers voor meer informatie.
+**als u een werknemer van Adobe** bent, kunt u rechtstreeks tot de privé [ bewaarplaats van Adobe GitHub ](https://git.corp.adobe.com/AdobeDocs/) bijdragen. Zie de Adobe Experience League Authoring Guide voor Adobe-werknemers voor meer informatie.
 
 ## Externe contribuanten
 
@@ -29,7 +29,7 @@ Als u een kleine update toevoegt:
 1. In de &quot;Was deze inhoud nuttig?&quot; banner die bij de bodem van uw browser venster verschijnt klikt **Gedetailleerd terugkoppelt opties**.
 1. Klik **Voorstellen uitgeven** en voorleggen een trekkingsverzoek (PR) met uw veranderingen in UI GitHub.
 
-   Zie de algemene [&#x200B; de contributorgids van Adobe Docs &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=nl-NL) voor meer informatie.
+   Zie de algemene [ de contributorgids van Adobe Docs ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html) voor meer informatie.
 
 Kleine correcties of verduidelijkingen die u ter documentatie en codevoorbeelden in dit antwoord aanbrengt, worden behandeld in de gebruiksvoorwaarden van Adobe.
 
@@ -43,18 +43,18 @@ Als u deel van de gemeenschap van Adobe bent en een nieuw onderwerp wilt creëre
 
 Communautaire contribuanten kunnen GitHub UI voor basishet uitgeven of vork gebruiken het repo om belangrijke bijdragen te leveren.
 
-Zie de [&#x200B; Gids van de Medewerker van de Docent van Adobe &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=nl-NL) voor details.
+Zie de [ Gids van de Medewerker van de Docent van Adobe ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html) voor details.
 
 ## Interne contribuanten
 
-Als u een technische schrijver, programmamanager, of ontwikkelaar van het productteam voor een oplossing van Adobe Experience Cloud bent en het uw baan is om aan of auteur technische artikelen bij te dragen, gebruik de [&#x200B; privé bewaarplaats &#x200B;](https://git.corp.adobe.com/AdobeDocs).
+Als u een technische schrijver, programmamanager, of ontwikkelaar van het productteam voor een oplossing van Adobe Experience Cloud bent en het uw baan is om aan of auteur technische artikelen bij te dragen, gebruik de [ privé bewaarplaats ](https://git.corp.adobe.com/AdobeDocs).
 
 ## Uw onderwerp opmaken
 
 Alle artikelen in deze repository gebruiken GitHub-gearomatiseerde Markdown. Als u niet vertrouwd bent met Markeringen, zie:
 
-* [&#x200B; Grondbeginselen van de Prijsverlaging &#x200B;](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
-* [&#x200B; Afdrukbare prijsdaling &#x200B;](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
+* [Grondbeginselen van markeringen](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
+* [Afdrukbare opmaakmodel](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
 
 ## Labels
 

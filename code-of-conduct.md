@@ -1,7 +1,7 @@
 ---
 source-git-commit: e1fcfc03f1084e9159a73ad4e18b864d796bff3c
 workflow-type: tm+mt
-source-wordcount: '427'
+source-wordcount: '443'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ die niet in overeenstemming zijn met deze gedragscode, of tijdelijk een verbod i
 een contribuant permanent voor andere gedragingen die zij ongeschikt achten,
 bedreigend, beledigend of schadelijk.
 
-## Toepassingsgebied
+## Bereik
 
 Deze gedragscode is zowel van toepassing binnen projectruimten als in openbare ruimten
 wanneer een persoon het project of de gemeenschap vertegenwoordigt. Voorbeelden van
@@ -74,5 +74,5 @@ leden van de leiding van het project.
 
 ## Attributie
 
-Deze Gedragscode wordt aangepast van het [&#x200B; Medewerkersconvenant &#x200B;](https://contributor-covenant.org), versie 1.4,
-beschikbaar in [&#x200B; https://contributor-covenant.org/version/1/4](https://contributor-covenant.org/version/1/4/)
+Deze Gedragscode wordt aangepast van het [ Medewerkersconvenant ](https://contributor-covenant.org), versie 1.4,
+beschikbaar bij [ https://contributor-covenant.org/version/1/4](https://contributor-covenant.org/version/1/4/)
